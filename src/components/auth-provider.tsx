@@ -26,7 +26,17 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     const token = localStorage.getItem("token");
     const storedUser = localStorage.getItem("user");
     if (token && storedUser) {
-      setUser(JSON.parse(storedUser));
+      // eslint-disable-next-line react-hooks/set-state-in-effect
+      let parsedUser: any = null;
+      try {
+        parsedUser = JSON.parse(storedUser);
+      } catch (e) {
+        console.error("Failed to parse user from local storage", e);
+      }
+      if (parsedUser) {
+        // eslint-disable-next-line react-hooks/set-state-in-effect
+        setUser(parsedUser);
+      }
     }
   }, []);
 
