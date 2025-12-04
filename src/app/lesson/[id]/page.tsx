@@ -1,63 +1,22 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useParams } from "next/navigation";
-import Link from "next/link";
-import { Button } from "@/components/ui/button";
-import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "@/components/ui/card";
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
-import { Label } from "@/components/ui/label";
-import { ArrowLeft, Play, Pause } from "lucide-react";
-
-interface LessonDetail {
-  id: string;
-  title: string;
-  description: string;
-  audio_url: string;
-  transcript: string;
-  quiz_question: string;
-  quiz_options: string[];
-}
+import { useLesson } from "@/hooks/use-lesson";
+import { useAudioPlayer } from "@/hooks/use-audio-player";
+import { LessonHeader } from "@/components/lesson/lesson-header";
+import { AudioPlayer } from "@/components/lesson/audio-player";
+import { TranscriptViewer } from "@/components/lesson/transcript-viewer";
+import { Quiz } from "@/components/lesson/quiz";
+import { Card, CardContent } from "@/components/ui/card";
 
 export default function LessonPage() {
   const params = useParams();
-  const [lesson, setLesson] = useState<LessonDetail | null>(null);
+  const { lesson, loading, error } = useLesson(params.id);
+  const { isPlaying, togglePlay, hasAudio } = useAudioPlayer(lesson?.audio_url);
+  
   const [selectedAnswer, setSelectedAnswer] = useState<string>("");
   const [feedback, setFeedback] = useState<string | null>(null);
-  const [isPlaying, setIsPlaying] = useState(false);
-  const [audio, setAudio] = useState<HTMLAudioElement | null>(null);
-
-  useEffect(() => {
-    if (params.id) {
-      fetch(`/api/lesson?id=${params.id}`)
-        .then((res) => res.json())
-        .then((data) => {
-            setLesson(data);
-            if (data.audio_url) {
-                const newAudio = new Audio(data.audio_url);
-                newAudio.onended = () => setIsPlaying(false);
-                setAudio(newAudio);
-            }
-        })
-        .catch((err) => console.error("Failed to fetch lesson:", err));
-    }
-    return () => {
-        if (audio) {
-            audio.pause();
-        }
-    }
-  }, [params.id]);
-
-  const togglePlay = () => {
-    if (audio) {
-      if (isPlaying) {
-        audio.pause();
-      } else {
-        audio.play();
-      }
-      setIsPlaying(!isPlaying);
-    }
-  };
 
   const checkAnswer = async () => {
     if (!lesson || !selectedAnswer) return;
@@ -79,69 +38,39 @@ export default function LessonPage() {
     }
   };
 
-  if (!lesson) {
+  if (loading) {
     return <div className="flex min-h-screen items-center justify-center">Loading...</div>;
+  }
+
+  if (error || !lesson) {
+    return <div className="flex min-h-screen items-center justify-center text-red-500">{error || "Lesson not found"}</div>;
   }
 
   return (
     <main className="flex min-h-screen flex-col items-center p-8 bg-slate-50">
       <div className="w-full max-w-3xl">
-        <Link href="/">
-          <Button variant="ghost" className="mb-6 pl-0 hover:bg-transparent hover:text-slate-900">
-            <ArrowLeft className="mr-2 h-4 w-4" /> Back to Lessons
-          </Button>
-        </Link>
+        <LessonHeader title={lesson.title} description={lesson.description} />
 
         <Card className="mb-8">
-          <CardHeader>
-            <CardTitle className="text-2xl">{lesson.title}</CardTitle>
-            <CardDescription className="text-lg">{lesson.description}</CardDescription>
-          </CardHeader>
-          <CardContent className="space-y-6">
-            <div className="flex items-center justify-center p-6 bg-slate-100 rounded-lg">
-                <Button 
-                    size="lg" 
-                    className="rounded-full w-16 h-16 p-0" 
-                    onClick={togglePlay}
-                    disabled={!audio}
-                >
-                    {isPlaying ? <Pause className="h-8 w-8" /> : <Play className="h-8 w-8 ml-1" />}
-                </Button>
-            </div>
+          <CardContent className="space-y-6 pt-6">
+            <AudioPlayer 
+              isPlaying={isPlaying} 
+              onTogglePlay={togglePlay} 
+              disabled={!hasAudio} 
+            />
             
-            <div className="prose max-w-none">
-                <h3 className="text-lg font-semibold mb-2">Transcript</h3>
-                <p className="text-slate-700 leading-relaxed whitespace-pre-wrap">{lesson.transcript}</p>
-            </div>
+            <TranscriptViewer transcript={lesson.transcript} />
           </CardContent>
         </Card>
 
-        <Card>
-          <CardHeader>
-            <CardTitle>Quiz</CardTitle>
-            <CardDescription>{lesson.quiz_question}</CardDescription>
-          </CardHeader>
-          <CardContent>
-            <RadioGroup value={selectedAnswer} onValueChange={setSelectedAnswer} className="space-y-3">
-              {lesson.quiz_options && lesson.quiz_options.map((option, index) => (
-                <div key={index} className="flex items-center space-x-2 p-3 rounded-md border border-slate-200 hover:bg-slate-50 transition-colors">
-                  <RadioGroupItem value={option} id={`option-${index}`} />
-                  <Label htmlFor={`option-${index}`} className="flex-grow cursor-pointer">{option}</Label>
-                </div>
-              ))}
-            </RadioGroup>
-          </CardContent>
-          <CardFooter className="flex flex-col items-start gap-4">
-            <Button onClick={checkAnswer} disabled={!selectedAnswer} className="w-full sm:w-auto">
-              Check Answer
-            </Button>
-            {feedback && (
-              <div className={`p-3 rounded-md w-full ${feedback.includes("Correct") ? "bg-green-100 text-green-800" : "bg-red-100 text-red-800"}`}>
-                {feedback}
-              </div>
-            )}
-          </CardFooter>
-        </Card>
+        <Quiz
+          question={lesson.quiz_question}
+          options={lesson.quiz_options}
+          selectedAnswer={selectedAnswer}
+          onSelectAnswer={setSelectedAnswer}
+          onCheckAnswer={checkAnswer}
+          feedback={feedback}
+        />
       </div>
     </main>
   );
