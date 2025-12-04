@@ -6,11 +6,18 @@ import (
 	"time"
 
 	"egaldeutsch-vercel/api/db"
+	"egaldeutsch-vercel/api/mock"
 
 	"go.mongodb.org/mongo-driver/bson"
 )
 
 func SeedHandler(w http.ResponseWriter, r *http.Request) {
+	// In mock mode, data is already seeded
+	if mock.IsMockMode() {
+		w.Write([]byte("Mock database is ready with seeded data"))
+		return
+	}
+
 	collection := db.GetCollection("lessons")
 	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
 	defer cancel()

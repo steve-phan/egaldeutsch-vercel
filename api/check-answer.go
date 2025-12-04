@@ -7,6 +7,7 @@ import (
 	"time"
 
 	"egaldeutsch-vercel/api/db"
+	"egaldeutsch-vercel/api/mock"
 
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/bson/primitive"
@@ -41,15 +42,36 @@ func CheckAnswerHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	collection := db.GetCollection("lessons")
-	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
-	defer cancel()
-
 	objID, err := primitive.ObjectIDFromHex(req.LessonID)
 	if err != nil {
 		http.Error(w, "Invalid lesson ID", http.StatusBadRequest)
 		return
 	}
+
+	// Use mock database if mock mode is enabled
+	if mock.IsMockMode() {
+		mockDB := mock.GetMockDB()
+		correct, err := mockDB.CheckAnswer(objID, req.Answer)
+		if err != nil {
+			http.Error(w, "Lesson not found", http.StatusNotFound)
+			return
+		}
+
+		message := "Incorrect, try again."
+		if correct {
+			message = "Correct!"
+		}
+
+		json.NewEncoder(w).Encode(CheckAnswerResponse{
+			Correct: correct,
+			Message: message,
+		})
+		return
+	}
+
+	collection := db.GetCollection("lessons")
+	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
+	defer cancel()
 
 	var lesson LessonWithAnswer
 	err = collection.FindOne(ctx, bson.M{"_id": objID}).Decode(&lesson)

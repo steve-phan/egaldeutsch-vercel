@@ -8,11 +8,13 @@ import { LessonHeader } from "@/components/lesson/lesson-header";
 import { AudioPlayer } from "@/components/lesson/audio-player";
 import { TranscriptViewer } from "@/components/lesson/transcript-viewer";
 import { Quiz } from "@/components/lesson/quiz";
+import { Comments } from "@/components/lesson/comments";
 import { Card, CardContent } from "@/components/ui/card";
 
 export default function LessonPage() {
   const params = useParams();
-  const { lesson, loading, error } = useLesson(params.id);
+  const lessonId = Array.isArray(params.id) ? params.id[0] : params.id;
+  const { lesson, loading, error } = useLesson(lessonId);
   const { isPlaying, togglePlay, hasAudio } = useAudioPlayer(lesson?.audio_url);
   
   const [selectedAnswer, setSelectedAnswer] = useState<string>("");
@@ -71,6 +73,11 @@ export default function LessonPage() {
           onCheckAnswer={checkAnswer}
           feedback={feedback}
         />
+
+        {/* Comments Section */}
+        <div className="mt-8">
+          <Comments lessonId={lesson.id} />
+        </div>
       </div>
     </main>
   );

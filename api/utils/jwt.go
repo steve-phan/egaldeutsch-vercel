@@ -1,13 +1,25 @@
 package utils
 
 import (
+	"errors"
+	"net/http"
 	"os"
+	"strings"
 	"time"
 
 	"github.com/golang-jwt/jwt/v5"
 )
 
-var jwtSecret = []byte(os.Getenv("JWT_SECRET"))
+var jwtSecret []byte
+
+func init() {
+	secret := os.Getenv("JWT_SECRET")
+	if secret == "" {
+		// Default secret for development/testing
+		secret = "development-secret-key-change-in-production"
+	}
+	jwtSecret = []byte(secret)
+}
 
 type Claims struct {
 	UserID string `json:"user_id"`
@@ -44,4 +56,20 @@ func ValidateToken(tokenString string) (*Claims, error) {
 	}
 
 	return claims, nil
+}
+
+// GetClaimsFromRequest extracts and validates JWT claims from request Authorization header
+func GetClaimsFromRequest(r *http.Request) (*Claims, error) {
+	authHeader := r.Header.Get("Authorization")
+	if authHeader == "" {
+		return nil, errors.New("authorization header required")
+	}
+
+	// Remove "Bearer " prefix if present
+	tokenString := strings.TrimPrefix(authHeader, "Bearer ")
+	if tokenString == authHeader {
+		return nil, errors.New("bearer token required")
+	}
+
+	return ValidateToken(tokenString)
 }

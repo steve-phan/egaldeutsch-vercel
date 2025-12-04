@@ -7,6 +7,7 @@ import (
 	"time"
 
 	"egaldeutsch-vercel/api/db"
+	"egaldeutsch-vercel/api/mock"
 	"egaldeutsch-vercel/api/models"
 	"egaldeutsch-vercel/api/utils"
 
@@ -37,6 +38,29 @@ func SignupHandler(w http.ResponseWriter, r *http.Request) {
 
 	if req.Email == "" || req.Password == "" || req.Name == "" {
 		http.Error(w, "Missing required fields", http.StatusBadRequest)
+		return
+	}
+
+	// Use mock database if mock mode is enabled
+	if mock.IsMockMode() {
+		mockDB := mock.GetMockDB()
+		_, err := mockDB.CreateUser(req.Name, req.Email, req.Password)
+		if err != nil {
+			if err == mock.ErrAlreadyExists {
+				http.Error(w, "User already exists", http.StatusConflict)
+				return
+			}
+			http.Error(w, "Failed to create user", http.StatusInternalServerError)
+			return
+		}
+
+		// Send welcome email (async)
+		go func() {
+			utils.SendWelcomeEmail(req.Email, req.Name)
+		}()
+
+		w.WriteHeader(http.StatusCreated)
+		json.NewEncoder(w).Encode(map[string]string{"message": "User created successfully"})
 		return
 	}
 
