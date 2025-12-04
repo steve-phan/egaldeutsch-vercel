@@ -13,7 +13,7 @@ class MockAudio {
   constructor(public src: string) {}
 }
 
-global.Audio = MockAudio as any;
+global.Audio = MockAudio as unknown as typeof Audio;
 
 describe("useAudioPlayer", () => {
   beforeEach(() => {

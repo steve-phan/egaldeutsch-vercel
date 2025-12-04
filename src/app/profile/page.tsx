@@ -1,98 +1,27 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import Link from "next/link";
 import { useAuth } from "@/components/auth-provider";
+import { useProfile } from "@/hooks/use-profile";
 import { Card, CardHeader, CardTitle, CardContent, CardDescription, CardFooter } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import Link from "next/link";
-
-interface UserProfile {
-  id: string;
-  name: string;
-  email: string;
-  role?: string;
-  created_at?: string;
-}
 
 export default function ProfilePage() {
-  const { user, isAuthenticated, logout } = useAuth();
-  const [profile, setProfile] = useState<UserProfile | null>(null);
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [loading, setLoading] = useState(true);
-  const [saving, setSaving] = useState(false);
-  const [error, setError] = useState("");
-  const [success, setSuccess] = useState("");
-
-  useEffect(() => {
-    if (!isAuthenticated) return;
-
-    const token = localStorage.getItem("token");
-    if (!token) return;
-
-    const fetchProfile = async () => {
-      try {
-        const res = await fetch("/api/auth/user", {
-          headers: { Authorization: `Bearer ${token}` },
-        });
-        if (res.ok) {
-          const data = await res.json();
-          setProfile(data);
-          setName(data.name);
-          setEmail(data.email);
-        }
-      } catch (err) {
-        console.error("Failed to fetch profile:", err);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchProfile();
-  }, [isAuthenticated]);
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setError("");
-    setSuccess("");
-    setSaving(true);
-
-    const token = localStorage.getItem("token");
-    if (!token) return;
-
-    try {
-      const res = await fetch("/api/auth/user", {
-        method: "PUT",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${token}`,
-        },
-        body: JSON.stringify({ name, email }),
-      });
-
-      if (!res.ok) {
-        const data = await res.json();
-        throw new Error(data.message || "Failed to update profile");
-      }
-
-      setSuccess("Profile updated successfully!");
-      // Update local storage with new user data
-      if (user) {
-        const updatedUser = { ...user, name, email };
-        localStorage.setItem("user", JSON.stringify(updatedUser));
-      }
-    } catch (err) {
-      if (err instanceof Error) {
-        setError(err.message);
-      } else {
-        setError("An unexpected error occurred");
-      }
-    } finally {
-      setSaving(false);
-    }
-  };
+  const { isAuthenticated, logout } = useAuth();
+  const {
+    profile,
+    name,
+    email,
+    loading,
+    saving,
+    error,
+    success,
+    setName,
+    setEmail,
+    handleSubmit,
+  } = useProfile();
 
   if (!isAuthenticated) {
     return (
@@ -137,6 +66,7 @@ export default function ProfilePage() {
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                   required
+                  disabled={saving}
                 />
               </div>
               <div className="space-y-2">
@@ -147,6 +77,7 @@ export default function ProfilePage() {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required
+                  disabled={saving}
                 />
               </div>
               {profile?.role && (

@@ -1,9 +1,9 @@
 "use client";
 
-import { useState } from "react";
 import { useParams } from "next/navigation";
 import { useLesson } from "@/hooks/use-lesson";
 import { useAudioPlayer } from "@/hooks/use-audio-player";
+import { useQuiz } from "@/hooks/use-quiz";
 import { LessonHeader } from "@/components/lesson/lesson-header";
 import { AudioPlayer } from "@/components/lesson/audio-player";
 import { TranscriptViewer } from "@/components/lesson/transcript-viewer";
@@ -16,27 +16,11 @@ export default function LessonPage() {
   const lessonId = Array.isArray(params.id) ? params.id[0] : params.id;
   const { lesson, loading, error } = useLesson(lessonId);
   const { isPlaying, togglePlay, hasAudio } = useAudioPlayer(lesson?.audio_url);
-  
-  const [selectedAnswer, setSelectedAnswer] = useState<string>("");
-  const [feedback, setFeedback] = useState<string | null>(null);
+  const { selectedAnswer, feedback, setSelectedAnswer, checkAnswer } = useQuiz();
 
-  const checkAnswer = async () => {
-    if (!lesson || !selectedAnswer) return;
-
-    try {
-      const res = await fetch("/api/check-answer", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          lesson_id: lesson.id,
-          answer: selectedAnswer,
-        }),
-      });
-      const data = await res.json();
-      setFeedback(data.message);
-    } catch (err) {
-      console.error("Failed to check answer:", err);
-      setFeedback("Error checking answer.");
+  const handleCheckAnswer = async () => {
+    if (lesson) {
+      await checkAnswer(lesson.id);
     }
   };
 
@@ -70,7 +54,7 @@ export default function LessonPage() {
           options={lesson.quiz_options}
           selectedAnswer={selectedAnswer}
           onSelectAnswer={setSelectedAnswer}
-          onCheckAnswer={checkAnswer}
+          onCheckAnswer={handleCheckAnswer}
           feedback={feedback}
           scrambleWord={lesson.scramble_word}
           scrambleHint={lesson.quiz_question}
