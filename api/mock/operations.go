@@ -389,10 +389,3 @@ func (db *MockDB) GetUserStats(userID primitive.ObjectID) map[string]interface{}
 		"completion_rate":   float64(completedLessons) / float64(max(totalLessons, 1)) * 100,
 	}
 }
-
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}

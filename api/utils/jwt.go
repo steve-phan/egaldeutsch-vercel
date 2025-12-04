@@ -2,6 +2,7 @@ package utils
 
 import (
 	"errors"
+	"fmt"
 	"net/http"
 	"os"
 	"strings"
@@ -15,7 +16,9 @@ var jwtSecret []byte
 func init() {
 	secret := os.Getenv("JWT_SECRET")
 	if secret == "" {
-		// Default secret for development/testing
+		// Only use default secret for development/testing
+		// Log a warning to stderr for visibility
+		fmt.Fprintln(os.Stderr, "WARNING: JWT_SECRET not set, using default development secret. DO NOT use in production!")
 		secret = "development-secret-key-change-in-production"
 	}
 	jwtSecret = []byte(secret)
