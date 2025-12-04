@@ -7,6 +7,7 @@ import (
 	"time"
 
 	"egaldeutsch-vercel/api/db"
+	"egaldeutsch-vercel/api/mock"
 
 	"go.mongodb.org/mongo-driver/bson"
 )
@@ -23,6 +24,25 @@ func LessonsHandler(w http.ResponseWriter, r *http.Request) {
 
 	if r.Method != http.MethodGet {
 		http.Error(w, "Method not allowed", http.StatusMethodNotAllowed)
+		return
+	}
+
+	// Use mock database if mock mode is enabled
+	if mock.IsMockMode() {
+		mockDB := mock.GetMockDB()
+		mockLessons := mockDB.GetAllLessons()
+		
+		lessons := make([]Lesson, 0, len(mockLessons))
+		for _, l := range mockLessons {
+			lessons = append(lessons, Lesson{
+				ID:          l.ID.Hex(),
+				Title:       l.Title,
+				Description: l.Description,
+				AudioURL:    l.AudioURL,
+			})
+		}
+		
+		json.NewEncoder(w).Encode(lessons)
 		return
 	}
 

@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import { useAuth } from "@/components/auth-provider";
 import { Button } from "@/components/ui/button";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
 
@@ -12,6 +13,7 @@ interface Lesson {
 }
 
 export default function Home() {
+  const { user, isAuthenticated, logout } = useAuth();
   const [lessons, setLessons] = useState<Lesson[]>([]);
 
   useEffect(() => {
@@ -23,12 +25,46 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="flex min-h-screen flex-col items-center p-24 bg-slate-50">
-      <h1 className="text-4xl font-bold mb-8 text-slate-900">EgalDeutsch</h1>
-      <p className="text-lg text-slate-600 mb-12">
-        Learn English conversation starters with audio and interactive quizzes.
-      </p>
+    <main className="flex min-h-screen flex-col items-center p-8 md:p-24 bg-slate-50">
+      {/* Navigation */}
+      <nav className="w-full max-w-5xl mb-8 flex justify-between items-center">
+        <h1 className="text-2xl font-bold text-slate-900">EgalDeutsch</h1>
+        <div className="flex gap-4 items-center">
+          {isAuthenticated ? (
+            <>
+              <span className="text-sm text-slate-600">Hello, {user?.name}</span>
+              <Link href="/dashboard">
+                <Button variant="outline" size="sm">Dashboard</Button>
+              </Link>
+              <Link href="/profile">
+                <Button variant="outline" size="sm">Profile</Button>
+              </Link>
+              <Button variant="outline" size="sm" onClick={logout}>
+                Logout
+              </Button>
+            </>
+          ) : (
+            <>
+              <Link href="/login">
+                <Button variant="outline" size="sm">Login</Button>
+              </Link>
+              <Link href="/signup">
+                <Button size="sm">Sign Up</Button>
+              </Link>
+            </>
+          )}
+        </div>
+      </nav>
 
+      {/* Hero Section */}
+      <div className="text-center mb-12">
+        <h2 className="text-4xl font-bold mb-4 text-slate-900">Learn English Conversations</h2>
+        <p className="text-lg text-slate-600 max-w-2xl">
+          Improve your English speaking skills with audio lessons and interactive quizzes designed for professionals.
+        </p>
+      </div>
+
+      {/* Lessons Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-5xl">
         {lessons.length > 0 ? (
           lessons.map((lesson) => (
@@ -46,7 +82,7 @@ export default function Home() {
           ))
         ) : (
           <p className="text-slate-500 col-span-full text-center">
-            Loading lessons... (Make sure backend is running and MongoDB is connected)
+            Loading lessons...
           </p>
         )}
       </div>

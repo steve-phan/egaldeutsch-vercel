@@ -7,6 +7,7 @@ import (
 	"time"
 
 	"egaldeutsch-vercel/api/db"
+	"egaldeutsch-vercel/api/mock"
 
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/bson/primitive"
@@ -39,6 +40,28 @@ func LessonHandler(w http.ResponseWriter, r *http.Request) {
 	objID, err := primitive.ObjectIDFromHex(id)
 	if err != nil {
 		http.Error(w, "Invalid lesson ID", http.StatusBadRequest)
+		return
+	}
+
+	// Use mock database if mock mode is enabled
+	if mock.IsMockMode() {
+		mockDB := mock.GetMockDB()
+		mockLesson, err := mockDB.GetLessonByID(objID)
+		if err != nil {
+			http.Error(w, "Lesson not found", http.StatusNotFound)
+			return
+		}
+
+		lesson := LessonDetail{
+			ID:           mockLesson.ID.Hex(),
+			Title:        mockLesson.Title,
+			Description:  mockLesson.Description,
+			AudioURL:     mockLesson.AudioURL,
+			Transcript:   mockLesson.Transcript,
+			QuizQuestion: mockLesson.QuizQuestion,
+			QuizOptions:  mockLesson.QuizOptions,
+		}
+		json.NewEncoder(w).Encode(lesson)
 		return
 	}
 

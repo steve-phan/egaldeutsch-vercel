@@ -7,6 +7,7 @@ import (
 	"time"
 
 	"egaldeutsch-vercel/api/db"
+	"egaldeutsch-vercel/api/mock"
 	"egaldeutsch-vercel/api/models"
 	"egaldeutsch-vercel/api/utils"
 
@@ -35,6 +36,32 @@ func LoginHandler(w http.ResponseWriter, r *http.Request) {
 	var req LoginRequest
 	if err := json.NewDecoder(r.Body).Decode(&req); err != nil {
 		http.Error(w, "Invalid request body", http.StatusBadRequest)
+		return
+	}
+
+	// Use mock database if mock mode is enabled
+	if mock.IsMockMode() {
+		mockDB := mock.GetMockDB()
+		mockUser, err := mockDB.ValidatePassword(req.Email, req.Password)
+		if err != nil {
+			http.Error(w, "Invalid credentials", http.StatusUnauthorized)
+			return
+		}
+
+		token, err := utils.GenerateToken(mockUser.ID.Hex(), mockUser.Email)
+		if err != nil {
+			http.Error(w, "Failed to generate token", http.StatusInternalServerError)
+			return
+		}
+
+		json.NewEncoder(w).Encode(LoginResponse{
+			Token: token,
+			User: models.User{
+				ID:    mockUser.ID,
+				Name:  mockUser.Name,
+				Email: mockUser.Email,
+			},
+		})
 		return
 	}
 
