@@ -81,12 +81,19 @@ const demoStats: UserLearningStats = {
 
 type ViewMode = "stats" | "flashcard" | "quiz";
 
-// Deterministic shuffle based on seed (using word index as seed for consistency)
+/**
+ * Deterministic shuffle using a Linear Congruential Generator (LCG).
+ * This ensures quiz options are shuffled consistently across renders,
+ * preventing answer positions from changing when the component re-renders.
+ * 
+ * The LCG constants (a=9301, c=49297, m=233280) are chosen to provide
+ * a full period and reasonable distribution for shuffling purposes.
+ */
 function seededShuffle<T>(array: T[], seed: number): T[] {
   const result = [...array];
   let currentSeed = seed;
   
-  // Simple seeded random function
+  // Linear Congruential Generator: X(n+1) = (a * X(n) + c) mod m
   const seededRandom = () => {
     currentSeed = (currentSeed * 9301 + 49297) % 233280;
     return currentSeed / 233280;

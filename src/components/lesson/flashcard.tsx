@@ -82,7 +82,7 @@ export function Flashcard({
               {audioUrl && (
                 <span className="text-sm text-muted-foreground flex items-center gap-1">
                   <Volume2 className="h-4 w-4" />
-                  (Click &quot;Listen&quot; below)
+                  Audio available below
                 </span>
               )}
             </div>

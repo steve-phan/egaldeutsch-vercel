@@ -125,21 +125,24 @@ export function VocabularyQuiz({
             const isSelected = selectedAnswer === option;
             const isOptionCorrect = option === correctAnswer;
             
-            let optionStyle = "border-slate-200 hover:bg-slate-50";
-            if (isAnswered) {
-              if (isOptionCorrect) {
-                optionStyle = "border-green-500 bg-green-50 dark:bg-green-900/30";
-              } else if (isSelected && !isCorrect) {
-                optionStyle = "border-red-500 bg-red-50 dark:bg-red-900/30";
+            // Determine styling based on answer state
+            const getOptionStyle = () => {
+              if (isAnswered) {
+                if (isOptionCorrect) return "border-green-500 bg-green-50 dark:bg-green-900/30";
+                if (isSelected && !isCorrect) return "border-red-500 bg-red-50 dark:bg-red-900/30";
+              } else if (isSelected) {
+                return "border-primary bg-primary/5";
               }
-            } else if (isSelected) {
-              optionStyle = "border-primary bg-primary/5";
-            }
+              return "border-slate-200 hover:bg-slate-50";
+            };
+
+            // Show incorrect icon only for selected wrong answers
+            const shouldShowIncorrectIcon = isAnswered && isSelected && !isCorrect && !isOptionCorrect;
 
             return (
               <div
                 key={index}
-                className={`flex items-center space-x-3 p-4 rounded-lg border-2 transition-colors ${optionStyle}`}
+                className={`flex items-center space-x-3 p-4 rounded-lg border-2 transition-colors ${getOptionStyle()}`}
               >
                 <RadioGroupItem value={option} id={`option-${index}`} />
                 <Label
@@ -151,7 +154,7 @@ export function VocabularyQuiz({
                 {isAnswered && isOptionCorrect && (
                   <Check className="h-5 w-5 text-green-500" />
                 )}
-                {isAnswered && isSelected && !isCorrect && !isOptionCorrect && (
+                {shouldShowIncorrectIcon && (
                   <X className="h-5 w-5 text-red-500" />
                 )}
               </div>
