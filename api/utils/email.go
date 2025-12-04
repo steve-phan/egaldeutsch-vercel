@@ -26,12 +26,7 @@ type EmailRequest struct {
 }
 
 func SendWelcomeEmail(email, name string) error {
-	apiKey := os.Getenv("BREVO_API_KEY")
-	if apiKey == "" {
-		return fmt.Errorf("BREVO_API_KEY not set")
-	}
-
-	reqBody := EmailRequest{
+	return sendEmail(EmailRequest{
 		Sender: Sender{
 			Name:  "EgalDeutsch",
 			Email: "no-reply@egaldeutsch.com", // Replace with verified sender
@@ -41,21 +36,41 @@ func SendWelcomeEmail(email, name string) error {
 		},
 		Subject:     "Welcome to EgalDeutsch!",
 		HtmlContent: "<html><body><h1>Welcome to EgalDeutsch!</h1><p>We are excited to have you on board. Start learning English conversation starters today!</p></body></html>",
+	})
+}
+
+func SendPasswordResetEmail(email, resetLink string) error {
+	return sendEmail(EmailRequest{
+		Sender: Sender{
+			Name:  "EgalDeutsch",
+			Email: "no-reply@egaldeutsch.com",
+		},
+		To: []To{
+			{Email: email},
+		},
+		Subject:     "Reset Your Password",
+		HtmlContent: fmt.Sprintf("<html><body><h1>Reset Your Password</h1><p>Click the link below to reset your password:</p><a href=\"%s\">Reset Password</a><p>This link will expire in 1 hour.</p></body></html>", resetLink),
+	})
+}
+
+func sendEmail(reqBody EmailRequest) error {
+	apiKey := os.Getenv("BREVO_API_KEY")
+	if apiKey == "" {
+		return fmt.Errorf("BREVO_API_KEY not set")
 	}
 
-	jsonBody, err := json.Marshal(reqBody)
+	body, err := json.Marshal(reqBody)
 	if err != nil {
 		return err
 	}
 
-	req, err := http.NewRequest("POST", "https://api.brevo.com/v3/smtp/email", bytes.NewBuffer(jsonBody))
+	req, err := http.NewRequest("POST", "https://api.brevo.com/v3/smtp/email", bytes.NewBuffer(body))
 	if err != nil {
 		return err
 	}
 
-	req.Header.Set("accept", "application/json")
+	req.Header.Set("Content-Type", "application/json")
 	req.Header.Set("api-key", apiKey)
-	req.Header.Set("content-type", "application/json")
 
 	client := &http.Client{}
 	resp, err := client.Do(req)
@@ -65,7 +80,7 @@ func SendWelcomeEmail(email, name string) error {
 	defer resp.Body.Close()
 
 	if resp.StatusCode >= 400 {
-		return fmt.Errorf("failed to send email, status: %d", resp.StatusCode)
+		return fmt.Errorf("failed to send email: %s", resp.Status)
 	}
 
 	return nil
