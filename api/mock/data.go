@@ -19,6 +19,20 @@ type MockUser struct {
 	UpdatedAt time.Time          `bson:"updated_at" json:"updated_at"`
 }
 
+// QuizType constants
+const (
+	QuizTypeMultipleChoice = "multiple-choice"
+	QuizTypeWordScramble   = "word-scramble"
+	QuizTypeMatchingPairs  = "matching-pairs"
+)
+
+// MatchingPair represents a word-match pair for matching quiz
+type MatchingPair struct {
+	ID    int    `bson:"id" json:"id"`
+	Word  string `bson:"word" json:"word"`
+	Match string `bson:"match" json:"match"`
+}
+
 // MockLesson represents a lesson in the mock database
 type MockLesson struct {
 	ID            primitive.ObjectID `bson:"_id,omitempty" json:"id"`
@@ -26,9 +40,12 @@ type MockLesson struct {
 	Description   string             `bson:"description" json:"description"`
 	AudioURL      string             `bson:"audio_url" json:"audio_url"`
 	Transcript    string             `bson:"transcript" json:"transcript"`
+	QuizType      string             `bson:"quiz_type" json:"quiz_type"`
 	QuizQuestion  string             `bson:"quiz_question" json:"quiz_question"`
 	QuizOptions   []string           `bson:"quiz_options" json:"quiz_options"`
 	CorrectAnswer string             `bson:"correct_answer" json:"correct_answer"`
+	ScrambleWord  string             `bson:"scramble_word,omitempty" json:"scramble_word,omitempty"`
+	MatchingPairs []MatchingPair     `bson:"matching_pairs,omitempty" json:"matching_pairs,omitempty"`
 	CreatedAt     time.Time          `bson:"created_at" json:"created_at"`
 	UpdatedAt     time.Time          `bson:"updated_at" json:"updated_at"`
 }
@@ -126,11 +143,18 @@ func (db *MockDB) seedData() {
 		Description:   "Learn how to start a conversation in the break room.",
 		AudioURL:      "https://s3.amazonaws.com/freecodecamp/curriculum/english-for-developers/break-room.mp3",
 		Transcript:    "Hey, how's it going? \nGood, thanks. How about you? \nNot bad. Did you catch the game last night?",
+		QuizType:      QuizTypeMultipleChoice,
 		QuizQuestion:  "What is a common way to ask how someone is doing?",
 		QuizOptions:   []string{"How's it going?", "What is your function?", "Execute order 66"},
 		CorrectAnswer: "How's it going?",
-		CreatedAt:     time.Now(),
-		UpdatedAt:     time.Now(),
+		ScrambleWord:  "GOING",
+		MatchingPairs: []MatchingPair{
+			{ID: 1, Word: "Greeting", Match: "How's it going?"},
+			{ID: 2, Word: "Question", Match: "What is your function?"},
+			{ID: 3, Word: "Command", Match: "Execute order 66"},
+		},
+		CreatedAt: time.Now(),
+		UpdatedAt: time.Now(),
 	}
 
 	lesson2ID := primitive.NewObjectID()
@@ -140,11 +164,18 @@ func (db *MockDB) seedData() {
 		Description:   "Common phrases used during daily standup meetings.",
 		AudioURL:      "https://s3.amazonaws.com/freecodecamp/curriculum/english-for-developers/standup.mp3",
 		Transcript:    "Yesterday I worked on the API. \nToday I will continue with the frontend. \nNo blockers.",
+		QuizType:      QuizTypeMultipleChoice,
 		QuizQuestion:  "What should you mention if you are stuck?",
 		QuizOptions:   []string{"I have a blocker", "I am broken", "System failure"},
 		CorrectAnswer: "I have a blocker",
-		CreatedAt:     time.Now(),
-		UpdatedAt:     time.Now(),
+		ScrambleWord:  "BLOCKER",
+		MatchingPairs: []MatchingPair{
+			{ID: 1, Word: "Obstacle", Match: "I have a blocker"},
+			{ID: 2, Word: "Error", Match: "I am broken"},
+			{ID: 3, Word: "Crash", Match: "System failure"},
+		},
+		CreatedAt: time.Now(),
+		UpdatedAt: time.Now(),
 	}
 
 	lesson3ID := primitive.NewObjectID()
@@ -154,11 +185,18 @@ func (db *MockDB) seedData() {
 		Description:   "Learn how to give and receive code review feedback professionally.",
 		AudioURL:      "https://s3.amazonaws.com/freecodecamp/curriculum/english-for-developers/code-review.mp3",
 		Transcript:    "Could you take a look at my pull request? \nSure, I'll review it this afternoon. \nThanks, let me know if you have any questions.",
+		QuizType:      QuizTypeMultipleChoice,
 		QuizQuestion:  "How do you politely ask someone to review your code?",
 		QuizOptions:   []string{"Could you take a look at my pull request?", "Review my code now!", "You must check this"},
 		CorrectAnswer: "Could you take a look at my pull request?",
-		CreatedAt:     time.Now(),
-		UpdatedAt:     time.Now(),
+		ScrambleWord:  "REVIEW",
+		MatchingPairs: []MatchingPair{
+			{ID: 1, Word: "Polite Request", Match: "Could you take a look at my pull request?"},
+			{ID: 2, Word: "Demand", Match: "Review my code now!"},
+			{ID: 3, Word: "Order", Match: "You must check this"},
+		},
+		CreatedAt: time.Now(),
+		UpdatedAt: time.Now(),
 	}
 
 	// Seed comments

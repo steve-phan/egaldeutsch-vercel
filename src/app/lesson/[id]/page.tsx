@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState } from "react";
 import { useParams } from "next/navigation";
 import { useLesson } from "@/hooks/use-lesson";
 import { useAudioPlayer } from "@/hooks/use-audio-player";
@@ -19,33 +19,6 @@ export default function LessonPage() {
   
   const [selectedAnswer, setSelectedAnswer] = useState<string>("");
   const [feedback, setFeedback] = useState<string | null>(null);
-
-  // Derive word scramble and matching pairs data from the lesson
-  const quizData = useMemo(() => {
-    if (!lesson) return { scrambleWord: undefined, scrambleHint: undefined, matchingPairs: undefined };
-
-    // Extract a key word from the quiz question for word scramble
-    // We'll use the first significant word (longer than 3 characters) from the question
-    const questionWords = lesson.quiz_question?.split(/\s+/).filter(w => w.length > 3) || [];
-    const scrambleWord = questionWords.length > 0 
-      ? questionWords[questionWords.length - 1].replace(/[^a-zA-Z]/g, "")
-      : "QUIZ";
-
-    // Generate matching pairs from quiz options with descriptive labels
-    const matchingPairs = lesson.quiz_options && lesson.quiz_options.length >= 2
-      ? lesson.quiz_options.map((option, index) => ({
-          id: index + 1,
-          word: `Option ${index + 1}`,
-          match: option,
-        }))
-      : undefined;
-
-    return {
-      scrambleWord: scrambleWord.length >= 3 ? scrambleWord : undefined,
-      scrambleHint: lesson.quiz_question,
-      matchingPairs,
-    };
-  }, [lesson]);
 
   const checkAnswer = async () => {
     if (!lesson || !selectedAnswer) return;
@@ -99,9 +72,9 @@ export default function LessonPage() {
           onSelectAnswer={setSelectedAnswer}
           onCheckAnswer={checkAnswer}
           feedback={feedback}
-          scrambleWord={quizData.scrambleWord}
-          scrambleHint={quizData.scrambleHint}
-          matchingPairs={quizData.matchingPairs}
+          scrambleWord={lesson.scramble_word}
+          scrambleHint={lesson.quiz_question}
+          matchingPairs={lesson.matching_pairs}
         />
 
         {/* Comments Section */}
