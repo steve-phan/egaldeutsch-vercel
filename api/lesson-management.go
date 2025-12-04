@@ -14,27 +14,40 @@ import (
 	"go.mongodb.org/mongo-driver/bson/primitive"
 )
 
+// MatchingPairRequest represents a word-match pair for matching quiz
+type MatchingPairRequest struct {
+	ID    int    `json:"id"`
+	Word  string `json:"word"`
+	Match string `json:"match"`
+}
+
 type CreateLessonRequest struct {
-	Title         string   `json:"title"`
-	Description   string   `json:"description"`
-	AudioURL      string   `json:"audio_url"`
-	Transcript    string   `json:"transcript"`
-	QuizQuestion  string   `json:"quiz_question"`
-	QuizOptions   []string `json:"quiz_options"`
-	CorrectAnswer string   `json:"correct_answer"`
+	Title         string                `json:"title"`
+	Description   string                `json:"description"`
+	AudioURL      string                `json:"audio_url"`
+	Transcript    string                `json:"transcript"`
+	QuizType      string                `json:"quiz_type"`
+	QuizQuestion  string                `json:"quiz_question"`
+	QuizOptions   []string              `json:"quiz_options"`
+	CorrectAnswer string                `json:"correct_answer"`
+	ScrambleWord  string                `json:"scramble_word,omitempty"`
+	MatchingPairs []MatchingPairRequest `json:"matching_pairs,omitempty"`
 }
 
 type LessonManagementResponse struct {
-	ID            string    `json:"id"`
-	Title         string    `json:"title"`
-	Description   string    `json:"description"`
-	AudioURL      string    `json:"audio_url"`
-	Transcript    string    `json:"transcript"`
-	QuizQuestion  string    `json:"quiz_question"`
-	QuizOptions   []string  `json:"quiz_options"`
-	CorrectAnswer string    `json:"correct_answer"`
-	CreatedAt     time.Time `json:"created_at"`
-	UpdatedAt     time.Time `json:"updated_at"`
+	ID            string                `json:"id"`
+	Title         string                `json:"title"`
+	Description   string                `json:"description"`
+	AudioURL      string                `json:"audio_url"`
+	Transcript    string                `json:"transcript"`
+	QuizType      string                `json:"quiz_type"`
+	QuizQuestion  string                `json:"quiz_question"`
+	QuizOptions   []string              `json:"quiz_options"`
+	CorrectAnswer string                `json:"correct_answer"`
+	ScrambleWord  string                `json:"scramble_word,omitempty"`
+	MatchingPairs []MatchingPairRequest `json:"matching_pairs,omitempty"`
+	CreatedAt     time.Time             `json:"created_at"`
+	UpdatedAt     time.Time             `json:"updated_at"`
 }
 
 // LessonManagementHandler handles CRUD operations for lessons (admin only)
@@ -88,18 +101,42 @@ func createLesson(w http.ResponseWriter, r *http.Request) {
 
 	if mock.IsMockMode() {
 		mockDB := mock.GetMockDB()
+
+		// Convert matching pairs
+		var matchingPairs []mock.MatchingPair
+		for _, mp := range req.MatchingPairs {
+			matchingPairs = append(matchingPairs, mock.MatchingPair{
+				ID:    mp.ID,
+				Word:  mp.Word,
+				Match: mp.Match,
+			})
+		}
+
 		lesson, err := mockDB.CreateLesson(
 			req.Title,
 			req.Description,
 			req.AudioURL,
 			req.Transcript,
+			req.QuizType,
 			req.QuizQuestion,
 			req.QuizOptions,
 			req.CorrectAnswer,
+			req.ScrambleWord,
+			matchingPairs,
 		)
 		if err != nil {
 			http.Error(w, "Failed to create lesson", http.StatusInternalServerError)
 			return
+		}
+
+		// Convert matching pairs for response
+		var responsePairs []MatchingPairRequest
+		for _, mp := range lesson.MatchingPairs {
+			responsePairs = append(responsePairs, MatchingPairRequest{
+				ID:    mp.ID,
+				Word:  mp.Word,
+				Match: mp.Match,
+			})
 		}
 
 		w.WriteHeader(http.StatusCreated)
@@ -109,9 +146,12 @@ func createLesson(w http.ResponseWriter, r *http.Request) {
 			Description:   lesson.Description,
 			AudioURL:      lesson.AudioURL,
 			Transcript:    lesson.Transcript,
+			QuizType:      lesson.QuizType,
 			QuizQuestion:  lesson.QuizQuestion,
 			QuizOptions:   lesson.QuizOptions,
 			CorrectAnswer: lesson.CorrectAnswer,
+			ScrambleWord:  lesson.ScrambleWord,
+			MatchingPairs: responsePairs,
 			CreatedAt:     lesson.CreatedAt,
 			UpdatedAt:     lesson.UpdatedAt,
 		})
@@ -124,15 +164,18 @@ func createLesson(w http.ResponseWriter, r *http.Request) {
 
 	now := time.Now()
 	lesson := bson.M{
-		"title":          req.Title,
-		"description":    req.Description,
-		"audio_url":      req.AudioURL,
-		"transcript":     req.Transcript,
-		"quiz_question":  req.QuizQuestion,
-		"quiz_options":   req.QuizOptions,
-		"correct_answer": req.CorrectAnswer,
-		"created_at":     now,
-		"updated_at":     now,
+		"title":           req.Title,
+		"description":     req.Description,
+		"audio_url":       req.AudioURL,
+		"transcript":      req.Transcript,
+		"quiz_type":       req.QuizType,
+		"quiz_question":   req.QuizQuestion,
+		"quiz_options":    req.QuizOptions,
+		"correct_answer":  req.CorrectAnswer,
+		"scramble_word":   req.ScrambleWord,
+		"matching_pairs":  req.MatchingPairs,
+		"created_at":      now,
+		"updated_at":      now,
 	}
 
 	result, err := collection.InsertOne(ctx, lesson)
@@ -169,19 +212,43 @@ func updateLesson(w http.ResponseWriter, r *http.Request) {
 
 	if mock.IsMockMode() {
 		mockDB := mock.GetMockDB()
+
+		// Convert matching pairs
+		var matchingPairs []mock.MatchingPair
+		for _, mp := range req.MatchingPairs {
+			matchingPairs = append(matchingPairs, mock.MatchingPair{
+				ID:    mp.ID,
+				Word:  mp.Word,
+				Match: mp.Match,
+			})
+		}
+
 		lesson, err := mockDB.UpdateLesson(
 			lessonID,
 			req.Title,
 			req.Description,
 			req.AudioURL,
 			req.Transcript,
+			req.QuizType,
 			req.QuizQuestion,
 			req.QuizOptions,
 			req.CorrectAnswer,
+			req.ScrambleWord,
+			matchingPairs,
 		)
 		if err != nil {
 			http.Error(w, "Lesson not found", http.StatusNotFound)
 			return
+		}
+
+		// Convert matching pairs for response
+		var responsePairs []MatchingPairRequest
+		for _, mp := range lesson.MatchingPairs {
+			responsePairs = append(responsePairs, MatchingPairRequest{
+				ID:    mp.ID,
+				Word:  mp.Word,
+				Match: mp.Match,
+			})
 		}
 
 		json.NewEncoder(w).Encode(LessonManagementResponse{
@@ -190,9 +257,12 @@ func updateLesson(w http.ResponseWriter, r *http.Request) {
 			Description:   lesson.Description,
 			AudioURL:      lesson.AudioURL,
 			Transcript:    lesson.Transcript,
+			QuizType:      lesson.QuizType,
 			QuizQuestion:  lesson.QuizQuestion,
 			QuizOptions:   lesson.QuizOptions,
 			CorrectAnswer: lesson.CorrectAnswer,
+			ScrambleWord:  lesson.ScrambleWord,
+			MatchingPairs: responsePairs,
 			CreatedAt:     lesson.CreatedAt,
 			UpdatedAt:     lesson.UpdatedAt,
 		})
@@ -209,9 +279,12 @@ func updateLesson(w http.ResponseWriter, r *http.Request) {
 			"description":    req.Description,
 			"audio_url":      req.AudioURL,
 			"transcript":     req.Transcript,
+			"quiz_type":      req.QuizType,
 			"quiz_question":  req.QuizQuestion,
 			"quiz_options":   req.QuizOptions,
 			"correct_answer": req.CorrectAnswer,
+			"scramble_word":  req.ScrambleWord,
+			"matching_pairs": req.MatchingPairs,
 			"updated_at":     time.Now(),
 		},
 	}

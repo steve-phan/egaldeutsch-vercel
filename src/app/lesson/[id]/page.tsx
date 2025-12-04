@@ -7,7 +7,7 @@ import { useAudioPlayer } from "@/hooks/use-audio-player";
 import { LessonHeader } from "@/components/lesson/lesson-header";
 import { AudioPlayer } from "@/components/lesson/audio-player";
 import { TranscriptViewer } from "@/components/lesson/transcript-viewer";
-import { Quiz } from "@/components/lesson/quiz";
+import { QuizSection } from "@/components/lesson/quiz-section";
 import { Comments } from "@/components/lesson/comments";
 import { Card, CardContent } from "@/components/ui/card";
 
@@ -65,13 +65,16 @@ export default function LessonPage() {
           </CardContent>
         </Card>
 
-        <Quiz
+        <QuizSection
           question={lesson.quiz_question}
           options={lesson.quiz_options}
           selectedAnswer={selectedAnswer}
           onSelectAnswer={setSelectedAnswer}
           onCheckAnswer={checkAnswer}
           feedback={feedback}
+          scrambleWord={lesson.scramble_word}
+          scrambleHint={lesson.quiz_question}
+          matchingPairs={lesson.matching_pairs}
         />
 
         {/* Comments Section */}

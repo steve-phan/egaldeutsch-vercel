@@ -149,9 +149,14 @@ func (db *MockDB) ValidatePassword(email, password string) (*MockUser, error) {
 
 // Lesson operations
 
-func (db *MockDB) CreateLesson(title, description, audioURL, transcript, quizQuestion string, quizOptions []string, correctAnswer string) (*MockLesson, error) {
+func (db *MockDB) CreateLesson(title, description, audioURL, transcript, quizType, quizQuestion string, quizOptions []string, correctAnswer, scrambleWord string, matchingPairs []MatchingPair) (*MockLesson, error) {
 	db.mu.Lock()
 	defer db.mu.Unlock()
+
+	// Default quiz type to multiple-choice if not specified
+	if quizType == "" {
+		quizType = QuizTypeMultipleChoice
+	}
 
 	lesson := &MockLesson{
 		ID:            primitive.NewObjectID(),
@@ -159,9 +164,12 @@ func (db *MockDB) CreateLesson(title, description, audioURL, transcript, quizQue
 		Description:   description,
 		AudioURL:      audioURL,
 		Transcript:    transcript,
+		QuizType:      quizType,
 		QuizQuestion:  quizQuestion,
 		QuizOptions:   quizOptions,
 		CorrectAnswer: correctAnswer,
+		ScrambleWord:  scrambleWord,
+		MatchingPairs: matchingPairs,
 		CreatedAt:     time.Now(),
 		UpdatedAt:     time.Now(),
 	}
@@ -192,7 +200,7 @@ func (db *MockDB) GetAllLessons() []*MockLesson {
 	return lessons
 }
 
-func (db *MockDB) UpdateLesson(id primitive.ObjectID, title, description, audioURL, transcript, quizQuestion string, quizOptions []string, correctAnswer string) (*MockLesson, error) {
+func (db *MockDB) UpdateLesson(id primitive.ObjectID, title, description, audioURL, transcript, quizType, quizQuestion string, quizOptions []string, correctAnswer, scrambleWord string, matchingPairs []MatchingPair) (*MockLesson, error) {
 	db.mu.Lock()
 	defer db.mu.Unlock()
 
@@ -205,9 +213,12 @@ func (db *MockDB) UpdateLesson(id primitive.ObjectID, title, description, audioU
 	lesson.Description = description
 	lesson.AudioURL = audioURL
 	lesson.Transcript = transcript
+	lesson.QuizType = quizType
 	lesson.QuizQuestion = quizQuestion
 	lesson.QuizOptions = quizOptions
 	lesson.CorrectAnswer = correctAnswer
+	lesson.ScrambleWord = scrambleWord
+	lesson.MatchingPairs = matchingPairs
 	lesson.UpdatedAt = time.Now()
 
 	return lesson, nil
