@@ -1,13 +1,13 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import { useParams } from "next/navigation";
 import { useLesson } from "@/hooks/use-lesson";
 import { useAudioPlayer } from "@/hooks/use-audio-player";
 import { LessonHeader } from "@/components/lesson/lesson-header";
 import { AudioPlayer } from "@/components/lesson/audio-player";
 import { TranscriptViewer } from "@/components/lesson/transcript-viewer";
-import { Quiz } from "@/components/lesson/quiz";
+import { QuizSection } from "@/components/lesson/quiz-section";
 import { Comments } from "@/components/lesson/comments";
 import { Card, CardContent } from "@/components/ui/card";
 
@@ -19,6 +19,35 @@ export default function LessonPage() {
   
   const [selectedAnswer, setSelectedAnswer] = useState<string>("");
   const [feedback, setFeedback] = useState<string | null>(null);
+
+  // Derive word scramble and matching pairs data from the lesson
+  const quizData = useMemo(() => {
+    if (!lesson) return { scrambleWord: undefined, scrambleHint: undefined, matchingPairs: undefined };
+
+    // Extract a key word from the correct answer for word scramble
+    // We'll use the first significant word (longer than 3 characters)
+    const correctAnswer = lesson.quiz_options?.[0] || "";
+    const words = correctAnswer.split(/\s+/).filter(w => w.length > 3);
+    const scrambleWord = words.length > 0 
+      ? words[0].replace(/[^a-zA-Z]/g, "")
+      : correctAnswer.split(/\s+/)[0]?.replace(/[^a-zA-Z]/g, "") || "WORD";
+
+    // Generate matching pairs from quiz options
+    // Pair the correct answer with variations or create educational pairs
+    const matchingPairs = lesson.quiz_options && lesson.quiz_options.length >= 2
+      ? [
+          { id: 1, word: "Correct", match: lesson.quiz_options[0] },
+          { id: 2, word: "Alternative 1", match: lesson.quiz_options[1] || "Option B" },
+          ...(lesson.quiz_options[2] ? [{ id: 3, word: "Alternative 2", match: lesson.quiz_options[2] }] : []),
+        ]
+      : undefined;
+
+    return {
+      scrambleWord: scrambleWord.length >= 3 ? scrambleWord : undefined,
+      scrambleHint: lesson.quiz_question,
+      matchingPairs,
+    };
+  }, [lesson]);
 
   const checkAnswer = async () => {
     if (!lesson || !selectedAnswer) return;
@@ -65,13 +94,16 @@ export default function LessonPage() {
           </CardContent>
         </Card>
 
-        <Quiz
+        <QuizSection
           question={lesson.quiz_question}
           options={lesson.quiz_options}
           selectedAnswer={selectedAnswer}
           onSelectAnswer={setSelectedAnswer}
           onCheckAnswer={checkAnswer}
           feedback={feedback}
+          scrambleWord={quizData.scrambleWord}
+          scrambleHint={quizData.scrambleHint}
+          matchingPairs={quizData.matchingPairs}
         />
 
         {/* Comments Section */}
