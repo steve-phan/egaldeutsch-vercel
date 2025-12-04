@@ -63,7 +63,7 @@ describe("useQuiz", () => {
       await result.current.checkAnswer("lesson-1");
     });
 
-    expect(result.current.feedback).toBe("Error checking answer.");
+    expect(result.current.feedback).toBe("Unable to verify your answer. Please check your connection and try again.");
 
     consoleSpy.mockRestore();
   });

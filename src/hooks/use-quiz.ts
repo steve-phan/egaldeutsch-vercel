@@ -31,7 +31,7 @@ export function useQuiz(): UseQuizResult {
       setFeedback(data.message);
     } catch (err) {
       console.error("Failed to check answer:", err);
-      setFeedback("Error checking answer.");
+      setFeedback("Unable to verify your answer. Please check your connection and try again.");
     } finally {
       setIsChecking(false);
     }

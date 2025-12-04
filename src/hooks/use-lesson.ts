@@ -8,10 +8,19 @@ interface UseLessonResult {
   refetch: () => void;
 }
 
+/**
+ * Hook for fetching and managing lesson data.
+ * @param id - Lesson ID. Accepts string, string array (uses first element), or undefined.
+ *             When undefined, the hook will not fetch and will set loading to false.
+ * @returns Object containing lesson data, loading state, error state, and refetch function.
+ */
 export function useLesson(id: string | string[] | undefined): UseLessonResult {
   const [lesson, setLesson] = useState<LessonDetail | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+
+  // Normalize ID to string - handles Next.js dynamic route params which can be string or string[]
+  const normalizedId = Array.isArray(id) ? id[0] : id;
 
   const fetchLesson = useCallback(async (lessonId: string) => {
     setLoading(true);
@@ -33,20 +42,18 @@ export function useLesson(id: string | string[] | undefined): UseLessonResult {
   }, []);
 
   useEffect(() => {
-    if (!id) {
+    if (!normalizedId) {
       setLoading(false);
       return;
     }
 
-    const lessonId = Array.isArray(id) ? id[0] : id;
-    fetchLesson(lessonId);
-  }, [id, fetchLesson]);
+    fetchLesson(normalizedId);
+  }, [normalizedId, fetchLesson]);
 
   const refetch = useCallback(() => {
-    if (!id) return;
-    const lessonId = Array.isArray(id) ? id[0] : id;
-    fetchLesson(lessonId);
-  }, [id, fetchLesson]);
+    if (!normalizedId) return;
+    fetchLesson(normalizedId);
+  }, [normalizedId, fetchLesson]);
 
   return { lesson, loading, error, refetch };
 }
