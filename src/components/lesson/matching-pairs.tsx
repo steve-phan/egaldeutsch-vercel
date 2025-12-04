@@ -101,7 +101,8 @@ export function MatchingPairs({ pairs, onComplete }: MatchingPairsProps) {
           const newMatchCount = matches + 1;
           setMatches(newMatchCount);
           
-          // Check for completion inline
+          // Check for completion and call onComplete only once
+          // hasCompleted prevents duplicate calls, isComplete is derived for UI
           if (newMatchCount === pairs.length && !hasCompleted) {
             setHasCompleted(true);
             onComplete(true);

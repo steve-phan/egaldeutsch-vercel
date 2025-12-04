@@ -24,14 +24,14 @@ export default function QuizDemoPage() {
     setFeedback(correct ? "Correct!" : "Incorrect, try again.");
   }, [selectedAnswer]);
 
-  // Quiz data derived from lesson
-  const scrambleWord = "GOING";
+  // Quiz data derived from lesson (similar to lesson page logic)
+  const scrambleWord = "DOING"; // From quiz question "...how someone is doing?"
   const scrambleHint = demoLesson.quiz_question;
-  const matchingPairs = [
-    { id: 1, word: "Correct", match: "How's it going?" },
-    { id: 2, word: "Incorrect", match: "What is your function?" },
-    { id: 3, word: "Also Incorrect", match: "Execute order 66" },
-  ];
+  const matchingPairs = demoLesson.quiz_options.map((option, index) => ({
+    id: index + 1,
+    word: `Option ${index + 1}`,
+    match: option,
+  }));
 
   return (
     <main className="flex min-h-screen flex-col items-center p-4 sm:p-8 bg-slate-50">

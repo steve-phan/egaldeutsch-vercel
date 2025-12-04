@@ -24,22 +24,20 @@ export default function LessonPage() {
   const quizData = useMemo(() => {
     if (!lesson) return { scrambleWord: undefined, scrambleHint: undefined, matchingPairs: undefined };
 
-    // Extract a key word from the correct answer for word scramble
-    // We'll use the first significant word (longer than 3 characters)
-    const correctAnswer = lesson.quiz_options?.[0] || "";
-    const words = correctAnswer.split(/\s+/).filter(w => w.length > 3);
-    const scrambleWord = words.length > 0 
-      ? words[0].replace(/[^a-zA-Z]/g, "")
-      : correctAnswer.split(/\s+/)[0]?.replace(/[^a-zA-Z]/g, "") || "WORD";
+    // Extract a key word from the quiz question for word scramble
+    // We'll use the first significant word (longer than 3 characters) from the question
+    const questionWords = lesson.quiz_question?.split(/\s+/).filter(w => w.length > 3) || [];
+    const scrambleWord = questionWords.length > 0 
+      ? questionWords[questionWords.length - 1].replace(/[^a-zA-Z]/g, "")
+      : "QUIZ";
 
-    // Generate matching pairs from quiz options
-    // Pair the correct answer with variations or create educational pairs
+    // Generate matching pairs from quiz options with descriptive labels
     const matchingPairs = lesson.quiz_options && lesson.quiz_options.length >= 2
-      ? [
-          { id: 1, word: "Correct", match: lesson.quiz_options[0] },
-          { id: 2, word: "Alternative 1", match: lesson.quiz_options[1] || "Option B" },
-          ...(lesson.quiz_options[2] ? [{ id: 3, word: "Alternative 2", match: lesson.quiz_options[2] }] : []),
-        ]
+      ? lesson.quiz_options.map((option, index) => ({
+          id: index + 1,
+          word: `Option ${index + 1}`,
+          match: option,
+        }))
       : undefined;
 
     return {
