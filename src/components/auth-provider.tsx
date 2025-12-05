@@ -1,6 +1,6 @@
 "use client";
 
-import React, { createContext, useContext, useState, useEffect } from "react";
+import React, { createContext, useContext, useState, useCallback, useMemo } from "react";
 import { useRouter } from "next/navigation";
 
 interface User {
@@ -18,44 +18,51 @@ interface AuthContextType {
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
+// Helper to safely get user from localStorage
+function getStoredUser(): User | null {
+  if (typeof window === "undefined") return null;
+  
+  const token = localStorage.getItem("token");
+  const storedUser = localStorage.getItem("user");
+  
+  if (token && storedUser) {
+    try {
+      return JSON.parse(storedUser) as User;
+    } catch (e) {
+      console.error("Failed to parse user from local storage", e);
+    }
+  }
+  return null;
+}
+
 export function AuthProvider({ children }: { children: React.ReactNode }) {
-  const [user, setUser] = useState<User | null>(null);
+  // Initialize state lazily from localStorage
+  const [user, setUser] = useState<User | null>(() => getStoredUser());
   const router = useRouter();
 
-  useEffect(() => {
-    const token = localStorage.getItem("token");
-    const storedUser = localStorage.getItem("user");
-    if (token && storedUser) {
-      // eslint-disable-next-line react-hooks/set-state-in-effect
-      let parsedUser: any = null;
-      try {
-        parsedUser = JSON.parse(storedUser);
-      } catch (e) {
-        console.error("Failed to parse user from local storage", e);
-      }
-      if (parsedUser) {
-        // eslint-disable-next-line react-hooks/set-state-in-effect
-        setUser(parsedUser);
-      }
-    }
-  }, []);
-
-  const login = (token: string, userData: User) => {
+  const login = useCallback((token: string, userData: User) => {
     localStorage.setItem("token", token);
     localStorage.setItem("user", JSON.stringify(userData));
     setUser(userData);
     router.push("/");
-  };
+  }, [router]);
 
-  const logout = () => {
+  const logout = useCallback(() => {
     localStorage.removeItem("token");
     localStorage.removeItem("user");
     setUser(null);
     router.push("/login");
-  };
+  }, [router]);
+
+  const value = useMemo(() => ({
+    user,
+    login,
+    logout,
+    isAuthenticated: !!user
+  }), [user, login, logout]);
 
   return (
-    <AuthContext.Provider value={{ user, login, logout, isAuthenticated: !!user }}>
+    <AuthContext.Provider value={value}>
       {children}
     </AuthContext.Provider>
   );

@@ -1,32 +1,59 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { LessonDetail } from "@/types/lesson";
 
-export function useLesson(id: string | string[] | undefined) {
+interface UseLessonResult {
+  lesson: LessonDetail | null;
+  loading: boolean;
+  error: string | null;
+  refetch: () => void;
+}
+
+/**
+ * Hook for fetching and managing lesson data.
+ * @param id - Lesson ID. Accepts string, string array (uses first element), or undefined.
+ *             When undefined, the hook will not fetch and will set loading to false.
+ * @returns Object containing lesson data, loading state, error state, and refetch function.
+ */
+export function useLesson(id: string | string[] | undefined): UseLessonResult {
   const [lesson, setLesson] = useState<LessonDetail | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
-  useEffect(() => {
-    if (!id) return;
+  // Normalize ID to string - handles Next.js dynamic route params which can be string or string[]
+  const normalizedId = Array.isArray(id) ? id[0] : id;
 
-    const lessonId = Array.isArray(id) ? id[0] : id;
-
+  const fetchLesson = useCallback(async (lessonId: string) => {
     setLoading(true);
-    fetch(`/api/lesson?id=${lessonId}`)
-      .then((res) => {
-        if (!res.ok) throw new Error("Failed to fetch lesson");
-        return res.json();
-      })
-      .then((data) => {
-        setLesson(data);
-        setError(null);
-      })
-      .catch((err) => {
-        console.error("Failed to fetch lesson:", err);
-        setError("Failed to load lesson");
-      })
-      .finally(() => setLoading(false));
-  }, [id]);
+    setError(null);
+    
+    try {
+      const res = await fetch(`/api/lesson?id=${lessonId}`);
+      if (!res.ok) {
+        throw new Error("Failed to fetch lesson");
+      }
+      const data = await res.json();
+      setLesson(data);
+    } catch (err) {
+      console.error("Failed to fetch lesson:", err);
+      setError("Failed to load lesson");
+    } finally {
+      setLoading(false);
+    }
+  }, []);
 
-  return { lesson, loading, error };
+  useEffect(() => {
+    if (!normalizedId) {
+      setLoading(false);
+      return;
+    }
+
+    fetchLesson(normalizedId);
+  }, [normalizedId, fetchLesson]);
+
+  const refetch = useCallback(() => {
+    if (!normalizedId) return;
+    fetchLesson(normalizedId);
+  }, [normalizedId, fetchLesson]);
+
+  return { lesson, loading, error, refetch };
 }
