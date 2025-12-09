@@ -21,33 +21,41 @@ type MatchingPairRequest struct {
 	Match string `json:"match"`
 }
 
+// TranscriptSentenceRequest represents a sentence in the transcript with translation
+type TranscriptSentenceRequest struct {
+	Text        string `json:"text"`
+	Translation string `json:"translation"`
+}
+
 type CreateLessonRequest struct {
-	Title         string                `json:"title"`
-	Description   string                `json:"description"`
-	AudioURL      string                `json:"audio_url"`
-	Transcript    string                `json:"transcript"`
-	QuizType      string                `json:"quiz_type"`
-	QuizQuestion  string                `json:"quiz_question"`
-	QuizOptions   []string              `json:"quiz_options"`
-	CorrectAnswer string                `json:"correct_answer"`
-	ScrambleWord  string                `json:"scramble_word,omitempty"`
-	MatchingPairs []MatchingPairRequest `json:"matching_pairs,omitempty"`
+	Title         string                      `json:"title"`
+	Description   string                      `json:"description"`
+	AudioURL      string                      `json:"audio_url"`
+	VideoURL      string                      `json:"video_url,omitempty"`
+	Transcript    []TranscriptSentenceRequest `json:"transcript"`
+	QuizType      string                      `json:"quiz_type"`
+	QuizQuestion  string                      `json:"quiz_question"`
+	QuizOptions   []string                    `json:"quiz_options"`
+	CorrectAnswer string                      `json:"correct_answer"`
+	ScrambleWord  string                      `json:"scramble_word,omitempty"`
+	MatchingPairs []MatchingPairRequest       `json:"matching_pairs,omitempty"`
 }
 
 type LessonManagementResponse struct {
-	ID            string                `json:"id"`
-	Title         string                `json:"title"`
-	Description   string                `json:"description"`
-	AudioURL      string                `json:"audio_url"`
-	Transcript    string                `json:"transcript"`
-	QuizType      string                `json:"quiz_type"`
-	QuizQuestion  string                `json:"quiz_question"`
-	QuizOptions   []string              `json:"quiz_options"`
-	CorrectAnswer string                `json:"correct_answer"`
-	ScrambleWord  string                `json:"scramble_word,omitempty"`
-	MatchingPairs []MatchingPairRequest `json:"matching_pairs,omitempty"`
-	CreatedAt     time.Time             `json:"created_at"`
-	UpdatedAt     time.Time             `json:"updated_at"`
+	ID            string                      `json:"id"`
+	Title         string                      `json:"title"`
+	Description   string                      `json:"description"`
+	AudioURL      string                      `json:"audio_url"`
+	VideoURL      string                      `json:"video_url,omitempty"`
+	Transcript    []TranscriptSentenceRequest `json:"transcript"`
+	QuizType      string                      `json:"quiz_type"`
+	QuizQuestion  string                      `json:"quiz_question"`
+	QuizOptions   []string                    `json:"quiz_options"`
+	CorrectAnswer string                      `json:"correct_answer"`
+	ScrambleWord  string                      `json:"scramble_word,omitempty"`
+	MatchingPairs []MatchingPairRequest       `json:"matching_pairs,omitempty"`
+	CreatedAt     time.Time                   `json:"created_at"`
+	UpdatedAt     time.Time                   `json:"updated_at"`
 }
 
 // LessonManagementHandler handles CRUD operations for lessons (admin only)
@@ -112,11 +120,21 @@ func createLesson(w http.ResponseWriter, r *http.Request) {
 			})
 		}
 
+		// Convert transcript sentences
+		var transcriptSentences []mock.TranscriptSentence
+		for _, ts := range req.Transcript {
+			transcriptSentences = append(transcriptSentences, mock.TranscriptSentence{
+				Text:        ts.Text,
+				Translation: ts.Translation,
+			})
+		}
+
 		lesson, err := mockDB.CreateLesson(
 			req.Title,
 			req.Description,
 			req.AudioURL,
-			req.Transcript,
+			req.VideoURL,
+			transcriptSentences,
 			req.QuizType,
 			req.QuizQuestion,
 			req.QuizOptions,
@@ -139,13 +157,23 @@ func createLesson(w http.ResponseWriter, r *http.Request) {
 			})
 		}
 
+		// Convert transcript sentences for response
+		var responseTranscript []TranscriptSentenceRequest
+		for _, ts := range lesson.Transcript {
+			responseTranscript = append(responseTranscript, TranscriptSentenceRequest{
+				Text:        ts.Text,
+				Translation: ts.Translation,
+			})
+		}
+
 		w.WriteHeader(http.StatusCreated)
 		json.NewEncoder(w).Encode(LessonManagementResponse{
 			ID:            lesson.ID.Hex(),
 			Title:         lesson.Title,
 			Description:   lesson.Description,
 			AudioURL:      lesson.AudioURL,
-			Transcript:    lesson.Transcript,
+			VideoURL:      lesson.VideoURL,
+			Transcript:    responseTranscript,
 			QuizType:      lesson.QuizType,
 			QuizQuestion:  lesson.QuizQuestion,
 			QuizOptions:   lesson.QuizOptions,
@@ -164,18 +192,19 @@ func createLesson(w http.ResponseWriter, r *http.Request) {
 
 	now := time.Now()
 	lesson := bson.M{
-		"title":           req.Title,
-		"description":     req.Description,
-		"audio_url":       req.AudioURL,
-		"transcript":      req.Transcript,
-		"quiz_type":       req.QuizType,
-		"quiz_question":   req.QuizQuestion,
-		"quiz_options":    req.QuizOptions,
-		"correct_answer":  req.CorrectAnswer,
-		"scramble_word":   req.ScrambleWord,
-		"matching_pairs":  req.MatchingPairs,
-		"created_at":      now,
-		"updated_at":      now,
+		"title":          req.Title,
+		"description":    req.Description,
+		"audio_url":      req.AudioURL,
+		"video_url":      req.VideoURL,
+		"transcript":     req.Transcript,
+		"quiz_type":      req.QuizType,
+		"quiz_question":  req.QuizQuestion,
+		"quiz_options":   req.QuizOptions,
+		"correct_answer": req.CorrectAnswer,
+		"scramble_word":  req.ScrambleWord,
+		"matching_pairs": req.MatchingPairs,
+		"created_at":     now,
+		"updated_at":     now,
 	}
 
 	result, err := collection.InsertOne(ctx, lesson)
@@ -223,12 +252,22 @@ func updateLesson(w http.ResponseWriter, r *http.Request) {
 			})
 		}
 
+		// Convert transcript sentences
+		var transcriptSentences []mock.TranscriptSentence
+		for _, ts := range req.Transcript {
+			transcriptSentences = append(transcriptSentences, mock.TranscriptSentence{
+				Text:        ts.Text,
+				Translation: ts.Translation,
+			})
+		}
+
 		lesson, err := mockDB.UpdateLesson(
 			lessonID,
 			req.Title,
 			req.Description,
 			req.AudioURL,
-			req.Transcript,
+			req.VideoURL,
+			transcriptSentences,
 			req.QuizType,
 			req.QuizQuestion,
 			req.QuizOptions,
@@ -251,12 +290,22 @@ func updateLesson(w http.ResponseWriter, r *http.Request) {
 			})
 		}
 
+		// Convert transcript sentences for response
+		var responseTranscript []TranscriptSentenceRequest
+		for _, ts := range lesson.Transcript {
+			responseTranscript = append(responseTranscript, TranscriptSentenceRequest{
+				Text:        ts.Text,
+				Translation: ts.Translation,
+			})
+		}
+
 		json.NewEncoder(w).Encode(LessonManagementResponse{
 			ID:            lesson.ID.Hex(),
 			Title:         lesson.Title,
 			Description:   lesson.Description,
 			AudioURL:      lesson.AudioURL,
-			Transcript:    lesson.Transcript,
+			VideoURL:      lesson.VideoURL,
+			Transcript:    responseTranscript,
 			QuizType:      lesson.QuizType,
 			QuizQuestion:  lesson.QuizQuestion,
 			QuizOptions:   lesson.QuizOptions,
@@ -278,6 +327,7 @@ func updateLesson(w http.ResponseWriter, r *http.Request) {
 			"title":          req.Title,
 			"description":    req.Description,
 			"audio_url":      req.AudioURL,
+			"video_url":      req.VideoURL,
 			"transcript":     req.Transcript,
 			"quiz_type":      req.QuizType,
 			"quiz_question":  req.QuizQuestion,

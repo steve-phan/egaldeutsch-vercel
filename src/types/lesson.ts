@@ -6,12 +6,18 @@ export interface MatchingPair {
   match: string;
 }
 
+export interface TranscriptSentence {
+  text: string;
+  translation: string;
+}
+
 export interface LessonDetail {
   id: string;
   title: string;
   description: string;
   audio_url: string;
-  transcript: string;
+  video_url?: string;
+  transcript: TranscriptSentence[];
   quiz_type?: QuizType;
   quiz_question: string;
   quiz_options: string[];
