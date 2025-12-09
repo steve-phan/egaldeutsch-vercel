@@ -149,7 +149,7 @@ func (db *MockDB) ValidatePassword(email, password string) (*MockUser, error) {
 
 // Lesson operations
 
-func (db *MockDB) CreateLesson(title, description, audioURL, transcript, quizType, quizQuestion string, quizOptions []string, correctAnswer, scrambleWord string, matchingPairs []MatchingPair) (*MockLesson, error) {
+func (db *MockDB) CreateLesson(title, description, audioURL, videoURL string, transcript []TranscriptSentence, quizType, quizQuestion string, quizOptions []string, correctAnswer, scrambleWord string, matchingPairs []MatchingPair) (*MockLesson, error) {
 	db.mu.Lock()
 	defer db.mu.Unlock()
 
@@ -163,6 +163,7 @@ func (db *MockDB) CreateLesson(title, description, audioURL, transcript, quizTyp
 		Title:         title,
 		Description:   description,
 		AudioURL:      audioURL,
+		VideoURL:      videoURL,
 		Transcript:    transcript,
 		QuizType:      quizType,
 		QuizQuestion:  quizQuestion,
@@ -200,7 +201,7 @@ func (db *MockDB) GetAllLessons() []*MockLesson {
 	return lessons
 }
 
-func (db *MockDB) UpdateLesson(id primitive.ObjectID, title, description, audioURL, transcript, quizType, quizQuestion string, quizOptions []string, correctAnswer, scrambleWord string, matchingPairs []MatchingPair) (*MockLesson, error) {
+func (db *MockDB) UpdateLesson(id primitive.ObjectID, title, description, audioURL, videoURL string, transcript []TranscriptSentence, quizType, quizQuestion string, quizOptions []string, correctAnswer, scrambleWord string, matchingPairs []MatchingPair) (*MockLesson, error) {
 	db.mu.Lock()
 	defer db.mu.Unlock()
 
@@ -212,6 +213,7 @@ func (db *MockDB) UpdateLesson(id primitive.ObjectID, title, description, audioU
 	lesson.Title = title
 	lesson.Description = description
 	lesson.AudioURL = audioURL
+	lesson.VideoURL = videoURL
 	lesson.Transcript = transcript
 	lesson.QuizType = quizType
 	lesson.QuizQuestion = quizQuestion

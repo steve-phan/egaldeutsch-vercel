@@ -6,6 +6,7 @@ import { useAudioPlayer } from "@/hooks/use-audio-player";
 import { useQuiz } from "@/hooks/use-quiz";
 import { LessonHeader } from "@/components/lesson/lesson-header";
 import { AudioPlayer } from "@/components/lesson/audio-player";
+import { VideoPlayer } from "@/components/lesson/video-player";
 import { TranscriptViewer } from "@/components/lesson/transcript-viewer";
 import { QuizSection } from "@/components/lesson/quiz-section";
 import { Comments } from "@/components/lesson/comments";
@@ -44,6 +45,10 @@ export default function LessonPage() {
               onTogglePlay={togglePlay} 
               disabled={!hasAudio} 
             />
+            
+            {lesson.video_url && (
+              <VideoPlayer videoUrl={lesson.video_url} />
+            )}
             
             <TranscriptViewer transcript={lesson.transcript} />
           </CardContent>

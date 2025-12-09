@@ -15,6 +15,7 @@ export default function NewLessonPage() {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [audioUrl, setAudioUrl] = useState("");
+  const [videoUrl, setVideoUrl] = useState("");
   const [transcript, setTranscript] = useState("");
   const [quizQuestion, setQuizQuestion] = useState("");
   const [quizOptions, setQuizOptions] = useState(["", "", ""]);
@@ -51,7 +52,11 @@ export default function NewLessonPage() {
           title,
           description,
           audio_url: audioUrl,
-          transcript,
+          video_url: videoUrl,
+          transcript: transcript.split('\n').filter(line => line.trim()).map(line => ({
+            text: line.trim(),
+            translation: ""
+          })),
           quiz_question: quizQuestion,
           quiz_options: quizOptions.filter((o) => o.trim() !== ""),
           correct_answer: correctAnswer,
@@ -135,14 +140,25 @@ export default function NewLessonPage() {
               </div>
 
               <div className="space-y-2">
+                <Label htmlFor="videoUrl">Video URL</Label>
+                <Input
+                  id="videoUrl"
+                  value={videoUrl}
+                  onChange={(e) => setVideoUrl(e.target.value)}
+                  placeholder="https://www.youtube.com/watch?v=... or https://example.com/video.mp4"
+                />
+              </div>
+
+              <div className="space-y-2">
                 <Label htmlFor="transcript">Transcript</Label>
                 <textarea
                   id="transcript"
                   value={transcript}
                   onChange={(e) => setTranscript(e.target.value)}
-                  placeholder="Enter the lesson transcript..."
+                  placeholder="Enter the lesson transcript (one sentence per line)..."
                   className="w-full min-h-[100px] px-3 py-2 border rounded-md"
                 />
+                <p className="text-sm text-slate-500">Enter one sentence per line. You can add translations later.</p>
               </div>
 
               <div className="border-t pt-6">
