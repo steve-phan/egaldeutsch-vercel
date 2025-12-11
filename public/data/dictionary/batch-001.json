@@ -126,9 +126,9 @@
     "mẹ": ["ID040"]
   },
   "byArtikel": {
-    "der": ["ID002", "ID007", "ID011", "ID018", "ID020", "ID022", "ID023", "ID027", "ID029", "ID032", "ID033", "ID034", "ID037", "ID038"],
-    "die": ["ID008", "ID012", "ID013", "ID014", "ID019", "ID021", "ID025", "ID028", "ID031", "ID035", "ID036", "ID039", "ID040"],
-    "das": ["ID001", "ID003", "ID004", "ID005", "ID006", "ID009", "ID010", "ID015", "ID016", "ID017", "ID024", "ID026", "ID030"]
+    "der": ["ID002", "ID003", "ID007", "ID011", "ID018", "ID020", "ID022", "ID023", "ID027", "ID029", "ID032", "ID033", "ID034", "ID037", "ID038"],
+    "die": ["ID008", "ID012", "ID013", "ID014", "ID016", "ID019", "ID021", "ID025", "ID028", "ID031", "ID035", "ID036", "ID039", "ID040"],
+    "das": ["ID001", "ID004", "ID005", "ID006", "ID009", "ID010", "ID015", "ID017", "ID024", "ID026", "ID030"]
   },
   "entries": {
     "ID001": {
@@ -165,7 +165,7 @@
     },
     "ID003": {
       "word": "Stuhl",
-      "artikel": "das",
+      "artikel": "der",
       "plural": "Stühle",
       "english": "chair",
       "vietnamese": "cái ghế",
@@ -373,7 +373,7 @@
     },
     "ID016": {
       "word": "Stadt",
-      "artikel": "das",
+      "artikel": "die",
       "plural": "Städte",
       "english": "city",
       "vietnamese": "thành phố",
