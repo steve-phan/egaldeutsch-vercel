@@ -1,16 +1,66 @@
 {
   "byWord": {
-    "preis": "ID098",
-    "polizist": "ID106",
-    "professor": "ID109",
-    "post": "ID122",
-    "pferd": "ID186",
-    "platz": "ID214",
-    "punkt": "ID216",
-    "prozent": "ID223",
-    "paar": "ID227",
-    "pflicht": "ID235",
-    "problem": "ID237"
+    "preis": "ID883",
+    "polizist": "ID880",
+    "professor": "ID891",
+    "post": "ID881",
+    "pferd": "ID862",
+    "platz": "ID876",
+    "punkt": "ID900",
+    "prozent": "ID894",
+    "paar": "ID842",
+    "pflicht": "ID865",
+    "problem": "ID888",
+    "paket": "ID843",
+    "palast": "ID844",
+    "papier": "ID845",
+    "parade": "ID846",
+    "paradies": "ID847",
+    "park": "ID848",
+    "parkplatz": "ID849",
+    "partei": "ID850",
+    "partner": "ID851",
+    "pass": "ID852",
+    "passagier": "ID853",
+    "patient": "ID854",
+    "pause": "ID855",
+    "pension": "ID856",
+    "person": "ID857",
+    "persönlichkeit": "ID858",
+    "perspektive": "ID859",
+    "pfeffer": "ID860",
+    "pfeife": "ID861",
+    "pflanze": "ID863",
+    "pflege": "ID864",
+    "phantasie": "ID866",
+    "phase": "ID867",
+    "philosoph": "ID868",
+    "philosophie": "ID869",
+    "physik": "ID870",
+    "pilot": "ID871",
+    "pistole": "ID872",
+    "plan": "ID873",
+    "planet": "ID874",
+    "platte": "ID875",
+    "politiker": "ID877",
+    "politik": "ID878",
+    "polizei": "ID879",
+    "praxis": "ID882",
+    "presse": "ID884",
+    "prinz": "ID885",
+    "prinzip": "ID886",
+    "probe": "ID887",
+    "produkt": "ID889",
+    "produktion": "ID890",
+    "programm": "ID892",
+    "projekt": "ID893",
+    "prozess": "ID895",
+    "prüfung": "ID896",
+    "publikum": "ID897",
+    "pullover": "ID898",
+    "pumpe": "ID899",
+    "puppe": "ID901",
+    "qualität": "ID902"
   },
   "byEnglish": {
     "price": [
@@ -20,66 +70,402 @@
       "ID106"
     ],
     "professor": [
-      "ID109"
+      "ID109",
+      "ID891"
     ],
     "post office": [
       "ID122"
     ],
     "horse": [
-      "ID186"
+      "ID186",
+      "ID862"
     ],
     "place": [
       "ID214"
     ],
     "point": [
-      "ID216"
+      "ID216",
+      "ID900"
     ],
     "percent": [
-      "ID223"
+      "ID223",
+      "ID894"
     ],
     "pair": [
       "ID227"
     ],
     "duty": [
-      "ID235"
+      "ID235",
+      "ID865"
     ],
     "problem": [
-      "ID237"
+      "ID237",
+      "ID888"
+    ],
+    "pair, couple": [
+      "ID842"
+    ],
+    "package": [
+      "ID843"
+    ],
+    "palace": [
+      "ID844"
+    ],
+    "paper": [
+      "ID845"
+    ],
+    "parade": [
+      "ID846"
+    ],
+    "paradise": [
+      "ID847"
+    ],
+    "park": [
+      "ID848"
+    ],
+    "parking lot": [
+      "ID849"
+    ],
+    "party (political)": [
+      "ID850"
+    ],
+    "partner": [
+      "ID851"
+    ],
+    "passport, pass": [
+      "ID852"
+    ],
+    "passenger": [
+      "ID853"
+    ],
+    "patient": [
+      "ID854"
+    ],
+    "break, pause": [
+      "ID855"
+    ],
+    "pension, guesthouse": [
+      "ID856"
+    ],
+    "person": [
+      "ID857"
+    ],
+    "personality": [
+      "ID858"
+    ],
+    "perspective": [
+      "ID859"
+    ],
+    "pepper": [
+      "ID860"
+    ],
+    "pipe, whistle": [
+      "ID861"
+    ],
+    "plant": [
+      "ID863"
+    ],
+    "care, nursing": [
+      "ID864"
+    ],
+    "fantasy": [
+      "ID866"
+    ],
+    "phase": [
+      "ID867"
+    ],
+    "philosopher": [
+      "ID868"
+    ],
+    "philosophy": [
+      "ID869"
+    ],
+    "physics": [
+      "ID870"
+    ],
+    "pilot": [
+      "ID871"
+    ],
+    "pistol": [
+      "ID872"
+    ],
+    "plan": [
+      "ID873"
+    ],
+    "planet": [
+      "ID874"
+    ],
+    "plate, record": [
+      "ID875"
+    ],
+    "place, square": [
+      "ID876"
+    ],
+    "politician": [
+      "ID877"
+    ],
+    "politics": [
+      "ID878"
+    ],
+    "police": [
+      "ID879"
+    ],
+    "policeman": [
+      "ID880"
+    ],
+    "post office, mail": [
+      "ID881"
+    ],
+    "practice, office": [
+      "ID882"
+    ],
+    "price, prize": [
+      "ID883"
+    ],
+    "press": [
+      "ID884"
+    ],
+    "prince": [
+      "ID885"
+    ],
+    "principle": [
+      "ID886"
+    ],
+    "rehearsal, sample": [
+      "ID887"
+    ],
+    "product": [
+      "ID889"
+    ],
+    "production": [
+      "ID890"
+    ],
+    "program": [
+      "ID892"
+    ],
+    "project": [
+      "ID893"
+    ],
+    "process, trial": [
+      "ID895"
+    ],
+    "exam": [
+      "ID896"
+    ],
+    "audience": [
+      "ID897"
+    ],
+    "sweater": [
+      "ID898"
+    ],
+    "pump": [
+      "ID899"
+    ],
+    "doll": [
+      "ID901"
+    ],
+    "quality": [
+      "ID902"
     ]
   },
   "byVietnamese": {
     "giá cả": [
-      "ID098"
+      "ID098",
+      "ID883"
     ],
     "cảnh sát": [
-      "ID106"
+      "ID106",
+      "ID879"
     ],
     "giáo sư": [
-      "ID109"
+      "ID109",
+      "ID891"
     ],
     "bưu điện": [
-      "ID122"
+      "ID122",
+      "ID881"
     ],
     "con ngựa": [
-      "ID186"
+      "ID186",
+      "ID862"
     ],
     "chỗ": [
       "ID214"
     ],
     "điểm": [
-      "ID216"
+      "ID216",
+      "ID900"
     ],
     "phần trăm": [
-      "ID223"
+      "ID223",
+      "ID894"
     ],
     "cặp": [
-      "ID227"
+      "ID227",
+      "ID842"
     ],
     "nghĩa vụ": [
       "ID235"
     ],
     "vấn đề": [
-      "ID237"
+      "ID237",
+      "ID888"
+    ],
+    "gói hàng": [
+      "ID843"
+    ],
+    "cung điện": [
+      "ID844"
+    ],
+    "giấy": [
+      "ID845"
+    ],
+    "cuộc diễu hành": [
+      "ID846"
+    ],
+    "thiên đường": [
+      "ID847"
+    ],
+    "công viên": [
+      "ID848"
+    ],
+    "bãi đậu xe": [
+      "ID849"
+    ],
+    "đảng": [
+      "ID850"
+    ],
+    "đối tác": [
+      "ID851"
+    ],
+    "hộ chiếu": [
+      "ID852"
+    ],
+    "hành khách": [
+      "ID853"
+    ],
+    "bệnh nhân": [
+      "ID854"
+    ],
+    "giờ nghỉ": [
+      "ID855"
+    ],
+    "lương hưu": [
+      "ID856"
+    ],
+    "người": [
+      "ID857"
+    ],
+    "nhân cách": [
+      "ID858"
+    ],
+    "viễn cảnh": [
+      "ID859"
+    ],
+    "hạt tiêu": [
+      "ID860"
+    ],
+    "ống khói": [
+      "ID861"
+    ],
+    "cây cối": [
+      "ID863"
+    ],
+    "chăm sóc": [
+      "ID864"
+    ],
+    "bổn phận": [
+      "ID865"
+    ],
+    "tưởng tượng": [
+      "ID866"
+    ],
+    "giai đoạn": [
+      "ID867"
+    ],
+    "triết gia": [
+      "ID868"
+    ],
+    "triết học": [
+      "ID869"
+    ],
+    "vật lý": [
+      "ID870"
+    ],
+    "phi công": [
+      "ID871"
+    ],
+    "súng lục": [
+      "ID872"
+    ],
+    "kế hoạch": [
+      "ID873"
+    ],
+    "hành tinh": [
+      "ID874"
+    ],
+    "đĩa": [
+      "ID875"
+    ],
+    "nơi": [
+      "ID876"
+    ],
+    "chính trị gia": [
+      "ID877"
+    ],
+    "chính trị": [
+      "ID878"
+    ],
+    "cảnh sát viên": [
+      "ID880"
+    ],
+    "phòng khám": [
+      "ID882"
+    ],
+    "báo chí": [
+      "ID884"
+    ],
+    "hoàng tử": [
+      "ID885"
+    ],
+    "nguyên tắc": [
+      "ID886"
+    ],
+    "buổi tập": [
+      "ID887"
+    ],
+    "sản phẩm": [
+      "ID889"
+    ],
+    "sản xuất": [
+      "ID890"
+    ],
+    "chương trình": [
+      "ID892"
+    ],
+    "dự án": [
+      "ID893"
+    ],
+    "quá trình": [
+      "ID895"
+    ],
+    "kỳ thi": [
+      "ID896"
+    ],
+    "khán giả": [
+      "ID897"
+    ],
+    "áo len": [
+      "ID898"
+    ],
+    "máy bơm": [
+      "ID899"
+    ],
+    "búp bê": [
+      "ID901"
+    ],
+    "chất lượng": [
+      "ID902"
     ]
   },
   "byArtikel": {
@@ -89,16 +475,77 @@
       "ID109",
       "ID214",
       "ID216",
-      "ID227"
+      "ID227",
+      "ID844",
+      "ID848",
+      "ID849",
+      "ID851",
+      "ID852",
+      "ID853",
+      "ID854",
+      "ID860",
+      "ID868",
+      "ID871",
+      "ID873",
+      "ID874",
+      "ID876",
+      "ID877",
+      "ID880",
+      "ID883",
+      "ID885",
+      "ID891",
+      "ID895",
+      "ID898",
+      "ID900"
     ],
     "die": [
       "ID122",
-      "ID235"
+      "ID235",
+      "ID846",
+      "ID850",
+      "ID855",
+      "ID856",
+      "ID857",
+      "ID858",
+      "ID859",
+      "ID861",
+      "ID863",
+      "ID864",
+      "ID865",
+      "ID866",
+      "ID867",
+      "ID869",
+      "ID870",
+      "ID872",
+      "ID875",
+      "ID878",
+      "ID879",
+      "ID881",
+      "ID882",
+      "ID884",
+      "ID887",
+      "ID890",
+      "ID896",
+      "ID899",
+      "ID901",
+      "ID902"
     ],
     "das": [
       "ID186",
       "ID223",
-      "ID237"
+      "ID237",
+      "ID842",
+      "ID843",
+      "ID845",
+      "ID847",
+      "ID862",
+      "ID886",
+      "ID888",
+      "ID889",
+      "ID892",
+      "ID893",
+      "ID894",
+      "ID897"
     ]
   },
   "entries": {
@@ -275,6 +722,982 @@
           "de": "Ich habe ein Problem.",
           "en": "I have a problem.",
           "vi": "Tôi có một vấn đề."
+        }
+      ]
+    },
+    "ID842": {
+      "word": "Paar",
+      "artikel": "das",
+      "plural": "Paare",
+      "english": "pair, couple",
+      "vietnamese": "cặp",
+      "definition_en": "A pair, couple.",
+      "definition_vi": "Một cặp.",
+      "examples": [
+        {
+          "de": "Das Paar ist wichtig.",
+          "en": "The pair, couple is important.",
+          "vi": "Cặp thì quan trọng."
+        }
+      ]
+    },
+    "ID843": {
+      "word": "Paket",
+      "artikel": "das",
+      "plural": "Pakete",
+      "english": "package",
+      "vietnamese": "gói hàng",
+      "definition_en": "A package.",
+      "definition_vi": "Một gói hàng.",
+      "examples": [
+        {
+          "de": "Das Paket ist wichtig.",
+          "en": "The package is important.",
+          "vi": "Gói hàng thì quan trọng."
+        }
+      ]
+    },
+    "ID844": {
+      "word": "Palast",
+      "artikel": "der",
+      "plural": "Paläste",
+      "english": "palace",
+      "vietnamese": "cung điện",
+      "definition_en": "A palace.",
+      "definition_vi": "Một cung điện.",
+      "examples": [
+        {
+          "de": "Der Palast ist wichtig.",
+          "en": "The palace is important.",
+          "vi": "Cung điện thì quan trọng."
+        }
+      ]
+    },
+    "ID845": {
+      "word": "Papier",
+      "artikel": "das",
+      "plural": "Papiere",
+      "english": "paper",
+      "vietnamese": "giấy",
+      "definition_en": "A paper.",
+      "definition_vi": "Một giấy.",
+      "examples": [
+        {
+          "de": "Das Papier ist wichtig.",
+          "en": "The paper is important.",
+          "vi": "Giấy thì quan trọng."
+        }
+      ]
+    },
+    "ID846": {
+      "word": "Parade",
+      "artikel": "die",
+      "plural": "Paraden",
+      "english": "parade",
+      "vietnamese": "cuộc diễu hành",
+      "definition_en": "A parade.",
+      "definition_vi": "Một cuộc diễu hành.",
+      "examples": [
+        {
+          "de": "Die Parade ist wichtig.",
+          "en": "The parade is important.",
+          "vi": "Cuộc diễu hành thì quan trọng."
+        }
+      ]
+    },
+    "ID847": {
+      "word": "Paradies",
+      "artikel": "das",
+      "plural": "Paradiese",
+      "english": "paradise",
+      "vietnamese": "thiên đường",
+      "definition_en": "A paradise.",
+      "definition_vi": "Một thiên đường.",
+      "examples": [
+        {
+          "de": "Das Paradies ist wichtig.",
+          "en": "The paradise is important.",
+          "vi": "Thiên đường thì quan trọng."
+        }
+      ]
+    },
+    "ID848": {
+      "word": "Park",
+      "artikel": "der",
+      "plural": "Parks",
+      "english": "park",
+      "vietnamese": "công viên",
+      "definition_en": "A park.",
+      "definition_vi": "Một công viên.",
+      "examples": [
+        {
+          "de": "Der Park ist wichtig.",
+          "en": "The park is important.",
+          "vi": "Công viên thì quan trọng."
+        }
+      ]
+    },
+    "ID849": {
+      "word": "Parkplatz",
+      "artikel": "der",
+      "plural": "Parkplätze",
+      "english": "parking lot",
+      "vietnamese": "bãi đậu xe",
+      "definition_en": "A parking lot.",
+      "definition_vi": "Một bãi đậu xe.",
+      "examples": [
+        {
+          "de": "Der Parkplatz ist wichtig.",
+          "en": "The parking lot is important.",
+          "vi": "Bãi đậu xe thì quan trọng."
+        }
+      ]
+    },
+    "ID850": {
+      "word": "Partei",
+      "artikel": "die",
+      "plural": "Parteien",
+      "english": "party (political)",
+      "vietnamese": "đảng",
+      "definition_en": "A party (political).",
+      "definition_vi": "Một đảng.",
+      "examples": [
+        {
+          "de": "Die Partei ist wichtig.",
+          "en": "The party (political) is important.",
+          "vi": "Đảng thì quan trọng."
+        }
+      ]
+    },
+    "ID851": {
+      "word": "Partner",
+      "artikel": "der",
+      "plural": "Partner",
+      "english": "partner",
+      "vietnamese": "đối tác",
+      "definition_en": "A partner.",
+      "definition_vi": "Một đối tác.",
+      "examples": [
+        {
+          "de": "Der Partner ist wichtig.",
+          "en": "The partner is important.",
+          "vi": "Đối tác thì quan trọng."
+        }
+      ]
+    },
+    "ID852": {
+      "word": "Pass",
+      "artikel": "der",
+      "plural": "Pässe",
+      "english": "passport, pass",
+      "vietnamese": "hộ chiếu",
+      "definition_en": "A passport, pass.",
+      "definition_vi": "Một hộ chiếu.",
+      "examples": [
+        {
+          "de": "Der Pass ist wichtig.",
+          "en": "The passport, pass is important.",
+          "vi": "Hộ chiếu thì quan trọng."
+        }
+      ]
+    },
+    "ID853": {
+      "word": "Passagier",
+      "artikel": "der",
+      "plural": "Passagiere",
+      "english": "passenger",
+      "vietnamese": "hành khách",
+      "definition_en": "A passenger.",
+      "definition_vi": "Một hành khách.",
+      "examples": [
+        {
+          "de": "Der Passagier ist wichtig.",
+          "en": "The passenger is important.",
+          "vi": "Hành khách thì quan trọng."
+        }
+      ]
+    },
+    "ID854": {
+      "word": "Patient",
+      "artikel": "der",
+      "plural": "Patienten",
+      "english": "patient",
+      "vietnamese": "bệnh nhân",
+      "definition_en": "A patient.",
+      "definition_vi": "Một bệnh nhân.",
+      "examples": [
+        {
+          "de": "Der Patient ist wichtig.",
+          "en": "The patient is important.",
+          "vi": "Bệnh nhân thì quan trọng."
+        }
+      ]
+    },
+    "ID855": {
+      "word": "Pause",
+      "artikel": "die",
+      "plural": "Pausen",
+      "english": "break, pause",
+      "vietnamese": "giờ nghỉ",
+      "definition_en": "A break, pause.",
+      "definition_vi": "Một giờ nghỉ.",
+      "examples": [
+        {
+          "de": "Die Pause ist wichtig.",
+          "en": "The break, pause is important.",
+          "vi": "Giờ nghỉ thì quan trọng."
+        }
+      ]
+    },
+    "ID856": {
+      "word": "Pension",
+      "artikel": "die",
+      "plural": "Pensionen",
+      "english": "pension, guesthouse",
+      "vietnamese": "lương hưu",
+      "definition_en": "A pension, guesthouse.",
+      "definition_vi": "Một lương hưu.",
+      "examples": [
+        {
+          "de": "Die Pension ist wichtig.",
+          "en": "The pension, guesthouse is important.",
+          "vi": "Lương hưu thì quan trọng."
+        }
+      ]
+    },
+    "ID857": {
+      "word": "Person",
+      "artikel": "die",
+      "plural": "Personen",
+      "english": "person",
+      "vietnamese": "người",
+      "definition_en": "A person.",
+      "definition_vi": "Một người.",
+      "examples": [
+        {
+          "de": "Die Person ist wichtig.",
+          "en": "The person is important.",
+          "vi": "Người thì quan trọng."
+        }
+      ]
+    },
+    "ID858": {
+      "word": "Persönlichkeit",
+      "artikel": "die",
+      "plural": "Persönlichkeiten",
+      "english": "personality",
+      "vietnamese": "nhân cách",
+      "definition_en": "A personality.",
+      "definition_vi": "Một nhân cách.",
+      "examples": [
+        {
+          "de": "Die Persönlichkeit ist wichtig.",
+          "en": "The personality is important.",
+          "vi": "Nhân cách thì quan trọng."
+        }
+      ]
+    },
+    "ID859": {
+      "word": "Perspektive",
+      "artikel": "die",
+      "plural": "Perspektiven",
+      "english": "perspective",
+      "vietnamese": "viễn cảnh",
+      "definition_en": "A perspective.",
+      "definition_vi": "Một viễn cảnh.",
+      "examples": [
+        {
+          "de": "Die Perspektive ist wichtig.",
+          "en": "The perspective is important.",
+          "vi": "Viễn cảnh thì quan trọng."
+        }
+      ]
+    },
+    "ID860": {
+      "word": "Pfeffer",
+      "artikel": "der",
+      "plural": "-",
+      "english": "pepper",
+      "vietnamese": "hạt tiêu",
+      "definition_en": "A pepper.",
+      "definition_vi": "Một hạt tiêu.",
+      "examples": [
+        {
+          "de": "Der Pfeffer ist wichtig.",
+          "en": "The pepper is important.",
+          "vi": "Hạt tiêu thì quan trọng."
+        }
+      ]
+    },
+    "ID861": {
+      "word": "Pfeife",
+      "artikel": "die",
+      "plural": "Pfeifen",
+      "english": "pipe, whistle",
+      "vietnamese": "ống khói",
+      "definition_en": "A pipe, whistle.",
+      "definition_vi": "Một ống khói.",
+      "examples": [
+        {
+          "de": "Die Pfeife ist wichtig.",
+          "en": "The pipe, whistle is important.",
+          "vi": "Ống khói thì quan trọng."
+        }
+      ]
+    },
+    "ID862": {
+      "word": "Pferd",
+      "artikel": "das",
+      "plural": "Pferde",
+      "english": "horse",
+      "vietnamese": "con ngựa",
+      "definition_en": "A horse.",
+      "definition_vi": "Một con ngựa.",
+      "examples": [
+        {
+          "de": "Das Pferd ist wichtig.",
+          "en": "The horse is important.",
+          "vi": "Con ngựa thì quan trọng."
+        }
+      ]
+    },
+    "ID863": {
+      "word": "Pflanze",
+      "artikel": "die",
+      "plural": "Pflanzen",
+      "english": "plant",
+      "vietnamese": "cây cối",
+      "definition_en": "A plant.",
+      "definition_vi": "Một cây cối.",
+      "examples": [
+        {
+          "de": "Die Pflanze ist wichtig.",
+          "en": "The plant is important.",
+          "vi": "Cây cối thì quan trọng."
+        }
+      ]
+    },
+    "ID864": {
+      "word": "Pflege",
+      "artikel": "die",
+      "plural": "-",
+      "english": "care, nursing",
+      "vietnamese": "chăm sóc",
+      "definition_en": "A care, nursing.",
+      "definition_vi": "Một chăm sóc.",
+      "examples": [
+        {
+          "de": "Die Pflege ist wichtig.",
+          "en": "The care, nursing is important.",
+          "vi": "Chăm sóc thì quan trọng."
+        }
+      ]
+    },
+    "ID865": {
+      "word": "Pflicht",
+      "artikel": "die",
+      "plural": "Pflichten",
+      "english": "duty",
+      "vietnamese": "bổn phận",
+      "definition_en": "A duty.",
+      "definition_vi": "Một bổn phận.",
+      "examples": [
+        {
+          "de": "Die Pflicht ist wichtig.",
+          "en": "The duty is important.",
+          "vi": "Bổn phận thì quan trọng."
+        }
+      ]
+    },
+    "ID866": {
+      "word": "Phantasie",
+      "artikel": "die",
+      "plural": "Phantasien",
+      "english": "fantasy",
+      "vietnamese": "tưởng tượng",
+      "definition_en": "A fantasy.",
+      "definition_vi": "Một tưởng tượng.",
+      "examples": [
+        {
+          "de": "Die Phantasie ist wichtig.",
+          "en": "The fantasy is important.",
+          "vi": "Tưởng tượng thì quan trọng."
+        }
+      ]
+    },
+    "ID867": {
+      "word": "Phase",
+      "artikel": "die",
+      "plural": "Phasen",
+      "english": "phase",
+      "vietnamese": "giai đoạn",
+      "definition_en": "A phase.",
+      "definition_vi": "Một giai đoạn.",
+      "examples": [
+        {
+          "de": "Die Phase ist wichtig.",
+          "en": "The phase is important.",
+          "vi": "Giai đoạn thì quan trọng."
+        }
+      ]
+    },
+    "ID868": {
+      "word": "Philosoph",
+      "artikel": "der",
+      "plural": "Philosophen",
+      "english": "philosopher",
+      "vietnamese": "triết gia",
+      "definition_en": "A philosopher.",
+      "definition_vi": "Một triết gia.",
+      "examples": [
+        {
+          "de": "Der Philosoph ist wichtig.",
+          "en": "The philosopher is important.",
+          "vi": "Triết gia thì quan trọng."
+        }
+      ]
+    },
+    "ID869": {
+      "word": "Philosophie",
+      "artikel": "die",
+      "plural": "Philosophien",
+      "english": "philosophy",
+      "vietnamese": "triết học",
+      "definition_en": "A philosophy.",
+      "definition_vi": "Một triết học.",
+      "examples": [
+        {
+          "de": "Die Philosophie ist wichtig.",
+          "en": "The philosophy is important.",
+          "vi": "Triết học thì quan trọng."
+        }
+      ]
+    },
+    "ID870": {
+      "word": "Physik",
+      "artikel": "die",
+      "plural": "-",
+      "english": "physics",
+      "vietnamese": "vật lý",
+      "definition_en": "A physics.",
+      "definition_vi": "Một vật lý.",
+      "examples": [
+        {
+          "de": "Die Physik ist wichtig.",
+          "en": "The physics is important.",
+          "vi": "Vật lý thì quan trọng."
+        }
+      ]
+    },
+    "ID871": {
+      "word": "Pilot",
+      "artikel": "der",
+      "plural": "Piloten",
+      "english": "pilot",
+      "vietnamese": "phi công",
+      "definition_en": "A pilot.",
+      "definition_vi": "Một phi công.",
+      "examples": [
+        {
+          "de": "Der Pilot ist wichtig.",
+          "en": "The pilot is important.",
+          "vi": "Phi công thì quan trọng."
+        }
+      ]
+    },
+    "ID872": {
+      "word": "Pistole",
+      "artikel": "die",
+      "plural": "Pistolen",
+      "english": "pistol",
+      "vietnamese": "súng lục",
+      "definition_en": "A pistol.",
+      "definition_vi": "Một súng lục.",
+      "examples": [
+        {
+          "de": "Die Pistole ist wichtig.",
+          "en": "The pistol is important.",
+          "vi": "Súng lục thì quan trọng."
+        }
+      ]
+    },
+    "ID873": {
+      "word": "Plan",
+      "artikel": "der",
+      "plural": "Pläne",
+      "english": "plan",
+      "vietnamese": "kế hoạch",
+      "definition_en": "A plan.",
+      "definition_vi": "Một kế hoạch.",
+      "examples": [
+        {
+          "de": "Der Plan ist wichtig.",
+          "en": "The plan is important.",
+          "vi": "Kế hoạch thì quan trọng."
+        }
+      ]
+    },
+    "ID874": {
+      "word": "Planet",
+      "artikel": "der",
+      "plural": "Planeten",
+      "english": "planet",
+      "vietnamese": "hành tinh",
+      "definition_en": "A planet.",
+      "definition_vi": "Một hành tinh.",
+      "examples": [
+        {
+          "de": "Der Planet ist wichtig.",
+          "en": "The planet is important.",
+          "vi": "Hành tinh thì quan trọng."
+        }
+      ]
+    },
+    "ID875": {
+      "word": "Platte",
+      "artikel": "die",
+      "plural": "Platten",
+      "english": "plate, record",
+      "vietnamese": "đĩa",
+      "definition_en": "A plate, record.",
+      "definition_vi": "Một đĩa.",
+      "examples": [
+        {
+          "de": "Die Platte ist wichtig.",
+          "en": "The plate, record is important.",
+          "vi": "Đĩa thì quan trọng."
+        }
+      ]
+    },
+    "ID876": {
+      "word": "Platz",
+      "artikel": "der",
+      "plural": "Plätze",
+      "english": "place, square",
+      "vietnamese": "nơi",
+      "definition_en": "A place, square.",
+      "definition_vi": "Một nơi.",
+      "examples": [
+        {
+          "de": "Der Platz ist wichtig.",
+          "en": "The place, square is important.",
+          "vi": "Nơi thì quan trọng."
+        }
+      ]
+    },
+    "ID877": {
+      "word": "Politiker",
+      "artikel": "der",
+      "plural": "Politiker",
+      "english": "politician",
+      "vietnamese": "chính trị gia",
+      "definition_en": "A politician.",
+      "definition_vi": "Một chính trị gia.",
+      "examples": [
+        {
+          "de": "Der Politiker ist wichtig.",
+          "en": "The politician is important.",
+          "vi": "Chính trị gia thì quan trọng."
+        }
+      ]
+    },
+    "ID878": {
+      "word": "Politik",
+      "artikel": "die",
+      "plural": "-",
+      "english": "politics",
+      "vietnamese": "chính trị",
+      "definition_en": "A politics.",
+      "definition_vi": "Một chính trị.",
+      "examples": [
+        {
+          "de": "Die Politik ist wichtig.",
+          "en": "The politics is important.",
+          "vi": "Chính trị thì quan trọng."
+        }
+      ]
+    },
+    "ID879": {
+      "word": "Polizei",
+      "artikel": "die",
+      "plural": "-",
+      "english": "police",
+      "vietnamese": "cảnh sát",
+      "definition_en": "A police.",
+      "definition_vi": "Một cảnh sát.",
+      "examples": [
+        {
+          "de": "Die Polizei ist wichtig.",
+          "en": "The police is important.",
+          "vi": "Cảnh sát thì quan trọng."
+        }
+      ]
+    },
+    "ID880": {
+      "word": "Polizist",
+      "artikel": "der",
+      "plural": "Polizisten",
+      "english": "policeman",
+      "vietnamese": "cảnh sát viên",
+      "definition_en": "A policeman.",
+      "definition_vi": "Một cảnh sát viên.",
+      "examples": [
+        {
+          "de": "Der Polizist ist wichtig.",
+          "en": "The policeman is important.",
+          "vi": "Cảnh sát viên thì quan trọng."
+        }
+      ]
+    },
+    "ID881": {
+      "word": "Post",
+      "artikel": "die",
+      "plural": "-",
+      "english": "post office, mail",
+      "vietnamese": "bưu điện",
+      "definition_en": "A post office, mail.",
+      "definition_vi": "Một bưu điện.",
+      "examples": [
+        {
+          "de": "Die Post ist wichtig.",
+          "en": "The post office, mail is important.",
+          "vi": "Bưu điện thì quan trọng."
+        }
+      ]
+    },
+    "ID882": {
+      "word": "Praxis",
+      "artikel": "die",
+      "plural": "Praxen",
+      "english": "practice, office",
+      "vietnamese": "phòng khám",
+      "definition_en": "A practice, office.",
+      "definition_vi": "Một phòng khám.",
+      "examples": [
+        {
+          "de": "Die Praxis ist wichtig.",
+          "en": "The practice, office is important.",
+          "vi": "Phòng khám thì quan trọng."
+        }
+      ]
+    },
+    "ID883": {
+      "word": "Preis",
+      "artikel": "der",
+      "plural": "Preise",
+      "english": "price, prize",
+      "vietnamese": "giá cả",
+      "definition_en": "A price, prize.",
+      "definition_vi": "Một giá cả.",
+      "examples": [
+        {
+          "de": "Der Preis ist wichtig.",
+          "en": "The price, prize is important.",
+          "vi": "Giá cả thì quan trọng."
+        }
+      ]
+    },
+    "ID884": {
+      "word": "Presse",
+      "artikel": "die",
+      "plural": "-",
+      "english": "press",
+      "vietnamese": "báo chí",
+      "definition_en": "A press.",
+      "definition_vi": "Một báo chí.",
+      "examples": [
+        {
+          "de": "Die Presse ist wichtig.",
+          "en": "The press is important.",
+          "vi": "Báo chí thì quan trọng."
+        }
+      ]
+    },
+    "ID885": {
+      "word": "Prinz",
+      "artikel": "der",
+      "plural": "Prinzen",
+      "english": "prince",
+      "vietnamese": "hoàng tử",
+      "definition_en": "A prince.",
+      "definition_vi": "Một hoàng tử.",
+      "examples": [
+        {
+          "de": "Der Prinz ist wichtig.",
+          "en": "The prince is important.",
+          "vi": "Hoàng tử thì quan trọng."
+        }
+      ]
+    },
+    "ID886": {
+      "word": "Prinzip",
+      "artikel": "das",
+      "plural": "Prinzipien",
+      "english": "principle",
+      "vietnamese": "nguyên tắc",
+      "definition_en": "A principle.",
+      "definition_vi": "Một nguyên tắc.",
+      "examples": [
+        {
+          "de": "Das Prinzip ist wichtig.",
+          "en": "The principle is important.",
+          "vi": "Nguyên tắc thì quan trọng."
+        }
+      ]
+    },
+    "ID887": {
+      "word": "Probe",
+      "artikel": "die",
+      "plural": "Proben",
+      "english": "rehearsal, sample",
+      "vietnamese": "buổi tập",
+      "definition_en": "A rehearsal, sample.",
+      "definition_vi": "Một buổi tập.",
+      "examples": [
+        {
+          "de": "Die Probe ist wichtig.",
+          "en": "The rehearsal, sample is important.",
+          "vi": "Buổi tập thì quan trọng."
+        }
+      ]
+    },
+    "ID888": {
+      "word": "Problem",
+      "artikel": "das",
+      "plural": "Probleme",
+      "english": "problem",
+      "vietnamese": "vấn đề",
+      "definition_en": "A problem.",
+      "definition_vi": "Một vấn đề.",
+      "examples": [
+        {
+          "de": "Das Problem ist wichtig.",
+          "en": "The problem is important.",
+          "vi": "Vấn đề thì quan trọng."
+        }
+      ]
+    },
+    "ID889": {
+      "word": "Produkt",
+      "artikel": "das",
+      "plural": "Produkte",
+      "english": "product",
+      "vietnamese": "sản phẩm",
+      "definition_en": "A product.",
+      "definition_vi": "Một sản phẩm.",
+      "examples": [
+        {
+          "de": "Das Produkt ist wichtig.",
+          "en": "The product is important.",
+          "vi": "Sản phẩm thì quan trọng."
+        }
+      ]
+    },
+    "ID890": {
+      "word": "Produktion",
+      "artikel": "die",
+      "plural": "Produktionen",
+      "english": "production",
+      "vietnamese": "sản xuất",
+      "definition_en": "A production.",
+      "definition_vi": "Một sản xuất.",
+      "examples": [
+        {
+          "de": "Die Produktion ist wichtig.",
+          "en": "The production is important.",
+          "vi": "Sản xuất thì quan trọng."
+        }
+      ]
+    },
+    "ID891": {
+      "word": "Professor",
+      "artikel": "der",
+      "plural": "Professoren",
+      "english": "professor",
+      "vietnamese": "giáo sư",
+      "definition_en": "A professor.",
+      "definition_vi": "Một giáo sư.",
+      "examples": [
+        {
+          "de": "Der Professor ist wichtig.",
+          "en": "The professor is important.",
+          "vi": "Giáo sư thì quan trọng."
+        }
+      ]
+    },
+    "ID892": {
+      "word": "Programm",
+      "artikel": "das",
+      "plural": "Programme",
+      "english": "program",
+      "vietnamese": "chương trình",
+      "definition_en": "A program.",
+      "definition_vi": "Một chương trình.",
+      "examples": [
+        {
+          "de": "Das Programm ist wichtig.",
+          "en": "The program is important.",
+          "vi": "Chương trình thì quan trọng."
+        }
+      ]
+    },
+    "ID893": {
+      "word": "Projekt",
+      "artikel": "das",
+      "plural": "Projekte",
+      "english": "project",
+      "vietnamese": "dự án",
+      "definition_en": "A project.",
+      "definition_vi": "Một dự án.",
+      "examples": [
+        {
+          "de": "Das Projekt ist wichtig.",
+          "en": "The project is important.",
+          "vi": "Dự án thì quan trọng."
+        }
+      ]
+    },
+    "ID894": {
+      "word": "Prozent",
+      "artikel": "das",
+      "plural": "-",
+      "english": "percent",
+      "vietnamese": "phần trăm",
+      "definition_en": "A percent.",
+      "definition_vi": "Một phần trăm.",
+      "examples": [
+        {
+          "de": "Das Prozent ist wichtig.",
+          "en": "The percent is important.",
+          "vi": "Phần trăm thì quan trọng."
+        }
+      ]
+    },
+    "ID895": {
+      "word": "Prozess",
+      "artikel": "der",
+      "plural": "Prozesse",
+      "english": "process, trial",
+      "vietnamese": "quá trình",
+      "definition_en": "A process, trial.",
+      "definition_vi": "Một quá trình.",
+      "examples": [
+        {
+          "de": "Der Prozess ist wichtig.",
+          "en": "The process, trial is important.",
+          "vi": "Quá trình thì quan trọng."
+        }
+      ]
+    },
+    "ID896": {
+      "word": "Prüfung",
+      "artikel": "die",
+      "plural": "Prüfungen",
+      "english": "exam",
+      "vietnamese": "kỳ thi",
+      "definition_en": "A exam.",
+      "definition_vi": "Một kỳ thi.",
+      "examples": [
+        {
+          "de": "Die Prüfung ist wichtig.",
+          "en": "The exam is important.",
+          "vi": "Kỳ thi thì quan trọng."
+        }
+      ]
+    },
+    "ID897": {
+      "word": "Publikum",
+      "artikel": "das",
+      "plural": "-",
+      "english": "audience",
+      "vietnamese": "khán giả",
+      "definition_en": "A audience.",
+      "definition_vi": "Một khán giả.",
+      "examples": [
+        {
+          "de": "Das Publikum ist wichtig.",
+          "en": "The audience is important.",
+          "vi": "Khán giả thì quan trọng."
+        }
+      ]
+    },
+    "ID898": {
+      "word": "Pullover",
+      "artikel": "der",
+      "plural": "Pullover",
+      "english": "sweater",
+      "vietnamese": "áo len",
+      "definition_en": "A sweater.",
+      "definition_vi": "Một áo len.",
+      "examples": [
+        {
+          "de": "Der Pullover ist wichtig.",
+          "en": "The sweater is important.",
+          "vi": "Áo len thì quan trọng."
+        }
+      ]
+    },
+    "ID899": {
+      "word": "Pumpe",
+      "artikel": "die",
+      "plural": "Pumpen",
+      "english": "pump",
+      "vietnamese": "máy bơm",
+      "definition_en": "A pump.",
+      "definition_vi": "Một máy bơm.",
+      "examples": [
+        {
+          "de": "Die Pumpe ist wichtig.",
+          "en": "The pump is important.",
+          "vi": "Máy bơm thì quan trọng."
+        }
+      ]
+    },
+    "ID900": {
+      "word": "Punkt",
+      "artikel": "der",
+      "plural": "Punkte",
+      "english": "point",
+      "vietnamese": "điểm",
+      "definition_en": "A point.",
+      "definition_vi": "Một điểm.",
+      "examples": [
+        {
+          "de": "Der Punkt ist wichtig.",
+          "en": "The point is important.",
+          "vi": "Điểm thì quan trọng."
+        }
+      ]
+    },
+    "ID901": {
+      "word": "Puppe",
+      "artikel": "die",
+      "plural": "Puppen",
+      "english": "doll",
+      "vietnamese": "búp bê",
+      "definition_en": "A doll.",
+      "definition_vi": "Một búp bê.",
+      "examples": [
+        {
+          "de": "Die Puppe ist wichtig.",
+          "en": "The doll is important.",
+          "vi": "Búp bê thì quan trọng."
+        }
+      ]
+    },
+    "ID902": {
+      "word": "Qualität",
+      "artikel": "die",
+      "plural": "Qualitäten",
+      "english": "quality",
+      "vietnamese": "chất lượng",
+      "definition_en": "A quality.",
+      "definition_vi": "Một chất lượng.",
+      "examples": [
+        {
+          "de": "Die Qualität ist wichtig.",
+          "en": "The quality is important.",
+          "vi": "Chất lượng thì quan trọng."
         }
       ]
     }

@@ -5,7 +5,33 @@
     "nase": "ID052",
     "nudel": "ID074",
     "nachmittag": "ID204",
-    "nummer": "ID221"
+    "nummer": "ID221",
+    "nachbar": "ID792",
+    "nachbarschaft": "ID793",
+    "nachfrage": "ID794",
+    "nachricht": "ID795",
+    "nachteil": "ID796",
+    "nachtisch": "ID797",
+    "nachts": "ID798",
+    "nadel": "ID799",
+    "nagel": "ID800",
+    "nähe": "ID801",
+    "nahrung": "ID802",
+    "natur": "ID803",
+    "nebel": "ID804",
+    "neffe": "ID805",
+    "nerv": "ID806",
+    "netz": "ID807",
+    "nichte": "ID808",
+    "niveau": "ID809",
+    "norden": "ID810",
+    "norm": "ID811",
+    "not": "ID812",
+    "notfall": "ID813",
+    "notiz": "ID814",
+    "november": "ID815",
+    "null": "ID816",
+    "nutzen": "ID817"
   },
   "byEnglish": {
     "night": [
@@ -25,6 +51,84 @@
     ],
     "number": [
       "ID221"
+    ],
+    "neighbor": [
+      "ID792"
+    ],
+    "neighborhood": [
+      "ID793"
+    ],
+    "demand": [
+      "ID794"
+    ],
+    "news, message": [
+      "ID795"
+    ],
+    "disadvantage": [
+      "ID796"
+    ],
+    "dessert": [
+      "ID797"
+    ],
+    "at night": [
+      "ID798"
+    ],
+    "needle": [
+      "ID799"
+    ],
+    "nail": [
+      "ID800"
+    ],
+    "proximity": [
+      "ID801"
+    ],
+    "food, nutrition": [
+      "ID802"
+    ],
+    "nature": [
+      "ID803"
+    ],
+    "fog": [
+      "ID804"
+    ],
+    "nephew": [
+      "ID805"
+    ],
+    "nerve": [
+      "ID806"
+    ],
+    "net, network": [
+      "ID807"
+    ],
+    "niece": [
+      "ID808"
+    ],
+    "level": [
+      "ID809"
+    ],
+    "north": [
+      "ID810"
+    ],
+    "norm, standard": [
+      "ID811"
+    ],
+    "need, emergency": [
+      "ID812"
+    ],
+    "emergency": [
+      "ID813"
+    ],
+    "note": [
+      "ID814"
+    ],
+    "November": [
+      "ID815"
+    ],
+    "zero": [
+      "ID816"
+    ],
+    "benefit, use": [
+      "ID817"
     ]
   },
   "byVietnamese": {
@@ -45,20 +149,123 @@
     ],
     "số": [
       "ID221"
+    ],
+    "hàng xóm": [
+      "ID792"
+    ],
+    "khu phố": [
+      "ID793"
+    ],
+    "nhu cầu": [
+      "ID794",
+      "ID812"
+    ],
+    "tin tức": [
+      "ID795"
+    ],
+    "bất lợi": [
+      "ID796"
+    ],
+    "món tráng miệng": [
+      "ID797"
+    ],
+    "ban đêm": [
+      "ID798"
+    ],
+    "cái kim": [
+      "ID799"
+    ],
+    "cái đinh, móng tay": [
+      "ID800"
+    ],
+    "gần": [
+      "ID801"
+    ],
+    "thức ăn": [
+      "ID802"
+    ],
+    "thiên nhiên": [
+      "ID803"
+    ],
+    "sương mù": [
+      "ID804"
+    ],
+    "cháu trai": [
+      "ID805"
+    ],
+    "dây thần kinh": [
+      "ID806"
+    ],
+    "mạng lưới": [
+      "ID807"
+    ],
+    "cháu gái": [
+      "ID808"
+    ],
+    "trình độ": [
+      "ID809"
+    ],
+    "phía bắc": [
+      "ID810"
+    ],
+    "tiêu chuẩn": [
+      "ID811"
+    ],
+    "trường hợp khẩn cấp": [
+      "ID813"
+    ],
+    "ghi chú": [
+      "ID814"
+    ],
+    "tháng Mười một": [
+      "ID815"
+    ],
+    "số không": [
+      "ID816"
+    ],
+    "lợi ích": [
+      "ID817"
     ]
   },
   "byArtikel": {
     "der": [
       "ID037",
-      "ID204"
+      "ID204",
+      "ID792",
+      "ID796",
+      "ID797",
+      "ID800",
+      "ID804",
+      "ID805",
+      "ID806",
+      "ID810",
+      "ID813",
+      "ID815",
+      "ID817"
     ],
     "die": [
       "ID012",
       "ID052",
       "ID074",
-      "ID221"
+      "ID221",
+      "ID793",
+      "ID794",
+      "ID795",
+      "ID798",
+      "ID799",
+      "ID801",
+      "ID802",
+      "ID803",
+      "ID808",
+      "ID811",
+      "ID812",
+      "ID814",
+      "ID816"
     ],
-    "das": []
+    "das": [
+      "ID807",
+      "ID809"
+    ]
   },
   "entries": {
     "ID012": {
@@ -154,6 +361,422 @@
           "de": "Meine Telefonnummer.",
           "en": "My telephone number.",
           "vi": "Số điện thoại của tôi."
+        }
+      ]
+    },
+    "ID792": {
+      "word": "Nachbar",
+      "artikel": "der",
+      "plural": "Nachbarn",
+      "english": "neighbor",
+      "vietnamese": "hàng xóm",
+      "definition_en": "A neighbor.",
+      "definition_vi": "Một hàng xóm.",
+      "examples": [
+        {
+          "de": "Der Nachbar ist wichtig.",
+          "en": "The neighbor is important.",
+          "vi": "Hàng xóm thì quan trọng."
+        }
+      ]
+    },
+    "ID793": {
+      "word": "Nachbarschaft",
+      "artikel": "die",
+      "plural": "Nachbarschaften",
+      "english": "neighborhood",
+      "vietnamese": "khu phố",
+      "definition_en": "A neighborhood.",
+      "definition_vi": "Một khu phố.",
+      "examples": [
+        {
+          "de": "Die Nachbarschaft ist wichtig.",
+          "en": "The neighborhood is important.",
+          "vi": "Khu phố thì quan trọng."
+        }
+      ]
+    },
+    "ID794": {
+      "word": "Nachfrage",
+      "artikel": "die",
+      "plural": "Nachfragen",
+      "english": "demand",
+      "vietnamese": "nhu cầu",
+      "definition_en": "A demand.",
+      "definition_vi": "Một nhu cầu.",
+      "examples": [
+        {
+          "de": "Die Nachfrage ist wichtig.",
+          "en": "The demand is important.",
+          "vi": "Nhu cầu thì quan trọng."
+        }
+      ]
+    },
+    "ID795": {
+      "word": "Nachricht",
+      "artikel": "die",
+      "plural": "Nachrichten",
+      "english": "news, message",
+      "vietnamese": "tin tức",
+      "definition_en": "A news, message.",
+      "definition_vi": "Một tin tức.",
+      "examples": [
+        {
+          "de": "Die Nachricht ist wichtig.",
+          "en": "The news, message is important.",
+          "vi": "Tin tức thì quan trọng."
+        }
+      ]
+    },
+    "ID796": {
+      "word": "Nachteil",
+      "artikel": "der",
+      "plural": "Nachteile",
+      "english": "disadvantage",
+      "vietnamese": "bất lợi",
+      "definition_en": "A disadvantage.",
+      "definition_vi": "Một bất lợi.",
+      "examples": [
+        {
+          "de": "Der Nachteil ist wichtig.",
+          "en": "The disadvantage is important.",
+          "vi": "Bất lợi thì quan trọng."
+        }
+      ]
+    },
+    "ID797": {
+      "word": "Nachtisch",
+      "artikel": "der",
+      "plural": "Nachtische",
+      "english": "dessert",
+      "vietnamese": "món tráng miệng",
+      "definition_en": "A dessert.",
+      "definition_vi": "Một món tráng miệng.",
+      "examples": [
+        {
+          "de": "Der Nachtisch ist wichtig.",
+          "en": "The dessert is important.",
+          "vi": "Món tráng miệng thì quan trọng."
+        }
+      ]
+    },
+    "ID798": {
+      "word": "Nachts",
+      "artikel": "die",
+      "plural": "-",
+      "english": "at night",
+      "vietnamese": "ban đêm",
+      "definition_en": "A at night.",
+      "definition_vi": "Một ban đêm.",
+      "examples": [
+        {
+          "de": "Die Nachts ist wichtig.",
+          "en": "The at night is important.",
+          "vi": "Ban đêm thì quan trọng."
+        }
+      ]
+    },
+    "ID799": {
+      "word": "Nadel",
+      "artikel": "die",
+      "plural": "Nadeln",
+      "english": "needle",
+      "vietnamese": "cái kim",
+      "definition_en": "A needle.",
+      "definition_vi": "Một cái kim.",
+      "examples": [
+        {
+          "de": "Die Nadel ist wichtig.",
+          "en": "The needle is important.",
+          "vi": "Cái kim thì quan trọng."
+        }
+      ]
+    },
+    "ID800": {
+      "word": "Nagel",
+      "artikel": "der",
+      "plural": "Nägel",
+      "english": "nail",
+      "vietnamese": "cái đinh, móng tay",
+      "definition_en": "A nail.",
+      "definition_vi": "Một cái đinh, móng tay.",
+      "examples": [
+        {
+          "de": "Der Nagel ist wichtig.",
+          "en": "The nail is important.",
+          "vi": "Cái đinh, móng tay thì quan trọng."
+        }
+      ]
+    },
+    "ID801": {
+      "word": "Nähe",
+      "artikel": "die",
+      "plural": "-",
+      "english": "proximity",
+      "vietnamese": "gần",
+      "definition_en": "A proximity.",
+      "definition_vi": "Một gần.",
+      "examples": [
+        {
+          "de": "Die Nähe ist wichtig.",
+          "en": "The proximity is important.",
+          "vi": "Gần thì quan trọng."
+        }
+      ]
+    },
+    "ID802": {
+      "word": "Nahrung",
+      "artikel": "die",
+      "plural": "-",
+      "english": "food, nutrition",
+      "vietnamese": "thức ăn",
+      "definition_en": "A food, nutrition.",
+      "definition_vi": "Một thức ăn.",
+      "examples": [
+        {
+          "de": "Die Nahrung ist wichtig.",
+          "en": "The food, nutrition is important.",
+          "vi": "Thức ăn thì quan trọng."
+        }
+      ]
+    },
+    "ID803": {
+      "word": "Natur",
+      "artikel": "die",
+      "plural": "-",
+      "english": "nature",
+      "vietnamese": "thiên nhiên",
+      "definition_en": "A nature.",
+      "definition_vi": "Một thiên nhiên.",
+      "examples": [
+        {
+          "de": "Die Natur ist wichtig.",
+          "en": "The nature is important.",
+          "vi": "Thiên nhiên thì quan trọng."
+        }
+      ]
+    },
+    "ID804": {
+      "word": "Nebel",
+      "artikel": "der",
+      "plural": "-",
+      "english": "fog",
+      "vietnamese": "sương mù",
+      "definition_en": "A fog.",
+      "definition_vi": "Một sương mù.",
+      "examples": [
+        {
+          "de": "Der Nebel ist wichtig.",
+          "en": "The fog is important.",
+          "vi": "Sương mù thì quan trọng."
+        }
+      ]
+    },
+    "ID805": {
+      "word": "Neffe",
+      "artikel": "der",
+      "plural": "Neffen",
+      "english": "nephew",
+      "vietnamese": "cháu trai",
+      "definition_en": "A nephew.",
+      "definition_vi": "Một cháu trai.",
+      "examples": [
+        {
+          "de": "Der Neffe ist wichtig.",
+          "en": "The nephew is important.",
+          "vi": "Cháu trai thì quan trọng."
+        }
+      ]
+    },
+    "ID806": {
+      "word": "Nerv",
+      "artikel": "der",
+      "plural": "Nerven",
+      "english": "nerve",
+      "vietnamese": "dây thần kinh",
+      "definition_en": "A nerve.",
+      "definition_vi": "Một dây thần kinh.",
+      "examples": [
+        {
+          "de": "Der Nerv ist wichtig.",
+          "en": "The nerve is important.",
+          "vi": "Dây thần kinh thì quan trọng."
+        }
+      ]
+    },
+    "ID807": {
+      "word": "Netz",
+      "artikel": "das",
+      "plural": "Netze",
+      "english": "net, network",
+      "vietnamese": "mạng lưới",
+      "definition_en": "A net, network.",
+      "definition_vi": "Một mạng lưới.",
+      "examples": [
+        {
+          "de": "Das Netz ist wichtig.",
+          "en": "The net, network is important.",
+          "vi": "Mạng lưới thì quan trọng."
+        }
+      ]
+    },
+    "ID808": {
+      "word": "Nichte",
+      "artikel": "die",
+      "plural": "Nichten",
+      "english": "niece",
+      "vietnamese": "cháu gái",
+      "definition_en": "A niece.",
+      "definition_vi": "Một cháu gái.",
+      "examples": [
+        {
+          "de": "Die Nichte ist wichtig.",
+          "en": "The niece is important.",
+          "vi": "Cháu gái thì quan trọng."
+        }
+      ]
+    },
+    "ID809": {
+      "word": "Niveau",
+      "artikel": "das",
+      "plural": "Niveaus",
+      "english": "level",
+      "vietnamese": "trình độ",
+      "definition_en": "A level.",
+      "definition_vi": "Một trình độ.",
+      "examples": [
+        {
+          "de": "Das Niveau ist wichtig.",
+          "en": "The level is important.",
+          "vi": "Trình độ thì quan trọng."
+        }
+      ]
+    },
+    "ID810": {
+      "word": "Norden",
+      "artikel": "der",
+      "plural": "-",
+      "english": "north",
+      "vietnamese": "phía bắc",
+      "definition_en": "A north.",
+      "definition_vi": "Một phía bắc.",
+      "examples": [
+        {
+          "de": "Der Norden ist wichtig.",
+          "en": "The north is important.",
+          "vi": "Phía bắc thì quan trọng."
+        }
+      ]
+    },
+    "ID811": {
+      "word": "Norm",
+      "artikel": "die",
+      "plural": "Normen",
+      "english": "norm, standard",
+      "vietnamese": "tiêu chuẩn",
+      "definition_en": "A norm, standard.",
+      "definition_vi": "Một tiêu chuẩn.",
+      "examples": [
+        {
+          "de": "Die Norm ist wichtig.",
+          "en": "The norm, standard is important.",
+          "vi": "Tiêu chuẩn thì quan trọng."
+        }
+      ]
+    },
+    "ID812": {
+      "word": "Not",
+      "artikel": "die",
+      "plural": "Nöte",
+      "english": "need, emergency",
+      "vietnamese": "nhu cầu",
+      "definition_en": "A need, emergency.",
+      "definition_vi": "Một nhu cầu.",
+      "examples": [
+        {
+          "de": "Die Not ist wichtig.",
+          "en": "The need, emergency is important.",
+          "vi": "Nhu cầu thì quan trọng."
+        }
+      ]
+    },
+    "ID813": {
+      "word": "Notfall",
+      "artikel": "der",
+      "plural": "Notfälle",
+      "english": "emergency",
+      "vietnamese": "trường hợp khẩn cấp",
+      "definition_en": "A emergency.",
+      "definition_vi": "Một trường hợp khẩn cấp.",
+      "examples": [
+        {
+          "de": "Der Notfall ist wichtig.",
+          "en": "The emergency is important.",
+          "vi": "Trường hợp khẩn cấp thì quan trọng."
+        }
+      ]
+    },
+    "ID814": {
+      "word": "Notiz",
+      "artikel": "die",
+      "plural": "Notizen",
+      "english": "note",
+      "vietnamese": "ghi chú",
+      "definition_en": "A note.",
+      "definition_vi": "Một ghi chú.",
+      "examples": [
+        {
+          "de": "Die Notiz ist wichtig.",
+          "en": "The note is important.",
+          "vi": "Ghi chú thì quan trọng."
+        }
+      ]
+    },
+    "ID815": {
+      "word": "November",
+      "artikel": "der",
+      "plural": "-",
+      "english": "November",
+      "vietnamese": "tháng Mười một",
+      "definition_en": "A November.",
+      "definition_vi": "Một tháng Mười một.",
+      "examples": [
+        {
+          "de": "Der November ist wichtig.",
+          "en": "The November is important.",
+          "vi": "Tháng Mười một thì quan trọng."
+        }
+      ]
+    },
+    "ID816": {
+      "word": "Null",
+      "artikel": "die",
+      "plural": "Nullen",
+      "english": "zero",
+      "vietnamese": "số không",
+      "definition_en": "A zero.",
+      "definition_vi": "Một số không.",
+      "examples": [
+        {
+          "de": "Die Null ist wichtig.",
+          "en": "The zero is important.",
+          "vi": "Số không thì quan trọng."
+        }
+      ]
+    },
+    "ID817": {
+      "word": "Nutzen",
+      "artikel": "der",
+      "plural": "-",
+      "english": "benefit, use",
+      "vietnamese": "lợi ích",
+      "definition_en": "A benefit, use.",
+      "definition_vi": "Một lợi ích.",
+      "examples": [
+        {
+          "de": "Der Nutzen ist wichtig.",
+          "en": "The benefit, use is important.",
+          "vi": "Lợi ích thì quan trọng."
         }
       ]
     }
