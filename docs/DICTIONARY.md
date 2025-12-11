@@ -6,13 +6,14 @@ The German Noun Dictionary is a comprehensive, search-optimized dictionary syste
 
 ## Features
 
-- **200 German nouns** across 5 batches (A1-A2 level)
+- **240+ German nouns** organized alphabetically across 22 letter files (A1-A2 level)
 - **Trilingual support**: German, English, Vietnamese
 - **Fast search** by word, English, or Vietnamese translation
 - **Artikel filtering**: Filter by der (masculine), die (feminine), or das (neuter)
 - **Color-coded artikel badges**: Blue for "der", red for "die", green for "das"
 - **Comprehensive entries**: Each noun includes plural form, definitions, and example sentences
 - **Mobile-first responsive design**
+- **Alphabetical organization**: Each letter has its own file for efficient loading and scalability
 
 ## Data Structure
 
@@ -59,23 +60,32 @@ The dictionary uses a search-optimized structure for fast lookups:
 
 ```
 /public/data/dictionary/
-  ├── batch-001.json        # First batch of 40 nouns (ID001-ID040)
-  ├── batch-002.json        # Second batch of 40 nouns (ID041-ID080)
-  ├── batch-003.json        # Third batch of 40 nouns (ID081-ID120)
-  ├── batch-004.json        # Fourth batch of 40 nouns (ID121-ID160)
-  └── batch-005.json        # Fifth batch of 40 nouns (ID161-ID200)
+  ├── letters/              # Alphabetically organized dictionary files
+  │   ├── a.json           # All nouns starting with 'A' (10 entries)
+  │   ├── b.json           # All nouns starting with 'B' (22 entries)
+  │   ├── c.json           # All nouns starting with 'C' (3 entries)
+  │   ├── e.json           # All nouns starting with 'E' (8 entries)
+  │   ├── f.json           # All nouns starting with 'F' (20 entries)
+  │   ├── g.json           # All nouns starting with 'G' (13 entries)
+  │   ├── h.json           # All nouns starting with 'H' (14 entries)
+  │   ├── ...              # And so on for all letters
+  │   └── z.json           # All nouns starting with 'Z' (7 entries)
+  └── batch-001.json       # Legacy batch files (for reference)
 
 /src/types/
   └── dictionary.ts         # TypeScript type definitions
 
 /src/lib/
-  └── dictionary.ts         # Utility functions for search and merge
+  └── dictionary.ts         # Utility functions for search, merge, and letter-based loading
 
 /src/app/dictionary/
   └── page.tsx             # Main dictionary page component
 
 /api/dictionary/
   └── lookup.go            # Go API endpoint for lookups
+
+/scripts/
+  └── reorganize-dictionary.js  # Script to reorganize batches into letter files
 ```
 
 ## Usage
@@ -119,24 +129,67 @@ GET /api/dictionary/lookup?english=house
 GET /api/dictionary/lookup?artikel=das
 ```
 
-## Adding New Batches
+## Adding New Entries
 
 To add more nouns to the dictionary:
 
-1. Create a new batch file: `/public/data/dictionary/batch-006.json`
-2. Follow the same data structure as previous batches
-3. Use sequential IDs starting from ID201
-4. Update the frontend to load the new batch in `/src/app/dictionary/page.tsx`:
+### Option 1: Add to Existing Letter File
 
-```typescript
-const batches = await Promise.all([
-  loadDictionaryBatch(1),
-  loadDictionaryBatch(2),
-  loadDictionaryBatch(3),
-  loadDictionaryBatch(4),
-  loadDictionaryBatch(5),
-  loadDictionaryBatch(6), // Add new batch
-]);
+1. Open the appropriate letter file: `/public/data/dictionary/letters/{letter}.json`
+2. Follow the same data structure as existing entries
+3. Use sequential IDs (e.g., if the last ID is ID240, start with ID241)
+4. Add the new noun to all four sections:
+   - `byWord`: lowercase German word → ID
+   - `byEnglish`: English translation → array of IDs
+   - `byVietnamese`: Vietnamese translation → array of IDs
+   - `byArtikel`: der/die/das → array of IDs
+   - `entries`: ID → complete entry object
+
+### Option 2: Create New Letter File
+
+If adding entries for a letter that doesn't exist yet:
+
+1. Create `/public/data/dictionary/letters/{letter}.json`
+2. Follow the same structure as existing letter files
+3. The frontend will automatically load it
+
+### Example: Adding "Apfel" (apple) to a.json
+
+```json
+{
+  "byWord": {
+    "apfel": "ID999"
+  },
+  "byEnglish": {
+    "apple": ["ID999"]
+  },
+  "byVietnamese": {
+    "quả táo": ["ID999"]
+  },
+  "byArtikel": {
+    "der": ["ID999"],
+    "die": [],
+    "das": []
+  },
+  "entries": {
+    "ID999": {
+      "word": "Apfel",
+      "artikel": "der",
+      "plural": "Äpfel",
+      "english": "apple",
+      "vietnamese": "quả táo",
+      "definition_en": "A round fruit with red or green skin.",
+      "definition_vi": "Một loại trái cây tròn có vỏ đỏ hoặc xanh.",
+      "examples": [
+        {
+          "de": "Der Apfel ist rot.",
+          "en": "The apple is red.",
+          "vi": "Quả táo màu đỏ."
+        }
+      ]
+    }
+  }
+}
 ```
 
 ## Batch Generation Rules
@@ -183,46 +236,48 @@ interface Dictionary {
 }
 ```
 
-## Current Nouns (Batches 001-005)
+## Current Dictionary Coverage
 
-The dictionary contains 200 nouns across 5 batches covering common A1-A2 level topics:
+The dictionary contains 240 nouns across 22 letters covering common A1-A2 level topics:
 
-**Batch 001 (ID001-ID040)**: Basic nouns
-- **Home**: Haus, Tisch, Stuhl, Tür, Fenster
-- **People**: Mann, Frau, Kind, Mutter, Lehrer, Schüler, Freund
-- **Food**: Brot, Wasser, Apfel, Ei, Milch, Kaffee, Tee
-- **Animals**: Hund, Katze
-- **Time**: Tag, Nacht, Zeit, Jahr, Monat, Woche
-- **Places**: Stadt, Land, Straße, Schule, Garten
-- **Objects**: Buch, Auto, Bild, Name
-- **Nature**: Baum, Blume
-- **Social**: Familie
+### By Letter
+- **A** (10 entries): Abend, Affe, Anfang, Antwort, Apfel, Arbeit, Arm, Arzt, Auge, Auto
+- **B** (22 entries): Baby, Bad, Bahnhof, Bank, Baum, Bein, Berg, Beruf, Bett, Bier, Bild, Blau, Blume, Braun, Brille, Brot, Bruder, Buch, Bus, Büro, Butter
+- **C** (3 entries): Café, Chef, Computer
+- **E** (8 entries): Ecke, Ei, Elefant, Ende, Erde, Essen, Euro
+- **F** (20 entries): Fahrer, Fahrrad, Familie, Farbe, Fehler, Fenster, Fernseher, Feuer, Finger, Fisch, Fleisch, Flughafen, Flugzeug, Fluss, Form, Frage, Frau, Freund, Frühling, Fuß
+- **G** (13 entries): Garten, Geld, Gelb, Geldbörse, Gemüse, Geschäft, Gesetz, Getränk, Glas, Grau, Grün, Größe, Gruppe
+- **H** (14 entries): Hälfte, Hand, Handschuh, Hase, Haus, Hemd, Herbst, Herz, Hose, Hotel, Huhn, Hund, Hut
+- **I** (2 entries): Ingenieur, Insekt
+- **J** (2 entries): Jacke, Jahr
+- **K** (17 entries): Kaffee, Käse, Katze, Kellner, Kind, Kleid, Kleidung, Koch, Koffer, Kollege, Komputer, Kopf, Körper, Krankenschwester, Kreis, Kuh, Küche
+- **L** (8 entries): Laden, Lampe, Land, Lehrer, Linie, Lösung, Löwe, Luft
+- **M** (17 entries): Mann, Mantel, Markt, Maus, Meer, Milch, Minute, Mitte, Monat, Moment, Mond, Morgen, Motorrad, Mund, Mutter, Mütze
+- **N** (6 entries): Nacht, Name, Nase, Nudel, Nummer, Number
+- **O** (5 entries): Obst, Ohr, Orange, Ordnung, Ort
+- **P** (11 entries): Paar, Pferd, Pflicht, Platz, Polizist, Post, Preis, Problem, Professor, Prozent, Punkt
+- **R** (10 entries): Radio, Recht, Regel, Regen, Reis, Restaurant, Rock, Rot, Rucksack
+- **S** (35 entries): Saft, Salat, Salz, Schaf, Schiff, Schlafzimmer, Schlange, Schlüssel, Schnee, Schokolade, Schuh, Schule, Schüler, Schwarz, Schwein, Schwester, See, Seite, Sekunde, Sohn, Sommer, Sonne, Stadt, Stern, Strand, Straße, Student, Stuhl, Stück, Stunde, Suppe, System
+- **T** (13 entries): Tag, Tasche, Taxi, Tee, Teil, Telefon, Ticket, Tier, Tisch, Tochter, Toilette, Tür
+- **U** (1 entry): Uhr
+- **V** (3 entries): Vater, Verkäufer, Vogel
+- **W** (12 entries): Wald, Wasser, Wein, Wetter, Wiese, Wind, Winter, Woche, Wohnung, Wohnzimmer, Wolke
+- **Z** (7 entries): Zahn, Zahl, Zeit, Ziege, Zimmer, Zug, Zucker
 
-**Batch 002 (ID041-ID080)**: Family & Body & Food
-- **Family**: Vater, Mutter, Bruder, Schwester, Sohn, Tochter, Großmutter, Großvater, Baby
-- **Body parts**: Kopf, Auge, Ohr, Nase, Mund, Zahn, Fuß, Bein, Arm, Finger, Herz, Körper
-- **Food & Drink**: Essen, Trinken, Fleisch, Fisch, Gemüse, Obst, Salat, Suppe, Käse, Butter, Zucker, Salz, Reis, Nudel, Kuchen, Schokolade, Eis, Saft, Bier, Wein
-
-**Batch 003 (ID081-ID120)**: Home & Work & Places
-- **Home**: Zimmer, Wohnung, Küche, Bad, Schlafzimmer, Wohnzimmer, Toilette, Bett, Sofa, Lampe
-- **Electronics**: Fernseher, Radio, Computer, Telefon, Uhr
-- **Money**: Geld, Euro, Preis
-- **Work**: Arbeit, Beruf, Büro, Chef, Kollege
-- **Professions**: Arzt, Krankenschwester, Polizist, Verkäufer, Student, Professor, Ingenieur, Kellner, Koch, Fahrer
-- **Places**: Geschäft, Laden, Markt, Supermarkt, Restaurant, Café, Hotel
-
-**Batch 004 (ID121-ID160)**: Travel & Clothing & Colors
-- **Places**: Bank, Post, Bahnhof, Flughafen
-- **Transportation**: Zug, Bus, Taxi, Fahrrad, Motorrad, Flugzeug, Schiff
-- **Travel items**: Ticket, Koffer, Tasche, Rucksack, Geldbörse, Schlüssel, Brille
-- **Clothing**: Kleidung, Hemd, Hose, Rock, Kleid, Jacke, Mantel, Schuhe, Socke, Hut, Mütze, Handschuh
-- **Colors**: Farbe, Rot, Blau, Grün, Gelb, Schwarz, Weiß, Grau, Braun, Orange
-
-**Batch 005 (ID161-ID200)**: Nature & Weather & Animals
-- **Seasons**: Frühling, Sommer, Herbst, Winter
-- **Weather**: Wetter, Sonne, Mond, Stern, Himmel, Wolke, Regen, Schnee, Wind, Luft
-- **Nature**: Erde, Feuer, Berg, See, Fluss, Meer, Strand, Wald, Wiese
-- **Animals**: Tier, Vogel, Pferd, Kuh, Schwein, Schaf, Ziege, Huhn, Fisch, Maus, Hase, Bär, Löwe, Elefant, Affe, Schlange, Insekt
+### By Category
+**Family & People**: Vater, Mutter, Bruder, Schwester, Sohn, Tochter, Großmutter, Großvater, Baby, Mann, Frau, Kind, Freund
+**Body Parts**: Kopf, Auge, Ohr, Nase, Mund, Zahn, Hand, Fuß, Bein, Arm, Finger, Herz, Körper
+**Food & Drink**: Essen, Trinken, Brot, Wasser, Milch, Kaffee, Tee, Fleisch, Fisch, Gemüse, Obst, Salat, Suppe, Käse, Butter, Zucker, Salz, Reis, Nudel, Kuchen, Schokolade, Eis, Saft, Bier, Wein, Apfel, Ei
+**Home**: Haus, Zimmer, Wohnung, Küche, Bad, Schlafzimmer, Wohnzimmer, Toilette, Tür, Fenster, Bett, Tisch, Stuhl, Sofa, Lampe
+**Work & Professions**: Arbeit, Beruf, Arzt, Krankenschwester, Polizist, Verkäufer, Lehrer, Schüler, Student, Professor, Ingenieur, Kellner, Koch, Fahrer, Chef, Kollege
+**Places**: Stadt, Land, Straße, Schule, Garten, Bank, Post, Bahnhof, Flughafen, Geschäft, Laden, Markt, Supermarkt, Restaurant, Café, Hotel, Büro
+**Transportation**: Auto, Zug, Bus, Taxi, Fahrrad, Motorrad, Flugzeug, Schiff
+**Clothing**: Kleidung, Hemd, Hose, Rock, Kleid, Jacke, Mantel, Schuhe, Socke, Hut, Mütze, Handschuh
+**Colors**: Farbe, Rot, Blau, Grün, Gelb, Schwarz, Weiß, Grau, Braun, Orange
+**Nature & Weather**: Frühling, Sommer, Herbst, Winter, Wetter, Sonne, Mond, Stern, Himmel, Wolke, Regen, Schnee, Wind, Luft, Erde, Feuer, Berg, See, Fluss, Meer, Strand, Wald, Wiese, Baum, Blume
+**Animals**: Hund, Katze, Tier, Vogel, Pferd, Kuh, Schwein, Schaf, Ziege, Huhn, Fisch, Maus, Hase, Bär, Löwe, Elefant, Affe, Schlange, Insekt
+**Time**: Tag, Nacht, Morgen, Abend, Mittag, Nachmittag, Woche, Monat, Jahr, Zeit, Stunde, Minute, Sekunde, Moment
+**Objects**: Buch, Bild, Geld, Telefon, Computer, Fernseher, Radio, Uhr, Koffer, Tasche, Rucksack, Geldbörse, Schlüssel, Brille
 
 ## Future Enhancements
 

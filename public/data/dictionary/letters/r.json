@@ -1,0 +1,258 @@
+{
+  "byWord": {
+    "reis": "ID073",
+    "radio": "ID092",
+    "restaurant": "ID118",
+    "rucksack": "ID135",
+    "rock": "ID142",
+    "rot": "ID152",
+    "regen": "ID171",
+    "reihe": "ID229",
+    "regel": "ID232",
+    "recht": "ID234"
+  },
+  "byEnglish": {
+    "rice": [
+      "ID073"
+    ],
+    "radio": [
+      "ID092"
+    ],
+    "restaurant": [
+      "ID118"
+    ],
+    "backpack": [
+      "ID135"
+    ],
+    "skirt": [
+      "ID142"
+    ],
+    "red": [
+      "ID152"
+    ],
+    "rain": [
+      "ID171"
+    ],
+    "row": [
+      "ID229"
+    ],
+    "rule": [
+      "ID232"
+    ],
+    "right": [
+      "ID234"
+    ]
+  },
+  "byVietnamese": {
+    "gạo": [
+      "ID073"
+    ],
+    "radio": [
+      "ID092"
+    ],
+    "nhà hàng": [
+      "ID118"
+    ],
+    "ba lô": [
+      "ID135"
+    ],
+    "váy": [
+      "ID142"
+    ],
+    "đỏ": [
+      "ID152"
+    ],
+    "mưa": [
+      "ID171"
+    ],
+    "hàng": [
+      "ID229"
+    ],
+    "quy tắc": [
+      "ID232"
+    ],
+    "quyền": [
+      "ID234"
+    ]
+  },
+  "byArtikel": {
+    "der": [
+      "ID073",
+      "ID092",
+      "ID135",
+      "ID152",
+      "ID171"
+    ],
+    "die": [
+      "ID229",
+      "ID232"
+    ],
+    "das": [
+      "ID118",
+      "ID142",
+      "ID234"
+    ]
+  },
+  "entries": {
+    "ID073": {
+      "word": "Reis",
+      "artikel": "der",
+      "plural": "Reis",
+      "english": "rice",
+      "vietnamese": "gạo",
+      "definition_en": "A grain used as food.",
+      "definition_vi": "Hạt làm thức ăn.",
+      "examples": [
+        {
+          "de": "Ich koche Reis.",
+          "en": "I cook rice.",
+          "vi": "Tôi nấu cơm."
+        }
+      ]
+    },
+    "ID092": {
+      "word": "Radio",
+      "artikel": "das",
+      "plural": "Radios",
+      "english": "radio",
+      "vietnamese": "radio",
+      "definition_en": "A device for receiving radio broadcasts.",
+      "definition_vi": "Thiết bị nhận phát thanh.",
+      "examples": [
+        {
+          "de": "Das Radio spielt Musik.",
+          "en": "The radio plays music.",
+          "vi": "Radio phát nhạc."
+        }
+      ]
+    },
+    "ID118": {
+      "word": "Restaurant",
+      "artikel": "das",
+      "plural": "Restaurants",
+      "english": "restaurant",
+      "vietnamese": "nhà hàng",
+      "definition_en": "A place where meals are served.",
+      "definition_vi": "Nơi phục vụ bữa ăn.",
+      "examples": [
+        {
+          "de": "Das Restaurant ist voll.",
+          "en": "The restaurant is full.",
+          "vi": "Nhà hàng đầy."
+        }
+      ]
+    },
+    "ID135": {
+      "word": "Rucksack",
+      "artikel": "der",
+      "plural": "Rucksäcke",
+      "english": "backpack",
+      "vietnamese": "ba lô",
+      "definition_en": "A bag carried on the back.",
+      "definition_vi": "Túi đeo trên lưng.",
+      "examples": [
+        {
+          "de": "Der Rucksack ist neu.",
+          "en": "The backpack is new.",
+          "vi": "Ba lô mới."
+        }
+      ]
+    },
+    "ID142": {
+      "word": "Rock",
+      "artikel": "der",
+      "plural": "Röcke",
+      "english": "skirt",
+      "vietnamese": "váy",
+      "definition_en": "A garment hanging from the waist.",
+      "definition_vi": "Quần áo treo từ eo.",
+      "examples": [
+        {
+          "de": "Der Rock ist kurz.",
+          "en": "The skirt is short.",
+          "vi": "Váy ngắn."
+        }
+      ]
+    },
+    "ID152": {
+      "word": "Rot",
+      "artikel": "das",
+      "plural": "Rot",
+      "english": "red",
+      "vietnamese": "đỏ",
+      "definition_en": "The color of blood.",
+      "definition_vi": "Màu của máu.",
+      "examples": [
+        {
+          "de": "Das Rot ist schön.",
+          "en": "The red is beautiful.",
+          "vi": "Màu đỏ đẹp."
+        }
+      ]
+    },
+    "ID171": {
+      "word": "Regen",
+      "artikel": "der",
+      "plural": "Regen",
+      "english": "rain",
+      "vietnamese": "mưa",
+      "definition_en": "Water falling from clouds.",
+      "definition_vi": "Nước rơi từ mây.",
+      "examples": [
+        {
+          "de": "Der Regen fällt.",
+          "en": "The rain falls.",
+          "vi": "Mưa rơi."
+        }
+      ]
+    },
+    "ID229": {
+      "word": "Reihe",
+      "artikel": "die",
+      "plural": "Reihen",
+      "english": "row",
+      "vietnamese": "hàng",
+      "definition_en": "A line of things arranged side by side.",
+      "definition_vi": "Một dãy đồ xếp cạnh nhau.",
+      "examples": [
+        {
+          "de": "In der ersten Reihe.",
+          "en": "In the first row.",
+          "vi": "Ở hàng đầu tiên."
+        }
+      ]
+    },
+    "ID232": {
+      "word": "Regel",
+      "artikel": "die",
+      "plural": "Regeln",
+      "english": "rule",
+      "vietnamese": "quy tắc",
+      "definition_en": "A regulation or principle.",
+      "definition_vi": "Quy định hoặc nguyên tắc.",
+      "examples": [
+        {
+          "de": "Die Regel ist wichtig.",
+          "en": "The rule is important.",
+          "vi": "Quy tắc quan trọng."
+        }
+      ]
+    },
+    "ID234": {
+      "word": "Recht",
+      "artikel": "das",
+      "plural": "Rechte",
+      "english": "right",
+      "vietnamese": "quyền",
+      "definition_en": "A legal entitlement.",
+      "definition_vi": "Quyền lợi hợp pháp.",
+      "examples": [
+        {
+          "de": "Ich habe das Recht.",
+          "en": "I have the right.",
+          "vi": "Tôi có quyền."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,210 @@
+{
+  "byWord": {
+    "land": "ID017",
+    "lehrer": "ID022",
+    "lampe": "ID090",
+    "laden": "ID115",
+    "luft": "ID174",
+    "löwe": "ID196",
+    "linie": "ID217",
+    "lösung": "ID238"
+  },
+  "byEnglish": {
+    "country": [
+      "ID017"
+    ],
+    "teacher": [
+      "ID022"
+    ],
+    "lamp": [
+      "ID090"
+    ],
+    "store": [
+      "ID115"
+    ],
+    "air": [
+      "ID174"
+    ],
+    "lion": [
+      "ID196"
+    ],
+    "line": [
+      "ID217"
+    ],
+    "solution": [
+      "ID238"
+    ]
+  },
+  "byVietnamese": {
+    "đất nước": [
+      "ID017"
+    ],
+    "giáo viên": [
+      "ID022"
+    ],
+    "đèn": [
+      "ID090"
+    ],
+    "cửa tiệm": [
+      "ID115"
+    ],
+    "không khí": [
+      "ID174"
+    ],
+    "con sư tử": [
+      "ID196"
+    ],
+    "đường": [
+      "ID217"
+    ],
+    "giải pháp": [
+      "ID238"
+    ]
+  },
+  "byArtikel": {
+    "der": [
+      "ID022",
+      "ID115",
+      "ID196"
+    ],
+    "die": [
+      "ID090",
+      "ID174",
+      "ID217",
+      "ID238"
+    ],
+    "das": [
+      "ID017"
+    ]
+  },
+  "entries": {
+    "ID017": {
+      "word": "Land",
+      "artikel": "das",
+      "plural": "Länder",
+      "english": "country",
+      "vietnamese": "đất nước",
+      "definition_en": "A nation with its own government.",
+      "definition_vi": "Một quốc gia có chính phủ riêng.",
+      "examples": [
+        {
+          "de": "Deutschland ist ein Land in Europa.",
+          "en": "Germany is a country in Europe.",
+          "vi": "Đức là một đất nước ở châu Âu."
+        }
+      ]
+    },
+    "ID022": {
+      "word": "Lehrer",
+      "artikel": "der",
+      "plural": "Lehrer",
+      "english": "teacher",
+      "vietnamese": "giáo viên",
+      "definition_en": "A person who teaches.",
+      "definition_vi": "Một người dạy học.",
+      "examples": [
+        {
+          "de": "Der Lehrer ist nett.",
+          "en": "The teacher is nice.",
+          "vi": "Giáo viên thì tốt bụng."
+        }
+      ]
+    },
+    "ID090": {
+      "word": "Lampe",
+      "artikel": "die",
+      "plural": "Lampen",
+      "english": "lamp",
+      "vietnamese": "đèn",
+      "definition_en": "A device for giving light.",
+      "definition_vi": "Thiết bị phát sáng.",
+      "examples": [
+        {
+          "de": "Die Lampe ist hell.",
+          "en": "The lamp is bright.",
+          "vi": "Đèn sáng."
+        }
+      ]
+    },
+    "ID115": {
+      "word": "Laden",
+      "artikel": "der",
+      "plural": "Läden",
+      "english": "store",
+      "vietnamese": "cửa tiệm",
+      "definition_en": "A retail establishment.",
+      "definition_vi": "Cơ sở bán lẻ.",
+      "examples": [
+        {
+          "de": "Der Laden ist klein.",
+          "en": "The store is small.",
+          "vi": "Cửa tiệm nhỏ."
+        }
+      ]
+    },
+    "ID174": {
+      "word": "Luft",
+      "artikel": "die",
+      "plural": "Lüfte",
+      "english": "air",
+      "vietnamese": "không khí",
+      "definition_en": "The mixture of gases we breathe.",
+      "definition_vi": "Hỗn hợp khí chúng ta thở.",
+      "examples": [
+        {
+          "de": "Die Luft ist frisch.",
+          "en": "The air is fresh.",
+          "vi": "Không khí trong lành."
+        }
+      ]
+    },
+    "ID196": {
+      "word": "Löwe",
+      "artikel": "der",
+      "plural": "Löwen",
+      "english": "lion",
+      "vietnamese": "con sư tử",
+      "definition_en": "A large cat.",
+      "definition_vi": "Mèo lớn.",
+      "examples": [
+        {
+          "de": "Der Löwe brüllt.",
+          "en": "The lion roars.",
+          "vi": "Con sư tử gầm."
+        }
+      ]
+    },
+    "ID217": {
+      "word": "Linie",
+      "artikel": "die",
+      "plural": "Linien",
+      "english": "line",
+      "vietnamese": "đường",
+      "definition_en": "A straight mark or path.",
+      "definition_vi": "Một dấu hoặc đường thẳng.",
+      "examples": [
+        {
+          "de": "Eine gerade Linie.",
+          "en": "A straight line.",
+          "vi": "Một đường thẳng."
+        }
+      ]
+    },
+    "ID238": {
+      "word": "Lösung",
+      "artikel": "die",
+      "plural": "Lösungen",
+      "english": "solution",
+      "vietnamese": "giải pháp",
+      "definition_en": "An answer to a problem.",
+      "definition_vi": "Câu trả lời cho một vấn đề.",
+      "examples": [
+        {
+          "de": "Die Lösung ist einfach.",
+          "en": "The solution is simple.",
+          "vi": "Giải pháp đơn giản."
+        }
+      ]
+    }
+  }
+}

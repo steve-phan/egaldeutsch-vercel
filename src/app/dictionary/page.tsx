@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { Search, Book, Globe, Languages } from 'lucide-react';
-import { loadDictionaryBatch, searchDictionary, getEntriesByArtikel, getTotalEntries } from '@/lib/dictionary';
+import { loadAllLetterDictionaries, searchDictionary, getEntriesByArtikel, getTotalEntries } from '@/lib/dictionary';
 import type { Dictionary, DictionarySearchFilters, DictionarySearchResult } from '@/types/dictionary';
 
 export default function DictionaryPage() {
@@ -17,53 +17,9 @@ export default function DictionaryPage() {
   useEffect(() => {
     async function loadDictionary() {
       try {
-        // Load all 5 batches
-        const batches = await Promise.all([
-          loadDictionaryBatch(1),
-          loadDictionaryBatch(2),
-          loadDictionaryBatch(3),
-          loadDictionaryBatch(4),
-          loadDictionaryBatch(5),
-        ]);
+        // Load all letter-based dictionary files
+        const merged = await loadAllLetterDictionaries();
         
-        // Merge all batches
-        const merged: Dictionary = {
-          byWord: {},
-          byEnglish: {},
-          byVietnamese: {},
-          byArtikel: { der: [], die: [], das: [] },
-          entries: {},
-        };
-
-        for (const batch of batches) {
-          // Merge byWord
-          Object.assign(merged.byWord, batch.byWord);
-
-          // Merge byEnglish
-          for (const [key, ids] of Object.entries(batch.byEnglish)) {
-            if (!merged.byEnglish[key]) {
-              merged.byEnglish[key] = [];
-            }
-            merged.byEnglish[key].push(...ids);
-          }
-
-          // Merge byVietnamese
-          for (const [key, ids] of Object.entries(batch.byVietnamese)) {
-            if (!merged.byVietnamese[key]) {
-              merged.byVietnamese[key] = [];
-            }
-            merged.byVietnamese[key].push(...ids);
-          }
-
-          // Merge byArtikel
-          merged.byArtikel.der.push(...batch.byArtikel.der);
-          merged.byArtikel.die.push(...batch.byArtikel.die);
-          merged.byArtikel.das.push(...batch.byArtikel.das);
-
-          // Merge entries
-          Object.assign(merged.entries, batch.entries);
-        }
-
         setDictionary(merged);
         // Show all entries initially
         const allResults = Object.keys(merged.entries).map(id => ({

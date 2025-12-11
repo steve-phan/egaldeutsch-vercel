@@ -1,0 +1,89 @@
+{
+  "byWord": {
+    "computer": "ID093",
+    "chef": "ID102",
+    "café": "ID119"
+  },
+  "byEnglish": {
+    "computer": [
+      "ID093"
+    ],
+    "boss": [
+      "ID102"
+    ],
+    "café": [
+      "ID119"
+    ]
+  },
+  "byVietnamese": {
+    "máy tính": [
+      "ID093"
+    ],
+    "sếp": [
+      "ID102"
+    ],
+    "quán cà phê": [
+      "ID119"
+    ]
+  },
+  "byArtikel": {
+    "der": [
+      "ID093",
+      "ID102"
+    ],
+    "die": [],
+    "das": [
+      "ID119"
+    ]
+  },
+  "entries": {
+    "ID093": {
+      "word": "Computer",
+      "artikel": "der",
+      "plural": "Computer",
+      "english": "computer",
+      "vietnamese": "máy tính",
+      "definition_en": "An electronic device for processing data.",
+      "definition_vi": "Thiết bị điện tử xử lý dữ liệu.",
+      "examples": [
+        {
+          "de": "Der Computer ist schnell.",
+          "en": "The computer is fast.",
+          "vi": "Máy tính nhanh."
+        }
+      ]
+    },
+    "ID102": {
+      "word": "Chef",
+      "artikel": "der",
+      "plural": "Chefs",
+      "english": "boss",
+      "vietnamese": "sếp",
+      "definition_en": "A person in charge.",
+      "definition_vi": "Người phụ trách.",
+      "examples": [
+        {
+          "de": "Der Chef ist nett.",
+          "en": "The boss is nice.",
+          "vi": "Sếp tốt bụng."
+        }
+      ]
+    },
+    "ID119": {
+      "word": "Café",
+      "artikel": "das",
+      "plural": "Cafés",
+      "english": "café",
+      "vietnamese": "quán cà phê",
+      "definition_en": "A small restaurant serving light meals.",
+      "definition_vi": "Nhà hàng nhỏ phục vụ bữa ăn nhẹ.",
+      "examples": [
+        {
+          "de": "Das Café ist gemütlich.",
+          "en": "The café is cozy.",
+          "vi": "Quán cà phê ấm cúng."
+        }
+      ]
+    }
+  }
+}

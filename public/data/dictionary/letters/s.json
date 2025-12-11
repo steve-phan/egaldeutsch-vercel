@@ -1,0 +1,856 @@
+{
+  "byWord": {
+    "stuhl": "ID003",
+    "stadt": "ID016",
+    "schule": "ID021",
+    "schüler": "ID023",
+    "straße": "ID036",
+    "schwester": "ID043",
+    "sohn": "ID044",
+    "salat": "ID067",
+    "suppe": "ID068",
+    "salz": "ID072",
+    "schokolade": "ID076",
+    "saft": "ID078",
+    "schlafzimmer": "ID085",
+    "sofa": "ID089",
+    "student": "ID108",
+    "supermarkt": "ID117",
+    "schiff": "ID131",
+    "schlüssel": "ID137",
+    "schuhe": "ID146",
+    "socke": "ID147",
+    "schwarz": "ID156",
+    "sommer": "ID162",
+    "sonne": "ID166",
+    "stern": "ID168",
+    "schnee": "ID172",
+    "see": "ID178",
+    "strand": "ID181",
+    "schwein": "ID188",
+    "schaf": "ID189",
+    "schlange": "ID199",
+    "stunde": "ID206",
+    "sekunde": "ID207",
+    "seite": "ID212",
+    "stück": "ID226",
+    "system": "ID231"
+  },
+  "byEnglish": {
+    "chair": [
+      "ID003"
+    ],
+    "city": [
+      "ID016"
+    ],
+    "school": [
+      "ID021"
+    ],
+    "student": [
+      "ID023",
+      "ID108"
+    ],
+    "street": [
+      "ID036"
+    ],
+    "sister": [
+      "ID043"
+    ],
+    "son": [
+      "ID044"
+    ],
+    "salad": [
+      "ID067"
+    ],
+    "soup": [
+      "ID068"
+    ],
+    "salt": [
+      "ID072"
+    ],
+    "chocolate": [
+      "ID076"
+    ],
+    "juice": [
+      "ID078"
+    ],
+    "bedroom": [
+      "ID085"
+    ],
+    "sofa": [
+      "ID089"
+    ],
+    "supermarket": [
+      "ID117"
+    ],
+    "ship": [
+      "ID131"
+    ],
+    "key": [
+      "ID137"
+    ],
+    "shoes": [
+      "ID146"
+    ],
+    "sock": [
+      "ID147"
+    ],
+    "black": [
+      "ID156"
+    ],
+    "summer": [
+      "ID162"
+    ],
+    "sun": [
+      "ID166"
+    ],
+    "star": [
+      "ID168"
+    ],
+    "snow": [
+      "ID172"
+    ],
+    "lake": [
+      "ID178"
+    ],
+    "beach": [
+      "ID181"
+    ],
+    "pig": [
+      "ID188"
+    ],
+    "sheep": [
+      "ID189"
+    ],
+    "snake": [
+      "ID199"
+    ],
+    "hour": [
+      "ID206"
+    ],
+    "second": [
+      "ID207"
+    ],
+    "side": [
+      "ID212"
+    ],
+    "piece": [
+      "ID226"
+    ],
+    "system": [
+      "ID231"
+    ]
+  },
+  "byVietnamese": {
+    "cái ghế": [
+      "ID003"
+    ],
+    "thành phố": [
+      "ID016"
+    ],
+    "trường học": [
+      "ID021"
+    ],
+    "học sinh": [
+      "ID023"
+    ],
+    "đường phố": [
+      "ID036"
+    ],
+    "chị gái": [
+      "ID043"
+    ],
+    "con trai": [
+      "ID044"
+    ],
+    "salad": [
+      "ID067"
+    ],
+    "súp": [
+      "ID068"
+    ],
+    "muối": [
+      "ID072"
+    ],
+    "sô-cô-la": [
+      "ID076"
+    ],
+    "nước trái cây": [
+      "ID078"
+    ],
+    "phòng ngủ": [
+      "ID085"
+    ],
+    "ghế sofa": [
+      "ID089"
+    ],
+    "sinh viên": [
+      "ID108"
+    ],
+    "siêu thị": [
+      "ID117"
+    ],
+    "tàu thủy": [
+      "ID131"
+    ],
+    "chìa khóa": [
+      "ID137"
+    ],
+    "giày": [
+      "ID146"
+    ],
+    "tất": [
+      "ID147"
+    ],
+    "đen": [
+      "ID156"
+    ],
+    "mùa hè": [
+      "ID162"
+    ],
+    "mặt trời": [
+      "ID166"
+    ],
+    "ngôi sao": [
+      "ID168"
+    ],
+    "tuyết": [
+      "ID172"
+    ],
+    "hồ": [
+      "ID178"
+    ],
+    "bãi biển": [
+      "ID181"
+    ],
+    "con lợn": [
+      "ID188"
+    ],
+    "con cừu": [
+      "ID189"
+    ],
+    "con rắn": [
+      "ID199"
+    ],
+    "giờ": [
+      "ID206"
+    ],
+    "giây": [
+      "ID207"
+    ],
+    "bên": [
+      "ID212"
+    ],
+    "miếng": [
+      "ID226"
+    ],
+    "hệ thống": [
+      "ID231"
+    ]
+  },
+  "byArtikel": {
+    "der": [
+      "ID003",
+      "ID023",
+      "ID044",
+      "ID067",
+      "ID078",
+      "ID108",
+      "ID117",
+      "ID137",
+      "ID162",
+      "ID172",
+      "ID178",
+      "ID181"
+    ],
+    "die": [
+      "ID016",
+      "ID021",
+      "ID036",
+      "ID043",
+      "ID068",
+      "ID076",
+      "ID147",
+      "ID166",
+      "ID199",
+      "ID206",
+      "ID207",
+      "ID212"
+    ],
+    "das": [
+      "ID072",
+      "ID085",
+      "ID089",
+      "ID131",
+      "ID146",
+      "ID156",
+      "ID168",
+      "ID188",
+      "ID189",
+      "ID226",
+      "ID231"
+    ]
+  },
+  "entries": {
+    "ID003": {
+      "word": "Stuhl",
+      "artikel": "der",
+      "plural": "Stühle",
+      "english": "chair",
+      "vietnamese": "cái ghế",
+      "definition_en": "A seat with a back and usually four legs.",
+      "definition_vi": "Một chỗ ngồi có tựa lưng và thường có bốn chân.",
+      "examples": [
+        {
+          "de": "Der Stuhl ist bequem.",
+          "en": "The chair is comfortable.",
+          "vi": "Cái ghế thì thoải mái."
+        }
+      ]
+    },
+    "ID016": {
+      "word": "Stadt",
+      "artikel": "die",
+      "plural": "Städte",
+      "english": "city",
+      "vietnamese": "thành phố",
+      "definition_en": "A large human settlement.",
+      "definition_vi": "Một khu định cư lớn của con người.",
+      "examples": [
+        {
+          "de": "Die Stadt ist schön.",
+          "en": "The city is beautiful.",
+          "vi": "Thành phố thì đẹp."
+        }
+      ]
+    },
+    "ID021": {
+      "word": "Schule",
+      "artikel": "die",
+      "plural": "Schulen",
+      "english": "school",
+      "vietnamese": "trường học",
+      "definition_en": "An institution for education.",
+      "definition_vi": "Một cơ sở giáo dục.",
+      "examples": [
+        {
+          "de": "Ich gehe zur Schule.",
+          "en": "I go to school.",
+          "vi": "Tôi đi học."
+        }
+      ]
+    },
+    "ID023": {
+      "word": "Schüler",
+      "artikel": "der",
+      "plural": "Schüler",
+      "english": "student",
+      "vietnamese": "học sinh",
+      "definition_en": "A person who is learning at a school.",
+      "definition_vi": "Một người đang học tại trường.",
+      "examples": [
+        {
+          "de": "Der Schüler lernt fleißig.",
+          "en": "The student studies diligently.",
+          "vi": "Học sinh học chăm chỉ."
+        }
+      ]
+    },
+    "ID036": {
+      "word": "Straße",
+      "artikel": "die",
+      "plural": "Straßen",
+      "english": "street",
+      "vietnamese": "đường phố",
+      "definition_en": "A public road in a city or town.",
+      "definition_vi": "Một con đường công cộng trong thành phố hoặc thị trấn.",
+      "examples": [
+        {
+          "de": "Die Straße ist lang.",
+          "en": "The street is long.",
+          "vi": "Đường phố thì dài."
+        }
+      ]
+    },
+    "ID043": {
+      "word": "Schwester",
+      "artikel": "die",
+      "plural": "Schwestern",
+      "english": "sister",
+      "vietnamese": "chị gái",
+      "definition_en": "A female sibling.",
+      "definition_vi": "Chị em gái nữ.",
+      "examples": [
+        {
+          "de": "Meine Schwester ist älter als ich.",
+          "en": "My sister is older than me.",
+          "vi": "Chị gái tôi lớn tuổi hơn tôi."
+        }
+      ]
+    },
+    "ID044": {
+      "word": "Sohn",
+      "artikel": "der",
+      "plural": "Söhne",
+      "english": "son",
+      "vietnamese": "con trai",
+      "definition_en": "A male child.",
+      "definition_vi": "Con trai.",
+      "examples": [
+        {
+          "de": "Ihr Sohn ist fünf Jahre alt.",
+          "en": "Her son is five years old.",
+          "vi": "Con trai cô ấy năm tuổi."
+        }
+      ]
+    },
+    "ID067": {
+      "word": "Salat",
+      "artikel": "der",
+      "plural": "Salate",
+      "english": "salad",
+      "vietnamese": "salad",
+      "definition_en": "A cold dish of mixed vegetables.",
+      "definition_vi": "Món ăn lạnh trộn rau.",
+      "examples": [
+        {
+          "de": "Der Salat ist frisch.",
+          "en": "The salad is fresh.",
+          "vi": "Salad tươi."
+        }
+      ]
+    },
+    "ID068": {
+      "word": "Suppe",
+      "artikel": "die",
+      "plural": "Suppen",
+      "english": "soup",
+      "vietnamese": "súp",
+      "definition_en": "A liquid dish with vegetables or meat.",
+      "definition_vi": "Món ăn lỏng với rau hoặc thịt.",
+      "examples": [
+        {
+          "de": "Die Suppe ist heiß.",
+          "en": "The soup is hot.",
+          "vi": "Súp nóng."
+        }
+      ]
+    },
+    "ID072": {
+      "word": "Salz",
+      "artikel": "das",
+      "plural": "Salze",
+      "english": "salt",
+      "vietnamese": "muối",
+      "definition_en": "A mineral used for seasoning.",
+      "definition_vi": "Khoáng chất dùng để nêm.",
+      "examples": [
+        {
+          "de": "Das Essen braucht Salz.",
+          "en": "The food needs salt.",
+          "vi": "Thức ăn cần muối."
+        }
+      ]
+    },
+    "ID076": {
+      "word": "Schokolade",
+      "artikel": "die",
+      "plural": "Schokoladen",
+      "english": "chocolate",
+      "vietnamese": "sô-cô-la",
+      "definition_en": "A sweet food made from cacao.",
+      "definition_vi": "Thực phẩm ngọt làm từ ca cao.",
+      "examples": [
+        {
+          "de": "Die Schokolade schmeckt gut.",
+          "en": "The chocolate tastes good.",
+          "vi": "Sô-cô-la ngon."
+        }
+      ]
+    },
+    "ID078": {
+      "word": "Saft",
+      "artikel": "der",
+      "plural": "Säfte",
+      "english": "juice",
+      "vietnamese": "nước trái cây",
+      "definition_en": "A drink made from fruit.",
+      "definition_vi": "Đồ uống làm từ trái cây.",
+      "examples": [
+        {
+          "de": "Der Saft ist frisch.",
+          "en": "The juice is fresh.",
+          "vi": "Nước trái cây tươi."
+        }
+      ]
+    },
+    "ID085": {
+      "word": "Schlafzimmer",
+      "artikel": "das",
+      "plural": "Schlafzimmer",
+      "english": "bedroom",
+      "vietnamese": "phòng ngủ",
+      "definition_en": "A room for sleeping.",
+      "definition_vi": "Một phòng để ngủ.",
+      "examples": [
+        {
+          "de": "Das Schlafzimmer ist ruhig.",
+          "en": "The bedroom is quiet.",
+          "vi": "Phòng ngủ yên tĩnh."
+        }
+      ]
+    },
+    "ID089": {
+      "word": "Sofa",
+      "artikel": "das",
+      "plural": "Sofas",
+      "english": "sofa",
+      "vietnamese": "ghế sofa",
+      "definition_en": "A long upholstered seat for several people.",
+      "definition_vi": "Ghế bọc dài cho nhiều người.",
+      "examples": [
+        {
+          "de": "Das Sofa ist neu.",
+          "en": "The sofa is new.",
+          "vi": "Ghế sofa mới."
+        }
+      ]
+    },
+    "ID108": {
+      "word": "Student",
+      "artikel": "der",
+      "plural": "Studenten",
+      "english": "student",
+      "vietnamese": "sinh viên",
+      "definition_en": "A person studying at a university.",
+      "definition_vi": "Người học tại trường đại học.",
+      "examples": [
+        {
+          "de": "Der Student lernt viel.",
+          "en": "The student studies a lot.",
+          "vi": "Sinh viên học nhiều."
+        }
+      ]
+    },
+    "ID117": {
+      "word": "Supermarkt",
+      "artikel": "der",
+      "plural": "Supermärkte",
+      "english": "supermarket",
+      "vietnamese": "siêu thị",
+      "definition_en": "A large self-service store.",
+      "definition_vi": "Cửa hàng tự phục vụ lớn.",
+      "examples": [
+        {
+          "de": "Ich gehe zum Supermarkt.",
+          "en": "I go to the supermarket.",
+          "vi": "Tôi đi siêu thị."
+        }
+      ]
+    },
+    "ID131": {
+      "word": "Schiff",
+      "artikel": "das",
+      "plural": "Schiffe",
+      "english": "ship",
+      "vietnamese": "tàu thủy",
+      "definition_en": "A large boat.",
+      "definition_vi": "Thuyền lớn.",
+      "examples": [
+        {
+          "de": "Das Schiff ist groß.",
+          "en": "The ship is big.",
+          "vi": "Tàu thủy lớn."
+        }
+      ]
+    },
+    "ID137": {
+      "word": "Schlüssel",
+      "artikel": "der",
+      "plural": "Schlüssel",
+      "english": "key",
+      "vietnamese": "chìa khóa",
+      "definition_en": "A device for opening locks.",
+      "definition_vi": "Thiết bị để mở khóa.",
+      "examples": [
+        {
+          "de": "Wo ist der Schlüssel?",
+          "en": "Where is the key?",
+          "vi": "Chìa khóa ở đâu?"
+        }
+      ]
+    },
+    "ID146": {
+      "word": "Schuhe",
+      "artikel": "die",
+      "plural": "Schuhe",
+      "english": "shoes",
+      "vietnamese": "giày",
+      "definition_en": "Footwear covering the foot.",
+      "definition_vi": "Giày dép che chân.",
+      "examples": [
+        {
+          "de": "Die Schuhe sind neu.",
+          "en": "The shoes are new.",
+          "vi": "Giày mới."
+        }
+      ]
+    },
+    "ID147": {
+      "word": "Socke",
+      "artikel": "die",
+      "plural": "Socken",
+      "english": "sock",
+      "vietnamese": "tất",
+      "definition_en": "A garment for the foot.",
+      "definition_vi": "Quần áo cho bàn chân.",
+      "examples": [
+        {
+          "de": "Die Socke ist warm.",
+          "en": "The sock is warm.",
+          "vi": "Tất ấm."
+        }
+      ]
+    },
+    "ID156": {
+      "word": "Schwarz",
+      "artikel": "das",
+      "plural": "Schwarz",
+      "english": "black",
+      "vietnamese": "đen",
+      "definition_en": "The darkest color.",
+      "definition_vi": "Màu tối nhất.",
+      "examples": [
+        {
+          "de": "Das Schwarz ist dunkel.",
+          "en": "The black is dark.",
+          "vi": "Màu đen tối."
+        }
+      ]
+    },
+    "ID162": {
+      "word": "Sommer",
+      "artikel": "der",
+      "plural": "Sommer",
+      "english": "summer",
+      "vietnamese": "mùa hè",
+      "definition_en": "The warmest season of the year.",
+      "definition_vi": "Mùa ấm nhất trong năm.",
+      "examples": [
+        {
+          "de": "Der Sommer ist heiß.",
+          "en": "Summer is hot.",
+          "vi": "Mùa hè nóng."
+        }
+      ]
+    },
+    "ID166": {
+      "word": "Sonne",
+      "artikel": "die",
+      "plural": "Sonnen",
+      "english": "sun",
+      "vietnamese": "mặt trời",
+      "definition_en": "The star at the center of our solar system.",
+      "definition_vi": "Ngôi sao ở trung tâm hệ mặt trời.",
+      "examples": [
+        {
+          "de": "Die Sonne scheint.",
+          "en": "The sun shines.",
+          "vi": "Mặt trời chiếu sáng."
+        }
+      ]
+    },
+    "ID168": {
+      "word": "Stern",
+      "artikel": "der",
+      "plural": "Sterne",
+      "english": "star",
+      "vietnamese": "ngôi sao",
+      "definition_en": "A celestial body of light.",
+      "definition_vi": "Thiên thể phát sáng.",
+      "examples": [
+        {
+          "de": "Der Stern leuchtet.",
+          "en": "The star shines.",
+          "vi": "Ngôi sao sáng."
+        }
+      ]
+    },
+    "ID172": {
+      "word": "Schnee",
+      "artikel": "der",
+      "plural": "Schnee",
+      "english": "snow",
+      "vietnamese": "tuyết",
+      "definition_en": "Frozen water crystals.",
+      "definition_vi": "Tinh thể nước đông lạnh.",
+      "examples": [
+        {
+          "de": "Der Schnee ist weiß.",
+          "en": "The snow is white.",
+          "vi": "Tuyết trắng."
+        }
+      ]
+    },
+    "ID178": {
+      "word": "See",
+      "artikel": "der",
+      "plural": "Seen",
+      "english": "lake",
+      "vietnamese": "hồ",
+      "definition_en": "A body of water surrounded by land.",
+      "definition_vi": "Vùng nước được bao quanh bởi đất.",
+      "examples": [
+        {
+          "de": "Der See ist tief.",
+          "en": "The lake is deep.",
+          "vi": "Hồ sâu."
+        }
+      ]
+    },
+    "ID181": {
+      "word": "Strand",
+      "artikel": "der",
+      "plural": "Strände",
+      "english": "beach",
+      "vietnamese": "bãi biển",
+      "definition_en": "The shore of a sea or lake.",
+      "definition_vi": "Bờ biển hoặc hồ.",
+      "examples": [
+        {
+          "de": "Der Strand ist schön.",
+          "en": "The beach is beautiful.",
+          "vi": "Bãi biển đẹp."
+        }
+      ]
+    },
+    "ID188": {
+      "word": "Schwein",
+      "artikel": "das",
+      "plural": "Schweine",
+      "english": "pig",
+      "vietnamese": "con lợn",
+      "definition_en": "A farm animal raised for meat.",
+      "definition_vi": "Động vật trang trại nuôi để lấy thịt.",
+      "examples": [
+        {
+          "de": "Das Schwein ist rosa.",
+          "en": "The pig is pink.",
+          "vi": "Con lợn màu hồng."
+        }
+      ]
+    },
+    "ID189": {
+      "word": "Schaf",
+      "artikel": "das",
+      "plural": "Schafe",
+      "english": "sheep",
+      "vietnamese": "con cừu",
+      "definition_en": "A woolly farm animal.",
+      "definition_vi": "Động vật trang trại có lông.",
+      "examples": [
+        {
+          "de": "Das Schaf hat Wolle.",
+          "en": "The sheep has wool.",
+          "vi": "Con cừu có lông."
+        }
+      ]
+    },
+    "ID199": {
+      "word": "Schlange",
+      "artikel": "die",
+      "plural": "Schlangen",
+      "english": "snake",
+      "vietnamese": "con rắn",
+      "definition_en": "A legless reptile.",
+      "definition_vi": "Loài bò sát không chân.",
+      "examples": [
+        {
+          "de": "Die Schlange kriecht.",
+          "en": "The snake crawls.",
+          "vi": "Con rắn bò."
+        }
+      ]
+    },
+    "ID206": {
+      "word": "Stunde",
+      "artikel": "die",
+      "plural": "Stunden",
+      "english": "hour",
+      "vietnamese": "giờ",
+      "definition_en": "A unit of time equal to 60 minutes.",
+      "definition_vi": "Đơn vị thời gian bằng 60 phút.",
+      "examples": [
+        {
+          "de": "Eine Stunde hat 60 Minuten.",
+          "en": "An hour has 60 minutes.",
+          "vi": "Một giờ có 60 phút."
+        }
+      ]
+    },
+    "ID207": {
+      "word": "Sekunde",
+      "artikel": "die",
+      "plural": "Sekunden",
+      "english": "second",
+      "vietnamese": "giây",
+      "definition_en": "A unit of time.",
+      "definition_vi": "Đơn vị thời gian.",
+      "examples": [
+        {
+          "de": "Eine Minute hat 60 Sekunden.",
+          "en": "A minute has 60 seconds.",
+          "vi": "Một phút có 60 giây."
+        }
+      ]
+    },
+    "ID212": {
+      "word": "Seite",
+      "artikel": "die",
+      "plural": "Seiten",
+      "english": "side",
+      "vietnamese": "bên",
+      "definition_en": "One of the surfaces of an object.",
+      "definition_vi": "Một trong các bề mặt của vật thể.",
+      "examples": [
+        {
+          "de": "Auf der linken Seite.",
+          "en": "On the left side.",
+          "vi": "Ở bên trái."
+        }
+      ]
+    },
+    "ID226": {
+      "word": "Stück",
+      "artikel": "das",
+      "plural": "Stücke",
+      "english": "piece",
+      "vietnamese": "miếng",
+      "definition_en": "An individual item or portion.",
+      "definition_vi": "Một món đồ hoặc phần riêng lẻ.",
+      "examples": [
+        {
+          "de": "Ein Stück Kuchen.",
+          "en": "A piece of cake.",
+          "vi": "Một miếng bánh."
+        }
+      ]
+    },
+    "ID231": {
+      "word": "System",
+      "artikel": "das",
+      "plural": "Systeme",
+      "english": "system",
+      "vietnamese": "hệ thống",
+      "definition_en": "An organized set of principles.",
+      "definition_vi": "Một bộ nguyên tắc có tổ chức.",
+      "examples": [
+        {
+          "de": "Ein komplexes System.",
+          "en": "A complex system.",
+          "vi": "Một hệ thống phức tạp."
+        }
+      ]
+    }
+  }
+}

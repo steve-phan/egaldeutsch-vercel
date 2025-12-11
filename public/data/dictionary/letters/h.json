@@ -1,0 +1,354 @@
+{
+  "byWord": {
+    "haus": "ID001",
+    "hand": "ID013",
+    "hund": "ID034",
+    "herz": "ID059",
+    "hotel": "ID120",
+    "hemd": "ID140",
+    "hose": "ID141",
+    "hut": "ID148",
+    "handschuh": "ID150",
+    "herbst": "ID163",
+    "himmel": "ID169",
+    "huhn": "ID191",
+    "hase": "ID194",
+    "hälfte": "ID224"
+  },
+  "byEnglish": {
+    "house": [
+      "ID001"
+    ],
+    "hand": [
+      "ID013"
+    ],
+    "dog": [
+      "ID034"
+    ],
+    "heart": [
+      "ID059"
+    ],
+    "hotel": [
+      "ID120"
+    ],
+    "shirt": [
+      "ID140"
+    ],
+    "pants": [
+      "ID141"
+    ],
+    "hat": [
+      "ID148"
+    ],
+    "glove": [
+      "ID150"
+    ],
+    "autumn": [
+      "ID163"
+    ],
+    "sky": [
+      "ID169"
+    ],
+    "chicken": [
+      "ID191"
+    ],
+    "rabbit": [
+      "ID194"
+    ],
+    "half": [
+      "ID224"
+    ]
+  },
+  "byVietnamese": {
+    "ngôi nhà": [
+      "ID001"
+    ],
+    "bàn tay": [
+      "ID013"
+    ],
+    "con chó": [
+      "ID034"
+    ],
+    "trái tim": [
+      "ID059"
+    ],
+    "khách sạn": [
+      "ID120"
+    ],
+    "áo sơ mi": [
+      "ID140"
+    ],
+    "quần": [
+      "ID141"
+    ],
+    "mũ": [
+      "ID148"
+    ],
+    "găng tay": [
+      "ID150"
+    ],
+    "mùa thu": [
+      "ID163"
+    ],
+    "bầu trời": [
+      "ID169"
+    ],
+    "con gà": [
+      "ID191"
+    ],
+    "con thỏ": [
+      "ID194"
+    ],
+    "một nửa": [
+      "ID224"
+    ]
+  },
+  "byArtikel": {
+    "der": [
+      "ID034",
+      "ID148",
+      "ID150",
+      "ID163",
+      "ID169",
+      "ID194"
+    ],
+    "die": [
+      "ID013",
+      "ID141",
+      "ID224"
+    ],
+    "das": [
+      "ID001",
+      "ID059",
+      "ID120",
+      "ID140",
+      "ID191"
+    ]
+  },
+  "entries": {
+    "ID001": {
+      "word": "Haus",
+      "artikel": "das",
+      "plural": "Häuser",
+      "english": "house",
+      "vietnamese": "ngôi nhà",
+      "definition_en": "A building used for living.",
+      "definition_vi": "Một tòa nhà dùng để ở.",
+      "examples": [
+        {
+          "de": "Das Haus ist groß.",
+          "en": "The house is big.",
+          "vi": "Ngôi nhà thì lớn."
+        }
+      ]
+    },
+    "ID013": {
+      "word": "Hand",
+      "artikel": "die",
+      "plural": "Hände",
+      "english": "hand",
+      "vietnamese": "bàn tay",
+      "definition_en": "The end part of a person's arm.",
+      "definition_vi": "Phần cuối của cánh tay người.",
+      "examples": [
+        {
+          "de": "Ich wasche meine Hände.",
+          "en": "I wash my hands.",
+          "vi": "Tôi rửa tay."
+        }
+      ]
+    },
+    "ID034": {
+      "word": "Hund",
+      "artikel": "der",
+      "plural": "Hunde",
+      "english": "dog",
+      "vietnamese": "con chó",
+      "definition_en": "A domesticated carnivorous mammal.",
+      "definition_vi": "Một động vật có vú ăn thịt đã được thuần hóa.",
+      "examples": [
+        {
+          "de": "Der Hund bellt.",
+          "en": "The dog barks.",
+          "vi": "Con chó sủa."
+        }
+      ]
+    },
+    "ID059": {
+      "word": "Herz",
+      "artikel": "das",
+      "plural": "Herzen",
+      "english": "heart",
+      "vietnamese": "trái tim",
+      "definition_en": "The organ that pumps blood.",
+      "definition_vi": "Cơ quan bơm máu.",
+      "examples": [
+        {
+          "de": "Das Herz schlägt schnell.",
+          "en": "The heart beats fast.",
+          "vi": "Trái tim đập nhanh."
+        }
+      ]
+    },
+    "ID120": {
+      "word": "Hotel",
+      "artikel": "das",
+      "plural": "Hotels",
+      "english": "hotel",
+      "vietnamese": "khách sạn",
+      "definition_en": "A place providing accommodation.",
+      "definition_vi": "Nơi cung cấp chỗ ở.",
+      "examples": [
+        {
+          "de": "Das Hotel ist teuer.",
+          "en": "The hotel is expensive.",
+          "vi": "Khách sạn đắt."
+        }
+      ]
+    },
+    "ID140": {
+      "word": "Hemd",
+      "artikel": "das",
+      "plural": "Hemden",
+      "english": "shirt",
+      "vietnamese": "áo sơ mi",
+      "definition_en": "A garment for the upper body.",
+      "definition_vi": "Quần áo cho phần trên cơ thể.",
+      "examples": [
+        {
+          "de": "Das Hemd ist weiß.",
+          "en": "The shirt is white.",
+          "vi": "Áo sơ mi trắng."
+        }
+      ]
+    },
+    "ID141": {
+      "word": "Hose",
+      "artikel": "die",
+      "plural": "Hosen",
+      "english": "pants",
+      "vietnamese": "quần",
+      "definition_en": "A garment for the legs.",
+      "definition_vi": "Quần áo cho chân.",
+      "examples": [
+        {
+          "de": "Die Hose ist blau.",
+          "en": "The pants are blue.",
+          "vi": "Quần xanh."
+        }
+      ]
+    },
+    "ID148": {
+      "word": "Hut",
+      "artikel": "der",
+      "plural": "Hüte",
+      "english": "hat",
+      "vietnamese": "mũ",
+      "definition_en": "A head covering with a brim.",
+      "definition_vi": "Nón che đầu có vành.",
+      "examples": [
+        {
+          "de": "Der Hut ist elegant.",
+          "en": "The hat is elegant.",
+          "vi": "Mũ thanh lịch."
+        }
+      ]
+    },
+    "ID150": {
+      "word": "Handschuh",
+      "artikel": "der",
+      "plural": "Handschuhe",
+      "english": "glove",
+      "vietnamese": "găng tay",
+      "definition_en": "A covering for the hand.",
+      "definition_vi": "Bao tay.",
+      "examples": [
+        {
+          "de": "Der Handschuh ist warm.",
+          "en": "The glove is warm.",
+          "vi": "Găng tay ấm."
+        }
+      ]
+    },
+    "ID163": {
+      "word": "Herbst",
+      "artikel": "der",
+      "plural": "Herbste",
+      "english": "autumn",
+      "vietnamese": "mùa thu",
+      "definition_en": "The season between summer and winter.",
+      "definition_vi": "Mùa giữa mùa hè và mùa đông.",
+      "examples": [
+        {
+          "de": "Der Herbst ist bunt.",
+          "en": "Autumn is colorful.",
+          "vi": "Mùa thu đầy màu sắc."
+        }
+      ]
+    },
+    "ID169": {
+      "word": "Himmel",
+      "artikel": "der",
+      "plural": "Himmel",
+      "english": "sky",
+      "vietnamese": "bầu trời",
+      "definition_en": "The space above the Earth.",
+      "definition_vi": "Không gian phía trên Trái Đất.",
+      "examples": [
+        {
+          "de": "Der Himmel ist blau.",
+          "en": "The sky is blue.",
+          "vi": "Bầu trời xanh."
+        }
+      ]
+    },
+    "ID191": {
+      "word": "Huhn",
+      "artikel": "das",
+      "plural": "Hühner",
+      "english": "chicken",
+      "vietnamese": "con gà",
+      "definition_en": "A domesticated bird.",
+      "definition_vi": "Con chim thuần hóa.",
+      "examples": [
+        {
+          "de": "Das Huhn legt Eier.",
+          "en": "The chicken lays eggs.",
+          "vi": "Con gà đẻ trứng."
+        }
+      ]
+    },
+    "ID194": {
+      "word": "Hase",
+      "artikel": "der",
+      "plural": "Hasen",
+      "english": "rabbit",
+      "vietnamese": "con thỏ",
+      "definition_en": "A small mammal with long ears.",
+      "definition_vi": "Động vật có vú nhỏ có tai dài.",
+      "examples": [
+        {
+          "de": "Der Hase hüpft.",
+          "en": "The rabbit hops.",
+          "vi": "Con thỏ nhảy."
+        }
+      ]
+    },
+    "ID224": {
+      "word": "Hälfte",
+      "artikel": "die",
+      "plural": "Hälften",
+      "english": "half",
+      "vietnamese": "một nửa",
+      "definition_en": "One of two equal parts.",
+      "definition_vi": "Một trong hai phần bằng nhau.",
+      "examples": [
+        {
+          "de": "Die Hälfte des Kuchens.",
+          "en": "Half of the cake.",
+          "vi": "Một nửa chiếc bánh."
+        }
+      ]
+    }
+  }
+}

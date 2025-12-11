@@ -1,0 +1,186 @@
+{
+  "byWord": {
+    "zeit": "ID025",
+    "zahn": "ID054",
+    "zucker": "ID071",
+    "zimmer": "ID081",
+    "zug": "ID125",
+    "ziege": "ID190",
+    "zahl": "ID222"
+  },
+  "byEnglish": {
+    "time": [
+      "ID025"
+    ],
+    "tooth": [
+      "ID054"
+    ],
+    "sugar": [
+      "ID071"
+    ],
+    "room": [
+      "ID081"
+    ],
+    "train": [
+      "ID125"
+    ],
+    "goat": [
+      "ID190"
+    ],
+    "number (quantity)": [
+      "ID222"
+    ]
+  },
+  "byVietnamese": {
+    "thời gian": [
+      "ID025"
+    ],
+    "răng": [
+      "ID054"
+    ],
+    "đường": [
+      "ID071"
+    ],
+    "phòng": [
+      "ID081"
+    ],
+    "tàu hỏa": [
+      "ID125"
+    ],
+    "con dê": [
+      "ID190"
+    ],
+    "con số": [
+      "ID222"
+    ]
+  },
+  "byArtikel": {
+    "der": [
+      "ID054",
+      "ID071",
+      "ID125",
+      "ID222"
+    ],
+    "die": [
+      "ID025",
+      "ID190"
+    ],
+    "das": [
+      "ID081"
+    ]
+  },
+  "entries": {
+    "ID025": {
+      "word": "Zeit",
+      "artikel": "die",
+      "plural": "Zeiten",
+      "english": "time",
+      "vietnamese": "thời gian",
+      "definition_en": "The indefinite continued progress of existence.",
+      "definition_vi": "Sự tiến triển liên tục không xác định của sự tồn tại.",
+      "examples": [
+        {
+          "de": "Ich habe keine Zeit.",
+          "en": "I have no time.",
+          "vi": "Tôi không có thời gian."
+        }
+      ]
+    },
+    "ID054": {
+      "word": "Zahn",
+      "artikel": "der",
+      "plural": "Zähne",
+      "english": "tooth",
+      "vietnamese": "răng",
+      "definition_en": "A hard structure in the mouth for biting.",
+      "definition_vi": "Cấu trúc cứng trong miệng để cắn.",
+      "examples": [
+        {
+          "de": "Ich putze meine Zähne.",
+          "en": "I brush my teeth.",
+          "vi": "Tôi đánh răng."
+        }
+      ]
+    },
+    "ID071": {
+      "word": "Zucker",
+      "artikel": "der",
+      "plural": "Zucker",
+      "english": "sugar",
+      "vietnamese": "đường",
+      "definition_en": "A sweet crystalline substance.",
+      "definition_vi": "Chất kết tinh ngọt.",
+      "examples": [
+        {
+          "de": "Der Kaffee braucht Zucker.",
+          "en": "The coffee needs sugar.",
+          "vi": "Cà phê cần đường."
+        }
+      ]
+    },
+    "ID081": {
+      "word": "Zimmer",
+      "artikel": "das",
+      "plural": "Zimmer",
+      "english": "room",
+      "vietnamese": "phòng",
+      "definition_en": "A part of a building enclosed by walls.",
+      "definition_vi": "Một phần của tòa nhà được bao quanh bởi tường.",
+      "examples": [
+        {
+          "de": "Das Zimmer ist groß.",
+          "en": "The room is big.",
+          "vi": "Căn phòng lớn."
+        }
+      ]
+    },
+    "ID125": {
+      "word": "Zug",
+      "artikel": "der",
+      "plural": "Züge",
+      "english": "train",
+      "vietnamese": "tàu hỏa",
+      "definition_en": "A rail vehicle for passengers.",
+      "definition_vi": "Phương tiện đường sắt cho hành khách.",
+      "examples": [
+        {
+          "de": "Der Zug fährt schnell.",
+          "en": "The train goes fast.",
+          "vi": "Tàu hỏa chạy nhanh."
+        }
+      ]
+    },
+    "ID190": {
+      "word": "Ziege",
+      "artikel": "die",
+      "plural": "Ziegen",
+      "english": "goat",
+      "vietnamese": "con dê",
+      "definition_en": "A horned farm animal.",
+      "definition_vi": "Động vật trang trại có sừng.",
+      "examples": [
+        {
+          "de": "Die Ziege frisst Gras.",
+          "en": "The goat eats grass.",
+          "vi": "Con dê ăn cỏ."
+        }
+      ]
+    },
+    "ID222": {
+      "word": "Zahl",
+      "artikel": "die",
+      "plural": "Zahlen",
+      "english": "number (quantity)",
+      "vietnamese": "con số",
+      "definition_en": "A mathematical value.",
+      "definition_vi": "Giá trị toán học.",
+      "examples": [
+        {
+          "de": "Eine große Zahl.",
+          "en": "A large number.",
+          "vi": "Một con số lớn."
+        }
+      ]
+    }
+  }
+}

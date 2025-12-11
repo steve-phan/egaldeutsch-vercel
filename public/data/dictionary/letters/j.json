@@ -1,0 +1,65 @@
+{
+  "byWord": {
+    "jahr": "ID026",
+    "jacke": "ID144"
+  },
+  "byEnglish": {
+    "year": [
+      "ID026"
+    ],
+    "jacket": [
+      "ID144"
+    ]
+  },
+  "byVietnamese": {
+    "năm": [
+      "ID026"
+    ],
+    "áo khoác": [
+      "ID144"
+    ]
+  },
+  "byArtikel": {
+    "der": [],
+    "die": [
+      "ID144"
+    ],
+    "das": [
+      "ID026"
+    ]
+  },
+  "entries": {
+    "ID026": {
+      "word": "Jahr",
+      "artikel": "das",
+      "plural": "Jahre",
+      "english": "year",
+      "vietnamese": "năm",
+      "definition_en": "A period of 365 or 366 days.",
+      "definition_vi": "Một khoảng thời gian 365 hoặc 366 ngày.",
+      "examples": [
+        {
+          "de": "Ein Jahr hat zwölf Monate.",
+          "en": "A year has twelve months.",
+          "vi": "Một năm có mười hai tháng."
+        }
+      ]
+    },
+    "ID144": {
+      "word": "Jacke",
+      "artikel": "die",
+      "plural": "Jacken",
+      "english": "jacket",
+      "vietnamese": "áo khoác",
+      "definition_en": "A short coat.",
+      "definition_vi": "Áo khoác ngắn.",
+      "examples": [
+        {
+          "de": "Die Jacke ist warm.",
+          "en": "The jacket is warm.",
+          "vi": "Áo khoác ấm."
+        }
+      ]
+    }
+  }
+}

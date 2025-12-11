@@ -14,6 +14,37 @@ export async function loadDictionaryBatch(batchNumber: number): Promise<Dictiona
 }
 
 /**
+ * Load dictionary by letter from JSON file
+ */
+export async function loadDictionaryByLetter(letter: string): Promise<Dictionary> {
+  const response = await fetch(`/data/dictionary/letters/${letter.toLowerCase()}.json`);
+  if (!response.ok) {
+    throw new Error(`Failed to load dictionary for letter ${letter}`);
+  }
+  return response.json();
+}
+
+/**
+ * Load all letter-based dictionaries
+ */
+export async function loadAllLetterDictionaries(): Promise<Dictionary> {
+  const letters = 'abcdefghijklmnopqrstuvwxyz'.split('');
+  const dictionaries: Dictionary[] = [];
+  
+  for (const letter of letters) {
+    try {
+      const dict = await loadDictionaryByLetter(letter);
+      dictionaries.push(dict);
+    } catch {
+      // Skip letters that don't have entries yet
+      console.log(`No entries for letter ${letter}`);
+    }
+  }
+  
+  return mergeDictionaries(dictionaries);
+}
+
+/**
  * Merge multiple dictionary batches into one
  */
 export function mergeDictionaries(dictionaries: Dictionary[]): Dictionary {

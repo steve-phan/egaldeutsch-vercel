@@ -1,0 +1,282 @@
+{
+  "byWord": {
+    "preis": "ID098",
+    "polizist": "ID106",
+    "professor": "ID109",
+    "post": "ID122",
+    "pferd": "ID186",
+    "platz": "ID214",
+    "punkt": "ID216",
+    "prozent": "ID223",
+    "paar": "ID227",
+    "pflicht": "ID235",
+    "problem": "ID237"
+  },
+  "byEnglish": {
+    "price": [
+      "ID098"
+    ],
+    "police officer": [
+      "ID106"
+    ],
+    "professor": [
+      "ID109"
+    ],
+    "post office": [
+      "ID122"
+    ],
+    "horse": [
+      "ID186"
+    ],
+    "place": [
+      "ID214"
+    ],
+    "point": [
+      "ID216"
+    ],
+    "percent": [
+      "ID223"
+    ],
+    "pair": [
+      "ID227"
+    ],
+    "duty": [
+      "ID235"
+    ],
+    "problem": [
+      "ID237"
+    ]
+  },
+  "byVietnamese": {
+    "giá cả": [
+      "ID098"
+    ],
+    "cảnh sát": [
+      "ID106"
+    ],
+    "giáo sư": [
+      "ID109"
+    ],
+    "bưu điện": [
+      "ID122"
+    ],
+    "con ngựa": [
+      "ID186"
+    ],
+    "chỗ": [
+      "ID214"
+    ],
+    "điểm": [
+      "ID216"
+    ],
+    "phần trăm": [
+      "ID223"
+    ],
+    "cặp": [
+      "ID227"
+    ],
+    "nghĩa vụ": [
+      "ID235"
+    ],
+    "vấn đề": [
+      "ID237"
+    ]
+  },
+  "byArtikel": {
+    "der": [
+      "ID098",
+      "ID106",
+      "ID109",
+      "ID214",
+      "ID216",
+      "ID227"
+    ],
+    "die": [
+      "ID122",
+      "ID235"
+    ],
+    "das": [
+      "ID186",
+      "ID223",
+      "ID237"
+    ]
+  },
+  "entries": {
+    "ID098": {
+      "word": "Preis",
+      "artikel": "der",
+      "plural": "Preise",
+      "english": "price",
+      "vietnamese": "giá cả",
+      "definition_en": "The amount of money for something.",
+      "definition_vi": "Số tiền cho một cái gì đó.",
+      "examples": [
+        {
+          "de": "Der Preis ist hoch.",
+          "en": "The price is high.",
+          "vi": "Giá cao."
+        }
+      ]
+    },
+    "ID106": {
+      "word": "Polizist",
+      "artikel": "der",
+      "plural": "Polizisten",
+      "english": "police officer",
+      "vietnamese": "cảnh sát",
+      "definition_en": "A law enforcement officer.",
+      "definition_vi": "Nhân viên thực thi pháp luật.",
+      "examples": [
+        {
+          "de": "Der Polizist hilft uns.",
+          "en": "The police officer helps us.",
+          "vi": "Cảnh sát giúp chúng tôi."
+        }
+      ]
+    },
+    "ID109": {
+      "word": "Professor",
+      "artikel": "der",
+      "plural": "Professoren",
+      "english": "professor",
+      "vietnamese": "giáo sư",
+      "definition_en": "A university teacher.",
+      "definition_vi": "Giáo viên đại học.",
+      "examples": [
+        {
+          "de": "Der Professor unterrichtet Geschichte.",
+          "en": "The professor teaches history.",
+          "vi": "Giáo sư dạy lịch sử."
+        }
+      ]
+    },
+    "ID122": {
+      "word": "Post",
+      "artikel": "die",
+      "plural": "Posten",
+      "english": "post office",
+      "vietnamese": "bưu điện",
+      "definition_en": "A place for mailing letters.",
+      "definition_vi": "Nơi gửi thư.",
+      "examples": [
+        {
+          "de": "Ich gehe zur Post.",
+          "en": "I go to the post office.",
+          "vi": "Tôi đi bưu điện."
+        }
+      ]
+    },
+    "ID186": {
+      "word": "Pferd",
+      "artikel": "das",
+      "plural": "Pferde",
+      "english": "horse",
+      "vietnamese": "con ngựa",
+      "definition_en": "A large domesticated animal.",
+      "definition_vi": "Động vật thuần hóa lớn.",
+      "examples": [
+        {
+          "de": "Das Pferd läuft schnell.",
+          "en": "The horse runs fast.",
+          "vi": "Con ngựa chạy nhanh."
+        }
+      ]
+    },
+    "ID214": {
+      "word": "Platz",
+      "artikel": "der",
+      "plural": "Plätze",
+      "english": "place",
+      "vietnamese": "chỗ",
+      "definition_en": "A particular position or area.",
+      "definition_vi": "Một vị trí hoặc khu vực cụ thể.",
+      "examples": [
+        {
+          "de": "Ist hier noch ein Platz frei?",
+          "en": "Is there still a free place here?",
+          "vi": "Còn chỗ trống ở đây không?"
+        }
+      ]
+    },
+    "ID216": {
+      "word": "Punkt",
+      "artikel": "der",
+      "plural": "Punkte",
+      "english": "point",
+      "vietnamese": "điểm",
+      "definition_en": "A specific position or score.",
+      "definition_vi": "Vị trí hoặc điểm số cụ thể.",
+      "examples": [
+        {
+          "de": "Ich habe zehn Punkte.",
+          "en": "I have ten points.",
+          "vi": "Tôi có mười điểm."
+        }
+      ]
+    },
+    "ID223": {
+      "word": "Prozent",
+      "artikel": "das",
+      "plural": "Prozent",
+      "english": "percent",
+      "vietnamese": "phần trăm",
+      "definition_en": "A proportion out of one hundred.",
+      "definition_vi": "Tỷ lệ trên một trăm.",
+      "examples": [
+        {
+          "de": "Fünfzig Prozent.",
+          "en": "Fifty percent.",
+          "vi": "Năm mươi phần trăm."
+        }
+      ]
+    },
+    "ID227": {
+      "word": "Paar",
+      "artikel": "das",
+      "plural": "Paare",
+      "english": "pair",
+      "vietnamese": "cặp",
+      "definition_en": "Two items that go together.",
+      "definition_vi": "Hai món đi cùng nhau.",
+      "examples": [
+        {
+          "de": "Ein Paar Schuhe.",
+          "en": "A pair of shoes.",
+          "vi": "Một đôi giày."
+        }
+      ]
+    },
+    "ID235": {
+      "word": "Pflicht",
+      "artikel": "die",
+      "plural": "Pflichten",
+      "english": "duty",
+      "vietnamese": "nghĩa vụ",
+      "definition_en": "An obligation or responsibility.",
+      "definition_vi": "Nghĩa vụ hoặc trách nhiệm.",
+      "examples": [
+        {
+          "de": "Das ist meine Pflicht.",
+          "en": "That is my duty.",
+          "vi": "Đó là nghĩa vụ của tôi."
+        }
+      ]
+    },
+    "ID237": {
+      "word": "Problem",
+      "artikel": "das",
+      "plural": "Probleme",
+      "english": "problem",
+      "vietnamese": "vấn đề",
+      "definition_en": "A difficulty or issue.",
+      "definition_vi": "Một khó khăn hoặc vấn đề.",
+      "examples": [
+        {
+          "de": "Ich habe ein Problem.",
+          "en": "I have a problem.",
+          "vi": "Tôi có một vấn đề."
+        }
+      ]
+    }
+  }
+}

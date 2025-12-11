@@ -1,0 +1,137 @@
+{
+  "byWord": {
+    "ohr": "ID051",
+    "obst": "ID066",
+    "orange": "ID160",
+    "ort": "ID215",
+    "ordnung": "ID230"
+  },
+  "byEnglish": {
+    "ear": [
+      "ID051"
+    ],
+    "fruit": [
+      "ID066"
+    ],
+    "orange": [
+      "ID160"
+    ],
+    "location": [
+      "ID215"
+    ],
+    "order": [
+      "ID230"
+    ]
+  },
+  "byVietnamese": {
+    "tai": [
+      "ID051"
+    ],
+    "trái cây": [
+      "ID066"
+    ],
+    "cam": [
+      "ID160"
+    ],
+    "địa điểm": [
+      "ID215"
+    ],
+    "thứ tự": [
+      "ID230"
+    ]
+  },
+  "byArtikel": {
+    "der": [],
+    "die": [
+      "ID230"
+    ],
+    "das": [
+      "ID051",
+      "ID066",
+      "ID160",
+      "ID215"
+    ]
+  },
+  "entries": {
+    "ID051": {
+      "word": "Ohr",
+      "artikel": "das",
+      "plural": "Ohren",
+      "english": "ear",
+      "vietnamese": "tai",
+      "definition_en": "An organ of hearing.",
+      "definition_vi": "Cơ quan thính giác.",
+      "examples": [
+        {
+          "de": "Ich höre mit meinen Ohren.",
+          "en": "I hear with my ears.",
+          "vi": "Tôi nghe bằng tai."
+        }
+      ]
+    },
+    "ID066": {
+      "word": "Obst",
+      "artikel": "das",
+      "plural": "Obst",
+      "english": "fruit",
+      "vietnamese": "trái cây",
+      "definition_en": "The sweet product of a plant.",
+      "definition_vi": "Sản phẩm ngọt của cây.",
+      "examples": [
+        {
+          "de": "Ich esse gern Obst.",
+          "en": "I like to eat fruit.",
+          "vi": "Tôi thích ăn trái cây."
+        }
+      ]
+    },
+    "ID160": {
+      "word": "Orange",
+      "artikel": "das",
+      "plural": "Orange",
+      "english": "orange",
+      "vietnamese": "cam",
+      "definition_en": "A color between red and yellow.",
+      "definition_vi": "Màu giữa đỏ và vàng.",
+      "examples": [
+        {
+          "de": "Das Orange ist hell.",
+          "en": "The orange is bright.",
+          "vi": "Màu cam sáng."
+        }
+      ]
+    },
+    "ID215": {
+      "word": "Ort",
+      "artikel": "der",
+      "plural": "Orte",
+      "english": "location",
+      "vietnamese": "địa điểm",
+      "definition_en": "A particular place.",
+      "definition_vi": "Một địa điểm cụ thể.",
+      "examples": [
+        {
+          "de": "An diesem Ort.",
+          "en": "At this location.",
+          "vi": "Tại địa điểm này."
+        }
+      ]
+    },
+    "ID230": {
+      "word": "Ordnung",
+      "artikel": "die",
+      "plural": "Ordnungen",
+      "english": "order",
+      "vietnamese": "thứ tự",
+      "definition_en": "A systematic arrangement.",
+      "definition_vi": "Một sự sắp xếp có hệ thống.",
+      "examples": [
+        {
+          "de": "Alles in Ordnung.",
+          "en": "Everything in order.",
+          "vi": "Mọi thứ đều ổn."
+        }
+      ]
+    }
+  }
+}

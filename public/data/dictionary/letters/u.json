@@ -1,0 +1,40 @@
+{
+  "byWord": {
+    "uhr": "ID095"
+  },
+  "byEnglish": {
+    "clock": [
+      "ID095"
+    ]
+  },
+  "byVietnamese": {
+    "đồng hồ": [
+      "ID095"
+    ]
+  },
+  "byArtikel": {
+    "der": [],
+    "die": [
+      "ID095"
+    ],
+    "das": []
+  },
+  "entries": {
+    "ID095": {
+      "word": "Uhr",
+      "artikel": "die",
+      "plural": "Uhren",
+      "english": "clock",
+      "vietnamese": "đồng hồ",
+      "definition_en": "A device for measuring time.",
+      "definition_vi": "Thiết bị để đo thời gian.",
+      "examples": [
+        {
+          "de": "Die Uhr zeigt drei Uhr.",
+          "en": "The clock shows three o'clock.",
+          "vi": "Đồng hồ chỉ ba giờ."
+        }
+      ]
+    }
+  }
+}

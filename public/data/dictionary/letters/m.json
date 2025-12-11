@@ -1,0 +1,426 @@
+{
+  "byWord": {
+    "mann": "ID007",
+    "monat": "ID027",
+    "milch": "ID031",
+    "mutter": "ID040",
+    "mund": "ID053",
+    "markt": "ID116",
+    "motorrad": "ID129",
+    "mantel": "ID145",
+    "mütze": "ID149",
+    "mond": "ID167",
+    "meer": "ID180",
+    "maus": "ID193",
+    "morgen": "ID201",
+    "mittag": "ID203",
+    "minute": "ID205",
+    "moment": "ID208",
+    "mitte": "ID213"
+  },
+  "byEnglish": {
+    "man": [
+      "ID007"
+    ],
+    "month": [
+      "ID027"
+    ],
+    "milk": [
+      "ID031"
+    ],
+    "mother": [
+      "ID040"
+    ],
+    "mouth": [
+      "ID053"
+    ],
+    "market": [
+      "ID116"
+    ],
+    "motorcycle": [
+      "ID129"
+    ],
+    "coat": [
+      "ID145"
+    ],
+    "cap": [
+      "ID149"
+    ],
+    "moon": [
+      "ID167"
+    ],
+    "sea": [
+      "ID180"
+    ],
+    "mouse": [
+      "ID193"
+    ],
+    "morning": [
+      "ID201"
+    ],
+    "noon": [
+      "ID203"
+    ],
+    "minute": [
+      "ID205"
+    ],
+    "moment": [
+      "ID208"
+    ],
+    "middle": [
+      "ID213"
+    ]
+  },
+  "byVietnamese": {
+    "người đàn ông": [
+      "ID007"
+    ],
+    "tháng": [
+      "ID027"
+    ],
+    "sữa": [
+      "ID031"
+    ],
+    "mẹ": [
+      "ID040"
+    ],
+    "miệng": [
+      "ID053"
+    ],
+    "chợ": [
+      "ID116"
+    ],
+    "xe máy": [
+      "ID129"
+    ],
+    "áo choàng": [
+      "ID145"
+    ],
+    "nón": [
+      "ID149"
+    ],
+    "mặt trăng": [
+      "ID167"
+    ],
+    "biển": [
+      "ID180"
+    ],
+    "con chuột": [
+      "ID193"
+    ],
+    "buổi sáng": [
+      "ID201"
+    ],
+    "buổi trưa": [
+      "ID203"
+    ],
+    "phút": [
+      "ID205"
+    ],
+    "khoảnh khắc": [
+      "ID208"
+    ],
+    "giữa": [
+      "ID213"
+    ]
+  },
+  "byArtikel": {
+    "der": [
+      "ID007",
+      "ID027",
+      "ID053",
+      "ID116",
+      "ID129",
+      "ID145",
+      "ID201",
+      "ID203",
+      "ID208"
+    ],
+    "die": [
+      "ID031",
+      "ID040",
+      "ID149",
+      "ID193",
+      "ID205",
+      "ID213"
+    ],
+    "das": [
+      "ID167",
+      "ID180"
+    ]
+  },
+  "entries": {
+    "ID007": {
+      "word": "Mann",
+      "artikel": "der",
+      "plural": "Männer",
+      "english": "man",
+      "vietnamese": "người đàn ông",
+      "definition_en": "An adult male human.",
+      "definition_vi": "Một người nam trưởng thành.",
+      "examples": [
+        {
+          "de": "Der Mann arbeitet.",
+          "en": "The man is working.",
+          "vi": "Người đàn ông đang làm việc."
+        }
+      ]
+    },
+    "ID027": {
+      "word": "Monat",
+      "artikel": "der",
+      "plural": "Monate",
+      "english": "month",
+      "vietnamese": "tháng",
+      "definition_en": "One of the twelve divisions of a year.",
+      "definition_vi": "Một trong mười hai phần của một năm.",
+      "examples": [
+        {
+          "de": "Der Januar ist der erste Monat.",
+          "en": "January is the first month.",
+          "vi": "Tháng Giêng là tháng đầu tiên."
+        }
+      ]
+    },
+    "ID031": {
+      "word": "Milch",
+      "artikel": "die",
+      "plural": "Milch",
+      "english": "milk",
+      "vietnamese": "sữa",
+      "definition_en": "A white liquid produced by mammals.",
+      "definition_vi": "Một chất lỏng màu trắng do động vật có vú tạo ra.",
+      "examples": [
+        {
+          "de": "Die Milch ist kalt.",
+          "en": "The milk is cold.",
+          "vi": "Sữa thì lạnh."
+        }
+      ]
+    },
+    "ID040": {
+      "word": "Mutter",
+      "artikel": "die",
+      "plural": "Mütter",
+      "english": "mother",
+      "vietnamese": "mẹ",
+      "definition_en": "A female parent.",
+      "definition_vi": "Cha mẹ nữ.",
+      "examples": [
+        {
+          "de": "Meine Mutter kocht gut.",
+          "en": "My mother cooks well.",
+          "vi": "Mẹ tôi nấu ăn ngon."
+        }
+      ]
+    },
+    "ID053": {
+      "word": "Mund",
+      "artikel": "der",
+      "plural": "Münder",
+      "english": "mouth",
+      "vietnamese": "miệng",
+      "definition_en": "The opening for food intake and speech.",
+      "definition_vi": "Lỗ để ăn và nói.",
+      "examples": [
+        {
+          "de": "Er öffnet den Mund.",
+          "en": "He opens his mouth.",
+          "vi": "Anh ấy mở miệng."
+        }
+      ]
+    },
+    "ID116": {
+      "word": "Markt",
+      "artikel": "der",
+      "plural": "Märkte",
+      "english": "market",
+      "vietnamese": "chợ",
+      "definition_en": "A place where goods are sold.",
+      "definition_vi": "Nơi bán hàng.",
+      "examples": [
+        {
+          "de": "Der Markt ist groß.",
+          "en": "The market is big.",
+          "vi": "Chợ lớn."
+        }
+      ]
+    },
+    "ID129": {
+      "word": "Motorrad",
+      "artikel": "das",
+      "plural": "Motorräder",
+      "english": "motorcycle",
+      "vietnamese": "xe máy",
+      "definition_en": "A motorized two-wheeled vehicle.",
+      "definition_vi": "Phương tiện hai bánh có động cơ.",
+      "examples": [
+        {
+          "de": "Das Motorrad ist schnell.",
+          "en": "The motorcycle is fast.",
+          "vi": "Xe máy nhanh."
+        }
+      ]
+    },
+    "ID145": {
+      "word": "Mantel",
+      "artikel": "der",
+      "plural": "Mäntel",
+      "english": "coat",
+      "vietnamese": "áo choàng",
+      "definition_en": "A long outer garment.",
+      "definition_vi": "Áo khoác dài bên ngoài.",
+      "examples": [
+        {
+          "de": "Der Mantel ist lang.",
+          "en": "The coat is long.",
+          "vi": "Áo choàng dài."
+        }
+      ]
+    },
+    "ID149": {
+      "word": "Mütze",
+      "artikel": "die",
+      "plural": "Mützen",
+      "english": "cap",
+      "vietnamese": "nón",
+      "definition_en": "A soft head covering.",
+      "definition_vi": "Nón mềm che đầu.",
+      "examples": [
+        {
+          "de": "Die Mütze ist rot.",
+          "en": "The cap is red.",
+          "vi": "Nón đỏ."
+        }
+      ]
+    },
+    "ID167": {
+      "word": "Mond",
+      "artikel": "der",
+      "plural": "Monde",
+      "english": "moon",
+      "vietnamese": "mặt trăng",
+      "definition_en": "The natural satellite of Earth.",
+      "definition_vi": "Vệ tinh tự nhiên của Trái Đất.",
+      "examples": [
+        {
+          "de": "Der Mond ist hell.",
+          "en": "The moon is bright.",
+          "vi": "Mặt trăng sáng."
+        }
+      ]
+    },
+    "ID180": {
+      "word": "Meer",
+      "artikel": "das",
+      "plural": "Meere",
+      "english": "sea",
+      "vietnamese": "biển",
+      "definition_en": "A large body of salt water.",
+      "definition_vi": "Vùng nước mặn lớn.",
+      "examples": [
+        {
+          "de": "Das Meer ist blau.",
+          "en": "The sea is blue.",
+          "vi": "Biển xanh."
+        }
+      ]
+    },
+    "ID193": {
+      "word": "Maus",
+      "artikel": "die",
+      "plural": "Mäuse",
+      "english": "mouse",
+      "vietnamese": "con chuột",
+      "definition_en": "A small rodent.",
+      "definition_vi": "Loài gặm nhấm nhỏ.",
+      "examples": [
+        {
+          "de": "Die Maus ist klein.",
+          "en": "The mouse is small.",
+          "vi": "Con chuột nhỏ."
+        }
+      ]
+    },
+    "ID201": {
+      "word": "Morgen",
+      "artikel": "der",
+      "plural": "Morgen",
+      "english": "morning",
+      "vietnamese": "buổi sáng",
+      "definition_en": "The early part of the day.",
+      "definition_vi": "Phần đầu ngày.",
+      "examples": [
+        {
+          "de": "Guten Morgen!",
+          "en": "Good morning!",
+          "vi": "Chào buổi sáng!"
+        }
+      ]
+    },
+    "ID203": {
+      "word": "Mittag",
+      "artikel": "der",
+      "plural": "Mittage",
+      "english": "noon",
+      "vietnamese": "buổi trưa",
+      "definition_en": "The middle of the day.",
+      "definition_vi": "Giữa ngày.",
+      "examples": [
+        {
+          "de": "Um Mittag essen wir.",
+          "en": "We eat at noon.",
+          "vi": "Chúng tôi ăn vào buổi trưa."
+        }
+      ]
+    },
+    "ID205": {
+      "word": "Minute",
+      "artikel": "die",
+      "plural": "Minuten",
+      "english": "minute",
+      "vietnamese": "phút",
+      "definition_en": "A unit of time equal to 60 seconds.",
+      "definition_vi": "Đơn vị thời gian bằng 60 giây.",
+      "examples": [
+        {
+          "de": "Ich warte fünf Minuten.",
+          "en": "I wait five minutes.",
+          "vi": "Tôi đợi năm phút."
+        }
+      ]
+    },
+    "ID208": {
+      "word": "Moment",
+      "artikel": "der",
+      "plural": "Momente",
+      "english": "moment",
+      "vietnamese": "khoảnh khắc",
+      "definition_en": "A brief period of time.",
+      "definition_vi": "Khoảng thời gian ngắn.",
+      "examples": [
+        {
+          "de": "Einen Moment bitte!",
+          "en": "One moment please!",
+          "vi": "Xin chờ một chút!"
+        }
+      ]
+    },
+    "ID213": {
+      "word": "Mitte",
+      "artikel": "die",
+      "plural": "Mitten",
+      "english": "middle",
+      "vietnamese": "giữa",
+      "definition_en": "The center point.",
+      "definition_vi": "Điểm trung tâm.",
+      "examples": [
+        {
+          "de": "In der Mitte des Raumes.",
+          "en": "In the middle of the room.",
+          "vi": "Ở giữa phòng."
+        }
+      ]
+    }
+  }
+}

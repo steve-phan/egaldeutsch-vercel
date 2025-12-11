@@ -1,0 +1,210 @@
+{
+  "byWord": {
+    "ei": "ID030",
+    "essen": "ID061",
+    "eis": "ID077",
+    "euro": "ID097",
+    "erde": "ID175",
+    "elefant": "ID197",
+    "ende": "ID210",
+    "ecke": "ID211"
+  },
+  "byEnglish": {
+    "egg": [
+      "ID030"
+    ],
+    "food": [
+      "ID061"
+    ],
+    "ice cream": [
+      "ID077"
+    ],
+    "euro": [
+      "ID097"
+    ],
+    "earth": [
+      "ID175"
+    ],
+    "elephant": [
+      "ID197"
+    ],
+    "end": [
+      "ID210"
+    ],
+    "corner": [
+      "ID211"
+    ]
+  },
+  "byVietnamese": {
+    "quả trứng": [
+      "ID030"
+    ],
+    "thức ăn": [
+      "ID061"
+    ],
+    "kem": [
+      "ID077"
+    ],
+    "euro": [
+      "ID097"
+    ],
+    "trái đất": [
+      "ID175"
+    ],
+    "con voi": [
+      "ID197"
+    ],
+    "kết thúc": [
+      "ID210"
+    ],
+    "góc": [
+      "ID211"
+    ]
+  },
+  "byArtikel": {
+    "der": [
+      "ID197"
+    ],
+    "die": [
+      "ID175",
+      "ID211"
+    ],
+    "das": [
+      "ID030",
+      "ID061",
+      "ID077",
+      "ID097",
+      "ID210"
+    ]
+  },
+  "entries": {
+    "ID030": {
+      "word": "Ei",
+      "artikel": "das",
+      "plural": "Eier",
+      "english": "egg",
+      "vietnamese": "quả trứng",
+      "definition_en": "An oval object laid by birds.",
+      "definition_vi": "Một vật hình bầu dục được chim đẻ ra.",
+      "examples": [
+        {
+          "de": "Ich esse ein Ei zum Frühstück.",
+          "en": "I eat an egg for breakfast.",
+          "vi": "Tôi ăn một quả trứng cho bữa sáng."
+        }
+      ]
+    },
+    "ID061": {
+      "word": "Essen",
+      "artikel": "das",
+      "plural": "Essen",
+      "english": "food",
+      "vietnamese": "thức ăn",
+      "definition_en": "Any substance consumed for nutrition.",
+      "definition_vi": "Bất kỳ chất nào được tiêu thụ để dinh dưỡng.",
+      "examples": [
+        {
+          "de": "Das Essen schmeckt gut.",
+          "en": "The food tastes good.",
+          "vi": "Thức ăn ngon."
+        }
+      ]
+    },
+    "ID077": {
+      "word": "Eis",
+      "artikel": "das",
+      "plural": "Eis",
+      "english": "ice cream",
+      "vietnamese": "kem",
+      "definition_en": "A frozen dessert.",
+      "definition_vi": "Món tráng miệng đông lạnh.",
+      "examples": [
+        {
+          "de": "Das Eis ist kalt.",
+          "en": "The ice cream is cold.",
+          "vi": "Kem lạnh."
+        }
+      ]
+    },
+    "ID097": {
+      "word": "Euro",
+      "artikel": "der",
+      "plural": "Euro",
+      "english": "euro",
+      "vietnamese": "euro",
+      "definition_en": "The currency of the European Union.",
+      "definition_vi": "Đồng tiền của Liên minh châu Âu.",
+      "examples": [
+        {
+          "de": "Das kostet zehn Euro.",
+          "en": "That costs ten euros.",
+          "vi": "Cái đó giá mười euro."
+        }
+      ]
+    },
+    "ID175": {
+      "word": "Erde",
+      "artikel": "die",
+      "plural": "Erden",
+      "english": "earth",
+      "vietnamese": "trái đất",
+      "definition_en": "The planet we live on.",
+      "definition_vi": "Hành tinh chúng ta sống.",
+      "examples": [
+        {
+          "de": "Die Erde ist rund.",
+          "en": "The Earth is round.",
+          "vi": "Trái Đất tròn."
+        }
+      ]
+    },
+    "ID197": {
+      "word": "Elefant",
+      "artikel": "der",
+      "plural": "Elefanten",
+      "english": "elephant",
+      "vietnamese": "con voi",
+      "definition_en": "A large mammal with a trunk.",
+      "definition_vi": "Động vật có vú lớn có vòi.",
+      "examples": [
+        {
+          "de": "Der Elefant ist groß.",
+          "en": "The elephant is big.",
+          "vi": "Con voi lớn."
+        }
+      ]
+    },
+    "ID210": {
+      "word": "Ende",
+      "artikel": "das",
+      "plural": "Enden",
+      "english": "end",
+      "vietnamese": "kết thúc",
+      "definition_en": "The final part of something.",
+      "definition_vi": "Phần cuối của cái gì đó.",
+      "examples": [
+        {
+          "de": "Das Ende ist nah.",
+          "en": "The end is near.",
+          "vi": "Sự kết thúc đã gần."
+        }
+      ]
+    },
+    "ID211": {
+      "word": "Ecke",
+      "artikel": "die",
+      "plural": "Ecken",
+      "english": "corner",
+      "vietnamese": "góc",
+      "definition_en": "A point where two lines meet.",
+      "definition_vi": "Điểm nơi hai đường gặp nhau.",
+      "examples": [
+        {
+          "de": "Das Haus steht an der Ecke.",
+          "en": "The house stands on the corner.",
+          "vi": "Ngôi nhà đứng ở góc."
+        }
+      ]
+    }
+  }
+}

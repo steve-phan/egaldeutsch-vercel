@@ -1,0 +1,161 @@
+{
+  "byWord": {
+    "nacht": "ID012",
+    "name": "ID037",
+    "nase": "ID052",
+    "nudel": "ID074",
+    "nachmittag": "ID204",
+    "nummer": "ID221"
+  },
+  "byEnglish": {
+    "night": [
+      "ID012"
+    ],
+    "name": [
+      "ID037"
+    ],
+    "nose": [
+      "ID052"
+    ],
+    "noodle": [
+      "ID074"
+    ],
+    "afternoon": [
+      "ID204"
+    ],
+    "number": [
+      "ID221"
+    ]
+  },
+  "byVietnamese": {
+    "đêm": [
+      "ID012"
+    ],
+    "tên": [
+      "ID037"
+    ],
+    "mũi": [
+      "ID052"
+    ],
+    "mì": [
+      "ID074"
+    ],
+    "buổi chiều": [
+      "ID204"
+    ],
+    "số": [
+      "ID221"
+    ]
+  },
+  "byArtikel": {
+    "der": [
+      "ID037",
+      "ID204"
+    ],
+    "die": [
+      "ID012",
+      "ID052",
+      "ID074",
+      "ID221"
+    ],
+    "das": []
+  },
+  "entries": {
+    "ID012": {
+      "word": "Nacht",
+      "artikel": "die",
+      "plural": "Nächte",
+      "english": "night",
+      "vietnamese": "đêm",
+      "definition_en": "The period of darkness between sunset and sunrise.",
+      "definition_vi": "Khoảng thời gian tối giữa hoàng hôn và bình minh.",
+      "examples": [
+        {
+          "de": "Gute Nacht!",
+          "en": "Good night!",
+          "vi": "Chúc ngủ ngon!"
+        }
+      ]
+    },
+    "ID037": {
+      "word": "Name",
+      "artikel": "der",
+      "plural": "Namen",
+      "english": "name",
+      "vietnamese": "tên",
+      "definition_en": "A word or set of words by which someone is known.",
+      "definition_vi": "Một từ hoặc cụm từ mà người ta được biết đến.",
+      "examples": [
+        {
+          "de": "Wie ist dein Name?",
+          "en": "What is your name?",
+          "vi": "Tên bạn là gì?"
+        }
+      ]
+    },
+    "ID052": {
+      "word": "Nase",
+      "artikel": "die",
+      "plural": "Nasen",
+      "english": "nose",
+      "vietnamese": "mũi",
+      "definition_en": "The organ for smelling and breathing.",
+      "definition_vi": "Cơ quan để ngửi và thở.",
+      "examples": [
+        {
+          "de": "Die Nase ist rot.",
+          "en": "The nose is red.",
+          "vi": "Cái mũi đỏ."
+        }
+      ]
+    },
+    "ID074": {
+      "word": "Nudel",
+      "artikel": "die",
+      "plural": "Nudeln",
+      "english": "noodle",
+      "vietnamese": "mì",
+      "definition_en": "A strip of pasta.",
+      "definition_vi": "Dải mì ống.",
+      "examples": [
+        {
+          "de": "Die Nudeln sind fertig.",
+          "en": "The noodles are ready.",
+          "vi": "Mì đã sẵn sàng."
+        }
+      ]
+    },
+    "ID204": {
+      "word": "Nachmittag",
+      "artikel": "der",
+      "plural": "Nachmittage",
+      "english": "afternoon",
+      "vietnamese": "buổi chiều",
+      "definition_en": "The time after noon.",
+      "definition_vi": "Thời gian sau buổi trưa.",
+      "examples": [
+        {
+          "de": "Am Nachmittag trinke ich Kaffee.",
+          "en": "In the afternoon I drink coffee.",
+          "vi": "Vào buổi chiều tôi uống cà phê."
+        }
+      ]
+    },
+    "ID221": {
+      "word": "Nummer",
+      "artikel": "die",
+      "plural": "Nummern",
+      "english": "number",
+      "vietnamese": "số",
+      "definition_en": "A numeral or identifier.",
+      "definition_vi": "Chữ số hoặc định danh.",
+      "examples": [
+        {
+          "de": "Meine Telefonnummer.",
+          "en": "My telephone number.",
+          "vi": "Số điện thoại của tôi."
+        }
+      ]
+    }
+  }
+}

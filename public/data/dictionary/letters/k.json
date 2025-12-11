@@ -1,0 +1,426 @@
+{
+  "byWord": {
+    "kind": "ID006",
+    "kaffee": "ID032",
+    "katze": "ID035",
+    "kopf": "ID049",
+    "körper": "ID060",
+    "käse": "ID069",
+    "kuchen": "ID075",
+    "küche": "ID083",
+    "kollege": "ID103",
+    "krankenschwester": "ID105",
+    "kellner": "ID111",
+    "koch": "ID112",
+    "koffer": "ID133",
+    "kleidung": "ID139",
+    "kleid": "ID143",
+    "kuh": "ID187",
+    "kreis": "ID218"
+  },
+  "byEnglish": {
+    "child": [
+      "ID006"
+    ],
+    "coffee": [
+      "ID032"
+    ],
+    "cat": [
+      "ID035"
+    ],
+    "head": [
+      "ID049"
+    ],
+    "body": [
+      "ID060"
+    ],
+    "cheese": [
+      "ID069"
+    ],
+    "cake": [
+      "ID075"
+    ],
+    "kitchen": [
+      "ID083"
+    ],
+    "colleague": [
+      "ID103"
+    ],
+    "nurse": [
+      "ID105"
+    ],
+    "waiter": [
+      "ID111"
+    ],
+    "cook": [
+      "ID112"
+    ],
+    "suitcase": [
+      "ID133"
+    ],
+    "clothing": [
+      "ID139"
+    ],
+    "dress": [
+      "ID143"
+    ],
+    "cow": [
+      "ID187"
+    ],
+    "circle": [
+      "ID218"
+    ]
+  },
+  "byVietnamese": {
+    "đứa trẻ": [
+      "ID006"
+    ],
+    "cà phê": [
+      "ID032"
+    ],
+    "con mèo": [
+      "ID035"
+    ],
+    "đầu": [
+      "ID049"
+    ],
+    "cơ thể": [
+      "ID060"
+    ],
+    "phô mai": [
+      "ID069"
+    ],
+    "bánh ngọt": [
+      "ID075"
+    ],
+    "nhà bếp": [
+      "ID083"
+    ],
+    "đồng nghiệp": [
+      "ID103"
+    ],
+    "y tá": [
+      "ID105"
+    ],
+    "phục vụ bàn": [
+      "ID111"
+    ],
+    "đầu bếp": [
+      "ID112"
+    ],
+    "vali": [
+      "ID133"
+    ],
+    "quần áo": [
+      "ID139"
+    ],
+    "đầm": [
+      "ID143"
+    ],
+    "con bò": [
+      "ID187"
+    ],
+    "vòng tròn": [
+      "ID218"
+    ]
+  },
+  "byArtikel": {
+    "der": [
+      "ID032",
+      "ID049",
+      "ID060",
+      "ID069",
+      "ID075",
+      "ID103",
+      "ID111",
+      "ID112",
+      "ID133"
+    ],
+    "die": [
+      "ID035",
+      "ID083",
+      "ID105",
+      "ID139",
+      "ID187"
+    ],
+    "das": [
+      "ID006",
+      "ID143",
+      "ID218"
+    ]
+  },
+  "entries": {
+    "ID006": {
+      "word": "Kind",
+      "artikel": "das",
+      "plural": "Kinder",
+      "english": "child",
+      "vietnamese": "đứa trẻ",
+      "definition_en": "A young human being.",
+      "definition_vi": "Một con người nhỏ tuổi.",
+      "examples": [
+        {
+          "de": "Das Kind spielt im Garten.",
+          "en": "The child plays in the garden.",
+          "vi": "Đứa trẻ chơi trong vườn."
+        }
+      ]
+    },
+    "ID032": {
+      "word": "Kaffee",
+      "artikel": "der",
+      "plural": "Kaffees",
+      "english": "coffee",
+      "vietnamese": "cà phê",
+      "definition_en": "A hot drink made from roasted coffee beans.",
+      "definition_vi": "Một đồ uống nóng làm từ hạt cà phê rang.",
+      "examples": [
+        {
+          "de": "Ich trinke gerne Kaffee.",
+          "en": "I like to drink coffee.",
+          "vi": "Tôi thích uống cà phê."
+        }
+      ]
+    },
+    "ID035": {
+      "word": "Katze",
+      "artikel": "die",
+      "plural": "Katzen",
+      "english": "cat",
+      "vietnamese": "con mèo",
+      "definition_en": "A small domesticated carnivorous mammal.",
+      "definition_vi": "Một động vật có vú ăn thịt nhỏ đã được thuần hóa.",
+      "examples": [
+        {
+          "de": "Die Katze schläft.",
+          "en": "The cat sleeps.",
+          "vi": "Con mèo ngủ."
+        }
+      ]
+    },
+    "ID049": {
+      "word": "Kopf",
+      "artikel": "der",
+      "plural": "Köpfe",
+      "english": "head",
+      "vietnamese": "đầu",
+      "definition_en": "The upper part of the human body.",
+      "definition_vi": "Phần trên của cơ thể người.",
+      "examples": [
+        {
+          "de": "Mein Kopf tut weh.",
+          "en": "My head hurts.",
+          "vi": "Đầu tôi đau."
+        }
+      ]
+    },
+    "ID060": {
+      "word": "Körper",
+      "artikel": "der",
+      "plural": "Körper",
+      "english": "body",
+      "vietnamese": "cơ thể",
+      "definition_en": "The physical structure of a person.",
+      "definition_vi": "Cấu trúc vật lý của con người.",
+      "examples": [
+        {
+          "de": "Der Körper ist gesund.",
+          "en": "The body is healthy.",
+          "vi": "Cơ thể khỏe mạnh."
+        }
+      ]
+    },
+    "ID069": {
+      "word": "Käse",
+      "artikel": "der",
+      "plural": "Käse",
+      "english": "cheese",
+      "vietnamese": "phô mai",
+      "definition_en": "A dairy product made from milk.",
+      "definition_vi": "Sản phẩm sữa làm từ sữa.",
+      "examples": [
+        {
+          "de": "Der Käse ist lecker.",
+          "en": "The cheese is delicious.",
+          "vi": "Phô mai ngon."
+        }
+      ]
+    },
+    "ID075": {
+      "word": "Kuchen",
+      "artikel": "der",
+      "plural": "Kuchen",
+      "english": "cake",
+      "vietnamese": "bánh ngọt",
+      "definition_en": "A sweet baked dessert.",
+      "definition_vi": "Món tráng miệng nướng ngọt.",
+      "examples": [
+        {
+          "de": "Der Kuchen ist süß.",
+          "en": "The cake is sweet.",
+          "vi": "Bánh ngọt."
+        }
+      ]
+    },
+    "ID083": {
+      "word": "Küche",
+      "artikel": "die",
+      "plural": "Küchen",
+      "english": "kitchen",
+      "vietnamese": "nhà bếp",
+      "definition_en": "A room for cooking.",
+      "definition_vi": "Một phòng để nấu ăn.",
+      "examples": [
+        {
+          "de": "Die Küche ist modern.",
+          "en": "The kitchen is modern.",
+          "vi": "Nhà bếp hiện đại."
+        }
+      ]
+    },
+    "ID103": {
+      "word": "Kollege",
+      "artikel": "der",
+      "plural": "Kollegen",
+      "english": "colleague",
+      "vietnamese": "đồng nghiệp",
+      "definition_en": "A person you work with.",
+      "definition_vi": "Người bạn làm việc cùng.",
+      "examples": [
+        {
+          "de": "Mein Kollege ist freundlich.",
+          "en": "My colleague is friendly.",
+          "vi": "Đồng nghiệp tôi thân thiện."
+        }
+      ]
+    },
+    "ID105": {
+      "word": "Krankenschwester",
+      "artikel": "die",
+      "plural": "Krankenschwestern",
+      "english": "nurse",
+      "vietnamese": "y tá",
+      "definition_en": "A healthcare professional.",
+      "definition_vi": "Chuyên gia chăm sóc sức khỏe.",
+      "examples": [
+        {
+          "de": "Die Krankenschwester ist freundlich.",
+          "en": "The nurse is friendly.",
+          "vi": "Y tá thân thiện."
+        }
+      ]
+    },
+    "ID111": {
+      "word": "Kellner",
+      "artikel": "der",
+      "plural": "Kellner",
+      "english": "waiter",
+      "vietnamese": "phục vụ bàn",
+      "definition_en": "A person who serves food.",
+      "definition_vi": "Người phục vụ đồ ăn.",
+      "examples": [
+        {
+          "de": "Der Kellner bringt das Essen.",
+          "en": "The waiter brings the food.",
+          "vi": "Người phục vụ mang đồ ăn."
+        }
+      ]
+    },
+    "ID112": {
+      "word": "Koch",
+      "artikel": "der",
+      "plural": "Köche",
+      "english": "cook",
+      "vietnamese": "đầu bếp",
+      "definition_en": "A person who prepares food.",
+      "definition_vi": "Người chuẩn bị đồ ăn.",
+      "examples": [
+        {
+          "de": "Der Koch kocht gut.",
+          "en": "The cook cooks well.",
+          "vi": "Đầu bếp nấu ăn ngon."
+        }
+      ]
+    },
+    "ID133": {
+      "word": "Koffer",
+      "artikel": "der",
+      "plural": "Koffer",
+      "english": "suitcase",
+      "vietnamese": "vali",
+      "definition_en": "A case for carrying clothes.",
+      "definition_vi": "Vali để mang quần áo.",
+      "examples": [
+        {
+          "de": "Der Koffer ist schwer.",
+          "en": "The suitcase is heavy.",
+          "vi": "Vali nặng."
+        }
+      ]
+    },
+    "ID139": {
+      "word": "Kleidung",
+      "artikel": "die",
+      "plural": "Kleidung",
+      "english": "clothing",
+      "vietnamese": "quần áo",
+      "definition_en": "Items worn on the body.",
+      "definition_vi": "Đồ mặc trên người.",
+      "examples": [
+        {
+          "de": "Die Kleidung ist schön.",
+          "en": "The clothing is beautiful.",
+          "vi": "Quần áo đẹp."
+        }
+      ]
+    },
+    "ID143": {
+      "word": "Kleid",
+      "artikel": "das",
+      "plural": "Kleider",
+      "english": "dress",
+      "vietnamese": "đầm",
+      "definition_en": "A one-piece garment for women.",
+      "definition_vi": "Quần áo một mảnh cho phụ nữ.",
+      "examples": [
+        {
+          "de": "Das Kleid ist elegant.",
+          "en": "The dress is elegant.",
+          "vi": "Đầm thanh lịch."
+        }
+      ]
+    },
+    "ID187": {
+      "word": "Kuh",
+      "artikel": "die",
+      "plural": "Kühe",
+      "english": "cow",
+      "vietnamese": "con bò",
+      "definition_en": "A farm animal that produces milk.",
+      "definition_vi": "Động vật trang trại sản xuất sữa.",
+      "examples": [
+        {
+          "de": "Die Kuh gibt Milch.",
+          "en": "The cow gives milk.",
+          "vi": "Con bò cho sữa."
+        }
+      ]
+    },
+    "ID218": {
+      "word": "Kreis",
+      "artikel": "der",
+      "plural": "Kreise",
+      "english": "circle",
+      "vietnamese": "vòng tròn",
+      "definition_en": "A round shape.",
+      "definition_vi": "Hình tròn.",
+      "examples": [
+        {
+          "de": "Ein perfekter Kreis.",
+          "en": "A perfect circle.",
+          "vi": "Một vòng tròn hoàn hảo."
+        }
+      ]
+    }
+  }
+}

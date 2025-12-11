@@ -1,0 +1,65 @@
+{
+  "byWord": {
+    "ingenieur": "ID110",
+    "insekt": "ID200"
+  },
+  "byEnglish": {
+    "engineer": [
+      "ID110"
+    ],
+    "insect": [
+      "ID200"
+    ]
+  },
+  "byVietnamese": {
+    "kỹ sư": [
+      "ID110"
+    ],
+    "côn trùng": [
+      "ID200"
+    ]
+  },
+  "byArtikel": {
+    "der": [
+      "ID110"
+    ],
+    "die": [],
+    "das": [
+      "ID200"
+    ]
+  },
+  "entries": {
+    "ID110": {
+      "word": "Ingenieur",
+      "artikel": "der",
+      "plural": "Ingenieure",
+      "english": "engineer",
+      "vietnamese": "kỹ sư",
+      "definition_en": "A person who designs or builds things.",
+      "definition_vi": "Người thiết kế hoặc xây dựng.",
+      "examples": [
+        {
+          "de": "Der Ingenieur arbeitet an Projekten.",
+          "en": "The engineer works on projects.",
+          "vi": "Kỹ sư làm việc trên các dự án."
+        }
+      ]
+    },
+    "ID200": {
+      "word": "Insekt",
+      "artikel": "das",
+      "plural": "Insekten",
+      "english": "insect",
+      "vietnamese": "côn trùng",
+      "definition_en": "A small arthropod animal.",
+      "definition_vi": "Động vật chân khớp nhỏ.",
+      "examples": [
+        {
+          "de": "Das Insekt fliegt.",
+          "en": "The insect flies.",
+          "vi": "Côn trùng bay."
+        }
+      ]
+    }
+  }
+}

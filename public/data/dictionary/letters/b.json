@@ -1,0 +1,546 @@
+{
+  "byWord": {
+    "buch": "ID004",
+    "brot": "ID010",
+    "baum": "ID018",
+    "blume": "ID019",
+    "bild": "ID024",
+    "bruder": "ID042",
+    "baby": "ID048",
+    "bein": "ID056",
+    "butter": "ID070",
+    "bier": "ID079",
+    "bad": "ID084",
+    "bett": "ID088",
+    "beruf": "ID100",
+    "büro": "ID101",
+    "bank": "ID121",
+    "bahnhof": "ID123",
+    "bus": "ID126",
+    "brille": "ID138",
+    "blau": "ID153",
+    "braun": "ID159",
+    "berg": "ID177",
+    "bär": "ID195"
+  },
+  "byEnglish": {
+    "book": [
+      "ID004"
+    ],
+    "bread": [
+      "ID010"
+    ],
+    "tree": [
+      "ID018"
+    ],
+    "flower": [
+      "ID019"
+    ],
+    "picture": [
+      "ID024"
+    ],
+    "brother": [
+      "ID042"
+    ],
+    "baby": [
+      "ID048"
+    ],
+    "leg": [
+      "ID056"
+    ],
+    "butter": [
+      "ID070"
+    ],
+    "beer": [
+      "ID079"
+    ],
+    "bathroom": [
+      "ID084"
+    ],
+    "bed": [
+      "ID088"
+    ],
+    "profession": [
+      "ID100"
+    ],
+    "office": [
+      "ID101"
+    ],
+    "bank": [
+      "ID121"
+    ],
+    "train station": [
+      "ID123"
+    ],
+    "bus": [
+      "ID126"
+    ],
+    "glasses": [
+      "ID138"
+    ],
+    "blue": [
+      "ID153"
+    ],
+    "brown": [
+      "ID159"
+    ],
+    "mountain": [
+      "ID177"
+    ],
+    "bear": [
+      "ID195"
+    ]
+  },
+  "byVietnamese": {
+    "quyển sách": [
+      "ID004"
+    ],
+    "bánh mì": [
+      "ID010"
+    ],
+    "cây": [
+      "ID018"
+    ],
+    "bông hoa": [
+      "ID019"
+    ],
+    "bức tranh": [
+      "ID024"
+    ],
+    "anh trai": [
+      "ID042"
+    ],
+    "em bé": [
+      "ID048"
+    ],
+    "chân": [
+      "ID056"
+    ],
+    "bơ": [
+      "ID070"
+    ],
+    "bia": [
+      "ID079"
+    ],
+    "phòng tắm": [
+      "ID084"
+    ],
+    "giường": [
+      "ID088"
+    ],
+    "nghề nghiệp": [
+      "ID100"
+    ],
+    "văn phòng": [
+      "ID101"
+    ],
+    "ngân hàng": [
+      "ID121"
+    ],
+    "ga tàu": [
+      "ID123"
+    ],
+    "xe buýt": [
+      "ID126"
+    ],
+    "kính": [
+      "ID138"
+    ],
+    "xanh dương": [
+      "ID153"
+    ],
+    "nâu": [
+      "ID159"
+    ],
+    "núi": [
+      "ID177"
+    ],
+    "con gấu": [
+      "ID195"
+    ]
+  },
+  "byArtikel": {
+    "der": [
+      "ID018",
+      "ID042",
+      "ID079",
+      "ID100",
+      "ID123",
+      "ID126",
+      "ID177",
+      "ID195"
+    ],
+    "die": [
+      "ID019",
+      "ID070",
+      "ID121",
+      "ID138"
+    ],
+    "das": [
+      "ID004",
+      "ID010",
+      "ID024",
+      "ID048",
+      "ID056",
+      "ID084",
+      "ID088",
+      "ID101",
+      "ID153",
+      "ID159"
+    ]
+  },
+  "entries": {
+    "ID004": {
+      "word": "Buch",
+      "artikel": "das",
+      "plural": "Bücher",
+      "english": "book",
+      "vietnamese": "quyển sách",
+      "definition_en": "A written or printed work consisting of pages.",
+      "definition_vi": "Một tác phẩm viết hoặc in bao gồm các trang.",
+      "examples": [
+        {
+          "de": "Ich lese ein Buch.",
+          "en": "I am reading a book.",
+          "vi": "Tôi đang đọc một quyển sách."
+        }
+      ]
+    },
+    "ID010": {
+      "word": "Brot",
+      "artikel": "das",
+      "plural": "Brote",
+      "english": "bread",
+      "vietnamese": "bánh mì",
+      "definition_en": "A baked food made from flour and water.",
+      "definition_vi": "Một loại thức ăn nướng làm từ bột mì và nước.",
+      "examples": [
+        {
+          "de": "Das Brot ist frisch.",
+          "en": "The bread is fresh.",
+          "vi": "Bánh mì thì tươi."
+        }
+      ]
+    },
+    "ID018": {
+      "word": "Baum",
+      "artikel": "der",
+      "plural": "Bäume",
+      "english": "tree",
+      "vietnamese": "cây",
+      "definition_en": "A woody plant with a trunk and branches.",
+      "definition_vi": "Một cây gỗ có thân và cành.",
+      "examples": [
+        {
+          "de": "Der Baum ist hoch.",
+          "en": "The tree is tall.",
+          "vi": "Cây thì cao."
+        }
+      ]
+    },
+    "ID019": {
+      "word": "Blume",
+      "artikel": "die",
+      "plural": "Blumen",
+      "english": "flower",
+      "vietnamese": "bông hoa",
+      "definition_en": "The colorful part of a plant that blooms.",
+      "definition_vi": "Phần đầy màu sắc của cây nở ra.",
+      "examples": [
+        {
+          "de": "Die Blume ist schön.",
+          "en": "The flower is beautiful.",
+          "vi": "Bông hoa thì đẹp."
+        }
+      ]
+    },
+    "ID024": {
+      "word": "Bild",
+      "artikel": "das",
+      "plural": "Bilder",
+      "english": "picture",
+      "vietnamese": "bức tranh",
+      "definition_en": "A visual representation or image.",
+      "definition_vi": "Một hình ảnh hoặc biểu tượng trực quan.",
+      "examples": [
+        {
+          "de": "Das Bild hängt an der Wand.",
+          "en": "The picture hangs on the wall.",
+          "vi": "Bức tranh treo trên tường."
+        }
+      ]
+    },
+    "ID042": {
+      "word": "Bruder",
+      "artikel": "der",
+      "plural": "Brüder",
+      "english": "brother",
+      "vietnamese": "anh trai",
+      "definition_en": "A male sibling.",
+      "definition_vi": "Anh em trai nam.",
+      "examples": [
+        {
+          "de": "Mein Bruder spielt Fußball.",
+          "en": "My brother plays soccer.",
+          "vi": "Anh trai tôi chơi bóng đá."
+        }
+      ]
+    },
+    "ID048": {
+      "word": "Baby",
+      "artikel": "das",
+      "plural": "Babys",
+      "english": "baby",
+      "vietnamese": "em bé",
+      "definition_en": "A very young child.",
+      "definition_vi": "Một đứa trẻ rất nhỏ.",
+      "examples": [
+        {
+          "de": "Das Baby schläft.",
+          "en": "The baby is sleeping.",
+          "vi": "Em bé đang ngủ."
+        }
+      ]
+    },
+    "ID056": {
+      "word": "Bein",
+      "artikel": "das",
+      "plural": "Beine",
+      "english": "leg",
+      "vietnamese": "chân",
+      "definition_en": "The limb used for walking.",
+      "definition_vi": "Chi dùng để đi.",
+      "examples": [
+        {
+          "de": "Das Bein ist lang.",
+          "en": "The leg is long.",
+          "vi": "Chân thì dài."
+        }
+      ]
+    },
+    "ID070": {
+      "word": "Butter",
+      "artikel": "die",
+      "plural": "Butter",
+      "english": "butter",
+      "vietnamese": "bơ",
+      "definition_en": "A dairy product made from cream.",
+      "definition_vi": "Sản phẩm sữa làm từ kem.",
+      "examples": [
+        {
+          "de": "Ich esse Brot mit Butter.",
+          "en": "I eat bread with butter.",
+          "vi": "Tôi ăn bánh mì với bơ."
+        }
+      ]
+    },
+    "ID079": {
+      "word": "Bier",
+      "artikel": "das",
+      "plural": "Biere",
+      "english": "beer",
+      "vietnamese": "bia",
+      "definition_en": "An alcoholic drink made from grain.",
+      "definition_vi": "Đồ uống có cồn làm từ ngũ cốc.",
+      "examples": [
+        {
+          "de": "Das Bier ist kalt.",
+          "en": "The beer is cold.",
+          "vi": "Bia lạnh."
+        }
+      ]
+    },
+    "ID084": {
+      "word": "Bad",
+      "artikel": "das",
+      "plural": "Bäder",
+      "english": "bathroom",
+      "vietnamese": "phòng tắm",
+      "definition_en": "A room with a bath or shower.",
+      "definition_vi": "Một phòng có bồn tắm hoặc vòi sen.",
+      "examples": [
+        {
+          "de": "Das Bad ist sauber.",
+          "en": "The bathroom is clean.",
+          "vi": "Phòng tắm sạch sẽ."
+        }
+      ]
+    },
+    "ID088": {
+      "word": "Bett",
+      "artikel": "das",
+      "plural": "Betten",
+      "english": "bed",
+      "vietnamese": "giường",
+      "definition_en": "A piece of furniture for sleeping.",
+      "definition_vi": "Một món đồ nội thất để ngủ.",
+      "examples": [
+        {
+          "de": "Das Bett ist bequem.",
+          "en": "The bed is comfortable.",
+          "vi": "Giường thoải mái."
+        }
+      ]
+    },
+    "ID100": {
+      "word": "Beruf",
+      "artikel": "der",
+      "plural": "Berufe",
+      "english": "profession",
+      "vietnamese": "nghề nghiệp",
+      "definition_en": "A paid occupation.",
+      "definition_vi": "Nghề nghiệp được trả lương.",
+      "examples": [
+        {
+          "de": "Was ist dein Beruf?",
+          "en": "What is your profession?",
+          "vi": "Nghề nghiệp của bạn là gì?"
+        }
+      ]
+    },
+    "ID101": {
+      "word": "Büro",
+      "artikel": "das",
+      "plural": "Büros",
+      "english": "office",
+      "vietnamese": "văn phòng",
+      "definition_en": "A room for administrative work.",
+      "definition_vi": "Phòng làm việc hành chính.",
+      "examples": [
+        {
+          "de": "Das Büro ist klein.",
+          "en": "The office is small.",
+          "vi": "Văn phòng nhỏ."
+        }
+      ]
+    },
+    "ID121": {
+      "word": "Bank",
+      "artikel": "die",
+      "plural": "Banken",
+      "english": "bank",
+      "vietnamese": "ngân hàng",
+      "definition_en": "A financial institution.",
+      "definition_vi": "Tổ chức tài chính.",
+      "examples": [
+        {
+          "de": "Die Bank ist dort.",
+          "en": "The bank is there.",
+          "vi": "Ngân hàng ở đó."
+        }
+      ]
+    },
+    "ID123": {
+      "word": "Bahnhof",
+      "artikel": "der",
+      "plural": "Bahnhöfe",
+      "english": "train station",
+      "vietnamese": "ga tàu",
+      "definition_en": "A place where trains stop.",
+      "definition_vi": "Nơi tàu dừng.",
+      "examples": [
+        {
+          "de": "Der Bahnhof ist groß.",
+          "en": "The train station is big.",
+          "vi": "Ga tàu lớn."
+        }
+      ]
+    },
+    "ID126": {
+      "word": "Bus",
+      "artikel": "der",
+      "plural": "Busse",
+      "english": "bus",
+      "vietnamese": "xe buýt",
+      "definition_en": "A large vehicle for passengers.",
+      "definition_vi": "Phương tiện lớn cho hành khách.",
+      "examples": [
+        {
+          "de": "Der Bus kommt um acht Uhr.",
+          "en": "The bus comes at eight o'clock.",
+          "vi": "Xe buýt đến lúc tám giờ."
+        }
+      ]
+    },
+    "ID138": {
+      "word": "Brille",
+      "artikel": "die",
+      "plural": "Brillen",
+      "english": "glasses",
+      "vietnamese": "kính",
+      "definition_en": "Lenses for correcting vision.",
+      "definition_vi": "Thấu kính để chỉnh thị lực.",
+      "examples": [
+        {
+          "de": "Ich brauche eine Brille.",
+          "en": "I need glasses.",
+          "vi": "Tôi cần kính."
+        }
+      ]
+    },
+    "ID153": {
+      "word": "Blau",
+      "artikel": "das",
+      "plural": "Blau",
+      "english": "blue",
+      "vietnamese": "xanh dương",
+      "definition_en": "The color of the sky.",
+      "definition_vi": "Màu của bầu trời.",
+      "examples": [
+        {
+          "de": "Das Blau ist hell.",
+          "en": "The blue is bright.",
+          "vi": "Màu xanh dương sáng."
+        }
+      ]
+    },
+    "ID159": {
+      "word": "Braun",
+      "artikel": "das",
+      "plural": "Braun",
+      "english": "brown",
+      "vietnamese": "nâu",
+      "definition_en": "The color of wood.",
+      "definition_vi": "Màu của gỗ.",
+      "examples": [
+        {
+          "de": "Das Braun ist warm.",
+          "en": "The brown is warm.",
+          "vi": "Màu nâu ấm."
+        }
+      ]
+    },
+    "ID177": {
+      "word": "Berg",
+      "artikel": "der",
+      "plural": "Berge",
+      "english": "mountain",
+      "vietnamese": "núi",
+      "definition_en": "A large natural elevation.",
+      "definition_vi": "Độ cao tự nhiên lớn.",
+      "examples": [
+        {
+          "de": "Der Berg ist hoch.",
+          "en": "The mountain is high.",
+          "vi": "Ngọn núi cao."
+        }
+      ]
+    },
+    "ID195": {
+      "word": "Bär",
+      "artikel": "der",
+      "plural": "Bären",
+      "english": "bear",
+      "vietnamese": "con gấu",
+      "definition_en": "A large wild animal.",
+      "definition_vi": "Động vật hoang dã lớn.",
+      "examples": [
+        {
+          "de": "Der Bär ist stark.",
+          "en": "The bear is strong.",
+          "vi": "Con gấu mạnh."
+        }
+      ]
+    }
+  }
+}

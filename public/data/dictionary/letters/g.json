@@ -1,0 +1,330 @@
+{
+  "byWord": {
+    "garten": "ID020",
+    "großmutter": "ID046",
+    "großvater": "ID047",
+    "gemüse": "ID065",
+    "geld": "ID096",
+    "geschäft": "ID114",
+    "geldbörse": "ID136",
+    "grün": "ID154",
+    "gelb": "ID155",
+    "grau": "ID158",
+    "größe": "ID220",
+    "gruppe": "ID228",
+    "gesetz": "ID233"
+  },
+  "byEnglish": {
+    "garden": [
+      "ID020"
+    ],
+    "grandmother": [
+      "ID046"
+    ],
+    "grandfather": [
+      "ID047"
+    ],
+    "vegetable": [
+      "ID065"
+    ],
+    "money": [
+      "ID096"
+    ],
+    "shop": [
+      "ID114"
+    ],
+    "wallet": [
+      "ID136"
+    ],
+    "green": [
+      "ID154"
+    ],
+    "yellow": [
+      "ID155"
+    ],
+    "gray": [
+      "ID158"
+    ],
+    "size": [
+      "ID220"
+    ],
+    "group": [
+      "ID228"
+    ],
+    "law": [
+      "ID233"
+    ]
+  },
+  "byVietnamese": {
+    "vườn": [
+      "ID020"
+    ],
+    "bà": [
+      "ID046"
+    ],
+    "ông": [
+      "ID047"
+    ],
+    "rau": [
+      "ID065"
+    ],
+    "tiền": [
+      "ID096"
+    ],
+    "cửa hàng": [
+      "ID114"
+    ],
+    "ví tiền": [
+      "ID136"
+    ],
+    "xanh lá": [
+      "ID154"
+    ],
+    "vàng": [
+      "ID155"
+    ],
+    "xám": [
+      "ID158"
+    ],
+    "kích thước": [
+      "ID220"
+    ],
+    "nhóm": [
+      "ID228"
+    ],
+    "luật": [
+      "ID233"
+    ]
+  },
+  "byArtikel": {
+    "der": [
+      "ID020",
+      "ID047"
+    ],
+    "die": [
+      "ID046",
+      "ID114",
+      "ID136",
+      "ID220",
+      "ID228"
+    ],
+    "das": [
+      "ID065",
+      "ID096",
+      "ID154",
+      "ID155",
+      "ID158",
+      "ID233"
+    ]
+  },
+  "entries": {
+    "ID020": {
+      "word": "Garten",
+      "artikel": "der",
+      "plural": "Gärten",
+      "english": "garden",
+      "vietnamese": "vườn",
+      "definition_en": "A piece of ground for growing plants.",
+      "definition_vi": "Một mảnh đất để trồng cây.",
+      "examples": [
+        {
+          "de": "Im Garten sind viele Blumen.",
+          "en": "There are many flowers in the garden.",
+          "vi": "Có nhiều hoa trong vườn."
+        }
+      ]
+    },
+    "ID046": {
+      "word": "Großmutter",
+      "artikel": "die",
+      "plural": "Großmütter",
+      "english": "grandmother",
+      "vietnamese": "bà",
+      "definition_en": "The mother of one's parent.",
+      "definition_vi": "Mẹ của cha hoặc mẹ.",
+      "examples": [
+        {
+          "de": "Meine Großmutter kocht gern.",
+          "en": "My grandmother likes to cook.",
+          "vi": "Bà tôi thích nấu ăn."
+        }
+      ]
+    },
+    "ID047": {
+      "word": "Großvater",
+      "artikel": "der",
+      "plural": "Großväter",
+      "english": "grandfather",
+      "vietnamese": "ông",
+      "definition_en": "The father of one's parent.",
+      "definition_vi": "Cha của cha hoặc mẹ.",
+      "examples": [
+        {
+          "de": "Mein Großvater liest die Zeitung.",
+          "en": "My grandfather reads the newspaper.",
+          "vi": "Ông tôi đọc báo."
+        }
+      ]
+    },
+    "ID065": {
+      "word": "Gemüse",
+      "artikel": "das",
+      "plural": "Gemüse",
+      "english": "vegetable",
+      "vietnamese": "rau",
+      "definition_en": "A plant or part of a plant used as food.",
+      "definition_vi": "Cây hoặc bộ phận của cây làm thức ăn.",
+      "examples": [
+        {
+          "de": "Gemüse ist gesund.",
+          "en": "Vegetables are healthy.",
+          "vi": "Rau rất tốt cho sức khỏe."
+        }
+      ]
+    },
+    "ID096": {
+      "word": "Geld",
+      "artikel": "das",
+      "plural": "Gelder",
+      "english": "money",
+      "vietnamese": "tiền",
+      "definition_en": "A medium of exchange.",
+      "definition_vi": "Phương tiện trao đổi.",
+      "examples": [
+        {
+          "de": "Ich habe kein Geld.",
+          "en": "I have no money.",
+          "vi": "Tôi không có tiền."
+        }
+      ]
+    },
+    "ID114": {
+      "word": "Geschäft",
+      "artikel": "das",
+      "plural": "Geschäfte",
+      "english": "shop",
+      "vietnamese": "cửa hàng",
+      "definition_en": "A place where things are sold.",
+      "definition_vi": "Nơi bán đồ.",
+      "examples": [
+        {
+          "de": "Das Geschäft ist geöffnet.",
+          "en": "The shop is open.",
+          "vi": "Cửa hàng đang mở."
+        }
+      ]
+    },
+    "ID136": {
+      "word": "Geldbörse",
+      "artikel": "die",
+      "plural": "Geldbörsen",
+      "english": "wallet",
+      "vietnamese": "ví tiền",
+      "definition_en": "A small container for money.",
+      "definition_vi": "Túi nhỏ đựng tiền.",
+      "examples": [
+        {
+          "de": "Die Geldbörse ist leer.",
+          "en": "The wallet is empty.",
+          "vi": "Ví tiền trống."
+        }
+      ]
+    },
+    "ID154": {
+      "word": "Grün",
+      "artikel": "das",
+      "plural": "Grün",
+      "english": "green",
+      "vietnamese": "xanh lá",
+      "definition_en": "The color of grass.",
+      "definition_vi": "Màu của cỏ.",
+      "examples": [
+        {
+          "de": "Das Grün ist frisch.",
+          "en": "The green is fresh.",
+          "vi": "Màu xanh lá tươi."
+        }
+      ]
+    },
+    "ID155": {
+      "word": "Gelb",
+      "artikel": "das",
+      "plural": "Gelb",
+      "english": "yellow",
+      "vietnamese": "vàng",
+      "definition_en": "The color of the sun.",
+      "definition_vi": "Màu của mặt trời.",
+      "examples": [
+        {
+          "de": "Das Gelb ist hell.",
+          "en": "The yellow is bright.",
+          "vi": "Màu vàng sáng."
+        }
+      ]
+    },
+    "ID158": {
+      "word": "Grau",
+      "artikel": "das",
+      "plural": "Grau",
+      "english": "gray",
+      "vietnamese": "xám",
+      "definition_en": "A color between black and white.",
+      "definition_vi": "Màu giữa đen và trắng.",
+      "examples": [
+        {
+          "de": "Das Grau ist neutral.",
+          "en": "The gray is neutral.",
+          "vi": "Màu xám trung tính."
+        }
+      ]
+    },
+    "ID220": {
+      "word": "Größe",
+      "artikel": "die",
+      "plural": "Größen",
+      "english": "size",
+      "vietnamese": "kích thước",
+      "definition_en": "The dimensions of something.",
+      "definition_vi": "Kích thước của cái gì đó.",
+      "examples": [
+        {
+          "de": "Welche Größe hast du?",
+          "en": "What size are you?",
+          "vi": "Bạn mặc size nào?"
+        }
+      ]
+    },
+    "ID228": {
+      "word": "Gruppe",
+      "artikel": "die",
+      "plural": "Gruppen",
+      "english": "group",
+      "vietnamese": "nhóm",
+      "definition_en": "A collection of people or things.",
+      "definition_vi": "Một tập hợp người hoặc vật.",
+      "examples": [
+        {
+          "de": "Eine kleine Gruppe.",
+          "en": "A small group.",
+          "vi": "Một nhóm nhỏ."
+        }
+      ]
+    },
+    "ID233": {
+      "word": "Gesetz",
+      "artikel": "das",
+      "plural": "Gesetze",
+      "english": "law",
+      "vietnamese": "luật",
+      "definition_en": "A rule established by authority.",
+      "definition_vi": "Quy tắc được thiết lập bởi cơ quan có thẩm quyền.",
+      "examples": [
+        {
+          "de": "Das Gesetz muss befolgt werden.",
+          "en": "The law must be followed.",
+          "vi": "Luật phải được tuân thủ."
+        }
+      ]
+    }
+  }
+}

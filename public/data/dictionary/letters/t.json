@@ -1,0 +1,330 @@
+{
+  "byWord": {
+    "tisch": "ID002",
+    "tag": "ID011",
+    "tür": "ID014",
+    "tee": "ID033",
+    "tochter": "ID045",
+    "trinken": "ID062",
+    "toilette": "ID087",
+    "telefon": "ID094",
+    "taxi": "ID127",
+    "ticket": "ID132",
+    "tasche": "ID134",
+    "tier": "ID184",
+    "teil": "ID225"
+  },
+  "byEnglish": {
+    "table": [
+      "ID002"
+    ],
+    "day": [
+      "ID011"
+    ],
+    "door": [
+      "ID014"
+    ],
+    "tea": [
+      "ID033"
+    ],
+    "daughter": [
+      "ID045"
+    ],
+    "drink": [
+      "ID062"
+    ],
+    "toilet": [
+      "ID087"
+    ],
+    "telephone": [
+      "ID094"
+    ],
+    "taxi": [
+      "ID127"
+    ],
+    "ticket": [
+      "ID132"
+    ],
+    "bag": [
+      "ID134"
+    ],
+    "animal": [
+      "ID184"
+    ],
+    "part": [
+      "ID225"
+    ]
+  },
+  "byVietnamese": {
+    "cái bàn": [
+      "ID002"
+    ],
+    "ngày": [
+      "ID011"
+    ],
+    "cửa ra vào": [
+      "ID014"
+    ],
+    "trà": [
+      "ID033"
+    ],
+    "con gái": [
+      "ID045"
+    ],
+    "đồ uống": [
+      "ID062"
+    ],
+    "nhà vệ sinh": [
+      "ID087"
+    ],
+    "điện thoại": [
+      "ID094"
+    ],
+    "taxi": [
+      "ID127"
+    ],
+    "vé": [
+      "ID132"
+    ],
+    "túi": [
+      "ID134"
+    ],
+    "động vật": [
+      "ID184"
+    ],
+    "phần": [
+      "ID225"
+    ]
+  },
+  "byArtikel": {
+    "der": [
+      "ID002",
+      "ID011",
+      "ID033",
+      "ID225"
+    ],
+    "die": [
+      "ID014",
+      "ID045",
+      "ID087",
+      "ID134"
+    ],
+    "das": [
+      "ID062",
+      "ID094",
+      "ID127",
+      "ID132",
+      "ID184"
+    ]
+  },
+  "entries": {
+    "ID002": {
+      "word": "Tisch",
+      "artikel": "der",
+      "plural": "Tische",
+      "english": "table",
+      "vietnamese": "cái bàn",
+      "definition_en": "A piece of furniture with a flat top and legs.",
+      "definition_vi": "Một món đồ nội thất có mặt phẳng và chân.",
+      "examples": [
+        {
+          "de": "Der Tisch ist aus Holz.",
+          "en": "The table is made of wood.",
+          "vi": "Cái bàn được làm từ gỗ."
+        }
+      ]
+    },
+    "ID011": {
+      "word": "Tag",
+      "artikel": "der",
+      "plural": "Tage",
+      "english": "day",
+      "vietnamese": "ngày",
+      "definition_en": "A 24-hour period.",
+      "definition_vi": "Một khoảng thời gian 24 giờ.",
+      "examples": [
+        {
+          "de": "Guten Tag!",
+          "en": "Good day!",
+          "vi": "Chào buổi sáng/chiều!"
+        }
+      ]
+    },
+    "ID014": {
+      "word": "Tür",
+      "artikel": "die",
+      "plural": "Türen",
+      "english": "door",
+      "vietnamese": "cửa ra vào",
+      "definition_en": "A movable barrier used to close an entrance.",
+      "definition_vi": "Một rào cản di động dùng để đóng lối vào.",
+      "examples": [
+        {
+          "de": "Die Tür ist offen.",
+          "en": "The door is open.",
+          "vi": "Cửa đang mở."
+        }
+      ]
+    },
+    "ID033": {
+      "word": "Tee",
+      "artikel": "der",
+      "plural": "Tees",
+      "english": "tea",
+      "vietnamese": "trà",
+      "definition_en": "A hot drink made by infusing tea leaves.",
+      "definition_vi": "Một đồ uống nóng làm từ lá trà.",
+      "examples": [
+        {
+          "de": "Der Tee ist heiß.",
+          "en": "The tea is hot.",
+          "vi": "Trà thì nóng."
+        }
+      ]
+    },
+    "ID045": {
+      "word": "Tochter",
+      "artikel": "die",
+      "plural": "Töchter",
+      "english": "daughter",
+      "vietnamese": "con gái",
+      "definition_en": "A female child.",
+      "definition_vi": "Con gái.",
+      "examples": [
+        {
+          "de": "Seine Tochter geht zur Schule.",
+          "en": "His daughter goes to school.",
+          "vi": "Con gái anh ấy đi học."
+        }
+      ]
+    },
+    "ID062": {
+      "word": "Trinken",
+      "artikel": "das",
+      "plural": "Getränke",
+      "english": "drink",
+      "vietnamese": "đồ uống",
+      "definition_en": "A liquid for consumption.",
+      "definition_vi": "Chất lỏng để uống.",
+      "examples": [
+        {
+          "de": "Das Trinken ist kalt.",
+          "en": "The drink is cold.",
+          "vi": "Đồ uống lạnh."
+        }
+      ]
+    },
+    "ID087": {
+      "word": "Toilette",
+      "artikel": "die",
+      "plural": "Toiletten",
+      "english": "toilet",
+      "vietnamese": "nhà vệ sinh",
+      "definition_en": "A fixture for defecation and urination.",
+      "definition_vi": "Thiết bị để đại tiện và tiểu tiện.",
+      "examples": [
+        {
+          "de": "Die Toilette ist dort.",
+          "en": "The toilet is there.",
+          "vi": "Nhà vệ sinh ở đó."
+        }
+      ]
+    },
+    "ID094": {
+      "word": "Telefon",
+      "artikel": "das",
+      "plural": "Telefone",
+      "english": "telephone",
+      "vietnamese": "điện thoại",
+      "definition_en": "A device for voice communication.",
+      "definition_vi": "Thiết bị để giao tiếp bằng giọng nói.",
+      "examples": [
+        {
+          "de": "Das Telefon klingelt.",
+          "en": "The telephone rings.",
+          "vi": "Điện thoại đổ chuông."
+        }
+      ]
+    },
+    "ID127": {
+      "word": "Taxi",
+      "artikel": "das",
+      "plural": "Taxis",
+      "english": "taxi",
+      "vietnamese": "taxi",
+      "definition_en": "A car for hire.",
+      "definition_vi": "Xe cho thuê.",
+      "examples": [
+        {
+          "de": "Ich nehme ein Taxi.",
+          "en": "I take a taxi.",
+          "vi": "Tôi bắt taxi."
+        }
+      ]
+    },
+    "ID132": {
+      "word": "Ticket",
+      "artikel": "das",
+      "plural": "Tickets",
+      "english": "ticket",
+      "vietnamese": "vé",
+      "definition_en": "A document for travel or entry.",
+      "definition_vi": "Giấy tờ để đi lại hoặc vào cửa.",
+      "examples": [
+        {
+          "de": "Ich kaufe ein Ticket.",
+          "en": "I buy a ticket.",
+          "vi": "Tôi mua vé."
+        }
+      ]
+    },
+    "ID134": {
+      "word": "Tasche",
+      "artikel": "die",
+      "plural": "Taschen",
+      "english": "bag",
+      "vietnamese": "túi",
+      "definition_en": "A container for carrying things.",
+      "definition_vi": "Túi để đựng đồ.",
+      "examples": [
+        {
+          "de": "Die Tasche ist voll.",
+          "en": "The bag is full.",
+          "vi": "Túi đầy."
+        }
+      ]
+    },
+    "ID184": {
+      "word": "Tier",
+      "artikel": "das",
+      "plural": "Tiere",
+      "english": "animal",
+      "vietnamese": "động vật",
+      "definition_en": "A living organism.",
+      "definition_vi": "Sinh vật sống.",
+      "examples": [
+        {
+          "de": "Das Tier ist groß.",
+          "en": "The animal is big.",
+          "vi": "Động vật lớn."
+        }
+      ]
+    },
+    "ID225": {
+      "word": "Teil",
+      "artikel": "der",
+      "plural": "Teile",
+      "english": "part",
+      "vietnamese": "phần",
+      "definition_en": "A piece or segment.",
+      "definition_vi": "Một mảnh hoặc phân đoạn.",
+      "examples": [
+        {
+          "de": "Ein Teil des Ganzen.",
+          "en": "A part of the whole.",
+          "vi": "Một phần của tổng thể."
+        }
+      ]
+    }
+  }
+}
