@@ -6,7 +6,8 @@ The German Noun Dictionary is a comprehensive, search-optimized dictionary syste
 
 ## Features
 
-- **240+ German nouns** organized alphabetically across 22 letter files (A1-A2 level)
+- **266+ German nouns** organized alphabetically across 29 letter files (A1-A2 level)
+- **Complete alphabet coverage**: a-z plus German umlauts (ä, ö, ü)
 - **Trilingual support**: German, English, Vietnamese
 - **Fast search** by word, English, or Vietnamese translation
 - **Artikel filtering**: Filter by der (masculine), die (feminine), or das (neuter)
@@ -64,12 +65,32 @@ The dictionary uses a search-optimized structure for fast lookups:
   │   ├── a.json           # All nouns starting with 'A' (10 entries)
   │   ├── b.json           # All nouns starting with 'B' (22 entries)
   │   ├── c.json           # All nouns starting with 'C' (3 entries)
+  │   ├── d.json           # All nouns starting with 'D' (13 entries) ✨ NEW
   │   ├── e.json           # All nouns starting with 'E' (8 entries)
   │   ├── f.json           # All nouns starting with 'F' (20 entries)
   │   ├── g.json           # All nouns starting with 'G' (13 entries)
   │   ├── h.json           # All nouns starting with 'H' (14 entries)
-  │   ├── ...              # And so on for all letters
-  │   └── z.json           # All nouns starting with 'Z' (7 entries)
+  │   ├── i.json           # All nouns starting with 'I' (2 entries)
+  │   ├── j.json           # All nouns starting with 'J' (2 entries)
+  │   ├── k.json           # All nouns starting with 'K' (17 entries)
+  │   ├── l.json           # All nouns starting with 'L' (8 entries)
+  │   ├── m.json           # All nouns starting with 'M' (17 entries)
+  │   ├── n.json           # All nouns starting with 'N' (6 entries)
+  │   ├── o.json           # All nouns starting with 'O' (5 entries)
+  │   ├── p.json           # All nouns starting with 'P' (11 entries)
+  │   ├── q.json           # All nouns starting with 'Q' (2 entries) ✨ NEW
+  │   ├── r.json           # All nouns starting with 'R' (10 entries)
+  │   ├── s.json           # All nouns starting with 'S' (35 entries)
+  │   ├── t.json           # All nouns starting with 'T' (13 entries)
+  │   ├── u.json           # All nouns starting with 'U' (1 entry)
+  │   ├── v.json           # All nouns starting with 'V' (3 entries)
+  │   ├── w.json           # All nouns starting with 'W' (12 entries)
+  │   ├── x.json           # All nouns starting with 'X' (1 entry) ✨ NEW
+  │   ├── y.json           # All nouns starting with 'Y' (2 entries) ✨ NEW
+  │   ├── z.json           # All nouns starting with 'Z' (7 entries)
+  │   ├── ä.json           # German umlaut Ä (4 entries) ✨ NEW
+  │   ├── ö.json           # German umlaut Ö (3 entries) ✨ NEW
+  │   └── ü.json           # German umlaut Ü (1 entry) ✨ NEW
   └── batch-001.json       # Legacy batch files (for reference)
 
 /src/types/
@@ -238,12 +259,13 @@ interface Dictionary {
 
 ## Current Dictionary Coverage
 
-The dictionary contains 240 nouns across 22 letters covering common A1-A2 level topics:
+The dictionary contains 266 nouns across 29 letters covering common A1-A2 level topics:
 
-### By Letter
+### By Letter (Complete Alphabet + Umlauts)
 - **A** (10 entries): Abend, Affe, Anfang, Antwort, Apfel, Arbeit, Arm, Arzt, Auge, Auto
 - **B** (22 entries): Baby, Bad, Bahnhof, Bank, Baum, Bein, Berg, Beruf, Bett, Bier, Bild, Blau, Blume, Braun, Brille, Brot, Bruder, Buch, Bus, Büro, Butter
 - **C** (3 entries): Café, Chef, Computer
+- **D** (13 entries): Dach, Dame, Dank, Daumen, Decke, Deutschland, Dienstag, Ding, Direktor, Donnerstag, Dorf, Dose, Dusche ✨ NEW
 - **E** (8 entries): Ecke, Ei, Elefant, Ende, Erde, Essen, Euro
 - **F** (20 entries): Fahrer, Fahrrad, Familie, Farbe, Fehler, Fenster, Fernseher, Feuer, Finger, Fisch, Fleisch, Flughafen, Flugzeug, Fluss, Form, Frage, Frau, Freund, Frühling, Fuß
 - **G** (13 entries): Garten, Geld, Gelb, Geldbörse, Gemüse, Geschäft, Gesetz, Getränk, Glas, Grau, Grün, Größe, Gruppe
@@ -256,13 +278,19 @@ The dictionary contains 240 nouns across 22 letters covering common A1-A2 level 
 - **N** (6 entries): Nacht, Name, Nase, Nudel, Nummer, Number
 - **O** (5 entries): Obst, Ohr, Orange, Ordnung, Ort
 - **P** (11 entries): Paar, Pferd, Pflicht, Platz, Polizist, Post, Preis, Problem, Professor, Prozent, Punkt
+- **Q** (2 entries): Quelle, Quittung ✨ NEW
 - **R** (10 entries): Radio, Recht, Regel, Regen, Reis, Restaurant, Rock, Rot, Rucksack
 - **S** (35 entries): Saft, Salat, Salz, Schaf, Schiff, Schlafzimmer, Schlange, Schlüssel, Schnee, Schokolade, Schuh, Schule, Schüler, Schwarz, Schwein, Schwester, See, Seite, Sekunde, Sohn, Sommer, Sonne, Stadt, Stern, Strand, Straße, Student, Stuhl, Stück, Stunde, Suppe, System
 - **T** (13 entries): Tag, Tasche, Taxi, Tee, Teil, Telefon, Ticket, Tier, Tisch, Tochter, Toilette, Tür
 - **U** (1 entry): Uhr
 - **V** (3 entries): Vater, Verkäufer, Vogel
 - **W** (12 entries): Wald, Wasser, Wein, Wetter, Wiese, Wind, Winter, Woche, Wohnung, Wohnzimmer, Wolke
+- **X** (1 entry): Xylophon ✨ NEW
+- **Y** (2 entries): Yacht, Yoga ✨ NEW
 - **Z** (7 entries): Zahn, Zahl, Zeit, Ziege, Zimmer, Zug, Zucker
+- **Ä** (4 entries): Ärger, Ärmel, Ärzte, Äpfel ✨ NEW (German umlaut)
+- **Ö** (3 entries): Öl, Öffentlichkeit, Österreich ✨ NEW (German umlaut)
+- **Ü** (1 entry): Übung ✨ NEW (German umlaut)
 
 ### By Category
 **Family & People**: Vater, Mutter, Bruder, Schwester, Sohn, Tochter, Großmutter, Großvater, Baby, Mann, Frau, Kind, Freund

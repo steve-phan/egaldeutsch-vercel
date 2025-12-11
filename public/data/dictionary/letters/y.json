@@ -1,0 +1,53 @@
+{
+  "byWord": {
+    "yacht": "ID257",
+    "yoga": "ID258"
+  },
+  "byEnglish": {
+    "yacht": ["ID257"],
+    "yoga": ["ID258"]
+  },
+  "byVietnamese": {
+    "du thuyền": ["ID257"],
+    "yoga": ["ID258"]
+  },
+  "byArtikel": {
+    "der": [],
+    "die": ["ID257"],
+    "das": ["ID258"]
+  },
+  "entries": {
+    "ID257": {
+      "word": "Yacht",
+      "artikel": "die",
+      "plural": "Yachten",
+      "english": "yacht",
+      "vietnamese": "du thuyền",
+      "definition_en": "A large sailing boat.",
+      "definition_vi": "Thuyền buồm lớn.",
+      "examples": [
+        {
+          "de": "Die Yacht ist teuer.",
+          "en": "The yacht is expensive.",
+          "vi": "Du thuyền đắt tiền."
+        }
+      ]
+    },
+    "ID258": {
+      "word": "Yoga",
+      "artikel": "das",
+      "plural": "Yoga",
+      "english": "yoga",
+      "vietnamese": "yoga",
+      "definition_en": "A physical and mental practice.",
+      "definition_vi": "Thực hành thể chất và tinh thần.",
+      "examples": [
+        {
+          "de": "Yoga ist gesund.",
+          "en": "Yoga is healthy.",
+          "vi": "Yoga tốt cho sức khỏe."
+        }
+      ]
+    }
+  }
+}

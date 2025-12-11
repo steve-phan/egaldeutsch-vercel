@@ -1,0 +1,262 @@
+{
+  "byWord": {
+    "dach": "ID241",
+    "dame": "ID242",
+    "dank": "ID243",
+    "daumen": "ID244",
+    "decke": "ID245",
+    "deutschland": "ID246",
+    "dienstag": "ID247",
+    "ding": "ID248",
+    "direktor": "ID249",
+    "donnerstag": "ID250",
+    "dorf": "ID251",
+    "dose": "ID252",
+    "dusche": "ID253"
+  },
+  "byEnglish": {
+    "roof": ["ID241"],
+    "lady": ["ID242"],
+    "thanks": ["ID243"],
+    "thumb": ["ID244"],
+    "blanket": ["ID245"],
+    "Germany": ["ID246"],
+    "Tuesday": ["ID247"],
+    "thing": ["ID248"],
+    "director": ["ID249"],
+    "Thursday": ["ID250"],
+    "village": ["ID251"],
+    "can": ["ID252"],
+    "shower": ["ID253"]
+  },
+  "byVietnamese": {
+    "mái nhà": ["ID241"],
+    "quý bà": ["ID242"],
+    "lời cảm ơn": ["ID243"],
+    "ngón tay cái": ["ID244"],
+    "chăn": ["ID245"],
+    "nước Đức": ["ID246"],
+    "thứ ba": ["ID247"],
+    "vật": ["ID248"],
+    "giám đốc": ["ID249"],
+    "thứ năm": ["ID250"],
+    "làng": ["ID251"],
+    "hộp": ["ID252"],
+    "vòi sen": ["ID253"]
+  },
+  "byArtikel": {
+    "der": ["ID243", "ID244", "ID247", "ID249", "ID250"],
+    "die": ["ID242", "ID245", "ID252", "ID253"],
+    "das": ["ID241", "ID246", "ID248", "ID251"]
+  },
+  "entries": {
+    "ID241": {
+      "word": "Dach",
+      "artikel": "das",
+      "plural": "Dächer",
+      "english": "roof",
+      "vietnamese": "mái nhà",
+      "definition_en": "The covering of a building.",
+      "definition_vi": "Phần che phủ của tòa nhà.",
+      "examples": [
+        {
+          "de": "Das Dach ist rot.",
+          "en": "The roof is red.",
+          "vi": "Mái nhà màu đỏ."
+        }
+      ]
+    },
+    "ID242": {
+      "word": "Dame",
+      "artikel": "die",
+      "plural": "Damen",
+      "english": "lady",
+      "vietnamese": "quý bà",
+      "definition_en": "A polite term for a woman.",
+      "definition_vi": "Cách gọi lịch sự cho phụ nữ.",
+      "examples": [
+        {
+          "de": "Die Dame ist elegant.",
+          "en": "The lady is elegant.",
+          "vi": "Quý bà thanh lịch."
+        }
+      ]
+    },
+    "ID243": {
+      "word": "Dank",
+      "artikel": "der",
+      "plural": "Danke",
+      "english": "thanks",
+      "vietnamese": "lời cảm ơn",
+      "definition_en": "Expression of gratitude.",
+      "definition_vi": "Biểu hiện lòng biết ơn.",
+      "examples": [
+        {
+          "de": "Vielen Dank!",
+          "en": "Many thanks!",
+          "vi": "Cảm ơn rất nhiều!"
+        }
+      ]
+    },
+    "ID244": {
+      "word": "Daumen",
+      "artikel": "der",
+      "plural": "Daumen",
+      "english": "thumb",
+      "vietnamese": "ngón tay cái",
+      "definition_en": "The short thick first digit of the hand.",
+      "definition_vi": "Ngón tay thứ nhất ngắn và dày của bàn tay.",
+      "examples": [
+        {
+          "de": "Der Daumen tut weh.",
+          "en": "The thumb hurts.",
+          "vi": "Ngón tay cái đau."
+        }
+      ]
+    },
+    "ID245": {
+      "word": "Decke",
+      "artikel": "die",
+      "plural": "Decken",
+      "english": "blanket",
+      "vietnamese": "chăn",
+      "definition_en": "A covering for warmth.",
+      "definition_vi": "Tấm phủ để giữ ấm.",
+      "examples": [
+        {
+          "de": "Die Decke ist warm.",
+          "en": "The blanket is warm.",
+          "vi": "Cái chăn ấm."
+        }
+      ]
+    },
+    "ID246": {
+      "word": "Deutschland",
+      "artikel": "das",
+      "plural": "Deutschland",
+      "english": "Germany",
+      "vietnamese": "nước Đức",
+      "definition_en": "A country in central Europe.",
+      "definition_vi": "Một quốc gia ở Trung Âu.",
+      "examples": [
+        {
+          "de": "Deutschland ist schön.",
+          "en": "Germany is beautiful.",
+          "vi": "Nước Đức đẹp."
+        }
+      ]
+    },
+    "ID247": {
+      "word": "Dienstag",
+      "artikel": "der",
+      "plural": "Dienstage",
+      "english": "Tuesday",
+      "vietnamese": "thứ ba",
+      "definition_en": "The third day of the week.",
+      "definition_vi": "Ngày thứ ba trong tuần.",
+      "examples": [
+        {
+          "de": "Heute ist Dienstag.",
+          "en": "Today is Tuesday.",
+          "vi": "Hôm nay là thứ ba."
+        }
+      ]
+    },
+    "ID248": {
+      "word": "Ding",
+      "artikel": "das",
+      "plural": "Dinge",
+      "english": "thing",
+      "vietnamese": "vật",
+      "definition_en": "An object or item.",
+      "definition_vi": "Một đồ vật hoặc món đồ.",
+      "examples": [
+        {
+          "de": "Das Ding ist interessant.",
+          "en": "The thing is interesting.",
+          "vi": "Cái vật thú vị."
+        }
+      ]
+    },
+    "ID249": {
+      "word": "Direktor",
+      "artikel": "der",
+      "plural": "Direktoren",
+      "english": "director",
+      "vietnamese": "giám đốc",
+      "definition_en": "A person in charge of an organization.",
+      "definition_vi": "Người phụ trách một tổ chức.",
+      "examples": [
+        {
+          "de": "Der Direktor ist streng.",
+          "en": "The director is strict.",
+          "vi": "Giám đốc nghiêm khắc."
+        }
+      ]
+    },
+    "ID250": {
+      "word": "Donnerstag",
+      "artikel": "der",
+      "plural": "Donnerstage",
+      "english": "Thursday",
+      "vietnamese": "thứ năm",
+      "definition_en": "The fifth day of the week.",
+      "definition_vi": "Ngày thứ năm trong tuần.",
+      "examples": [
+        {
+          "de": "Am Donnerstag habe ich frei.",
+          "en": "On Thursday I am free.",
+          "vi": "Thứ năm tôi rảnh."
+        }
+      ]
+    },
+    "ID251": {
+      "word": "Dorf",
+      "artikel": "das",
+      "plural": "Dörfer",
+      "english": "village",
+      "vietnamese": "làng",
+      "definition_en": "A small community in a rural area.",
+      "definition_vi": "Một cộng đồng nhỏ ở vùng nông thôn.",
+      "examples": [
+        {
+          "de": "Das Dorf ist klein.",
+          "en": "The village is small.",
+          "vi": "Ngôi làng nhỏ."
+        }
+      ]
+    },
+    "ID252": {
+      "word": "Dose",
+      "artikel": "die",
+      "plural": "Dosen",
+      "english": "can",
+      "vietnamese": "hộp",
+      "definition_en": "A metal container.",
+      "definition_vi": "Một hộp kim loại.",
+      "examples": [
+        {
+          "de": "Die Dose ist leer.",
+          "en": "The can is empty.",
+          "vi": "Cái hộp rỗng."
+        }
+      ]
+    },
+    "ID253": {
+      "word": "Dusche",
+      "artikel": "die",
+      "plural": "Duschen",
+      "english": "shower",
+      "vietnamese": "vòi sen",
+      "definition_en": "A device for washing the body.",
+      "definition_vi": "Thiết bị để tắm rửa cơ thể.",
+      "examples": [
+        {
+          "de": "Die Dusche ist heiß.",
+          "en": "The shower is hot.",
+          "vi": "Vòi sen nóng."
+        }
+      ]
+    }
+  }
+}

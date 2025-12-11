@@ -1,0 +1,34 @@
+{
+  "byWord": {
+    "übung": "ID266"
+  },
+  "byEnglish": {
+    "exercise": ["ID266"]
+  },
+  "byVietnamese": {
+    "bài tập": ["ID266"]
+  },
+  "byArtikel": {
+    "der": [],
+    "die": ["ID266"],
+    "das": []
+  },
+  "entries": {
+    "ID266": {
+      "word": "Übung",
+      "artikel": "die",
+      "plural": "Übungen",
+      "english": "exercise",
+      "vietnamese": "bài tập",
+      "definition_en": "An activity requiring physical or mental effort.",
+      "definition_vi": "Hoạt động đòi hỏi nỗ lực thể chất hoặc tinh thần.",
+      "examples": [
+        {
+          "de": "Die Übung ist schwer.",
+          "en": "The exercise is difficult.",
+          "vi": "Bài tập khó."
+        }
+      ]
+    }
+  }
+}

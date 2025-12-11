@@ -1,0 +1,91 @@
+{
+  "byWord": {
+    "ärger": "ID259",
+    "ärmel": "ID260",
+    "ärzt": "ID261",
+    "äpfel": "ID262"
+  },
+  "byEnglish": {
+    "anger": ["ID259"],
+    "sleeve": ["ID260"],
+    "physician": ["ID261"],
+    "apples": ["ID262"]
+  },
+  "byVietnamese": {
+    "sự tức giận": ["ID259"],
+    "tay áo": ["ID260"],
+    "bác sĩ": ["ID261"],
+    "những quả táo": ["ID262"]
+  },
+  "byArtikel": {
+    "der": ["ID259", "ID260"],
+    "die": ["ID262"],
+    "das": []
+  },
+  "entries": {
+    "ID259": {
+      "word": "Ärger",
+      "artikel": "der",
+      "plural": "Ärger",
+      "english": "anger",
+      "vietnamese": "sự tức giận",
+      "definition_en": "A feeling of displeasure.",
+      "definition_vi": "Cảm giác khó chịu.",
+      "examples": [
+        {
+          "de": "Der Ärger ist groß.",
+          "en": "The anger is great.",
+          "vi": "Sự tức giận lớn."
+        }
+      ]
+    },
+    "ID260": {
+      "word": "Ärmel",
+      "artikel": "der",
+      "plural": "Ärmel",
+      "english": "sleeve",
+      "vietnamese": "tay áo",
+      "definition_en": "The part of a garment covering the arm.",
+      "definition_vi": "Phần quần áo che cánh tay.",
+      "examples": [
+        {
+          "de": "Der Ärmel ist lang.",
+          "en": "The sleeve is long.",
+          "vi": "Tay áo dài."
+        }
+      ]
+    },
+    "ID261": {
+      "word": "Ärzte",
+      "artikel": "die",
+      "plural": "Ärzte",
+      "english": "physicians",
+      "vietnamese": "các bác sĩ",
+      "definition_en": "Medical professionals (plural).",
+      "definition_vi": "Các chuyên gia y tế (số nhiều).",
+      "examples": [
+        {
+          "de": "Die Ärzte helfen uns.",
+          "en": "The physicians help us.",
+          "vi": "Các bác sĩ giúp chúng tôi."
+        }
+      ]
+    },
+    "ID262": {
+      "word": "Äpfel",
+      "artikel": "die",
+      "plural": "Äpfel",
+      "english": "apples",
+      "vietnamese": "những quả táo",
+      "definition_en": "Round fruits (plural of Apfel).",
+      "definition_vi": "Những quả tròn (số nhiều của Apfel).",
+      "examples": [
+        {
+          "de": "Die Äpfel sind rot.",
+          "en": "The apples are red.",
+          "vi": "Những quả táo đỏ."
+        }
+      ]
+    }
+  }
+}

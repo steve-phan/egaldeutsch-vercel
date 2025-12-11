@@ -1,0 +1,53 @@
+{
+  "byWord": {
+    "quelle": "ID254",
+    "quittung": "ID255"
+  },
+  "byEnglish": {
+    "source": ["ID254"],
+    "receipt": ["ID255"]
+  },
+  "byVietnamese": {
+    "nguồn": ["ID254"],
+    "biên lai": ["ID255"]
+  },
+  "byArtikel": {
+    "der": [],
+    "die": ["ID254", "ID255"],
+    "das": []
+  },
+  "entries": {
+    "ID254": {
+      "word": "Quelle",
+      "artikel": "die",
+      "plural": "Quellen",
+      "english": "source",
+      "vietnamese": "nguồn",
+      "definition_en": "A place, person, or thing from which something originates.",
+      "definition_vi": "Nơi, người hoặc vật mà từ đó một cái gì đó bắt nguồn.",
+      "examples": [
+        {
+          "de": "Die Quelle ist sauber.",
+          "en": "The source is clean.",
+          "vi": "Nguồn sạch."
+        }
+      ]
+    },
+    "ID255": {
+      "word": "Quittung",
+      "artikel": "die",
+      "plural": "Quittungen",
+      "english": "receipt",
+      "vietnamese": "biên lai",
+      "definition_en": "A written acknowledgment of payment.",
+      "definition_vi": "Giấy xác nhận thanh toán.",
+      "examples": [
+        {
+          "de": "Ich brauche eine Quittung.",
+          "en": "I need a receipt.",
+          "vi": "Tôi cần một biên lai."
+        }
+      ]
+    }
+  }
+}
