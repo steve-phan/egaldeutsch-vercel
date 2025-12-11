@@ -6,7 +6,7 @@ The German Noun Dictionary is a comprehensive, search-optimized dictionary syste
 
 ## Features
 
-- **40 A1-level German nouns** in the first batch
+- **200 German nouns** across 5 batches (A1-A2 level)
 - **Trilingual support**: German, English, Vietnamese
 - **Fast search** by word, English, or Vietnamese translation
 - **Artikel filtering**: Filter by der (masculine), die (feminine), or das (neuter)
@@ -59,7 +59,11 @@ The dictionary uses a search-optimized structure for fast lookups:
 
 ```
 /public/data/dictionary/
-  └── batch-001.json        # First batch of 40 nouns
+  ├── batch-001.json        # First batch of 40 nouns (ID001-ID040)
+  ├── batch-002.json        # Second batch of 40 nouns (ID041-ID080)
+  ├── batch-003.json        # Third batch of 40 nouns (ID081-ID120)
+  ├── batch-004.json        # Fourth batch of 40 nouns (ID121-ID160)
+  └── batch-005.json        # Fifth batch of 40 nouns (ID161-ID200)
 
 /src/types/
   └── dictionary.ts         # TypeScript type definitions
@@ -119,15 +123,20 @@ GET /api/dictionary/lookup?artikel=das
 
 To add more nouns to the dictionary:
 
-1. Create a new batch file: `/public/data/dictionary/batch-002.json`
-2. Follow the same data structure as batch-001.json
-3. Use sequential IDs starting from ID041
-4. Update the frontend to load and merge multiple batches:
+1. Create a new batch file: `/public/data/dictionary/batch-006.json`
+2. Follow the same data structure as previous batches
+3. Use sequential IDs starting from ID201
+4. Update the frontend to load the new batch in `/src/app/dictionary/page.tsx`:
 
 ```typescript
-const batch1 = await loadDictionaryBatch(1);
-const batch2 = await loadDictionaryBatch(2);
-const merged = mergeDictionaries([batch1, batch2]);
+const batches = await Promise.all([
+  loadDictionaryBatch(1),
+  loadDictionaryBatch(2),
+  loadDictionaryBatch(3),
+  loadDictionaryBatch(4),
+  loadDictionaryBatch(5),
+  loadDictionaryBatch(6), // Add new batch
+]);
 ```
 
 ## Batch Generation Rules
@@ -174,9 +183,11 @@ interface Dictionary {
 }
 ```
 
-## Current Nouns (Batch 001)
+## Current Nouns (Batches 001-005)
 
-The first batch contains 40 A1-level nouns covering common topics:
+The dictionary contains 200 nouns across 5 batches covering common A1-A2 level topics:
+
+**Batch 001 (ID001-ID040)**: Basic nouns
 - **Home**: Haus, Tisch, Stuhl, Tür, Fenster
 - **People**: Mann, Frau, Kind, Mutter, Lehrer, Schüler, Freund
 - **Food**: Brot, Wasser, Apfel, Ei, Milch, Kaffee, Tee
@@ -186,6 +197,32 @@ The first batch contains 40 A1-level nouns covering common topics:
 - **Objects**: Buch, Auto, Bild, Name
 - **Nature**: Baum, Blume
 - **Social**: Familie
+
+**Batch 002 (ID041-ID080)**: Family & Body & Food
+- **Family**: Vater, Mutter, Bruder, Schwester, Sohn, Tochter, Großmutter, Großvater, Baby
+- **Body parts**: Kopf, Auge, Ohr, Nase, Mund, Zahn, Fuß, Bein, Arm, Finger, Herz, Körper
+- **Food & Drink**: Essen, Trinken, Fleisch, Fisch, Gemüse, Obst, Salat, Suppe, Käse, Butter, Zucker, Salz, Reis, Nudel, Kuchen, Schokolade, Eis, Saft, Bier, Wein
+
+**Batch 003 (ID081-ID120)**: Home & Work & Places
+- **Home**: Zimmer, Wohnung, Küche, Bad, Schlafzimmer, Wohnzimmer, Toilette, Bett, Sofa, Lampe
+- **Electronics**: Fernseher, Radio, Computer, Telefon, Uhr
+- **Money**: Geld, Euro, Preis
+- **Work**: Arbeit, Beruf, Büro, Chef, Kollege
+- **Professions**: Arzt, Krankenschwester, Polizist, Verkäufer, Student, Professor, Ingenieur, Kellner, Koch, Fahrer
+- **Places**: Geschäft, Laden, Markt, Supermarkt, Restaurant, Café, Hotel
+
+**Batch 004 (ID121-ID160)**: Travel & Clothing & Colors
+- **Places**: Bank, Post, Bahnhof, Flughafen
+- **Transportation**: Zug, Bus, Taxi, Fahrrad, Motorrad, Flugzeug, Schiff
+- **Travel items**: Ticket, Koffer, Tasche, Rucksack, Geldbörse, Schlüssel, Brille
+- **Clothing**: Kleidung, Hemd, Hose, Rock, Kleid, Jacke, Mantel, Schuhe, Socke, Hut, Mütze, Handschuh
+- **Colors**: Farbe, Rot, Blau, Grün, Gelb, Schwarz, Weiß, Grau, Braun, Orange
+
+**Batch 005 (ID161-ID200)**: Nature & Weather & Animals
+- **Seasons**: Frühling, Sommer, Herbst, Winter
+- **Weather**: Wetter, Sonne, Mond, Stern, Himmel, Wolke, Regen, Schnee, Wind, Luft
+- **Nature**: Erde, Feuer, Berg, See, Fluss, Meer, Strand, Wald, Wiese
+- **Animals**: Tier, Vogel, Pferd, Kuh, Schwein, Schaf, Ziege, Huhn, Fisch, Maus, Hase, Bär, Löwe, Elefant, Affe, Schlange, Insekt
 
 ## Future Enhancements
 

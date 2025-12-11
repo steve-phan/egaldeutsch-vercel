@@ -1,0 +1,775 @@
+{
+  "byWord": {
+    "frühling": "ID161",
+    "sommer": "ID162",
+    "herbst": "ID163",
+    "winter": "ID164",
+    "wetter": "ID165",
+    "sonne": "ID166",
+    "mond": "ID167",
+    "stern": "ID168",
+    "himmel": "ID169",
+    "wolke": "ID170",
+    "regen": "ID171",
+    "schnee": "ID172",
+    "wind": "ID173",
+    "luft": "ID174",
+    "erde": "ID175",
+    "feuer": "ID176",
+    "berg": "ID177",
+    "see": "ID178",
+    "fluss": "ID179",
+    "meer": "ID180",
+    "strand": "ID181",
+    "wald": "ID182",
+    "wiese": "ID183",
+    "tier": "ID184",
+    "vogel": "ID185",
+    "pferd": "ID186",
+    "kuh": "ID187",
+    "schwein": "ID188",
+    "schaf": "ID189",
+    "ziege": "ID190",
+    "huhn": "ID191",
+    "fisch": "ID192",
+    "maus": "ID193",
+    "hase": "ID194",
+    "bär": "ID195",
+    "löwe": "ID196",
+    "elefant": "ID197",
+    "affe": "ID198",
+    "schlange": "ID199",
+    "insekt": "ID200"
+  },
+  "byEnglish": {
+    "spring": ["ID161"],
+    "summer": ["ID162"],
+    "autumn": ["ID163"],
+    "winter": ["ID164"],
+    "weather": ["ID165"],
+    "sun": ["ID166"],
+    "moon": ["ID167"],
+    "star": ["ID168"],
+    "sky": ["ID169"],
+    "cloud": ["ID170"],
+    "rain": ["ID171"],
+    "snow": ["ID172"],
+    "wind": ["ID173"],
+    "air": ["ID174"],
+    "earth": ["ID175"],
+    "fire": ["ID176"],
+    "mountain": ["ID177"],
+    "lake": ["ID178"],
+    "river": ["ID179"],
+    "sea": ["ID180"],
+    "beach": ["ID181"],
+    "forest": ["ID182"],
+    "meadow": ["ID183"],
+    "animal": ["ID184"],
+    "bird": ["ID185"],
+    "horse": ["ID186"],
+    "cow": ["ID187"],
+    "pig": ["ID188"],
+    "sheep": ["ID189"],
+    "goat": ["ID190"],
+    "chicken": ["ID191"],
+    "fish": ["ID192"],
+    "mouse": ["ID193"],
+    "rabbit": ["ID194"],
+    "bear": ["ID195"],
+    "lion": ["ID196"],
+    "elephant": ["ID197"],
+    "monkey": ["ID198"],
+    "snake": ["ID199"],
+    "insect": ["ID200"]
+  },
+  "byVietnamese": {
+    "mùa xuân": ["ID161"],
+    "mùa hè": ["ID162"],
+    "mùa thu": ["ID163"],
+    "mùa đông": ["ID164"],
+    "thời tiết": ["ID165"],
+    "mặt trời": ["ID166"],
+    "mặt trăng": ["ID167"],
+    "ngôi sao": ["ID168"],
+    "bầu trời": ["ID169"],
+    "đám mây": ["ID170"],
+    "mưa": ["ID171"],
+    "tuyết": ["ID172"],
+    "gió": ["ID173"],
+    "không khí": ["ID174"],
+    "trái đất": ["ID175"],
+    "lửa": ["ID176"],
+    "núi": ["ID177"],
+    "hồ": ["ID178"],
+    "sông": ["ID179"],
+    "biển": ["ID180"],
+    "bãi biển": ["ID181"],
+    "rừng": ["ID182"],
+    "đồng cỏ": ["ID183"],
+    "động vật": ["ID184"],
+    "con chim": ["ID185"],
+    "con ngựa": ["ID186"],
+    "con bò": ["ID187"],
+    "con lợn": ["ID188"],
+    "con cừu": ["ID189"],
+    "con dê": ["ID190"],
+    "con gà": ["ID191"],
+    "con cá": ["ID192"],
+    "con chuột": ["ID193"],
+    "con thỏ": ["ID194"],
+    "con gấu": ["ID195"],
+    "con sư tử": ["ID196"],
+    "con voi": ["ID197"],
+    "con khỉ": ["ID198"],
+    "con rắn": ["ID199"],
+    "côn trùng": ["ID200"]
+  },
+  "byArtikel": {
+    "der": ["ID161", "ID162", "ID163", "ID164", "ID169", "ID171", "ID172", "ID173", "ID177", "ID178", "ID179", "ID181", "ID182", "ID185", "ID194", "ID195", "ID196", "ID197", "ID198"],
+    "die": ["ID166", "ID170", "ID174", "ID175", "ID183", "ID187", "ID190", "ID193", "ID199"],
+    "das": ["ID165", "ID167", "ID168", "ID176", "ID180", "ID184", "ID186", "ID188", "ID189", "ID191", "ID192", "ID200"]
+  },
+  "entries": {
+    "ID161": {
+      "word": "Frühling",
+      "artikel": "der",
+      "plural": "Frühlinge",
+      "english": "spring",
+      "vietnamese": "mùa xuân",
+      "definition_en": "The season between winter and summer.",
+      "definition_vi": "Mùa giữa mùa đông và mùa hè.",
+      "examples": [
+        {
+          "de": "Der Frühling ist schön.",
+          "en": "Spring is beautiful.",
+          "vi": "Mùa xuân đẹp."
+        }
+      ]
+    },
+    "ID162": {
+      "word": "Sommer",
+      "artikel": "der",
+      "plural": "Sommer",
+      "english": "summer",
+      "vietnamese": "mùa hè",
+      "definition_en": "The warmest season of the year.",
+      "definition_vi": "Mùa ấm nhất trong năm.",
+      "examples": [
+        {
+          "de": "Der Sommer ist heiß.",
+          "en": "Summer is hot.",
+          "vi": "Mùa hè nóng."
+        }
+      ]
+    },
+    "ID163": {
+      "word": "Herbst",
+      "artikel": "der",
+      "plural": "Herbste",
+      "english": "autumn",
+      "vietnamese": "mùa thu",
+      "definition_en": "The season between summer and winter.",
+      "definition_vi": "Mùa giữa mùa hè và mùa đông.",
+      "examples": [
+        {
+          "de": "Der Herbst ist bunt.",
+          "en": "Autumn is colorful.",
+          "vi": "Mùa thu đầy màu sắc."
+        }
+      ]
+    },
+    "ID164": {
+      "word": "Winter",
+      "artikel": "der",
+      "plural": "Winter",
+      "english": "winter",
+      "vietnamese": "mùa đông",
+      "definition_en": "The coldest season of the year.",
+      "definition_vi": "Mùa lạnh nhất trong năm.",
+      "examples": [
+        {
+          "de": "Der Winter ist kalt.",
+          "en": "Winter is cold.",
+          "vi": "Mùa đông lạnh."
+        }
+      ]
+    },
+    "ID165": {
+      "word": "Wetter",
+      "artikel": "das",
+      "plural": "Wetter",
+      "english": "weather",
+      "vietnamese": "thời tiết",
+      "definition_en": "The state of the atmosphere.",
+      "definition_vi": "Trạng thái của khí quyển.",
+      "examples": [
+        {
+          "de": "Das Wetter ist gut.",
+          "en": "The weather is good.",
+          "vi": "Thời tiết tốt."
+        }
+      ]
+    },
+    "ID166": {
+      "word": "Sonne",
+      "artikel": "die",
+      "plural": "Sonnen",
+      "english": "sun",
+      "vietnamese": "mặt trời",
+      "definition_en": "The star at the center of our solar system.",
+      "definition_vi": "Ngôi sao ở trung tâm hệ mặt trời.",
+      "examples": [
+        {
+          "de": "Die Sonne scheint.",
+          "en": "The sun shines.",
+          "vi": "Mặt trời chiếu sáng."
+        }
+      ]
+    },
+    "ID167": {
+      "word": "Mond",
+      "artikel": "der",
+      "plural": "Monde",
+      "english": "moon",
+      "vietnamese": "mặt trăng",
+      "definition_en": "The natural satellite of Earth.",
+      "definition_vi": "Vệ tinh tự nhiên của Trái Đất.",
+      "examples": [
+        {
+          "de": "Der Mond ist hell.",
+          "en": "The moon is bright.",
+          "vi": "Mặt trăng sáng."
+        }
+      ]
+    },
+    "ID168": {
+      "word": "Stern",
+      "artikel": "der",
+      "plural": "Sterne",
+      "english": "star",
+      "vietnamese": "ngôi sao",
+      "definition_en": "A celestial body of light.",
+      "definition_vi": "Thiên thể phát sáng.",
+      "examples": [
+        {
+          "de": "Der Stern leuchtet.",
+          "en": "The star shines.",
+          "vi": "Ngôi sao sáng."
+        }
+      ]
+    },
+    "ID169": {
+      "word": "Himmel",
+      "artikel": "der",
+      "plural": "Himmel",
+      "english": "sky",
+      "vietnamese": "bầu trời",
+      "definition_en": "The space above the Earth.",
+      "definition_vi": "Không gian phía trên Trái Đất.",
+      "examples": [
+        {
+          "de": "Der Himmel ist blau.",
+          "en": "The sky is blue.",
+          "vi": "Bầu trời xanh."
+        }
+      ]
+    },
+    "ID170": {
+      "word": "Wolke",
+      "artikel": "die",
+      "plural": "Wolken",
+      "english": "cloud",
+      "vietnamese": "đám mây",
+      "definition_en": "A visible mass of water droplets.",
+      "definition_vi": "Khối nước hơi nhìn thấy được.",
+      "examples": [
+        {
+          "de": "Die Wolke ist weiß.",
+          "en": "The cloud is white.",
+          "vi": "Đám mây trắng."
+        }
+      ]
+    },
+    "ID171": {
+      "word": "Regen",
+      "artikel": "der",
+      "plural": "Regen",
+      "english": "rain",
+      "vietnamese": "mưa",
+      "definition_en": "Water falling from clouds.",
+      "definition_vi": "Nước rơi từ mây.",
+      "examples": [
+        {
+          "de": "Der Regen fällt.",
+          "en": "The rain falls.",
+          "vi": "Mưa rơi."
+        }
+      ]
+    },
+    "ID172": {
+      "word": "Schnee",
+      "artikel": "der",
+      "plural": "Schnee",
+      "english": "snow",
+      "vietnamese": "tuyết",
+      "definition_en": "Frozen water crystals.",
+      "definition_vi": "Tinh thể nước đông lạnh.",
+      "examples": [
+        {
+          "de": "Der Schnee ist weiß.",
+          "en": "The snow is white.",
+          "vi": "Tuyết trắng."
+        }
+      ]
+    },
+    "ID173": {
+      "word": "Wind",
+      "artikel": "der",
+      "plural": "Winde",
+      "english": "wind",
+      "vietnamese": "gió",
+      "definition_en": "Moving air.",
+      "definition_vi": "Không khí di chuyển.",
+      "examples": [
+        {
+          "de": "Der Wind ist stark.",
+          "en": "The wind is strong.",
+          "vi": "Gió mạnh."
+        }
+      ]
+    },
+    "ID174": {
+      "word": "Luft",
+      "artikel": "die",
+      "plural": "Lüfte",
+      "english": "air",
+      "vietnamese": "không khí",
+      "definition_en": "The mixture of gases we breathe.",
+      "definition_vi": "Hỗn hợp khí chúng ta thở.",
+      "examples": [
+        {
+          "de": "Die Luft ist frisch.",
+          "en": "The air is fresh.",
+          "vi": "Không khí trong lành."
+        }
+      ]
+    },
+    "ID175": {
+      "word": "Erde",
+      "artikel": "die",
+      "plural": "Erden",
+      "english": "earth",
+      "vietnamese": "trái đất",
+      "definition_en": "The planet we live on.",
+      "definition_vi": "Hành tinh chúng ta sống.",
+      "examples": [
+        {
+          "de": "Die Erde ist rund.",
+          "en": "The Earth is round.",
+          "vi": "Trái Đất tròn."
+        }
+      ]
+    },
+    "ID176": {
+      "word": "Feuer",
+      "artikel": "das",
+      "plural": "Feuer",
+      "english": "fire",
+      "vietnamese": "lửa",
+      "definition_en": "Burning flames.",
+      "definition_vi": "Ngọn lửa cháy.",
+      "examples": [
+        {
+          "de": "Das Feuer ist heiß.",
+          "en": "The fire is hot.",
+          "vi": "Lửa nóng."
+        }
+      ]
+    },
+    "ID177": {
+      "word": "Berg",
+      "artikel": "der",
+      "plural": "Berge",
+      "english": "mountain",
+      "vietnamese": "núi",
+      "definition_en": "A large natural elevation.",
+      "definition_vi": "Độ cao tự nhiên lớn.",
+      "examples": [
+        {
+          "de": "Der Berg ist hoch.",
+          "en": "The mountain is high.",
+          "vi": "Ngọn núi cao."
+        }
+      ]
+    },
+    "ID178": {
+      "word": "See",
+      "artikel": "der",
+      "plural": "Seen",
+      "english": "lake",
+      "vietnamese": "hồ",
+      "definition_en": "A body of water surrounded by land.",
+      "definition_vi": "Vùng nước được bao quanh bởi đất.",
+      "examples": [
+        {
+          "de": "Der See ist tief.",
+          "en": "The lake is deep.",
+          "vi": "Hồ sâu."
+        }
+      ]
+    },
+    "ID179": {
+      "word": "Fluss",
+      "artikel": "der",
+      "plural": "Flüsse",
+      "english": "river",
+      "vietnamese": "sông",
+      "definition_en": "A flowing body of water.",
+      "definition_vi": "Dòng nước chảy.",
+      "examples": [
+        {
+          "de": "Der Fluss ist lang.",
+          "en": "The river is long.",
+          "vi": "Con sông dài."
+        }
+      ]
+    },
+    "ID180": {
+      "word": "Meer",
+      "artikel": "das",
+      "plural": "Meere",
+      "english": "sea",
+      "vietnamese": "biển",
+      "definition_en": "A large body of salt water.",
+      "definition_vi": "Vùng nước mặn lớn.",
+      "examples": [
+        {
+          "de": "Das Meer ist blau.",
+          "en": "The sea is blue.",
+          "vi": "Biển xanh."
+        }
+      ]
+    },
+    "ID181": {
+      "word": "Strand",
+      "artikel": "der",
+      "plural": "Strände",
+      "english": "beach",
+      "vietnamese": "bãi biển",
+      "definition_en": "The shore of a sea or lake.",
+      "definition_vi": "Bờ biển hoặc hồ.",
+      "examples": [
+        {
+          "de": "Der Strand ist schön.",
+          "en": "The beach is beautiful.",
+          "vi": "Bãi biển đẹp."
+        }
+      ]
+    },
+    "ID182": {
+      "word": "Wald",
+      "artikel": "der",
+      "plural": "Wälder",
+      "english": "forest",
+      "vietnamese": "rừng",
+      "definition_en": "A large area covered with trees.",
+      "definition_vi": "Khu vực lớn phủ đầy cây cối.",
+      "examples": [
+        {
+          "de": "Der Wald ist grün.",
+          "en": "The forest is green.",
+          "vi": "Rừng xanh."
+        }
+      ]
+    },
+    "ID183": {
+      "word": "Wiese",
+      "artikel": "die",
+      "plural": "Wiesen",
+      "english": "meadow",
+      "vietnamese": "đồng cỏ",
+      "definition_en": "A field of grass.",
+      "definition_vi": "Cánh đồng cỏ.",
+      "examples": [
+        {
+          "de": "Die Wiese ist grün.",
+          "en": "The meadow is green.",
+          "vi": "Đồng cỏ xanh."
+        }
+      ]
+    },
+    "ID184": {
+      "word": "Tier",
+      "artikel": "das",
+      "plural": "Tiere",
+      "english": "animal",
+      "vietnamese": "động vật",
+      "definition_en": "A living organism.",
+      "definition_vi": "Sinh vật sống.",
+      "examples": [
+        {
+          "de": "Das Tier ist groß.",
+          "en": "The animal is big.",
+          "vi": "Động vật lớn."
+        }
+      ]
+    },
+    "ID185": {
+      "word": "Vogel",
+      "artikel": "der",
+      "plural": "Vögel",
+      "english": "bird",
+      "vietnamese": "con chim",
+      "definition_en": "A feathered animal that flies.",
+      "definition_vi": "Động vật có lông vũ bay.",
+      "examples": [
+        {
+          "de": "Der Vogel singt.",
+          "en": "The bird sings.",
+          "vi": "Con chim hót."
+        }
+      ]
+    },
+    "ID186": {
+      "word": "Pferd",
+      "artikel": "das",
+      "plural": "Pferde",
+      "english": "horse",
+      "vietnamese": "con ngựa",
+      "definition_en": "A large domesticated animal.",
+      "definition_vi": "Động vật thuần hóa lớn.",
+      "examples": [
+        {
+          "de": "Das Pferd läuft schnell.",
+          "en": "The horse runs fast.",
+          "vi": "Con ngựa chạy nhanh."
+        }
+      ]
+    },
+    "ID187": {
+      "word": "Kuh",
+      "artikel": "die",
+      "plural": "Kühe",
+      "english": "cow",
+      "vietnamese": "con bò",
+      "definition_en": "A farm animal that produces milk.",
+      "definition_vi": "Động vật trang trại sản xuất sữa.",
+      "examples": [
+        {
+          "de": "Die Kuh gibt Milch.",
+          "en": "The cow gives milk.",
+          "vi": "Con bò cho sữa."
+        }
+      ]
+    },
+    "ID188": {
+      "word": "Schwein",
+      "artikel": "das",
+      "plural": "Schweine",
+      "english": "pig",
+      "vietnamese": "con lợn",
+      "definition_en": "A farm animal raised for meat.",
+      "definition_vi": "Động vật trang trại nuôi để lấy thịt.",
+      "examples": [
+        {
+          "de": "Das Schwein ist rosa.",
+          "en": "The pig is pink.",
+          "vi": "Con lợn màu hồng."
+        }
+      ]
+    },
+    "ID189": {
+      "word": "Schaf",
+      "artikel": "das",
+      "plural": "Schafe",
+      "english": "sheep",
+      "vietnamese": "con cừu",
+      "definition_en": "A woolly farm animal.",
+      "definition_vi": "Động vật trang trại có lông.",
+      "examples": [
+        {
+          "de": "Das Schaf hat Wolle.",
+          "en": "The sheep has wool.",
+          "vi": "Con cừu có lông."
+        }
+      ]
+    },
+    "ID190": {
+      "word": "Ziege",
+      "artikel": "die",
+      "plural": "Ziegen",
+      "english": "goat",
+      "vietnamese": "con dê",
+      "definition_en": "A horned farm animal.",
+      "definition_vi": "Động vật trang trại có sừng.",
+      "examples": [
+        {
+          "de": "Die Ziege frisst Gras.",
+          "en": "The goat eats grass.",
+          "vi": "Con dê ăn cỏ."
+        }
+      ]
+    },
+    "ID191": {
+      "word": "Huhn",
+      "artikel": "das",
+      "plural": "Hühner",
+      "english": "chicken",
+      "vietnamese": "con gà",
+      "definition_en": "A domesticated bird.",
+      "definition_vi": "Con chim thuần hóa.",
+      "examples": [
+        {
+          "de": "Das Huhn legt Eier.",
+          "en": "The chicken lays eggs.",
+          "vi": "Con gà đẻ trứng."
+        }
+      ]
+    },
+    "ID192": {
+      "word": "Fisch",
+      "artikel": "der",
+      "plural": "Fische",
+      "english": "fish",
+      "vietnamese": "con cá",
+      "definition_en": "An aquatic animal.",
+      "definition_vi": "Động vật sống dưới nước.",
+      "examples": [
+        {
+          "de": "Der Fisch schwimmt.",
+          "en": "The fish swims.",
+          "vi": "Con cá bơi."
+        }
+      ]
+    },
+    "ID193": {
+      "word": "Maus",
+      "artikel": "die",
+      "plural": "Mäuse",
+      "english": "mouse",
+      "vietnamese": "con chuột",
+      "definition_en": "A small rodent.",
+      "definition_vi": "Loài gặm nhấm nhỏ.",
+      "examples": [
+        {
+          "de": "Die Maus ist klein.",
+          "en": "The mouse is small.",
+          "vi": "Con chuột nhỏ."
+        }
+      ]
+    },
+    "ID194": {
+      "word": "Hase",
+      "artikel": "der",
+      "plural": "Hasen",
+      "english": "rabbit",
+      "vietnamese": "con thỏ",
+      "definition_en": "A small mammal with long ears.",
+      "definition_vi": "Động vật có vú nhỏ có tai dài.",
+      "examples": [
+        {
+          "de": "Der Hase hüpft.",
+          "en": "The rabbit hops.",
+          "vi": "Con thỏ nhảy."
+        }
+      ]
+    },
+    "ID195": {
+      "word": "Bär",
+      "artikel": "der",
+      "plural": "Bären",
+      "english": "bear",
+      "vietnamese": "con gấu",
+      "definition_en": "A large wild animal.",
+      "definition_vi": "Động vật hoang dã lớn.",
+      "examples": [
+        {
+          "de": "Der Bär ist stark.",
+          "en": "The bear is strong.",
+          "vi": "Con gấu mạnh."
+        }
+      ]
+    },
+    "ID196": {
+      "word": "Löwe",
+      "artikel": "der",
+      "plural": "Löwen",
+      "english": "lion",
+      "vietnamese": "con sư tử",
+      "definition_en": "A large cat.",
+      "definition_vi": "Mèo lớn.",
+      "examples": [
+        {
+          "de": "Der Löwe brüllt.",
+          "en": "The lion roars.",
+          "vi": "Con sư tử gầm."
+        }
+      ]
+    },
+    "ID197": {
+      "word": "Elefant",
+      "artikel": "der",
+      "plural": "Elefanten",
+      "english": "elephant",
+      "vietnamese": "con voi",
+      "definition_en": "A large mammal with a trunk.",
+      "definition_vi": "Động vật có vú lớn có vòi.",
+      "examples": [
+        {
+          "de": "Der Elefant ist groß.",
+          "en": "The elephant is big.",
+          "vi": "Con voi lớn."
+        }
+      ]
+    },
+    "ID198": {
+      "word": "Affe",
+      "artikel": "der",
+      "plural": "Affen",
+      "english": "monkey",
+      "vietnamese": "con khỉ",
+      "definition_en": "A primate animal.",
+      "definition_vi": "Động vật linh trưởng.",
+      "examples": [
+        {
+          "de": "Der Affe klettert.",
+          "en": "The monkey climbs.",
+          "vi": "Con khỉ leo."
+        }
+      ]
+    },
+    "ID199": {
+      "word": "Schlange",
+      "artikel": "die",
+      "plural": "Schlangen",
+      "english": "snake",
+      "vietnamese": "con rắn",
+      "definition_en": "A legless reptile.",
+      "definition_vi": "Loài bò sát không chân.",
+      "examples": [
+        {
+          "de": "Die Schlange kriecht.",
+          "en": "The snake crawls.",
+          "vi": "Con rắn bò."
+        }
+      ]
+    },
+    "ID200": {
+      "word": "Insekt",
+      "artikel": "das",
+      "plural": "Insekten",
+      "english": "insect",
+      "vietnamese": "côn trùng",
+      "definition_en": "A small arthropod animal.",
+      "definition_vi": "Động vật chân khớp nhỏ.",
+      "examples": [
+        {
+          "de": "Das Insekt fliegt.",
+          "en": "The insect flies.",
+          "vi": "Côn trùng bay."
+        }
+      ]
+    }
+  }
+}

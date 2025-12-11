@@ -17,12 +17,58 @@ export default function DictionaryPage() {
   useEffect(() => {
     async function loadDictionary() {
       try {
-        const batch1 = await loadDictionaryBatch(1);
-        setDictionary(batch1);
+        // Load all 5 batches
+        const batches = await Promise.all([
+          loadDictionaryBatch(1),
+          loadDictionaryBatch(2),
+          loadDictionaryBatch(3),
+          loadDictionaryBatch(4),
+          loadDictionaryBatch(5),
+        ]);
+        
+        // Merge all batches
+        const merged: Dictionary = {
+          byWord: {},
+          byEnglish: {},
+          byVietnamese: {},
+          byArtikel: { der: [], die: [], das: [] },
+          entries: {},
+        };
+
+        for (const batch of batches) {
+          // Merge byWord
+          Object.assign(merged.byWord, batch.byWord);
+
+          // Merge byEnglish
+          for (const [key, ids] of Object.entries(batch.byEnglish)) {
+            if (!merged.byEnglish[key]) {
+              merged.byEnglish[key] = [];
+            }
+            merged.byEnglish[key].push(...ids);
+          }
+
+          // Merge byVietnamese
+          for (const [key, ids] of Object.entries(batch.byVietnamese)) {
+            if (!merged.byVietnamese[key]) {
+              merged.byVietnamese[key] = [];
+            }
+            merged.byVietnamese[key].push(...ids);
+          }
+
+          // Merge byArtikel
+          merged.byArtikel.der.push(...batch.byArtikel.der);
+          merged.byArtikel.die.push(...batch.byArtikel.die);
+          merged.byArtikel.das.push(...batch.byArtikel.das);
+
+          // Merge entries
+          Object.assign(merged.entries, batch.entries);
+        }
+
+        setDictionary(merged);
         // Show all entries initially
-        const allResults = Object.keys(batch1.entries).map(id => ({
+        const allResults = Object.keys(merged.entries).map(id => ({
           id,
-          entry: batch1.entries[id],
+          entry: merged.entries[id],
         }));
         setResults(allResults);
       } catch (error) {

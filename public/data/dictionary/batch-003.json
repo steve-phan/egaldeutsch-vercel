@@ -1,0 +1,775 @@
+{
+  "byWord": {
+    "zimmer": "ID081",
+    "wohnung": "ID082",
+    "küche": "ID083",
+    "bad": "ID084",
+    "schlafzimmer": "ID085",
+    "wohnzimmer": "ID086",
+    "toilette": "ID087",
+    "bett": "ID088",
+    "sofa": "ID089",
+    "lampe": "ID090",
+    "fernseher": "ID091",
+    "radio": "ID092",
+    "computer": "ID093",
+    "telefon": "ID094",
+    "uhr": "ID095",
+    "geld": "ID096",
+    "euro": "ID097",
+    "preis": "ID098",
+    "arbeit": "ID099",
+    "beruf": "ID100",
+    "büro": "ID101",
+    "chef": "ID102",
+    "kollege": "ID103",
+    "arzt": "ID104",
+    "krankenschwester": "ID105",
+    "polizist": "ID106",
+    "verkäufer": "ID107",
+    "student": "ID108",
+    "professor": "ID109",
+    "ingenieur": "ID110",
+    "kellner": "ID111",
+    "koch": "ID112",
+    "fahrer": "ID113",
+    "geschäft": "ID114",
+    "laden": "ID115",
+    "markt": "ID116",
+    "supermarkt": "ID117",
+    "restaurant": "ID118",
+    "café": "ID119",
+    "hotel": "ID120"
+  },
+  "byEnglish": {
+    "room": ["ID081"],
+    "apartment": ["ID082"],
+    "kitchen": ["ID083"],
+    "bathroom": ["ID084"],
+    "bedroom": ["ID085"],
+    "living room": ["ID086"],
+    "toilet": ["ID087"],
+    "bed": ["ID088"],
+    "sofa": ["ID089"],
+    "lamp": ["ID090"],
+    "television": ["ID091"],
+    "radio": ["ID092"],
+    "computer": ["ID093"],
+    "telephone": ["ID094"],
+    "clock": ["ID095"],
+    "money": ["ID096"],
+    "euro": ["ID097"],
+    "price": ["ID098"],
+    "work": ["ID099"],
+    "profession": ["ID100"],
+    "office": ["ID101"],
+    "boss": ["ID102"],
+    "colleague": ["ID103"],
+    "doctor": ["ID104"],
+    "nurse": ["ID105"],
+    "police officer": ["ID106"],
+    "salesperson": ["ID107"],
+    "student": ["ID108"],
+    "professor": ["ID109"],
+    "engineer": ["ID110"],
+    "waiter": ["ID111"],
+    "cook": ["ID112"],
+    "driver": ["ID113"],
+    "shop": ["ID114"],
+    "store": ["ID115"],
+    "market": ["ID116"],
+    "supermarket": ["ID117"],
+    "restaurant": ["ID118"],
+    "café": ["ID119"],
+    "hotel": ["ID120"]
+  },
+  "byVietnamese": {
+    "phòng": ["ID081"],
+    "căn hộ": ["ID082"],
+    "nhà bếp": ["ID083"],
+    "phòng tắm": ["ID084"],
+    "phòng ngủ": ["ID085"],
+    "phòng khách": ["ID086"],
+    "nhà vệ sinh": ["ID087"],
+    "giường": ["ID088"],
+    "ghế sofa": ["ID089"],
+    "đèn": ["ID090"],
+    "tivi": ["ID091"],
+    "radio": ["ID092"],
+    "máy tính": ["ID093"],
+    "điện thoại": ["ID094"],
+    "đồng hồ": ["ID095"],
+    "tiền": ["ID096"],
+    "euro": ["ID097"],
+    "giá cả": ["ID098"],
+    "công việc": ["ID099"],
+    "nghề nghiệp": ["ID100"],
+    "văn phòng": ["ID101"],
+    "sếp": ["ID102"],
+    "đồng nghiệp": ["ID103"],
+    "bác sĩ": ["ID104"],
+    "y tá": ["ID105"],
+    "cảnh sát": ["ID106"],
+    "nhân viên bán hàng": ["ID107"],
+    "sinh viên": ["ID108"],
+    "giáo sư": ["ID109"],
+    "kỹ sư": ["ID110"],
+    "phục vụ bàn": ["ID111"],
+    "đầu bếp": ["ID112"],
+    "tài xế": ["ID113"],
+    "cửa hàng": ["ID114"],
+    "cửa tiệm": ["ID115"],
+    "chợ": ["ID116"],
+    "siêu thị": ["ID117"],
+    "nhà hàng": ["ID118"],
+    "quán cà phê": ["ID119"],
+    "khách sạn": ["ID120"]
+  },
+  "byArtikel": {
+    "der": ["ID091", "ID092", "ID093", "ID098", "ID100", "ID102", "ID103", "ID104", "ID106", "ID107", "ID108", "ID109", "ID110", "ID111", "ID112", "ID113", "ID115", "ID116", "ID117"],
+    "die": ["ID082", "ID083", "ID087", "ID090", "ID095", "ID099", "ID105", "ID114"],
+    "das": ["ID081", "ID084", "ID085", "ID086", "ID088", "ID089", "ID094", "ID096", "ID097", "ID101", "ID118", "ID119", "ID120"]
+  },
+  "entries": {
+    "ID081": {
+      "word": "Zimmer",
+      "artikel": "das",
+      "plural": "Zimmer",
+      "english": "room",
+      "vietnamese": "phòng",
+      "definition_en": "A part of a building enclosed by walls.",
+      "definition_vi": "Một phần của tòa nhà được bao quanh bởi tường.",
+      "examples": [
+        {
+          "de": "Das Zimmer ist groß.",
+          "en": "The room is big.",
+          "vi": "Căn phòng lớn."
+        }
+      ]
+    },
+    "ID082": {
+      "word": "Wohnung",
+      "artikel": "die",
+      "plural": "Wohnungen",
+      "english": "apartment",
+      "vietnamese": "căn hộ",
+      "definition_en": "A set of rooms for living in.",
+      "definition_vi": "Một bộ phòng để ở.",
+      "examples": [
+        {
+          "de": "Die Wohnung hat drei Zimmer.",
+          "en": "The apartment has three rooms.",
+          "vi": "Căn hộ có ba phòng."
+        }
+      ]
+    },
+    "ID083": {
+      "word": "Küche",
+      "artikel": "die",
+      "plural": "Küchen",
+      "english": "kitchen",
+      "vietnamese": "nhà bếp",
+      "definition_en": "A room for cooking.",
+      "definition_vi": "Một phòng để nấu ăn.",
+      "examples": [
+        {
+          "de": "Die Küche ist modern.",
+          "en": "The kitchen is modern.",
+          "vi": "Nhà bếp hiện đại."
+        }
+      ]
+    },
+    "ID084": {
+      "word": "Bad",
+      "artikel": "das",
+      "plural": "Bäder",
+      "english": "bathroom",
+      "vietnamese": "phòng tắm",
+      "definition_en": "A room with a bath or shower.",
+      "definition_vi": "Một phòng có bồn tắm hoặc vòi sen.",
+      "examples": [
+        {
+          "de": "Das Bad ist sauber.",
+          "en": "The bathroom is clean.",
+          "vi": "Phòng tắm sạch sẽ."
+        }
+      ]
+    },
+    "ID085": {
+      "word": "Schlafzimmer",
+      "artikel": "das",
+      "plural": "Schlafzimmer",
+      "english": "bedroom",
+      "vietnamese": "phòng ngủ",
+      "definition_en": "A room for sleeping.",
+      "definition_vi": "Một phòng để ngủ.",
+      "examples": [
+        {
+          "de": "Das Schlafzimmer ist ruhig.",
+          "en": "The bedroom is quiet.",
+          "vi": "Phòng ngủ yên tĩnh."
+        }
+      ]
+    },
+    "ID086": {
+      "word": "Wohnzimmer",
+      "artikel": "das",
+      "plural": "Wohnzimmer",
+      "english": "living room",
+      "vietnamese": "phòng khách",
+      "definition_en": "A room for relaxing and entertaining.",
+      "definition_vi": "Một phòng để thư giãn và giải trí.",
+      "examples": [
+        {
+          "de": "Das Wohnzimmer ist gemütlich.",
+          "en": "The living room is cozy.",
+          "vi": "Phòng khách ấm cúng."
+        }
+      ]
+    },
+    "ID087": {
+      "word": "Toilette",
+      "artikel": "die",
+      "plural": "Toiletten",
+      "english": "toilet",
+      "vietnamese": "nhà vệ sinh",
+      "definition_en": "A fixture for defecation and urination.",
+      "definition_vi": "Thiết bị để đại tiện và tiểu tiện.",
+      "examples": [
+        {
+          "de": "Die Toilette ist dort.",
+          "en": "The toilet is there.",
+          "vi": "Nhà vệ sinh ở đó."
+        }
+      ]
+    },
+    "ID088": {
+      "word": "Bett",
+      "artikel": "das",
+      "plural": "Betten",
+      "english": "bed",
+      "vietnamese": "giường",
+      "definition_en": "A piece of furniture for sleeping.",
+      "definition_vi": "Một món đồ nội thất để ngủ.",
+      "examples": [
+        {
+          "de": "Das Bett ist bequem.",
+          "en": "The bed is comfortable.",
+          "vi": "Giường thoải mái."
+        }
+      ]
+    },
+    "ID089": {
+      "word": "Sofa",
+      "artikel": "das",
+      "plural": "Sofas",
+      "english": "sofa",
+      "vietnamese": "ghế sofa",
+      "definition_en": "A long upholstered seat for several people.",
+      "definition_vi": "Ghế bọc dài cho nhiều người.",
+      "examples": [
+        {
+          "de": "Das Sofa ist neu.",
+          "en": "The sofa is new.",
+          "vi": "Ghế sofa mới."
+        }
+      ]
+    },
+    "ID090": {
+      "word": "Lampe",
+      "artikel": "die",
+      "plural": "Lampen",
+      "english": "lamp",
+      "vietnamese": "đèn",
+      "definition_en": "A device for giving light.",
+      "definition_vi": "Thiết bị phát sáng.",
+      "examples": [
+        {
+          "de": "Die Lampe ist hell.",
+          "en": "The lamp is bright.",
+          "vi": "Đèn sáng."
+        }
+      ]
+    },
+    "ID091": {
+      "word": "Fernseher",
+      "artikel": "der",
+      "plural": "Fernseher",
+      "english": "television",
+      "vietnamese": "tivi",
+      "definition_en": "A device for receiving broadcast signals.",
+      "definition_vi": "Thiết bị nhận tín hiệu phát sóng.",
+      "examples": [
+        {
+          "de": "Der Fernseher ist an.",
+          "en": "The television is on.",
+          "vi": "Tivi đang bật."
+        }
+      ]
+    },
+    "ID092": {
+      "word": "Radio",
+      "artikel": "das",
+      "plural": "Radios",
+      "english": "radio",
+      "vietnamese": "radio",
+      "definition_en": "A device for receiving radio broadcasts.",
+      "definition_vi": "Thiết bị nhận phát thanh.",
+      "examples": [
+        {
+          "de": "Das Radio spielt Musik.",
+          "en": "The radio plays music.",
+          "vi": "Radio phát nhạc."
+        }
+      ]
+    },
+    "ID093": {
+      "word": "Computer",
+      "artikel": "der",
+      "plural": "Computer",
+      "english": "computer",
+      "vietnamese": "máy tính",
+      "definition_en": "An electronic device for processing data.",
+      "definition_vi": "Thiết bị điện tử xử lý dữ liệu.",
+      "examples": [
+        {
+          "de": "Der Computer ist schnell.",
+          "en": "The computer is fast.",
+          "vi": "Máy tính nhanh."
+        }
+      ]
+    },
+    "ID094": {
+      "word": "Telefon",
+      "artikel": "das",
+      "plural": "Telefone",
+      "english": "telephone",
+      "vietnamese": "điện thoại",
+      "definition_en": "A device for voice communication.",
+      "definition_vi": "Thiết bị để giao tiếp bằng giọng nói.",
+      "examples": [
+        {
+          "de": "Das Telefon klingelt.",
+          "en": "The telephone rings.",
+          "vi": "Điện thoại đổ chuông."
+        }
+      ]
+    },
+    "ID095": {
+      "word": "Uhr",
+      "artikel": "die",
+      "plural": "Uhren",
+      "english": "clock",
+      "vietnamese": "đồng hồ",
+      "definition_en": "A device for measuring time.",
+      "definition_vi": "Thiết bị để đo thời gian.",
+      "examples": [
+        {
+          "de": "Die Uhr zeigt drei Uhr.",
+          "en": "The clock shows three o'clock.",
+          "vi": "Đồng hồ chỉ ba giờ."
+        }
+      ]
+    },
+    "ID096": {
+      "word": "Geld",
+      "artikel": "das",
+      "plural": "Gelder",
+      "english": "money",
+      "vietnamese": "tiền",
+      "definition_en": "A medium of exchange.",
+      "definition_vi": "Phương tiện trao đổi.",
+      "examples": [
+        {
+          "de": "Ich habe kein Geld.",
+          "en": "I have no money.",
+          "vi": "Tôi không có tiền."
+        }
+      ]
+    },
+    "ID097": {
+      "word": "Euro",
+      "artikel": "der",
+      "plural": "Euro",
+      "english": "euro",
+      "vietnamese": "euro",
+      "definition_en": "The currency of the European Union.",
+      "definition_vi": "Đồng tiền của Liên minh châu Âu.",
+      "examples": [
+        {
+          "de": "Das kostet zehn Euro.",
+          "en": "That costs ten euros.",
+          "vi": "Cái đó giá mười euro."
+        }
+      ]
+    },
+    "ID098": {
+      "word": "Preis",
+      "artikel": "der",
+      "plural": "Preise",
+      "english": "price",
+      "vietnamese": "giá cả",
+      "definition_en": "The amount of money for something.",
+      "definition_vi": "Số tiền cho một cái gì đó.",
+      "examples": [
+        {
+          "de": "Der Preis ist hoch.",
+          "en": "The price is high.",
+          "vi": "Giá cao."
+        }
+      ]
+    },
+    "ID099": {
+      "word": "Arbeit",
+      "artikel": "die",
+      "plural": "Arbeiten",
+      "english": "work",
+      "vietnamese": "công việc",
+      "definition_en": "Activity involving effort.",
+      "definition_vi": "Hoạt động liên quan đến nỗ lực.",
+      "examples": [
+        {
+          "de": "Die Arbeit ist schwer.",
+          "en": "The work is hard.",
+          "vi": "Công việc khó."
+        }
+      ]
+    },
+    "ID100": {
+      "word": "Beruf",
+      "artikel": "der",
+      "plural": "Berufe",
+      "english": "profession",
+      "vietnamese": "nghề nghiệp",
+      "definition_en": "A paid occupation.",
+      "definition_vi": "Nghề nghiệp được trả lương.",
+      "examples": [
+        {
+          "de": "Was ist dein Beruf?",
+          "en": "What is your profession?",
+          "vi": "Nghề nghiệp của bạn là gì?"
+        }
+      ]
+    },
+    "ID101": {
+      "word": "Büro",
+      "artikel": "das",
+      "plural": "Büros",
+      "english": "office",
+      "vietnamese": "văn phòng",
+      "definition_en": "A room for administrative work.",
+      "definition_vi": "Phòng làm việc hành chính.",
+      "examples": [
+        {
+          "de": "Das Büro ist klein.",
+          "en": "The office is small.",
+          "vi": "Văn phòng nhỏ."
+        }
+      ]
+    },
+    "ID102": {
+      "word": "Chef",
+      "artikel": "der",
+      "plural": "Chefs",
+      "english": "boss",
+      "vietnamese": "sếp",
+      "definition_en": "A person in charge.",
+      "definition_vi": "Người phụ trách.",
+      "examples": [
+        {
+          "de": "Der Chef ist nett.",
+          "en": "The boss is nice.",
+          "vi": "Sếp tốt bụng."
+        }
+      ]
+    },
+    "ID103": {
+      "word": "Kollege",
+      "artikel": "der",
+      "plural": "Kollegen",
+      "english": "colleague",
+      "vietnamese": "đồng nghiệp",
+      "definition_en": "A person you work with.",
+      "definition_vi": "Người bạn làm việc cùng.",
+      "examples": [
+        {
+          "de": "Mein Kollege ist freundlich.",
+          "en": "My colleague is friendly.",
+          "vi": "Đồng nghiệp tôi thân thiện."
+        }
+      ]
+    },
+    "ID104": {
+      "word": "Arzt",
+      "artikel": "der",
+      "plural": "Ärzte",
+      "english": "doctor",
+      "vietnamese": "bác sĩ",
+      "definition_en": "A medical professional.",
+      "definition_vi": "Chuyên gia y tế.",
+      "examples": [
+        {
+          "de": "Der Arzt hilft mir.",
+          "en": "The doctor helps me.",
+          "vi": "Bác sĩ giúp tôi."
+        }
+      ]
+    },
+    "ID105": {
+      "word": "Krankenschwester",
+      "artikel": "die",
+      "plural": "Krankenschwestern",
+      "english": "nurse",
+      "vietnamese": "y tá",
+      "definition_en": "A healthcare professional.",
+      "definition_vi": "Chuyên gia chăm sóc sức khỏe.",
+      "examples": [
+        {
+          "de": "Die Krankenschwester ist freundlich.",
+          "en": "The nurse is friendly.",
+          "vi": "Y tá thân thiện."
+        }
+      ]
+    },
+    "ID106": {
+      "word": "Polizist",
+      "artikel": "der",
+      "plural": "Polizisten",
+      "english": "police officer",
+      "vietnamese": "cảnh sát",
+      "definition_en": "A law enforcement officer.",
+      "definition_vi": "Nhân viên thực thi pháp luật.",
+      "examples": [
+        {
+          "de": "Der Polizist hilft uns.",
+          "en": "The police officer helps us.",
+          "vi": "Cảnh sát giúp chúng tôi."
+        }
+      ]
+    },
+    "ID107": {
+      "word": "Verkäufer",
+      "artikel": "der",
+      "plural": "Verkäufer",
+      "english": "salesperson",
+      "vietnamese": "nhân viên bán hàng",
+      "definition_en": "A person who sells things.",
+      "definition_vi": "Người bán đồ.",
+      "examples": [
+        {
+          "de": "Der Verkäufer ist höflich.",
+          "en": "The salesperson is polite.",
+          "vi": "Nhân viên bán hàng lịch sự."
+        }
+      ]
+    },
+    "ID108": {
+      "word": "Student",
+      "artikel": "der",
+      "plural": "Studenten",
+      "english": "student",
+      "vietnamese": "sinh viên",
+      "definition_en": "A person studying at a university.",
+      "definition_vi": "Người học tại trường đại học.",
+      "examples": [
+        {
+          "de": "Der Student lernt viel.",
+          "en": "The student studies a lot.",
+          "vi": "Sinh viên học nhiều."
+        }
+      ]
+    },
+    "ID109": {
+      "word": "Professor",
+      "artikel": "der",
+      "plural": "Professoren",
+      "english": "professor",
+      "vietnamese": "giáo sư",
+      "definition_en": "A university teacher.",
+      "definition_vi": "Giáo viên đại học.",
+      "examples": [
+        {
+          "de": "Der Professor unterrichtet Geschichte.",
+          "en": "The professor teaches history.",
+          "vi": "Giáo sư dạy lịch sử."
+        }
+      ]
+    },
+    "ID110": {
+      "word": "Ingenieur",
+      "artikel": "der",
+      "plural": "Ingenieure",
+      "english": "engineer",
+      "vietnamese": "kỹ sư",
+      "definition_en": "A person who designs or builds things.",
+      "definition_vi": "Người thiết kế hoặc xây dựng.",
+      "examples": [
+        {
+          "de": "Der Ingenieur arbeitet an Projekten.",
+          "en": "The engineer works on projects.",
+          "vi": "Kỹ sư làm việc trên các dự án."
+        }
+      ]
+    },
+    "ID111": {
+      "word": "Kellner",
+      "artikel": "der",
+      "plural": "Kellner",
+      "english": "waiter",
+      "vietnamese": "phục vụ bàn",
+      "definition_en": "A person who serves food.",
+      "definition_vi": "Người phục vụ đồ ăn.",
+      "examples": [
+        {
+          "de": "Der Kellner bringt das Essen.",
+          "en": "The waiter brings the food.",
+          "vi": "Người phục vụ mang đồ ăn."
+        }
+      ]
+    },
+    "ID112": {
+      "word": "Koch",
+      "artikel": "der",
+      "plural": "Köche",
+      "english": "cook",
+      "vietnamese": "đầu bếp",
+      "definition_en": "A person who prepares food.",
+      "definition_vi": "Người chuẩn bị đồ ăn.",
+      "examples": [
+        {
+          "de": "Der Koch kocht gut.",
+          "en": "The cook cooks well.",
+          "vi": "Đầu bếp nấu ăn ngon."
+        }
+      ]
+    },
+    "ID113": {
+      "word": "Fahrer",
+      "artikel": "der",
+      "plural": "Fahrer",
+      "english": "driver",
+      "vietnamese": "tài xế",
+      "definition_en": "A person who operates a vehicle.",
+      "definition_vi": "Người điều khiển phương tiện.",
+      "examples": [
+        {
+          "de": "Der Fahrer fährt vorsichtig.",
+          "en": "The driver drives carefully.",
+          "vi": "Tài xế lái xe cẩn thận."
+        }
+      ]
+    },
+    "ID114": {
+      "word": "Geschäft",
+      "artikel": "das",
+      "plural": "Geschäfte",
+      "english": "shop",
+      "vietnamese": "cửa hàng",
+      "definition_en": "A place where things are sold.",
+      "definition_vi": "Nơi bán đồ.",
+      "examples": [
+        {
+          "de": "Das Geschäft ist geöffnet.",
+          "en": "The shop is open.",
+          "vi": "Cửa hàng đang mở."
+        }
+      ]
+    },
+    "ID115": {
+      "word": "Laden",
+      "artikel": "der",
+      "plural": "Läden",
+      "english": "store",
+      "vietnamese": "cửa tiệm",
+      "definition_en": "A retail establishment.",
+      "definition_vi": "Cơ sở bán lẻ.",
+      "examples": [
+        {
+          "de": "Der Laden ist klein.",
+          "en": "The store is small.",
+          "vi": "Cửa tiệm nhỏ."
+        }
+      ]
+    },
+    "ID116": {
+      "word": "Markt",
+      "artikel": "der",
+      "plural": "Märkte",
+      "english": "market",
+      "vietnamese": "chợ",
+      "definition_en": "A place where goods are sold.",
+      "definition_vi": "Nơi bán hàng.",
+      "examples": [
+        {
+          "de": "Der Markt ist groß.",
+          "en": "The market is big.",
+          "vi": "Chợ lớn."
+        }
+      ]
+    },
+    "ID117": {
+      "word": "Supermarkt",
+      "artikel": "der",
+      "plural": "Supermärkte",
+      "english": "supermarket",
+      "vietnamese": "siêu thị",
+      "definition_en": "A large self-service store.",
+      "definition_vi": "Cửa hàng tự phục vụ lớn.",
+      "examples": [
+        {
+          "de": "Ich gehe zum Supermarkt.",
+          "en": "I go to the supermarket.",
+          "vi": "Tôi đi siêu thị."
+        }
+      ]
+    },
+    "ID118": {
+      "word": "Restaurant",
+      "artikel": "das",
+      "plural": "Restaurants",
+      "english": "restaurant",
+      "vietnamese": "nhà hàng",
+      "definition_en": "A place where meals are served.",
+      "definition_vi": "Nơi phục vụ bữa ăn.",
+      "examples": [
+        {
+          "de": "Das Restaurant ist voll.",
+          "en": "The restaurant is full.",
+          "vi": "Nhà hàng đầy."
+        }
+      ]
+    },
+    "ID119": {
+      "word": "Café",
+      "artikel": "das",
+      "plural": "Cafés",
+      "english": "café",
+      "vietnamese": "quán cà phê",
+      "definition_en": "A small restaurant serving light meals.",
+      "definition_vi": "Nhà hàng nhỏ phục vụ bữa ăn nhẹ.",
+      "examples": [
+        {
+          "de": "Das Café ist gemütlich.",
+          "en": "The café is cozy.",
+          "vi": "Quán cà phê ấm cúng."
+        }
+      ]
+    },
+    "ID120": {
+      "word": "Hotel",
+      "artikel": "das",
+      "plural": "Hotels",
+      "english": "hotel",
+      "vietnamese": "khách sạn",
+      "definition_en": "A place providing accommodation.",
+      "definition_vi": "Nơi cung cấp chỗ ở.",
+      "examples": [
+        {
+          "de": "Das Hotel ist teuer.",
+          "en": "The hotel is expensive.",
+          "vi": "Khách sạn đắt."
+        }
+      ]
+    }
+  }
+}
