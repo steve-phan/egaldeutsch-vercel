@@ -2,39 +2,85 @@
   "byWord": {
     "computer": "ID093",
     "chef": "ID102",
-    "café": "ID119"
+    "café": "ID119",
+    "cent": "ID315",
+    "chance": "ID316",
+    "charakter": "ID317",
+    "christentum": "ID318",
+    "comic": "ID319",
+    "couch": "ID320",
+    "cousin": "ID321",
+    "cousine": "ID322",
+    "creme": "ID323",
+    "curry": "ID324",
+    "cd": "ID325",
+    "chor": "ID326",
+    "champagner": "ID327",
+    "chaos": "ID328",
+    "chips": "ID329",
+    "cello": "ID330",
+    "club": "ID331",
+    "camping": "ID332",
+    "container": "ID333",
+    "cocktail": "ID334",
+    "consultant": "ID335"
   },
   "byEnglish": {
-    "computer": [
-      "ID093"
-    ],
-    "boss": [
-      "ID102"
-    ],
-    "café": [
-      "ID119"
-    ]
+    "computer": ["ID093"],
+    "boss": ["ID102"],
+    "café": ["ID119"],
+    "cent": ["ID315"],
+    "chance": ["ID316"],
+    "character": ["ID317"],
+    "christianity": ["ID318"],
+    "comic": ["ID319"],
+    "couch": ["ID320"],
+    "cousin (male)": ["ID321"],
+    "cousin (female)": ["ID322"],
+    "cream": ["ID323"],
+    "curry": ["ID324"],
+    "CD": ["ID325"],
+    "choir": ["ID326"],
+    "champagne": ["ID327"],
+    "chaos": ["ID328"],
+    "chips": ["ID329"],
+    "cello": ["ID330"],
+    "club": ["ID331"],
+    "camping": ["ID332"],
+    "container": ["ID333"],
+    "cocktail": ["ID334"],
+    "consultant": ["ID335"]
   },
   "byVietnamese": {
-    "máy tính": [
-      "ID093"
-    ],
-    "sếp": [
-      "ID102"
-    ],
-    "quán cà phê": [
-      "ID119"
-    ]
+    "máy tính": ["ID093"],
+    "sếp": ["ID102"],
+    "quán cà phê": ["ID119"],
+    "xu": ["ID315"],
+    "cơ hội": ["ID316"],
+    "tính cách": ["ID317"],
+    "đạo Cơ đốc": ["ID318"],
+    "truyện tranh": ["ID319"],
+    "ghế sofa": ["ID320"],
+    "anh họ": ["ID321"],
+    "chị họ": ["ID322"],
+    "kem": ["ID323"],
+    "cà ri": ["ID324"],
+    "đĩa CD": ["ID325"],
+    "hợp xướng": ["ID326"],
+    "rượu sâm panh": ["ID327"],
+    "hỗn loạn": ["ID328"],
+    "khoai tây chiên": ["ID329"],
+    "đàn cello": ["ID330"],
+    "câu lạc bộ": ["ID331"],
+    "cắm trại": ["ID332"],
+    "thùng chứa": ["ID333"],
+    "cocktail": ["ID334"],
+    "chuyên gia tư vấn": ["ID335"]
   },
   "byArtikel": {
-    "der": [
-      "ID093",
-      "ID102"
-    ],
-    "die": [],
-    "das": [
-      "ID119"
-    ]
+    "der": ["ID093", "ID102", "ID315", "ID317", "ID321", "ID326", "ID327", "ID330", "ID331", "ID332", "ID333", "ID334", "ID335"],
+    "die": ["ID316", "ID322", "ID323", "ID325"],
+    "das": ["ID119", "ID318", "ID319", "ID320", "ID324", "ID328", "ID329"]
   },
   "entries": {
     "ID093": {
@@ -45,13 +91,7 @@
       "vietnamese": "máy tính",
       "definition_en": "An electronic device for processing data.",
       "definition_vi": "Thiết bị điện tử xử lý dữ liệu.",
-      "examples": [
-        {
-          "de": "Der Computer ist schnell.",
-          "en": "The computer is fast.",
-          "vi": "Máy tính nhanh."
-        }
-      ]
+      "examples": [{"de": "Der Computer ist schnell.", "en": "The computer is fast.", "vi": "Máy tính nhanh."}]
     },
     "ID102": {
       "word": "Chef",
@@ -61,13 +101,7 @@
       "vietnamese": "sếp",
       "definition_en": "A person in charge.",
       "definition_vi": "Người phụ trách.",
-      "examples": [
-        {
-          "de": "Der Chef ist nett.",
-          "en": "The boss is nice.",
-          "vi": "Sếp tốt bụng."
-        }
-      ]
+      "examples": [{"de": "Der Chef ist nett.", "en": "The boss is nice.", "vi": "Sếp tốt bụng."}]
     },
     "ID119": {
       "word": "Café",
@@ -77,13 +111,217 @@
       "vietnamese": "quán cà phê",
       "definition_en": "A small restaurant serving light meals.",
       "definition_vi": "Nhà hàng nhỏ phục vụ bữa ăn nhẹ.",
-      "examples": [
-        {
-          "de": "Das Café ist gemütlich.",
-          "en": "The café is cozy.",
-          "vi": "Quán cà phê ấm cúng."
-        }
-      ]
+      "examples": [{"de": "Das Café ist gemütlich.", "en": "The café is cozy.", "vi": "Quán cà phê ấm cúng."}]
+    },
+    "ID315": {
+      "word": "Cent",
+      "artikel": "der",
+      "plural": "Cent/Cents",
+      "english": "cent",
+      "vietnamese": "xu",
+      "definition_en": "A hundredth of a euro.",
+      "definition_vi": "Một phần trăm của đồng euro.",
+      "examples": [{"de": "Das kostet 50 Cent.", "en": "That costs 50 cents.", "vi": "Cái đó có giá 50 xu."}]
+    },
+    "ID316": {
+      "word": "Chance",
+      "artikel": "die",
+      "plural": "Chancen",
+      "english": "chance",
+      "vietnamese": "cơ hội",
+      "definition_en": "An opportunity or possibility.",
+      "definition_vi": "Một cơ hội hoặc khả năng.",
+      "examples": [{"de": "Das ist eine gute Chance.", "en": "That is a good chance.", "vi": "Đó là một cơ hội tốt."}]
+    },
+    "ID317": {
+      "word": "Charakter",
+      "artikel": "der",
+      "plural": "Charaktere",
+      "english": "character",
+      "vietnamese": "tính cách",
+      "definition_en": "The mental and moral qualities of a person.",
+      "definition_vi": "Phẩm chất tinh thần và đạo đức của một người.",
+      "examples": [{"de": "Er hat einen guten Charakter.", "en": "He has a good character.", "vi": "Anh ấy có tính cách tốt."}]
+    },
+    "ID318": {
+      "word": "Christentum",
+      "artikel": "das",
+      "plural": "-",
+      "english": "christianity",
+      "vietnamese": "đạo Cơ đốc",
+      "definition_en": "The Christian religion.",
+      "definition_vi": "Tôn giáo Cơ đốc.",
+      "examples": [{"de": "Das Christentum ist eine Weltreligion.", "en": "Christianity is a world religion.", "vi": "Đạo Cơ đốc là một tôn giáo thế giới."}]
+    },
+    "ID319": {
+      "word": "Comic",
+      "artikel": "das",
+      "plural": "Comics",
+      "english": "comic",
+      "vietnamese": "truyện tranh",
+      "definition_en": "A magazine or book with comic strips.",
+      "definition_vi": "Tạp chí hoặc sách có truyện tranh.",
+      "examples": [{"de": "Das Comic ist lustig.", "en": "The comic is funny.", "vi": "Truyện tranh vui."}]
+    },
+    "ID320": {
+      "word": "Couch",
+      "artikel": "die",
+      "plural": "Couches/Couchen",
+      "english": "couch",
+      "vietnamese": "ghế sofa",
+      "definition_en": "A long upholstered seat.",
+      "definition_vi": "Ghế bọc nệm dài.",
+      "examples": [{"de": "Die Couch ist bequem.", "en": "The couch is comfortable.", "vi": "Ghế sofa thoải mái."}]
+    },
+    "ID321": {
+      "word": "Cousin",
+      "artikel": "der",
+      "plural": "Cousins",
+      "english": "cousin (male)",
+      "vietnamese": "anh họ",
+      "definition_en": "A male cousin.",
+      "definition_vi": "Anh họ/em họ nam.",
+      "examples": [{"de": "Mein Cousin wohnt in Berlin.", "en": "My cousin lives in Berlin.", "vi": "Anh họ tôi sống ở Berlin."}]
+    },
+    "ID322": {
+      "word": "Cousine",
+      "artikel": "die",
+      "plural": "Cousinen",
+      "english": "cousin (female)",
+      "vietnamese": "chị họ",
+      "definition_en": "A female cousin.",
+      "definition_vi": "Chị họ/em họ nữ.",
+      "examples": [{"de": "Meine Cousine ist Ärztin.", "en": "My cousin is a doctor.", "vi": "Chị họ tôi là bác sĩ."}]
+    },
+    "ID323": {
+      "word": "Creme",
+      "artikel": "die",
+      "plural": "Cremes",
+      "english": "cream",
+      "vietnamese": "kem",
+      "definition_en": "A thick liquid or cosmetic substance.",
+      "definition_vi": "Chất lỏng đặc hoặc mỹ phẩm.",
+      "examples": [{"de": "Die Creme ist gut für die Haut.", "en": "The cream is good for the skin.", "vi": "Kem tốt cho da."}]
+    },
+    "ID324": {
+      "word": "Curry",
+      "artikel": "das",
+      "plural": "Currys",
+      "english": "curry",
+      "vietnamese": "cà ri",
+      "definition_en": "A spicy dish or spice blend.",
+      "definition_vi": "Món ăn cay hoặc hỗn hợp gia vị.",
+      "examples": [{"de": "Das Curry schmeckt lecker.", "en": "The curry tastes delicious.", "vi": "Cà ri ngon."}]
+    },
+    "ID325": {
+      "word": "CD",
+      "artikel": "die",
+      "plural": "CDs",
+      "english": "CD",
+      "vietnamese": "đĩa CD",
+      "definition_en": "Compact disc for storing data or music.",
+      "definition_vi": "Đĩa compact để lưu trữ dữ liệu hoặc nhạc.",
+      "examples": [{"de": "Die CD ist neu.", "en": "The CD is new.", "vi": "Đĩa CD mới."}]
+    },
+    "ID326": {
+      "word": "Chor",
+      "artikel": "der",
+      "plural": "Chöre",
+      "english": "choir",
+      "vietnamese": "hợp xướng",
+      "definition_en": "A group of singers.",
+      "definition_vi": "Nhóm ca sĩ.",
+      "examples": [{"de": "Der Chor singt schön.", "en": "The choir sings beautifully.", "vi": "Hợp xướng hát hay."}]
+    },
+    "ID327": {
+      "word": "Champagner",
+      "artikel": "der",
+      "plural": "-",
+      "english": "champagne",
+      "vietnamese": "rượu sâm panh",
+      "definition_en": "Sparkling wine from Champagne, France.",
+      "definition_vi": "Rượu sủi bọt từ Champagne, Pháp.",
+      "examples": [{"de": "Der Champagner ist teuer.", "en": "The champagne is expensive.", "vi": "Rượu sâm panh đắt."}]
+    },
+    "ID328": {
+      "word": "Chaos",
+      "artikel": "das",
+      "plural": "-",
+      "english": "chaos",
+      "vietnamese": "hỗn loạn",
+      "definition_en": "Complete disorder and confusion.",
+      "definition_vi": "Sự mất trật tự và hỗn loạn hoàn toàn.",
+      "examples": [{"de": "Es herrscht Chaos.", "en": "There is chaos.", "vi": "Có sự hỗn loạn."}]
+    },
+    "ID329": {
+      "word": "Chips",
+      "artikel": "die",
+      "plural": "-",
+      "english": "chips",
+      "vietnamese": "khoai tây chiên",
+      "definition_en": "Thin slices of fried potato.",
+      "definition_vi": "Lát khoai tây chiên mỏng.",
+      "examples": [{"de": "Die Chips sind knusprig.", "en": "The chips are crispy.", "vi": "Khoai tây chiên giòn."}]
+    },
+    "ID330": {
+      "word": "Cello",
+      "artikel": "das",
+      "plural": "Cellos/Celli",
+      "english": "cello",
+      "vietnamese": "đàn cello",
+      "definition_en": "A large stringed musical instrument.",
+      "definition_vi": "Nhạc cụ dây lớn.",
+      "examples": [{"de": "Das Cello klingt schön.", "en": "The cello sounds beautiful.", "vi": "Đàn cello nghe hay."}]
+    },
+    "ID331": {
+      "word": "Club",
+      "artikel": "der",
+      "plural": "Clubs",
+      "english": "club",
+      "vietnamese": "câu lạc bộ",
+      "definition_en": "An association or organization.",
+      "definition_vi": "Hiệp hội hoặc tổ chức.",
+      "examples": [{"de": "Der Club ist beliebt.", "en": "The club is popular.", "vi": "Câu lạc bộ phổ biến."}]
+    },
+    "ID332": {
+      "word": "Camping",
+      "artikel": "das",
+      "plural": "-",
+      "english": "camping",
+      "vietnamese": "cắm trại",
+      "definition_en": "Living temporarily in a tent outdoors.",
+      "definition_vi": "Sống tạm thời trong lều ngoài trời.",
+      "examples": [{"de": "Camping macht Spaß.", "en": "Camping is fun.", "vi": "Cắm trại vui."}]
+    },
+    "ID333": {
+      "word": "Container",
+      "artikel": "der",
+      "plural": "Container",
+      "english": "container",
+      "vietnamese": "thùng chứa",
+      "definition_en": "A large box for transporting goods.",
+      "definition_vi": "Hộp lớn để vận chuyển hàng hóa.",
+      "examples": [{"de": "Der Container ist voll.", "en": "The container is full.", "vi": "Thùng chứa đầy."}]
+    },
+    "ID334": {
+      "word": "Cocktail",
+      "artikel": "der",
+      "plural": "Cocktails",
+      "english": "cocktail",
+      "vietnamese": "cocktail",
+      "definition_en": "A mixed alcoholic drink.",
+      "definition_vi": "Đồ uống có cồn pha trộn.",
+      "examples": [{"de": "Der Cocktail schmeckt gut.", "en": "The cocktail tastes good.", "vi": "Cocktail ngon."}]
+    },
+    "ID335": {
+      "word": "Consultant",
+      "artikel": "der",
+      "plural": "Consultants",
+      "english": "consultant",
+      "vietnamese": "chuyên gia tư vấn",
+      "definition_en": "A professional advisor.",
+      "definition_vi": "Cố vấn chuyên nghiệp.",
+      "examples": [{"de": "Der Consultant berät uns.", "en": "The consultant advises us.", "vi": "Chuyên gia tư vấn khuyên chúng tôi."}]
     }
   }
 }
