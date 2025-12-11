@@ -16,7 +16,40 @@
     "kleidung": "ID139",
     "kleid": "ID143",
     "kuh": "ID187",
-    "kreis": "ID218"
+    "kreis": "ID218",
+    "kabel": "ID670",
+    "kabine": "ID671",
+    "kaiser": "ID672",
+    "kalender": "ID673",
+    "kamera": "ID674",
+    "kamm": "ID675",
+    "kammer": "ID676",
+    "kampf": "ID677",
+    "kanal": "ID678",
+    "kandidat": "ID679",
+    "kanne": "ID680",
+    "kantine": "ID681",
+    "kapitel": "ID682",
+    "kapital": "ID683",
+    "karte": "ID684",
+    "kartoffel": "ID685",
+    "kasse": "ID686",
+    "kasten": "ID687",
+    "katalog": "ID688",
+    "katastrophe": "ID689",
+    "keller": "ID690",
+    "kerze": "ID691",
+    "kette": "ID692",
+    "kilometer": "ID693",
+    "kino": "ID694",
+    "kirche": "ID695",
+    "kissen": "ID696",
+    "klasse": "ID697",
+    "klavier": "ID698",
+    "klinik": "ID699",
+    "knie": "ID700",
+    "knopf": "ID701",
+    "könig": "ID702"
   },
   "byEnglish": {
     "child": [
@@ -69,6 +102,105 @@
     ],
     "circle": [
       "ID218"
+    ],
+    "cable": [
+      "ID670"
+    ],
+    "cabin": [
+      "ID671"
+    ],
+    "emperor": [
+      "ID672"
+    ],
+    "calendar": [
+      "ID673"
+    ],
+    "camera": [
+      "ID674"
+    ],
+    "comb": [
+      "ID675"
+    ],
+    "chamber": [
+      "ID676"
+    ],
+    "fight / struggle": [
+      "ID677"
+    ],
+    "canal / channel": [
+      "ID678"
+    ],
+    "candidate": [
+      "ID679"
+    ],
+    "pot / jug": [
+      "ID680"
+    ],
+    "canteen / cafeteria": [
+      "ID681"
+    ],
+    "chapter": [
+      "ID682"
+    ],
+    "capital": [
+      "ID683"
+    ],
+    "card / map": [
+      "ID684"
+    ],
+    "potato": [
+      "ID685"
+    ],
+    "cash register / checkout": [
+      "ID686"
+    ],
+    "box / case": [
+      "ID687"
+    ],
+    "catalog": [
+      "ID688"
+    ],
+    "catastrophe": [
+      "ID689"
+    ],
+    "cellar / basement": [
+      "ID690"
+    ],
+    "candle": [
+      "ID691"
+    ],
+    "chain": [
+      "ID692"
+    ],
+    "kilometer": [
+      "ID693"
+    ],
+    "cinema": [
+      "ID694"
+    ],
+    "church": [
+      "ID695"
+    ],
+    "pillow / cushion": [
+      "ID696"
+    ],
+    "class": [
+      "ID697"
+    ],
+    "piano": [
+      "ID698"
+    ],
+    "clinic / hospital": [
+      "ID699"
+    ],
+    "knee": [
+      "ID700"
+    ],
+    "button": [
+      "ID701"
+    ],
+    "king": [
+      "ID702"
     ]
   },
   "byVietnamese": {
@@ -122,6 +254,105 @@
     ],
     "vòng tròn": [
       "ID218"
+    ],
+    "dây cáp": [
+      "ID670"
+    ],
+    "cabin": [
+      "ID671"
+    ],
+    "hoàng đế": [
+      "ID672"
+    ],
+    "lịch": [
+      "ID673"
+    ],
+    "máy ảnh": [
+      "ID674"
+    ],
+    "lược": [
+      "ID675"
+    ],
+    "phòng": [
+      "ID676"
+    ],
+    "cuộc chiến": [
+      "ID677"
+    ],
+    "kênh": [
+      "ID678"
+    ],
+    "ứng viên": [
+      "ID679"
+    ],
+    "bình": [
+      "ID680"
+    ],
+    "căng tin": [
+      "ID681"
+    ],
+    "chương": [
+      "ID682"
+    ],
+    "vốn": [
+      "ID683"
+    ],
+    "thẻ / bản đồ": [
+      "ID684"
+    ],
+    "khoai tây": [
+      "ID685"
+    ],
+    "quầy thu ngân": [
+      "ID686"
+    ],
+    "hộp": [
+      "ID687"
+    ],
+    "danh mục": [
+      "ID688"
+    ],
+    "thảm họa": [
+      "ID689"
+    ],
+    "tầng hầm": [
+      "ID690"
+    ],
+    "nến": [
+      "ID691"
+    ],
+    "dây xích": [
+      "ID692"
+    ],
+    "kilômét": [
+      "ID693"
+    ],
+    "rạp chiếu phim": [
+      "ID694"
+    ],
+    "nhà thờ": [
+      "ID695"
+    ],
+    "gối": [
+      "ID696"
+    ],
+    "lớp": [
+      "ID697"
+    ],
+    "đàn piano": [
+      "ID698"
+    ],
+    "phòng khám": [
+      "ID699"
+    ],
+    "đầu gối": [
+      "ID700"
+    ],
+    "nút": [
+      "ID701"
+    ],
+    "vua": [
+      "ID702"
     ]
   },
   "byArtikel": {
@@ -134,19 +365,52 @@
       "ID103",
       "ID111",
       "ID112",
-      "ID133"
+      "ID133",
+      "ID672",
+      "ID673",
+      "ID675",
+      "ID677",
+      "ID678",
+      "ID679",
+      "ID687",
+      "ID688",
+      "ID690",
+      "ID693",
+      "ID701",
+      "ID702"
     ],
     "die": [
       "ID035",
       "ID083",
       "ID105",
       "ID139",
-      "ID187"
+      "ID187",
+      "ID671",
+      "ID674",
+      "ID676",
+      "ID680",
+      "ID681",
+      "ID684",
+      "ID685",
+      "ID686",
+      "ID689",
+      "ID691",
+      "ID692",
+      "ID695",
+      "ID697",
+      "ID699"
     ],
     "das": [
       "ID006",
       "ID143",
-      "ID218"
+      "ID218",
+      "ID670",
+      "ID682",
+      "ID683",
+      "ID694",
+      "ID696",
+      "ID698",
+      "ID700"
     ]
   },
   "entries": {
@@ -419,6 +683,534 @@
           "de": "Ein perfekter Kreis.",
           "en": "A perfect circle.",
           "vi": "Một vòng tròn hoàn hảo."
+        }
+      ]
+    },
+    "ID670": {
+      "word": "Kabel",
+      "artikel": "das",
+      "plural": "Kabel",
+      "english": "cable",
+      "vietnamese": "dây cáp",
+      "definition_en": "A thick wire.",
+      "definition_vi": "Dây dẫn dày.",
+      "examples": [
+        {
+          "de": "Das Kabel ist lang.",
+          "en": "The cable is long.",
+          "vi": "Dây cáp dài."
+        }
+      ]
+    },
+    "ID671": {
+      "word": "Kabine",
+      "artikel": "die",
+      "plural": "Kabinen",
+      "english": "cabin",
+      "vietnamese": "cabin",
+      "definition_en": "A small room.",
+      "definition_vi": "Một căn phòng nhỏ.",
+      "examples": [
+        {
+          "de": "Die Kabine ist eng.",
+          "en": "The cabin is narrow.",
+          "vi": "Cabin hẹp."
+        }
+      ]
+    },
+    "ID672": {
+      "word": "Kaiser",
+      "artikel": "der",
+      "plural": "Kaiser",
+      "english": "emperor",
+      "vietnamese": "hoàng đế",
+      "definition_en": "A supreme ruler.",
+      "definition_vi": "Người cầm quyền tối cao.",
+      "examples": [
+        {
+          "de": "Der Kaiser regiert.",
+          "en": "The emperor rules.",
+          "vi": "Hoàng đế trị vì."
+        }
+      ]
+    },
+    "ID673": {
+      "word": "Kalender",
+      "artikel": "der",
+      "plural": "Kalender",
+      "english": "calendar",
+      "vietnamese": "lịch",
+      "definition_en": "A system of organizing days.",
+      "definition_vi": "Hệ thống sắp xếp ngày.",
+      "examples": [
+        {
+          "de": "Der Kalender ist voll.",
+          "en": "The calendar is full.",
+          "vi": "Lịch đầy."
+        }
+      ]
+    },
+    "ID674": {
+      "word": "Kamera",
+      "artikel": "die",
+      "plural": "Kameras",
+      "english": "camera",
+      "vietnamese": "máy ảnh",
+      "definition_en": "A device for photos.",
+      "definition_vi": "Thiết bị chụp ảnh.",
+      "examples": [
+        {
+          "de": "Die Kamera ist neu.",
+          "en": "The camera is new.",
+          "vi": "Máy ảnh mới."
+        }
+      ]
+    },
+    "ID675": {
+      "word": "Kamm",
+      "artikel": "der",
+      "plural": "Kämme",
+      "english": "comb",
+      "vietnamese": "lược",
+      "definition_en": "A tool for hair.",
+      "definition_vi": "Công cụ chải tóc.",
+      "examples": [
+        {
+          "de": "Der Kamm ist klein.",
+          "en": "The comb is small.",
+          "vi": "Lược nhỏ."
+        }
+      ]
+    },
+    "ID676": {
+      "word": "Kammer",
+      "artikel": "die",
+      "plural": "Kammern",
+      "english": "chamber",
+      "vietnamese": "phòng",
+      "definition_en": "A room or cavity.",
+      "definition_vi": "Một căn phòng hoặc khoang.",
+      "examples": [
+        {
+          "de": "Die Kammer ist dunkel.",
+          "en": "The chamber is dark.",
+          "vi": "Phòng tối."
+        }
+      ]
+    },
+    "ID677": {
+      "word": "Kampf",
+      "artikel": "der",
+      "plural": "Kämpfe",
+      "english": "fight / struggle",
+      "vietnamese": "cuộc chiến",
+      "definition_en": "A battle or conflict.",
+      "definition_vi": "Một trận chiến hoặc xung đột.",
+      "examples": [
+        {
+          "de": "Der Kampf ist hart.",
+          "en": "The fight is hard.",
+          "vi": "Cuộc chiến khó khăn."
+        }
+      ]
+    },
+    "ID678": {
+      "word": "Kanal",
+      "artikel": "der",
+      "plural": "Kanäle",
+      "english": "canal / channel",
+      "vietnamese": "kênh",
+      "definition_en": "A waterway or TV channel.",
+      "definition_vi": "Đường nước hoặc kênh truyền hình.",
+      "examples": [
+        {
+          "de": "Der Kanal ist breit.",
+          "en": "The canal is wide.",
+          "vi": "Kênh rộng."
+        }
+      ]
+    },
+    "ID679": {
+      "word": "Kandidat",
+      "artikel": "der",
+      "plural": "Kandidaten",
+      "english": "candidate",
+      "vietnamese": "ứng viên",
+      "definition_en": "A person running for office.",
+      "definition_vi": "Người tranh cử.",
+      "examples": [
+        {
+          "de": "Der Kandidat spricht.",
+          "en": "The candidate speaks.",
+          "vi": "Ứng viên phát biểu."
+        }
+      ]
+    },
+    "ID680": {
+      "word": "Kanne",
+      "artikel": "die",
+      "plural": "Kannen",
+      "english": "pot / jug",
+      "vietnamese": "bình",
+      "definition_en": "A container for liquids.",
+      "definition_vi": "Bình chứa chất lỏng.",
+      "examples": [
+        {
+          "de": "Die Kanne ist voll.",
+          "en": "The pot is full.",
+          "vi": "Bình đầy."
+        }
+      ]
+    },
+    "ID681": {
+      "word": "Kantine",
+      "artikel": "die",
+      "plural": "Kantinen",
+      "english": "canteen / cafeteria",
+      "vietnamese": "căng tin",
+      "definition_en": "A dining facility.",
+      "definition_vi": "Cơ sở ăn uống.",
+      "examples": [
+        {
+          "de": "Die Kantine ist groß.",
+          "en": "The canteen is large.",
+          "vi": "Căng tin lớn."
+        }
+      ]
+    },
+    "ID682": {
+      "word": "Kapitel",
+      "artikel": "das",
+      "plural": "Kapitel",
+      "english": "chapter",
+      "vietnamese": "chương",
+      "definition_en": "A section of a book.",
+      "definition_vi": "Một phần của cuốn sách.",
+      "examples": [
+        {
+          "de": "Das Kapitel ist lang.",
+          "en": "The chapter is long.",
+          "vi": "Chương dài."
+        }
+      ]
+    },
+    "ID683": {
+      "word": "Kapital",
+      "artikel": "das",
+      "plural": "-",
+      "english": "capital",
+      "vietnamese": "vốn",
+      "definition_en": "Financial assets.",
+      "definition_vi": "Tài sản tài chính.",
+      "examples": [
+        {
+          "de": "Das Kapital ist wichtig.",
+          "en": "Capital is important.",
+          "vi": "Vốn quan trọng."
+        }
+      ]
+    },
+    "ID684": {
+      "word": "Karte",
+      "artikel": "die",
+      "plural": "Karten",
+      "english": "card / map",
+      "vietnamese": "thẻ / bản đồ",
+      "definition_en": "A piece of cardboard or map.",
+      "definition_vi": "Tấm bìa hoặc bản đồ.",
+      "examples": [
+        {
+          "de": "Die Karte ist bunt.",
+          "en": "The card is colorful.",
+          "vi": "Thẻ nhiều màu."
+        }
+      ]
+    },
+    "ID685": {
+      "word": "Kartoffel",
+      "artikel": "die",
+      "plural": "Kartoffeln",
+      "english": "potato",
+      "vietnamese": "khoai tây",
+      "definition_en": "A starchy vegetable.",
+      "definition_vi": "Rau củ chứa tinh bột.",
+      "examples": [
+        {
+          "de": "Die Kartoffel ist groß.",
+          "en": "The potato is large.",
+          "vi": "Khoai tây to."
+        }
+      ]
+    },
+    "ID686": {
+      "word": "Kasse",
+      "artikel": "die",
+      "plural": "Kassen",
+      "english": "cash register / checkout",
+      "vietnamese": "quầy thu ngân",
+      "definition_en": "A place for payment.",
+      "definition_vi": "Nơi thanh toán.",
+      "examples": [
+        {
+          "de": "Die Kasse ist offen.",
+          "en": "The checkout is open.",
+          "vi": "Quầy thu ngân mở."
+        }
+      ]
+    },
+    "ID687": {
+      "word": "Kasten",
+      "artikel": "der",
+      "plural": "Kästen",
+      "english": "box / case",
+      "vietnamese": "hộp",
+      "definition_en": "A container.",
+      "definition_vi": "Một vật chứa.",
+      "examples": [
+        {
+          "de": "Der Kasten ist schwer.",
+          "en": "The box is heavy.",
+          "vi": "Hộp nặng."
+        }
+      ]
+    },
+    "ID688": {
+      "word": "Katalog",
+      "artikel": "der",
+      "plural": "Kataloge",
+      "english": "catalog",
+      "vietnamese": "danh mục",
+      "definition_en": "A list of items.",
+      "definition_vi": "Danh sách các mục.",
+      "examples": [
+        {
+          "de": "Der Katalog ist dick.",
+          "en": "The catalog is thick.",
+          "vi": "Danh mục dày."
+        }
+      ]
+    },
+    "ID689": {
+      "word": "Katastrophe",
+      "artikel": "die",
+      "plural": "Katastrophen",
+      "english": "catastrophe",
+      "vietnamese": "thảm họa",
+      "definition_en": "A disaster.",
+      "definition_vi": "Một tai họa.",
+      "examples": [
+        {
+          "de": "Die Katastrophe ist groß.",
+          "en": "The catastrophe is large.",
+          "vi": "Thảm họa lớn."
+        }
+      ]
+    },
+    "ID690": {
+      "word": "Keller",
+      "artikel": "der",
+      "plural": "Keller",
+      "english": "cellar / basement",
+      "vietnamese": "tầng hầm",
+      "definition_en": "An underground room.",
+      "definition_vi": "Căn phòng dưới đất.",
+      "examples": [
+        {
+          "de": "Der Keller ist dunkel.",
+          "en": "The cellar is dark.",
+          "vi": "Tầng hầm tối."
+        }
+      ]
+    },
+    "ID691": {
+      "word": "Kerze",
+      "artikel": "die",
+      "plural": "Kerzen",
+      "english": "candle",
+      "vietnamese": "nến",
+      "definition_en": "A wax light source.",
+      "definition_vi": "Nguồn sáng từ sáp.",
+      "examples": [
+        {
+          "de": "Die Kerze brennt.",
+          "en": "The candle burns.",
+          "vi": "Nến cháy."
+        }
+      ]
+    },
+    "ID692": {
+      "word": "Kette",
+      "artikel": "die",
+      "plural": "Ketten",
+      "english": "chain",
+      "vietnamese": "dây xích",
+      "definition_en": "Connected metal links.",
+      "definition_vi": "Các mắt xích kim loại nối.",
+      "examples": [
+        {
+          "de": "Die Kette ist lang.",
+          "en": "The chain is long.",
+          "vi": "Dây xích dài."
+        }
+      ]
+    },
+    "ID693": {
+      "word": "Kilometer",
+      "artikel": "der",
+      "plural": "Kilometer",
+      "english": "kilometer",
+      "vietnamese": "kilômét",
+      "definition_en": "A unit of distance.",
+      "definition_vi": "Đơn vị khoảng cách.",
+      "examples": [
+        {
+          "de": "Der Weg ist 5 Kilometer.",
+          "en": "The way is 5 kilometers.",
+          "vi": "Đường dài 5 kilômét."
+        }
+      ]
+    },
+    "ID694": {
+      "word": "Kino",
+      "artikel": "das",
+      "plural": "Kinos",
+      "english": "cinema",
+      "vietnamese": "rạp chiếu phim",
+      "definition_en": "A movie theater.",
+      "definition_vi": "Rạp chiếu phim.",
+      "examples": [
+        {
+          "de": "Das Kino ist voll.",
+          "en": "The cinema is full.",
+          "vi": "Rạp chiếu phim đông."
+        }
+      ]
+    },
+    "ID695": {
+      "word": "Kirche",
+      "artikel": "die",
+      "plural": "Kirchen",
+      "english": "church",
+      "vietnamese": "nhà thờ",
+      "definition_en": "A place of worship.",
+      "definition_vi": "Nơi thờ phụng.",
+      "examples": [
+        {
+          "de": "Die Kirche ist alt.",
+          "en": "The church is old.",
+          "vi": "Nhà thờ cũ."
+        }
+      ]
+    },
+    "ID696": {
+      "word": "Kissen",
+      "artikel": "das",
+      "plural": "Kissen",
+      "english": "pillow / cushion",
+      "vietnamese": "gối",
+      "definition_en": "A soft head support.",
+      "definition_vi": "Đồ nâng đỡ đầu mềm.",
+      "examples": [
+        {
+          "de": "Das Kissen ist weich.",
+          "en": "The pillow is soft.",
+          "vi": "Gối mềm."
+        }
+      ]
+    },
+    "ID697": {
+      "word": "Klasse",
+      "artikel": "die",
+      "plural": "Klassen",
+      "english": "class",
+      "vietnamese": "lớp",
+      "definition_en": "A group of students.",
+      "definition_vi": "Một nhóm học sinh.",
+      "examples": [
+        {
+          "de": "Die Klasse ist groß.",
+          "en": "The class is large.",
+          "vi": "Lớp học lớn."
+        }
+      ]
+    },
+    "ID698": {
+      "word": "Klavier",
+      "artikel": "das",
+      "plural": "Klaviere",
+      "english": "piano",
+      "vietnamese": "đàn piano",
+      "definition_en": "A musical instrument.",
+      "definition_vi": "Nhạc cụ.",
+      "examples": [
+        {
+          "de": "Das Klavier klingt schön.",
+          "en": "The piano sounds beautiful.",
+          "vi": "Đàn piano nghe hay."
+        }
+      ]
+    },
+    "ID699": {
+      "word": "Klinik",
+      "artikel": "die",
+      "plural": "Kliniken",
+      "english": "clinic / hospital",
+      "vietnamese": "phòng khám",
+      "definition_en": "A medical facility.",
+      "definition_vi": "Cơ sở y tế.",
+      "examples": [
+        {
+          "de": "Die Klinik ist modern.",
+          "en": "The clinic is modern.",
+          "vi": "Phòng khám hiện đại."
+        }
+      ]
+    },
+    "ID700": {
+      "word": "Knie",
+      "artikel": "das",
+      "plural": "Knie",
+      "english": "knee",
+      "vietnamese": "đầu gối",
+      "definition_en": "The joint in the leg.",
+      "definition_vi": "Khớp ở chân.",
+      "examples": [
+        {
+          "de": "Das Knie tut weh.",
+          "en": "The knee hurts.",
+          "vi": "Đầu gối đau."
+        }
+      ]
+    },
+    "ID701": {
+      "word": "Knopf",
+      "artikel": "der",
+      "plural": "Knöpfe",
+      "english": "button",
+      "vietnamese": "nút",
+      "definition_en": "A fastener on clothing.",
+      "definition_vi": "Đồ cài trên quần áo.",
+      "examples": [
+        {
+          "de": "Der Knopf ist klein.",
+          "en": "The button is small.",
+          "vi": "Nút nhỏ."
+        }
+      ]
+    },
+    "ID702": {
+      "word": "König",
+      "artikel": "der",
+      "plural": "Könige",
+      "english": "king",
+      "vietnamese": "vua",
+      "definition_en": "A male monarch.",
+      "definition_vi": "Vị vua.",
+      "examples": [
+        {
+          "de": "Der König regiert.",
+          "en": "The king rules.",
+          "vi": "Vua trị vì."
         }
       ]
     }

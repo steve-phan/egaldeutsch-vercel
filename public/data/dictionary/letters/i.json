@@ -1,31 +1,206 @@
 {
   "byWord": {
-    "ingenieur": "ID110",
-    "insekt": "ID200"
+    "ingenieur": "ID631",
+    "insekt": "ID636",
+    "idee": "ID627",
+    "industrie": "ID628",
+    "infektion": "ID629",
+    "information": "ID630",
+    "inhalt": "ID632",
+    "initiative": "ID633",
+    "inland": "ID634",
+    "insel": "ID635",
+    "instrument": "ID637",
+    "interesse": "ID638",
+    "internet": "ID639",
+    "interview": "ID640",
+    "italien": "ID641",
+    "import": "ID642",
+    "impfung": "ID643",
+    "institut": "ID644",
+    "instinkt": "ID645",
+    "integration": "ID646",
+    "intelligenz": "ID647",
+    "intensität": "ID648",
+    "invasion": "ID649"
   },
   "byEnglish": {
     "engineer": [
-      "ID110"
+      "ID110",
+      "ID631"
     ],
     "insect": [
-      "ID200"
+      "ID200",
+      "ID636"
+    ],
+    "idea": [
+      "ID627"
+    ],
+    "industry": [
+      "ID628"
+    ],
+    "infection": [
+      "ID629"
+    ],
+    "information": [
+      "ID630"
+    ],
+    "content": [
+      "ID632"
+    ],
+    "initiative": [
+      "ID633"
+    ],
+    "inland / interior": [
+      "ID634"
+    ],
+    "island": [
+      "ID635"
+    ],
+    "instrument": [
+      "ID637"
+    ],
+    "interest": [
+      "ID638"
+    ],
+    "internet": [
+      "ID639"
+    ],
+    "interview": [
+      "ID640"
+    ],
+    "Italy": [
+      "ID641"
+    ],
+    "import": [
+      "ID642"
+    ],
+    "vaccination": [
+      "ID643"
+    ],
+    "institute": [
+      "ID644"
+    ],
+    "instinct": [
+      "ID645"
+    ],
+    "integration": [
+      "ID646"
+    ],
+    "intelligence": [
+      "ID647"
+    ],
+    "intensity": [
+      "ID648"
+    ],
+    "invasion": [
+      "ID649"
     ]
   },
   "byVietnamese": {
     "kỹ sư": [
-      "ID110"
+      "ID110",
+      "ID631"
     ],
     "côn trùng": [
-      "ID200"
+      "ID200",
+      "ID636"
+    ],
+    "ý tưởng": [
+      "ID627"
+    ],
+    "công nghiệp": [
+      "ID628"
+    ],
+    "nhiễm trùng": [
+      "ID629"
+    ],
+    "thông tin": [
+      "ID630"
+    ],
+    "nội dung": [
+      "ID632"
+    ],
+    "sáng kiến": [
+      "ID633"
+    ],
+    "nội địa": [
+      "ID634"
+    ],
+    "đảo": [
+      "ID635"
+    ],
+    "dụng cụ": [
+      "ID637"
+    ],
+    "sự quan tâm": [
+      "ID638"
+    ],
+    "internet": [
+      "ID639"
+    ],
+    "phỏng vấn": [
+      "ID640"
+    ],
+    "Ý": [
+      "ID641"
+    ],
+    "nhập khẩu": [
+      "ID642"
+    ],
+    "tiêm chủng": [
+      "ID643"
+    ],
+    "viện": [
+      "ID644"
+    ],
+    "bản năng": [
+      "ID645"
+    ],
+    "hội nhập": [
+      "ID646"
+    ],
+    "trí thông minh": [
+      "ID647"
+    ],
+    "cường độ": [
+      "ID648"
+    ],
+    "xâm lược": [
+      "ID649"
     ]
   },
   "byArtikel": {
     "der": [
-      "ID110"
+      "ID110",
+      "ID631",
+      "ID632",
+      "ID642",
+      "ID645"
     ],
-    "die": [],
+    "die": [
+      "ID627",
+      "ID628",
+      "ID629",
+      "ID630",
+      "ID633",
+      "ID635",
+      "ID643",
+      "ID646",
+      "ID647",
+      "ID648",
+      "ID649"
+    ],
     "das": [
-      "ID200"
+      "ID200",
+      "ID634",
+      "ID636",
+      "ID637",
+      "ID638",
+      "ID639",
+      "ID640",
+      "ID641",
+      "ID644"
     ]
   },
   "entries": {
@@ -58,6 +233,374 @@
           "de": "Das Insekt fliegt.",
           "en": "The insect flies.",
           "vi": "Côn trùng bay."
+        }
+      ]
+    },
+    "ID627": {
+      "word": "Idee",
+      "artikel": "die",
+      "plural": "Ideen",
+      "english": "idea",
+      "vietnamese": "ý tưởng",
+      "definition_en": "A thought or suggestion.",
+      "definition_vi": "Một suy nghĩ hoặc đề xuất.",
+      "examples": [
+        {
+          "de": "Die Idee ist gut.",
+          "en": "The idea is good.",
+          "vi": "Ý tưởng tốt."
+        }
+      ]
+    },
+    "ID628": {
+      "word": "Industrie",
+      "artikel": "die",
+      "plural": "Industrien",
+      "english": "industry",
+      "vietnamese": "công nghiệp",
+      "definition_en": "Manufacturing sector.",
+      "definition_vi": "Ngành sản xuất.",
+      "examples": [
+        {
+          "de": "Die Industrie wächst.",
+          "en": "The industry is growing.",
+          "vi": "Công nghiệp phát triển."
+        }
+      ]
+    },
+    "ID629": {
+      "word": "Infektion",
+      "artikel": "die",
+      "plural": "Infektionen",
+      "english": "infection",
+      "vietnamese": "nhiễm trùng",
+      "definition_en": "A disease-causing invasion.",
+      "definition_vi": "Sự xâm nhập gây bệnh.",
+      "examples": [
+        {
+          "de": "Die Infektion ist gefährlich.",
+          "en": "The infection is dangerous.",
+          "vi": "Nhiễm trùng nguy hiểm."
+        }
+      ]
+    },
+    "ID630": {
+      "word": "Information",
+      "artikel": "die",
+      "plural": "Informationen",
+      "english": "information",
+      "vietnamese": "thông tin",
+      "definition_en": "Facts or knowledge.",
+      "definition_vi": "Sự thật hoặc kiến thức.",
+      "examples": [
+        {
+          "de": "Die Information ist wichtig.",
+          "en": "The information is important.",
+          "vi": "Thông tin quan trọng."
+        }
+      ]
+    },
+    "ID631": {
+      "word": "Ingenieur",
+      "artikel": "der",
+      "plural": "Ingenieure",
+      "english": "engineer",
+      "vietnamese": "kỹ sư",
+      "definition_en": "A technical professional.",
+      "definition_vi": "Chuyên gia kỹ thuật.",
+      "examples": [
+        {
+          "de": "Der Ingenieur arbeitet.",
+          "en": "The engineer is working.",
+          "vi": "Kỹ sư đang làm việc."
+        }
+      ]
+    },
+    "ID632": {
+      "word": "Inhalt",
+      "artikel": "der",
+      "plural": "Inhalte",
+      "english": "content",
+      "vietnamese": "nội dung",
+      "definition_en": "What is contained.",
+      "definition_vi": "Cái được chứa bên trong.",
+      "examples": [
+        {
+          "de": "Der Inhalt ist interessant.",
+          "en": "The content is interesting.",
+          "vi": "Nội dung thú vị."
+        }
+      ]
+    },
+    "ID633": {
+      "word": "Initiative",
+      "artikel": "die",
+      "plural": "Initiativen",
+      "english": "initiative",
+      "vietnamese": "sáng kiến",
+      "definition_en": "The ability to take action.",
+      "definition_vi": "Khả năng hành động.",
+      "examples": [
+        {
+          "de": "Die Initiative ist gut.",
+          "en": "The initiative is good.",
+          "vi": "Sáng kiến tốt."
+        }
+      ]
+    },
+    "ID634": {
+      "word": "Inland",
+      "artikel": "das",
+      "plural": "-",
+      "english": "inland / interior",
+      "vietnamese": "nội địa",
+      "definition_en": "The interior of a country.",
+      "definition_vi": "Vùng bên trong một quốc gia.",
+      "examples": [
+        {
+          "de": "Das Inland ist groß.",
+          "en": "The inland is large.",
+          "vi": "Nội địa rộng lớn."
+        }
+      ]
+    },
+    "ID635": {
+      "word": "Insel",
+      "artikel": "die",
+      "plural": "Inseln",
+      "english": "island",
+      "vietnamese": "đảo",
+      "definition_en": "Land surrounded by water.",
+      "definition_vi": "Vùng đất bao quanh bởi nước.",
+      "examples": [
+        {
+          "de": "Die Insel ist schön.",
+          "en": "The island is beautiful.",
+          "vi": "Hòn đảo đẹp."
+        }
+      ]
+    },
+    "ID636": {
+      "word": "Insekt",
+      "artikel": "das",
+      "plural": "Insekten",
+      "english": "insect",
+      "vietnamese": "côn trùng",
+      "definition_en": "A small arthropod animal.",
+      "definition_vi": "Động vật chân đốt nhỏ.",
+      "examples": [
+        {
+          "de": "Das Insekt fliegt.",
+          "en": "The insect flies.",
+          "vi": "Côn trùng bay."
+        }
+      ]
+    },
+    "ID637": {
+      "word": "Instrument",
+      "artikel": "das",
+      "plural": "Instrumente",
+      "english": "instrument",
+      "vietnamese": "dụng cụ",
+      "definition_en": "A tool or musical device.",
+      "definition_vi": "Công cụ hoặc nhạc cụ.",
+      "examples": [
+        {
+          "de": "Das Instrument klingt gut.",
+          "en": "The instrument sounds good.",
+          "vi": "Nhạc cụ nghe hay."
+        }
+      ]
+    },
+    "ID638": {
+      "word": "Interesse",
+      "artikel": "das",
+      "plural": "Interessen",
+      "english": "interest",
+      "vietnamese": "sự quan tâm",
+      "definition_en": "Curiosity or concern.",
+      "definition_vi": "Tò mò hoặc quan tâm.",
+      "examples": [
+        {
+          "de": "Das Interesse ist groß.",
+          "en": "The interest is great.",
+          "vi": "Sự quan tâm lớn."
+        }
+      ]
+    },
+    "ID639": {
+      "word": "Internet",
+      "artikel": "das",
+      "plural": "-",
+      "english": "internet",
+      "vietnamese": "internet",
+      "definition_en": "Global computer network.",
+      "definition_vi": "Mạng máy tính toàn cầu.",
+      "examples": [
+        {
+          "de": "Das Internet ist schnell.",
+          "en": "The internet is fast.",
+          "vi": "Internet nhanh."
+        }
+      ]
+    },
+    "ID640": {
+      "word": "Interview",
+      "artikel": "das",
+      "plural": "Interviews",
+      "english": "interview",
+      "vietnamese": "phỏng vấn",
+      "definition_en": "A formal questioning.",
+      "definition_vi": "Một cuộc hỏi han chính thức.",
+      "examples": [
+        {
+          "de": "Das Interview war gut.",
+          "en": "The interview was good.",
+          "vi": "Cuộc phỏng vấn tốt."
+        }
+      ]
+    },
+    "ID641": {
+      "word": "Italien",
+      "artikel": "das",
+      "plural": "-",
+      "english": "Italy",
+      "vietnamese": "Ý",
+      "definition_en": "A European country.",
+      "definition_vi": "Một quốc gia châu Âu.",
+      "examples": [
+        {
+          "de": "Italien ist schön.",
+          "en": "Italy is beautiful.",
+          "vi": "Ý đẹp."
+        }
+      ]
+    },
+    "ID642": {
+      "word": "Import",
+      "artikel": "der",
+      "plural": "Importe",
+      "english": "import",
+      "vietnamese": "nhập khẩu",
+      "definition_en": "Goods brought into a country.",
+      "definition_vi": "Hàng hóa mang vào nước.",
+      "examples": [
+        {
+          "de": "Der Import steigt.",
+          "en": "Imports are rising.",
+          "vi": "Nhập khẩu tăng."
+        }
+      ]
+    },
+    "ID643": {
+      "word": "Impfung",
+      "artikel": "die",
+      "plural": "Impfungen",
+      "english": "vaccination",
+      "vietnamese": "tiêm chủng",
+      "definition_en": "Immunization shot.",
+      "definition_vi": "Mũi tiêm phòng bệnh.",
+      "examples": [
+        {
+          "de": "Die Impfung ist wichtig.",
+          "en": "The vaccination is important.",
+          "vi": "Tiêm chủng quan trọng."
+        }
+      ]
+    },
+    "ID644": {
+      "word": "Institut",
+      "artikel": "das",
+      "plural": "Institute",
+      "english": "institute",
+      "vietnamese": "viện",
+      "definition_en": "An organization for education.",
+      "definition_vi": "Tổ chức cho giáo dục.",
+      "examples": [
+        {
+          "de": "Das Institut ist bekannt.",
+          "en": "The institute is well-known.",
+          "vi": "Viện nổi tiếng."
+        }
+      ]
+    },
+    "ID645": {
+      "word": "Instinkt",
+      "artikel": "der",
+      "plural": "Instinkte",
+      "english": "instinct",
+      "vietnamese": "bản năng",
+      "definition_en": "Natural impulse.",
+      "definition_vi": "Phản ứng tự nhiên.",
+      "examples": [
+        {
+          "de": "Der Instinkt ist stark.",
+          "en": "The instinct is strong.",
+          "vi": "Bản năng mạnh."
+        }
+      ]
+    },
+    "ID646": {
+      "word": "Integration",
+      "artikel": "die",
+      "plural": "-",
+      "english": "integration",
+      "vietnamese": "hội nhập",
+      "definition_en": "The process of combining.",
+      "definition_vi": "Quá trình kết hợp.",
+      "examples": [
+        {
+          "de": "Die Integration ist wichtig.",
+          "en": "Integration is important.",
+          "vi": "Hội nhập quan trọng."
+        }
+      ]
+    },
+    "ID647": {
+      "word": "Intelligenz",
+      "artikel": "die",
+      "plural": "-",
+      "english": "intelligence",
+      "vietnamese": "trí thông minh",
+      "definition_en": "Mental capability.",
+      "definition_vi": "Khả năng trí tuệ.",
+      "examples": [
+        {
+          "de": "Die Intelligenz ist hoch.",
+          "en": "The intelligence is high.",
+          "vi": "Trí thông minh cao."
+        }
+      ]
+    },
+    "ID648": {
+      "word": "Intensität",
+      "artikel": "die",
+      "plural": "-",
+      "english": "intensity",
+      "vietnamese": "cường độ",
+      "definition_en": "The degree of strength.",
+      "definition_vi": "Mức độ mạnh mẽ.",
+      "examples": [
+        {
+          "de": "Die Intensität ist stark.",
+          "en": "The intensity is strong.",
+          "vi": "Cường độ mạnh."
+        }
+      ]
+    },
+    "ID649": {
+      "word": "Invasion",
+      "artikel": "die",
+      "plural": "Invasionen",
+      "english": "invasion",
+      "vietnamese": "xâm lược",
+      "definition_en": "An attack or intrusion.",
+      "definition_vi": "Một cuộc tấn công hoặc xâm nhập.",
+      "examples": [
+        {
+          "de": "Die Invasion war schnell.",
+          "en": "The invasion was quick.",
+          "vi": "Cuộc xâm lược nhanh."
         }
       ]
     }

@@ -13,7 +13,40 @@
     "himmel": "ID169",
     "huhn": "ID191",
     "hase": "ID194",
-    "hälfte": "ID224"
+    "hälfte": "ID224",
+    "haar": "ID593",
+    "hafen": "ID594",
+    "hahn": "ID595",
+    "haken": "ID596",
+    "hals": "ID597",
+    "halt": "ID598",
+    "hammer": "ID599",
+    "handel": "ID600",
+    "handy": "ID601",
+    "haushalt": "ID602",
+    "haut": "ID603",
+    "heft": "ID604",
+    "heimat": "ID605",
+    "heirat": "ID606",
+    "held": "ID623",
+    "herr": "ID608",
+    "hilfe": "ID609",
+    "hochzeit": "ID610",
+    "höhe": "ID611",
+    "höhle": "ID612",
+    "holz": "ID613",
+    "honig": "ID614",
+    "horn": "ID615",
+    "humor": "ID616",
+    "hunger": "ID617",
+    "hüfte": "ID618",
+    "hügel": "ID619",
+    "hütte": "ID620",
+    "hupe": "ID621",
+    "herd": "ID622",
+    "hebel": "ID624",
+    "heizung": "ID625",
+    "helm": "ID626"
   },
   "byEnglish": {
     "house": [
@@ -57,6 +90,106 @@
     ],
     "half": [
       "ID224"
+    ],
+    "hair": [
+      "ID593"
+    ],
+    "harbor / port": [
+      "ID594"
+    ],
+    "rooster / tap": [
+      "ID595"
+    ],
+    "hook": [
+      "ID596"
+    ],
+    "neck / throat": [
+      "ID597"
+    ],
+    "stop / hold": [
+      "ID598"
+    ],
+    "hammer": [
+      "ID599"
+    ],
+    "trade / commerce": [
+      "ID600"
+    ],
+    "mobile phone": [
+      "ID601"
+    ],
+    "household": [
+      "ID602"
+    ],
+    "skin": [
+      "ID603"
+    ],
+    "notebook": [
+      "ID604"
+    ],
+    "homeland": [
+      "ID605"
+    ],
+    "marriage": [
+      "ID606"
+    ],
+    "hero": [
+      "ID607",
+      "ID623"
+    ],
+    "mister / gentleman": [
+      "ID608"
+    ],
+    "help": [
+      "ID609"
+    ],
+    "wedding": [
+      "ID610"
+    ],
+    "height": [
+      "ID611"
+    ],
+    "cave": [
+      "ID612"
+    ],
+    "wood": [
+      "ID613"
+    ],
+    "honey": [
+      "ID614"
+    ],
+    "horn": [
+      "ID615"
+    ],
+    "humor": [
+      "ID616"
+    ],
+    "hunger": [
+      "ID617"
+    ],
+    "hip": [
+      "ID618"
+    ],
+    "hill": [
+      "ID619"
+    ],
+    "hut / cabin": [
+      "ID620"
+    ],
+    "horn (car)": [
+      "ID621"
+    ],
+    "stove": [
+      "ID622"
+    ],
+    "lever": [
+      "ID624"
+    ],
+    "heating": [
+      "ID625"
+    ],
+    "helmet": [
+      "ID626"
     ]
   },
   "byVietnamese": {
@@ -101,6 +234,106 @@
     ],
     "một nửa": [
       "ID224"
+    ],
+    "tóc": [
+      "ID593"
+    ],
+    "cảng": [
+      "ID594"
+    ],
+    "gà trống": [
+      "ID595"
+    ],
+    "móc": [
+      "ID596"
+    ],
+    "cổ": [
+      "ID597"
+    ],
+    "dừng": [
+      "ID598"
+    ],
+    "búa": [
+      "ID599"
+    ],
+    "thương mại": [
+      "ID600"
+    ],
+    "điện thoại di động": [
+      "ID601"
+    ],
+    "hộ gia đình": [
+      "ID602"
+    ],
+    "da": [
+      "ID603"
+    ],
+    "vở": [
+      "ID604"
+    ],
+    "quê hương": [
+      "ID605"
+    ],
+    "hôn nhân": [
+      "ID606"
+    ],
+    "anh hùng": [
+      "ID607",
+      "ID623"
+    ],
+    "ông": [
+      "ID608"
+    ],
+    "giúp đỡ": [
+      "ID609"
+    ],
+    "đám cưới": [
+      "ID610"
+    ],
+    "độ cao": [
+      "ID611"
+    ],
+    "hang động": [
+      "ID612"
+    ],
+    "gỗ": [
+      "ID613"
+    ],
+    "mật ong": [
+      "ID614"
+    ],
+    "sừng": [
+      "ID615"
+    ],
+    "hài hước": [
+      "ID616"
+    ],
+    "đói": [
+      "ID617"
+    ],
+    "hông": [
+      "ID618"
+    ],
+    "đồi": [
+      "ID619"
+    ],
+    "túp lều": [
+      "ID620"
+    ],
+    "còi xe": [
+      "ID621"
+    ],
+    "bếp": [
+      "ID622"
+    ],
+    "đòn bẩy": [
+      "ID624"
+    ],
+    "hệ thống sưởi": [
+      "ID625"
+    ],
+    "mũ bảo hiểm": [
+      "ID626"
     ]
   },
   "byArtikel": {
@@ -110,19 +343,53 @@
       "ID150",
       "ID163",
       "ID169",
-      "ID194"
+      "ID194",
+      "ID594",
+      "ID595",
+      "ID596",
+      "ID597",
+      "ID598",
+      "ID599",
+      "ID600",
+      "ID602",
+      "ID607",
+      "ID608",
+      "ID614",
+      "ID616",
+      "ID617",
+      "ID619",
+      "ID622",
+      "ID623",
+      "ID624",
+      "ID626"
     ],
     "die": [
       "ID013",
       "ID141",
-      "ID224"
+      "ID224",
+      "ID603",
+      "ID605",
+      "ID606",
+      "ID609",
+      "ID610",
+      "ID611",
+      "ID612",
+      "ID618",
+      "ID620",
+      "ID621",
+      "ID625"
     ],
     "das": [
       "ID001",
       "ID059",
       "ID120",
       "ID140",
-      "ID191"
+      "ID191",
+      "ID593",
+      "ID601",
+      "ID604",
+      "ID613",
+      "ID615"
     ]
   },
   "entries": {
@@ -347,6 +614,550 @@
           "de": "Die Hälfte des Kuchens.",
           "en": "Half of the cake.",
           "vi": "Một nửa chiếc bánh."
+        }
+      ]
+    },
+    "ID593": {
+      "word": "Haar",
+      "artikel": "das",
+      "plural": "Haare",
+      "english": "hair",
+      "vietnamese": "tóc",
+      "definition_en": "Strands growing on the head.",
+      "definition_vi": "Sợi mọc trên đầu.",
+      "examples": [
+        {
+          "de": "Das Haar ist lang.",
+          "en": "The hair is long.",
+          "vi": "Tóc dài."
+        }
+      ]
+    },
+    "ID594": {
+      "word": "Hafen",
+      "artikel": "der",
+      "plural": "Häfen",
+      "english": "harbor / port",
+      "vietnamese": "cảng",
+      "definition_en": "A place for ships.",
+      "definition_vi": "Nơi cho tàu thuyền.",
+      "examples": [
+        {
+          "de": "Der Hafen ist groß.",
+          "en": "The harbor is large.",
+          "vi": "Cảng lớn."
+        }
+      ]
+    },
+    "ID595": {
+      "word": "Hahn",
+      "artikel": "der",
+      "plural": "Hähne",
+      "english": "rooster / tap",
+      "vietnamese": "gà trống",
+      "definition_en": "A male chicken.",
+      "definition_vi": "Gà trống.",
+      "examples": [
+        {
+          "de": "Der Hahn kräht.",
+          "en": "The rooster crows.",
+          "vi": "Gà trống gáy."
+        }
+      ]
+    },
+    "ID596": {
+      "word": "Haken",
+      "artikel": "der",
+      "plural": "Haken",
+      "english": "hook",
+      "vietnamese": "móc",
+      "definition_en": "A curved device for hanging.",
+      "definition_vi": "Dụng cụ cong để treo.",
+      "examples": [
+        {
+          "de": "Der Haken ist stark.",
+          "en": "The hook is strong.",
+          "vi": "Móc chắc."
+        }
+      ]
+    },
+    "ID597": {
+      "word": "Hals",
+      "artikel": "der",
+      "plural": "Hälse",
+      "english": "neck / throat",
+      "vietnamese": "cổ",
+      "definition_en": "The part connecting head to body.",
+      "definition_vi": "Phần nối đầu với cơ thể.",
+      "examples": [
+        {
+          "de": "Der Hals tut weh.",
+          "en": "The throat hurts.",
+          "vi": "Cổ đau."
+        }
+      ]
+    },
+    "ID598": {
+      "word": "Halt",
+      "artikel": "der",
+      "plural": "-",
+      "english": "stop / hold",
+      "vietnamese": "dừng",
+      "definition_en": "A cessation of movement.",
+      "definition_vi": "Sự ngừng chuyển động.",
+      "examples": [
+        {
+          "de": "Der Bus macht Halt.",
+          "en": "The bus stops.",
+          "vi": "Xe buýt dừng lại."
+        }
+      ]
+    },
+    "ID599": {
+      "word": "Hammer",
+      "artikel": "der",
+      "plural": "Hämmer",
+      "english": "hammer",
+      "vietnamese": "búa",
+      "definition_en": "A tool for hitting nails.",
+      "definition_vi": "Công cụ để đóng đinh.",
+      "examples": [
+        {
+          "de": "Der Hammer ist schwer.",
+          "en": "The hammer is heavy.",
+          "vi": "Búa nặng."
+        }
+      ]
+    },
+    "ID600": {
+      "word": "Handel",
+      "artikel": "der",
+      "plural": "-",
+      "english": "trade / commerce",
+      "vietnamese": "thương mại",
+      "definition_en": "Buying and selling goods.",
+      "definition_vi": "Mua và bán hàng hóa.",
+      "examples": [
+        {
+          "de": "Der Handel wächst.",
+          "en": "Trade is growing.",
+          "vi": "Thương mại đang phát triển."
+        }
+      ]
+    },
+    "ID601": {
+      "word": "Handy",
+      "artikel": "das",
+      "plural": "Handys",
+      "english": "mobile phone",
+      "vietnamese": "điện thoại di động",
+      "definition_en": "A portable telephone.",
+      "definition_vi": "Điện thoại cầm tay.",
+      "examples": [
+        {
+          "de": "Das Handy klingelt.",
+          "en": "The mobile phone is ringing.",
+          "vi": "Điện thoại di động đang reo."
+        }
+      ]
+    },
+    "ID602": {
+      "word": "Haushalt",
+      "artikel": "der",
+      "plural": "Haushalte",
+      "english": "household",
+      "vietnamese": "hộ gia đình",
+      "definition_en": "A domestic unit.",
+      "definition_vi": "Một đơn vị gia đình.",
+      "examples": [
+        {
+          "de": "Der Haushalt ist groß.",
+          "en": "The household is large.",
+          "vi": "Hộ gia đình lớn."
+        }
+      ]
+    },
+    "ID603": {
+      "word": "Haut",
+      "artikel": "die",
+      "plural": "Häute",
+      "english": "skin",
+      "vietnamese": "da",
+      "definition_en": "The outer covering of the body.",
+      "definition_vi": "Lớp bọc ngoài của cơ thể.",
+      "examples": [
+        {
+          "de": "Die Haut ist weich.",
+          "en": "The skin is soft.",
+          "vi": "Da mềm mại."
+        }
+      ]
+    },
+    "ID604": {
+      "word": "Heft",
+      "artikel": "das",
+      "plural": "Hefte",
+      "english": "notebook",
+      "vietnamese": "vở",
+      "definition_en": "A book for writing.",
+      "definition_vi": "Cuốn sách để viết.",
+      "examples": [
+        {
+          "de": "Das Heft ist voll.",
+          "en": "The notebook is full.",
+          "vi": "Vở đầy."
+        }
+      ]
+    },
+    "ID605": {
+      "word": "Heimat",
+      "artikel": "die",
+      "plural": "-",
+      "english": "homeland",
+      "vietnamese": "quê hương",
+      "definition_en": "One's native country.",
+      "definition_vi": "Đất nước quê hương.",
+      "examples": [
+        {
+          "de": "Die Heimat ist schön.",
+          "en": "The homeland is beautiful.",
+          "vi": "Quê hương đẹp."
+        }
+      ]
+    },
+    "ID606": {
+      "word": "Heirat",
+      "artikel": "die",
+      "plural": "Heiraten",
+      "english": "marriage",
+      "vietnamese": "hôn nhân",
+      "definition_en": "The state of being married.",
+      "definition_vi": "Trạng thái kết hôn.",
+      "examples": [
+        {
+          "de": "Die Heirat war gestern.",
+          "en": "The marriage was yesterday.",
+          "vi": "Đám cưới diễn ra hôm qua."
+        }
+      ]
+    },
+    "ID607": {
+      "word": "Held",
+      "artikel": "der",
+      "plural": "Helden",
+      "english": "hero",
+      "vietnamese": "anh hùng",
+      "definition_en": "A brave person.",
+      "definition_vi": "Một người dũng cảm.",
+      "examples": [
+        {
+          "de": "Der Held ist mutig.",
+          "en": "The hero is brave.",
+          "vi": "Anh hùng dũng cảm."
+        }
+      ]
+    },
+    "ID608": {
+      "word": "Herr",
+      "artikel": "der",
+      "plural": "Herren",
+      "english": "mister / gentleman",
+      "vietnamese": "ông",
+      "definition_en": "A polite term for a man.",
+      "definition_vi": "Cách xưng hô lịch sự cho nam giới.",
+      "examples": [
+        {
+          "de": "Herr Müller kommt.",
+          "en": "Mr. Müller is coming.",
+          "vi": "Ông Müller đang đến."
+        }
+      ]
+    },
+    "ID609": {
+      "word": "Hilfe",
+      "artikel": "die",
+      "plural": "Hilfen",
+      "english": "help",
+      "vietnamese": "giúp đỡ",
+      "definition_en": "Assistance given to someone.",
+      "definition_vi": "Sự giúp đỡ cho ai đó.",
+      "examples": [
+        {
+          "de": "Ich brauche Hilfe.",
+          "en": "I need help.",
+          "vi": "Tôi cần giúp đỡ."
+        }
+      ]
+    },
+    "ID610": {
+      "word": "Hochzeit",
+      "artikel": "die",
+      "plural": "Hochzeiten",
+      "english": "wedding",
+      "vietnamese": "đám cưới",
+      "definition_en": "A marriage ceremony.",
+      "definition_vi": "Lễ kết hôn.",
+      "examples": [
+        {
+          "de": "Die Hochzeit ist schön.",
+          "en": "The wedding is beautiful.",
+          "vi": "Đám cưới đẹp."
+        }
+      ]
+    },
+    "ID611": {
+      "word": "Höhe",
+      "artikel": "die",
+      "plural": "Höhen",
+      "english": "height",
+      "vietnamese": "độ cao",
+      "definition_en": "The measurement of how tall.",
+      "definition_vi": "Đo lường mức độ cao.",
+      "examples": [
+        {
+          "de": "Die Höhe ist 100 Meter.",
+          "en": "The height is 100 meters.",
+          "vi": "Độ cao 100 mét."
+        }
+      ]
+    },
+    "ID612": {
+      "word": "Höhle",
+      "artikel": "die",
+      "plural": "Höhlen",
+      "english": "cave",
+      "vietnamese": "hang động",
+      "definition_en": "A natural underground space.",
+      "definition_vi": "Không gian ngầm tự nhiên.",
+      "examples": [
+        {
+          "de": "Die Höhle ist dunkel.",
+          "en": "The cave is dark.",
+          "vi": "Hang động tối."
+        }
+      ]
+    },
+    "ID613": {
+      "word": "Holz",
+      "artikel": "das",
+      "plural": "Hölzer",
+      "english": "wood",
+      "vietnamese": "gỗ",
+      "definition_en": "Material from trees.",
+      "definition_vi": "Vật liệu từ cây.",
+      "examples": [
+        {
+          "de": "Das Holz ist hart.",
+          "en": "The wood is hard.",
+          "vi": "Gỗ cứng."
+        }
+      ]
+    },
+    "ID614": {
+      "word": "Honig",
+      "artikel": "der",
+      "plural": "-",
+      "english": "honey",
+      "vietnamese": "mật ong",
+      "definition_en": "Sweet substance made by bees.",
+      "definition_vi": "Chất ngọt do ong tạo ra.",
+      "examples": [
+        {
+          "de": "Der Honig ist süß.",
+          "en": "The honey is sweet.",
+          "vi": "Mật ong ngọt."
+        }
+      ]
+    },
+    "ID615": {
+      "word": "Horn",
+      "artikel": "das",
+      "plural": "Hörner",
+      "english": "horn",
+      "vietnamese": "sừng",
+      "definition_en": "A hard projection on animals.",
+      "definition_vi": "Phần cứng nhô ra trên động vật.",
+      "examples": [
+        {
+          "de": "Das Horn ist spitz.",
+          "en": "The horn is pointed.",
+          "vi": "Sừng nhọn."
+        }
+      ]
+    },
+    "ID616": {
+      "word": "Humor",
+      "artikel": "der",
+      "plural": "-",
+      "english": "humor",
+      "vietnamese": "hài hước",
+      "definition_en": "The quality of being funny.",
+      "definition_vi": "Tính chất vui nhộn.",
+      "examples": [
+        {
+          "de": "Der Humor ist gut.",
+          "en": "The humor is good.",
+          "vi": "Hài hước tốt."
+        }
+      ]
+    },
+    "ID617": {
+      "word": "Hunger",
+      "artikel": "der",
+      "plural": "-",
+      "english": "hunger",
+      "vietnamese": "đói",
+      "definition_en": "The feeling of needing food.",
+      "definition_vi": "Cảm giác cần thức ăn.",
+      "examples": [
+        {
+          "de": "Ich habe Hunger.",
+          "en": "I am hungry.",
+          "vi": "Tôi đói."
+        }
+      ]
+    },
+    "ID618": {
+      "word": "Hüfte",
+      "artikel": "die",
+      "plural": "Hüften",
+      "english": "hip",
+      "vietnamese": "hông",
+      "definition_en": "The side of the body.",
+      "definition_vi": "Phần bên của cơ thể.",
+      "examples": [
+        {
+          "de": "Die Hüfte tut weh.",
+          "en": "The hip hurts.",
+          "vi": "Hông đau."
+        }
+      ]
+    },
+    "ID619": {
+      "word": "Hügel",
+      "artikel": "der",
+      "plural": "Hügel",
+      "english": "hill",
+      "vietnamese": "đồi",
+      "definition_en": "A raised area of land.",
+      "definition_vi": "Khu vực đất cao.",
+      "examples": [
+        {
+          "de": "Der Hügel ist grün.",
+          "en": "The hill is green.",
+          "vi": "Đồi xanh."
+        }
+      ]
+    },
+    "ID620": {
+      "word": "Hütte",
+      "artikel": "die",
+      "plural": "Hütten",
+      "english": "hut / cabin",
+      "vietnamese": "túp lều",
+      "definition_en": "A small simple dwelling.",
+      "definition_vi": "Nhà ở đơn giản nhỏ.",
+      "examples": [
+        {
+          "de": "Die Hütte ist alt.",
+          "en": "The hut is old.",
+          "vi": "Túp lều cũ."
+        }
+      ]
+    },
+    "ID621": {
+      "word": "Hupe",
+      "artikel": "die",
+      "plural": "Hupen",
+      "english": "horn (car)",
+      "vietnamese": "còi xe",
+      "definition_en": "A device that makes a warning sound.",
+      "definition_vi": "Thiết bị tạo ra âm thanh cảnh báo.",
+      "examples": [
+        {
+          "de": "Die Hupe ist laut.",
+          "en": "The horn is loud.",
+          "vi": "Còi xe to."
+        }
+      ]
+    },
+    "ID622": {
+      "word": "Herd",
+      "artikel": "der",
+      "plural": "Herde",
+      "english": "stove",
+      "vietnamese": "bếp",
+      "definition_en": "A cooking appliance.",
+      "definition_vi": "Thiết bị nấu ăn.",
+      "examples": [
+        {
+          "de": "Der Herd ist heiß.",
+          "en": "The stove is hot.",
+          "vi": "Bếp nóng."
+        }
+      ]
+    },
+    "ID623": {
+      "word": "Held",
+      "artikel": "der",
+      "plural": "Helden",
+      "english": "hero",
+      "vietnamese": "anh hùng",
+      "definition_en": "A brave person.",
+      "definition_vi": "Người dũng cảm.",
+      "examples": [
+        {
+          "de": "Der Held rettet die Stadt.",
+          "en": "The hero saves the city.",
+          "vi": "Anh hùng cứu thành phố."
+        }
+      ]
+    },
+    "ID624": {
+      "word": "Hebel",
+      "artikel": "der",
+      "plural": "Hebel",
+      "english": "lever",
+      "vietnamese": "đòn bẩy",
+      "definition_en": "A bar for lifting.",
+      "definition_vi": "Thanh để nâng.",
+      "examples": [
+        {
+          "de": "Der Hebel ist stark.",
+          "en": "The lever is strong.",
+          "vi": "Đòn bẩy chắc."
+        }
+      ]
+    },
+    "ID625": {
+      "word": "Heizung",
+      "artikel": "die",
+      "plural": "Heizungen",
+      "english": "heating",
+      "vietnamese": "hệ thống sưởi",
+      "definition_en": "A system for warming.",
+      "definition_vi": "Hệ thống làm ấm.",
+      "examples": [
+        {
+          "de": "Die Heizung funktioniert.",
+          "en": "The heating works.",
+          "vi": "Hệ thống sưởi hoạt động."
+        }
+      ]
+    },
+    "ID626": {
+      "word": "Helm",
+      "artikel": "der",
+      "plural": "Helme",
+      "english": "helmet",
+      "vietnamese": "mũ bảo hiểm",
+      "definition_en": "Protective headgear.",
+      "definition_vi": "Đồ bảo vệ đầu.",
+      "examples": [
+        {
+          "de": "Der Helm ist wichtig.",
+          "en": "The helmet is important.",
+          "vi": "Mũ bảo hiểm quan trọng."
         }
       ]
     }

@@ -1,14 +1,91 @@
 {
   "byWord": {
     "jahr": "ID026",
-    "jacke": "ID144"
+    "jacke": "ID650",
+    "jagd": "ID651",
+    "januar": "ID652",
+    "japan": "ID653",
+    "jazz": "ID654",
+    "jeans": "ID655",
+    "job": "ID656",
+    "journalist": "ID657",
+    "jugend": "ID658",
+    "jugendliche": "ID659",
+    "juli": "ID660",
+    "juni": "ID661",
+    "junge": "ID662",
+    "justiz": "ID663",
+    "juwel": "ID664",
+    "jäger": "ID665",
+    "joghurt": "ID666",
+    "jubel": "ID667",
+    "jubiläum": "ID668",
+    "jury": "ID669"
   },
   "byEnglish": {
     "year": [
       "ID026"
     ],
     "jacket": [
-      "ID144"
+      "ID144",
+      "ID650"
+    ],
+    "hunt": [
+      "ID651"
+    ],
+    "January": [
+      "ID652"
+    ],
+    "Japan": [
+      "ID653"
+    ],
+    "jazz": [
+      "ID654"
+    ],
+    "jeans": [
+      "ID655"
+    ],
+    "job": [
+      "ID656"
+    ],
+    "journalist": [
+      "ID657"
+    ],
+    "youth": [
+      "ID658"
+    ],
+    "teenager": [
+      "ID659"
+    ],
+    "July": [
+      "ID660"
+    ],
+    "June": [
+      "ID661"
+    ],
+    "boy": [
+      "ID662"
+    ],
+    "justice system": [
+      "ID663"
+    ],
+    "jewel": [
+      "ID664"
+    ],
+    "hunter": [
+      "ID665"
+    ],
+    "yogurt": [
+      "ID666"
+    ],
+    "cheering": [
+      "ID667"
+    ],
+    "anniversary": [
+      "ID668"
+    ],
+    "jury": [
+      "ID669"
     ]
   },
   "byVietnamese": {
@@ -16,16 +93,97 @@
       "ID026"
     ],
     "áo khoác": [
-      "ID144"
+      "ID144",
+      "ID650"
+    ],
+    "cuộc săn": [
+      "ID651"
+    ],
+    "tháng Giêng": [
+      "ID652"
+    ],
+    "Nhật Bản": [
+      "ID653"
+    ],
+    "nhạc jazz": [
+      "ID654"
+    ],
+    "quần jean": [
+      "ID655"
+    ],
+    "công việc": [
+      "ID656"
+    ],
+    "nhà báo": [
+      "ID657"
+    ],
+    "tuổi trẻ": [
+      "ID658"
+    ],
+    "thiếu niên": [
+      "ID659"
+    ],
+    "tháng Bảy": [
+      "ID660"
+    ],
+    "tháng Sáu": [
+      "ID661"
+    ],
+    "cậu bé": [
+      "ID662"
+    ],
+    "hệ thống tư pháp": [
+      "ID663"
+    ],
+    "ngọc quý": [
+      "ID664"
+    ],
+    "thợ săn": [
+      "ID665"
+    ],
+    "sữa chua": [
+      "ID666"
+    ],
+    "hoan hô": [
+      "ID667"
+    ],
+    "kỷ niệm": [
+      "ID668"
+    ],
+    "bồi thẩm đoàn": [
+      "ID669"
     ]
   },
   "byArtikel": {
-    "der": [],
+    "der": [
+      "ID652",
+      "ID654",
+      "ID656",
+      "ID657",
+      "ID660",
+      "ID661",
+      "ID662",
+      "ID665",
+      "ID666",
+      "ID667"
+    ],
     "die": [
-      "ID144"
+      "ID144",
+      "ID650",
+      "ID651",
+      "ID655",
+      "ID658",
+      "ID663",
+      "ID669"
     ],
     "das": [
-      "ID026"
+      "ID026",
+      "ID653",
+      "ID664",
+      "ID668"
+    ],
+    "der/die": [
+      "ID659"
     ]
   },
   "entries": {
@@ -58,6 +216,326 @@
           "de": "Die Jacke ist warm.",
           "en": "The jacket is warm.",
           "vi": "Áo khoác ấm."
+        }
+      ]
+    },
+    "ID650": {
+      "word": "Jacke",
+      "artikel": "die",
+      "plural": "Jacken",
+      "english": "jacket",
+      "vietnamese": "áo khoác",
+      "definition_en": "An outer garment.",
+      "definition_vi": "Trang phục bên ngoài.",
+      "examples": [
+        {
+          "de": "Die Jacke ist warm.",
+          "en": "The jacket is warm.",
+          "vi": "Áo khoác ấm."
+        }
+      ]
+    },
+    "ID651": {
+      "word": "Jagd",
+      "artikel": "die",
+      "plural": "Jagden",
+      "english": "hunt",
+      "vietnamese": "cuộc săn",
+      "definition_en": "The pursuit of wild animals.",
+      "definition_vi": "Việc theo đuổi động vật hoang dã.",
+      "examples": [
+        {
+          "de": "Die Jagd beginnt.",
+          "en": "The hunt begins.",
+          "vi": "Cuộc săn bắt đầu."
+        }
+      ]
+    },
+    "ID652": {
+      "word": "Januar",
+      "artikel": "der",
+      "plural": "-",
+      "english": "January",
+      "vietnamese": "tháng Giêng",
+      "definition_en": "The first month.",
+      "definition_vi": "Tháng đầu tiên.",
+      "examples": [
+        {
+          "de": "Der Januar ist kalt.",
+          "en": "January is cold.",
+          "vi": "Tháng Giêng lạnh."
+        }
+      ]
+    },
+    "ID653": {
+      "word": "Japan",
+      "artikel": "das",
+      "plural": "-",
+      "english": "Japan",
+      "vietnamese": "Nhật Bản",
+      "definition_en": "An Asian country.",
+      "definition_vi": "Một quốc gia châu Á.",
+      "examples": [
+        {
+          "de": "Japan ist interessant.",
+          "en": "Japan is interesting.",
+          "vi": "Nhật Bản thú vị."
+        }
+      ]
+    },
+    "ID654": {
+      "word": "Jazz",
+      "artikel": "der",
+      "plural": "-",
+      "english": "jazz",
+      "vietnamese": "nhạc jazz",
+      "definition_en": "A music genre.",
+      "definition_vi": "Một thể loại âm nhạc.",
+      "examples": [
+        {
+          "de": "Der Jazz ist cool.",
+          "en": "Jazz is cool.",
+          "vi": "Nhạc jazz hay."
+        }
+      ]
+    },
+    "ID655": {
+      "word": "Jeans",
+      "artikel": "die",
+      "plural": "-",
+      "english": "jeans",
+      "vietnamese": "quần jean",
+      "definition_en": "Denim trousers.",
+      "definition_vi": "Quần vải denim.",
+      "examples": [
+        {
+          "de": "Die Jeans ist blau.",
+          "en": "The jeans are blue.",
+          "vi": "Quần jean màu xanh."
+        }
+      ]
+    },
+    "ID656": {
+      "word": "Job",
+      "artikel": "der",
+      "plural": "Jobs",
+      "english": "job",
+      "vietnamese": "công việc",
+      "definition_en": "Employment or work.",
+      "definition_vi": "Việc làm hoặc công việc.",
+      "examples": [
+        {
+          "de": "Der Job ist gut.",
+          "en": "The job is good.",
+          "vi": "Công việc tốt."
+        }
+      ]
+    },
+    "ID657": {
+      "word": "Journalist",
+      "artikel": "der",
+      "plural": "Journalisten",
+      "english": "journalist",
+      "vietnamese": "nhà báo",
+      "definition_en": "A news reporter.",
+      "definition_vi": "Người viết tin tức.",
+      "examples": [
+        {
+          "de": "Der Journalist schreibt.",
+          "en": "The journalist writes.",
+          "vi": "Nhà báo viết."
+        }
+      ]
+    },
+    "ID658": {
+      "word": "Jugend",
+      "artikel": "die",
+      "plural": "-",
+      "english": "youth",
+      "vietnamese": "tuổi trẻ",
+      "definition_en": "The time of being young.",
+      "definition_vi": "Thời gian còn trẻ.",
+      "examples": [
+        {
+          "de": "Die Jugend ist schön.",
+          "en": "Youth is beautiful.",
+          "vi": "Tuổi trẻ đẹp."
+        }
+      ]
+    },
+    "ID659": {
+      "word": "Jugendliche",
+      "artikel": "der/die",
+      "plural": "Jugendlichen",
+      "english": "teenager",
+      "vietnamese": "thiếu niên",
+      "definition_en": "A young person.",
+      "definition_vi": "Một người trẻ.",
+      "examples": [
+        {
+          "de": "Der Jugendliche lernt.",
+          "en": "The teenager is learning.",
+          "vi": "Thiếu niên đang học."
+        }
+      ]
+    },
+    "ID660": {
+      "word": "Juli",
+      "artikel": "der",
+      "plural": "-",
+      "english": "July",
+      "vietnamese": "tháng Bảy",
+      "definition_en": "The seventh month.",
+      "definition_vi": "Tháng thứ bảy.",
+      "examples": [
+        {
+          "de": "Der Juli ist heiß.",
+          "en": "July is hot.",
+          "vi": "Tháng Bảy nóng."
+        }
+      ]
+    },
+    "ID661": {
+      "word": "Juni",
+      "artikel": "der",
+      "plural": "-",
+      "english": "June",
+      "vietnamese": "tháng Sáu",
+      "definition_en": "The sixth month.",
+      "definition_vi": "Tháng thứ sáu.",
+      "examples": [
+        {
+          "de": "Der Juni ist warm.",
+          "en": "June is warm.",
+          "vi": "Tháng Sáu ấm."
+        }
+      ]
+    },
+    "ID662": {
+      "word": "Junge",
+      "artikel": "der",
+      "plural": "Jungen",
+      "english": "boy",
+      "vietnamese": "cậu bé",
+      "definition_en": "A male child.",
+      "definition_vi": "Trẻ em nam.",
+      "examples": [
+        {
+          "de": "Der Junge spielt.",
+          "en": "The boy is playing.",
+          "vi": "Cậu bé đang chơi."
+        }
+      ]
+    },
+    "ID663": {
+      "word": "Justiz",
+      "artikel": "die",
+      "plural": "-",
+      "english": "justice system",
+      "vietnamese": "hệ thống tư pháp",
+      "definition_en": "The legal system.",
+      "definition_vi": "Hệ thống pháp luật.",
+      "examples": [
+        {
+          "de": "Die Justiz entscheidet.",
+          "en": "The justice system decides.",
+          "vi": "Hệ thống tư pháp quyết định."
+        }
+      ]
+    },
+    "ID664": {
+      "word": "Juwel",
+      "artikel": "das",
+      "plural": "Juwelen",
+      "english": "jewel",
+      "vietnamese": "ngọc quý",
+      "definition_en": "A precious gem.",
+      "definition_vi": "Viên đá quý.",
+      "examples": [
+        {
+          "de": "Das Juwel glänzt.",
+          "en": "The jewel shines.",
+          "vi": "Ngọc quý lấp lánh."
+        }
+      ]
+    },
+    "ID665": {
+      "word": "Jäger",
+      "artikel": "der",
+      "plural": "Jäger",
+      "english": "hunter",
+      "vietnamese": "thợ săn",
+      "definition_en": "A person who hunts.",
+      "definition_vi": "Người đi săn.",
+      "examples": [
+        {
+          "de": "Der Jäger ist stark.",
+          "en": "The hunter is strong.",
+          "vi": "Thợ săn mạnh mẽ."
+        }
+      ]
+    },
+    "ID666": {
+      "word": "Joghurt",
+      "artikel": "der",
+      "plural": "Joghurts",
+      "english": "yogurt",
+      "vietnamese": "sữa chua",
+      "definition_en": "A dairy product.",
+      "definition_vi": "Sản phẩm từ sữa.",
+      "examples": [
+        {
+          "de": "Der Joghurt ist frisch.",
+          "en": "The yogurt is fresh.",
+          "vi": "Sữa chua tươi."
+        }
+      ]
+    },
+    "ID667": {
+      "word": "Jubel",
+      "artikel": "der",
+      "plural": "-",
+      "english": "cheering",
+      "vietnamese": "hoan hô",
+      "definition_en": "Expressions of joy.",
+      "definition_vi": "Biểu hiện vui mừng.",
+      "examples": [
+        {
+          "de": "Der Jubel ist laut.",
+          "en": "The cheering is loud.",
+          "vi": "Hoan hô ầm ĩ."
+        }
+      ]
+    },
+    "ID668": {
+      "word": "Jubiläum",
+      "artikel": "das",
+      "plural": "Jubiläen",
+      "english": "anniversary",
+      "vietnamese": "kỷ niệm",
+      "definition_en": "A special date.",
+      "definition_vi": "Một ngày đặc biệt.",
+      "examples": [
+        {
+          "de": "Das Jubiläum ist wichtig.",
+          "en": "The anniversary is important.",
+          "vi": "Kỷ niệm quan trọng."
+        }
+      ]
+    },
+    "ID669": {
+      "word": "Jury",
+      "artikel": "die",
+      "plural": "Jurys",
+      "english": "jury",
+      "vietnamese": "bồi thẩm đoàn",
+      "definition_en": "A group judging a case.",
+      "definition_vi": "Nhóm xét xử vụ án.",
+      "examples": [
+        {
+          "de": "Die Jury entscheidet.",
+          "en": "The jury decides.",
+          "vi": "Bồi thẩm đoàn quyết định."
         }
       ]
     }

@@ -6,7 +6,7 @@
     "familie": "ID039",
     "fuß": "ID055",
     "finger": "ID058",
-    "fleisch": "ID449",
+    "fleisch": "ID540",
     "fisch": "ID192",
     "fernseher": "ID091",
     "fahrer": "ID113",
@@ -15,38 +15,38 @@
     "flugzeug": "ID130",
     "farbe": "ID151",
     "frühling": "ID161",
-    "feuer": "ID444",
-    "fluss": "ID450",
-    "form": "ID451",
-    "fehler": "ID439",
+    "feuer": "ID535",
+    "fluss": "ID541",
+    "form": "ID542",
+    "fehler": "ID530",
     "frage": "ID240",
-    "fabrik": "ID427",
-    "fach": "ID428",
-    "faden": "ID429",
-    "fahne": "ID430",
-    "fahrkarte": "ID431",
-    "fahrplan": "ID432",
-    "fähre": "ID433",
-    "fähigkeit": "ID434",
-    "fall": "ID435",
-    "fantasie": "ID436",
-    "fass": "ID437",
-    "faust": "ID438",
-    "feld": "ID440",
-    "fell": "ID441",
-    "ferien": "ID442",
-    "fest": "ID443",
-    "fieber": "ID445",
-    "film": "ID446",
-    "firma": "ID447",
-    "flasche": "ID448",
-    "foto": "ID452",
-    "freiheit": "ID453",
-    "friede": "ID454",
-    "frost": "ID455",
-    "frucht": "ID456",
-    "fuchs": "ID457",
-    "fußball": "ID458"
+    "fabrik": "ID518",
+    "fach": "ID519",
+    "faden": "ID520",
+    "fahne": "ID521",
+    "fahrkarte": "ID522",
+    "fahrplan": "ID523",
+    "fähre": "ID524",
+    "fähigkeit": "ID525",
+    "fall": "ID526",
+    "fantasie": "ID527",
+    "fass": "ID528",
+    "faust": "ID529",
+    "feld": "ID531",
+    "fell": "ID532",
+    "ferien": "ID533",
+    "fest": "ID534",
+    "fieber": "ID536",
+    "film": "ID537",
+    "firma": "ID538",
+    "flasche": "ID539",
+    "foto": "ID543",
+    "freiheit": "ID544",
+    "friede": "ID545",
+    "frost": "ID546",
+    "frucht": "ID547",
+    "fuchs": "ID548",
+    "fußball": "ID549"
   },
   "byEnglish": {
     "woman": [
@@ -69,7 +69,8 @@
     ],
     "meat": [
       "ID063",
-      "ID449"
+      "ID449",
+      "ID540"
     ],
     "fish": [
       "ID192"
@@ -97,105 +98,136 @@
     ],
     "fire": [
       "ID176",
-      "ID444"
+      "ID444",
+      "ID535"
     ],
     "river": [
       "ID179",
-      "ID450"
+      "ID450",
+      "ID541"
     ],
     "shape": [
       "ID219"
     ],
     "mistake": [
       "ID236",
-      "ID439"
+      "ID439",
+      "ID530"
     ],
     "question": [
       "ID240"
     ],
     "factory": [
-      "ID427"
+      "ID427",
+      "ID518"
     ],
     "subject": [
-      "ID428"
+      "ID428",
+      "ID519"
     ],
     "thread": [
-      "ID429"
+      "ID429",
+      "ID520"
     ],
     "flag": [
-      "ID430"
+      "ID430",
+      "ID521"
     ],
     "ticket": [
-      "ID431"
+      "ID431",
+      "ID522"
     ],
     "timetable": [
-      "ID432"
+      "ID432",
+      "ID523"
     ],
     "ferry": [
-      "ID433"
+      "ID433",
+      "ID524"
     ],
     "ability": [
-      "ID434"
+      "ID434",
+      "ID525"
     ],
     "case": [
-      "ID435"
+      "ID435",
+      "ID526"
     ],
     "fantasy": [
-      "ID436"
+      "ID436",
+      "ID527"
     ],
     "barrel": [
-      "ID437"
+      "ID437",
+      "ID528"
     ],
     "fist": [
-      "ID438"
+      "ID438",
+      "ID529"
     ],
     "field": [
-      "ID440"
+      "ID440",
+      "ID531"
     ],
     "fur": [
-      "ID441"
+      "ID441",
+      "ID532"
     ],
     "vacation": [
-      "ID442"
+      "ID442",
+      "ID533"
     ],
     "festival": [
-      "ID443"
+      "ID443",
+      "ID534"
     ],
     "fever": [
-      "ID445"
+      "ID445",
+      "ID536"
     ],
     "film": [
-      "ID446"
+      "ID446",
+      "ID537"
     ],
     "company": [
-      "ID447"
+      "ID447",
+      "ID538"
     ],
     "bottle": [
-      "ID448"
+      "ID448",
+      "ID539"
     ],
     "form": [
-      "ID451"
+      "ID451",
+      "ID542"
     ],
     "photo": [
-      "ID452"
+      "ID452",
+      "ID543"
     ],
     "freedom": [
-      "ID453"
+      "ID453",
+      "ID544"
     ],
     "peace": [
-      "ID454"
+      "ID454",
+      "ID545"
     ],
     "frost": [
-      "ID455"
+      "ID455",
+      "ID546"
     ],
     "fruit": [
-      "ID456"
+      "ID456",
+      "ID547"
     ],
     "fox": [
-      "ID457"
+      "ID457",
+      "ID548"
     ],
     "football": [
-      "ID458"
+      "ID458",
+      "ID549"
     ]
   },
   "byVietnamese": {
@@ -219,7 +251,8 @@
     ],
     "thịt": [
       "ID063",
-      "ID449"
+      "ID449",
+      "ID540"
     ],
     "con cá": [
       "ID192"
@@ -247,103 +280,134 @@
     ],
     "lửa": [
       "ID176",
-      "ID444"
+      "ID444",
+      "ID535"
     ],
     "sông": [
       "ID179",
-      "ID450"
+      "ID450",
+      "ID541"
     ],
     "hình dạng": [
       "ID219",
-      "ID451"
+      "ID451",
+      "ID542"
     ],
     "lỗi": [
       "ID236",
-      "ID439"
+      "ID439",
+      "ID530"
     ],
     "câu hỏi": [
       "ID240"
     ],
     "nhà máy": [
-      "ID427"
+      "ID427",
+      "ID518"
     ],
     "môn học": [
-      "ID428"
+      "ID428",
+      "ID519"
     ],
     "sợi chỉ": [
-      "ID429"
+      "ID429",
+      "ID520"
     ],
     "lá cờ": [
-      "ID430"
+      "ID430",
+      "ID521"
     ],
     "vé": [
-      "ID431"
+      "ID431",
+      "ID522"
     ],
     "thời gian biểu": [
-      "ID432"
+      "ID432",
+      "ID523"
     ],
     "phà": [
-      "ID433"
+      "ID433",
+      "ID524"
     ],
     "khả năng": [
-      "ID434"
+      "ID434",
+      "ID525"
     ],
     "trường hợp": [
-      "ID435"
+      "ID435",
+      "ID526"
     ],
     "tưởng tượng": [
-      "ID436"
+      "ID436",
+      "ID527"
     ],
     "thùng": [
-      "ID437"
+      "ID437",
+      "ID528"
     ],
     "nắm đấm": [
-      "ID438"
+      "ID438",
+      "ID529"
     ],
     "cánh đồng": [
-      "ID440"
+      "ID440",
+      "ID531"
     ],
     "bộ lông": [
-      "ID441"
+      "ID441",
+      "ID532"
     ],
     "kỳ nghỉ": [
-      "ID442"
+      "ID442",
+      "ID533"
     ],
     "lễ hội": [
-      "ID443"
+      "ID443",
+      "ID534"
     ],
     "sốt": [
-      "ID445"
+      "ID445",
+      "ID536"
     ],
     "phim": [
-      "ID446"
+      "ID446",
+      "ID537"
     ],
     "công ty": [
-      "ID447"
+      "ID447",
+      "ID538"
     ],
     "chai": [
-      "ID448"
+      "ID448",
+      "ID539"
     ],
     "ảnh": [
-      "ID452"
+      "ID452",
+      "ID543"
     ],
     "tự do": [
-      "ID453"
+      "ID453",
+      "ID544"
     ],
     "hòa bình": [
-      "ID454"
+      "ID454",
+      "ID545"
     ],
     "sương giá": [
-      "ID455"
+      "ID455",
+      "ID546"
     ],
     "trái cây": [
-      "ID456"
+      "ID456",
+      "ID547"
     ],
     "con cáo": [
-      "ID457"
+      "ID457",
+      "ID548"
     ],
     "bóng đá": [
-      "ID458"
+      "ID458",
+      "ID549"
     ]
   },
   "byArtikel": {
@@ -364,7 +428,17 @@
       "ID454",
       "ID455",
       "ID457",
-      "ID458"
+      "ID458",
+      "ID520",
+      "ID523",
+      "ID526",
+      "ID530",
+      "ID537",
+      "ID541",
+      "ID545",
+      "ID546",
+      "ID548",
+      "ID549"
     ],
     "die": [
       "ID008",
@@ -384,7 +458,20 @@
       "ID448",
       "ID451",
       "ID453",
-      "ID456"
+      "ID456",
+      "ID518",
+      "ID521",
+      "ID522",
+      "ID524",
+      "ID525",
+      "ID527",
+      "ID529",
+      "ID533",
+      "ID538",
+      "ID539",
+      "ID542",
+      "ID544",
+      "ID547"
     ],
     "das": [
       "ID015",
@@ -403,7 +490,16 @@
       "ID444",
       "ID445",
       "ID449",
-      "ID452"
+      "ID452",
+      "ID519",
+      "ID528",
+      "ID531",
+      "ID532",
+      "ID534",
+      "ID535",
+      "ID536",
+      "ID540",
+      "ID543"
     ]
   },
   "entries": {
@@ -1224,6 +1320,518 @@
       ]
     },
     "ID458": {
+      "word": "Fußball",
+      "artikel": "der",
+      "plural": "Fußbälle",
+      "english": "football",
+      "vietnamese": "bóng đá",
+      "definition_en": "A popular sport.",
+      "definition_vi": "Môn thể thao phổ biến.",
+      "examples": [
+        {
+          "de": "Der Fußball ist rund.",
+          "en": "The football is round.",
+          "vi": "Bóng đá tròn."
+        }
+      ]
+    },
+    "ID518": {
+      "word": "Fabrik",
+      "artikel": "die",
+      "plural": "Fabriken",
+      "english": "factory",
+      "vietnamese": "nhà máy",
+      "definition_en": "A building where goods are manufactured.",
+      "definition_vi": "Tòa nhà sản xuất hàng hóa.",
+      "examples": [
+        {
+          "de": "Die Fabrik ist groß.",
+          "en": "The factory is large.",
+          "vi": "Nhà máy lớn."
+        }
+      ]
+    },
+    "ID519": {
+      "word": "Fach",
+      "artikel": "das",
+      "plural": "Fächer",
+      "english": "subject",
+      "vietnamese": "môn học",
+      "definition_en": "An area of study.",
+      "definition_vi": "Một lĩnh vực nghiên cứu.",
+      "examples": [
+        {
+          "de": "Das Fach ist interessant.",
+          "en": "The subject is interesting.",
+          "vi": "Môn học thú vị."
+        }
+      ]
+    },
+    "ID520": {
+      "word": "Faden",
+      "artikel": "der",
+      "plural": "Fäden",
+      "english": "thread",
+      "vietnamese": "sợi chỉ",
+      "definition_en": "A long thin strand.",
+      "definition_vi": "Một sợi dài và mỏng.",
+      "examples": [
+        {
+          "de": "Der Faden ist dünn.",
+          "en": "The thread is thin.",
+          "vi": "Sợi chỉ mỏng."
+        }
+      ]
+    },
+    "ID521": {
+      "word": "Fahne",
+      "artikel": "die",
+      "plural": "Fahnen",
+      "english": "flag",
+      "vietnamese": "lá cờ",
+      "definition_en": "A piece of cloth used as a symbol.",
+      "definition_vi": "Một mảnh vải dùng làm biểu tượng.",
+      "examples": [
+        {
+          "de": "Die Fahne weht.",
+          "en": "The flag waves.",
+          "vi": "Lá cờ tung bay."
+        }
+      ]
+    },
+    "ID522": {
+      "word": "Fahrkarte",
+      "artikel": "die",
+      "plural": "Fahrkarten",
+      "english": "ticket",
+      "vietnamese": "vé",
+      "definition_en": "A document allowing travel.",
+      "definition_vi": "Tài liệu cho phép đi lại.",
+      "examples": [
+        {
+          "de": "Die Fahrkarte ist teuer.",
+          "en": "The ticket is expensive.",
+          "vi": "Vé đắt."
+        }
+      ]
+    },
+    "ID523": {
+      "word": "Fahrplan",
+      "artikel": "der",
+      "plural": "Fahrpläne",
+      "english": "timetable",
+      "vietnamese": "thời gian biểu",
+      "definition_en": "A schedule of departures and arrivals.",
+      "definition_vi": "Lịch trình khởi hành và đến.",
+      "examples": [
+        {
+          "de": "Der Fahrplan ist aktuell.",
+          "en": "The timetable is current.",
+          "vi": "Thời gian biểu hiện tại."
+        }
+      ]
+    },
+    "ID524": {
+      "word": "Fähre",
+      "artikel": "die",
+      "plural": "Fähren",
+      "english": "ferry",
+      "vietnamese": "phà",
+      "definition_en": "A boat for transporting.",
+      "definition_vi": "Tàu để vận chuyển.",
+      "examples": [
+        {
+          "de": "Die Fähre fährt ab.",
+          "en": "The ferry departs.",
+          "vi": "Phà khởi hành."
+        }
+      ]
+    },
+    "ID525": {
+      "word": "Fähigkeit",
+      "artikel": "die",
+      "plural": "Fähigkeiten",
+      "english": "ability",
+      "vietnamese": "khả năng",
+      "definition_en": "The power to do something.",
+      "definition_vi": "Sức mạnh để làm điều gì đó.",
+      "examples": [
+        {
+          "de": "Die Fähigkeit ist wichtig.",
+          "en": "The ability is important.",
+          "vi": "Khả năng quan trọng."
+        }
+      ]
+    },
+    "ID526": {
+      "word": "Fall",
+      "artikel": "der",
+      "plural": "Fälle",
+      "english": "case",
+      "vietnamese": "trường hợp",
+      "definition_en": "An instance or situation.",
+      "definition_vi": "Một ví dụ hoặc tình huống.",
+      "examples": [
+        {
+          "de": "Der Fall ist schwer.",
+          "en": "The case is difficult.",
+          "vi": "Trường hợp khó."
+        }
+      ]
+    },
+    "ID527": {
+      "word": "Fantasie",
+      "artikel": "die",
+      "plural": "Fantasien",
+      "english": "fantasy",
+      "vietnamese": "tưởng tượng",
+      "definition_en": "The faculty of imagination.",
+      "definition_vi": "Khả năng tưởng tượng.",
+      "examples": [
+        {
+          "de": "Die Fantasie ist reich.",
+          "en": "The fantasy is rich.",
+          "vi": "Tưởng tượng phong phú."
+        }
+      ]
+    },
+    "ID528": {
+      "word": "Fass",
+      "artikel": "das",
+      "plural": "Fässer",
+      "english": "barrel",
+      "vietnamese": "thùng",
+      "definition_en": "A large container.",
+      "definition_vi": "Một thùng chứa lớn.",
+      "examples": [
+        {
+          "de": "Das Fass ist voll.",
+          "en": "The barrel is full.",
+          "vi": "Thùng đầy."
+        }
+      ]
+    },
+    "ID529": {
+      "word": "Faust",
+      "artikel": "die",
+      "plural": "Fäuste",
+      "english": "fist",
+      "vietnamese": "nắm đấm",
+      "definition_en": "A tightly closed hand.",
+      "definition_vi": "Bàn tay nắm chặt.",
+      "examples": [
+        {
+          "de": "Die Faust ist stark.",
+          "en": "The fist is strong.",
+          "vi": "Nắm đấm mạnh."
+        }
+      ]
+    },
+    "ID530": {
+      "word": "Fehler",
+      "artikel": "der",
+      "plural": "Fehler",
+      "english": "mistake",
+      "vietnamese": "lỗi",
+      "definition_en": "Something incorrect.",
+      "definition_vi": "Điều gì đó không đúng.",
+      "examples": [
+        {
+          "de": "Der Fehler ist klein.",
+          "en": "The mistake is small.",
+          "vi": "Lỗi nhỏ."
+        }
+      ]
+    },
+    "ID531": {
+      "word": "Feld",
+      "artikel": "das",
+      "plural": "Felder",
+      "english": "field",
+      "vietnamese": "cánh đồng",
+      "definition_en": "An area of open land.",
+      "definition_vi": "Một khu vực đất trống.",
+      "examples": [
+        {
+          "de": "Das Feld ist grün.",
+          "en": "The field is green.",
+          "vi": "Cánh đồng xanh."
+        }
+      ]
+    },
+    "ID532": {
+      "word": "Fell",
+      "artikel": "das",
+      "plural": "Felle",
+      "english": "fur",
+      "vietnamese": "bộ lông",
+      "definition_en": "The hairy coat of an animal.",
+      "definition_vi": "Bộ lông của động vật.",
+      "examples": [
+        {
+          "de": "Das Fell ist weich.",
+          "en": "The fur is soft.",
+          "vi": "Bộ lông mềm."
+        }
+      ]
+    },
+    "ID533": {
+      "word": "Ferien",
+      "artikel": "die",
+      "plural": "-",
+      "english": "vacation",
+      "vietnamese": "kỳ nghỉ",
+      "definition_en": "A period of rest from work.",
+      "definition_vi": "Thời kỳ nghỉ ngơi không làm việc.",
+      "examples": [
+        {
+          "de": "Die Ferien sind schön.",
+          "en": "The vacation is nice.",
+          "vi": "Kỳ nghỉ đẹp."
+        }
+      ]
+    },
+    "ID534": {
+      "word": "Fest",
+      "artikel": "das",
+      "plural": "Feste",
+      "english": "festival",
+      "vietnamese": "lễ hội",
+      "definition_en": "A celebration.",
+      "definition_vi": "Một lễ kỷ niệm.",
+      "examples": [
+        {
+          "de": "Das Fest ist fröhlich.",
+          "en": "The festival is cheerful.",
+          "vi": "Lễ hội vui vẻ."
+        }
+      ]
+    },
+    "ID535": {
+      "word": "Feuer",
+      "artikel": "das",
+      "plural": "Feuer",
+      "english": "fire",
+      "vietnamese": "lửa",
+      "definition_en": "Combustion producing heat and light.",
+      "definition_vi": "Sự cháy tạo ra nhiệt và ánh sáng.",
+      "examples": [
+        {
+          "de": "Das Feuer brennt.",
+          "en": "The fire burns.",
+          "vi": "Lửa cháy."
+        }
+      ]
+    },
+    "ID536": {
+      "word": "Fieber",
+      "artikel": "das",
+      "plural": "-",
+      "english": "fever",
+      "vietnamese": "sốt",
+      "definition_en": "High body temperature.",
+      "definition_vi": "Nhiệt độ cơ thể cao.",
+      "examples": [
+        {
+          "de": "Das Fieber ist hoch.",
+          "en": "The fever is high.",
+          "vi": "Sốt cao."
+        }
+      ]
+    },
+    "ID537": {
+      "word": "Film",
+      "artikel": "der",
+      "plural": "Filme",
+      "english": "film",
+      "vietnamese": "phim",
+      "definition_en": "A motion picture.",
+      "definition_vi": "Một bức tranh chuyển động.",
+      "examples": [
+        {
+          "de": "Der Film ist spannend.",
+          "en": "The film is exciting.",
+          "vi": "Phim hấp dẫn."
+        }
+      ]
+    },
+    "ID538": {
+      "word": "Firma",
+      "artikel": "die",
+      "plural": "Firmen",
+      "english": "company",
+      "vietnamese": "công ty",
+      "definition_en": "A business organization.",
+      "definition_vi": "Một tổ chức kinh doanh.",
+      "examples": [
+        {
+          "de": "Die Firma ist groß.",
+          "en": "The company is large.",
+          "vi": "Công ty lớn."
+        }
+      ]
+    },
+    "ID539": {
+      "word": "Flasche",
+      "artikel": "die",
+      "plural": "Flaschen",
+      "english": "bottle",
+      "vietnamese": "chai",
+      "definition_en": "A container for liquids.",
+      "definition_vi": "Một thùng chứa chất lỏng.",
+      "examples": [
+        {
+          "de": "Die Flasche ist leer.",
+          "en": "The bottle is empty.",
+          "vi": "Chai rỗng."
+        }
+      ]
+    },
+    "ID540": {
+      "word": "Fleisch",
+      "artikel": "das",
+      "plural": "-",
+      "english": "meat",
+      "vietnamese": "thịt",
+      "definition_en": "Animal flesh as food.",
+      "definition_vi": "Thịt động vật làm thức ăn.",
+      "examples": [
+        {
+          "de": "Das Fleisch ist frisch.",
+          "en": "The meat is fresh.",
+          "vi": "Thịt tươi."
+        }
+      ]
+    },
+    "ID541": {
+      "word": "Fluss",
+      "artikel": "der",
+      "plural": "Flüsse",
+      "english": "river",
+      "vietnamese": "sông",
+      "definition_en": "A large natural stream.",
+      "definition_vi": "Dòng chảy tự nhiên lớn.",
+      "examples": [
+        {
+          "de": "Der Fluss ist breit.",
+          "en": "The river is wide.",
+          "vi": "Sông rộng."
+        }
+      ]
+    },
+    "ID542": {
+      "word": "Form",
+      "artikel": "die",
+      "plural": "Formen",
+      "english": "form",
+      "vietnamese": "hình dạng",
+      "definition_en": "The shape of something.",
+      "definition_vi": "Hình dạng của cái gì đó.",
+      "examples": [
+        {
+          "de": "Die Form ist rund.",
+          "en": "The form is round.",
+          "vi": "Hình dạng tròn."
+        }
+      ]
+    },
+    "ID543": {
+      "word": "Foto",
+      "artikel": "das",
+      "plural": "Fotos",
+      "english": "photo",
+      "vietnamese": "ảnh",
+      "definition_en": "A photograph.",
+      "definition_vi": "Một bức ảnh.",
+      "examples": [
+        {
+          "de": "Das Foto ist schön.",
+          "en": "The photo is beautiful.",
+          "vi": "Ảnh đẹp."
+        }
+      ]
+    },
+    "ID544": {
+      "word": "Freiheit",
+      "artikel": "die",
+      "plural": "Freiheiten",
+      "english": "freedom",
+      "vietnamese": "tự do",
+      "definition_en": "The power to act freely.",
+      "definition_vi": "Sức mạnh để hành động tự do.",
+      "examples": [
+        {
+          "de": "Die Freiheit ist wichtig.",
+          "en": "Freedom is important.",
+          "vi": "Tự do quan trọng."
+        }
+      ]
+    },
+    "ID545": {
+      "word": "Friede",
+      "artikel": "der",
+      "plural": "-",
+      "english": "peace",
+      "vietnamese": "hòa bình",
+      "definition_en": "Freedom from war.",
+      "definition_vi": "Tự do khỏi chiến tranh.",
+      "examples": [
+        {
+          "de": "Der Friede ist kostbar.",
+          "en": "Peace is precious.",
+          "vi": "Hòa bình quý giá."
+        }
+      ]
+    },
+    "ID546": {
+      "word": "Frost",
+      "artikel": "der",
+      "plural": "Fröste",
+      "english": "frost",
+      "vietnamese": "sương giá",
+      "definition_en": "Ice crystals forming on surfaces.",
+      "definition_vi": "Tinh thể băng hình thành trên bề mặt.",
+      "examples": [
+        {
+          "de": "Der Frost ist kalt.",
+          "en": "The frost is cold.",
+          "vi": "Sương giá lạnh."
+        }
+      ]
+    },
+    "ID547": {
+      "word": "Frucht",
+      "artikel": "die",
+      "plural": "Früchte",
+      "english": "fruit",
+      "vietnamese": "trái cây",
+      "definition_en": "The edible product of a plant.",
+      "definition_vi": "Sản phẩm ăn được của thực vật.",
+      "examples": [
+        {
+          "de": "Die Frucht ist süß.",
+          "en": "The fruit is sweet.",
+          "vi": "Trái cây ngọt."
+        }
+      ]
+    },
+    "ID548": {
+      "word": "Fuchs",
+      "artikel": "der",
+      "plural": "Füchse",
+      "english": "fox",
+      "vietnamese": "con cáo",
+      "definition_en": "A wild animal.",
+      "definition_vi": "Động vật hoang dã.",
+      "examples": [
+        {
+          "de": "Der Fuchs ist schlau.",
+          "en": "The fox is clever.",
+          "vi": "Con cáo khôn ngoan."
+        }
+      ]
+    },
+    "ID549": {
       "word": "Fußball",
       "artikel": "der",
       "plural": "Fußbälle",
