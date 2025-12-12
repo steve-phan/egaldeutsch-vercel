@@ -6,17 +6,77 @@
     "tee": "ID033",
     "tochter": "ID045",
     "trinken": "ID062",
-    "toilette": "ID087",
+    "toilette": "ID1130",
     "telefon": "ID094",
-    "taxi": "ID127",
+    "taxi": "ID1109",
     "ticket": "ID132",
     "tasche": "ID134",
     "tier": "ID184",
-    "teil": "ID225"
+    "teil": "ID1112",
+    "tabak": "ID1097",
+    "tabelle": "ID1098",
+    "tablet": "ID1099",
+    "tafel": "ID1100",
+    "tal": "ID1101",
+    "tanz": "ID1102",
+    "taste": "ID1103",
+    "tat": "ID1104",
+    "tätigkeit": "ID1105",
+    "tatsache": "ID1106",
+    "taube": "ID1107",
+    "tausch": "ID1108",
+    "team": "ID1110",
+    "technik": "ID1111",
+    "teilnahme": "ID1113",
+    "tempel": "ID1114",
+    "temperatur": "ID1115",
+    "tempo": "ID1116",
+    "teppich": "ID1117",
+    "termin": "ID1118",
+    "terrasse": "ID1119",
+    "test": "ID1120",
+    "text": "ID1121",
+    "theater": "ID1122",
+    "thema": "ID1123",
+    "theorie": "ID1124",
+    "tiger": "ID1125",
+    "tinte": "ID1126",
+    "titel": "ID1127",
+    "toast": "ID1128",
+    "tod": "ID1129",
+    "ton": "ID1131",
+    "tor": "ID1132",
+    "torte": "ID1133",
+    "tourist": "ID1134",
+    "tradition": "ID1135",
+    "trainer": "ID1136",
+    "transport": "ID1137",
+    "traube": "ID1138",
+    "traum": "ID1139",
+    "treffen": "ID1140",
+    "treppe": "ID1141",
+    "treue": "ID1142",
+    "trick": "ID1156",
+    "triumph": "ID1144",
+    "tropfen": "ID1145",
+    "turm": "ID1146",
+    "typ": "ID1147",
+    "täter": "ID1148",
+    "tau": "ID1149",
+    "taucher": "ID1150",
+    "teich": "ID1151",
+    "teig": "ID1152",
+    "thron": "ID1153",
+    "topf": "ID1154",
+    "tracht": "ID1155",
+    "tropf": "ID1157",
+    "trost": "ID1158",
+    "truppe": "ID1159"
   },
   "byEnglish": {
     "table": [
-      "ID002"
+      "ID002",
+      "ID1098"
     ],
     "day": [
       "ID011"
@@ -34,13 +94,15 @@
       "ID062"
     ],
     "toilet": [
-      "ID087"
+      "ID087",
+      "ID1130"
     ],
     "telephone": [
       "ID094"
     ],
     "taxi": [
-      "ID127"
+      "ID127",
+      "ID1109"
     ],
     "ticket": [
       "ID132"
@@ -52,7 +114,183 @@
       "ID184"
     ],
     "part": [
-      "ID225"
+      "ID225",
+      "ID1112"
+    ],
+    "tobacco": [
+      "ID1097"
+    ],
+    "tablet": [
+      "ID1099"
+    ],
+    "board": [
+      "ID1100"
+    ],
+    "valley": [
+      "ID1101"
+    ],
+    "dance": [
+      "ID1102"
+    ],
+    "key": [
+      "ID1103"
+    ],
+    "deed": [
+      "ID1104"
+    ],
+    "activity": [
+      "ID1105"
+    ],
+    "fact": [
+      "ID1106"
+    ],
+    "pigeon": [
+      "ID1107"
+    ],
+    "exchange": [
+      "ID1108"
+    ],
+    "team": [
+      "ID1110"
+    ],
+    "technology": [
+      "ID1111"
+    ],
+    "participation": [
+      "ID1113"
+    ],
+    "temple": [
+      "ID1114"
+    ],
+    "temperature": [
+      "ID1115"
+    ],
+    "pace": [
+      "ID1116"
+    ],
+    "carpet": [
+      "ID1117"
+    ],
+    "appointment": [
+      "ID1118"
+    ],
+    "terrace": [
+      "ID1119"
+    ],
+    "test": [
+      "ID1120"
+    ],
+    "text": [
+      "ID1121"
+    ],
+    "theater": [
+      "ID1122"
+    ],
+    "topic": [
+      "ID1123"
+    ],
+    "theory": [
+      "ID1124"
+    ],
+    "tiger": [
+      "ID1125"
+    ],
+    "ink": [
+      "ID1126"
+    ],
+    "title": [
+      "ID1127"
+    ],
+    "toast": [
+      "ID1128"
+    ],
+    "death": [
+      "ID1129"
+    ],
+    "sound": [
+      "ID1131"
+    ],
+    "gate": [
+      "ID1132"
+    ],
+    "cake": [
+      "ID1133"
+    ],
+    "tourist": [
+      "ID1134"
+    ],
+    "tradition": [
+      "ID1135"
+    ],
+    "coach": [
+      "ID1136"
+    ],
+    "transport": [
+      "ID1137"
+    ],
+    "grape": [
+      "ID1138"
+    ],
+    "dream": [
+      "ID1139"
+    ],
+    "meeting": [
+      "ID1140"
+    ],
+    "stairs": [
+      "ID1141"
+    ],
+    "loyalty": [
+      "ID1142"
+    ],
+    "trick": [
+      "ID1143",
+      "ID1156"
+    ],
+    "triumph": [
+      "ID1144"
+    ],
+    "drop": [
+      "ID1145"
+    ],
+    "tower": [
+      "ID1146"
+    ],
+    "type": [
+      "ID1147"
+    ],
+    "perpetrator": [
+      "ID1148"
+    ],
+    "dew": [
+      "ID1149"
+    ],
+    "diver": [
+      "ID1150"
+    ],
+    "pond": [
+      "ID1151"
+    ],
+    "dough": [
+      "ID1152"
+    ],
+    "throne": [
+      "ID1153"
+    ],
+    "pot": [
+      "ID1154"
+    ],
+    "costume": [
+      "ID1155"
+    ],
+    "drip": [
+      "ID1157"
+    ],
+    "comfort": [
+      "ID1158"
+    ],
+    "troop": [
+      "ID1159"
     ]
   },
   "byVietnamese": {
@@ -75,13 +313,15 @@
       "ID062"
     ],
     "nhà vệ sinh": [
-      "ID087"
+      "ID087",
+      "ID1130"
     ],
     "điện thoại": [
       "ID094"
     ],
     "taxi": [
-      "ID127"
+      "ID127",
+      "ID1109"
     ],
     "vé": [
       "ID132"
@@ -93,7 +333,186 @@
       "ID184"
     ],
     "phần": [
-      "ID225"
+      "ID225",
+      "ID1112"
+    ],
+    "thuốc lá": [
+      "ID1097"
+    ],
+    "bảng": [
+      "ID1098",
+      "ID1100"
+    ],
+    "máy tính bảng": [
+      "ID1099"
+    ],
+    "thung lũng": [
+      "ID1101"
+    ],
+    "điệu nhảy": [
+      "ID1102"
+    ],
+    "phím": [
+      "ID1103"
+    ],
+    "hành động": [
+      "ID1104"
+    ],
+    "hoạt động": [
+      "ID1105"
+    ],
+    "sự thật": [
+      "ID1106"
+    ],
+    "chim bồ câu": [
+      "ID1107"
+    ],
+    "trao đổi": [
+      "ID1108"
+    ],
+    "đội": [
+      "ID1110"
+    ],
+    "công nghệ": [
+      "ID1111"
+    ],
+    "tham gia": [
+      "ID1113"
+    ],
+    "đền": [
+      "ID1114"
+    ],
+    "nhiệt độ": [
+      "ID1115"
+    ],
+    "tốc độ": [
+      "ID1116"
+    ],
+    "thảm": [
+      "ID1117"
+    ],
+    "cuộc hẹn": [
+      "ID1118"
+    ],
+    "sân thượng": [
+      "ID1119"
+    ],
+    "bài kiểm tra": [
+      "ID1120"
+    ],
+    "văn bản": [
+      "ID1121"
+    ],
+    "nhà hát": [
+      "ID1122"
+    ],
+    "chủ đề": [
+      "ID1123"
+    ],
+    "lý thuyết": [
+      "ID1124"
+    ],
+    "hổ": [
+      "ID1125"
+    ],
+    "mực": [
+      "ID1126"
+    ],
+    "tiêu đề": [
+      "ID1127"
+    ],
+    "bánh mì nướng": [
+      "ID1128"
+    ],
+    "cái chết": [
+      "ID1129"
+    ],
+    "âm thanh": [
+      "ID1131"
+    ],
+    "cổng": [
+      "ID1132"
+    ],
+    "bánh ngọt": [
+      "ID1133"
+    ],
+    "du khách": [
+      "ID1134"
+    ],
+    "truyền thống": [
+      "ID1135"
+    ],
+    "huấn luyện viên": [
+      "ID1136"
+    ],
+    "vận chuyển": [
+      "ID1137"
+    ],
+    "nho": [
+      "ID1138"
+    ],
+    "giấc mơ": [
+      "ID1139"
+    ],
+    "cuộc gặp": [
+      "ID1140"
+    ],
+    "cầu thang": [
+      "ID1141"
+    ],
+    "lòng trung thành": [
+      "ID1142"
+    ],
+    "mẹo": [
+      "ID1143"
+    ],
+    "chiến thắng vẻ vang": [
+      "ID1144"
+    ],
+    "giọt": [
+      "ID1145"
+    ],
+    "tháp": [
+      "ID1146"
+    ],
+    "kiểu": [
+      "ID1147"
+    ],
+    "thủ phạm": [
+      "ID1148"
+    ],
+    "sương": [
+      "ID1149"
+    ],
+    "thợ lặn": [
+      "ID1150"
+    ],
+    "ao": [
+      "ID1151"
+    ],
+    "bột nhào": [
+      "ID1152"
+    ],
+    "ngai vàng": [
+      "ID1153"
+    ],
+    "nồi": [
+      "ID1154"
+    ],
+    "trang phục truyền thống": [
+      "ID1155"
+    ],
+    "mánh khóe": [
+      "ID1156"
+    ],
+    "nhỏ giọt": [
+      "ID1157"
+    ],
+    "an ủi": [
+      "ID1158"
+    ],
+    "đoàn quân": [
+      "ID1159"
     ]
   },
   "byArtikel": {
@@ -101,20 +520,83 @@
       "ID002",
       "ID011",
       "ID033",
-      "ID225"
+      "ID225",
+      "ID1097",
+      "ID1102",
+      "ID1108",
+      "ID1112",
+      "ID1114",
+      "ID1117",
+      "ID1118",
+      "ID1120",
+      "ID1121",
+      "ID1125",
+      "ID1127",
+      "ID1128",
+      "ID1129",
+      "ID1131",
+      "ID1134",
+      "ID1136",
+      "ID1137",
+      "ID1139",
+      "ID1143",
+      "ID1144",
+      "ID1145",
+      "ID1146",
+      "ID1147",
+      "ID1148",
+      "ID1150",
+      "ID1151",
+      "ID1152",
+      "ID1153",
+      "ID1154",
+      "ID1156",
+      "ID1157",
+      "ID1158"
     ],
     "die": [
       "ID014",
       "ID045",
       "ID087",
-      "ID134"
+      "ID134",
+      "ID1098",
+      "ID1100",
+      "ID1103",
+      "ID1104",
+      "ID1105",
+      "ID1106",
+      "ID1107",
+      "ID1111",
+      "ID1113",
+      "ID1115",
+      "ID1119",
+      "ID1124",
+      "ID1126",
+      "ID1130",
+      "ID1133",
+      "ID1135",
+      "ID1138",
+      "ID1141",
+      "ID1142",
+      "ID1155",
+      "ID1159"
     ],
     "das": [
       "ID062",
       "ID094",
       "ID127",
       "ID132",
-      "ID184"
+      "ID184",
+      "ID1099",
+      "ID1101",
+      "ID1109",
+      "ID1110",
+      "ID1116",
+      "ID1122",
+      "ID1123",
+      "ID1132",
+      "ID1140",
+      "ID1149"
     ]
   },
   "entries": {
@@ -323,6 +805,1014 @@
           "de": "Ein Teil des Ganzen.",
           "en": "A part of the whole.",
           "vi": "Một phần của tổng thể."
+        }
+      ]
+    },
+    "ID1097": {
+      "word": "Tabak",
+      "artikel": "der",
+      "plural": "-",
+      "english": "tobacco",
+      "vietnamese": "thuốc lá",
+      "definition_en": "A tobacco.",
+      "definition_vi": "Một thuốc lá.",
+      "examples": [
+        {
+          "de": "Der Tabak ist neu.",
+          "en": "The tobacco is new.",
+          "vi": "Thuốc lá mới."
+        }
+      ]
+    },
+    "ID1098": {
+      "word": "Tabelle",
+      "artikel": "die",
+      "plural": "Tabellen",
+      "english": "table",
+      "vietnamese": "bảng",
+      "definition_en": "A table.",
+      "definition_vi": "Một bảng.",
+      "examples": [
+        {
+          "de": "Die Tabelle ist neu.",
+          "en": "The table is new.",
+          "vi": "Bảng mới."
+        }
+      ]
+    },
+    "ID1099": {
+      "word": "Tablet",
+      "artikel": "das",
+      "plural": "Tablets",
+      "english": "tablet",
+      "vietnamese": "máy tính bảng",
+      "definition_en": "A tablet.",
+      "definition_vi": "Một máy tính bảng.",
+      "examples": [
+        {
+          "de": "Das Tablet ist neu.",
+          "en": "The tablet is new.",
+          "vi": "Máy tính bảng mới."
+        }
+      ]
+    },
+    "ID1100": {
+      "word": "Tafel",
+      "artikel": "die",
+      "plural": "Tafeln",
+      "english": "board",
+      "vietnamese": "bảng",
+      "definition_en": "A board.",
+      "definition_vi": "Một bảng.",
+      "examples": [
+        {
+          "de": "Die Tafel ist neu.",
+          "en": "The board is new.",
+          "vi": "Bảng mới."
+        }
+      ]
+    },
+    "ID1101": {
+      "word": "Tal",
+      "artikel": "das",
+      "plural": "Täler",
+      "english": "valley",
+      "vietnamese": "thung lũng",
+      "definition_en": "A valley.",
+      "definition_vi": "Một thung lũng.",
+      "examples": [
+        {
+          "de": "Das Tal ist neu.",
+          "en": "The valley is new.",
+          "vi": "Thung lũng mới."
+        }
+      ]
+    },
+    "ID1102": {
+      "word": "Tanz",
+      "artikel": "der",
+      "plural": "Tänze",
+      "english": "dance",
+      "vietnamese": "điệu nhảy",
+      "definition_en": "A dance.",
+      "definition_vi": "Một điệu nhảy.",
+      "examples": [
+        {
+          "de": "Der Tanz ist neu.",
+          "en": "The dance is new.",
+          "vi": "Điệu nhảy mới."
+        }
+      ]
+    },
+    "ID1103": {
+      "word": "Taste",
+      "artikel": "die",
+      "plural": "Tasten",
+      "english": "key",
+      "vietnamese": "phím",
+      "definition_en": "A key.",
+      "definition_vi": "Một phím.",
+      "examples": [
+        {
+          "de": "Die Taste ist neu.",
+          "en": "The key is new.",
+          "vi": "Phím mới."
+        }
+      ]
+    },
+    "ID1104": {
+      "word": "Tat",
+      "artikel": "die",
+      "plural": "Taten",
+      "english": "deed",
+      "vietnamese": "hành động",
+      "definition_en": "A deed.",
+      "definition_vi": "Một hành động.",
+      "examples": [
+        {
+          "de": "Die Tat ist neu.",
+          "en": "The deed is new.",
+          "vi": "Hành động mới."
+        }
+      ]
+    },
+    "ID1105": {
+      "word": "Tätigkeit",
+      "artikel": "die",
+      "plural": "Tätigkeiten",
+      "english": "activity",
+      "vietnamese": "hoạt động",
+      "definition_en": "A activity.",
+      "definition_vi": "Một hoạt động.",
+      "examples": [
+        {
+          "de": "Die Tätigkeit ist neu.",
+          "en": "The activity is new.",
+          "vi": "Hoạt động mới."
+        }
+      ]
+    },
+    "ID1106": {
+      "word": "Tatsache",
+      "artikel": "die",
+      "plural": "Tatsachen",
+      "english": "fact",
+      "vietnamese": "sự thật",
+      "definition_en": "A fact.",
+      "definition_vi": "Một sự thật.",
+      "examples": [
+        {
+          "de": "Die Tatsache ist neu.",
+          "en": "The fact is new.",
+          "vi": "Sự thật mới."
+        }
+      ]
+    },
+    "ID1107": {
+      "word": "Taube",
+      "artikel": "die",
+      "plural": "Tauben",
+      "english": "pigeon",
+      "vietnamese": "chim bồ câu",
+      "definition_en": "A pigeon.",
+      "definition_vi": "Một chim bồ câu.",
+      "examples": [
+        {
+          "de": "Die Taube ist neu.",
+          "en": "The pigeon is new.",
+          "vi": "Chim bồ câu mới."
+        }
+      ]
+    },
+    "ID1108": {
+      "word": "Tausch",
+      "artikel": "der",
+      "plural": "Tausche",
+      "english": "exchange",
+      "vietnamese": "trao đổi",
+      "definition_en": "A exchange.",
+      "definition_vi": "Một trao đổi.",
+      "examples": [
+        {
+          "de": "Der Tausch ist neu.",
+          "en": "The exchange is new.",
+          "vi": "Trao đổi mới."
+        }
+      ]
+    },
+    "ID1109": {
+      "word": "Taxi",
+      "artikel": "das",
+      "plural": "Taxis",
+      "english": "taxi",
+      "vietnamese": "taxi",
+      "definition_en": "A taxi.",
+      "definition_vi": "Một taxi.",
+      "examples": [
+        {
+          "de": "Das Taxi ist neu.",
+          "en": "The taxi is new.",
+          "vi": "Taxi mới."
+        }
+      ]
+    },
+    "ID1110": {
+      "word": "Team",
+      "artikel": "das",
+      "plural": "Teams",
+      "english": "team",
+      "vietnamese": "đội",
+      "definition_en": "A team.",
+      "definition_vi": "Một đội.",
+      "examples": [
+        {
+          "de": "Das Team ist neu.",
+          "en": "The team is new.",
+          "vi": "Đội mới."
+        }
+      ]
+    },
+    "ID1111": {
+      "word": "Technik",
+      "artikel": "die",
+      "plural": "Techniken",
+      "english": "technology",
+      "vietnamese": "công nghệ",
+      "definition_en": "A technology.",
+      "definition_vi": "Một công nghệ.",
+      "examples": [
+        {
+          "de": "Die Technik ist neu.",
+          "en": "The technology is new.",
+          "vi": "Công nghệ mới."
+        }
+      ]
+    },
+    "ID1112": {
+      "word": "Teil",
+      "artikel": "der",
+      "plural": "Teile",
+      "english": "part",
+      "vietnamese": "phần",
+      "definition_en": "A part.",
+      "definition_vi": "Một phần.",
+      "examples": [
+        {
+          "de": "Der Teil ist neu.",
+          "en": "The part is new.",
+          "vi": "Phần mới."
+        }
+      ]
+    },
+    "ID1113": {
+      "word": "Teilnahme",
+      "artikel": "die",
+      "plural": "Teilnahmen",
+      "english": "participation",
+      "vietnamese": "tham gia",
+      "definition_en": "A participation.",
+      "definition_vi": "Một tham gia.",
+      "examples": [
+        {
+          "de": "Die Teilnahme ist neu.",
+          "en": "The participation is new.",
+          "vi": "Tham gia mới."
+        }
+      ]
+    },
+    "ID1114": {
+      "word": "Tempel",
+      "artikel": "der",
+      "plural": "Tempel",
+      "english": "temple",
+      "vietnamese": "đền",
+      "definition_en": "A temple.",
+      "definition_vi": "Một đền.",
+      "examples": [
+        {
+          "de": "Der Tempel ist neu.",
+          "en": "The temple is new.",
+          "vi": "Đền mới."
+        }
+      ]
+    },
+    "ID1115": {
+      "word": "Temperatur",
+      "artikel": "die",
+      "plural": "Temperaturen",
+      "english": "temperature",
+      "vietnamese": "nhiệt độ",
+      "definition_en": "A temperature.",
+      "definition_vi": "Một nhiệt độ.",
+      "examples": [
+        {
+          "de": "Die Temperatur ist neu.",
+          "en": "The temperature is new.",
+          "vi": "Nhiệt độ mới."
+        }
+      ]
+    },
+    "ID1116": {
+      "word": "Tempo",
+      "artikel": "das",
+      "plural": "-",
+      "english": "pace",
+      "vietnamese": "tốc độ",
+      "definition_en": "A pace.",
+      "definition_vi": "Một tốc độ.",
+      "examples": [
+        {
+          "de": "Das Tempo ist neu.",
+          "en": "The pace is new.",
+          "vi": "Tốc độ mới."
+        }
+      ]
+    },
+    "ID1117": {
+      "word": "Teppich",
+      "artikel": "der",
+      "plural": "Teppiche",
+      "english": "carpet",
+      "vietnamese": "thảm",
+      "definition_en": "A carpet.",
+      "definition_vi": "Một thảm.",
+      "examples": [
+        {
+          "de": "Der Teppich ist neu.",
+          "en": "The carpet is new.",
+          "vi": "Thảm mới."
+        }
+      ]
+    },
+    "ID1118": {
+      "word": "Termin",
+      "artikel": "der",
+      "plural": "Termine",
+      "english": "appointment",
+      "vietnamese": "cuộc hẹn",
+      "definition_en": "A appointment.",
+      "definition_vi": "Một cuộc hẹn.",
+      "examples": [
+        {
+          "de": "Der Termin ist neu.",
+          "en": "The appointment is new.",
+          "vi": "Cuộc hẹn mới."
+        }
+      ]
+    },
+    "ID1119": {
+      "word": "Terrasse",
+      "artikel": "die",
+      "plural": "Terrassen",
+      "english": "terrace",
+      "vietnamese": "sân thượng",
+      "definition_en": "A terrace.",
+      "definition_vi": "Một sân thượng.",
+      "examples": [
+        {
+          "de": "Die Terrasse ist neu.",
+          "en": "The terrace is new.",
+          "vi": "Sân thượng mới."
+        }
+      ]
+    },
+    "ID1120": {
+      "word": "Test",
+      "artikel": "der",
+      "plural": "Tests",
+      "english": "test",
+      "vietnamese": "bài kiểm tra",
+      "definition_en": "A test.",
+      "definition_vi": "Một bài kiểm tra.",
+      "examples": [
+        {
+          "de": "Der Test ist neu.",
+          "en": "The test is new.",
+          "vi": "Bài kiểm tra mới."
+        }
+      ]
+    },
+    "ID1121": {
+      "word": "Text",
+      "artikel": "der",
+      "plural": "Texte",
+      "english": "text",
+      "vietnamese": "văn bản",
+      "definition_en": "A text.",
+      "definition_vi": "Một văn bản.",
+      "examples": [
+        {
+          "de": "Der Text ist neu.",
+          "en": "The text is new.",
+          "vi": "Văn bản mới."
+        }
+      ]
+    },
+    "ID1122": {
+      "word": "Theater",
+      "artikel": "das",
+      "plural": "Theater",
+      "english": "theater",
+      "vietnamese": "nhà hát",
+      "definition_en": "A theater.",
+      "definition_vi": "Một nhà hát.",
+      "examples": [
+        {
+          "de": "Das Theater ist neu.",
+          "en": "The theater is new.",
+          "vi": "Nhà hát mới."
+        }
+      ]
+    },
+    "ID1123": {
+      "word": "Thema",
+      "artikel": "das",
+      "plural": "Themen",
+      "english": "topic",
+      "vietnamese": "chủ đề",
+      "definition_en": "A topic.",
+      "definition_vi": "Một chủ đề.",
+      "examples": [
+        {
+          "de": "Das Thema ist neu.",
+          "en": "The topic is new.",
+          "vi": "Chủ đề mới."
+        }
+      ]
+    },
+    "ID1124": {
+      "word": "Theorie",
+      "artikel": "die",
+      "plural": "Theorien",
+      "english": "theory",
+      "vietnamese": "lý thuyết",
+      "definition_en": "A theory.",
+      "definition_vi": "Một lý thuyết.",
+      "examples": [
+        {
+          "de": "Die Theorie ist neu.",
+          "en": "The theory is new.",
+          "vi": "Lý thuyết mới."
+        }
+      ]
+    },
+    "ID1125": {
+      "word": "Tiger",
+      "artikel": "der",
+      "plural": "Tiger",
+      "english": "tiger",
+      "vietnamese": "hổ",
+      "definition_en": "A tiger.",
+      "definition_vi": "Một hổ.",
+      "examples": [
+        {
+          "de": "Der Tiger ist neu.",
+          "en": "The tiger is new.",
+          "vi": "Hổ mới."
+        }
+      ]
+    },
+    "ID1126": {
+      "word": "Tinte",
+      "artikel": "die",
+      "plural": "Tinten",
+      "english": "ink",
+      "vietnamese": "mực",
+      "definition_en": "A ink.",
+      "definition_vi": "Một mực.",
+      "examples": [
+        {
+          "de": "Die Tinte ist neu.",
+          "en": "The ink is new.",
+          "vi": "Mực mới."
+        }
+      ]
+    },
+    "ID1127": {
+      "word": "Titel",
+      "artikel": "der",
+      "plural": "Titel",
+      "english": "title",
+      "vietnamese": "tiêu đề",
+      "definition_en": "A title.",
+      "definition_vi": "Một tiêu đề.",
+      "examples": [
+        {
+          "de": "Der Titel ist neu.",
+          "en": "The title is new.",
+          "vi": "Tiêu đề mới."
+        }
+      ]
+    },
+    "ID1128": {
+      "word": "Toast",
+      "artikel": "der",
+      "plural": "Toasts",
+      "english": "toast",
+      "vietnamese": "bánh mì nướng",
+      "definition_en": "A toast.",
+      "definition_vi": "Một bánh mì nướng.",
+      "examples": [
+        {
+          "de": "Der Toast ist neu.",
+          "en": "The toast is new.",
+          "vi": "Bánh mì nướng mới."
+        }
+      ]
+    },
+    "ID1129": {
+      "word": "Tod",
+      "artikel": "der",
+      "plural": "-",
+      "english": "death",
+      "vietnamese": "cái chết",
+      "definition_en": "A death.",
+      "definition_vi": "Một cái chết.",
+      "examples": [
+        {
+          "de": "Der Tod ist neu.",
+          "en": "The death is new.",
+          "vi": "Cái chết mới."
+        }
+      ]
+    },
+    "ID1130": {
+      "word": "Toilette",
+      "artikel": "die",
+      "plural": "Toiletten",
+      "english": "toilet",
+      "vietnamese": "nhà vệ sinh",
+      "definition_en": "A toilet.",
+      "definition_vi": "Một nhà vệ sinh.",
+      "examples": [
+        {
+          "de": "Die Toilette ist neu.",
+          "en": "The toilet is new.",
+          "vi": "Nhà vệ sinh mới."
+        }
+      ]
+    },
+    "ID1131": {
+      "word": "Ton",
+      "artikel": "der",
+      "plural": "Töne",
+      "english": "sound",
+      "vietnamese": "âm thanh",
+      "definition_en": "A sound.",
+      "definition_vi": "Một âm thanh.",
+      "examples": [
+        {
+          "de": "Der Ton ist neu.",
+          "en": "The sound is new.",
+          "vi": "Âm thanh mới."
+        }
+      ]
+    },
+    "ID1132": {
+      "word": "Tor",
+      "artikel": "das",
+      "plural": "Tore",
+      "english": "gate",
+      "vietnamese": "cổng",
+      "definition_en": "A gate.",
+      "definition_vi": "Một cổng.",
+      "examples": [
+        {
+          "de": "Das Tor ist neu.",
+          "en": "The gate is new.",
+          "vi": "Cổng mới."
+        }
+      ]
+    },
+    "ID1133": {
+      "word": "Torte",
+      "artikel": "die",
+      "plural": "Torten",
+      "english": "cake",
+      "vietnamese": "bánh ngọt",
+      "definition_en": "A cake.",
+      "definition_vi": "Một bánh ngọt.",
+      "examples": [
+        {
+          "de": "Die Torte ist neu.",
+          "en": "The cake is new.",
+          "vi": "Bánh ngọt mới."
+        }
+      ]
+    },
+    "ID1134": {
+      "word": "Tourist",
+      "artikel": "der",
+      "plural": "Touristen",
+      "english": "tourist",
+      "vietnamese": "du khách",
+      "definition_en": "A tourist.",
+      "definition_vi": "Một du khách.",
+      "examples": [
+        {
+          "de": "Der Tourist ist neu.",
+          "en": "The tourist is new.",
+          "vi": "Du khách mới."
+        }
+      ]
+    },
+    "ID1135": {
+      "word": "Tradition",
+      "artikel": "die",
+      "plural": "Traditionen",
+      "english": "tradition",
+      "vietnamese": "truyền thống",
+      "definition_en": "A tradition.",
+      "definition_vi": "Một truyền thống.",
+      "examples": [
+        {
+          "de": "Die Tradition ist neu.",
+          "en": "The tradition is new.",
+          "vi": "Truyền thống mới."
+        }
+      ]
+    },
+    "ID1136": {
+      "word": "Trainer",
+      "artikel": "der",
+      "plural": "Trainer",
+      "english": "coach",
+      "vietnamese": "huấn luyện viên",
+      "definition_en": "A coach.",
+      "definition_vi": "Một huấn luyện viên.",
+      "examples": [
+        {
+          "de": "Der Trainer ist neu.",
+          "en": "The coach is new.",
+          "vi": "Huấn luyện viên mới."
+        }
+      ]
+    },
+    "ID1137": {
+      "word": "Transport",
+      "artikel": "der",
+      "plural": "Transporte",
+      "english": "transport",
+      "vietnamese": "vận chuyển",
+      "definition_en": "A transport.",
+      "definition_vi": "Một vận chuyển.",
+      "examples": [
+        {
+          "de": "Der Transport ist neu.",
+          "en": "The transport is new.",
+          "vi": "Vận chuyển mới."
+        }
+      ]
+    },
+    "ID1138": {
+      "word": "Traube",
+      "artikel": "die",
+      "plural": "Trauben",
+      "english": "grape",
+      "vietnamese": "nho",
+      "definition_en": "A grape.",
+      "definition_vi": "Một nho.",
+      "examples": [
+        {
+          "de": "Die Traube ist neu.",
+          "en": "The grape is new.",
+          "vi": "Nho mới."
+        }
+      ]
+    },
+    "ID1139": {
+      "word": "Traum",
+      "artikel": "der",
+      "plural": "Träume",
+      "english": "dream",
+      "vietnamese": "giấc mơ",
+      "definition_en": "A dream.",
+      "definition_vi": "Một giấc mơ.",
+      "examples": [
+        {
+          "de": "Der Traum ist neu.",
+          "en": "The dream is new.",
+          "vi": "Giấc mơ mới."
+        }
+      ]
+    },
+    "ID1140": {
+      "word": "Treffen",
+      "artikel": "das",
+      "plural": "Treffen",
+      "english": "meeting",
+      "vietnamese": "cuộc gặp",
+      "definition_en": "A meeting.",
+      "definition_vi": "Một cuộc gặp.",
+      "examples": [
+        {
+          "de": "Das Treffen ist neu.",
+          "en": "The meeting is new.",
+          "vi": "Cuộc gặp mới."
+        }
+      ]
+    },
+    "ID1141": {
+      "word": "Treppe",
+      "artikel": "die",
+      "plural": "Treppen",
+      "english": "stairs",
+      "vietnamese": "cầu thang",
+      "definition_en": "A stairs.",
+      "definition_vi": "Một cầu thang.",
+      "examples": [
+        {
+          "de": "Die Treppe ist neu.",
+          "en": "The stairs is new.",
+          "vi": "Cầu thang mới."
+        }
+      ]
+    },
+    "ID1142": {
+      "word": "Treue",
+      "artikel": "die",
+      "plural": "-",
+      "english": "loyalty",
+      "vietnamese": "lòng trung thành",
+      "definition_en": "A loyalty.",
+      "definition_vi": "Một lòng trung thành.",
+      "examples": [
+        {
+          "de": "Die Treue ist neu.",
+          "en": "The loyalty is new.",
+          "vi": "Lòng trung thành mới."
+        }
+      ]
+    },
+    "ID1143": {
+      "word": "Trick",
+      "artikel": "der",
+      "plural": "Tricks",
+      "english": "trick",
+      "vietnamese": "mẹo",
+      "definition_en": "A trick.",
+      "definition_vi": "Một mẹo.",
+      "examples": [
+        {
+          "de": "Der Trick ist neu.",
+          "en": "The trick is new.",
+          "vi": "Mẹo mới."
+        }
+      ]
+    },
+    "ID1144": {
+      "word": "Triumph",
+      "artikel": "der",
+      "plural": "Triumphe",
+      "english": "triumph",
+      "vietnamese": "chiến thắng vẻ vang",
+      "definition_en": "A triumph.",
+      "definition_vi": "Một chiến thắng vẻ vang.",
+      "examples": [
+        {
+          "de": "Der Triumph ist neu.",
+          "en": "The triumph is new.",
+          "vi": "Chiến thắng vẻ vang mới."
+        }
+      ]
+    },
+    "ID1145": {
+      "word": "Tropfen",
+      "artikel": "der",
+      "plural": "Tropfen",
+      "english": "drop",
+      "vietnamese": "giọt",
+      "definition_en": "A drop.",
+      "definition_vi": "Một giọt.",
+      "examples": [
+        {
+          "de": "Der Tropfen ist neu.",
+          "en": "The drop is new.",
+          "vi": "Giọt mới."
+        }
+      ]
+    },
+    "ID1146": {
+      "word": "Turm",
+      "artikel": "der",
+      "plural": "Türme",
+      "english": "tower",
+      "vietnamese": "tháp",
+      "definition_en": "A tower.",
+      "definition_vi": "Một tháp.",
+      "examples": [
+        {
+          "de": "Der Turm ist neu.",
+          "en": "The tower is new.",
+          "vi": "Tháp mới."
+        }
+      ]
+    },
+    "ID1147": {
+      "word": "Typ",
+      "artikel": "der",
+      "plural": "Typen",
+      "english": "type",
+      "vietnamese": "kiểu",
+      "definition_en": "A type.",
+      "definition_vi": "Một kiểu.",
+      "examples": [
+        {
+          "de": "Der Typ ist neu.",
+          "en": "The type is new.",
+          "vi": "Kiểu mới."
+        }
+      ]
+    },
+    "ID1148": {
+      "word": "Täter",
+      "artikel": "der",
+      "plural": "Täter",
+      "english": "perpetrator",
+      "vietnamese": "thủ phạm",
+      "definition_en": "A perpetrator.",
+      "definition_vi": "Một thủ phạm.",
+      "examples": [
+        {
+          "de": "Der Täter ist neu.",
+          "en": "The perpetrator is new.",
+          "vi": "Thủ phạm mới."
+        }
+      ]
+    },
+    "ID1149": {
+      "word": "Tau",
+      "artikel": "das",
+      "plural": "-",
+      "english": "dew",
+      "vietnamese": "sương",
+      "definition_en": "A dew.",
+      "definition_vi": "Một sương.",
+      "examples": [
+        {
+          "de": "Das Tau ist neu.",
+          "en": "The dew is new.",
+          "vi": "Sương mới."
+        }
+      ]
+    },
+    "ID1150": {
+      "word": "Taucher",
+      "artikel": "der",
+      "plural": "Taucher",
+      "english": "diver",
+      "vietnamese": "thợ lặn",
+      "definition_en": "A diver.",
+      "definition_vi": "Một thợ lặn.",
+      "examples": [
+        {
+          "de": "Der Taucher ist neu.",
+          "en": "The diver is new.",
+          "vi": "Thợ lặn mới."
+        }
+      ]
+    },
+    "ID1151": {
+      "word": "Teich",
+      "artikel": "der",
+      "plural": "Teiche",
+      "english": "pond",
+      "vietnamese": "ao",
+      "definition_en": "A pond.",
+      "definition_vi": "Một ao.",
+      "examples": [
+        {
+          "de": "Der Teich ist neu.",
+          "en": "The pond is new.",
+          "vi": "Ao mới."
+        }
+      ]
+    },
+    "ID1152": {
+      "word": "Teig",
+      "artikel": "der",
+      "plural": "Teige",
+      "english": "dough",
+      "vietnamese": "bột nhào",
+      "definition_en": "A dough.",
+      "definition_vi": "Một bột nhào.",
+      "examples": [
+        {
+          "de": "Der Teig ist neu.",
+          "en": "The dough is new.",
+          "vi": "Bột nhào mới."
+        }
+      ]
+    },
+    "ID1153": {
+      "word": "Thron",
+      "artikel": "der",
+      "plural": "Throne",
+      "english": "throne",
+      "vietnamese": "ngai vàng",
+      "definition_en": "A throne.",
+      "definition_vi": "Một ngai vàng.",
+      "examples": [
+        {
+          "de": "Der Thron ist neu.",
+          "en": "The throne is new.",
+          "vi": "Ngai vàng mới."
+        }
+      ]
+    },
+    "ID1154": {
+      "word": "Topf",
+      "artikel": "der",
+      "plural": "Töpfe",
+      "english": "pot",
+      "vietnamese": "nồi",
+      "definition_en": "A pot.",
+      "definition_vi": "Một nồi.",
+      "examples": [
+        {
+          "de": "Der Topf ist neu.",
+          "en": "The pot is new.",
+          "vi": "Nồi mới."
+        }
+      ]
+    },
+    "ID1155": {
+      "word": "Tracht",
+      "artikel": "die",
+      "plural": "Trachten",
+      "english": "costume",
+      "vietnamese": "trang phục truyền thống",
+      "definition_en": "A costume.",
+      "definition_vi": "Một trang phục truyền thống.",
+      "examples": [
+        {
+          "de": "Die Tracht ist neu.",
+          "en": "The costume is new.",
+          "vi": "Trang phục truyền thống mới."
+        }
+      ]
+    },
+    "ID1156": {
+      "word": "Trick",
+      "artikel": "der",
+      "plural": "Tricks",
+      "english": "trick",
+      "vietnamese": "mánh khóe",
+      "definition_en": "A trick.",
+      "definition_vi": "Một mánh khóe.",
+      "examples": [
+        {
+          "de": "Der Trick ist neu.",
+          "en": "The trick is new.",
+          "vi": "Mánh khóe mới."
+        }
+      ]
+    },
+    "ID1157": {
+      "word": "Tropf",
+      "artikel": "der",
+      "plural": "Tropfe",
+      "english": "drip",
+      "vietnamese": "nhỏ giọt",
+      "definition_en": "A drip.",
+      "definition_vi": "Một nhỏ giọt.",
+      "examples": [
+        {
+          "de": "Der Tropf ist neu.",
+          "en": "The drip is new.",
+          "vi": "Nhỏ giọt mới."
+        }
+      ]
+    },
+    "ID1158": {
+      "word": "Trost",
+      "artikel": "der",
+      "plural": "-",
+      "english": "comfort",
+      "vietnamese": "an ủi",
+      "definition_en": "A comfort.",
+      "definition_vi": "Một an ủi.",
+      "examples": [
+        {
+          "de": "Der Trost ist neu.",
+          "en": "The comfort is new.",
+          "vi": "An ủi mới."
+        }
+      ]
+    },
+    "ID1159": {
+      "word": "Truppe",
+      "artikel": "die",
+      "plural": "Truppen",
+      "english": "troop",
+      "vietnamese": "đoàn quân",
+      "definition_en": "A troop.",
+      "definition_vi": "Một đoàn quân.",
+      "examples": [
+        {
+          "de": "Die Truppe ist neu.",
+          "en": "The troop is new.",
+          "vi": "Đoàn quân mới."
         }
       ]
     }

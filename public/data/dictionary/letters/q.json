@@ -1,20 +1,137 @@
 {
   "byWord": {
     "quelle": "ID254",
-    "quittung": "ID255"
+    "quittung": "ID255",
+    "qualifikation": "ID903",
+    "qualität": "ID904",
+    "quantität": "ID905",
+    "quartal": "ID906",
+    "quartier": "ID907",
+    "quarz": "ID908",
+    "quatsch": "ID909",
+    "querstraße": "ID910",
+    "quiz": "ID911",
+    "quote": "ID912",
+    "quäler": "ID913",
+    "quark": "ID914",
+    "quadrat": "ID915"
   },
   "byEnglish": {
-    "source": ["ID254"],
-    "receipt": ["ID255"]
+    "source": [
+      "ID254"
+    ],
+    "receipt": [
+      "ID255"
+    ],
+    "qualification": [
+      "ID903"
+    ],
+    "quality": [
+      "ID904"
+    ],
+    "quantity": [
+      "ID905"
+    ],
+    "quarter": [
+      "ID906"
+    ],
+    "lodging": [
+      "ID907"
+    ],
+    "quartz": [
+      "ID908"
+    ],
+    "nonsense": [
+      "ID909"
+    ],
+    "cross street": [
+      "ID910"
+    ],
+    "quiz": [
+      "ID911"
+    ],
+    "quota": [
+      "ID912"
+    ],
+    "tormentor": [
+      "ID913"
+    ],
+    "curd cheese": [
+      "ID914"
+    ],
+    "square": [
+      "ID915"
+    ]
   },
   "byVietnamese": {
-    "nguồn": ["ID254"],
-    "biên lai": ["ID255"]
+    "nguồn": [
+      "ID254"
+    ],
+    "biên lai": [
+      "ID255"
+    ],
+    "bằng cấp": [
+      "ID903"
+    ],
+    "chất lượng": [
+      "ID904"
+    ],
+    "số lượng": [
+      "ID905"
+    ],
+    "quý": [
+      "ID906"
+    ],
+    "chỗ ở": [
+      "ID907"
+    ],
+    "thạch anh": [
+      "ID908"
+    ],
+    "nhảm nhí": [
+      "ID909"
+    ],
+    "đường ngang": [
+      "ID910"
+    ],
+    "câu đố": [
+      "ID911"
+    ],
+    "định mức": [
+      "ID912"
+    ],
+    "kẻ hành hạ": [
+      "ID913"
+    ],
+    "phô mai tươi": [
+      "ID914"
+    ],
+    "hình vuông": [
+      "ID915"
+    ]
   },
   "byArtikel": {
-    "der": [],
-    "die": ["ID254", "ID255"],
-    "das": []
+    "der": [
+      "ID908",
+      "ID909",
+      "ID913",
+      "ID914"
+    ],
+    "die": [
+      "ID254",
+      "ID255",
+      "ID903",
+      "ID904",
+      "ID905",
+      "ID910",
+      "ID912"
+    ],
+    "das": [
+      "ID906",
+      "ID907",
+      "ID911",
+      "ID915"
+    ]
   },
   "entries": {
     "ID254": {
@@ -46,6 +163,214 @@
           "de": "Ich brauche eine Quittung.",
           "en": "I need a receipt.",
           "vi": "Tôi cần một biên lai."
+        }
+      ]
+    },
+    "ID903": {
+      "word": "Qualifikation",
+      "artikel": "die",
+      "plural": "Qualifikationen",
+      "english": "qualification",
+      "vietnamese": "bằng cấp",
+      "definition_en": "A qualification.",
+      "definition_vi": "Một bằng cấp.",
+      "examples": [
+        {
+          "de": "Die Qualifikation ist gut.",
+          "en": "The qualification is good.",
+          "vi": "Bằng cấp tốt."
+        }
+      ]
+    },
+    "ID904": {
+      "word": "Qualität",
+      "artikel": "die",
+      "plural": "Qualitäten",
+      "english": "quality",
+      "vietnamese": "chất lượng",
+      "definition_en": "A quality.",
+      "definition_vi": "Một chất lượng.",
+      "examples": [
+        {
+          "de": "Die Qualität ist gut.",
+          "en": "The quality is good.",
+          "vi": "Chất lượng tốt."
+        }
+      ]
+    },
+    "ID905": {
+      "word": "Quantität",
+      "artikel": "die",
+      "plural": "Quantitäten",
+      "english": "quantity",
+      "vietnamese": "số lượng",
+      "definition_en": "A quantity.",
+      "definition_vi": "Một số lượng.",
+      "examples": [
+        {
+          "de": "Die Quantität ist gut.",
+          "en": "The quantity is good.",
+          "vi": "Số lượng tốt."
+        }
+      ]
+    },
+    "ID906": {
+      "word": "Quartal",
+      "artikel": "das",
+      "plural": "Quartale",
+      "english": "quarter",
+      "vietnamese": "quý",
+      "definition_en": "A quarter.",
+      "definition_vi": "Một quý.",
+      "examples": [
+        {
+          "de": "Das Quartal ist gut.",
+          "en": "The quarter is good.",
+          "vi": "Quý tốt."
+        }
+      ]
+    },
+    "ID907": {
+      "word": "Quartier",
+      "artikel": "das",
+      "plural": "Quartiere",
+      "english": "lodging",
+      "vietnamese": "chỗ ở",
+      "definition_en": "A lodging.",
+      "definition_vi": "Một chỗ ở.",
+      "examples": [
+        {
+          "de": "Das Quartier ist gut.",
+          "en": "The lodging is good.",
+          "vi": "Chỗ ở tốt."
+        }
+      ]
+    },
+    "ID908": {
+      "word": "Quarz",
+      "artikel": "der",
+      "plural": "Quarze",
+      "english": "quartz",
+      "vietnamese": "thạch anh",
+      "definition_en": "A quartz.",
+      "definition_vi": "Một thạch anh.",
+      "examples": [
+        {
+          "de": "Der Quarz ist gut.",
+          "en": "The quartz is good.",
+          "vi": "Thạch anh tốt."
+        }
+      ]
+    },
+    "ID909": {
+      "word": "Quatsch",
+      "artikel": "der",
+      "plural": "-",
+      "english": "nonsense",
+      "vietnamese": "nhảm nhí",
+      "definition_en": "A nonsense.",
+      "definition_vi": "Một nhảm nhí.",
+      "examples": [
+        {
+          "de": "Der Quatsch ist gut.",
+          "en": "The nonsense is good.",
+          "vi": "Nhảm nhí tốt."
+        }
+      ]
+    },
+    "ID910": {
+      "word": "Querstraße",
+      "artikel": "die",
+      "plural": "Querstraßen",
+      "english": "cross street",
+      "vietnamese": "đường ngang",
+      "definition_en": "A cross street.",
+      "definition_vi": "Một đường ngang.",
+      "examples": [
+        {
+          "de": "Die Querstraße ist gut.",
+          "en": "The cross street is good.",
+          "vi": "Đường ngang tốt."
+        }
+      ]
+    },
+    "ID911": {
+      "word": "Quiz",
+      "artikel": "das",
+      "plural": "Quiz",
+      "english": "quiz",
+      "vietnamese": "câu đố",
+      "definition_en": "A quiz.",
+      "definition_vi": "Một câu đố.",
+      "examples": [
+        {
+          "de": "Das Quiz ist gut.",
+          "en": "The quiz is good.",
+          "vi": "Câu đố tốt."
+        }
+      ]
+    },
+    "ID912": {
+      "word": "Quote",
+      "artikel": "die",
+      "plural": "Quoten",
+      "english": "quota",
+      "vietnamese": "định mức",
+      "definition_en": "A quota.",
+      "definition_vi": "Một định mức.",
+      "examples": [
+        {
+          "de": "Die Quote ist gut.",
+          "en": "The quota is good.",
+          "vi": "Định mức tốt."
+        }
+      ]
+    },
+    "ID913": {
+      "word": "Quäler",
+      "artikel": "der",
+      "plural": "Quäler",
+      "english": "tormentor",
+      "vietnamese": "kẻ hành hạ",
+      "definition_en": "A tormentor.",
+      "definition_vi": "Một kẻ hành hạ.",
+      "examples": [
+        {
+          "de": "Der Quäler ist gut.",
+          "en": "The tormentor is good.",
+          "vi": "Kẻ hành hạ tốt."
+        }
+      ]
+    },
+    "ID914": {
+      "word": "Quark",
+      "artikel": "der",
+      "plural": "-",
+      "english": "curd cheese",
+      "vietnamese": "phô mai tươi",
+      "definition_en": "A curd cheese.",
+      "definition_vi": "Một phô mai tươi.",
+      "examples": [
+        {
+          "de": "Der Quark ist gut.",
+          "en": "The curd cheese is good.",
+          "vi": "Phô mai tươi tốt."
+        }
+      ]
+    },
+    "ID915": {
+      "word": "Quadrat",
+      "artikel": "das",
+      "plural": "Quadrate",
+      "english": "square",
+      "vietnamese": "hình vuông",
+      "definition_en": "A square.",
+      "definition_vi": "Một hình vuông.",
+      "examples": [
+        {
+          "de": "Das Quadrat ist gut.",
+          "en": "The square is good.",
+          "vi": "Hình vuông tốt."
         }
       ]
     }
