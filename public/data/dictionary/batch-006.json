@@ -1,0 +1,775 @@
+{
+  "byWord": {
+    "morgen": "ID201",
+    "abend": "ID202",
+    "mittag": "ID203",
+    "nachmittag": "ID204",
+    "minute": "ID205",
+    "stunde": "ID206",
+    "sekunde": "ID207",
+    "moment": "ID208",
+    "anfang": "ID209",
+    "ende": "ID210",
+    "ecke": "ID211",
+    "seite": "ID212",
+    "mitte": "ID213",
+    "platz": "ID214",
+    "ort": "ID215",
+    "punkt": "ID216",
+    "linie": "ID217",
+    "kreis": "ID218",
+    "form": "ID219",
+    "größe": "ID220",
+    "nummer": "ID221",
+    "zahl": "ID222",
+    "prozent": "ID223",
+    "hälfte": "ID224",
+    "teil": "ID225",
+    "stück": "ID226",
+    "paar": "ID227",
+    "gruppe": "ID228",
+    "reihe": "ID229",
+    "ordnung": "ID230",
+    "system": "ID231",
+    "regel": "ID232",
+    "gesetz": "ID233",
+    "recht": "ID234",
+    "pflicht": "ID235",
+    "fehler": "ID236",
+    "problem": "ID237",
+    "lösung": "ID238",
+    "antwort": "ID239",
+    "frage": "ID240"
+  },
+  "byEnglish": {
+    "morning": ["ID201"],
+    "evening": ["ID202"],
+    "noon": ["ID203"],
+    "afternoon": ["ID204"],
+    "minute": ["ID205"],
+    "hour": ["ID206"],
+    "second": ["ID207"],
+    "moment": ["ID208"],
+    "beginning": ["ID209"],
+    "end": ["ID210"],
+    "corner": ["ID211"],
+    "side": ["ID212"],
+    "middle": ["ID213"],
+    "place": ["ID214"],
+    "location": ["ID215"],
+    "point": ["ID216"],
+    "line": ["ID217"],
+    "circle": ["ID218"],
+    "shape": ["ID219"],
+    "size": ["ID220"],
+    "number": ["ID221"],
+    "number (quantity)": ["ID222"],
+    "percent": ["ID223"],
+    "half": ["ID224"],
+    "part": ["ID225"],
+    "piece": ["ID226"],
+    "pair": ["ID227"],
+    "group": ["ID228"],
+    "row": ["ID229"],
+    "order": ["ID230"],
+    "system": ["ID231"],
+    "rule": ["ID232"],
+    "law": ["ID233"],
+    "right": ["ID234"],
+    "duty": ["ID235"],
+    "mistake": ["ID236"],
+    "problem": ["ID237"],
+    "solution": ["ID238"],
+    "answer": ["ID239"],
+    "question": ["ID240"]
+  },
+  "byVietnamese": {
+    "buổi sáng": ["ID201"],
+    "buổi tối": ["ID202"],
+    "buổi trưa": ["ID203"],
+    "buổi chiều": ["ID204"],
+    "phút": ["ID205"],
+    "giờ": ["ID206"],
+    "giây": ["ID207"],
+    "khoảnh khắc": ["ID208"],
+    "khởi đầu": ["ID209"],
+    "kết thúc": ["ID210"],
+    "góc": ["ID211"],
+    "bên": ["ID212"],
+    "giữa": ["ID213"],
+    "chỗ": ["ID214"],
+    "địa điểm": ["ID215"],
+    "điểm": ["ID216"],
+    "đường": ["ID217"],
+    "vòng tròn": ["ID218"],
+    "hình dạng": ["ID219"],
+    "kích thước": ["ID220"],
+    "số": ["ID221"],
+    "con số": ["ID222"],
+    "phần trăm": ["ID223"],
+    "một nửa": ["ID224"],
+    "phần": ["ID225"],
+    "miếng": ["ID226"],
+    "cặp": ["ID227"],
+    "nhóm": ["ID228"],
+    "hàng": ["ID229"],
+    "thứ tự": ["ID230"],
+    "hệ thống": ["ID231"],
+    "quy tắc": ["ID232"],
+    "luật": ["ID233"],
+    "quyền": ["ID234"],
+    "nghĩa vụ": ["ID235"],
+    "lỗi": ["ID236"],
+    "vấn đề": ["ID237"],
+    "giải pháp": ["ID238"],
+    "câu trả lời": ["ID239"],
+    "câu hỏi": ["ID240"]
+  },
+  "byArtikel": {
+    "der": ["ID201", "ID202", "ID203", "ID204", "ID208", "ID209", "ID214", "ID216", "ID222", "ID225", "ID227"],
+    "die": ["ID205", "ID206", "ID207", "ID211", "ID212", "ID213", "ID217", "ID219", "ID220", "ID221", "ID224", "ID228", "ID229", "ID230", "ID232", "ID235", "ID238", "ID239", "ID240"],
+    "das": ["ID210", "ID215", "ID218", "ID223", "ID226", "ID231", "ID233", "ID234", "ID236", "ID237"]
+  },
+  "entries": {
+    "ID201": {
+      "word": "Morgen",
+      "artikel": "der",
+      "plural": "Morgen",
+      "english": "morning",
+      "vietnamese": "buổi sáng",
+      "definition_en": "The early part of the day.",
+      "definition_vi": "Phần đầu ngày.",
+      "examples": [
+        {
+          "de": "Guten Morgen!",
+          "en": "Good morning!",
+          "vi": "Chào buổi sáng!"
+        }
+      ]
+    },
+    "ID202": {
+      "word": "Abend",
+      "artikel": "der",
+      "plural": "Abende",
+      "english": "evening",
+      "vietnamese": "buổi tối",
+      "definition_en": "The latter part of the day.",
+      "definition_vi": "Phần cuối ngày.",
+      "examples": [
+        {
+          "de": "Guten Abend!",
+          "en": "Good evening!",
+          "vi": "Chào buổi tối!"
+        }
+      ]
+    },
+    "ID203": {
+      "word": "Mittag",
+      "artikel": "der",
+      "plural": "Mittage",
+      "english": "noon",
+      "vietnamese": "buổi trưa",
+      "definition_en": "The middle of the day.",
+      "definition_vi": "Giữa ngày.",
+      "examples": [
+        {
+          "de": "Um Mittag essen wir.",
+          "en": "We eat at noon.",
+          "vi": "Chúng tôi ăn vào buổi trưa."
+        }
+      ]
+    },
+    "ID204": {
+      "word": "Nachmittag",
+      "artikel": "der",
+      "plural": "Nachmittage",
+      "english": "afternoon",
+      "vietnamese": "buổi chiều",
+      "definition_en": "The time after noon.",
+      "definition_vi": "Thời gian sau buổi trưa.",
+      "examples": [
+        {
+          "de": "Am Nachmittag trinke ich Kaffee.",
+          "en": "In the afternoon I drink coffee.",
+          "vi": "Vào buổi chiều tôi uống cà phê."
+        }
+      ]
+    },
+    "ID205": {
+      "word": "Minute",
+      "artikel": "die",
+      "plural": "Minuten",
+      "english": "minute",
+      "vietnamese": "phút",
+      "definition_en": "A unit of time equal to 60 seconds.",
+      "definition_vi": "Đơn vị thời gian bằng 60 giây.",
+      "examples": [
+        {
+          "de": "Ich warte fünf Minuten.",
+          "en": "I wait five minutes.",
+          "vi": "Tôi đợi năm phút."
+        }
+      ]
+    },
+    "ID206": {
+      "word": "Stunde",
+      "artikel": "die",
+      "plural": "Stunden",
+      "english": "hour",
+      "vietnamese": "giờ",
+      "definition_en": "A unit of time equal to 60 minutes.",
+      "definition_vi": "Đơn vị thời gian bằng 60 phút.",
+      "examples": [
+        {
+          "de": "Eine Stunde hat 60 Minuten.",
+          "en": "An hour has 60 minutes.",
+          "vi": "Một giờ có 60 phút."
+        }
+      ]
+    },
+    "ID207": {
+      "word": "Sekunde",
+      "artikel": "die",
+      "plural": "Sekunden",
+      "english": "second",
+      "vietnamese": "giây",
+      "definition_en": "A unit of time.",
+      "definition_vi": "Đơn vị thời gian.",
+      "examples": [
+        {
+          "de": "Eine Minute hat 60 Sekunden.",
+          "en": "A minute has 60 seconds.",
+          "vi": "Một phút có 60 giây."
+        }
+      ]
+    },
+    "ID208": {
+      "word": "Moment",
+      "artikel": "der",
+      "plural": "Momente",
+      "english": "moment",
+      "vietnamese": "khoảnh khắc",
+      "definition_en": "A brief period of time.",
+      "definition_vi": "Khoảng thời gian ngắn.",
+      "examples": [
+        {
+          "de": "Einen Moment bitte!",
+          "en": "One moment please!",
+          "vi": "Xin chờ một chút!"
+        }
+      ]
+    },
+    "ID209": {
+      "word": "Anfang",
+      "artikel": "der",
+      "plural": "Anfänge",
+      "english": "beginning",
+      "vietnamese": "khởi đầu",
+      "definition_en": "The start of something.",
+      "definition_vi": "Bắt đầu của cái gì đó.",
+      "examples": [
+        {
+          "de": "Am Anfang war es schwer.",
+          "en": "In the beginning it was difficult.",
+          "vi": "Lúc đầu thì khó."
+        }
+      ]
+    },
+    "ID210": {
+      "word": "Ende",
+      "artikel": "das",
+      "plural": "Enden",
+      "english": "end",
+      "vietnamese": "kết thúc",
+      "definition_en": "The final part of something.",
+      "definition_vi": "Phần cuối của cái gì đó.",
+      "examples": [
+        {
+          "de": "Das Ende ist nah.",
+          "en": "The end is near.",
+          "vi": "Sự kết thúc đã gần."
+        }
+      ]
+    },
+    "ID211": {
+      "word": "Ecke",
+      "artikel": "die",
+      "plural": "Ecken",
+      "english": "corner",
+      "vietnamese": "góc",
+      "definition_en": "A point where two lines meet.",
+      "definition_vi": "Điểm nơi hai đường gặp nhau.",
+      "examples": [
+        {
+          "de": "Das Haus steht an der Ecke.",
+          "en": "The house stands on the corner.",
+          "vi": "Ngôi nhà đứng ở góc."
+        }
+      ]
+    },
+    "ID212": {
+      "word": "Seite",
+      "artikel": "die",
+      "plural": "Seiten",
+      "english": "side",
+      "vietnamese": "bên",
+      "definition_en": "One of the surfaces of an object.",
+      "definition_vi": "Một trong các bề mặt của vật thể.",
+      "examples": [
+        {
+          "de": "Auf der linken Seite.",
+          "en": "On the left side.",
+          "vi": "Ở bên trái."
+        }
+      ]
+    },
+    "ID213": {
+      "word": "Mitte",
+      "artikel": "die",
+      "plural": "Mitten",
+      "english": "middle",
+      "vietnamese": "giữa",
+      "definition_en": "The center point.",
+      "definition_vi": "Điểm trung tâm.",
+      "examples": [
+        {
+          "de": "In der Mitte des Raumes.",
+          "en": "In the middle of the room.",
+          "vi": "Ở giữa phòng."
+        }
+      ]
+    },
+    "ID214": {
+      "word": "Platz",
+      "artikel": "der",
+      "plural": "Plätze",
+      "english": "place",
+      "vietnamese": "chỗ",
+      "definition_en": "A particular position or area.",
+      "definition_vi": "Một vị trí hoặc khu vực cụ thể.",
+      "examples": [
+        {
+          "de": "Ist hier noch ein Platz frei?",
+          "en": "Is there still a free place here?",
+          "vi": "Còn chỗ trống ở đây không?"
+        }
+      ]
+    },
+    "ID215": {
+      "word": "Ort",
+      "artikel": "der",
+      "plural": "Orte",
+      "english": "location",
+      "vietnamese": "địa điểm",
+      "definition_en": "A particular place.",
+      "definition_vi": "Một địa điểm cụ thể.",
+      "examples": [
+        {
+          "de": "An diesem Ort.",
+          "en": "At this location.",
+          "vi": "Tại địa điểm này."
+        }
+      ]
+    },
+    "ID216": {
+      "word": "Punkt",
+      "artikel": "der",
+      "plural": "Punkte",
+      "english": "point",
+      "vietnamese": "điểm",
+      "definition_en": "A specific position or score.",
+      "definition_vi": "Vị trí hoặc điểm số cụ thể.",
+      "examples": [
+        {
+          "de": "Ich habe zehn Punkte.",
+          "en": "I have ten points.",
+          "vi": "Tôi có mười điểm."
+        }
+      ]
+    },
+    "ID217": {
+      "word": "Linie",
+      "artikel": "die",
+      "plural": "Linien",
+      "english": "line",
+      "vietnamese": "đường",
+      "definition_en": "A straight mark or path.",
+      "definition_vi": "Một dấu hoặc đường thẳng.",
+      "examples": [
+        {
+          "de": "Eine gerade Linie.",
+          "en": "A straight line.",
+          "vi": "Một đường thẳng."
+        }
+      ]
+    },
+    "ID218": {
+      "word": "Kreis",
+      "artikel": "der",
+      "plural": "Kreise",
+      "english": "circle",
+      "vietnamese": "vòng tròn",
+      "definition_en": "A round shape.",
+      "definition_vi": "Hình tròn.",
+      "examples": [
+        {
+          "de": "Ein perfekter Kreis.",
+          "en": "A perfect circle.",
+          "vi": "Một vòng tròn hoàn hảo."
+        }
+      ]
+    },
+    "ID219": {
+      "word": "Form",
+      "artikel": "die",
+      "plural": "Formen",
+      "english": "shape",
+      "vietnamese": "hình dạng",
+      "definition_en": "The external appearance of something.",
+      "definition_vi": "Hình thức bên ngoài của cái gì đó.",
+      "examples": [
+        {
+          "de": "Die Form ist rund.",
+          "en": "The shape is round.",
+          "vi": "Hình dạng tròn."
+        }
+      ]
+    },
+    "ID220": {
+      "word": "Größe",
+      "artikel": "die",
+      "plural": "Größen",
+      "english": "size",
+      "vietnamese": "kích thước",
+      "definition_en": "The dimensions of something.",
+      "definition_vi": "Kích thước của cái gì đó.",
+      "examples": [
+        {
+          "de": "Welche Größe hast du?",
+          "en": "What size are you?",
+          "vi": "Bạn mặc size nào?"
+        }
+      ]
+    },
+    "ID221": {
+      "word": "Nummer",
+      "artikel": "die",
+      "plural": "Nummern",
+      "english": "number",
+      "vietnamese": "số",
+      "definition_en": "A numeral or identifier.",
+      "definition_vi": "Chữ số hoặc định danh.",
+      "examples": [
+        {
+          "de": "Meine Telefonnummer.",
+          "en": "My telephone number.",
+          "vi": "Số điện thoại của tôi."
+        }
+      ]
+    },
+    "ID222": {
+      "word": "Zahl",
+      "artikel": "die",
+      "plural": "Zahlen",
+      "english": "number (quantity)",
+      "vietnamese": "con số",
+      "definition_en": "A mathematical value.",
+      "definition_vi": "Giá trị toán học.",
+      "examples": [
+        {
+          "de": "Eine große Zahl.",
+          "en": "A large number.",
+          "vi": "Một con số lớn."
+        }
+      ]
+    },
+    "ID223": {
+      "word": "Prozent",
+      "artikel": "das",
+      "plural": "Prozent",
+      "english": "percent",
+      "vietnamese": "phần trăm",
+      "definition_en": "A proportion out of one hundred.",
+      "definition_vi": "Tỷ lệ trên một trăm.",
+      "examples": [
+        {
+          "de": "Fünfzig Prozent.",
+          "en": "Fifty percent.",
+          "vi": "Năm mươi phần trăm."
+        }
+      ]
+    },
+    "ID224": {
+      "word": "Hälfte",
+      "artikel": "die",
+      "plural": "Hälften",
+      "english": "half",
+      "vietnamese": "một nửa",
+      "definition_en": "One of two equal parts.",
+      "definition_vi": "Một trong hai phần bằng nhau.",
+      "examples": [
+        {
+          "de": "Die Hälfte des Kuchens.",
+          "en": "Half of the cake.",
+          "vi": "Một nửa chiếc bánh."
+        }
+      ]
+    },
+    "ID225": {
+      "word": "Teil",
+      "artikel": "der",
+      "plural": "Teile",
+      "english": "part",
+      "vietnamese": "phần",
+      "definition_en": "A piece or segment.",
+      "definition_vi": "Một mảnh hoặc phân đoạn.",
+      "examples": [
+        {
+          "de": "Ein Teil des Ganzen.",
+          "en": "A part of the whole.",
+          "vi": "Một phần của tổng thể."
+        }
+      ]
+    },
+    "ID226": {
+      "word": "Stück",
+      "artikel": "das",
+      "plural": "Stücke",
+      "english": "piece",
+      "vietnamese": "miếng",
+      "definition_en": "An individual item or portion.",
+      "definition_vi": "Một món đồ hoặc phần riêng lẻ.",
+      "examples": [
+        {
+          "de": "Ein Stück Kuchen.",
+          "en": "A piece of cake.",
+          "vi": "Một miếng bánh."
+        }
+      ]
+    },
+    "ID227": {
+      "word": "Paar",
+      "artikel": "das",
+      "plural": "Paare",
+      "english": "pair",
+      "vietnamese": "cặp",
+      "definition_en": "Two items that go together.",
+      "definition_vi": "Hai món đi cùng nhau.",
+      "examples": [
+        {
+          "de": "Ein Paar Schuhe.",
+          "en": "A pair of shoes.",
+          "vi": "Một đôi giày."
+        }
+      ]
+    },
+    "ID228": {
+      "word": "Gruppe",
+      "artikel": "die",
+      "plural": "Gruppen",
+      "english": "group",
+      "vietnamese": "nhóm",
+      "definition_en": "A collection of people or things.",
+      "definition_vi": "Một tập hợp người hoặc vật.",
+      "examples": [
+        {
+          "de": "Eine kleine Gruppe.",
+          "en": "A small group.",
+          "vi": "Một nhóm nhỏ."
+        }
+      ]
+    },
+    "ID229": {
+      "word": "Reihe",
+      "artikel": "die",
+      "plural": "Reihen",
+      "english": "row",
+      "vietnamese": "hàng",
+      "definition_en": "A line of things arranged side by side.",
+      "definition_vi": "Một dãy đồ xếp cạnh nhau.",
+      "examples": [
+        {
+          "de": "In der ersten Reihe.",
+          "en": "In the first row.",
+          "vi": "Ở hàng đầu tiên."
+        }
+      ]
+    },
+    "ID230": {
+      "word": "Ordnung",
+      "artikel": "die",
+      "plural": "Ordnungen",
+      "english": "order",
+      "vietnamese": "thứ tự",
+      "definition_en": "A systematic arrangement.",
+      "definition_vi": "Một sự sắp xếp có hệ thống.",
+      "examples": [
+        {
+          "de": "Alles in Ordnung.",
+          "en": "Everything in order.",
+          "vi": "Mọi thứ đều ổn."
+        }
+      ]
+    },
+    "ID231": {
+      "word": "System",
+      "artikel": "das",
+      "plural": "Systeme",
+      "english": "system",
+      "vietnamese": "hệ thống",
+      "definition_en": "An organized set of principles.",
+      "definition_vi": "Một bộ nguyên tắc có tổ chức.",
+      "examples": [
+        {
+          "de": "Ein komplexes System.",
+          "en": "A complex system.",
+          "vi": "Một hệ thống phức tạp."
+        }
+      ]
+    },
+    "ID232": {
+      "word": "Regel",
+      "artikel": "die",
+      "plural": "Regeln",
+      "english": "rule",
+      "vietnamese": "quy tắc",
+      "definition_en": "A regulation or principle.",
+      "definition_vi": "Quy định hoặc nguyên tắc.",
+      "examples": [
+        {
+          "de": "Die Regel ist wichtig.",
+          "en": "The rule is important.",
+          "vi": "Quy tắc quan trọng."
+        }
+      ]
+    },
+    "ID233": {
+      "word": "Gesetz",
+      "artikel": "das",
+      "plural": "Gesetze",
+      "english": "law",
+      "vietnamese": "luật",
+      "definition_en": "A rule established by authority.",
+      "definition_vi": "Quy tắc được thiết lập bởi cơ quan có thẩm quyền.",
+      "examples": [
+        {
+          "de": "Das Gesetz muss befolgt werden.",
+          "en": "The law must be followed.",
+          "vi": "Luật phải được tuân thủ."
+        }
+      ]
+    },
+    "ID234": {
+      "word": "Recht",
+      "artikel": "das",
+      "plural": "Rechte",
+      "english": "right",
+      "vietnamese": "quyền",
+      "definition_en": "A legal entitlement.",
+      "definition_vi": "Quyền lợi hợp pháp.",
+      "examples": [
+        {
+          "de": "Ich habe das Recht.",
+          "en": "I have the right.",
+          "vi": "Tôi có quyền."
+        }
+      ]
+    },
+    "ID235": {
+      "word": "Pflicht",
+      "artikel": "die",
+      "plural": "Pflichten",
+      "english": "duty",
+      "vietnamese": "nghĩa vụ",
+      "definition_en": "An obligation or responsibility.",
+      "definition_vi": "Nghĩa vụ hoặc trách nhiệm.",
+      "examples": [
+        {
+          "de": "Das ist meine Pflicht.",
+          "en": "That is my duty.",
+          "vi": "Đó là nghĩa vụ của tôi."
+        }
+      ]
+    },
+    "ID236": {
+      "word": "Fehler",
+      "artikel": "der",
+      "plural": "Fehler",
+      "english": "mistake",
+      "vietnamese": "lỗi",
+      "definition_en": "An error or fault.",
+      "definition_vi": "Lỗi hoặc sai sót.",
+      "examples": [
+        {
+          "de": "Das war ein Fehler.",
+          "en": "That was a mistake.",
+          "vi": "Đó là một lỗi."
+        }
+      ]
+    },
+    "ID237": {
+      "word": "Problem",
+      "artikel": "das",
+      "plural": "Probleme",
+      "english": "problem",
+      "vietnamese": "vấn đề",
+      "definition_en": "A difficulty or issue.",
+      "definition_vi": "Một khó khăn hoặc vấn đề.",
+      "examples": [
+        {
+          "de": "Ich habe ein Problem.",
+          "en": "I have a problem.",
+          "vi": "Tôi có một vấn đề."
+        }
+      ]
+    },
+    "ID238": {
+      "word": "Lösung",
+      "artikel": "die",
+      "plural": "Lösungen",
+      "english": "solution",
+      "vietnamese": "giải pháp",
+      "definition_en": "An answer to a problem.",
+      "definition_vi": "Câu trả lời cho một vấn đề.",
+      "examples": [
+        {
+          "de": "Die Lösung ist einfach.",
+          "en": "The solution is simple.",
+          "vi": "Giải pháp đơn giản."
+        }
+      ]
+    },
+    "ID239": {
+      "word": "Antwort",
+      "artikel": "die",
+      "plural": "Antworten",
+      "english": "answer",
+      "vietnamese": "câu trả lời",
+      "definition_en": "A response to a question.",
+      "definition_vi": "Phản hồi cho một câu hỏi.",
+      "examples": [
+        {
+          "de": "Die Antwort ist richtig.",
+          "en": "The answer is correct.",
+          "vi": "Câu trả lời đúng."
+        }
+      ]
+    },
+    "ID240": {
+      "word": "Frage",
+      "artikel": "die",
+      "plural": "Fragen",
+      "english": "question",
+      "vietnamese": "câu hỏi",
+      "definition_en": "An inquiry seeking information.",
+      "definition_vi": "Một câu hỏi tìm kiếm thông tin.",
+      "examples": [
+        {
+          "de": "Ich habe eine Frage.",
+          "en": "I have a question.",
+          "vi": "Tôi có một câu hỏi."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,1573 @@
+{
+  "byWord": {
+    "mann": "ID007",
+    "monat": "ID027",
+    "milch": "ID031",
+    "mutter": "ID040",
+    "mund": "ID053",
+    "markt": "ID116",
+    "motorrad": "ID129",
+    "mantel": "ID145",
+    "mütze": "ID149",
+    "mond": "ID167",
+    "meer": "ID180",
+    "maus": "ID193",
+    "morgen": "ID201",
+    "mittag": "ID203",
+    "minute": "ID779",
+    "moment": "ID208",
+    "mitte": "ID213",
+    "macht": "ID744",
+    "mädchen": "ID745",
+    "magen": "ID746",
+    "mahlzeit": "ID747",
+    "mai": "ID748",
+    "mal": "ID749",
+    "manager": "ID750",
+    "mangel": "ID751",
+    "mannschaft": "ID752",
+    "märchen": "ID753",
+    "marke": "ID754",
+    "märz": "ID755",
+    "maschine": "ID756",
+    "maß": "ID757",
+    "masse": "ID758",
+    "material": "ID759",
+    "mauer": "ID760",
+    "mechaniker": "ID761",
+    "medikament": "ID762",
+    "medizin": "ID763",
+    "mehl": "ID764",
+    "mehrheit": "ID765",
+    "meinung": "ID766",
+    "meister": "ID767",
+    "melodie": "ID768",
+    "menge": "ID769",
+    "mensch": "ID770",
+    "menü": "ID771",
+    "merkmal": "ID772",
+    "messe": "ID773",
+    "messer": "ID774",
+    "metall": "ID775",
+    "methode": "ID776",
+    "miete": "ID777",
+    "mieter": "ID778",
+    "mischung": "ID780",
+    "mission": "ID781",
+    "mitarbeiter": "ID782",
+    "mitglied": "ID783",
+    "mittel": "ID784",
+    "mittelpunkt": "ID785",
+    "möbel": "ID786",
+    "mode": "ID787",
+    "modell": "ID788",
+    "möglichkeit": "ID789",
+    "musik": "ID790",
+    "mut": "ID791"
+  },
+  "byEnglish": {
+    "man": [
+      "ID007"
+    ],
+    "month": [
+      "ID027"
+    ],
+    "milk": [
+      "ID031"
+    ],
+    "mother": [
+      "ID040"
+    ],
+    "mouth": [
+      "ID053"
+    ],
+    "market": [
+      "ID116"
+    ],
+    "motorcycle": [
+      "ID129"
+    ],
+    "coat": [
+      "ID145"
+    ],
+    "cap": [
+      "ID149"
+    ],
+    "moon": [
+      "ID167"
+    ],
+    "sea": [
+      "ID180"
+    ],
+    "mouse": [
+      "ID193"
+    ],
+    "morning": [
+      "ID201"
+    ],
+    "noon": [
+      "ID203"
+    ],
+    "minute": [
+      "ID205",
+      "ID779"
+    ],
+    "moment": [
+      "ID208"
+    ],
+    "middle": [
+      "ID213"
+    ],
+    "power": [
+      "ID744"
+    ],
+    "girl": [
+      "ID745"
+    ],
+    "stomach": [
+      "ID746"
+    ],
+    "meal": [
+      "ID747"
+    ],
+    "May": [
+      "ID748"
+    ],
+    "time, occasion": [
+      "ID749"
+    ],
+    "manager": [
+      "ID750"
+    ],
+    "lack, deficiency": [
+      "ID751"
+    ],
+    "team": [
+      "ID752"
+    ],
+    "fairy tale": [
+      "ID753"
+    ],
+    "brand, stamp": [
+      "ID754"
+    ],
+    "March": [
+      "ID755"
+    ],
+    "machine": [
+      "ID756"
+    ],
+    "measure": [
+      "ID757"
+    ],
+    "mass, crowd": [
+      "ID758"
+    ],
+    "material": [
+      "ID759"
+    ],
+    "wall": [
+      "ID760"
+    ],
+    "mechanic": [
+      "ID761"
+    ],
+    "medication": [
+      "ID762"
+    ],
+    "medicine": [
+      "ID763"
+    ],
+    "flour": [
+      "ID764"
+    ],
+    "majority": [
+      "ID765"
+    ],
+    "opinion": [
+      "ID766"
+    ],
+    "master": [
+      "ID767"
+    ],
+    "melody": [
+      "ID768"
+    ],
+    "quantity, crowd": [
+      "ID769"
+    ],
+    "human": [
+      "ID770"
+    ],
+    "menu": [
+      "ID771"
+    ],
+    "characteristic": [
+      "ID772"
+    ],
+    "fair, mass": [
+      "ID773"
+    ],
+    "knife": [
+      "ID774"
+    ],
+    "metal": [
+      "ID775"
+    ],
+    "method": [
+      "ID776"
+    ],
+    "rent": [
+      "ID777"
+    ],
+    "tenant": [
+      "ID778"
+    ],
+    "mixture": [
+      "ID780"
+    ],
+    "mission": [
+      "ID781"
+    ],
+    "employee": [
+      "ID782"
+    ],
+    "member": [
+      "ID783"
+    ],
+    "means, remedy": [
+      "ID784"
+    ],
+    "center": [
+      "ID785"
+    ],
+    "furniture": [
+      "ID786"
+    ],
+    "fashion": [
+      "ID787"
+    ],
+    "model": [
+      "ID788"
+    ],
+    "possibility": [
+      "ID789"
+    ],
+    "music": [
+      "ID790"
+    ],
+    "courage": [
+      "ID791"
+    ]
+  },
+  "byVietnamese": {
+    "người đàn ông": [
+      "ID007"
+    ],
+    "tháng": [
+      "ID027"
+    ],
+    "sữa": [
+      "ID031"
+    ],
+    "mẹ": [
+      "ID040"
+    ],
+    "miệng": [
+      "ID053"
+    ],
+    "chợ": [
+      "ID116"
+    ],
+    "xe máy": [
+      "ID129"
+    ],
+    "áo choàng": [
+      "ID145"
+    ],
+    "nón": [
+      "ID149"
+    ],
+    "mặt trăng": [
+      "ID167"
+    ],
+    "biển": [
+      "ID180"
+    ],
+    "con chuột": [
+      "ID193"
+    ],
+    "buổi sáng": [
+      "ID201"
+    ],
+    "buổi trưa": [
+      "ID203"
+    ],
+    "phút": [
+      "ID205",
+      "ID779"
+    ],
+    "khoảnh khắc": [
+      "ID208"
+    ],
+    "giữa": [
+      "ID213"
+    ],
+    "quyền lực": [
+      "ID744"
+    ],
+    "cô gái": [
+      "ID745"
+    ],
+    "dạ dày": [
+      "ID746"
+    ],
+    "bữa ăn": [
+      "ID747"
+    ],
+    "tháng Năm": [
+      "ID748"
+    ],
+    "lần": [
+      "ID749"
+    ],
+    "quản lý": [
+      "ID750"
+    ],
+    "sự thiếu hụt": [
+      "ID751"
+    ],
+    "đội": [
+      "ID752"
+    ],
+    "truyện cổ tích": [
+      "ID753"
+    ],
+    "nhãn hiệu": [
+      "ID754"
+    ],
+    "tháng Ba": [
+      "ID755"
+    ],
+    "máy móc": [
+      "ID756"
+    ],
+    "kích thước": [
+      "ID757"
+    ],
+    "khối lượng": [
+      "ID758"
+    ],
+    "vật liệu": [
+      "ID759"
+    ],
+    "bức tường": [
+      "ID760"
+    ],
+    "thợ máy": [
+      "ID761"
+    ],
+    "thuốc": [
+      "ID762"
+    ],
+    "y học": [
+      "ID763"
+    ],
+    "bột mì": [
+      "ID764"
+    ],
+    "đa số": [
+      "ID765"
+    ],
+    "ý kiến": [
+      "ID766"
+    ],
+    "bậc thầy": [
+      "ID767"
+    ],
+    "giai điệu": [
+      "ID768"
+    ],
+    "số lượng": [
+      "ID769"
+    ],
+    "con người": [
+      "ID770"
+    ],
+    "thực đơn": [
+      "ID771"
+    ],
+    "đặc điểm": [
+      "ID772"
+    ],
+    "hội chợ": [
+      "ID773"
+    ],
+    "con dao": [
+      "ID774"
+    ],
+    "kim loại": [
+      "ID775"
+    ],
+    "phương pháp": [
+      "ID776"
+    ],
+    "tiền thuê": [
+      "ID777"
+    ],
+    "người thuê nhà": [
+      "ID778"
+    ],
+    "hỗn hợp": [
+      "ID780"
+    ],
+    "nhiệm vụ": [
+      "ID781"
+    ],
+    "nhân viên": [
+      "ID782"
+    ],
+    "thành viên": [
+      "ID783"
+    ],
+    "phương tiện": [
+      "ID784"
+    ],
+    "trung tâm": [
+      "ID785"
+    ],
+    "đồ nội thất": [
+      "ID786"
+    ],
+    "thời trang": [
+      "ID787"
+    ],
+    "mô hình": [
+      "ID788"
+    ],
+    "khả năng": [
+      "ID789"
+    ],
+    "âm nhạc": [
+      "ID790"
+    ],
+    "lòng dũng cảm": [
+      "ID791"
+    ]
+  },
+  "byArtikel": {
+    "der": [
+      "ID007",
+      "ID027",
+      "ID053",
+      "ID116",
+      "ID129",
+      "ID145",
+      "ID201",
+      "ID203",
+      "ID208",
+      "ID746",
+      "ID748",
+      "ID750",
+      "ID751",
+      "ID755",
+      "ID761",
+      "ID767",
+      "ID770",
+      "ID778",
+      "ID782",
+      "ID785",
+      "ID791"
+    ],
+    "die": [
+      "ID031",
+      "ID040",
+      "ID149",
+      "ID193",
+      "ID205",
+      "ID213",
+      "ID744",
+      "ID747",
+      "ID752",
+      "ID754",
+      "ID756",
+      "ID758",
+      "ID760",
+      "ID763",
+      "ID765",
+      "ID766",
+      "ID768",
+      "ID769",
+      "ID773",
+      "ID776",
+      "ID777",
+      "ID779",
+      "ID780",
+      "ID781",
+      "ID787",
+      "ID789",
+      "ID790"
+    ],
+    "das": [
+      "ID167",
+      "ID180",
+      "ID745",
+      "ID749",
+      "ID753",
+      "ID757",
+      "ID759",
+      "ID762",
+      "ID764",
+      "ID771",
+      "ID772",
+      "ID774",
+      "ID775",
+      "ID783",
+      "ID784",
+      "ID786",
+      "ID788"
+    ]
+  },
+  "entries": {
+    "ID007": {
+      "word": "Mann",
+      "artikel": "der",
+      "plural": "Männer",
+      "english": "man",
+      "vietnamese": "người đàn ông",
+      "definition_en": "An adult male human.",
+      "definition_vi": "Một người nam trưởng thành.",
+      "examples": [
+        {
+          "de": "Der Mann arbeitet.",
+          "en": "The man is working.",
+          "vi": "Người đàn ông đang làm việc."
+        }
+      ]
+    },
+    "ID027": {
+      "word": "Monat",
+      "artikel": "der",
+      "plural": "Monate",
+      "english": "month",
+      "vietnamese": "tháng",
+      "definition_en": "One of the twelve divisions of a year.",
+      "definition_vi": "Một trong mười hai phần của một năm.",
+      "examples": [
+        {
+          "de": "Der Januar ist der erste Monat.",
+          "en": "January is the first month.",
+          "vi": "Tháng Giêng là tháng đầu tiên."
+        }
+      ]
+    },
+    "ID031": {
+      "word": "Milch",
+      "artikel": "die",
+      "plural": "Milch",
+      "english": "milk",
+      "vietnamese": "sữa",
+      "definition_en": "A white liquid produced by mammals.",
+      "definition_vi": "Một chất lỏng màu trắng do động vật có vú tạo ra.",
+      "examples": [
+        {
+          "de": "Die Milch ist kalt.",
+          "en": "The milk is cold.",
+          "vi": "Sữa thì lạnh."
+        }
+      ]
+    },
+    "ID040": {
+      "word": "Mutter",
+      "artikel": "die",
+      "plural": "Mütter",
+      "english": "mother",
+      "vietnamese": "mẹ",
+      "definition_en": "A female parent.",
+      "definition_vi": "Cha mẹ nữ.",
+      "examples": [
+        {
+          "de": "Meine Mutter kocht gut.",
+          "en": "My mother cooks well.",
+          "vi": "Mẹ tôi nấu ăn ngon."
+        }
+      ]
+    },
+    "ID053": {
+      "word": "Mund",
+      "artikel": "der",
+      "plural": "Münder",
+      "english": "mouth",
+      "vietnamese": "miệng",
+      "definition_en": "The opening for food intake and speech.",
+      "definition_vi": "Lỗ để ăn và nói.",
+      "examples": [
+        {
+          "de": "Er öffnet den Mund.",
+          "en": "He opens his mouth.",
+          "vi": "Anh ấy mở miệng."
+        }
+      ]
+    },
+    "ID116": {
+      "word": "Markt",
+      "artikel": "der",
+      "plural": "Märkte",
+      "english": "market",
+      "vietnamese": "chợ",
+      "definition_en": "A place where goods are sold.",
+      "definition_vi": "Nơi bán hàng.",
+      "examples": [
+        {
+          "de": "Der Markt ist groß.",
+          "en": "The market is big.",
+          "vi": "Chợ lớn."
+        }
+      ]
+    },
+    "ID129": {
+      "word": "Motorrad",
+      "artikel": "das",
+      "plural": "Motorräder",
+      "english": "motorcycle",
+      "vietnamese": "xe máy",
+      "definition_en": "A motorized two-wheeled vehicle.",
+      "definition_vi": "Phương tiện hai bánh có động cơ.",
+      "examples": [
+        {
+          "de": "Das Motorrad ist schnell.",
+          "en": "The motorcycle is fast.",
+          "vi": "Xe máy nhanh."
+        }
+      ]
+    },
+    "ID145": {
+      "word": "Mantel",
+      "artikel": "der",
+      "plural": "Mäntel",
+      "english": "coat",
+      "vietnamese": "áo choàng",
+      "definition_en": "A long outer garment.",
+      "definition_vi": "Áo khoác dài bên ngoài.",
+      "examples": [
+        {
+          "de": "Der Mantel ist lang.",
+          "en": "The coat is long.",
+          "vi": "Áo choàng dài."
+        }
+      ]
+    },
+    "ID149": {
+      "word": "Mütze",
+      "artikel": "die",
+      "plural": "Mützen",
+      "english": "cap",
+      "vietnamese": "nón",
+      "definition_en": "A soft head covering.",
+      "definition_vi": "Nón mềm che đầu.",
+      "examples": [
+        {
+          "de": "Die Mütze ist rot.",
+          "en": "The cap is red.",
+          "vi": "Nón đỏ."
+        }
+      ]
+    },
+    "ID167": {
+      "word": "Mond",
+      "artikel": "der",
+      "plural": "Monde",
+      "english": "moon",
+      "vietnamese": "mặt trăng",
+      "definition_en": "The natural satellite of Earth.",
+      "definition_vi": "Vệ tinh tự nhiên của Trái Đất.",
+      "examples": [
+        {
+          "de": "Der Mond ist hell.",
+          "en": "The moon is bright.",
+          "vi": "Mặt trăng sáng."
+        }
+      ]
+    },
+    "ID180": {
+      "word": "Meer",
+      "artikel": "das",
+      "plural": "Meere",
+      "english": "sea",
+      "vietnamese": "biển",
+      "definition_en": "A large body of salt water.",
+      "definition_vi": "Vùng nước mặn lớn.",
+      "examples": [
+        {
+          "de": "Das Meer ist blau.",
+          "en": "The sea is blue.",
+          "vi": "Biển xanh."
+        }
+      ]
+    },
+    "ID193": {
+      "word": "Maus",
+      "artikel": "die",
+      "plural": "Mäuse",
+      "english": "mouse",
+      "vietnamese": "con chuột",
+      "definition_en": "A small rodent.",
+      "definition_vi": "Loài gặm nhấm nhỏ.",
+      "examples": [
+        {
+          "de": "Die Maus ist klein.",
+          "en": "The mouse is small.",
+          "vi": "Con chuột nhỏ."
+        }
+      ]
+    },
+    "ID201": {
+      "word": "Morgen",
+      "artikel": "der",
+      "plural": "Morgen",
+      "english": "morning",
+      "vietnamese": "buổi sáng",
+      "definition_en": "The early part of the day.",
+      "definition_vi": "Phần đầu ngày.",
+      "examples": [
+        {
+          "de": "Guten Morgen!",
+          "en": "Good morning!",
+          "vi": "Chào buổi sáng!"
+        }
+      ]
+    },
+    "ID203": {
+      "word": "Mittag",
+      "artikel": "der",
+      "plural": "Mittage",
+      "english": "noon",
+      "vietnamese": "buổi trưa",
+      "definition_en": "The middle of the day.",
+      "definition_vi": "Giữa ngày.",
+      "examples": [
+        {
+          "de": "Um Mittag essen wir.",
+          "en": "We eat at noon.",
+          "vi": "Chúng tôi ăn vào buổi trưa."
+        }
+      ]
+    },
+    "ID205": {
+      "word": "Minute",
+      "artikel": "die",
+      "plural": "Minuten",
+      "english": "minute",
+      "vietnamese": "phút",
+      "definition_en": "A unit of time equal to 60 seconds.",
+      "definition_vi": "Đơn vị thời gian bằng 60 giây.",
+      "examples": [
+        {
+          "de": "Ich warte fünf Minuten.",
+          "en": "I wait five minutes.",
+          "vi": "Tôi đợi năm phút."
+        }
+      ]
+    },
+    "ID208": {
+      "word": "Moment",
+      "artikel": "der",
+      "plural": "Momente",
+      "english": "moment",
+      "vietnamese": "khoảnh khắc",
+      "definition_en": "A brief period of time.",
+      "definition_vi": "Khoảng thời gian ngắn.",
+      "examples": [
+        {
+          "de": "Einen Moment bitte!",
+          "en": "One moment please!",
+          "vi": "Xin chờ một chút!"
+        }
+      ]
+    },
+    "ID213": {
+      "word": "Mitte",
+      "artikel": "die",
+      "plural": "Mitten",
+      "english": "middle",
+      "vietnamese": "giữa",
+      "definition_en": "The center point.",
+      "definition_vi": "Điểm trung tâm.",
+      "examples": [
+        {
+          "de": "In der Mitte des Raumes.",
+          "en": "In the middle of the room.",
+          "vi": "Ở giữa phòng."
+        }
+      ]
+    },
+    "ID744": {
+      "word": "Macht",
+      "artikel": "die",
+      "plural": "Mächte",
+      "english": "power",
+      "vietnamese": "quyền lực",
+      "definition_en": "A power.",
+      "definition_vi": "Một quyền lực.",
+      "examples": [
+        {
+          "de": "Die Macht ist wichtig.",
+          "en": "The power is important.",
+          "vi": "Quyền lực thì quan trọng."
+        }
+      ]
+    },
+    "ID745": {
+      "word": "Mädchen",
+      "artikel": "das",
+      "plural": "Mädchen",
+      "english": "girl",
+      "vietnamese": "cô gái",
+      "definition_en": "A girl.",
+      "definition_vi": "Một cô gái.",
+      "examples": [
+        {
+          "de": "Das Mädchen ist wichtig.",
+          "en": "The girl is important.",
+          "vi": "Cô gái thì quan trọng."
+        }
+      ]
+    },
+    "ID746": {
+      "word": "Magen",
+      "artikel": "der",
+      "plural": "Magen",
+      "english": "stomach",
+      "vietnamese": "dạ dày",
+      "definition_en": "A stomach.",
+      "definition_vi": "Một dạ dày.",
+      "examples": [
+        {
+          "de": "Der Magen ist wichtig.",
+          "en": "The stomach is important.",
+          "vi": "Dạ dày thì quan trọng."
+        }
+      ]
+    },
+    "ID747": {
+      "word": "Mahlzeit",
+      "artikel": "die",
+      "plural": "Mahlzeiten",
+      "english": "meal",
+      "vietnamese": "bữa ăn",
+      "definition_en": "A meal.",
+      "definition_vi": "Một bữa ăn.",
+      "examples": [
+        {
+          "de": "Die Mahlzeit ist wichtig.",
+          "en": "The meal is important.",
+          "vi": "Bữa ăn thì quan trọng."
+        }
+      ]
+    },
+    "ID748": {
+      "word": "Mai",
+      "artikel": "der",
+      "plural": "-",
+      "english": "May",
+      "vietnamese": "tháng Năm",
+      "definition_en": "A May.",
+      "definition_vi": "Một tháng Năm.",
+      "examples": [
+        {
+          "de": "Der Mai ist wichtig.",
+          "en": "The May is important.",
+          "vi": "Tháng Năm thì quan trọng."
+        }
+      ]
+    },
+    "ID749": {
+      "word": "Mal",
+      "artikel": "das",
+      "plural": "Male",
+      "english": "time, occasion",
+      "vietnamese": "lần",
+      "definition_en": "A time, occasion.",
+      "definition_vi": "Một lần.",
+      "examples": [
+        {
+          "de": "Das Mal ist wichtig.",
+          "en": "The time, occasion is important.",
+          "vi": "Lần thì quan trọng."
+        }
+      ]
+    },
+    "ID750": {
+      "word": "Manager",
+      "artikel": "der",
+      "plural": "Manager",
+      "english": "manager",
+      "vietnamese": "quản lý",
+      "definition_en": "A manager.",
+      "definition_vi": "Một quản lý.",
+      "examples": [
+        {
+          "de": "Der Manager ist wichtig.",
+          "en": "The manager is important.",
+          "vi": "Quản lý thì quan trọng."
+        }
+      ]
+    },
+    "ID751": {
+      "word": "Mangel",
+      "artikel": "der",
+      "plural": "Mängel",
+      "english": "lack, deficiency",
+      "vietnamese": "sự thiếu hụt",
+      "definition_en": "A lack, deficiency.",
+      "definition_vi": "Một sự thiếu hụt.",
+      "examples": [
+        {
+          "de": "Der Mangel ist wichtig.",
+          "en": "The lack, deficiency is important.",
+          "vi": "Sự thiếu hụt thì quan trọng."
+        }
+      ]
+    },
+    "ID752": {
+      "word": "Mannschaft",
+      "artikel": "die",
+      "plural": "Mannschaften",
+      "english": "team",
+      "vietnamese": "đội",
+      "definition_en": "A team.",
+      "definition_vi": "Một đội.",
+      "examples": [
+        {
+          "de": "Die Mannschaft ist wichtig.",
+          "en": "The team is important.",
+          "vi": "Đội thì quan trọng."
+        }
+      ]
+    },
+    "ID753": {
+      "word": "Märchen",
+      "artikel": "das",
+      "plural": "Märchen",
+      "english": "fairy tale",
+      "vietnamese": "truyện cổ tích",
+      "definition_en": "A fairy tale.",
+      "definition_vi": "Một truyện cổ tích.",
+      "examples": [
+        {
+          "de": "Das Märchen ist wichtig.",
+          "en": "The fairy tale is important.",
+          "vi": "Truyện cổ tích thì quan trọng."
+        }
+      ]
+    },
+    "ID754": {
+      "word": "Marke",
+      "artikel": "die",
+      "plural": "Marken",
+      "english": "brand, stamp",
+      "vietnamese": "nhãn hiệu",
+      "definition_en": "A brand, stamp.",
+      "definition_vi": "Một nhãn hiệu.",
+      "examples": [
+        {
+          "de": "Die Marke ist wichtig.",
+          "en": "The brand, stamp is important.",
+          "vi": "Nhãn hiệu thì quan trọng."
+        }
+      ]
+    },
+    "ID755": {
+      "word": "März",
+      "artikel": "der",
+      "plural": "-",
+      "english": "March",
+      "vietnamese": "tháng Ba",
+      "definition_en": "A March.",
+      "definition_vi": "Một tháng Ba.",
+      "examples": [
+        {
+          "de": "Der März ist wichtig.",
+          "en": "The March is important.",
+          "vi": "Tháng Ba thì quan trọng."
+        }
+      ]
+    },
+    "ID756": {
+      "word": "Maschine",
+      "artikel": "die",
+      "plural": "Maschinen",
+      "english": "machine",
+      "vietnamese": "máy móc",
+      "definition_en": "A machine.",
+      "definition_vi": "Một máy móc.",
+      "examples": [
+        {
+          "de": "Die Maschine ist wichtig.",
+          "en": "The machine is important.",
+          "vi": "Máy móc thì quan trọng."
+        }
+      ]
+    },
+    "ID757": {
+      "word": "Maß",
+      "artikel": "das",
+      "plural": "Maße",
+      "english": "measure",
+      "vietnamese": "kích thước",
+      "definition_en": "A measure.",
+      "definition_vi": "Một kích thước.",
+      "examples": [
+        {
+          "de": "Das Maß ist wichtig.",
+          "en": "The measure is important.",
+          "vi": "Kích thước thì quan trọng."
+        }
+      ]
+    },
+    "ID758": {
+      "word": "Masse",
+      "artikel": "die",
+      "plural": "Massen",
+      "english": "mass, crowd",
+      "vietnamese": "khối lượng",
+      "definition_en": "A mass, crowd.",
+      "definition_vi": "Một khối lượng.",
+      "examples": [
+        {
+          "de": "Die Masse ist wichtig.",
+          "en": "The mass, crowd is important.",
+          "vi": "Khối lượng thì quan trọng."
+        }
+      ]
+    },
+    "ID759": {
+      "word": "Material",
+      "artikel": "das",
+      "plural": "Materialien",
+      "english": "material",
+      "vietnamese": "vật liệu",
+      "definition_en": "A material.",
+      "definition_vi": "Một vật liệu.",
+      "examples": [
+        {
+          "de": "Das Material ist wichtig.",
+          "en": "The material is important.",
+          "vi": "Vật liệu thì quan trọng."
+        }
+      ]
+    },
+    "ID760": {
+      "word": "Mauer",
+      "artikel": "die",
+      "plural": "Mauern",
+      "english": "wall",
+      "vietnamese": "bức tường",
+      "definition_en": "A wall.",
+      "definition_vi": "Một bức tường.",
+      "examples": [
+        {
+          "de": "Die Mauer ist wichtig.",
+          "en": "The wall is important.",
+          "vi": "Bức tường thì quan trọng."
+        }
+      ]
+    },
+    "ID761": {
+      "word": "Mechaniker",
+      "artikel": "der",
+      "plural": "Mechaniker",
+      "english": "mechanic",
+      "vietnamese": "thợ máy",
+      "definition_en": "A mechanic.",
+      "definition_vi": "Một thợ máy.",
+      "examples": [
+        {
+          "de": "Der Mechaniker ist wichtig.",
+          "en": "The mechanic is important.",
+          "vi": "Thợ máy thì quan trọng."
+        }
+      ]
+    },
+    "ID762": {
+      "word": "Medikament",
+      "artikel": "das",
+      "plural": "Medikamente",
+      "english": "medication",
+      "vietnamese": "thuốc",
+      "definition_en": "A medication.",
+      "definition_vi": "Một thuốc.",
+      "examples": [
+        {
+          "de": "Das Medikament ist wichtig.",
+          "en": "The medication is important.",
+          "vi": "Thuốc thì quan trọng."
+        }
+      ]
+    },
+    "ID763": {
+      "word": "Medizin",
+      "artikel": "die",
+      "plural": "-",
+      "english": "medicine",
+      "vietnamese": "y học",
+      "definition_en": "A medicine.",
+      "definition_vi": "Một y học.",
+      "examples": [
+        {
+          "de": "Die Medizin ist wichtig.",
+          "en": "The medicine is important.",
+          "vi": "Y học thì quan trọng."
+        }
+      ]
+    },
+    "ID764": {
+      "word": "Mehl",
+      "artikel": "das",
+      "plural": "-",
+      "english": "flour",
+      "vietnamese": "bột mì",
+      "definition_en": "A flour.",
+      "definition_vi": "Một bột mì.",
+      "examples": [
+        {
+          "de": "Das Mehl ist wichtig.",
+          "en": "The flour is important.",
+          "vi": "Bột mì thì quan trọng."
+        }
+      ]
+    },
+    "ID765": {
+      "word": "Mehrheit",
+      "artikel": "die",
+      "plural": "Mehrheiten",
+      "english": "majority",
+      "vietnamese": "đa số",
+      "definition_en": "A majority.",
+      "definition_vi": "Một đa số.",
+      "examples": [
+        {
+          "de": "Die Mehrheit ist wichtig.",
+          "en": "The majority is important.",
+          "vi": "Đa số thì quan trọng."
+        }
+      ]
+    },
+    "ID766": {
+      "word": "Meinung",
+      "artikel": "die",
+      "plural": "Meinungen",
+      "english": "opinion",
+      "vietnamese": "ý kiến",
+      "definition_en": "A opinion.",
+      "definition_vi": "Một ý kiến.",
+      "examples": [
+        {
+          "de": "Die Meinung ist wichtig.",
+          "en": "The opinion is important.",
+          "vi": "Ý kiến thì quan trọng."
+        }
+      ]
+    },
+    "ID767": {
+      "word": "Meister",
+      "artikel": "der",
+      "plural": "Meister",
+      "english": "master",
+      "vietnamese": "bậc thầy",
+      "definition_en": "A master.",
+      "definition_vi": "Một bậc thầy.",
+      "examples": [
+        {
+          "de": "Der Meister ist wichtig.",
+          "en": "The master is important.",
+          "vi": "Bậc thầy thì quan trọng."
+        }
+      ]
+    },
+    "ID768": {
+      "word": "Melodie",
+      "artikel": "die",
+      "plural": "Melodien",
+      "english": "melody",
+      "vietnamese": "giai điệu",
+      "definition_en": "A melody.",
+      "definition_vi": "Một giai điệu.",
+      "examples": [
+        {
+          "de": "Die Melodie ist wichtig.",
+          "en": "The melody is important.",
+          "vi": "Giai điệu thì quan trọng."
+        }
+      ]
+    },
+    "ID769": {
+      "word": "Menge",
+      "artikel": "die",
+      "plural": "Mengen",
+      "english": "quantity, crowd",
+      "vietnamese": "số lượng",
+      "definition_en": "A quantity, crowd.",
+      "definition_vi": "Một số lượng.",
+      "examples": [
+        {
+          "de": "Die Menge ist wichtig.",
+          "en": "The quantity, crowd is important.",
+          "vi": "Số lượng thì quan trọng."
+        }
+      ]
+    },
+    "ID770": {
+      "word": "Mensch",
+      "artikel": "der",
+      "plural": "Menschen",
+      "english": "human",
+      "vietnamese": "con người",
+      "definition_en": "A human.",
+      "definition_vi": "Một con người.",
+      "examples": [
+        {
+          "de": "Der Mensch ist wichtig.",
+          "en": "The human is important.",
+          "vi": "Con người thì quan trọng."
+        }
+      ]
+    },
+    "ID771": {
+      "word": "Menü",
+      "artikel": "das",
+      "plural": "Menüs",
+      "english": "menu",
+      "vietnamese": "thực đơn",
+      "definition_en": "A menu.",
+      "definition_vi": "Một thực đơn.",
+      "examples": [
+        {
+          "de": "Das Menü ist wichtig.",
+          "en": "The menu is important.",
+          "vi": "Thực đơn thì quan trọng."
+        }
+      ]
+    },
+    "ID772": {
+      "word": "Merkmal",
+      "artikel": "das",
+      "plural": "Merkmale",
+      "english": "characteristic",
+      "vietnamese": "đặc điểm",
+      "definition_en": "A characteristic.",
+      "definition_vi": "Một đặc điểm.",
+      "examples": [
+        {
+          "de": "Das Merkmal ist wichtig.",
+          "en": "The characteristic is important.",
+          "vi": "Đặc điểm thì quan trọng."
+        }
+      ]
+    },
+    "ID773": {
+      "word": "Messe",
+      "artikel": "die",
+      "plural": "Messen",
+      "english": "fair, mass",
+      "vietnamese": "hội chợ",
+      "definition_en": "A fair, mass.",
+      "definition_vi": "Một hội chợ.",
+      "examples": [
+        {
+          "de": "Die Messe ist wichtig.",
+          "en": "The fair, mass is important.",
+          "vi": "Hội chợ thì quan trọng."
+        }
+      ]
+    },
+    "ID774": {
+      "word": "Messer",
+      "artikel": "das",
+      "plural": "Messer",
+      "english": "knife",
+      "vietnamese": "con dao",
+      "definition_en": "A knife.",
+      "definition_vi": "Một con dao.",
+      "examples": [
+        {
+          "de": "Das Messer ist wichtig.",
+          "en": "The knife is important.",
+          "vi": "Con dao thì quan trọng."
+        }
+      ]
+    },
+    "ID775": {
+      "word": "Metall",
+      "artikel": "das",
+      "plural": "Metalle",
+      "english": "metal",
+      "vietnamese": "kim loại",
+      "definition_en": "A metal.",
+      "definition_vi": "Một kim loại.",
+      "examples": [
+        {
+          "de": "Das Metall ist wichtig.",
+          "en": "The metal is important.",
+          "vi": "Kim loại thì quan trọng."
+        }
+      ]
+    },
+    "ID776": {
+      "word": "Methode",
+      "artikel": "die",
+      "plural": "Methoden",
+      "english": "method",
+      "vietnamese": "phương pháp",
+      "definition_en": "A method.",
+      "definition_vi": "Một phương pháp.",
+      "examples": [
+        {
+          "de": "Die Methode ist wichtig.",
+          "en": "The method is important.",
+          "vi": "Phương pháp thì quan trọng."
+        }
+      ]
+    },
+    "ID777": {
+      "word": "Miete",
+      "artikel": "die",
+      "plural": "Mieten",
+      "english": "rent",
+      "vietnamese": "tiền thuê",
+      "definition_en": "A rent.",
+      "definition_vi": "Một tiền thuê.",
+      "examples": [
+        {
+          "de": "Die Miete ist wichtig.",
+          "en": "The rent is important.",
+          "vi": "Tiền thuê thì quan trọng."
+        }
+      ]
+    },
+    "ID778": {
+      "word": "Mieter",
+      "artikel": "der",
+      "plural": "Mieter",
+      "english": "tenant",
+      "vietnamese": "người thuê nhà",
+      "definition_en": "A tenant.",
+      "definition_vi": "Một người thuê nhà.",
+      "examples": [
+        {
+          "de": "Der Mieter ist wichtig.",
+          "en": "The tenant is important.",
+          "vi": "Người thuê nhà thì quan trọng."
+        }
+      ]
+    },
+    "ID779": {
+      "word": "Minute",
+      "artikel": "die",
+      "plural": "Minuten",
+      "english": "minute",
+      "vietnamese": "phút",
+      "definition_en": "A minute.",
+      "definition_vi": "Một phút.",
+      "examples": [
+        {
+          "de": "Die Minute ist wichtig.",
+          "en": "The minute is important.",
+          "vi": "Phút thì quan trọng."
+        }
+      ]
+    },
+    "ID780": {
+      "word": "Mischung",
+      "artikel": "die",
+      "plural": "Mischungen",
+      "english": "mixture",
+      "vietnamese": "hỗn hợp",
+      "definition_en": "A mixture.",
+      "definition_vi": "Một hỗn hợp.",
+      "examples": [
+        {
+          "de": "Die Mischung ist wichtig.",
+          "en": "The mixture is important.",
+          "vi": "Hỗn hợp thì quan trọng."
+        }
+      ]
+    },
+    "ID781": {
+      "word": "Mission",
+      "artikel": "die",
+      "plural": "Missionen",
+      "english": "mission",
+      "vietnamese": "nhiệm vụ",
+      "definition_en": "A mission.",
+      "definition_vi": "Một nhiệm vụ.",
+      "examples": [
+        {
+          "de": "Die Mission ist wichtig.",
+          "en": "The mission is important.",
+          "vi": "Nhiệm vụ thì quan trọng."
+        }
+      ]
+    },
+    "ID782": {
+      "word": "Mitarbeiter",
+      "artikel": "der",
+      "plural": "Mitarbeiter",
+      "english": "employee",
+      "vietnamese": "nhân viên",
+      "definition_en": "A employee.",
+      "definition_vi": "Một nhân viên.",
+      "examples": [
+        {
+          "de": "Der Mitarbeiter ist wichtig.",
+          "en": "The employee is important.",
+          "vi": "Nhân viên thì quan trọng."
+        }
+      ]
+    },
+    "ID783": {
+      "word": "Mitglied",
+      "artikel": "das",
+      "plural": "Mitglieder",
+      "english": "member",
+      "vietnamese": "thành viên",
+      "definition_en": "A member.",
+      "definition_vi": "Một thành viên.",
+      "examples": [
+        {
+          "de": "Das Mitglied ist wichtig.",
+          "en": "The member is important.",
+          "vi": "Thành viên thì quan trọng."
+        }
+      ]
+    },
+    "ID784": {
+      "word": "Mittel",
+      "artikel": "das",
+      "plural": "Mittel",
+      "english": "means, remedy",
+      "vietnamese": "phương tiện",
+      "definition_en": "A means, remedy.",
+      "definition_vi": "Một phương tiện.",
+      "examples": [
+        {
+          "de": "Das Mittel ist wichtig.",
+          "en": "The means, remedy is important.",
+          "vi": "Phương tiện thì quan trọng."
+        }
+      ]
+    },
+    "ID785": {
+      "word": "Mittelpunkt",
+      "artikel": "der",
+      "plural": "Mittelpunkte",
+      "english": "center",
+      "vietnamese": "trung tâm",
+      "definition_en": "A center.",
+      "definition_vi": "Một trung tâm.",
+      "examples": [
+        {
+          "de": "Der Mittelpunkt ist wichtig.",
+          "en": "The center is important.",
+          "vi": "Trung tâm thì quan trọng."
+        }
+      ]
+    },
+    "ID786": {
+      "word": "Möbel",
+      "artikel": "das",
+      "plural": "Möbel",
+      "english": "furniture",
+      "vietnamese": "đồ nội thất",
+      "definition_en": "A furniture.",
+      "definition_vi": "Một đồ nội thất.",
+      "examples": [
+        {
+          "de": "Das Möbel ist wichtig.",
+          "en": "The furniture is important.",
+          "vi": "Đồ nội thất thì quan trọng."
+        }
+      ]
+    },
+    "ID787": {
+      "word": "Mode",
+      "artikel": "die",
+      "plural": "Moden",
+      "english": "fashion",
+      "vietnamese": "thời trang",
+      "definition_en": "A fashion.",
+      "definition_vi": "Một thời trang.",
+      "examples": [
+        {
+          "de": "Die Mode ist wichtig.",
+          "en": "The fashion is important.",
+          "vi": "Thời trang thì quan trọng."
+        }
+      ]
+    },
+    "ID788": {
+      "word": "Modell",
+      "artikel": "das",
+      "plural": "Modelle",
+      "english": "model",
+      "vietnamese": "mô hình",
+      "definition_en": "A model.",
+      "definition_vi": "Một mô hình.",
+      "examples": [
+        {
+          "de": "Das Modell ist wichtig.",
+          "en": "The model is important.",
+          "vi": "Mô hình thì quan trọng."
+        }
+      ]
+    },
+    "ID789": {
+      "word": "Möglichkeit",
+      "artikel": "die",
+      "plural": "Möglichkeiten",
+      "english": "possibility",
+      "vietnamese": "khả năng",
+      "definition_en": "A possibility.",
+      "definition_vi": "Một khả năng.",
+      "examples": [
+        {
+          "de": "Die Möglichkeit ist wichtig.",
+          "en": "The possibility is important.",
+          "vi": "Khả năng thì quan trọng."
+        }
+      ]
+    },
+    "ID790": {
+      "word": "Musik",
+      "artikel": "die",
+      "plural": "-",
+      "english": "music",
+      "vietnamese": "âm nhạc",
+      "definition_en": "A music.",
+      "definition_vi": "Một âm nhạc.",
+      "examples": [
+        {
+          "de": "Die Musik ist wichtig.",
+          "en": "The music is important.",
+          "vi": "Âm nhạc thì quan trọng."
+        }
+      ]
+    },
+    "ID791": {
+      "word": "Mut",
+      "artikel": "der",
+      "plural": "-",
+      "english": "courage",
+      "vietnamese": "lòng dũng cảm",
+      "definition_en": "A courage.",
+      "definition_vi": "Một lòng dũng cảm.",
+      "examples": [
+        {
+          "de": "Der Mut ist wichtig.",
+          "en": "The courage is important.",
+          "vi": "Lòng dũng cảm thì quan trọng."
+        }
+      ]
+    }
+  }
+}

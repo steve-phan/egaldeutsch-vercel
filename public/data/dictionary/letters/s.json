@@ -1,0 +1,3798 @@
+{
+  "byWord": {
+    "stuhl": "ID003",
+    "stadt": "ID016",
+    "schule": "ID021",
+    "schüler": "ID023",
+    "straße": "ID036",
+    "schwester": "ID043",
+    "sohn": "ID044",
+    "salat": "ID067",
+    "suppe": "ID068",
+    "salz": "ID072",
+    "schokolade": "ID076",
+    "saft": "ID078",
+    "schlafzimmer": "ID085",
+    "sofa": "ID089",
+    "student": "ID108",
+    "supermarkt": "ID117",
+    "schiff": "ID131",
+    "schlüssel": "ID137",
+    "schuhe": "ID146",
+    "socke": "ID147",
+    "schwarz": "ID156",
+    "sommer": "ID1091",
+    "sonne": "ID166",
+    "stern": "ID168",
+    "schnee": "ID172",
+    "see": "ID178",
+    "strand": "ID181",
+    "schwein": "ID188",
+    "schaf": "ID189",
+    "schlange": "ID199",
+    "stunde": "ID206",
+    "sekunde": "ID207",
+    "seite": "ID212",
+    "stück": "ID226",
+    "system": "ID231",
+    "saal": "ID0974",
+    "sache": "ID0975",
+    "same": "ID0976",
+    "sammlung": "ID0977",
+    "samstag": "ID0978",
+    "sand": "ID0979",
+    "satz": "ID0980",
+    "schale": "ID0981",
+    "schauspieler": "ID0982",
+    "schein": "ID0983",
+    "schere": "ID0984",
+    "schicht": "ID1051",
+    "schicksal": "ID0986",
+    "schlacht": "ID0987",
+    "schlaf": "ID0988",
+    "schmerz": "ID0989",
+    "schrank": "ID1062",
+    "schrift": "ID0991",
+    "schritt": "ID0992",
+    "schuld": "ID0993",
+    "schwanz": "ID0994",
+    "schweiz": "ID0995",
+    "seele": "ID0996",
+    "segen": "ID0997",
+    "sendung": "ID0998",
+    "september": "ID0999",
+    "serie": "ID1000",
+    "sessel": "ID1085",
+    "sicherheit": "ID1002",
+    "sieg": "ID1003",
+    "signal": "ID1004",
+    "silber": "ID1005",
+    "situation": "ID1006",
+    "sitz": "ID1007",
+    "sorge": "ID1008",
+    "soße": "ID1009",
+    "spanien": "ID1010",
+    "spaß": "ID1011",
+    "spiegel": "ID1012",
+    "spiel": "ID1013",
+    "sport": "ID1014",
+    "sprache": "ID1015",
+    "staat": "ID1016",
+    "stahl": "ID1017",
+    "stamm": "ID1018",
+    "stand": "ID1019",
+    "start": "ID1020",
+    "station": "ID1021",
+    "stein": "ID1022",
+    "stelle": "ID1023",
+    "steuer": "ID1024",
+    "stiefel": "ID1025",
+    "stil": "ID1026",
+    "stimme": "ID1027",
+    "stock": "ID1028",
+    "stoff": "ID1029",
+    "strom": "ID1030",
+    "struktur": "ID1031",
+    "stufe": "ID1032",
+    "sturm": "ID1033",
+    "suche": "ID1034",
+    "süden": "ID1035",
+    "summe": "ID1036",
+    "symbol": "ID1037",
+    "sack": "ID1038",
+    "sage": "ID1039",
+    "saite": "ID1040",
+    "saison": "ID1041",
+    "sandale": "ID1042",
+    "satellit": "ID1043",
+    "sattel": "ID1044",
+    "schach": "ID1045",
+    "schachtel": "ID1046",
+    "schaden": "ID1047",
+    "schatten": "ID1048",
+    "schatz": "ID1049",
+    "scheibe": "ID1050",
+    "schild": "ID1052",
+    "schinken": "ID1053",
+    "schirm": "ID1054",
+    "schloss": "ID1055",
+    "schmuck": "ID1056",
+    "schnaps": "ID1057",
+    "schnitt": "ID1058",
+    "schnur": "ID1059",
+    "schock": "ID1060",
+    "schoß": "ID1061",
+    "schraube": "ID1063",
+    "schrei": "ID1064",
+    "schub": "ID1065",
+    "schuh": "ID1066",
+    "schutz": "ID1067",
+    "schweigen": "ID1068",
+    "schwert": "ID1069",
+    "schwimmbad": "ID1070",
+    "sechseck": "ID1071",
+    "segel": "ID1072",
+    "sehnsucht": "ID1073",
+    "seife": "ID1074",
+    "seil": "ID1075",
+    "sekretär": "ID1076",
+    "sektor": "ID1077",
+    "selbst": "ID1078",
+    "semester": "ID1079",
+    "senat": "ID1080",
+    "sender": "ID1081",
+    "senior": "ID1082",
+    "sensation": "ID1083",
+    "service": "ID1084",
+    "sieger": "ID1086",
+    "skipper": "ID1087",
+    "skizze": "ID1088",
+    "sockel": "ID1089",
+    "soldat": "ID1090",
+    "sonntag": "ID1092",
+    "sorte": "ID1093",
+    "souvenír": "ID1094",
+    "spalte": "ID1095",
+    "sparte": "ID1096"
+  },
+  "byEnglish": {
+    "chair": [
+      "ID003"
+    ],
+    "city": [
+      "ID016"
+    ],
+    "school": [
+      "ID021"
+    ],
+    "student": [
+      "ID023",
+      "ID108"
+    ],
+    "street": [
+      "ID036"
+    ],
+    "sister": [
+      "ID043"
+    ],
+    "son": [
+      "ID044"
+    ],
+    "salad": [
+      "ID067"
+    ],
+    "soup": [
+      "ID068"
+    ],
+    "salt": [
+      "ID072"
+    ],
+    "chocolate": [
+      "ID076"
+    ],
+    "juice": [
+      "ID078"
+    ],
+    "bedroom": [
+      "ID085"
+    ],
+    "sofa": [
+      "ID089"
+    ],
+    "supermarket": [
+      "ID117"
+    ],
+    "ship": [
+      "ID131"
+    ],
+    "key": [
+      "ID137"
+    ],
+    "shoes": [
+      "ID146"
+    ],
+    "sock": [
+      "ID147"
+    ],
+    "black": [
+      "ID156"
+    ],
+    "summer": [
+      "ID162",
+      "ID1091"
+    ],
+    "sun": [
+      "ID166"
+    ],
+    "star": [
+      "ID168"
+    ],
+    "snow": [
+      "ID172"
+    ],
+    "lake": [
+      "ID178"
+    ],
+    "beach": [
+      "ID181"
+    ],
+    "pig": [
+      "ID188"
+    ],
+    "sheep": [
+      "ID189"
+    ],
+    "snake": [
+      "ID199"
+    ],
+    "hour": [
+      "ID206"
+    ],
+    "second": [
+      "ID207"
+    ],
+    "side": [
+      "ID212"
+    ],
+    "piece": [
+      "ID226"
+    ],
+    "system": [
+      "ID231"
+    ],
+    "hall": [
+      "ID0974"
+    ],
+    "thing/matter": [
+      "ID0975"
+    ],
+    "seed": [
+      "ID0976"
+    ],
+    "collection": [
+      "ID0977"
+    ],
+    "Saturday": [
+      "ID0978"
+    ],
+    "sand": [
+      "ID0979"
+    ],
+    "sentence": [
+      "ID0980"
+    ],
+    "bowl/peel": [
+      "ID0981"
+    ],
+    "actor": [
+      "ID0982"
+    ],
+    "bill/certificate": [
+      "ID0983"
+    ],
+    "scissors": [
+      "ID0984"
+    ],
+    "shift/layer": [
+      "ID0985"
+    ],
+    "fate/destiny": [
+      "ID0986"
+    ],
+    "battle": [
+      "ID0987"
+    ],
+    "sleep": [
+      "ID0988"
+    ],
+    "pain": [
+      "ID0989"
+    ],
+    "cabinet": [
+      "ID0990"
+    ],
+    "writing": [
+      "ID0991"
+    ],
+    "step": [
+      "ID0992"
+    ],
+    "debt/guilt": [
+      "ID0993"
+    ],
+    "tail": [
+      "ID0994"
+    ],
+    "Switzerland": [
+      "ID0995"
+    ],
+    "soul": [
+      "ID0996"
+    ],
+    "blessing": [
+      "ID0997"
+    ],
+    "broadcast/shipment": [
+      "ID0998"
+    ],
+    "September": [
+      "ID0999"
+    ],
+    "series": [
+      "ID1000"
+    ],
+    "armchair": [
+      "ID1001"
+    ],
+    "security/safety": [
+      "ID1002"
+    ],
+    "victory": [
+      "ID1003"
+    ],
+    "signal": [
+      "ID1004"
+    ],
+    "silver": [
+      "ID1005"
+    ],
+    "situation": [
+      "ID1006"
+    ],
+    "seat": [
+      "ID1007"
+    ],
+    "worry/care": [
+      "ID1008"
+    ],
+    "sauce": [
+      "ID1009"
+    ],
+    "Spain": [
+      "ID1010"
+    ],
+    "fun": [
+      "ID1011"
+    ],
+    "mirror": [
+      "ID1012"
+    ],
+    "game/play": [
+      "ID1013"
+    ],
+    "sport": [
+      "ID1014"
+    ],
+    "language": [
+      "ID1015"
+    ],
+    "state": [
+      "ID1016"
+    ],
+    "steel": [
+      "ID1017"
+    ],
+    "trunk/tribe": [
+      "ID1018"
+    ],
+    "stand/status": [
+      "ID1019"
+    ],
+    "start": [
+      "ID1020"
+    ],
+    "station": [
+      "ID1021"
+    ],
+    "stone": [
+      "ID1022"
+    ],
+    "place/position": [
+      "ID1023"
+    ],
+    "tax": [
+      "ID1024"
+    ],
+    "boot": [
+      "ID1025"
+    ],
+    "style": [
+      "ID1026"
+    ],
+    "voice/vote": [
+      "ID1027"
+    ],
+    "stick/floor": [
+      "ID1028"
+    ],
+    "material/fabric": [
+      "ID1029"
+    ],
+    "current/electricity": [
+      "ID1030"
+    ],
+    "structure": [
+      "ID1031"
+    ],
+    "step/stage": [
+      "ID1032"
+    ],
+    "storm": [
+      "ID1033"
+    ],
+    "search": [
+      "ID1034"
+    ],
+    "south": [
+      "ID1035"
+    ],
+    "sum": [
+      "ID1036"
+    ],
+    "symbol": [
+      "ID1037"
+    ],
+    "sack/bag": [
+      "ID1038"
+    ],
+    "legend": [
+      "ID1039"
+    ],
+    "string": [
+      "ID1040"
+    ],
+    "season": [
+      "ID1041"
+    ],
+    "sandal": [
+      "ID1042"
+    ],
+    "satellite": [
+      "ID1043"
+    ],
+    "saddle": [
+      "ID1044"
+    ],
+    "chess": [
+      "ID1045"
+    ],
+    "box": [
+      "ID1046"
+    ],
+    "damage": [
+      "ID1047"
+    ],
+    "shadow": [
+      "ID1048"
+    ],
+    "treasure": [
+      "ID1049"
+    ],
+    "slice/pane": [
+      "ID1050"
+    ],
+    "layer": [
+      "ID1051"
+    ],
+    "sign": [
+      "ID1052"
+    ],
+    "ham": [
+      "ID1053"
+    ],
+    "screen/umbrella": [
+      "ID1054"
+    ],
+    "castle/lock": [
+      "ID1055"
+    ],
+    "jewelry": [
+      "ID1056"
+    ],
+    "schnapps": [
+      "ID1057"
+    ],
+    "cut": [
+      "ID1058"
+    ],
+    "cord": [
+      "ID1059"
+    ],
+    "shock": [
+      "ID1060"
+    ],
+    "lap": [
+      "ID1061"
+    ],
+    "wardrobe": [
+      "ID1062"
+    ],
+    "screw": [
+      "ID1063"
+    ],
+    "scream": [
+      "ID1064"
+    ],
+    "push/batch": [
+      "ID1065"
+    ],
+    "shoe": [
+      "ID1066"
+    ],
+    "protection": [
+      "ID1067"
+    ],
+    "silence": [
+      "ID1068"
+    ],
+    "sword": [
+      "ID1069"
+    ],
+    "swimming pool": [
+      "ID1070"
+    ],
+    "hexagon": [
+      "ID1071"
+    ],
+    "sail": [
+      "ID1072"
+    ],
+    "longing": [
+      "ID1073"
+    ],
+    "soap": [
+      "ID1074"
+    ],
+    "rope": [
+      "ID1075"
+    ],
+    "secretary": [
+      "ID1076"
+    ],
+    "sector": [
+      "ID1077"
+    ],
+    "self": [
+      "ID1078"
+    ],
+    "semester": [
+      "ID1079"
+    ],
+    "senate": [
+      "ID1080"
+    ],
+    "broadcaster": [
+      "ID1081"
+    ],
+    "senior": [
+      "ID1082"
+    ],
+    "sensation": [
+      "ID1083"
+    ],
+    "service": [
+      "ID1084"
+    ],
+    "easy chair": [
+      "ID1085"
+    ],
+    "winner": [
+      "ID1086"
+    ],
+    "skipper": [
+      "ID1087"
+    ],
+    "sketch": [
+      "ID1088"
+    ],
+    "base/pedestal": [
+      "ID1089"
+    ],
+    "soldier": [
+      "ID1090"
+    ],
+    "Sunday": [
+      "ID1092"
+    ],
+    "sort/type": [
+      "ID1093"
+    ],
+    "souvenir": [
+      "ID1094"
+    ],
+    "column": [
+      "ID1095"
+    ],
+    "branch/field": [
+      "ID1096"
+    ]
+  },
+  "byVietnamese": {
+    "cái ghế": [
+      "ID003"
+    ],
+    "thành phố": [
+      "ID016"
+    ],
+    "trường học": [
+      "ID021"
+    ],
+    "học sinh": [
+      "ID023"
+    ],
+    "đường phố": [
+      "ID036"
+    ],
+    "chị gái": [
+      "ID043"
+    ],
+    "con trai": [
+      "ID044"
+    ],
+    "salad": [
+      "ID067"
+    ],
+    "súp": [
+      "ID068"
+    ],
+    "muối": [
+      "ID072"
+    ],
+    "sô-cô-la": [
+      "ID076"
+    ],
+    "nước trái cây": [
+      "ID078"
+    ],
+    "phòng ngủ": [
+      "ID085"
+    ],
+    "ghế sofa": [
+      "ID089"
+    ],
+    "sinh viên": [
+      "ID108"
+    ],
+    "siêu thị": [
+      "ID117"
+    ],
+    "tàu thủy": [
+      "ID131"
+    ],
+    "chìa khóa": [
+      "ID137"
+    ],
+    "giày": [
+      "ID146",
+      "ID1066"
+    ],
+    "tất": [
+      "ID147"
+    ],
+    "đen": [
+      "ID156"
+    ],
+    "mùa hè": [
+      "ID162",
+      "ID1091"
+    ],
+    "mặt trời": [
+      "ID166"
+    ],
+    "ngôi sao": [
+      "ID168"
+    ],
+    "tuyết": [
+      "ID172"
+    ],
+    "hồ": [
+      "ID178"
+    ],
+    "bãi biển": [
+      "ID181"
+    ],
+    "con lợn": [
+      "ID188"
+    ],
+    "con cừu": [
+      "ID189"
+    ],
+    "con rắn": [
+      "ID199"
+    ],
+    "giờ": [
+      "ID206"
+    ],
+    "giây": [
+      "ID207"
+    ],
+    "bên": [
+      "ID212"
+    ],
+    "miếng": [
+      "ID226"
+    ],
+    "hệ thống": [
+      "ID231"
+    ],
+    "sảnh": [
+      "ID0974"
+    ],
+    "vật/việc": [
+      "ID0975"
+    ],
+    "hạt giống": [
+      "ID0976"
+    ],
+    "bộ sưu tập": [
+      "ID0977"
+    ],
+    "thứ bảy": [
+      "ID0978"
+    ],
+    "cát": [
+      "ID0979"
+    ],
+    "câu": [
+      "ID0980"
+    ],
+    "bát/vỏ": [
+      "ID0981"
+    ],
+    "diễn viên": [
+      "ID0982"
+    ],
+    "giấy tờ": [
+      "ID0983"
+    ],
+    "kéo": [
+      "ID0984"
+    ],
+    "ca làm việc": [
+      "ID0985"
+    ],
+    "số phận": [
+      "ID0986"
+    ],
+    "trận chiến": [
+      "ID0987"
+    ],
+    "giấc ngủ": [
+      "ID0988"
+    ],
+    "đau": [
+      "ID0989"
+    ],
+    "tủ": [
+      "ID0990"
+    ],
+    "chữ viết": [
+      "ID0991"
+    ],
+    "bước": [
+      "ID0992"
+    ],
+    "nợ/lỗi": [
+      "ID0993"
+    ],
+    "đuôi": [
+      "ID0994"
+    ],
+    "Thụy Sĩ": [
+      "ID0995"
+    ],
+    "tâm hồn": [
+      "ID0996"
+    ],
+    "phước lành": [
+      "ID0997"
+    ],
+    "chương trình/gửi hàng": [
+      "ID0998"
+    ],
+    "tháng chín": [
+      "ID0999"
+    ],
+    "loạt phim": [
+      "ID1000"
+    ],
+    "ghế bành": [
+      "ID1001"
+    ],
+    "an toàn": [
+      "ID1002"
+    ],
+    "chiến thắng": [
+      "ID1003"
+    ],
+    "tín hiệu": [
+      "ID1004"
+    ],
+    "bạc": [
+      "ID1005"
+    ],
+    "tình huống": [
+      "ID1006"
+    ],
+    "chỗ ngồi": [
+      "ID1007"
+    ],
+    "lo lắng": [
+      "ID1008"
+    ],
+    "nước sốt": [
+      "ID1009"
+    ],
+    "Tây Ban Nha": [
+      "ID1010"
+    ],
+    "vui": [
+      "ID1011"
+    ],
+    "gương": [
+      "ID1012"
+    ],
+    "trò chơi": [
+      "ID1013"
+    ],
+    "thể thao": [
+      "ID1014"
+    ],
+    "ngôn ngữ": [
+      "ID1015"
+    ],
+    "nhà nước": [
+      "ID1016"
+    ],
+    "thép": [
+      "ID1017"
+    ],
+    "thân cây/bộ lạc": [
+      "ID1018"
+    ],
+    "quầy/trạng thái": [
+      "ID1019"
+    ],
+    "khởi đầu": [
+      "ID1020"
+    ],
+    "trạm": [
+      "ID1021"
+    ],
+    "đá": [
+      "ID1022"
+    ],
+    "chỗ/vị trí": [
+      "ID1023"
+    ],
+    "thuế": [
+      "ID1024"
+    ],
+    "ủng": [
+      "ID1025"
+    ],
+    "phong cách": [
+      "ID1026"
+    ],
+    "giọng/phiếu": [
+      "ID1027"
+    ],
+    "gậy/tầng": [
+      "ID1028"
+    ],
+    "chất/vải": [
+      "ID1029"
+    ],
+    "dòng điện": [
+      "ID1030"
+    ],
+    "cấu trúc": [
+      "ID1031"
+    ],
+    "bậc/giai đoạn": [
+      "ID1032"
+    ],
+    "bão": [
+      "ID1033"
+    ],
+    "tìm kiếm": [
+      "ID1034"
+    ],
+    "phương nam": [
+      "ID1035"
+    ],
+    "tổng": [
+      "ID1036"
+    ],
+    "biểu tượng": [
+      "ID1037"
+    ],
+    "bao": [
+      "ID1038"
+    ],
+    "truyền thuyết": [
+      "ID1039"
+    ],
+    "dây đàn": [
+      "ID1040"
+    ],
+    "mùa": [
+      "ID1041"
+    ],
+    "dép": [
+      "ID1042"
+    ],
+    "vệ tinh": [
+      "ID1043"
+    ],
+    "yên": [
+      "ID1044"
+    ],
+    "cờ vua": [
+      "ID1045"
+    ],
+    "hộp": [
+      "ID1046"
+    ],
+    "thiệt hại": [
+      "ID1047"
+    ],
+    "bóng": [
+      "ID1048"
+    ],
+    "kho báu": [
+      "ID1049"
+    ],
+    "lát/tấm kính": [
+      "ID1050"
+    ],
+    "lớp": [
+      "ID1051"
+    ],
+    "biển": [
+      "ID1052"
+    ],
+    "giăm bông": [
+      "ID1053"
+    ],
+    "màn/ô": [
+      "ID1054"
+    ],
+    "lâu đài/khóa": [
+      "ID1055"
+    ],
+    "đồ trang sức": [
+      "ID1056"
+    ],
+    "rượu mạnh": [
+      "ID1057"
+    ],
+    "cắt": [
+      "ID1058"
+    ],
+    "dây": [
+      "ID1059"
+    ],
+    "sốc": [
+      "ID1060"
+    ],
+    "lòng": [
+      "ID1061"
+    ],
+    "tủ quần áo": [
+      "ID1062"
+    ],
+    "ốc vít": [
+      "ID1063"
+    ],
+    "tiếng la": [
+      "ID1064"
+    ],
+    "đẩy/lô": [
+      "ID1065"
+    ],
+    "bảo vệ": [
+      "ID1067"
+    ],
+    "im lặng": [
+      "ID1068"
+    ],
+    "kiếm": [
+      "ID1069"
+    ],
+    "bể bơi": [
+      "ID1070"
+    ],
+    "hình lục giác": [
+      "ID1071"
+    ],
+    "cánh buồm": [
+      "ID1072"
+    ],
+    "khát vọng": [
+      "ID1073"
+    ],
+    "xà phòng": [
+      "ID1074"
+    ],
+    "dây thừng": [
+      "ID1075"
+    ],
+    "thư ký": [
+      "ID1076"
+    ],
+    "lĩnh vực": [
+      "ID1077"
+    ],
+    "bản thân": [
+      "ID1078"
+    ],
+    "học kỳ": [
+      "ID1079"
+    ],
+    "thượng viện": [
+      "ID1080"
+    ],
+    "đài": [
+      "ID1081"
+    ],
+    "người cao tuổi": [
+      "ID1082"
+    ],
+    "cảm giác": [
+      "ID1083"
+    ],
+    "dịch vụ": [
+      "ID1084"
+    ],
+    "ghế dễ": [
+      "ID1085"
+    ],
+    "người thắng cuộc": [
+      "ID1086"
+    ],
+    "thuyền trưởng": [
+      "ID1087"
+    ],
+    "phác thảo": [
+      "ID1088"
+    ],
+    "đế": [
+      "ID1089"
+    ],
+    "người lính": [
+      "ID1090"
+    ],
+    "chủ nhật": [
+      "ID1092"
+    ],
+    "loại": [
+      "ID1093"
+    ],
+    "quà lưu niệm": [
+      "ID1094"
+    ],
+    "cột": [
+      "ID1095"
+    ],
+    "ngành": [
+      "ID1096"
+    ]
+  },
+  "byArtikel": {
+    "der": [
+      "ID003",
+      "ID023",
+      "ID044",
+      "ID067",
+      "ID078",
+      "ID108",
+      "ID117",
+      "ID137",
+      "ID162",
+      "ID172",
+      "ID178",
+      "ID181",
+      "ID0974",
+      "ID0976",
+      "ID0978",
+      "ID0979",
+      "ID0980",
+      "ID0982",
+      "ID0983",
+      "ID0988",
+      "ID0989",
+      "ID0990",
+      "ID0992",
+      "ID0994",
+      "ID0997",
+      "ID0999",
+      "ID1001",
+      "ID1003",
+      "ID1007",
+      "ID1011",
+      "ID1012",
+      "ID1014",
+      "ID1016",
+      "ID1017",
+      "ID1018",
+      "ID1019",
+      "ID1020",
+      "ID1022",
+      "ID1025",
+      "ID1026",
+      "ID1028",
+      "ID1029",
+      "ID1030",
+      "ID1033",
+      "ID1035",
+      "ID1038",
+      "ID1043",
+      "ID1044",
+      "ID1047",
+      "ID1048",
+      "ID1049",
+      "ID1053",
+      "ID1054",
+      "ID1056",
+      "ID1057",
+      "ID1058",
+      "ID1060",
+      "ID1061",
+      "ID1062",
+      "ID1064",
+      "ID1065",
+      "ID1066",
+      "ID1067",
+      "ID1076",
+      "ID1077",
+      "ID1080",
+      "ID1081",
+      "ID1082",
+      "ID1084",
+      "ID1085",
+      "ID1086",
+      "ID1087",
+      "ID1089",
+      "ID1090",
+      "ID1091",
+      "ID1092"
+    ],
+    "die": [
+      "ID016",
+      "ID021",
+      "ID036",
+      "ID043",
+      "ID068",
+      "ID076",
+      "ID147",
+      "ID166",
+      "ID199",
+      "ID206",
+      "ID207",
+      "ID212",
+      "ID0975",
+      "ID0977",
+      "ID0981",
+      "ID0984",
+      "ID0985",
+      "ID0987",
+      "ID0991",
+      "ID0993",
+      "ID0995",
+      "ID0996",
+      "ID0998",
+      "ID1000",
+      "ID1002",
+      "ID1006",
+      "ID1008",
+      "ID1009",
+      "ID1015",
+      "ID1021",
+      "ID1023",
+      "ID1024",
+      "ID1027",
+      "ID1031",
+      "ID1032",
+      "ID1034",
+      "ID1036",
+      "ID1039",
+      "ID1040",
+      "ID1041",
+      "ID1042",
+      "ID1046",
+      "ID1050",
+      "ID1051",
+      "ID1059",
+      "ID1063",
+      "ID1073",
+      "ID1074",
+      "ID1083",
+      "ID1088",
+      "ID1093",
+      "ID1095",
+      "ID1096"
+    ],
+    "das": [
+      "ID072",
+      "ID085",
+      "ID089",
+      "ID131",
+      "ID146",
+      "ID156",
+      "ID168",
+      "ID188",
+      "ID189",
+      "ID226",
+      "ID231",
+      "ID0986",
+      "ID1004",
+      "ID1005",
+      "ID1010",
+      "ID1013",
+      "ID1037",
+      "ID1045",
+      "ID1052",
+      "ID1055",
+      "ID1068",
+      "ID1069",
+      "ID1070",
+      "ID1071",
+      "ID1072",
+      "ID1075",
+      "ID1078",
+      "ID1079",
+      "ID1094"
+    ]
+  },
+  "entries": {
+    "ID003": {
+      "word": "Stuhl",
+      "artikel": "der",
+      "plural": "Stühle",
+      "english": "chair",
+      "vietnamese": "cái ghế",
+      "definition_en": "A seat with a back and usually four legs.",
+      "definition_vi": "Một chỗ ngồi có tựa lưng và thường có bốn chân.",
+      "examples": [
+        {
+          "de": "Der Stuhl ist bequem.",
+          "en": "The chair is comfortable.",
+          "vi": "Cái ghế thì thoải mái."
+        }
+      ]
+    },
+    "ID016": {
+      "word": "Stadt",
+      "artikel": "die",
+      "plural": "Städte",
+      "english": "city",
+      "vietnamese": "thành phố",
+      "definition_en": "A large human settlement.",
+      "definition_vi": "Một khu định cư lớn của con người.",
+      "examples": [
+        {
+          "de": "Die Stadt ist schön.",
+          "en": "The city is beautiful.",
+          "vi": "Thành phố thì đẹp."
+        }
+      ]
+    },
+    "ID021": {
+      "word": "Schule",
+      "artikel": "die",
+      "plural": "Schulen",
+      "english": "school",
+      "vietnamese": "trường học",
+      "definition_en": "An institution for education.",
+      "definition_vi": "Một cơ sở giáo dục.",
+      "examples": [
+        {
+          "de": "Ich gehe zur Schule.",
+          "en": "I go to school.",
+          "vi": "Tôi đi học."
+        }
+      ]
+    },
+    "ID023": {
+      "word": "Schüler",
+      "artikel": "der",
+      "plural": "Schüler",
+      "english": "student",
+      "vietnamese": "học sinh",
+      "definition_en": "A person who is learning at a school.",
+      "definition_vi": "Một người đang học tại trường.",
+      "examples": [
+        {
+          "de": "Der Schüler lernt fleißig.",
+          "en": "The student studies diligently.",
+          "vi": "Học sinh học chăm chỉ."
+        }
+      ]
+    },
+    "ID036": {
+      "word": "Straße",
+      "artikel": "die",
+      "plural": "Straßen",
+      "english": "street",
+      "vietnamese": "đường phố",
+      "definition_en": "A public road in a city or town.",
+      "definition_vi": "Một con đường công cộng trong thành phố hoặc thị trấn.",
+      "examples": [
+        {
+          "de": "Die Straße ist lang.",
+          "en": "The street is long.",
+          "vi": "Đường phố thì dài."
+        }
+      ]
+    },
+    "ID043": {
+      "word": "Schwester",
+      "artikel": "die",
+      "plural": "Schwestern",
+      "english": "sister",
+      "vietnamese": "chị gái",
+      "definition_en": "A female sibling.",
+      "definition_vi": "Chị em gái nữ.",
+      "examples": [
+        {
+          "de": "Meine Schwester ist älter als ich.",
+          "en": "My sister is older than me.",
+          "vi": "Chị gái tôi lớn tuổi hơn tôi."
+        }
+      ]
+    },
+    "ID044": {
+      "word": "Sohn",
+      "artikel": "der",
+      "plural": "Söhne",
+      "english": "son",
+      "vietnamese": "con trai",
+      "definition_en": "A male child.",
+      "definition_vi": "Con trai.",
+      "examples": [
+        {
+          "de": "Ihr Sohn ist fünf Jahre alt.",
+          "en": "Her son is five years old.",
+          "vi": "Con trai cô ấy năm tuổi."
+        }
+      ]
+    },
+    "ID067": {
+      "word": "Salat",
+      "artikel": "der",
+      "plural": "Salate",
+      "english": "salad",
+      "vietnamese": "salad",
+      "definition_en": "A cold dish of mixed vegetables.",
+      "definition_vi": "Món ăn lạnh trộn rau.",
+      "examples": [
+        {
+          "de": "Der Salat ist frisch.",
+          "en": "The salad is fresh.",
+          "vi": "Salad tươi."
+        }
+      ]
+    },
+    "ID068": {
+      "word": "Suppe",
+      "artikel": "die",
+      "plural": "Suppen",
+      "english": "soup",
+      "vietnamese": "súp",
+      "definition_en": "A liquid dish with vegetables or meat.",
+      "definition_vi": "Món ăn lỏng với rau hoặc thịt.",
+      "examples": [
+        {
+          "de": "Die Suppe ist heiß.",
+          "en": "The soup is hot.",
+          "vi": "Súp nóng."
+        }
+      ]
+    },
+    "ID072": {
+      "word": "Salz",
+      "artikel": "das",
+      "plural": "Salze",
+      "english": "salt",
+      "vietnamese": "muối",
+      "definition_en": "A mineral used for seasoning.",
+      "definition_vi": "Khoáng chất dùng để nêm.",
+      "examples": [
+        {
+          "de": "Das Essen braucht Salz.",
+          "en": "The food needs salt.",
+          "vi": "Thức ăn cần muối."
+        }
+      ]
+    },
+    "ID076": {
+      "word": "Schokolade",
+      "artikel": "die",
+      "plural": "Schokoladen",
+      "english": "chocolate",
+      "vietnamese": "sô-cô-la",
+      "definition_en": "A sweet food made from cacao.",
+      "definition_vi": "Thực phẩm ngọt làm từ ca cao.",
+      "examples": [
+        {
+          "de": "Die Schokolade schmeckt gut.",
+          "en": "The chocolate tastes good.",
+          "vi": "Sô-cô-la ngon."
+        }
+      ]
+    },
+    "ID078": {
+      "word": "Saft",
+      "artikel": "der",
+      "plural": "Säfte",
+      "english": "juice",
+      "vietnamese": "nước trái cây",
+      "definition_en": "A drink made from fruit.",
+      "definition_vi": "Đồ uống làm từ trái cây.",
+      "examples": [
+        {
+          "de": "Der Saft ist frisch.",
+          "en": "The juice is fresh.",
+          "vi": "Nước trái cây tươi."
+        }
+      ]
+    },
+    "ID085": {
+      "word": "Schlafzimmer",
+      "artikel": "das",
+      "plural": "Schlafzimmer",
+      "english": "bedroom",
+      "vietnamese": "phòng ngủ",
+      "definition_en": "A room for sleeping.",
+      "definition_vi": "Một phòng để ngủ.",
+      "examples": [
+        {
+          "de": "Das Schlafzimmer ist ruhig.",
+          "en": "The bedroom is quiet.",
+          "vi": "Phòng ngủ yên tĩnh."
+        }
+      ]
+    },
+    "ID089": {
+      "word": "Sofa",
+      "artikel": "das",
+      "plural": "Sofas",
+      "english": "sofa",
+      "vietnamese": "ghế sofa",
+      "definition_en": "A long upholstered seat for several people.",
+      "definition_vi": "Ghế bọc dài cho nhiều người.",
+      "examples": [
+        {
+          "de": "Das Sofa ist neu.",
+          "en": "The sofa is new.",
+          "vi": "Ghế sofa mới."
+        }
+      ]
+    },
+    "ID108": {
+      "word": "Student",
+      "artikel": "der",
+      "plural": "Studenten",
+      "english": "student",
+      "vietnamese": "sinh viên",
+      "definition_en": "A person studying at a university.",
+      "definition_vi": "Người học tại trường đại học.",
+      "examples": [
+        {
+          "de": "Der Student lernt viel.",
+          "en": "The student studies a lot.",
+          "vi": "Sinh viên học nhiều."
+        }
+      ]
+    },
+    "ID117": {
+      "word": "Supermarkt",
+      "artikel": "der",
+      "plural": "Supermärkte",
+      "english": "supermarket",
+      "vietnamese": "siêu thị",
+      "definition_en": "A large self-service store.",
+      "definition_vi": "Cửa hàng tự phục vụ lớn.",
+      "examples": [
+        {
+          "de": "Ich gehe zum Supermarkt.",
+          "en": "I go to the supermarket.",
+          "vi": "Tôi đi siêu thị."
+        }
+      ]
+    },
+    "ID131": {
+      "word": "Schiff",
+      "artikel": "das",
+      "plural": "Schiffe",
+      "english": "ship",
+      "vietnamese": "tàu thủy",
+      "definition_en": "A large boat.",
+      "definition_vi": "Thuyền lớn.",
+      "examples": [
+        {
+          "de": "Das Schiff ist groß.",
+          "en": "The ship is big.",
+          "vi": "Tàu thủy lớn."
+        }
+      ]
+    },
+    "ID137": {
+      "word": "Schlüssel",
+      "artikel": "der",
+      "plural": "Schlüssel",
+      "english": "key",
+      "vietnamese": "chìa khóa",
+      "definition_en": "A device for opening locks.",
+      "definition_vi": "Thiết bị để mở khóa.",
+      "examples": [
+        {
+          "de": "Wo ist der Schlüssel?",
+          "en": "Where is the key?",
+          "vi": "Chìa khóa ở đâu?"
+        }
+      ]
+    },
+    "ID146": {
+      "word": "Schuhe",
+      "artikel": "die",
+      "plural": "Schuhe",
+      "english": "shoes",
+      "vietnamese": "giày",
+      "definition_en": "Footwear covering the foot.",
+      "definition_vi": "Giày dép che chân.",
+      "examples": [
+        {
+          "de": "Die Schuhe sind neu.",
+          "en": "The shoes are new.",
+          "vi": "Giày mới."
+        }
+      ]
+    },
+    "ID147": {
+      "word": "Socke",
+      "artikel": "die",
+      "plural": "Socken",
+      "english": "sock",
+      "vietnamese": "tất",
+      "definition_en": "A garment for the foot.",
+      "definition_vi": "Quần áo cho bàn chân.",
+      "examples": [
+        {
+          "de": "Die Socke ist warm.",
+          "en": "The sock is warm.",
+          "vi": "Tất ấm."
+        }
+      ]
+    },
+    "ID156": {
+      "word": "Schwarz",
+      "artikel": "das",
+      "plural": "Schwarz",
+      "english": "black",
+      "vietnamese": "đen",
+      "definition_en": "The darkest color.",
+      "definition_vi": "Màu tối nhất.",
+      "examples": [
+        {
+          "de": "Das Schwarz ist dunkel.",
+          "en": "The black is dark.",
+          "vi": "Màu đen tối."
+        }
+      ]
+    },
+    "ID162": {
+      "word": "Sommer",
+      "artikel": "der",
+      "plural": "Sommer",
+      "english": "summer",
+      "vietnamese": "mùa hè",
+      "definition_en": "The warmest season of the year.",
+      "definition_vi": "Mùa ấm nhất trong năm.",
+      "examples": [
+        {
+          "de": "Der Sommer ist heiß.",
+          "en": "Summer is hot.",
+          "vi": "Mùa hè nóng."
+        }
+      ]
+    },
+    "ID166": {
+      "word": "Sonne",
+      "artikel": "die",
+      "plural": "Sonnen",
+      "english": "sun",
+      "vietnamese": "mặt trời",
+      "definition_en": "The star at the center of our solar system.",
+      "definition_vi": "Ngôi sao ở trung tâm hệ mặt trời.",
+      "examples": [
+        {
+          "de": "Die Sonne scheint.",
+          "en": "The sun shines.",
+          "vi": "Mặt trời chiếu sáng."
+        }
+      ]
+    },
+    "ID168": {
+      "word": "Stern",
+      "artikel": "der",
+      "plural": "Sterne",
+      "english": "star",
+      "vietnamese": "ngôi sao",
+      "definition_en": "A celestial body of light.",
+      "definition_vi": "Thiên thể phát sáng.",
+      "examples": [
+        {
+          "de": "Der Stern leuchtet.",
+          "en": "The star shines.",
+          "vi": "Ngôi sao sáng."
+        }
+      ]
+    },
+    "ID172": {
+      "word": "Schnee",
+      "artikel": "der",
+      "plural": "Schnee",
+      "english": "snow",
+      "vietnamese": "tuyết",
+      "definition_en": "Frozen water crystals.",
+      "definition_vi": "Tinh thể nước đông lạnh.",
+      "examples": [
+        {
+          "de": "Der Schnee ist weiß.",
+          "en": "The snow is white.",
+          "vi": "Tuyết trắng."
+        }
+      ]
+    },
+    "ID178": {
+      "word": "See",
+      "artikel": "der",
+      "plural": "Seen",
+      "english": "lake",
+      "vietnamese": "hồ",
+      "definition_en": "A body of water surrounded by land.",
+      "definition_vi": "Vùng nước được bao quanh bởi đất.",
+      "examples": [
+        {
+          "de": "Der See ist tief.",
+          "en": "The lake is deep.",
+          "vi": "Hồ sâu."
+        }
+      ]
+    },
+    "ID181": {
+      "word": "Strand",
+      "artikel": "der",
+      "plural": "Strände",
+      "english": "beach",
+      "vietnamese": "bãi biển",
+      "definition_en": "The shore of a sea or lake.",
+      "definition_vi": "Bờ biển hoặc hồ.",
+      "examples": [
+        {
+          "de": "Der Strand ist schön.",
+          "en": "The beach is beautiful.",
+          "vi": "Bãi biển đẹp."
+        }
+      ]
+    },
+    "ID188": {
+      "word": "Schwein",
+      "artikel": "das",
+      "plural": "Schweine",
+      "english": "pig",
+      "vietnamese": "con lợn",
+      "definition_en": "A farm animal raised for meat.",
+      "definition_vi": "Động vật trang trại nuôi để lấy thịt.",
+      "examples": [
+        {
+          "de": "Das Schwein ist rosa.",
+          "en": "The pig is pink.",
+          "vi": "Con lợn màu hồng."
+        }
+      ]
+    },
+    "ID189": {
+      "word": "Schaf",
+      "artikel": "das",
+      "plural": "Schafe",
+      "english": "sheep",
+      "vietnamese": "con cừu",
+      "definition_en": "A woolly farm animal.",
+      "definition_vi": "Động vật trang trại có lông.",
+      "examples": [
+        {
+          "de": "Das Schaf hat Wolle.",
+          "en": "The sheep has wool.",
+          "vi": "Con cừu có lông."
+        }
+      ]
+    },
+    "ID199": {
+      "word": "Schlange",
+      "artikel": "die",
+      "plural": "Schlangen",
+      "english": "snake",
+      "vietnamese": "con rắn",
+      "definition_en": "A legless reptile.",
+      "definition_vi": "Loài bò sát không chân.",
+      "examples": [
+        {
+          "de": "Die Schlange kriecht.",
+          "en": "The snake crawls.",
+          "vi": "Con rắn bò."
+        }
+      ]
+    },
+    "ID206": {
+      "word": "Stunde",
+      "artikel": "die",
+      "plural": "Stunden",
+      "english": "hour",
+      "vietnamese": "giờ",
+      "definition_en": "A unit of time equal to 60 minutes.",
+      "definition_vi": "Đơn vị thời gian bằng 60 phút.",
+      "examples": [
+        {
+          "de": "Eine Stunde hat 60 Minuten.",
+          "en": "An hour has 60 minutes.",
+          "vi": "Một giờ có 60 phút."
+        }
+      ]
+    },
+    "ID207": {
+      "word": "Sekunde",
+      "artikel": "die",
+      "plural": "Sekunden",
+      "english": "second",
+      "vietnamese": "giây",
+      "definition_en": "A unit of time.",
+      "definition_vi": "Đơn vị thời gian.",
+      "examples": [
+        {
+          "de": "Eine Minute hat 60 Sekunden.",
+          "en": "A minute has 60 seconds.",
+          "vi": "Một phút có 60 giây."
+        }
+      ]
+    },
+    "ID212": {
+      "word": "Seite",
+      "artikel": "die",
+      "plural": "Seiten",
+      "english": "side",
+      "vietnamese": "bên",
+      "definition_en": "One of the surfaces of an object.",
+      "definition_vi": "Một trong các bề mặt của vật thể.",
+      "examples": [
+        {
+          "de": "Auf der linken Seite.",
+          "en": "On the left side.",
+          "vi": "Ở bên trái."
+        }
+      ]
+    },
+    "ID226": {
+      "word": "Stück",
+      "artikel": "das",
+      "plural": "Stücke",
+      "english": "piece",
+      "vietnamese": "miếng",
+      "definition_en": "An individual item or portion.",
+      "definition_vi": "Một món đồ hoặc phần riêng lẻ.",
+      "examples": [
+        {
+          "de": "Ein Stück Kuchen.",
+          "en": "A piece of cake.",
+          "vi": "Một miếng bánh."
+        }
+      ]
+    },
+    "ID231": {
+      "word": "System",
+      "artikel": "das",
+      "plural": "Systeme",
+      "english": "system",
+      "vietnamese": "hệ thống",
+      "definition_en": "An organized set of principles.",
+      "definition_vi": "Một bộ nguyên tắc có tổ chức.",
+      "examples": [
+        {
+          "de": "Ein komplexes System.",
+          "en": "A complex system.",
+          "vi": "Một hệ thống phức tạp."
+        }
+      ]
+    },
+    "ID0974": {
+      "word": "Saal",
+      "artikel": "der",
+      "plural": "Säle",
+      "english": "hall",
+      "vietnamese": "sảnh",
+      "definition_en": "A hall.",
+      "definition_vi": "Một sảnh.",
+      "examples": [
+        {
+          "de": "Der Saal ist da.",
+          "en": "The hall is there.",
+          "vi": "Sảnh ở đó."
+        }
+      ]
+    },
+    "ID0975": {
+      "word": "Sache",
+      "artikel": "die",
+      "plural": "Sachen",
+      "english": "thing/matter",
+      "vietnamese": "vật/việc",
+      "definition_en": "A thing/matter.",
+      "definition_vi": "Một vật/việc.",
+      "examples": [
+        {
+          "de": "Die Sache ist da.",
+          "en": "The thing/matter is there.",
+          "vi": "Vật/việc ở đó."
+        }
+      ]
+    },
+    "ID0976": {
+      "word": "Same",
+      "artikel": "der",
+      "plural": "Samen",
+      "english": "seed",
+      "vietnamese": "hạt giống",
+      "definition_en": "A seed.",
+      "definition_vi": "Một hạt giống.",
+      "examples": [
+        {
+          "de": "Der Same ist da.",
+          "en": "The seed is there.",
+          "vi": "Hạt giống ở đó."
+        }
+      ]
+    },
+    "ID0977": {
+      "word": "Sammlung",
+      "artikel": "die",
+      "plural": "Sammlungen",
+      "english": "collection",
+      "vietnamese": "bộ sưu tập",
+      "definition_en": "A collection.",
+      "definition_vi": "Một bộ sưu tập.",
+      "examples": [
+        {
+          "de": "Die Sammlung ist da.",
+          "en": "The collection is there.",
+          "vi": "Bộ sưu tập ở đó."
+        }
+      ]
+    },
+    "ID0978": {
+      "word": "Samstag",
+      "artikel": "der",
+      "plural": "Samstage",
+      "english": "Saturday",
+      "vietnamese": "thứ bảy",
+      "definition_en": "A Saturday.",
+      "definition_vi": "Một thứ bảy.",
+      "examples": [
+        {
+          "de": "Der Samstag ist da.",
+          "en": "The Saturday is there.",
+          "vi": "Thứ bảy ở đó."
+        }
+      ]
+    },
+    "ID0979": {
+      "word": "Sand",
+      "artikel": "der",
+      "plural": "-",
+      "english": "sand",
+      "vietnamese": "cát",
+      "definition_en": "A sand.",
+      "definition_vi": "Một cát.",
+      "examples": [
+        {
+          "de": "Der Sand ist da.",
+          "en": "The sand is there.",
+          "vi": "Cát ở đó."
+        }
+      ]
+    },
+    "ID0980": {
+      "word": "Satz",
+      "artikel": "der",
+      "plural": "Sätze",
+      "english": "sentence",
+      "vietnamese": "câu",
+      "definition_en": "A sentence.",
+      "definition_vi": "Một câu.",
+      "examples": [
+        {
+          "de": "Der Satz ist da.",
+          "en": "The sentence is there.",
+          "vi": "Câu ở đó."
+        }
+      ]
+    },
+    "ID0981": {
+      "word": "Schale",
+      "artikel": "die",
+      "plural": "Schalen",
+      "english": "bowl/peel",
+      "vietnamese": "bát/vỏ",
+      "definition_en": "A bowl/peel.",
+      "definition_vi": "Một bát/vỏ.",
+      "examples": [
+        {
+          "de": "Die Schale ist da.",
+          "en": "The bowl/peel is there.",
+          "vi": "Bát/vỏ ở đó."
+        }
+      ]
+    },
+    "ID0982": {
+      "word": "Schauspieler",
+      "artikel": "der",
+      "plural": "Schauspieler",
+      "english": "actor",
+      "vietnamese": "diễn viên",
+      "definition_en": "A actor.",
+      "definition_vi": "Một diễn viên.",
+      "examples": [
+        {
+          "de": "Der Schauspieler ist da.",
+          "en": "The actor is there.",
+          "vi": "Diễn viên ở đó."
+        }
+      ]
+    },
+    "ID0983": {
+      "word": "Schein",
+      "artikel": "der",
+      "plural": "Scheine",
+      "english": "bill/certificate",
+      "vietnamese": "giấy tờ",
+      "definition_en": "A bill/certificate.",
+      "definition_vi": "Một giấy tờ.",
+      "examples": [
+        {
+          "de": "Der Schein ist da.",
+          "en": "The bill/certificate is there.",
+          "vi": "Giấy tờ ở đó."
+        }
+      ]
+    },
+    "ID0984": {
+      "word": "Schere",
+      "artikel": "die",
+      "plural": "Scheren",
+      "english": "scissors",
+      "vietnamese": "kéo",
+      "definition_en": "A scissors.",
+      "definition_vi": "Một kéo.",
+      "examples": [
+        {
+          "de": "Die Schere ist da.",
+          "en": "The scissors is there.",
+          "vi": "Kéo ở đó."
+        }
+      ]
+    },
+    "ID0985": {
+      "word": "Schicht",
+      "artikel": "die",
+      "plural": "Schichten",
+      "english": "shift/layer",
+      "vietnamese": "ca làm việc",
+      "definition_en": "A shift/layer.",
+      "definition_vi": "Một ca làm việc.",
+      "examples": [
+        {
+          "de": "Die Schicht ist da.",
+          "en": "The shift/layer is there.",
+          "vi": "Ca làm việc ở đó."
+        }
+      ]
+    },
+    "ID0986": {
+      "word": "Schicksal",
+      "artikel": "das",
+      "plural": "Schicksale",
+      "english": "fate/destiny",
+      "vietnamese": "số phận",
+      "definition_en": "A fate/destiny.",
+      "definition_vi": "Một số phận.",
+      "examples": [
+        {
+          "de": "Das Schicksal ist da.",
+          "en": "The fate/destiny is there.",
+          "vi": "Số phận ở đó."
+        }
+      ]
+    },
+    "ID0987": {
+      "word": "Schlacht",
+      "artikel": "die",
+      "plural": "Schlachten",
+      "english": "battle",
+      "vietnamese": "trận chiến",
+      "definition_en": "A battle.",
+      "definition_vi": "Một trận chiến.",
+      "examples": [
+        {
+          "de": "Die Schlacht ist da.",
+          "en": "The battle is there.",
+          "vi": "Trận chiến ở đó."
+        }
+      ]
+    },
+    "ID0988": {
+      "word": "Schlaf",
+      "artikel": "der",
+      "plural": "-",
+      "english": "sleep",
+      "vietnamese": "giấc ngủ",
+      "definition_en": "A sleep.",
+      "definition_vi": "Một giấc ngủ.",
+      "examples": [
+        {
+          "de": "Der Schlaf ist da.",
+          "en": "The sleep is there.",
+          "vi": "Giấc ngủ ở đó."
+        }
+      ]
+    },
+    "ID0989": {
+      "word": "Schmerz",
+      "artikel": "der",
+      "plural": "Schmerzen",
+      "english": "pain",
+      "vietnamese": "đau",
+      "definition_en": "A pain.",
+      "definition_vi": "Một đau.",
+      "examples": [
+        {
+          "de": "Der Schmerz ist da.",
+          "en": "The pain is there.",
+          "vi": "Đau ở đó."
+        }
+      ]
+    },
+    "ID0990": {
+      "word": "Schrank",
+      "artikel": "der",
+      "plural": "Schränke",
+      "english": "cabinet",
+      "vietnamese": "tủ",
+      "definition_en": "A cabinet.",
+      "definition_vi": "Một tủ.",
+      "examples": [
+        {
+          "de": "Der Schrank ist da.",
+          "en": "The cabinet is there.",
+          "vi": "Tủ ở đó."
+        }
+      ]
+    },
+    "ID0991": {
+      "word": "Schrift",
+      "artikel": "die",
+      "plural": "Schriften",
+      "english": "writing",
+      "vietnamese": "chữ viết",
+      "definition_en": "A writing.",
+      "definition_vi": "Một chữ viết.",
+      "examples": [
+        {
+          "de": "Die Schrift ist da.",
+          "en": "The writing is there.",
+          "vi": "Chữ viết ở đó."
+        }
+      ]
+    },
+    "ID0992": {
+      "word": "Schritt",
+      "artikel": "der",
+      "plural": "Schritte",
+      "english": "step",
+      "vietnamese": "bước",
+      "definition_en": "A step.",
+      "definition_vi": "Một bước.",
+      "examples": [
+        {
+          "de": "Der Schritt ist da.",
+          "en": "The step is there.",
+          "vi": "Bước ở đó."
+        }
+      ]
+    },
+    "ID0993": {
+      "word": "Schuld",
+      "artikel": "die",
+      "plural": "Schulden",
+      "english": "debt/guilt",
+      "vietnamese": "nợ/lỗi",
+      "definition_en": "A debt/guilt.",
+      "definition_vi": "Một nợ/lỗi.",
+      "examples": [
+        {
+          "de": "Die Schuld ist da.",
+          "en": "The debt/guilt is there.",
+          "vi": "Nợ/lỗi ở đó."
+        }
+      ]
+    },
+    "ID0994": {
+      "word": "Schwanz",
+      "artikel": "der",
+      "plural": "Schwänze",
+      "english": "tail",
+      "vietnamese": "đuôi",
+      "definition_en": "A tail.",
+      "definition_vi": "Một đuôi.",
+      "examples": [
+        {
+          "de": "Der Schwanz ist da.",
+          "en": "The tail is there.",
+          "vi": "Đuôi ở đó."
+        }
+      ]
+    },
+    "ID0995": {
+      "word": "Schweiz",
+      "artikel": "die",
+      "plural": "-",
+      "english": "Switzerland",
+      "vietnamese": "Thụy Sĩ",
+      "definition_en": "A Switzerland.",
+      "definition_vi": "Một Thụy Sĩ.",
+      "examples": [
+        {
+          "de": "Die Schweiz ist da.",
+          "en": "The Switzerland is there.",
+          "vi": "Thụy Sĩ ở đó."
+        }
+      ]
+    },
+    "ID0996": {
+      "word": "Seele",
+      "artikel": "die",
+      "plural": "Seelen",
+      "english": "soul",
+      "vietnamese": "tâm hồn",
+      "definition_en": "A soul.",
+      "definition_vi": "Một tâm hồn.",
+      "examples": [
+        {
+          "de": "Die Seele ist da.",
+          "en": "The soul is there.",
+          "vi": "Tâm hồn ở đó."
+        }
+      ]
+    },
+    "ID0997": {
+      "word": "Segen",
+      "artikel": "der",
+      "plural": "Segen",
+      "english": "blessing",
+      "vietnamese": "phước lành",
+      "definition_en": "A blessing.",
+      "definition_vi": "Một phước lành.",
+      "examples": [
+        {
+          "de": "Der Segen ist da.",
+          "en": "The blessing is there.",
+          "vi": "Phước lành ở đó."
+        }
+      ]
+    },
+    "ID0998": {
+      "word": "Sendung",
+      "artikel": "die",
+      "plural": "Sendungen",
+      "english": "broadcast/shipment",
+      "vietnamese": "chương trình/gửi hàng",
+      "definition_en": "A broadcast/shipment.",
+      "definition_vi": "Một chương trình/gửi hàng.",
+      "examples": [
+        {
+          "de": "Die Sendung ist da.",
+          "en": "The broadcast/shipment is there.",
+          "vi": "Chương trình/gửi hàng ở đó."
+        }
+      ]
+    },
+    "ID0999": {
+      "word": "September",
+      "artikel": "der",
+      "plural": "-",
+      "english": "September",
+      "vietnamese": "tháng chín",
+      "definition_en": "A September.",
+      "definition_vi": "Một tháng chín.",
+      "examples": [
+        {
+          "de": "Der September ist da.",
+          "en": "The September is there.",
+          "vi": "Tháng chín ở đó."
+        }
+      ]
+    },
+    "ID1000": {
+      "word": "Serie",
+      "artikel": "die",
+      "plural": "Serien",
+      "english": "series",
+      "vietnamese": "loạt phim",
+      "definition_en": "A series.",
+      "definition_vi": "Một loạt phim.",
+      "examples": [
+        {
+          "de": "Die Serie ist da.",
+          "en": "The series is there.",
+          "vi": "Loạt phim ở đó."
+        }
+      ]
+    },
+    "ID1001": {
+      "word": "Sessel",
+      "artikel": "der",
+      "plural": "Sessel",
+      "english": "armchair",
+      "vietnamese": "ghế bành",
+      "definition_en": "A armchair.",
+      "definition_vi": "Một ghế bành.",
+      "examples": [
+        {
+          "de": "Der Sessel ist da.",
+          "en": "The armchair is there.",
+          "vi": "Ghế bành ở đó."
+        }
+      ]
+    },
+    "ID1002": {
+      "word": "Sicherheit",
+      "artikel": "die",
+      "plural": "Sicherheiten",
+      "english": "security/safety",
+      "vietnamese": "an toàn",
+      "definition_en": "A security/safety.",
+      "definition_vi": "Một an toàn.",
+      "examples": [
+        {
+          "de": "Die Sicherheit ist da.",
+          "en": "The security/safety is there.",
+          "vi": "An toàn ở đó."
+        }
+      ]
+    },
+    "ID1003": {
+      "word": "Sieg",
+      "artikel": "der",
+      "plural": "Siege",
+      "english": "victory",
+      "vietnamese": "chiến thắng",
+      "definition_en": "A victory.",
+      "definition_vi": "Một chiến thắng.",
+      "examples": [
+        {
+          "de": "Der Sieg ist da.",
+          "en": "The victory is there.",
+          "vi": "Chiến thắng ở đó."
+        }
+      ]
+    },
+    "ID1004": {
+      "word": "Signal",
+      "artikel": "das",
+      "plural": "Signale",
+      "english": "signal",
+      "vietnamese": "tín hiệu",
+      "definition_en": "A signal.",
+      "definition_vi": "Một tín hiệu.",
+      "examples": [
+        {
+          "de": "Das Signal ist da.",
+          "en": "The signal is there.",
+          "vi": "Tín hiệu ở đó."
+        }
+      ]
+    },
+    "ID1005": {
+      "word": "Silber",
+      "artikel": "das",
+      "plural": "-",
+      "english": "silver",
+      "vietnamese": "bạc",
+      "definition_en": "A silver.",
+      "definition_vi": "Một bạc.",
+      "examples": [
+        {
+          "de": "Das Silber ist da.",
+          "en": "The silver is there.",
+          "vi": "Bạc ở đó."
+        }
+      ]
+    },
+    "ID1006": {
+      "word": "Situation",
+      "artikel": "die",
+      "plural": "Situationen",
+      "english": "situation",
+      "vietnamese": "tình huống",
+      "definition_en": "A situation.",
+      "definition_vi": "Một tình huống.",
+      "examples": [
+        {
+          "de": "Die Situation ist da.",
+          "en": "The situation is there.",
+          "vi": "Tình huống ở đó."
+        }
+      ]
+    },
+    "ID1007": {
+      "word": "Sitz",
+      "artikel": "der",
+      "plural": "Sitze",
+      "english": "seat",
+      "vietnamese": "chỗ ngồi",
+      "definition_en": "A seat.",
+      "definition_vi": "Một chỗ ngồi.",
+      "examples": [
+        {
+          "de": "Der Sitz ist da.",
+          "en": "The seat is there.",
+          "vi": "Chỗ ngồi ở đó."
+        }
+      ]
+    },
+    "ID1008": {
+      "word": "Sorge",
+      "artikel": "die",
+      "plural": "Sorgen",
+      "english": "worry/care",
+      "vietnamese": "lo lắng",
+      "definition_en": "A worry/care.",
+      "definition_vi": "Một lo lắng.",
+      "examples": [
+        {
+          "de": "Die Sorge ist da.",
+          "en": "The worry/care is there.",
+          "vi": "Lo lắng ở đó."
+        }
+      ]
+    },
+    "ID1009": {
+      "word": "Soße",
+      "artikel": "die",
+      "plural": "Soßen",
+      "english": "sauce",
+      "vietnamese": "nước sốt",
+      "definition_en": "A sauce.",
+      "definition_vi": "Một nước sốt.",
+      "examples": [
+        {
+          "de": "Die Soße ist da.",
+          "en": "The sauce is there.",
+          "vi": "Nước sốt ở đó."
+        }
+      ]
+    },
+    "ID1010": {
+      "word": "Spanien",
+      "artikel": "das",
+      "plural": "-",
+      "english": "Spain",
+      "vietnamese": "Tây Ban Nha",
+      "definition_en": "A Spain.",
+      "definition_vi": "Một Tây Ban Nha.",
+      "examples": [
+        {
+          "de": "Das Spanien ist da.",
+          "en": "The Spain is there.",
+          "vi": "Tây Ban Nha ở đó."
+        }
+      ]
+    },
+    "ID1011": {
+      "word": "Spaß",
+      "artikel": "der",
+      "plural": "Späße",
+      "english": "fun",
+      "vietnamese": "vui",
+      "definition_en": "A fun.",
+      "definition_vi": "Một vui.",
+      "examples": [
+        {
+          "de": "Der Spaß ist da.",
+          "en": "The fun is there.",
+          "vi": "Vui ở đó."
+        }
+      ]
+    },
+    "ID1012": {
+      "word": "Spiegel",
+      "artikel": "der",
+      "plural": "Spiegel",
+      "english": "mirror",
+      "vietnamese": "gương",
+      "definition_en": "A mirror.",
+      "definition_vi": "Một gương.",
+      "examples": [
+        {
+          "de": "Der Spiegel ist da.",
+          "en": "The mirror is there.",
+          "vi": "Gương ở đó."
+        }
+      ]
+    },
+    "ID1013": {
+      "word": "Spiel",
+      "artikel": "das",
+      "plural": "Spiele",
+      "english": "game/play",
+      "vietnamese": "trò chơi",
+      "definition_en": "A game/play.",
+      "definition_vi": "Một trò chơi.",
+      "examples": [
+        {
+          "de": "Das Spiel ist da.",
+          "en": "The game/play is there.",
+          "vi": "Trò chơi ở đó."
+        }
+      ]
+    },
+    "ID1014": {
+      "word": "Sport",
+      "artikel": "der",
+      "plural": "Sportarten",
+      "english": "sport",
+      "vietnamese": "thể thao",
+      "definition_en": "A sport.",
+      "definition_vi": "Một thể thao.",
+      "examples": [
+        {
+          "de": "Der Sport ist da.",
+          "en": "The sport is there.",
+          "vi": "Thể thao ở đó."
+        }
+      ]
+    },
+    "ID1015": {
+      "word": "Sprache",
+      "artikel": "die",
+      "plural": "Sprachen",
+      "english": "language",
+      "vietnamese": "ngôn ngữ",
+      "definition_en": "A language.",
+      "definition_vi": "Một ngôn ngữ.",
+      "examples": [
+        {
+          "de": "Die Sprache ist da.",
+          "en": "The language is there.",
+          "vi": "Ngôn ngữ ở đó."
+        }
+      ]
+    },
+    "ID1016": {
+      "word": "Staat",
+      "artikel": "der",
+      "plural": "Staaten",
+      "english": "state",
+      "vietnamese": "nhà nước",
+      "definition_en": "A state.",
+      "definition_vi": "Một nhà nước.",
+      "examples": [
+        {
+          "de": "Der Staat ist da.",
+          "en": "The state is there.",
+          "vi": "Nhà nước ở đó."
+        }
+      ]
+    },
+    "ID1017": {
+      "word": "Stahl",
+      "artikel": "der",
+      "plural": "-",
+      "english": "steel",
+      "vietnamese": "thép",
+      "definition_en": "A steel.",
+      "definition_vi": "Một thép.",
+      "examples": [
+        {
+          "de": "Der Stahl ist da.",
+          "en": "The steel is there.",
+          "vi": "Thép ở đó."
+        }
+      ]
+    },
+    "ID1018": {
+      "word": "Stamm",
+      "artikel": "der",
+      "plural": "Stämme",
+      "english": "trunk/tribe",
+      "vietnamese": "thân cây/bộ lạc",
+      "definition_en": "A trunk/tribe.",
+      "definition_vi": "Một thân cây/bộ lạc.",
+      "examples": [
+        {
+          "de": "Der Stamm ist da.",
+          "en": "The trunk/tribe is there.",
+          "vi": "Thân cây/bộ lạc ở đó."
+        }
+      ]
+    },
+    "ID1019": {
+      "word": "Stand",
+      "artikel": "der",
+      "plural": "Stände",
+      "english": "stand/status",
+      "vietnamese": "quầy/trạng thái",
+      "definition_en": "A stand/status.",
+      "definition_vi": "Một quầy/trạng thái.",
+      "examples": [
+        {
+          "de": "Der Stand ist da.",
+          "en": "The stand/status is there.",
+          "vi": "Quầy/trạng thái ở đó."
+        }
+      ]
+    },
+    "ID1020": {
+      "word": "Start",
+      "artikel": "der",
+      "plural": "Starts",
+      "english": "start",
+      "vietnamese": "khởi đầu",
+      "definition_en": "A start.",
+      "definition_vi": "Một khởi đầu.",
+      "examples": [
+        {
+          "de": "Der Start ist da.",
+          "en": "The start is there.",
+          "vi": "Khởi đầu ở đó."
+        }
+      ]
+    },
+    "ID1021": {
+      "word": "Station",
+      "artikel": "die",
+      "plural": "Stationen",
+      "english": "station",
+      "vietnamese": "trạm",
+      "definition_en": "A station.",
+      "definition_vi": "Một trạm.",
+      "examples": [
+        {
+          "de": "Die Station ist da.",
+          "en": "The station is there.",
+          "vi": "Trạm ở đó."
+        }
+      ]
+    },
+    "ID1022": {
+      "word": "Stein",
+      "artikel": "der",
+      "plural": "Steine",
+      "english": "stone",
+      "vietnamese": "đá",
+      "definition_en": "A stone.",
+      "definition_vi": "Một đá.",
+      "examples": [
+        {
+          "de": "Der Stein ist da.",
+          "en": "The stone is there.",
+          "vi": "Đá ở đó."
+        }
+      ]
+    },
+    "ID1023": {
+      "word": "Stelle",
+      "artikel": "die",
+      "plural": "Stellen",
+      "english": "place/position",
+      "vietnamese": "chỗ/vị trí",
+      "definition_en": "A place/position.",
+      "definition_vi": "Một chỗ/vị trí.",
+      "examples": [
+        {
+          "de": "Die Stelle ist da.",
+          "en": "The place/position is there.",
+          "vi": "Chỗ/vị trí ở đó."
+        }
+      ]
+    },
+    "ID1024": {
+      "word": "Steuer",
+      "artikel": "die",
+      "plural": "Steuern",
+      "english": "tax",
+      "vietnamese": "thuế",
+      "definition_en": "A tax.",
+      "definition_vi": "Một thuế.",
+      "examples": [
+        {
+          "de": "Die Steuer ist da.",
+          "en": "The tax is there.",
+          "vi": "Thuế ở đó."
+        }
+      ]
+    },
+    "ID1025": {
+      "word": "Stiefel",
+      "artikel": "der",
+      "plural": "Stiefel",
+      "english": "boot",
+      "vietnamese": "ủng",
+      "definition_en": "A boot.",
+      "definition_vi": "Một ủng.",
+      "examples": [
+        {
+          "de": "Der Stiefel ist da.",
+          "en": "The boot is there.",
+          "vi": "Ủng ở đó."
+        }
+      ]
+    },
+    "ID1026": {
+      "word": "Stil",
+      "artikel": "der",
+      "plural": "Stile",
+      "english": "style",
+      "vietnamese": "phong cách",
+      "definition_en": "A style.",
+      "definition_vi": "Một phong cách.",
+      "examples": [
+        {
+          "de": "Der Stil ist da.",
+          "en": "The style is there.",
+          "vi": "Phong cách ở đó."
+        }
+      ]
+    },
+    "ID1027": {
+      "word": "Stimme",
+      "artikel": "die",
+      "plural": "Stimmen",
+      "english": "voice/vote",
+      "vietnamese": "giọng/phiếu",
+      "definition_en": "A voice/vote.",
+      "definition_vi": "Một giọng/phiếu.",
+      "examples": [
+        {
+          "de": "Die Stimme ist da.",
+          "en": "The voice/vote is there.",
+          "vi": "Giọng/phiếu ở đó."
+        }
+      ]
+    },
+    "ID1028": {
+      "word": "Stock",
+      "artikel": "der",
+      "plural": "Stöcke",
+      "english": "stick/floor",
+      "vietnamese": "gậy/tầng",
+      "definition_en": "A stick/floor.",
+      "definition_vi": "Một gậy/tầng.",
+      "examples": [
+        {
+          "de": "Der Stock ist da.",
+          "en": "The stick/floor is there.",
+          "vi": "Gậy/tầng ở đó."
+        }
+      ]
+    },
+    "ID1029": {
+      "word": "Stoff",
+      "artikel": "der",
+      "plural": "Stoffe",
+      "english": "material/fabric",
+      "vietnamese": "chất/vải",
+      "definition_en": "A material/fabric.",
+      "definition_vi": "Một chất/vải.",
+      "examples": [
+        {
+          "de": "Der Stoff ist da.",
+          "en": "The material/fabric is there.",
+          "vi": "Chất/vải ở đó."
+        }
+      ]
+    },
+    "ID1030": {
+      "word": "Strom",
+      "artikel": "der",
+      "plural": "Ströme",
+      "english": "current/electricity",
+      "vietnamese": "dòng điện",
+      "definition_en": "A current/electricity.",
+      "definition_vi": "Một dòng điện.",
+      "examples": [
+        {
+          "de": "Der Strom ist da.",
+          "en": "The current/electricity is there.",
+          "vi": "Dòng điện ở đó."
+        }
+      ]
+    },
+    "ID1031": {
+      "word": "Struktur",
+      "artikel": "die",
+      "plural": "Strukturen",
+      "english": "structure",
+      "vietnamese": "cấu trúc",
+      "definition_en": "A structure.",
+      "definition_vi": "Một cấu trúc.",
+      "examples": [
+        {
+          "de": "Die Struktur ist da.",
+          "en": "The structure is there.",
+          "vi": "Cấu trúc ở đó."
+        }
+      ]
+    },
+    "ID1032": {
+      "word": "Stufe",
+      "artikel": "die",
+      "plural": "Stufen",
+      "english": "step/stage",
+      "vietnamese": "bậc/giai đoạn",
+      "definition_en": "A step/stage.",
+      "definition_vi": "Một bậc/giai đoạn.",
+      "examples": [
+        {
+          "de": "Die Stufe ist da.",
+          "en": "The step/stage is there.",
+          "vi": "Bậc/giai đoạn ở đó."
+        }
+      ]
+    },
+    "ID1033": {
+      "word": "Sturm",
+      "artikel": "der",
+      "plural": "Stürme",
+      "english": "storm",
+      "vietnamese": "bão",
+      "definition_en": "A storm.",
+      "definition_vi": "Một bão.",
+      "examples": [
+        {
+          "de": "Der Sturm ist da.",
+          "en": "The storm is there.",
+          "vi": "Bão ở đó."
+        }
+      ]
+    },
+    "ID1034": {
+      "word": "Suche",
+      "artikel": "die",
+      "plural": "Suchen",
+      "english": "search",
+      "vietnamese": "tìm kiếm",
+      "definition_en": "A search.",
+      "definition_vi": "Một tìm kiếm.",
+      "examples": [
+        {
+          "de": "Die Suche ist da.",
+          "en": "The search is there.",
+          "vi": "Tìm kiếm ở đó."
+        }
+      ]
+    },
+    "ID1035": {
+      "word": "Süden",
+      "artikel": "der",
+      "plural": "-",
+      "english": "south",
+      "vietnamese": "phương nam",
+      "definition_en": "A south.",
+      "definition_vi": "Một phương nam.",
+      "examples": [
+        {
+          "de": "Der Süden ist da.",
+          "en": "The south is there.",
+          "vi": "Phương nam ở đó."
+        }
+      ]
+    },
+    "ID1036": {
+      "word": "Summe",
+      "artikel": "die",
+      "plural": "Summen",
+      "english": "sum",
+      "vietnamese": "tổng",
+      "definition_en": "A sum.",
+      "definition_vi": "Một tổng.",
+      "examples": [
+        {
+          "de": "Die Summe ist da.",
+          "en": "The sum is there.",
+          "vi": "Tổng ở đó."
+        }
+      ]
+    },
+    "ID1037": {
+      "word": "Symbol",
+      "artikel": "das",
+      "plural": "Symbole",
+      "english": "symbol",
+      "vietnamese": "biểu tượng",
+      "definition_en": "A symbol.",
+      "definition_vi": "Một biểu tượng.",
+      "examples": [
+        {
+          "de": "Das Symbol ist da.",
+          "en": "The symbol is there.",
+          "vi": "Biểu tượng ở đó."
+        }
+      ]
+    },
+    "ID1038": {
+      "word": "Sack",
+      "artikel": "der",
+      "plural": "Säcke",
+      "english": "sack/bag",
+      "vietnamese": "bao",
+      "definition_en": "A sack/bag.",
+      "definition_vi": "Một bao.",
+      "examples": [
+        {
+          "de": "Der Sack ist da.",
+          "en": "The sack/bag is there.",
+          "vi": "Bao ở đó."
+        }
+      ]
+    },
+    "ID1039": {
+      "word": "Sage",
+      "artikel": "die",
+      "plural": "Sagen",
+      "english": "legend",
+      "vietnamese": "truyền thuyết",
+      "definition_en": "A legend.",
+      "definition_vi": "Một truyền thuyết.",
+      "examples": [
+        {
+          "de": "Die Sage ist da.",
+          "en": "The legend is there.",
+          "vi": "Truyền thuyết ở đó."
+        }
+      ]
+    },
+    "ID1040": {
+      "word": "Saite",
+      "artikel": "die",
+      "plural": "Saiten",
+      "english": "string",
+      "vietnamese": "dây đàn",
+      "definition_en": "A string.",
+      "definition_vi": "Một dây đàn.",
+      "examples": [
+        {
+          "de": "Die Saite ist da.",
+          "en": "The string is there.",
+          "vi": "Dây đàn ở đó."
+        }
+      ]
+    },
+    "ID1041": {
+      "word": "Saison",
+      "artikel": "die",
+      "plural": "Saisons",
+      "english": "season",
+      "vietnamese": "mùa",
+      "definition_en": "A season.",
+      "definition_vi": "Một mùa.",
+      "examples": [
+        {
+          "de": "Die Saison ist da.",
+          "en": "The season is there.",
+          "vi": "Mùa ở đó."
+        }
+      ]
+    },
+    "ID1042": {
+      "word": "Sandale",
+      "artikel": "die",
+      "plural": "Sandalen",
+      "english": "sandal",
+      "vietnamese": "dép",
+      "definition_en": "A sandal.",
+      "definition_vi": "Một dép.",
+      "examples": [
+        {
+          "de": "Die Sandale ist da.",
+          "en": "The sandal is there.",
+          "vi": "Dép ở đó."
+        }
+      ]
+    },
+    "ID1043": {
+      "word": "Satellit",
+      "artikel": "der",
+      "plural": "Satelliten",
+      "english": "satellite",
+      "vietnamese": "vệ tinh",
+      "definition_en": "A satellite.",
+      "definition_vi": "Một vệ tinh.",
+      "examples": [
+        {
+          "de": "Der Satellit ist da.",
+          "en": "The satellite is there.",
+          "vi": "Vệ tinh ở đó."
+        }
+      ]
+    },
+    "ID1044": {
+      "word": "Sattel",
+      "artikel": "der",
+      "plural": "Sättel",
+      "english": "saddle",
+      "vietnamese": "yên",
+      "definition_en": "A saddle.",
+      "definition_vi": "Một yên.",
+      "examples": [
+        {
+          "de": "Der Sattel ist da.",
+          "en": "The saddle is there.",
+          "vi": "Yên ở đó."
+        }
+      ]
+    },
+    "ID1045": {
+      "word": "Schach",
+      "artikel": "das",
+      "plural": "-",
+      "english": "chess",
+      "vietnamese": "cờ vua",
+      "definition_en": "A chess.",
+      "definition_vi": "Một cờ vua.",
+      "examples": [
+        {
+          "de": "Das Schach ist da.",
+          "en": "The chess is there.",
+          "vi": "Cờ vua ở đó."
+        }
+      ]
+    },
+    "ID1046": {
+      "word": "Schachtel",
+      "artikel": "die",
+      "plural": "Schachteln",
+      "english": "box",
+      "vietnamese": "hộp",
+      "definition_en": "A box.",
+      "definition_vi": "Một hộp.",
+      "examples": [
+        {
+          "de": "Die Schachtel ist da.",
+          "en": "The box is there.",
+          "vi": "Hộp ở đó."
+        }
+      ]
+    },
+    "ID1047": {
+      "word": "Schaden",
+      "artikel": "der",
+      "plural": "Schäden",
+      "english": "damage",
+      "vietnamese": "thiệt hại",
+      "definition_en": "A damage.",
+      "definition_vi": "Một thiệt hại.",
+      "examples": [
+        {
+          "de": "Der Schaden ist da.",
+          "en": "The damage is there.",
+          "vi": "Thiệt hại ở đó."
+        }
+      ]
+    },
+    "ID1048": {
+      "word": "Schatten",
+      "artikel": "der",
+      "plural": "Schatten",
+      "english": "shadow",
+      "vietnamese": "bóng",
+      "definition_en": "A shadow.",
+      "definition_vi": "Một bóng.",
+      "examples": [
+        {
+          "de": "Der Schatten ist da.",
+          "en": "The shadow is there.",
+          "vi": "Bóng ở đó."
+        }
+      ]
+    },
+    "ID1049": {
+      "word": "Schatz",
+      "artikel": "der",
+      "plural": "Schätze",
+      "english": "treasure",
+      "vietnamese": "kho báu",
+      "definition_en": "A treasure.",
+      "definition_vi": "Một kho báu.",
+      "examples": [
+        {
+          "de": "Der Schatz ist da.",
+          "en": "The treasure is there.",
+          "vi": "Kho báu ở đó."
+        }
+      ]
+    },
+    "ID1050": {
+      "word": "Scheibe",
+      "artikel": "die",
+      "plural": "Scheiben",
+      "english": "slice/pane",
+      "vietnamese": "lát/tấm kính",
+      "definition_en": "A slice/pane.",
+      "definition_vi": "Một lát/tấm kính.",
+      "examples": [
+        {
+          "de": "Die Scheibe ist da.",
+          "en": "The slice/pane is there.",
+          "vi": "Lát/tấm kính ở đó."
+        }
+      ]
+    },
+    "ID1051": {
+      "word": "Schicht",
+      "artikel": "die",
+      "plural": "Schichten",
+      "english": "layer",
+      "vietnamese": "lớp",
+      "definition_en": "A layer.",
+      "definition_vi": "Một lớp.",
+      "examples": [
+        {
+          "de": "Die Schicht ist da.",
+          "en": "The layer is there.",
+          "vi": "Lớp ở đó."
+        }
+      ]
+    },
+    "ID1052": {
+      "word": "Schild",
+      "artikel": "das",
+      "plural": "Schilder",
+      "english": "sign",
+      "vietnamese": "biển",
+      "definition_en": "A sign.",
+      "definition_vi": "Một biển.",
+      "examples": [
+        {
+          "de": "Das Schild ist da.",
+          "en": "The sign is there.",
+          "vi": "Biển ở đó."
+        }
+      ]
+    },
+    "ID1053": {
+      "word": "Schinken",
+      "artikel": "der",
+      "plural": "Schinken",
+      "english": "ham",
+      "vietnamese": "giăm bông",
+      "definition_en": "A ham.",
+      "definition_vi": "Một giăm bông.",
+      "examples": [
+        {
+          "de": "Der Schinken ist da.",
+          "en": "The ham is there.",
+          "vi": "Giăm bông ở đó."
+        }
+      ]
+    },
+    "ID1054": {
+      "word": "Schirm",
+      "artikel": "der",
+      "plural": "Schirme",
+      "english": "screen/umbrella",
+      "vietnamese": "màn/ô",
+      "definition_en": "A screen/umbrella.",
+      "definition_vi": "Một màn/ô.",
+      "examples": [
+        {
+          "de": "Der Schirm ist da.",
+          "en": "The screen/umbrella is there.",
+          "vi": "Màn/ô ở đó."
+        }
+      ]
+    },
+    "ID1055": {
+      "word": "Schloss",
+      "artikel": "das",
+      "plural": "Schlösser",
+      "english": "castle/lock",
+      "vietnamese": "lâu đài/khóa",
+      "definition_en": "A castle/lock.",
+      "definition_vi": "Một lâu đài/khóa.",
+      "examples": [
+        {
+          "de": "Das Schloss ist da.",
+          "en": "The castle/lock is there.",
+          "vi": "Lâu đài/khóa ở đó."
+        }
+      ]
+    },
+    "ID1056": {
+      "word": "Schmuck",
+      "artikel": "der",
+      "plural": "-",
+      "english": "jewelry",
+      "vietnamese": "đồ trang sức",
+      "definition_en": "A jewelry.",
+      "definition_vi": "Một đồ trang sức.",
+      "examples": [
+        {
+          "de": "Der Schmuck ist da.",
+          "en": "The jewelry is there.",
+          "vi": "Đồ trang sức ở đó."
+        }
+      ]
+    },
+    "ID1057": {
+      "word": "Schnaps",
+      "artikel": "der",
+      "plural": "Schnäpse",
+      "english": "schnapps",
+      "vietnamese": "rượu mạnh",
+      "definition_en": "A schnapps.",
+      "definition_vi": "Một rượu mạnh.",
+      "examples": [
+        {
+          "de": "Der Schnaps ist da.",
+          "en": "The schnapps is there.",
+          "vi": "Rượu mạnh ở đó."
+        }
+      ]
+    },
+    "ID1058": {
+      "word": "Schnitt",
+      "artikel": "der",
+      "plural": "Schnitte",
+      "english": "cut",
+      "vietnamese": "cắt",
+      "definition_en": "A cut.",
+      "definition_vi": "Một cắt.",
+      "examples": [
+        {
+          "de": "Der Schnitt ist da.",
+          "en": "The cut is there.",
+          "vi": "Cắt ở đó."
+        }
+      ]
+    },
+    "ID1059": {
+      "word": "Schnur",
+      "artikel": "die",
+      "plural": "Schnüre",
+      "english": "cord",
+      "vietnamese": "dây",
+      "definition_en": "A cord.",
+      "definition_vi": "Một dây.",
+      "examples": [
+        {
+          "de": "Die Schnur ist da.",
+          "en": "The cord is there.",
+          "vi": "Dây ở đó."
+        }
+      ]
+    },
+    "ID1060": {
+      "word": "Schock",
+      "artikel": "der",
+      "plural": "Schocks",
+      "english": "shock",
+      "vietnamese": "sốc",
+      "definition_en": "A shock.",
+      "definition_vi": "Một sốc.",
+      "examples": [
+        {
+          "de": "Der Schock ist da.",
+          "en": "The shock is there.",
+          "vi": "Sốc ở đó."
+        }
+      ]
+    },
+    "ID1061": {
+      "word": "Schoß",
+      "artikel": "der",
+      "plural": "Schöße",
+      "english": "lap",
+      "vietnamese": "lòng",
+      "definition_en": "A lap.",
+      "definition_vi": "Một lòng.",
+      "examples": [
+        {
+          "de": "Der Schoß ist da.",
+          "en": "The lap is there.",
+          "vi": "Lòng ở đó."
+        }
+      ]
+    },
+    "ID1062": {
+      "word": "Schrank",
+      "artikel": "der",
+      "plural": "Schränke",
+      "english": "wardrobe",
+      "vietnamese": "tủ quần áo",
+      "definition_en": "A wardrobe.",
+      "definition_vi": "Một tủ quần áo.",
+      "examples": [
+        {
+          "de": "Der Schrank ist da.",
+          "en": "The wardrobe is there.",
+          "vi": "Tủ quần áo ở đó."
+        }
+      ]
+    },
+    "ID1063": {
+      "word": "Schraube",
+      "artikel": "die",
+      "plural": "Schrauben",
+      "english": "screw",
+      "vietnamese": "ốc vít",
+      "definition_en": "A screw.",
+      "definition_vi": "Một ốc vít.",
+      "examples": [
+        {
+          "de": "Die Schraube ist da.",
+          "en": "The screw is there.",
+          "vi": "Ốc vít ở đó."
+        }
+      ]
+    },
+    "ID1064": {
+      "word": "Schrei",
+      "artikel": "der",
+      "plural": "Schreie",
+      "english": "scream",
+      "vietnamese": "tiếng la",
+      "definition_en": "A scream.",
+      "definition_vi": "Một tiếng la.",
+      "examples": [
+        {
+          "de": "Der Schrei ist da.",
+          "en": "The scream is there.",
+          "vi": "Tiếng la ở đó."
+        }
+      ]
+    },
+    "ID1065": {
+      "word": "Schub",
+      "artikel": "der",
+      "plural": "Schübe",
+      "english": "push/batch",
+      "vietnamese": "đẩy/lô",
+      "definition_en": "A push/batch.",
+      "definition_vi": "Một đẩy/lô.",
+      "examples": [
+        {
+          "de": "Der Schub ist da.",
+          "en": "The push/batch is there.",
+          "vi": "Đẩy/lô ở đó."
+        }
+      ]
+    },
+    "ID1066": {
+      "word": "Schuh",
+      "artikel": "der",
+      "plural": "Schuhe",
+      "english": "shoe",
+      "vietnamese": "giày",
+      "definition_en": "A shoe.",
+      "definition_vi": "Một giày.",
+      "examples": [
+        {
+          "de": "Der Schuh ist da.",
+          "en": "The shoe is there.",
+          "vi": "Giày ở đó."
+        }
+      ]
+    },
+    "ID1067": {
+      "word": "Schutz",
+      "artikel": "der",
+      "plural": "-",
+      "english": "protection",
+      "vietnamese": "bảo vệ",
+      "definition_en": "A protection.",
+      "definition_vi": "Một bảo vệ.",
+      "examples": [
+        {
+          "de": "Der Schutz ist da.",
+          "en": "The protection is there.",
+          "vi": "Bảo vệ ở đó."
+        }
+      ]
+    },
+    "ID1068": {
+      "word": "Schweigen",
+      "artikel": "das",
+      "plural": "-",
+      "english": "silence",
+      "vietnamese": "im lặng",
+      "definition_en": "A silence.",
+      "definition_vi": "Một im lặng.",
+      "examples": [
+        {
+          "de": "Das Schweigen ist da.",
+          "en": "The silence is there.",
+          "vi": "Im lặng ở đó."
+        }
+      ]
+    },
+    "ID1069": {
+      "word": "Schwert",
+      "artikel": "das",
+      "plural": "Schwerter",
+      "english": "sword",
+      "vietnamese": "kiếm",
+      "definition_en": "A sword.",
+      "definition_vi": "Một kiếm.",
+      "examples": [
+        {
+          "de": "Das Schwert ist da.",
+          "en": "The sword is there.",
+          "vi": "Kiếm ở đó."
+        }
+      ]
+    },
+    "ID1070": {
+      "word": "Schwimmbad",
+      "artikel": "das",
+      "plural": "Schwimmbäder",
+      "english": "swimming pool",
+      "vietnamese": "bể bơi",
+      "definition_en": "A swimming pool.",
+      "definition_vi": "Một bể bơi.",
+      "examples": [
+        {
+          "de": "Das Schwimmbad ist da.",
+          "en": "The swimming pool is there.",
+          "vi": "Bể bơi ở đó."
+        }
+      ]
+    },
+    "ID1071": {
+      "word": "Sechseck",
+      "artikel": "das",
+      "plural": "Sechsecke",
+      "english": "hexagon",
+      "vietnamese": "hình lục giác",
+      "definition_en": "A hexagon.",
+      "definition_vi": "Một hình lục giác.",
+      "examples": [
+        {
+          "de": "Das Sechseck ist da.",
+          "en": "The hexagon is there.",
+          "vi": "Hình lục giác ở đó."
+        }
+      ]
+    },
+    "ID1072": {
+      "word": "Segel",
+      "artikel": "das",
+      "plural": "Segel",
+      "english": "sail",
+      "vietnamese": "cánh buồm",
+      "definition_en": "A sail.",
+      "definition_vi": "Một cánh buồm.",
+      "examples": [
+        {
+          "de": "Das Segel ist da.",
+          "en": "The sail is there.",
+          "vi": "Cánh buồm ở đó."
+        }
+      ]
+    },
+    "ID1073": {
+      "word": "Sehnsucht",
+      "artikel": "die",
+      "plural": "Sehnsüchte",
+      "english": "longing",
+      "vietnamese": "khát vọng",
+      "definition_en": "A longing.",
+      "definition_vi": "Một khát vọng.",
+      "examples": [
+        {
+          "de": "Die Sehnsucht ist da.",
+          "en": "The longing is there.",
+          "vi": "Khát vọng ở đó."
+        }
+      ]
+    },
+    "ID1074": {
+      "word": "Seife",
+      "artikel": "die",
+      "plural": "Seifen",
+      "english": "soap",
+      "vietnamese": "xà phòng",
+      "definition_en": "A soap.",
+      "definition_vi": "Một xà phòng.",
+      "examples": [
+        {
+          "de": "Die Seife ist da.",
+          "en": "The soap is there.",
+          "vi": "Xà phòng ở đó."
+        }
+      ]
+    },
+    "ID1075": {
+      "word": "Seil",
+      "artikel": "das",
+      "plural": "Seile",
+      "english": "rope",
+      "vietnamese": "dây thừng",
+      "definition_en": "A rope.",
+      "definition_vi": "Một dây thừng.",
+      "examples": [
+        {
+          "de": "Das Seil ist da.",
+          "en": "The rope is there.",
+          "vi": "Dây thừng ở đó."
+        }
+      ]
+    },
+    "ID1076": {
+      "word": "Sekretär",
+      "artikel": "der",
+      "plural": "Sekretäre",
+      "english": "secretary",
+      "vietnamese": "thư ký",
+      "definition_en": "A secretary.",
+      "definition_vi": "Một thư ký.",
+      "examples": [
+        {
+          "de": "Der Sekretär ist da.",
+          "en": "The secretary is there.",
+          "vi": "Thư ký ở đó."
+        }
+      ]
+    },
+    "ID1077": {
+      "word": "Sektor",
+      "artikel": "der",
+      "plural": "Sektoren",
+      "english": "sector",
+      "vietnamese": "lĩnh vực",
+      "definition_en": "A sector.",
+      "definition_vi": "Một lĩnh vực.",
+      "examples": [
+        {
+          "de": "Der Sektor ist da.",
+          "en": "The sector is there.",
+          "vi": "Lĩnh vực ở đó."
+        }
+      ]
+    },
+    "ID1078": {
+      "word": "Selbst",
+      "artikel": "das",
+      "plural": "-",
+      "english": "self",
+      "vietnamese": "bản thân",
+      "definition_en": "A self.",
+      "definition_vi": "Một bản thân.",
+      "examples": [
+        {
+          "de": "Das Selbst ist da.",
+          "en": "The self is there.",
+          "vi": "Bản thân ở đó."
+        }
+      ]
+    },
+    "ID1079": {
+      "word": "Semester",
+      "artikel": "das",
+      "plural": "Semester",
+      "english": "semester",
+      "vietnamese": "học kỳ",
+      "definition_en": "A semester.",
+      "definition_vi": "Một học kỳ.",
+      "examples": [
+        {
+          "de": "Das Semester ist da.",
+          "en": "The semester is there.",
+          "vi": "Học kỳ ở đó."
+        }
+      ]
+    },
+    "ID1080": {
+      "word": "Senat",
+      "artikel": "der",
+      "plural": "Senate",
+      "english": "senate",
+      "vietnamese": "thượng viện",
+      "definition_en": "A senate.",
+      "definition_vi": "Một thượng viện.",
+      "examples": [
+        {
+          "de": "Der Senat ist da.",
+          "en": "The senate is there.",
+          "vi": "Thượng viện ở đó."
+        }
+      ]
+    },
+    "ID1081": {
+      "word": "Sender",
+      "artikel": "der",
+      "plural": "Sender",
+      "english": "broadcaster",
+      "vietnamese": "đài",
+      "definition_en": "A broadcaster.",
+      "definition_vi": "Một đài.",
+      "examples": [
+        {
+          "de": "Der Sender ist da.",
+          "en": "The broadcaster is there.",
+          "vi": "Đài ở đó."
+        }
+      ]
+    },
+    "ID1082": {
+      "word": "Senior",
+      "artikel": "der",
+      "plural": "Senioren",
+      "english": "senior",
+      "vietnamese": "người cao tuổi",
+      "definition_en": "A senior.",
+      "definition_vi": "Một người cao tuổi.",
+      "examples": [
+        {
+          "de": "Der Senior ist da.",
+          "en": "The senior is there.",
+          "vi": "Người cao tuổi ở đó."
+        }
+      ]
+    },
+    "ID1083": {
+      "word": "Sensation",
+      "artikel": "die",
+      "plural": "Sensationen",
+      "english": "sensation",
+      "vietnamese": "cảm giác",
+      "definition_en": "A sensation.",
+      "definition_vi": "Một cảm giác.",
+      "examples": [
+        {
+          "de": "Die Sensation ist da.",
+          "en": "The sensation is there.",
+          "vi": "Cảm giác ở đó."
+        }
+      ]
+    },
+    "ID1084": {
+      "word": "Service",
+      "artikel": "der",
+      "plural": "Services",
+      "english": "service",
+      "vietnamese": "dịch vụ",
+      "definition_en": "A service.",
+      "definition_vi": "Một dịch vụ.",
+      "examples": [
+        {
+          "de": "Der Service ist da.",
+          "en": "The service is there.",
+          "vi": "Dịch vụ ở đó."
+        }
+      ]
+    },
+    "ID1085": {
+      "word": "Sessel",
+      "artikel": "der",
+      "plural": "Sessel",
+      "english": "easy chair",
+      "vietnamese": "ghế dễ",
+      "definition_en": "A easy chair.",
+      "definition_vi": "Một ghế dễ.",
+      "examples": [
+        {
+          "de": "Der Sessel ist da.",
+          "en": "The easy chair is there.",
+          "vi": "Ghế dễ ở đó."
+        }
+      ]
+    },
+    "ID1086": {
+      "word": "Sieger",
+      "artikel": "der",
+      "plural": "Sieger",
+      "english": "winner",
+      "vietnamese": "người thắng cuộc",
+      "definition_en": "A winner.",
+      "definition_vi": "Một người thắng cuộc.",
+      "examples": [
+        {
+          "de": "Der Sieger ist da.",
+          "en": "The winner is there.",
+          "vi": "Người thắng cuộc ở đó."
+        }
+      ]
+    },
+    "ID1087": {
+      "word": "Skipper",
+      "artikel": "der",
+      "plural": "Skipper",
+      "english": "skipper",
+      "vietnamese": "thuyền trưởng",
+      "definition_en": "A skipper.",
+      "definition_vi": "Một thuyền trưởng.",
+      "examples": [
+        {
+          "de": "Der Skipper ist da.",
+          "en": "The skipper is there.",
+          "vi": "Thuyền trưởng ở đó."
+        }
+      ]
+    },
+    "ID1088": {
+      "word": "Skizze",
+      "artikel": "die",
+      "plural": "Skizzen",
+      "english": "sketch",
+      "vietnamese": "phác thảo",
+      "definition_en": "A sketch.",
+      "definition_vi": "Một phác thảo.",
+      "examples": [
+        {
+          "de": "Die Skizze ist da.",
+          "en": "The sketch is there.",
+          "vi": "Phác thảo ở đó."
+        }
+      ]
+    },
+    "ID1089": {
+      "word": "Sockel",
+      "artikel": "der",
+      "plural": "Sockel",
+      "english": "base/pedestal",
+      "vietnamese": "đế",
+      "definition_en": "A base/pedestal.",
+      "definition_vi": "Một đế.",
+      "examples": [
+        {
+          "de": "Der Sockel ist da.",
+          "en": "The base/pedestal is there.",
+          "vi": "Đế ở đó."
+        }
+      ]
+    },
+    "ID1090": {
+      "word": "Soldat",
+      "artikel": "der",
+      "plural": "Soldaten",
+      "english": "soldier",
+      "vietnamese": "người lính",
+      "definition_en": "A soldier.",
+      "definition_vi": "Một người lính.",
+      "examples": [
+        {
+          "de": "Der Soldat ist da.",
+          "en": "The soldier is there.",
+          "vi": "Người lính ở đó."
+        }
+      ]
+    },
+    "ID1091": {
+      "word": "Sommer",
+      "artikel": "der",
+      "plural": "Sommer",
+      "english": "summer",
+      "vietnamese": "mùa hè",
+      "definition_en": "A summer.",
+      "definition_vi": "Một mùa hè.",
+      "examples": [
+        {
+          "de": "Der Sommer ist da.",
+          "en": "The summer is there.",
+          "vi": "Mùa hè ở đó."
+        }
+      ]
+    },
+    "ID1092": {
+      "word": "Sonntag",
+      "artikel": "der",
+      "plural": "Sonntage",
+      "english": "Sunday",
+      "vietnamese": "chủ nhật",
+      "definition_en": "A Sunday.",
+      "definition_vi": "Một chủ nhật.",
+      "examples": [
+        {
+          "de": "Der Sonntag ist da.",
+          "en": "The Sunday is there.",
+          "vi": "Chủ nhật ở đó."
+        }
+      ]
+    },
+    "ID1093": {
+      "word": "Sorte",
+      "artikel": "die",
+      "plural": "Sorten",
+      "english": "sort/type",
+      "vietnamese": "loại",
+      "definition_en": "A sort/type.",
+      "definition_vi": "Một loại.",
+      "examples": [
+        {
+          "de": "Die Sorte ist da.",
+          "en": "The sort/type is there.",
+          "vi": "Loại ở đó."
+        }
+      ]
+    },
+    "ID1094": {
+      "word": "Souvenír",
+      "artikel": "das",
+      "plural": "Souvenirs",
+      "english": "souvenir",
+      "vietnamese": "quà lưu niệm",
+      "definition_en": "A souvenir.",
+      "definition_vi": "Một quà lưu niệm.",
+      "examples": [
+        {
+          "de": "Das Souvenír ist da.",
+          "en": "The souvenir is there.",
+          "vi": "Quà lưu niệm ở đó."
+        }
+      ]
+    },
+    "ID1095": {
+      "word": "Spalte",
+      "artikel": "die",
+      "plural": "Spalten",
+      "english": "column",
+      "vietnamese": "cột",
+      "definition_en": "A column.",
+      "definition_vi": "Một cột.",
+      "examples": [
+        {
+          "de": "Die Spalte ist da.",
+          "en": "The column is there.",
+          "vi": "Cột ở đó."
+        }
+      ]
+    },
+    "ID1096": {
+      "word": "Sparte",
+      "artikel": "die",
+      "plural": "Sparten",
+      "english": "branch/field",
+      "vietnamese": "ngành",
+      "definition_en": "A branch/field.",
+      "definition_vi": "Một ngành.",
+      "examples": [
+        {
+          "de": "Die Sparte ist da.",
+          "en": "The branch/field is there.",
+          "vi": "Ngành ở đó."
+        }
+      ]
+    }
+  }
+}

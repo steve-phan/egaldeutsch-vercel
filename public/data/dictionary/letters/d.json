@@ -1,0 +1,2310 @@
+{
+  "byWord": {
+    "dach": "ID241",
+    "dame": "ID242",
+    "dank": "ID243",
+    "daumen": "ID244",
+    "decke": "ID245",
+    "deutschland": "ID246",
+    "dienstag": "ID247",
+    "ding": "ID248",
+    "direktor": "ID249",
+    "donnerstag": "ID250",
+    "dorf": "ID251",
+    "dose": "ID252",
+    "dusche": "ID253",
+    "deckel": "ID459",
+    "demokratie": "ID460",
+    "denkmal": "ID461",
+    "detail": "ID462",
+    "dezember": "ID463",
+    "dialekt": "ID464",
+    "diamant": "ID465",
+    "dichter": "ID466",
+    "dieb": "ID467",
+    "dienst": "ID468",
+    "dienstleistung": "ID469",
+    "diplom": "ID470",
+    "diskussion": "ID471",
+    "dokument": "ID472",
+    "dollar": "ID473",
+    "dom": "ID474",
+    "donner": "ID475",
+    "doppel": "ID476",
+    "drama": "ID477",
+    "droge": "ID478",
+    "druck": "ID479",
+    "drucker": "ID480",
+    "dschungel": "ID481",
+    "duft": "ID482",
+    "dunkelheit": "ID483",
+    "durst": "ID484",
+    "dvd": "ID485",
+    "dampf": "ID486",
+    "datei": "ID487",
+    "datum": "ID488",
+    "dauer": "ID489",
+    "deck": "ID490"
+  },
+  "byEnglish": {
+    "roof": [
+      "ID241"
+    ],
+    "lady": [
+      "ID242"
+    ],
+    "thanks": [
+      "ID243"
+    ],
+    "thumb": [
+      "ID244"
+    ],
+    "blanket": [
+      "ID245"
+    ],
+    "Germany": [
+      "ID246"
+    ],
+    "Tuesday": [
+      "ID247"
+    ],
+    "thing": [
+      "ID248"
+    ],
+    "director": [
+      "ID249"
+    ],
+    "Thursday": [
+      "ID250"
+    ],
+    "village": [
+      "ID251"
+    ],
+    "can": [
+      "ID252"
+    ],
+    "shower": [
+      "ID253"
+    ],
+    "lid": [
+      "ID336",
+      "ID368",
+      "ID459"
+    ],
+    "democracy": [
+      "ID337",
+      "ID369",
+      "ID460"
+    ],
+    "monument": [
+      "ID338",
+      "ID370",
+      "ID461"
+    ],
+    "detail": [
+      "ID339",
+      "ID371",
+      "ID462"
+    ],
+    "December": [
+      "ID340",
+      "ID372",
+      "ID463"
+    ],
+    "dialect": [
+      "ID341",
+      "ID373",
+      "ID464"
+    ],
+    "diamond": [
+      "ID342",
+      "ID374",
+      "ID465"
+    ],
+    "poet": [
+      "ID343",
+      "ID375",
+      "ID466"
+    ],
+    "thief": [
+      "ID344",
+      "ID376",
+      "ID467"
+    ],
+    "service": [
+      "ID345",
+      "ID346",
+      "ID377",
+      "ID378",
+      "ID468",
+      "ID469"
+    ],
+    "diploma": [
+      "ID347",
+      "ID379",
+      "ID470"
+    ],
+    "discussion": [
+      "ID348",
+      "ID380",
+      "ID471"
+    ],
+    "document": [
+      "ID349",
+      "ID381",
+      "ID472"
+    ],
+    "dollar": [
+      "ID350",
+      "ID382",
+      "ID473"
+    ],
+    "cathedral": [
+      "ID351",
+      "ID383",
+      "ID474"
+    ],
+    "thunder": [
+      "ID352",
+      "ID384",
+      "ID475"
+    ],
+    "double": [
+      "ID353",
+      "ID385",
+      "ID476"
+    ],
+    "drama": [
+      "ID354",
+      "ID386",
+      "ID477"
+    ],
+    "drug": [
+      "ID355",
+      "ID387",
+      "ID478"
+    ],
+    "pressure": [
+      "ID356",
+      "ID388",
+      "ID479"
+    ],
+    "printer": [
+      "ID357",
+      "ID389",
+      "ID480"
+    ],
+    "jungle": [
+      "ID358",
+      "ID390",
+      "ID481"
+    ],
+    "scent": [
+      "ID359",
+      "ID391",
+      "ID482"
+    ],
+    "darkness": [
+      "ID360",
+      "ID392",
+      "ID483"
+    ],
+    "thirst": [
+      "ID361",
+      "ID393",
+      "ID484"
+    ],
+    "DVD": [
+      "ID362",
+      "ID394",
+      "ID485"
+    ],
+    "steam": [
+      "ID363",
+      "ID395",
+      "ID486"
+    ],
+    "file": [
+      "ID364",
+      "ID396",
+      "ID487"
+    ],
+    "date": [
+      "ID365",
+      "ID397",
+      "ID488"
+    ],
+    "duration": [
+      "ID366",
+      "ID398",
+      "ID489"
+    ],
+    "deck": [
+      "ID367",
+      "ID399",
+      "ID490"
+    ]
+  },
+  "byVietnamese": {
+    "mái nhà": [
+      "ID241"
+    ],
+    "quý bà": [
+      "ID242"
+    ],
+    "lời cảm ơn": [
+      "ID243"
+    ],
+    "ngón tay cái": [
+      "ID244"
+    ],
+    "chăn": [
+      "ID245"
+    ],
+    "nước Đức": [
+      "ID246"
+    ],
+    "thứ ba": [
+      "ID247"
+    ],
+    "vật": [
+      "ID248"
+    ],
+    "giám đốc": [
+      "ID249"
+    ],
+    "thứ năm": [
+      "ID250"
+    ],
+    "làng": [
+      "ID251"
+    ],
+    "hộp": [
+      "ID252"
+    ],
+    "vòi sen": [
+      "ID253"
+    ],
+    "nắp": [
+      "ID336",
+      "ID368",
+      "ID459"
+    ],
+    "dân chủ": [
+      "ID337",
+      "ID369",
+      "ID460"
+    ],
+    "đài tưởng niệm": [
+      "ID338",
+      "ID370",
+      "ID461"
+    ],
+    "chi tiết": [
+      "ID339",
+      "ID371",
+      "ID462"
+    ],
+    "tháng Mười Hai": [
+      "ID340",
+      "ID372",
+      "ID463"
+    ],
+    "phương ngữ": [
+      "ID341",
+      "ID373",
+      "ID464"
+    ],
+    "kim cương": [
+      "ID342",
+      "ID374",
+      "ID465"
+    ],
+    "nhà thơ": [
+      "ID343",
+      "ID375",
+      "ID466"
+    ],
+    "kẻ trộm": [
+      "ID344",
+      "ID376",
+      "ID467"
+    ],
+    "dịch vụ": [
+      "ID345",
+      "ID346",
+      "ID377",
+      "ID378",
+      "ID468",
+      "ID469"
+    ],
+    "bằng cấp": [
+      "ID347",
+      "ID379",
+      "ID470"
+    ],
+    "thảo luận": [
+      "ID348",
+      "ID380",
+      "ID471"
+    ],
+    "tài liệu": [
+      "ID349",
+      "ID381",
+      "ID472"
+    ],
+    "đô la": [
+      "ID350",
+      "ID382",
+      "ID473"
+    ],
+    "nhà thờ lớn": [
+      "ID351",
+      "ID383",
+      "ID474"
+    ],
+    "sấm": [
+      "ID352",
+      "ID384",
+      "ID475"
+    ],
+    "đôi": [
+      "ID353",
+      "ID385",
+      "ID476"
+    ],
+    "kịch": [
+      "ID354",
+      "ID386",
+      "ID477"
+    ],
+    "ma túy": [
+      "ID355",
+      "ID387",
+      "ID478"
+    ],
+    "áp lực": [
+      "ID356",
+      "ID388",
+      "ID479"
+    ],
+    "máy in": [
+      "ID357",
+      "ID389",
+      "ID480"
+    ],
+    "rừng rậm": [
+      "ID358",
+      "ID390",
+      "ID481"
+    ],
+    "hương thơm": [
+      "ID359",
+      "ID391",
+      "ID482"
+    ],
+    "bóng tối": [
+      "ID360",
+      "ID392",
+      "ID483"
+    ],
+    "khát": [
+      "ID361",
+      "ID393",
+      "ID484"
+    ],
+    "đĩa DVD": [
+      "ID362",
+      "ID394",
+      "ID485"
+    ],
+    "hơi nước": [
+      "ID363",
+      "ID395",
+      "ID486"
+    ],
+    "tệp tin": [
+      "ID364",
+      "ID396",
+      "ID487"
+    ],
+    "ngày tháng": [
+      "ID365",
+      "ID397",
+      "ID488"
+    ],
+    "thời gian": [
+      "ID366",
+      "ID398",
+      "ID489"
+    ],
+    "boong tàu": [
+      "ID367",
+      "ID399",
+      "ID490"
+    ]
+  },
+  "byArtikel": {
+    "der": [
+      "ID243",
+      "ID244",
+      "ID247",
+      "ID249",
+      "ID250",
+      "ID336",
+      "ID340",
+      "ID341",
+      "ID342",
+      "ID343",
+      "ID344",
+      "ID345",
+      "ID350",
+      "ID351",
+      "ID352",
+      "ID356",
+      "ID357",
+      "ID358",
+      "ID359",
+      "ID361",
+      "ID363",
+      "ID368",
+      "ID372",
+      "ID373",
+      "ID374",
+      "ID375",
+      "ID376",
+      "ID377",
+      "ID382",
+      "ID383",
+      "ID384",
+      "ID388",
+      "ID389",
+      "ID390",
+      "ID391",
+      "ID393",
+      "ID395",
+      "ID459",
+      "ID463",
+      "ID464",
+      "ID465",
+      "ID466",
+      "ID467",
+      "ID468",
+      "ID473",
+      "ID474",
+      "ID475",
+      "ID479",
+      "ID480",
+      "ID481",
+      "ID482",
+      "ID484",
+      "ID486"
+    ],
+    "die": [
+      "ID242",
+      "ID245",
+      "ID252",
+      "ID253",
+      "ID337",
+      "ID346",
+      "ID348",
+      "ID355",
+      "ID360",
+      "ID362",
+      "ID364",
+      "ID366",
+      "ID369",
+      "ID378",
+      "ID380",
+      "ID387",
+      "ID392",
+      "ID394",
+      "ID396",
+      "ID398",
+      "ID460",
+      "ID469",
+      "ID471",
+      "ID478",
+      "ID483",
+      "ID485",
+      "ID487",
+      "ID489"
+    ],
+    "das": [
+      "ID241",
+      "ID246",
+      "ID248",
+      "ID251",
+      "ID338",
+      "ID339",
+      "ID347",
+      "ID349",
+      "ID353",
+      "ID354",
+      "ID365",
+      "ID367",
+      "ID370",
+      "ID371",
+      "ID379",
+      "ID381",
+      "ID385",
+      "ID386",
+      "ID397",
+      "ID399",
+      "ID461",
+      "ID462",
+      "ID470",
+      "ID472",
+      "ID476",
+      "ID477",
+      "ID488",
+      "ID490"
+    ]
+  },
+  "entries": {
+    "ID241": {
+      "word": "Dach",
+      "artikel": "das",
+      "plural": "Dächer",
+      "english": "roof",
+      "vietnamese": "mái nhà",
+      "definition_en": "The covering of a building.",
+      "definition_vi": "Phần che phủ của tòa nhà.",
+      "examples": [
+        {
+          "de": "Das Dach ist rot.",
+          "en": "The roof is red.",
+          "vi": "Mái nhà màu đỏ."
+        }
+      ]
+    },
+    "ID242": {
+      "word": "Dame",
+      "artikel": "die",
+      "plural": "Damen",
+      "english": "lady",
+      "vietnamese": "quý bà",
+      "definition_en": "A polite term for a woman.",
+      "definition_vi": "Cách gọi lịch sự cho phụ nữ.",
+      "examples": [
+        {
+          "de": "Die Dame ist elegant.",
+          "en": "The lady is elegant.",
+          "vi": "Quý bà thanh lịch."
+        }
+      ]
+    },
+    "ID243": {
+      "word": "Dank",
+      "artikel": "der",
+      "plural": "Danke",
+      "english": "thanks",
+      "vietnamese": "lời cảm ơn",
+      "definition_en": "Expression of gratitude.",
+      "definition_vi": "Biểu hiện lòng biết ơn.",
+      "examples": [
+        {
+          "de": "Vielen Dank!",
+          "en": "Many thanks!",
+          "vi": "Cảm ơn rất nhiều!"
+        }
+      ]
+    },
+    "ID244": {
+      "word": "Daumen",
+      "artikel": "der",
+      "plural": "Daumen",
+      "english": "thumb",
+      "vietnamese": "ngón tay cái",
+      "definition_en": "The short thick first digit of the hand.",
+      "definition_vi": "Ngón tay thứ nhất ngắn và dày của bàn tay.",
+      "examples": [
+        {
+          "de": "Der Daumen tut weh.",
+          "en": "The thumb hurts.",
+          "vi": "Ngón tay cái đau."
+        }
+      ]
+    },
+    "ID245": {
+      "word": "Decke",
+      "artikel": "die",
+      "plural": "Decken",
+      "english": "blanket",
+      "vietnamese": "chăn",
+      "definition_en": "A covering for warmth.",
+      "definition_vi": "Tấm phủ để giữ ấm.",
+      "examples": [
+        {
+          "de": "Die Decke ist warm.",
+          "en": "The blanket is warm.",
+          "vi": "Cái chăn ấm."
+        }
+      ]
+    },
+    "ID246": {
+      "word": "Deutschland",
+      "artikel": "das",
+      "plural": "Deutschland",
+      "english": "Germany",
+      "vietnamese": "nước Đức",
+      "definition_en": "A country in central Europe.",
+      "definition_vi": "Một quốc gia ở Trung Âu.",
+      "examples": [
+        {
+          "de": "Deutschland ist schön.",
+          "en": "Germany is beautiful.",
+          "vi": "Nước Đức đẹp."
+        }
+      ]
+    },
+    "ID247": {
+      "word": "Dienstag",
+      "artikel": "der",
+      "plural": "Dienstage",
+      "english": "Tuesday",
+      "vietnamese": "thứ ba",
+      "definition_en": "The third day of the week.",
+      "definition_vi": "Ngày thứ ba trong tuần.",
+      "examples": [
+        {
+          "de": "Heute ist Dienstag.",
+          "en": "Today is Tuesday.",
+          "vi": "Hôm nay là thứ ba."
+        }
+      ]
+    },
+    "ID248": {
+      "word": "Ding",
+      "artikel": "das",
+      "plural": "Dinge",
+      "english": "thing",
+      "vietnamese": "vật",
+      "definition_en": "An object or item.",
+      "definition_vi": "Một đồ vật hoặc món đồ.",
+      "examples": [
+        {
+          "de": "Das Ding ist interessant.",
+          "en": "The thing is interesting.",
+          "vi": "Cái vật thú vị."
+        }
+      ]
+    },
+    "ID249": {
+      "word": "Direktor",
+      "artikel": "der",
+      "plural": "Direktoren",
+      "english": "director",
+      "vietnamese": "giám đốc",
+      "definition_en": "A person in charge of an organization.",
+      "definition_vi": "Người phụ trách một tổ chức.",
+      "examples": [
+        {
+          "de": "Der Direktor ist streng.",
+          "en": "The director is strict.",
+          "vi": "Giám đốc nghiêm khắc."
+        }
+      ]
+    },
+    "ID250": {
+      "word": "Donnerstag",
+      "artikel": "der",
+      "plural": "Donnerstage",
+      "english": "Thursday",
+      "vietnamese": "thứ năm",
+      "definition_en": "The fifth day of the week.",
+      "definition_vi": "Ngày thứ năm trong tuần.",
+      "examples": [
+        {
+          "de": "Am Donnerstag habe ich frei.",
+          "en": "On Thursday I am free.",
+          "vi": "Thứ năm tôi rảnh."
+        }
+      ]
+    },
+    "ID251": {
+      "word": "Dorf",
+      "artikel": "das",
+      "plural": "Dörfer",
+      "english": "village",
+      "vietnamese": "làng",
+      "definition_en": "A small community in a rural area.",
+      "definition_vi": "Một cộng đồng nhỏ ở vùng nông thôn.",
+      "examples": [
+        {
+          "de": "Das Dorf ist klein.",
+          "en": "The village is small.",
+          "vi": "Ngôi làng nhỏ."
+        }
+      ]
+    },
+    "ID252": {
+      "word": "Dose",
+      "artikel": "die",
+      "plural": "Dosen",
+      "english": "can",
+      "vietnamese": "hộp",
+      "definition_en": "A metal container.",
+      "definition_vi": "Một hộp kim loại.",
+      "examples": [
+        {
+          "de": "Die Dose ist leer.",
+          "en": "The can is empty.",
+          "vi": "Cái hộp rỗng."
+        }
+      ]
+    },
+    "ID253": {
+      "word": "Dusche",
+      "artikel": "die",
+      "plural": "Duschen",
+      "english": "shower",
+      "vietnamese": "vòi sen",
+      "definition_en": "A device for washing the body.",
+      "definition_vi": "Thiết bị để tắm rửa cơ thể.",
+      "examples": [
+        {
+          "de": "Die Dusche ist heiß.",
+          "en": "The shower is hot.",
+          "vi": "Vòi sen nóng."
+        }
+      ]
+    },
+    "ID336": {
+      "word": "Deckel",
+      "artikel": "der",
+      "plural": "Deckel",
+      "english": "lid",
+      "vietnamese": "nắp",
+      "definition_en": "A cover for a container.",
+      "definition_vi": "Nắp đậy cho hộp đựng.",
+      "examples": [
+        {
+          "de": "Der Deckel ist fest.",
+          "en": "The lid is tight.",
+          "vi": "Nắp chặt."
+        }
+      ]
+    },
+    "ID337": {
+      "word": "Demokratie",
+      "artikel": "die",
+      "plural": "Demokratien",
+      "english": "democracy",
+      "vietnamese": "dân chủ",
+      "definition_en": "A system of government by the whole population.",
+      "definition_vi": "Hệ thống chính phủ của toàn dân.",
+      "examples": [
+        {
+          "de": "Die Demokratie ist wichtig.",
+          "en": "Democracy is important.",
+          "vi": "Dân chủ quan trọng."
+        }
+      ]
+    },
+    "ID338": {
+      "word": "Denkmal",
+      "artikel": "das",
+      "plural": "Denkmäler",
+      "english": "monument",
+      "vietnamese": "đài tưởng niệm",
+      "definition_en": "A structure erected to commemorate.",
+      "definition_vi": "Công trình tưởng niệm.",
+      "examples": [
+        {
+          "de": "Das Denkmal ist alt.",
+          "en": "The monument is old.",
+          "vi": "Đài tưởng niệm cũ."
+        }
+      ]
+    },
+    "ID339": {
+      "word": "Detail",
+      "artikel": "das",
+      "plural": "Details",
+      "english": "detail",
+      "vietnamese": "chi tiết",
+      "definition_en": "A small individual fact or item.",
+      "definition_vi": "Một sự kiện hoặc mục nhỏ riêng lẻ.",
+      "examples": [
+        {
+          "de": "Das Detail ist wichtig.",
+          "en": "The detail is important.",
+          "vi": "Chi tiết quan trọng."
+        }
+      ]
+    },
+    "ID340": {
+      "word": "Dezember",
+      "artikel": "der",
+      "plural": "-",
+      "english": "December",
+      "vietnamese": "tháng Mười Hai",
+      "definition_en": "The twelfth month of the year.",
+      "definition_vi": "Tháng thứ mười hai trong năm.",
+      "examples": [
+        {
+          "de": "Im Dezember ist Weihnachten.",
+          "en": "Christmas is in December.",
+          "vi": "Giáng sinh vào tháng Mười Hai."
+        }
+      ]
+    },
+    "ID341": {
+      "word": "Dialekt",
+      "artikel": "der",
+      "plural": "Dialekte",
+      "english": "dialect",
+      "vietnamese": "phương ngữ",
+      "definition_en": "A particular form of a language.",
+      "definition_vi": "Một dạng đặc biệt của ngôn ngữ.",
+      "examples": [
+        {
+          "de": "Der Dialekt ist interessant.",
+          "en": "The dialect is interesting.",
+          "vi": "Phương ngữ thú vị."
+        }
+      ]
+    },
+    "ID342": {
+      "word": "Diamant",
+      "artikel": "der",
+      "plural": "Diamanten",
+      "english": "diamond",
+      "vietnamese": "kim cương",
+      "definition_en": "A precious stone.",
+      "definition_vi": "Đá quý.",
+      "examples": [
+        {
+          "de": "Der Diamant glänzt.",
+          "en": "The diamond shines.",
+          "vi": "Kim cương lấp lánh."
+        }
+      ]
+    },
+    "ID343": {
+      "word": "Dichter",
+      "artikel": "der",
+      "plural": "Dichter",
+      "english": "poet",
+      "vietnamese": "nhà thơ",
+      "definition_en": "A person who writes poems.",
+      "definition_vi": "Người viết thơ.",
+      "examples": [
+        {
+          "de": "Der Dichter ist berühmt.",
+          "en": "The poet is famous.",
+          "vi": "Nhà thơ nổi tiếng."
+        }
+      ]
+    },
+    "ID344": {
+      "word": "Dieb",
+      "artikel": "der",
+      "plural": "Diebe",
+      "english": "thief",
+      "vietnamese": "kẻ trộm",
+      "definition_en": "A person who steals.",
+      "definition_vi": "Người ăn trộm.",
+      "examples": [
+        {
+          "de": "Der Dieb wurde gefasst.",
+          "en": "The thief was caught.",
+          "vi": "Kẻ trộm bị bắt."
+        }
+      ]
+    },
+    "ID345": {
+      "word": "Dienst",
+      "artikel": "der",
+      "plural": "Dienste",
+      "english": "service",
+      "vietnamese": "dịch vụ",
+      "definition_en": "Work done for others.",
+      "definition_vi": "Công việc được thực hiện cho người khác.",
+      "examples": [
+        {
+          "de": "Der Dienst ist gut.",
+          "en": "The service is good.",
+          "vi": "Dịch vụ tốt."
+        }
+      ]
+    },
+    "ID346": {
+      "word": "Dienstleistung",
+      "artikel": "die",
+      "plural": "Dienstleistungen",
+      "english": "service",
+      "vietnamese": "dịch vụ",
+      "definition_en": "An act of helpful activity.",
+      "definition_vi": "Một hành động hữu ích.",
+      "examples": [
+        {
+          "de": "Die Dienstleistung ist teuer.",
+          "en": "The service is expensive.",
+          "vi": "Dịch vụ đắt."
+        }
+      ]
+    },
+    "ID347": {
+      "word": "Diplom",
+      "artikel": "das",
+      "plural": "Diplome",
+      "english": "diploma",
+      "vietnamese": "bằng cấp",
+      "definition_en": "A certificate of completion.",
+      "definition_vi": "Giấy chứng nhận hoàn thành.",
+      "examples": [
+        {
+          "de": "Das Diplom ist wichtig.",
+          "en": "The diploma is important.",
+          "vi": "Bằng cấp quan trọng."
+        }
+      ]
+    },
+    "ID348": {
+      "word": "Diskussion",
+      "artikel": "die",
+      "plural": "Diskussionen",
+      "english": "discussion",
+      "vietnamese": "thảo luận",
+      "definition_en": "A conversation about a topic.",
+      "definition_vi": "Cuộc trò chuyện về một chủ đề.",
+      "examples": [
+        {
+          "de": "Die Diskussion ist lang.",
+          "en": "The discussion is long.",
+          "vi": "Cuộc thảo luận dài."
+        }
+      ]
+    },
+    "ID349": {
+      "word": "Dokument",
+      "artikel": "das",
+      "plural": "Dokumente",
+      "english": "document",
+      "vietnamese": "tài liệu",
+      "definition_en": "A piece of written information.",
+      "definition_vi": "Một mảnh thông tin bằng văn bản.",
+      "examples": [
+        {
+          "de": "Das Dokument ist offiziell.",
+          "en": "The document is official.",
+          "vi": "Tài liệu chính thức."
+        }
+      ]
+    },
+    "ID350": {
+      "word": "Dollar",
+      "artikel": "der",
+      "plural": "Dollar",
+      "english": "dollar",
+      "vietnamese": "đô la",
+      "definition_en": "The currency of the USA.",
+      "definition_vi": "Tiền tệ của Mỹ.",
+      "examples": [
+        {
+          "de": "Der Dollar ist stark.",
+          "en": "The dollar is strong.",
+          "vi": "Đô la mạnh."
+        }
+      ]
+    },
+    "ID351": {
+      "word": "Dom",
+      "artikel": "der",
+      "plural": "Dome",
+      "english": "cathedral",
+      "vietnamese": "nhà thờ lớn",
+      "definition_en": "A large important church.",
+      "definition_vi": "Một nhà thờ lớn quan trọng.",
+      "examples": [
+        {
+          "de": "Der Dom ist schön.",
+          "en": "The cathedral is beautiful.",
+          "vi": "Nhà thờ lớn đẹp."
+        }
+      ]
+    },
+    "ID352": {
+      "word": "Donner",
+      "artikel": "der",
+      "plural": "-",
+      "english": "thunder",
+      "vietnamese": "sấm",
+      "definition_en": "The sound from lightning.",
+      "definition_vi": "Âm thanh từ sấm sét.",
+      "examples": [
+        {
+          "de": "Der Donner ist laut.",
+          "en": "The thunder is loud.",
+          "vi": "Sấm to."
+        }
+      ]
+    },
+    "ID353": {
+      "word": "Doppel",
+      "artikel": "das",
+      "plural": "Doppel",
+      "english": "double",
+      "vietnamese": "đôi",
+      "definition_en": "Something consisting of two parts.",
+      "definition_vi": "Cái gì đó gồm hai phần.",
+      "examples": [
+        {
+          "de": "Das Doppel gewinnt.",
+          "en": "The double wins.",
+          "vi": "Đôi thắng."
+        }
+      ]
+    },
+    "ID354": {
+      "word": "Drama",
+      "artikel": "das",
+      "plural": "Dramen",
+      "english": "drama",
+      "vietnamese": "kịch",
+      "definition_en": "A play for theater or television.",
+      "definition_vi": "Vở kịch cho nhà hát hoặc truyền hình.",
+      "examples": [
+        {
+          "de": "Das Drama ist spannend.",
+          "en": "The drama is exciting.",
+          "vi": "Vở kịch hấp dẫn."
+        }
+      ]
+    },
+    "ID355": {
+      "word": "Droge",
+      "artikel": "die",
+      "plural": "Drogen",
+      "english": "drug",
+      "vietnamese": "ma túy",
+      "definition_en": "An illegal substance.",
+      "definition_vi": "Chất bất hợp pháp.",
+      "examples": [
+        {
+          "de": "Drogen sind gefährlich.",
+          "en": "Drugs are dangerous.",
+          "vi": "Ma túy nguy hiểm."
+        }
+      ]
+    },
+    "ID356": {
+      "word": "Druck",
+      "artikel": "der",
+      "plural": "Drücke",
+      "english": "pressure",
+      "vietnamese": "áp lực",
+      "definition_en": "Force applied to something.",
+      "definition_vi": "Lực tác động lên cái gì đó.",
+      "examples": [
+        {
+          "de": "Der Druck ist hoch.",
+          "en": "The pressure is high.",
+          "vi": "Áp lực cao."
+        }
+      ]
+    },
+    "ID357": {
+      "word": "Drucker",
+      "artikel": "der",
+      "plural": "Drucker",
+      "english": "printer",
+      "vietnamese": "máy in",
+      "definition_en": "A machine that prints.",
+      "definition_vi": "Máy in.",
+      "examples": [
+        {
+          "de": "Der Drucker funktioniert.",
+          "en": "The printer works.",
+          "vi": "Máy in hoạt động."
+        }
+      ]
+    },
+    "ID358": {
+      "word": "Dschungel",
+      "artikel": "der",
+      "plural": "Dschungel",
+      "english": "jungle",
+      "vietnamese": "rừng rậm",
+      "definition_en": "Dense tropical forest.",
+      "definition_vi": "Rừng nhiệt đới rậm rạp.",
+      "examples": [
+        {
+          "de": "Der Dschungel ist grün.",
+          "en": "The jungle is green.",
+          "vi": "Rừng rậm xanh."
+        }
+      ]
+    },
+    "ID359": {
+      "word": "Duft",
+      "artikel": "der",
+      "plural": "Düfte",
+      "english": "scent",
+      "vietnamese": "hương thơm",
+      "definition_en": "A pleasant smell.",
+      "definition_vi": "Mùi thơm dễ chịu.",
+      "examples": [
+        {
+          "de": "Der Duft ist angenehm.",
+          "en": "The scent is pleasant.",
+          "vi": "Hương thơm dễ chịu."
+        }
+      ]
+    },
+    "ID360": {
+      "word": "Dunkelheit",
+      "artikel": "die",
+      "plural": "-",
+      "english": "darkness",
+      "vietnamese": "bóng tối",
+      "definition_en": "The absence of light.",
+      "definition_vi": "Sự vắng mặt của ánh sáng.",
+      "examples": [
+        {
+          "de": "Die Dunkelheit ist gruselig.",
+          "en": "The darkness is scary.",
+          "vi": "Bóng tối đáng sợ."
+        }
+      ]
+    },
+    "ID361": {
+      "word": "Durst",
+      "artikel": "der",
+      "plural": "-",
+      "english": "thirst",
+      "vietnamese": "khát",
+      "definition_en": "The feeling of needing to drink.",
+      "definition_vi": "Cảm giác cần uống.",
+      "examples": [
+        {
+          "de": "Der Durst ist groß.",
+          "en": "The thirst is great.",
+          "vi": "Khát nhiều."
+        }
+      ]
+    },
+    "ID362": {
+      "word": "DVD",
+      "artikel": "die",
+      "plural": "DVDs",
+      "english": "DVD",
+      "vietnamese": "đĩa DVD",
+      "definition_en": "Digital video disc.",
+      "definition_vi": "Đĩa video kỹ thuật số.",
+      "examples": [
+        {
+          "de": "Die DVD ist neu.",
+          "en": "The DVD is new.",
+          "vi": "Đĩa DVD mới."
+        }
+      ]
+    },
+    "ID363": {
+      "word": "Dampf",
+      "artikel": "der",
+      "plural": "Dämpfe",
+      "english": "steam",
+      "vietnamese": "hơi nước",
+      "definition_en": "Water vapor.",
+      "definition_vi": "Hơi nước.",
+      "examples": [
+        {
+          "de": "Der Dampf steigt auf.",
+          "en": "The steam rises.",
+          "vi": "Hơi nước bốc lên."
+        }
+      ]
+    },
+    "ID364": {
+      "word": "Datei",
+      "artikel": "die",
+      "plural": "Dateien",
+      "english": "file",
+      "vietnamese": "tệp tin",
+      "definition_en": "A computer file.",
+      "definition_vi": "Tệp tin máy tính.",
+      "examples": [
+        {
+          "de": "Die Datei ist groß.",
+          "en": "The file is large.",
+          "vi": "Tệp tin lớn."
+        }
+      ]
+    },
+    "ID365": {
+      "word": "Datum",
+      "artikel": "das",
+      "plural": "Daten",
+      "english": "date",
+      "vietnamese": "ngày tháng",
+      "definition_en": "A day of the year.",
+      "definition_vi": "Một ngày trong năm.",
+      "examples": [
+        {
+          "de": "Das Datum ist wichtig.",
+          "en": "The date is important.",
+          "vi": "Ngày tháng quan trọng."
+        }
+      ]
+    },
+    "ID366": {
+      "word": "Dauer",
+      "artikel": "die",
+      "plural": "-",
+      "english": "duration",
+      "vietnamese": "thời gian",
+      "definition_en": "The time something lasts.",
+      "definition_vi": "Thời gian cái gì đó kéo dài.",
+      "examples": [
+        {
+          "de": "Die Dauer ist kurz.",
+          "en": "The duration is short.",
+          "vi": "Thời gian ngắn."
+        }
+      ]
+    },
+    "ID367": {
+      "word": "Deck",
+      "artikel": "das",
+      "plural": "Decks",
+      "english": "deck",
+      "vietnamese": "boong tàu",
+      "definition_en": "A platform on a ship.",
+      "definition_vi": "Sàn trên tàu.",
+      "examples": [
+        {
+          "de": "Das Deck ist nass.",
+          "en": "The deck is wet.",
+          "vi": "Boong tàu ướt."
+        }
+      ]
+    },
+    "ID368": {
+      "word": "Deckel",
+      "artikel": "der",
+      "plural": "Deckel",
+      "english": "lid",
+      "vietnamese": "nắp",
+      "definition_en": "A cover for a container.",
+      "definition_vi": "Nắp đậy cho hộp đựng.",
+      "examples": [
+        {
+          "de": "Der Deckel ist fest.",
+          "en": "The lid is tight.",
+          "vi": "Nắp chặt."
+        }
+      ]
+    },
+    "ID369": {
+      "word": "Demokratie",
+      "artikel": "die",
+      "plural": "Demokratien",
+      "english": "democracy",
+      "vietnamese": "dân chủ",
+      "definition_en": "A system of government by the whole population.",
+      "definition_vi": "Hệ thống chính phủ của toàn dân.",
+      "examples": [
+        {
+          "de": "Die Demokratie ist wichtig.",
+          "en": "Democracy is important.",
+          "vi": "Dân chủ quan trọng."
+        }
+      ]
+    },
+    "ID370": {
+      "word": "Denkmal",
+      "artikel": "das",
+      "plural": "Denkmäler",
+      "english": "monument",
+      "vietnamese": "đài tưởng niệm",
+      "definition_en": "A structure erected to commemorate.",
+      "definition_vi": "Công trình tưởng niệm.",
+      "examples": [
+        {
+          "de": "Das Denkmal ist alt.",
+          "en": "The monument is old.",
+          "vi": "Đài tưởng niệm cũ."
+        }
+      ]
+    },
+    "ID371": {
+      "word": "Detail",
+      "artikel": "das",
+      "plural": "Details",
+      "english": "detail",
+      "vietnamese": "chi tiết",
+      "definition_en": "A small individual fact or item.",
+      "definition_vi": "Một sự kiện hoặc mục nhỏ riêng lẻ.",
+      "examples": [
+        {
+          "de": "Das Detail ist wichtig.",
+          "en": "The detail is important.",
+          "vi": "Chi tiết quan trọng."
+        }
+      ]
+    },
+    "ID372": {
+      "word": "Dezember",
+      "artikel": "der",
+      "plural": "-",
+      "english": "December",
+      "vietnamese": "tháng Mười Hai",
+      "definition_en": "The twelfth month of the year.",
+      "definition_vi": "Tháng thứ mười hai trong năm.",
+      "examples": [
+        {
+          "de": "Im Dezember ist Weihnachten.",
+          "en": "Christmas is in December.",
+          "vi": "Giáng sinh vào tháng Mười Hai."
+        }
+      ]
+    },
+    "ID373": {
+      "word": "Dialekt",
+      "artikel": "der",
+      "plural": "Dialekte",
+      "english": "dialect",
+      "vietnamese": "phương ngữ",
+      "definition_en": "A particular form of a language.",
+      "definition_vi": "Một dạng đặc biệt của ngôn ngữ.",
+      "examples": [
+        {
+          "de": "Der Dialekt ist interessant.",
+          "en": "The dialect is interesting.",
+          "vi": "Phương ngữ thú vị."
+        }
+      ]
+    },
+    "ID374": {
+      "word": "Diamant",
+      "artikel": "der",
+      "plural": "Diamanten",
+      "english": "diamond",
+      "vietnamese": "kim cương",
+      "definition_en": "A precious stone.",
+      "definition_vi": "Đá quý.",
+      "examples": [
+        {
+          "de": "Der Diamant glänzt.",
+          "en": "The diamond shines.",
+          "vi": "Kim cương lấp lánh."
+        }
+      ]
+    },
+    "ID375": {
+      "word": "Dichter",
+      "artikel": "der",
+      "plural": "Dichter",
+      "english": "poet",
+      "vietnamese": "nhà thơ",
+      "definition_en": "A person who writes poems.",
+      "definition_vi": "Người viết thơ.",
+      "examples": [
+        {
+          "de": "Der Dichter ist berühmt.",
+          "en": "The poet is famous.",
+          "vi": "Nhà thơ nổi tiếng."
+        }
+      ]
+    },
+    "ID376": {
+      "word": "Dieb",
+      "artikel": "der",
+      "plural": "Diebe",
+      "english": "thief",
+      "vietnamese": "kẻ trộm",
+      "definition_en": "A person who steals.",
+      "definition_vi": "Người ăn trộm.",
+      "examples": [
+        {
+          "de": "Der Dieb wurde gefasst.",
+          "en": "The thief was caught.",
+          "vi": "Kẻ trộm bị bắt."
+        }
+      ]
+    },
+    "ID377": {
+      "word": "Dienst",
+      "artikel": "der",
+      "plural": "Dienste",
+      "english": "service",
+      "vietnamese": "dịch vụ",
+      "definition_en": "Work done for others.",
+      "definition_vi": "Công việc được thực hiện cho người khác.",
+      "examples": [
+        {
+          "de": "Der Dienst ist gut.",
+          "en": "The service is good.",
+          "vi": "Dịch vụ tốt."
+        }
+      ]
+    },
+    "ID378": {
+      "word": "Dienstleistung",
+      "artikel": "die",
+      "plural": "Dienstleistungen",
+      "english": "service",
+      "vietnamese": "dịch vụ",
+      "definition_en": "An act of helpful activity.",
+      "definition_vi": "Một hành động hữu ích.",
+      "examples": [
+        {
+          "de": "Die Dienstleistung ist teuer.",
+          "en": "The service is expensive.",
+          "vi": "Dịch vụ đắt."
+        }
+      ]
+    },
+    "ID379": {
+      "word": "Diplom",
+      "artikel": "das",
+      "plural": "Diplome",
+      "english": "diploma",
+      "vietnamese": "bằng cấp",
+      "definition_en": "A certificate of completion.",
+      "definition_vi": "Giấy chứng nhận hoàn thành.",
+      "examples": [
+        {
+          "de": "Das Diplom ist wichtig.",
+          "en": "The diploma is important.",
+          "vi": "Bằng cấp quan trọng."
+        }
+      ]
+    },
+    "ID380": {
+      "word": "Diskussion",
+      "artikel": "die",
+      "plural": "Diskussionen",
+      "english": "discussion",
+      "vietnamese": "thảo luận",
+      "definition_en": "A conversation about a topic.",
+      "definition_vi": "Cuộc trò chuyện về một chủ đề.",
+      "examples": [
+        {
+          "de": "Die Diskussion ist lang.",
+          "en": "The discussion is long.",
+          "vi": "Cuộc thảo luận dài."
+        }
+      ]
+    },
+    "ID381": {
+      "word": "Dokument",
+      "artikel": "das",
+      "plural": "Dokumente",
+      "english": "document",
+      "vietnamese": "tài liệu",
+      "definition_en": "A piece of written information.",
+      "definition_vi": "Một mảnh thông tin bằng văn bản.",
+      "examples": [
+        {
+          "de": "Das Dokument ist offiziell.",
+          "en": "The document is official.",
+          "vi": "Tài liệu chính thức."
+        }
+      ]
+    },
+    "ID382": {
+      "word": "Dollar",
+      "artikel": "der",
+      "plural": "Dollar",
+      "english": "dollar",
+      "vietnamese": "đô la",
+      "definition_en": "The currency of the USA.",
+      "definition_vi": "Tiền tệ của Mỹ.",
+      "examples": [
+        {
+          "de": "Der Dollar ist stark.",
+          "en": "The dollar is strong.",
+          "vi": "Đô la mạnh."
+        }
+      ]
+    },
+    "ID383": {
+      "word": "Dom",
+      "artikel": "der",
+      "plural": "Dome",
+      "english": "cathedral",
+      "vietnamese": "nhà thờ lớn",
+      "definition_en": "A large important church.",
+      "definition_vi": "Một nhà thờ lớn quan trọng.",
+      "examples": [
+        {
+          "de": "Der Dom ist schön.",
+          "en": "The cathedral is beautiful.",
+          "vi": "Nhà thờ lớn đẹp."
+        }
+      ]
+    },
+    "ID384": {
+      "word": "Donner",
+      "artikel": "der",
+      "plural": "-",
+      "english": "thunder",
+      "vietnamese": "sấm",
+      "definition_en": "The sound from lightning.",
+      "definition_vi": "Âm thanh từ sấm sét.",
+      "examples": [
+        {
+          "de": "Der Donner ist laut.",
+          "en": "The thunder is loud.",
+          "vi": "Sấm to."
+        }
+      ]
+    },
+    "ID385": {
+      "word": "Doppel",
+      "artikel": "das",
+      "plural": "Doppel",
+      "english": "double",
+      "vietnamese": "đôi",
+      "definition_en": "Something consisting of two parts.",
+      "definition_vi": "Cái gì đó gồm hai phần.",
+      "examples": [
+        {
+          "de": "Das Doppel gewinnt.",
+          "en": "The double wins.",
+          "vi": "Đôi thắng."
+        }
+      ]
+    },
+    "ID386": {
+      "word": "Drama",
+      "artikel": "das",
+      "plural": "Dramen",
+      "english": "drama",
+      "vietnamese": "kịch",
+      "definition_en": "A play for theater or television.",
+      "definition_vi": "Vở kịch cho nhà hát hoặc truyền hình.",
+      "examples": [
+        {
+          "de": "Das Drama ist spannend.",
+          "en": "The drama is exciting.",
+          "vi": "Vở kịch hấp dẫn."
+        }
+      ]
+    },
+    "ID387": {
+      "word": "Droge",
+      "artikel": "die",
+      "plural": "Drogen",
+      "english": "drug",
+      "vietnamese": "ma túy",
+      "definition_en": "An illegal substance.",
+      "definition_vi": "Chất bất hợp pháp.",
+      "examples": [
+        {
+          "de": "Drogen sind gefährlich.",
+          "en": "Drugs are dangerous.",
+          "vi": "Ma túy nguy hiểm."
+        }
+      ]
+    },
+    "ID388": {
+      "word": "Druck",
+      "artikel": "der",
+      "plural": "Drücke",
+      "english": "pressure",
+      "vietnamese": "áp lực",
+      "definition_en": "Force applied to something.",
+      "definition_vi": "Lực tác động lên cái gì đó.",
+      "examples": [
+        {
+          "de": "Der Druck ist hoch.",
+          "en": "The pressure is high.",
+          "vi": "Áp lực cao."
+        }
+      ]
+    },
+    "ID389": {
+      "word": "Drucker",
+      "artikel": "der",
+      "plural": "Drucker",
+      "english": "printer",
+      "vietnamese": "máy in",
+      "definition_en": "A machine that prints.",
+      "definition_vi": "Máy in.",
+      "examples": [
+        {
+          "de": "Der Drucker funktioniert.",
+          "en": "The printer works.",
+          "vi": "Máy in hoạt động."
+        }
+      ]
+    },
+    "ID390": {
+      "word": "Dschungel",
+      "artikel": "der",
+      "plural": "Dschungel",
+      "english": "jungle",
+      "vietnamese": "rừng rậm",
+      "definition_en": "Dense tropical forest.",
+      "definition_vi": "Rừng nhiệt đới rậm rạp.",
+      "examples": [
+        {
+          "de": "Der Dschungel ist grün.",
+          "en": "The jungle is green.",
+          "vi": "Rừng rậm xanh."
+        }
+      ]
+    },
+    "ID391": {
+      "word": "Duft",
+      "artikel": "der",
+      "plural": "Düfte",
+      "english": "scent",
+      "vietnamese": "hương thơm",
+      "definition_en": "A pleasant smell.",
+      "definition_vi": "Mùi thơm dễ chịu.",
+      "examples": [
+        {
+          "de": "Der Duft ist angenehm.",
+          "en": "The scent is pleasant.",
+          "vi": "Hương thơm dễ chịu."
+        }
+      ]
+    },
+    "ID392": {
+      "word": "Dunkelheit",
+      "artikel": "die",
+      "plural": "-",
+      "english": "darkness",
+      "vietnamese": "bóng tối",
+      "definition_en": "The absence of light.",
+      "definition_vi": "Sự vắng mặt của ánh sáng.",
+      "examples": [
+        {
+          "de": "Die Dunkelheit ist gruselig.",
+          "en": "The darkness is scary.",
+          "vi": "Bóng tối đáng sợ."
+        }
+      ]
+    },
+    "ID393": {
+      "word": "Durst",
+      "artikel": "der",
+      "plural": "-",
+      "english": "thirst",
+      "vietnamese": "khát",
+      "definition_en": "The feeling of needing to drink.",
+      "definition_vi": "Cảm giác cần uống.",
+      "examples": [
+        {
+          "de": "Der Durst ist groß.",
+          "en": "The thirst is great.",
+          "vi": "Khát nhiều."
+        }
+      ]
+    },
+    "ID394": {
+      "word": "DVD",
+      "artikel": "die",
+      "plural": "DVDs",
+      "english": "DVD",
+      "vietnamese": "đĩa DVD",
+      "definition_en": "Digital video disc.",
+      "definition_vi": "Đĩa video kỹ thuật số.",
+      "examples": [
+        {
+          "de": "Die DVD ist neu.",
+          "en": "The DVD is new.",
+          "vi": "Đĩa DVD mới."
+        }
+      ]
+    },
+    "ID395": {
+      "word": "Dampf",
+      "artikel": "der",
+      "plural": "Dämpfe",
+      "english": "steam",
+      "vietnamese": "hơi nước",
+      "definition_en": "Water vapor.",
+      "definition_vi": "Hơi nước.",
+      "examples": [
+        {
+          "de": "Der Dampf steigt auf.",
+          "en": "The steam rises.",
+          "vi": "Hơi nước bốc lên."
+        }
+      ]
+    },
+    "ID396": {
+      "word": "Datei",
+      "artikel": "die",
+      "plural": "Dateien",
+      "english": "file",
+      "vietnamese": "tệp tin",
+      "definition_en": "A computer file.",
+      "definition_vi": "Tệp tin máy tính.",
+      "examples": [
+        {
+          "de": "Die Datei ist groß.",
+          "en": "The file is large.",
+          "vi": "Tệp tin lớn."
+        }
+      ]
+    },
+    "ID397": {
+      "word": "Datum",
+      "artikel": "das",
+      "plural": "Daten",
+      "english": "date",
+      "vietnamese": "ngày tháng",
+      "definition_en": "A day of the year.",
+      "definition_vi": "Một ngày trong năm.",
+      "examples": [
+        {
+          "de": "Das Datum ist wichtig.",
+          "en": "The date is important.",
+          "vi": "Ngày tháng quan trọng."
+        }
+      ]
+    },
+    "ID398": {
+      "word": "Dauer",
+      "artikel": "die",
+      "plural": "-",
+      "english": "duration",
+      "vietnamese": "thời gian",
+      "definition_en": "The time something lasts.",
+      "definition_vi": "Thời gian cái gì đó kéo dài.",
+      "examples": [
+        {
+          "de": "Die Dauer ist kurz.",
+          "en": "The duration is short.",
+          "vi": "Thời gian ngắn."
+        }
+      ]
+    },
+    "ID399": {
+      "word": "Deck",
+      "artikel": "das",
+      "plural": "Decks",
+      "english": "deck",
+      "vietnamese": "boong tàu",
+      "definition_en": "A platform on a ship.",
+      "definition_vi": "Sàn trên tàu.",
+      "examples": [
+        {
+          "de": "Das Deck ist nass.",
+          "en": "The deck is wet.",
+          "vi": "Boong tàu ướt."
+        }
+      ]
+    },
+    "ID459": {
+      "word": "Deckel",
+      "artikel": "der",
+      "plural": "Deckel",
+      "english": "lid",
+      "vietnamese": "nắp",
+      "definition_en": "A cover for a container.",
+      "definition_vi": "Nắp đậy cho hộp đựng.",
+      "examples": [
+        {
+          "de": "Der Deckel ist fest.",
+          "en": "The lid is tight.",
+          "vi": "Nắp chặt."
+        }
+      ]
+    },
+    "ID460": {
+      "word": "Demokratie",
+      "artikel": "die",
+      "plural": "Demokratien",
+      "english": "democracy",
+      "vietnamese": "dân chủ",
+      "definition_en": "A system of government by the whole population.",
+      "definition_vi": "Hệ thống chính phủ của toàn dân.",
+      "examples": [
+        {
+          "de": "Die Demokratie ist wichtig.",
+          "en": "Democracy is important.",
+          "vi": "Dân chủ quan trọng."
+        }
+      ]
+    },
+    "ID461": {
+      "word": "Denkmal",
+      "artikel": "das",
+      "plural": "Denkmäler",
+      "english": "monument",
+      "vietnamese": "đài tưởng niệm",
+      "definition_en": "A structure erected to commemorate.",
+      "definition_vi": "Công trình tưởng niệm.",
+      "examples": [
+        {
+          "de": "Das Denkmal ist alt.",
+          "en": "The monument is old.",
+          "vi": "Đài tưởng niệm cũ."
+        }
+      ]
+    },
+    "ID462": {
+      "word": "Detail",
+      "artikel": "das",
+      "plural": "Details",
+      "english": "detail",
+      "vietnamese": "chi tiết",
+      "definition_en": "A small individual fact or item.",
+      "definition_vi": "Một sự kiện hoặc mục nhỏ riêng lẻ.",
+      "examples": [
+        {
+          "de": "Das Detail ist wichtig.",
+          "en": "The detail is important.",
+          "vi": "Chi tiết quan trọng."
+        }
+      ]
+    },
+    "ID463": {
+      "word": "Dezember",
+      "artikel": "der",
+      "plural": "-",
+      "english": "December",
+      "vietnamese": "tháng Mười Hai",
+      "definition_en": "The twelfth month of the year.",
+      "definition_vi": "Tháng thứ mười hai trong năm.",
+      "examples": [
+        {
+          "de": "Im Dezember ist Weihnachten.",
+          "en": "Christmas is in December.",
+          "vi": "Giáng sinh vào tháng Mười Hai."
+        }
+      ]
+    },
+    "ID464": {
+      "word": "Dialekt",
+      "artikel": "der",
+      "plural": "Dialekte",
+      "english": "dialect",
+      "vietnamese": "phương ngữ",
+      "definition_en": "A particular form of a language.",
+      "definition_vi": "Một dạng đặc biệt của ngôn ngữ.",
+      "examples": [
+        {
+          "de": "Der Dialekt ist interessant.",
+          "en": "The dialect is interesting.",
+          "vi": "Phương ngữ thú vị."
+        }
+      ]
+    },
+    "ID465": {
+      "word": "Diamant",
+      "artikel": "der",
+      "plural": "Diamanten",
+      "english": "diamond",
+      "vietnamese": "kim cương",
+      "definition_en": "A precious stone.",
+      "definition_vi": "Đá quý.",
+      "examples": [
+        {
+          "de": "Der Diamant glänzt.",
+          "en": "The diamond shines.",
+          "vi": "Kim cương lấp lánh."
+        }
+      ]
+    },
+    "ID466": {
+      "word": "Dichter",
+      "artikel": "der",
+      "plural": "Dichter",
+      "english": "poet",
+      "vietnamese": "nhà thơ",
+      "definition_en": "A person who writes poems.",
+      "definition_vi": "Người viết thơ.",
+      "examples": [
+        {
+          "de": "Der Dichter ist berühmt.",
+          "en": "The poet is famous.",
+          "vi": "Nhà thơ nổi tiếng."
+        }
+      ]
+    },
+    "ID467": {
+      "word": "Dieb",
+      "artikel": "der",
+      "plural": "Diebe",
+      "english": "thief",
+      "vietnamese": "kẻ trộm",
+      "definition_en": "A person who steals.",
+      "definition_vi": "Người ăn trộm.",
+      "examples": [
+        {
+          "de": "Der Dieb wurde gefasst.",
+          "en": "The thief was caught.",
+          "vi": "Kẻ trộm bị bắt."
+        }
+      ]
+    },
+    "ID468": {
+      "word": "Dienst",
+      "artikel": "der",
+      "plural": "Dienste",
+      "english": "service",
+      "vietnamese": "dịch vụ",
+      "definition_en": "Work done for others.",
+      "definition_vi": "Công việc được thực hiện cho người khác.",
+      "examples": [
+        {
+          "de": "Der Dienst ist gut.",
+          "en": "The service is good.",
+          "vi": "Dịch vụ tốt."
+        }
+      ]
+    },
+    "ID469": {
+      "word": "Dienstleistung",
+      "artikel": "die",
+      "plural": "Dienstleistungen",
+      "english": "service",
+      "vietnamese": "dịch vụ",
+      "definition_en": "An act of helpful activity.",
+      "definition_vi": "Một hành động hữu ích.",
+      "examples": [
+        {
+          "de": "Die Dienstleistung ist teuer.",
+          "en": "The service is expensive.",
+          "vi": "Dịch vụ đắt."
+        }
+      ]
+    },
+    "ID470": {
+      "word": "Diplom",
+      "artikel": "das",
+      "plural": "Diplome",
+      "english": "diploma",
+      "vietnamese": "bằng cấp",
+      "definition_en": "A certificate of completion.",
+      "definition_vi": "Giấy chứng nhận hoàn thành.",
+      "examples": [
+        {
+          "de": "Das Diplom ist wichtig.",
+          "en": "The diploma is important.",
+          "vi": "Bằng cấp quan trọng."
+        }
+      ]
+    },
+    "ID471": {
+      "word": "Diskussion",
+      "artikel": "die",
+      "plural": "Diskussionen",
+      "english": "discussion",
+      "vietnamese": "thảo luận",
+      "definition_en": "A conversation about a topic.",
+      "definition_vi": "Cuộc trò chuyện về một chủ đề.",
+      "examples": [
+        {
+          "de": "Die Diskussion ist lang.",
+          "en": "The discussion is long.",
+          "vi": "Cuộc thảo luận dài."
+        }
+      ]
+    },
+    "ID472": {
+      "word": "Dokument",
+      "artikel": "das",
+      "plural": "Dokumente",
+      "english": "document",
+      "vietnamese": "tài liệu",
+      "definition_en": "A piece of written information.",
+      "definition_vi": "Một mảnh thông tin bằng văn bản.",
+      "examples": [
+        {
+          "de": "Das Dokument ist offiziell.",
+          "en": "The document is official.",
+          "vi": "Tài liệu chính thức."
+        }
+      ]
+    },
+    "ID473": {
+      "word": "Dollar",
+      "artikel": "der",
+      "plural": "Dollar",
+      "english": "dollar",
+      "vietnamese": "đô la",
+      "definition_en": "The currency of the USA.",
+      "definition_vi": "Tiền tệ của Mỹ.",
+      "examples": [
+        {
+          "de": "Der Dollar ist stark.",
+          "en": "The dollar is strong.",
+          "vi": "Đô la mạnh."
+        }
+      ]
+    },
+    "ID474": {
+      "word": "Dom",
+      "artikel": "der",
+      "plural": "Dome",
+      "english": "cathedral",
+      "vietnamese": "nhà thờ lớn",
+      "definition_en": "A large important church.",
+      "definition_vi": "Một nhà thờ lớn quan trọng.",
+      "examples": [
+        {
+          "de": "Der Dom ist schön.",
+          "en": "The cathedral is beautiful.",
+          "vi": "Nhà thờ lớn đẹp."
+        }
+      ]
+    },
+    "ID475": {
+      "word": "Donner",
+      "artikel": "der",
+      "plural": "-",
+      "english": "thunder",
+      "vietnamese": "sấm",
+      "definition_en": "The sound from lightning.",
+      "definition_vi": "Âm thanh từ sấm sét.",
+      "examples": [
+        {
+          "de": "Der Donner ist laut.",
+          "en": "The thunder is loud.",
+          "vi": "Sấm to."
+        }
+      ]
+    },
+    "ID476": {
+      "word": "Doppel",
+      "artikel": "das",
+      "plural": "Doppel",
+      "english": "double",
+      "vietnamese": "đôi",
+      "definition_en": "Something consisting of two parts.",
+      "definition_vi": "Cái gì đó gồm hai phần.",
+      "examples": [
+        {
+          "de": "Das Doppel gewinnt.",
+          "en": "The double wins.",
+          "vi": "Đôi thắng."
+        }
+      ]
+    },
+    "ID477": {
+      "word": "Drama",
+      "artikel": "das",
+      "plural": "Dramen",
+      "english": "drama",
+      "vietnamese": "kịch",
+      "definition_en": "A play for theater or television.",
+      "definition_vi": "Vở kịch cho nhà hát hoặc truyền hình.",
+      "examples": [
+        {
+          "de": "Das Drama ist spannend.",
+          "en": "The drama is exciting.",
+          "vi": "Vở kịch hấp dẫn."
+        }
+      ]
+    },
+    "ID478": {
+      "word": "Droge",
+      "artikel": "die",
+      "plural": "Drogen",
+      "english": "drug",
+      "vietnamese": "ma túy",
+      "definition_en": "An illegal substance.",
+      "definition_vi": "Chất bất hợp pháp.",
+      "examples": [
+        {
+          "de": "Drogen sind gefährlich.",
+          "en": "Drugs are dangerous.",
+          "vi": "Ma túy nguy hiểm."
+        }
+      ]
+    },
+    "ID479": {
+      "word": "Druck",
+      "artikel": "der",
+      "plural": "Drücke",
+      "english": "pressure",
+      "vietnamese": "áp lực",
+      "definition_en": "Force applied to something.",
+      "definition_vi": "Lực tác động lên cái gì đó.",
+      "examples": [
+        {
+          "de": "Der Druck ist hoch.",
+          "en": "The pressure is high.",
+          "vi": "Áp lực cao."
+        }
+      ]
+    },
+    "ID480": {
+      "word": "Drucker",
+      "artikel": "der",
+      "plural": "Drucker",
+      "english": "printer",
+      "vietnamese": "máy in",
+      "definition_en": "A machine that prints.",
+      "definition_vi": "Máy in.",
+      "examples": [
+        {
+          "de": "Der Drucker funktioniert.",
+          "en": "The printer works.",
+          "vi": "Máy in hoạt động."
+        }
+      ]
+    },
+    "ID481": {
+      "word": "Dschungel",
+      "artikel": "der",
+      "plural": "Dschungel",
+      "english": "jungle",
+      "vietnamese": "rừng rậm",
+      "definition_en": "Dense tropical forest.",
+      "definition_vi": "Rừng nhiệt đới rậm rạp.",
+      "examples": [
+        {
+          "de": "Der Dschungel ist grün.",
+          "en": "The jungle is green.",
+          "vi": "Rừng rậm xanh."
+        }
+      ]
+    },
+    "ID482": {
+      "word": "Duft",
+      "artikel": "der",
+      "plural": "Düfte",
+      "english": "scent",
+      "vietnamese": "hương thơm",
+      "definition_en": "A pleasant smell.",
+      "definition_vi": "Mùi thơm dễ chịu.",
+      "examples": [
+        {
+          "de": "Der Duft ist angenehm.",
+          "en": "The scent is pleasant.",
+          "vi": "Hương thơm dễ chịu."
+        }
+      ]
+    },
+    "ID483": {
+      "word": "Dunkelheit",
+      "artikel": "die",
+      "plural": "-",
+      "english": "darkness",
+      "vietnamese": "bóng tối",
+      "definition_en": "The absence of light.",
+      "definition_vi": "Sự vắng mặt của ánh sáng.",
+      "examples": [
+        {
+          "de": "Die Dunkelheit ist gruselig.",
+          "en": "The darkness is scary.",
+          "vi": "Bóng tối đáng sợ."
+        }
+      ]
+    },
+    "ID484": {
+      "word": "Durst",
+      "artikel": "der",
+      "plural": "-",
+      "english": "thirst",
+      "vietnamese": "khát",
+      "definition_en": "The feeling of needing to drink.",
+      "definition_vi": "Cảm giác cần uống.",
+      "examples": [
+        {
+          "de": "Der Durst ist groß.",
+          "en": "The thirst is great.",
+          "vi": "Khát nhiều."
+        }
+      ]
+    },
+    "ID485": {
+      "word": "DVD",
+      "artikel": "die",
+      "plural": "DVDs",
+      "english": "DVD",
+      "vietnamese": "đĩa DVD",
+      "definition_en": "Digital video disc.",
+      "definition_vi": "Đĩa video kỹ thuật số.",
+      "examples": [
+        {
+          "de": "Die DVD ist neu.",
+          "en": "The DVD is new.",
+          "vi": "Đĩa DVD mới."
+        }
+      ]
+    },
+    "ID486": {
+      "word": "Dampf",
+      "artikel": "der",
+      "plural": "Dämpfe",
+      "english": "steam",
+      "vietnamese": "hơi nước",
+      "definition_en": "Water vapor.",
+      "definition_vi": "Hơi nước.",
+      "examples": [
+        {
+          "de": "Der Dampf steigt auf.",
+          "en": "The steam rises.",
+          "vi": "Hơi nước bốc lên."
+        }
+      ]
+    },
+    "ID487": {
+      "word": "Datei",
+      "artikel": "die",
+      "plural": "Dateien",
+      "english": "file",
+      "vietnamese": "tệp tin",
+      "definition_en": "A computer file.",
+      "definition_vi": "Tệp tin máy tính.",
+      "examples": [
+        {
+          "de": "Die Datei ist groß.",
+          "en": "The file is large.",
+          "vi": "Tệp tin lớn."
+        }
+      ]
+    },
+    "ID488": {
+      "word": "Datum",
+      "artikel": "das",
+      "plural": "Daten",
+      "english": "date",
+      "vietnamese": "ngày tháng",
+      "definition_en": "A day of the year.",
+      "definition_vi": "Một ngày trong năm.",
+      "examples": [
+        {
+          "de": "Das Datum ist wichtig.",
+          "en": "The date is important.",
+          "vi": "Ngày tháng quan trọng."
+        }
+      ]
+    },
+    "ID489": {
+      "word": "Dauer",
+      "artikel": "die",
+      "plural": "-",
+      "english": "duration",
+      "vietnamese": "thời gian",
+      "definition_en": "The time something lasts.",
+      "definition_vi": "Thời gian cái gì đó kéo dài.",
+      "examples": [
+        {
+          "de": "Die Dauer ist kurz.",
+          "en": "The duration is short.",
+          "vi": "Thời gian ngắn."
+        }
+      ]
+    },
+    "ID490": {
+      "word": "Deck",
+      "artikel": "das",
+      "plural": "Decks",
+      "english": "deck",
+      "vietnamese": "boong tàu",
+      "definition_en": "A platform on a ship.",
+      "definition_vi": "Sàn trên tàu.",
+      "examples": [
+        {
+          "de": "Das Deck ist nass.",
+          "en": "The deck is wet.",
+          "vi": "Boong tàu ướt."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,775 @@
+{
+  "byWord": {
+    "vater": "ID041",
+    "bruder": "ID042",
+    "schwester": "ID043",
+    "sohn": "ID044",
+    "tochter": "ID045",
+    "großmutter": "ID046",
+    "großvater": "ID047",
+    "baby": "ID048",
+    "kopf": "ID049",
+    "auge": "ID050",
+    "ohr": "ID051",
+    "nase": "ID052",
+    "mund": "ID053",
+    "zahn": "ID054",
+    "fuß": "ID055",
+    "bein": "ID056",
+    "arm": "ID057",
+    "finger": "ID058",
+    "herz": "ID059",
+    "körper": "ID060",
+    "essen": "ID061",
+    "trinken": "ID062",
+    "fleisch": "ID063",
+    "fisch": "ID064",
+    "gemüse": "ID065",
+    "obst": "ID066",
+    "salat": "ID067",
+    "suppe": "ID068",
+    "käse": "ID069",
+    "butter": "ID070",
+    "zucker": "ID071",
+    "salz": "ID072",
+    "reis": "ID073",
+    "nudel": "ID074",
+    "kuchen": "ID075",
+    "schokolade": "ID076",
+    "eis": "ID077",
+    "saft": "ID078",
+    "bier": "ID079",
+    "wein": "ID080"
+  },
+  "byEnglish": {
+    "father": ["ID041"],
+    "brother": ["ID042"],
+    "sister": ["ID043"],
+    "son": ["ID044"],
+    "daughter": ["ID045"],
+    "grandmother": ["ID046"],
+    "grandfather": ["ID047"],
+    "baby": ["ID048"],
+    "head": ["ID049"],
+    "eye": ["ID050"],
+    "ear": ["ID051"],
+    "nose": ["ID052"],
+    "mouth": ["ID053"],
+    "tooth": ["ID054"],
+    "foot": ["ID055"],
+    "leg": ["ID056"],
+    "arm": ["ID057"],
+    "finger": ["ID058"],
+    "heart": ["ID059"],
+    "body": ["ID060"],
+    "food": ["ID061"],
+    "drink": ["ID062"],
+    "meat": ["ID063"],
+    "fish": ["ID064"],
+    "vegetable": ["ID065"],
+    "fruit": ["ID066"],
+    "salad": ["ID067"],
+    "soup": ["ID068"],
+    "cheese": ["ID069"],
+    "butter": ["ID070"],
+    "sugar": ["ID071"],
+    "salt": ["ID072"],
+    "rice": ["ID073"],
+    "noodle": ["ID074"],
+    "cake": ["ID075"],
+    "chocolate": ["ID076"],
+    "ice cream": ["ID077"],
+    "juice": ["ID078"],
+    "beer": ["ID079"],
+    "wine": ["ID080"]
+  },
+  "byVietnamese": {
+    "cha": ["ID041"],
+    "anh trai": ["ID042"],
+    "chị gái": ["ID043"],
+    "con trai": ["ID044"],
+    "con gái": ["ID045"],
+    "bà": ["ID046"],
+    "ông": ["ID047"],
+    "em bé": ["ID048"],
+    "đầu": ["ID049"],
+    "mắt": ["ID050"],
+    "tai": ["ID051"],
+    "mũi": ["ID052"],
+    "miệng": ["ID053"],
+    "răng": ["ID054"],
+    "bàn chân": ["ID055"],
+    "chân": ["ID056"],
+    "cánh tay": ["ID057"],
+    "ngón tay": ["ID058"],
+    "trái tim": ["ID059"],
+    "cơ thể": ["ID060"],
+    "thức ăn": ["ID061"],
+    "đồ uống": ["ID062"],
+    "thịt": ["ID063"],
+    "cá": ["ID064"],
+    "rau": ["ID065"],
+    "trái cây": ["ID066"],
+    "salad": ["ID067"],
+    "súp": ["ID068"],
+    "phô mai": ["ID069"],
+    "bơ": ["ID070"],
+    "đường": ["ID071"],
+    "muối": ["ID072"],
+    "gạo": ["ID073"],
+    "mì": ["ID074"],
+    "bánh ngọt": ["ID075"],
+    "sô-cô-la": ["ID076"],
+    "kem": ["ID077"],
+    "nước trái cây": ["ID078"],
+    "bia": ["ID079"],
+    "rượu vang": ["ID080"]
+  },
+  "byArtikel": {
+    "der": ["ID041", "ID042", "ID044", "ID047", "ID049", "ID053", "ID054", "ID055", "ID057", "ID058", "ID060", "ID064", "ID067", "ID069", "ID071", "ID073", "ID075", "ID078", "ID079", "ID080"],
+    "die": ["ID043", "ID045", "ID046", "ID052", "ID068", "ID070", "ID074", "ID076"],
+    "das": ["ID048", "ID050", "ID051", "ID056", "ID059", "ID061", "ID062", "ID063", "ID065", "ID066", "ID072", "ID077"]
+  },
+  "entries": {
+    "ID041": {
+      "word": "Vater",
+      "artikel": "der",
+      "plural": "Väter",
+      "english": "father",
+      "vietnamese": "cha",
+      "definition_en": "A male parent.",
+      "definition_vi": "Cha mẹ nam.",
+      "examples": [
+        {
+          "de": "Mein Vater arbeitet viel.",
+          "en": "My father works a lot.",
+          "vi": "Cha tôi làm việc nhiều."
+        }
+      ]
+    },
+    "ID042": {
+      "word": "Bruder",
+      "artikel": "der",
+      "plural": "Brüder",
+      "english": "brother",
+      "vietnamese": "anh trai",
+      "definition_en": "A male sibling.",
+      "definition_vi": "Anh em trai nam.",
+      "examples": [
+        {
+          "de": "Mein Bruder spielt Fußball.",
+          "en": "My brother plays soccer.",
+          "vi": "Anh trai tôi chơi bóng đá."
+        }
+      ]
+    },
+    "ID043": {
+      "word": "Schwester",
+      "artikel": "die",
+      "plural": "Schwestern",
+      "english": "sister",
+      "vietnamese": "chị gái",
+      "definition_en": "A female sibling.",
+      "definition_vi": "Chị em gái nữ.",
+      "examples": [
+        {
+          "de": "Meine Schwester ist älter als ich.",
+          "en": "My sister is older than me.",
+          "vi": "Chị gái tôi lớn tuổi hơn tôi."
+        }
+      ]
+    },
+    "ID044": {
+      "word": "Sohn",
+      "artikel": "der",
+      "plural": "Söhne",
+      "english": "son",
+      "vietnamese": "con trai",
+      "definition_en": "A male child.",
+      "definition_vi": "Con trai.",
+      "examples": [
+        {
+          "de": "Ihr Sohn ist fünf Jahre alt.",
+          "en": "Her son is five years old.",
+          "vi": "Con trai cô ấy năm tuổi."
+        }
+      ]
+    },
+    "ID045": {
+      "word": "Tochter",
+      "artikel": "die",
+      "plural": "Töchter",
+      "english": "daughter",
+      "vietnamese": "con gái",
+      "definition_en": "A female child.",
+      "definition_vi": "Con gái.",
+      "examples": [
+        {
+          "de": "Seine Tochter geht zur Schule.",
+          "en": "His daughter goes to school.",
+          "vi": "Con gái anh ấy đi học."
+        }
+      ]
+    },
+    "ID046": {
+      "word": "Großmutter",
+      "artikel": "die",
+      "plural": "Großmütter",
+      "english": "grandmother",
+      "vietnamese": "bà",
+      "definition_en": "The mother of one's parent.",
+      "definition_vi": "Mẹ của cha hoặc mẹ.",
+      "examples": [
+        {
+          "de": "Meine Großmutter kocht gern.",
+          "en": "My grandmother likes to cook.",
+          "vi": "Bà tôi thích nấu ăn."
+        }
+      ]
+    },
+    "ID047": {
+      "word": "Großvater",
+      "artikel": "der",
+      "plural": "Großväter",
+      "english": "grandfather",
+      "vietnamese": "ông",
+      "definition_en": "The father of one's parent.",
+      "definition_vi": "Cha của cha hoặc mẹ.",
+      "examples": [
+        {
+          "de": "Mein Großvater liest die Zeitung.",
+          "en": "My grandfather reads the newspaper.",
+          "vi": "Ông tôi đọc báo."
+        }
+      ]
+    },
+    "ID048": {
+      "word": "Baby",
+      "artikel": "das",
+      "plural": "Babys",
+      "english": "baby",
+      "vietnamese": "em bé",
+      "definition_en": "A very young child.",
+      "definition_vi": "Một đứa trẻ rất nhỏ.",
+      "examples": [
+        {
+          "de": "Das Baby schläft.",
+          "en": "The baby is sleeping.",
+          "vi": "Em bé đang ngủ."
+        }
+      ]
+    },
+    "ID049": {
+      "word": "Kopf",
+      "artikel": "der",
+      "plural": "Köpfe",
+      "english": "head",
+      "vietnamese": "đầu",
+      "definition_en": "The upper part of the human body.",
+      "definition_vi": "Phần trên của cơ thể người.",
+      "examples": [
+        {
+          "de": "Mein Kopf tut weh.",
+          "en": "My head hurts.",
+          "vi": "Đầu tôi đau."
+        }
+      ]
+    },
+    "ID050": {
+      "word": "Auge",
+      "artikel": "das",
+      "plural": "Augen",
+      "english": "eye",
+      "vietnamese": "mắt",
+      "definition_en": "An organ of sight.",
+      "definition_vi": "Cơ quan thị giác.",
+      "examples": [
+        {
+          "de": "Sie hat blaue Augen.",
+          "en": "She has blue eyes.",
+          "vi": "Cô ấy có đôi mắt xanh."
+        }
+      ]
+    },
+    "ID051": {
+      "word": "Ohr",
+      "artikel": "das",
+      "plural": "Ohren",
+      "english": "ear",
+      "vietnamese": "tai",
+      "definition_en": "An organ of hearing.",
+      "definition_vi": "Cơ quan thính giác.",
+      "examples": [
+        {
+          "de": "Ich höre mit meinen Ohren.",
+          "en": "I hear with my ears.",
+          "vi": "Tôi nghe bằng tai."
+        }
+      ]
+    },
+    "ID052": {
+      "word": "Nase",
+      "artikel": "die",
+      "plural": "Nasen",
+      "english": "nose",
+      "vietnamese": "mũi",
+      "definition_en": "The organ for smelling and breathing.",
+      "definition_vi": "Cơ quan để ngửi và thở.",
+      "examples": [
+        {
+          "de": "Die Nase ist rot.",
+          "en": "The nose is red.",
+          "vi": "Cái mũi đỏ."
+        }
+      ]
+    },
+    "ID053": {
+      "word": "Mund",
+      "artikel": "der",
+      "plural": "Münder",
+      "english": "mouth",
+      "vietnamese": "miệng",
+      "definition_en": "The opening for food intake and speech.",
+      "definition_vi": "Lỗ để ăn và nói.",
+      "examples": [
+        {
+          "de": "Er öffnet den Mund.",
+          "en": "He opens his mouth.",
+          "vi": "Anh ấy mở miệng."
+        }
+      ]
+    },
+    "ID054": {
+      "word": "Zahn",
+      "artikel": "der",
+      "plural": "Zähne",
+      "english": "tooth",
+      "vietnamese": "răng",
+      "definition_en": "A hard structure in the mouth for biting.",
+      "definition_vi": "Cấu trúc cứng trong miệng để cắn.",
+      "examples": [
+        {
+          "de": "Ich putze meine Zähne.",
+          "en": "I brush my teeth.",
+          "vi": "Tôi đánh răng."
+        }
+      ]
+    },
+    "ID055": {
+      "word": "Fuß",
+      "artikel": "der",
+      "plural": "Füße",
+      "english": "foot",
+      "vietnamese": "bàn chân",
+      "definition_en": "The lower extremity of the leg.",
+      "definition_vi": "Phần cuối của chân.",
+      "examples": [
+        {
+          "de": "Mein Fuß ist groß.",
+          "en": "My foot is big.",
+          "vi": "Bàn chân tôi lớn."
+        }
+      ]
+    },
+    "ID056": {
+      "word": "Bein",
+      "artikel": "das",
+      "plural": "Beine",
+      "english": "leg",
+      "vietnamese": "chân",
+      "definition_en": "The limb used for walking.",
+      "definition_vi": "Chi dùng để đi.",
+      "examples": [
+        {
+          "de": "Das Bein ist lang.",
+          "en": "The leg is long.",
+          "vi": "Chân thì dài."
+        }
+      ]
+    },
+    "ID057": {
+      "word": "Arm",
+      "artikel": "der",
+      "plural": "Arme",
+      "english": "arm",
+      "vietnamese": "cánh tay",
+      "definition_en": "The upper limb of the body.",
+      "definition_vi": "Chi trên của cơ thể.",
+      "examples": [
+        {
+          "de": "Er hebt den Arm.",
+          "en": "He raises his arm.",
+          "vi": "Anh ấy giơ tay."
+        }
+      ]
+    },
+    "ID058": {
+      "word": "Finger",
+      "artikel": "der",
+      "plural": "Finger",
+      "english": "finger",
+      "vietnamese": "ngón tay",
+      "definition_en": "A digit of the hand.",
+      "definition_vi": "Ngón của bàn tay.",
+      "examples": [
+        {
+          "de": "Ich habe zehn Finger.",
+          "en": "I have ten fingers.",
+          "vi": "Tôi có mười ngón tay."
+        }
+      ]
+    },
+    "ID059": {
+      "word": "Herz",
+      "artikel": "das",
+      "plural": "Herzen",
+      "english": "heart",
+      "vietnamese": "trái tim",
+      "definition_en": "The organ that pumps blood.",
+      "definition_vi": "Cơ quan bơm máu.",
+      "examples": [
+        {
+          "de": "Das Herz schlägt schnell.",
+          "en": "The heart beats fast.",
+          "vi": "Trái tim đập nhanh."
+        }
+      ]
+    },
+    "ID060": {
+      "word": "Körper",
+      "artikel": "der",
+      "plural": "Körper",
+      "english": "body",
+      "vietnamese": "cơ thể",
+      "definition_en": "The physical structure of a person.",
+      "definition_vi": "Cấu trúc vật lý của con người.",
+      "examples": [
+        {
+          "de": "Der Körper ist gesund.",
+          "en": "The body is healthy.",
+          "vi": "Cơ thể khỏe mạnh."
+        }
+      ]
+    },
+    "ID061": {
+      "word": "Essen",
+      "artikel": "das",
+      "plural": "Essen",
+      "english": "food",
+      "vietnamese": "thức ăn",
+      "definition_en": "Any substance consumed for nutrition.",
+      "definition_vi": "Bất kỳ chất nào được tiêu thụ để dinh dưỡng.",
+      "examples": [
+        {
+          "de": "Das Essen schmeckt gut.",
+          "en": "The food tastes good.",
+          "vi": "Thức ăn ngon."
+        }
+      ]
+    },
+    "ID062": {
+      "word": "Trinken",
+      "artikel": "das",
+      "plural": "Getränke",
+      "english": "drink",
+      "vietnamese": "đồ uống",
+      "definition_en": "A liquid for consumption.",
+      "definition_vi": "Chất lỏng để uống.",
+      "examples": [
+        {
+          "de": "Das Trinken ist kalt.",
+          "en": "The drink is cold.",
+          "vi": "Đồ uống lạnh."
+        }
+      ]
+    },
+    "ID063": {
+      "word": "Fleisch",
+      "artikel": "das",
+      "plural": "Fleisch",
+      "english": "meat",
+      "vietnamese": "thịt",
+      "definition_en": "Animal flesh as food.",
+      "definition_vi": "Thịt động vật làm thức ăn.",
+      "examples": [
+        {
+          "de": "Ich esse kein Fleisch.",
+          "en": "I don't eat meat.",
+          "vi": "Tôi không ăn thịt."
+        }
+      ]
+    },
+    "ID064": {
+      "word": "Fisch",
+      "artikel": "der",
+      "plural": "Fische",
+      "english": "fish",
+      "vietnamese": "cá",
+      "definition_en": "An aquatic animal.",
+      "definition_vi": "Động vật sống dưới nước.",
+      "examples": [
+        {
+          "de": "Der Fisch schwimmt im Wasser.",
+          "en": "The fish swims in the water.",
+          "vi": "Con cá bơi trong nước."
+        }
+      ]
+    },
+    "ID065": {
+      "word": "Gemüse",
+      "artikel": "das",
+      "plural": "Gemüse",
+      "english": "vegetable",
+      "vietnamese": "rau",
+      "definition_en": "A plant or part of a plant used as food.",
+      "definition_vi": "Cây hoặc bộ phận của cây làm thức ăn.",
+      "examples": [
+        {
+          "de": "Gemüse ist gesund.",
+          "en": "Vegetables are healthy.",
+          "vi": "Rau rất tốt cho sức khỏe."
+        }
+      ]
+    },
+    "ID066": {
+      "word": "Obst",
+      "artikel": "das",
+      "plural": "Obst",
+      "english": "fruit",
+      "vietnamese": "trái cây",
+      "definition_en": "The sweet product of a plant.",
+      "definition_vi": "Sản phẩm ngọt của cây.",
+      "examples": [
+        {
+          "de": "Ich esse gern Obst.",
+          "en": "I like to eat fruit.",
+          "vi": "Tôi thích ăn trái cây."
+        }
+      ]
+    },
+    "ID067": {
+      "word": "Salat",
+      "artikel": "der",
+      "plural": "Salate",
+      "english": "salad",
+      "vietnamese": "salad",
+      "definition_en": "A cold dish of mixed vegetables.",
+      "definition_vi": "Món ăn lạnh trộn rau.",
+      "examples": [
+        {
+          "de": "Der Salat ist frisch.",
+          "en": "The salad is fresh.",
+          "vi": "Salad tươi."
+        }
+      ]
+    },
+    "ID068": {
+      "word": "Suppe",
+      "artikel": "die",
+      "plural": "Suppen",
+      "english": "soup",
+      "vietnamese": "súp",
+      "definition_en": "A liquid dish with vegetables or meat.",
+      "definition_vi": "Món ăn lỏng với rau hoặc thịt.",
+      "examples": [
+        {
+          "de": "Die Suppe ist heiß.",
+          "en": "The soup is hot.",
+          "vi": "Súp nóng."
+        }
+      ]
+    },
+    "ID069": {
+      "word": "Käse",
+      "artikel": "der",
+      "plural": "Käse",
+      "english": "cheese",
+      "vietnamese": "phô mai",
+      "definition_en": "A dairy product made from milk.",
+      "definition_vi": "Sản phẩm sữa làm từ sữa.",
+      "examples": [
+        {
+          "de": "Der Käse ist lecker.",
+          "en": "The cheese is delicious.",
+          "vi": "Phô mai ngon."
+        }
+      ]
+    },
+    "ID070": {
+      "word": "Butter",
+      "artikel": "die",
+      "plural": "Butter",
+      "english": "butter",
+      "vietnamese": "bơ",
+      "definition_en": "A dairy product made from cream.",
+      "definition_vi": "Sản phẩm sữa làm từ kem.",
+      "examples": [
+        {
+          "de": "Ich esse Brot mit Butter.",
+          "en": "I eat bread with butter.",
+          "vi": "Tôi ăn bánh mì với bơ."
+        }
+      ]
+    },
+    "ID071": {
+      "word": "Zucker",
+      "artikel": "der",
+      "plural": "Zucker",
+      "english": "sugar",
+      "vietnamese": "đường",
+      "definition_en": "A sweet crystalline substance.",
+      "definition_vi": "Chất kết tinh ngọt.",
+      "examples": [
+        {
+          "de": "Der Kaffee braucht Zucker.",
+          "en": "The coffee needs sugar.",
+          "vi": "Cà phê cần đường."
+        }
+      ]
+    },
+    "ID072": {
+      "word": "Salz",
+      "artikel": "das",
+      "plural": "Salze",
+      "english": "salt",
+      "vietnamese": "muối",
+      "definition_en": "A mineral used for seasoning.",
+      "definition_vi": "Khoáng chất dùng để nêm.",
+      "examples": [
+        {
+          "de": "Das Essen braucht Salz.",
+          "en": "The food needs salt.",
+          "vi": "Thức ăn cần muối."
+        }
+      ]
+    },
+    "ID073": {
+      "word": "Reis",
+      "artikel": "der",
+      "plural": "Reis",
+      "english": "rice",
+      "vietnamese": "gạo",
+      "definition_en": "A grain used as food.",
+      "definition_vi": "Hạt làm thức ăn.",
+      "examples": [
+        {
+          "de": "Ich koche Reis.",
+          "en": "I cook rice.",
+          "vi": "Tôi nấu cơm."
+        }
+      ]
+    },
+    "ID074": {
+      "word": "Nudel",
+      "artikel": "die",
+      "plural": "Nudeln",
+      "english": "noodle",
+      "vietnamese": "mì",
+      "definition_en": "A strip of pasta.",
+      "definition_vi": "Dải mì ống.",
+      "examples": [
+        {
+          "de": "Die Nudeln sind fertig.",
+          "en": "The noodles are ready.",
+          "vi": "Mì đã sẵn sàng."
+        }
+      ]
+    },
+    "ID075": {
+      "word": "Kuchen",
+      "artikel": "der",
+      "plural": "Kuchen",
+      "english": "cake",
+      "vietnamese": "bánh ngọt",
+      "definition_en": "A sweet baked dessert.",
+      "definition_vi": "Món tráng miệng nướng ngọt.",
+      "examples": [
+        {
+          "de": "Der Kuchen ist süß.",
+          "en": "The cake is sweet.",
+          "vi": "Bánh ngọt."
+        }
+      ]
+    },
+    "ID076": {
+      "word": "Schokolade",
+      "artikel": "die",
+      "plural": "Schokoladen",
+      "english": "chocolate",
+      "vietnamese": "sô-cô-la",
+      "definition_en": "A sweet food made from cacao.",
+      "definition_vi": "Thực phẩm ngọt làm từ ca cao.",
+      "examples": [
+        {
+          "de": "Die Schokolade schmeckt gut.",
+          "en": "The chocolate tastes good.",
+          "vi": "Sô-cô-la ngon."
+        }
+      ]
+    },
+    "ID077": {
+      "word": "Eis",
+      "artikel": "das",
+      "plural": "Eis",
+      "english": "ice cream",
+      "vietnamese": "kem",
+      "definition_en": "A frozen dessert.",
+      "definition_vi": "Món tráng miệng đông lạnh.",
+      "examples": [
+        {
+          "de": "Das Eis ist kalt.",
+          "en": "The ice cream is cold.",
+          "vi": "Kem lạnh."
+        }
+      ]
+    },
+    "ID078": {
+      "word": "Saft",
+      "artikel": "der",
+      "plural": "Säfte",
+      "english": "juice",
+      "vietnamese": "nước trái cây",
+      "definition_en": "A drink made from fruit.",
+      "definition_vi": "Đồ uống làm từ trái cây.",
+      "examples": [
+        {
+          "de": "Der Saft ist frisch.",
+          "en": "The juice is fresh.",
+          "vi": "Nước trái cây tươi."
+        }
+      ]
+    },
+    "ID079": {
+      "word": "Bier",
+      "artikel": "das",
+      "plural": "Biere",
+      "english": "beer",
+      "vietnamese": "bia",
+      "definition_en": "An alcoholic drink made from grain.",
+      "definition_vi": "Đồ uống có cồn làm từ ngũ cốc.",
+      "examples": [
+        {
+          "de": "Das Bier ist kalt.",
+          "en": "The beer is cold.",
+          "vi": "Bia lạnh."
+        }
+      ]
+    },
+    "ID080": {
+      "word": "Wein",
+      "artikel": "der",
+      "plural": "Weine",
+      "english": "wine",
+      "vietnamese": "rượu vang",
+      "definition_en": "An alcoholic drink made from grapes.",
+      "definition_vi": "Đồ uống có cồn làm từ nho.",
+      "examples": [
+        {
+          "de": "Der Wein ist rot.",
+          "en": "The wine is red.",
+          "vi": "Rượu vang đỏ."
+        }
+      ]
+    }
+  }
+}

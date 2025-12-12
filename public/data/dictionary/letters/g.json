@@ -1,0 +1,1360 @@
+{
+  "byWord": {
+    "garten": "ID020",
+    "großmutter": "ID046",
+    "großvater": "ID047",
+    "gemüse": "ID065",
+    "geld": "ID096",
+    "geschäft": "ID114",
+    "geldbörse": "ID136",
+    "grün": "ID154",
+    "gelb": "ID155",
+    "grau": "ID158",
+    "größe": "ID220",
+    "gruppe": "ID228",
+    "gesetz": "ID233",
+    "gabel": "ID550",
+    "garage": "ID551",
+    "gast": "ID552",
+    "gebäude": "ID553",
+    "gebirge": "ID554",
+    "geburt": "ID555",
+    "gedanke": "ID556",
+    "gedicht": "ID557",
+    "gefahr": "ID558",
+    "gefühl": "ID559",
+    "gegend": "ID560",
+    "gegenteil": "ID561",
+    "geheimnis": "ID562",
+    "gehirn": "ID563",
+    "gemeinde": "ID564",
+    "generation": "ID565",
+    "gepäck": "ID566",
+    "gericht": "ID567",
+    "geruch": "ID568",
+    "geschichte": "ID569",
+    "geschwindigkeit": "ID570",
+    "geschwister": "ID571",
+    "gesellschaft": "ID572",
+    "gespräch": "ID573",
+    "gesundheit": "ID574",
+    "getränk": "ID575",
+    "gewicht": "ID576",
+    "gewitter": "ID577",
+    "gewohnheit": "ID578",
+    "gift": "ID579",
+    "gipfel": "ID580",
+    "glaube": "ID581",
+    "gleis": "ID582",
+    "glocke": "ID583",
+    "gold": "ID584",
+    "gott": "ID585",
+    "grab": "ID586",
+    "grad": "ID587",
+    "grenze": "ID588",
+    "grippe": "ID589",
+    "grund": "ID590",
+    "gruß": "ID591",
+    "gürtel": "ID592"
+  },
+  "byEnglish": {
+    "garden": [
+      "ID020"
+    ],
+    "grandmother": [
+      "ID046"
+    ],
+    "grandfather": [
+      "ID047"
+    ],
+    "vegetable": [
+      "ID065"
+    ],
+    "money": [
+      "ID096"
+    ],
+    "shop": [
+      "ID114"
+    ],
+    "wallet": [
+      "ID136"
+    ],
+    "green": [
+      "ID154"
+    ],
+    "yellow": [
+      "ID155"
+    ],
+    "gray": [
+      "ID158"
+    ],
+    "size": [
+      "ID220"
+    ],
+    "group": [
+      "ID228"
+    ],
+    "law": [
+      "ID233"
+    ],
+    "fork": [
+      "ID550"
+    ],
+    "garage": [
+      "ID551"
+    ],
+    "guest": [
+      "ID552"
+    ],
+    "building": [
+      "ID553"
+    ],
+    "mountain range": [
+      "ID554"
+    ],
+    "birth": [
+      "ID555"
+    ],
+    "thought": [
+      "ID556"
+    ],
+    "poem": [
+      "ID557"
+    ],
+    "danger": [
+      "ID558"
+    ],
+    "feeling": [
+      "ID559"
+    ],
+    "area": [
+      "ID560"
+    ],
+    "opposite": [
+      "ID561"
+    ],
+    "secret": [
+      "ID562"
+    ],
+    "brain": [
+      "ID563"
+    ],
+    "community": [
+      "ID564"
+    ],
+    "generation": [
+      "ID565"
+    ],
+    "luggage": [
+      "ID566"
+    ],
+    "court / dish": [
+      "ID567"
+    ],
+    "smell": [
+      "ID568"
+    ],
+    "story / history": [
+      "ID569"
+    ],
+    "speed": [
+      "ID570"
+    ],
+    "siblings": [
+      "ID571"
+    ],
+    "society": [
+      "ID572"
+    ],
+    "conversation": [
+      "ID573"
+    ],
+    "health": [
+      "ID574"
+    ],
+    "drink": [
+      "ID575"
+    ],
+    "weight": [
+      "ID576"
+    ],
+    "thunderstorm": [
+      "ID577"
+    ],
+    "habit": [
+      "ID578"
+    ],
+    "poison": [
+      "ID579"
+    ],
+    "peak / summit": [
+      "ID580"
+    ],
+    "belief / faith": [
+      "ID581"
+    ],
+    "track / platform": [
+      "ID582"
+    ],
+    "bell": [
+      "ID583"
+    ],
+    "gold": [
+      "ID584"
+    ],
+    "god": [
+      "ID585"
+    ],
+    "grave": [
+      "ID586"
+    ],
+    "degree": [
+      "ID587"
+    ],
+    "border / limit": [
+      "ID588"
+    ],
+    "flu": [
+      "ID589"
+    ],
+    "reason / ground": [
+      "ID590"
+    ],
+    "greeting": [
+      "ID591"
+    ],
+    "belt": [
+      "ID592"
+    ]
+  },
+  "byVietnamese": {
+    "vườn": [
+      "ID020"
+    ],
+    "bà": [
+      "ID046"
+    ],
+    "ông": [
+      "ID047"
+    ],
+    "rau": [
+      "ID065"
+    ],
+    "tiền": [
+      "ID096"
+    ],
+    "cửa hàng": [
+      "ID114"
+    ],
+    "ví tiền": [
+      "ID136"
+    ],
+    "xanh lá": [
+      "ID154"
+    ],
+    "vàng": [
+      "ID155",
+      "ID584"
+    ],
+    "xám": [
+      "ID158"
+    ],
+    "kích thước": [
+      "ID220"
+    ],
+    "nhóm": [
+      "ID228"
+    ],
+    "luật": [
+      "ID233"
+    ],
+    "cái nĩa": [
+      "ID550"
+    ],
+    "nhà để xe": [
+      "ID551"
+    ],
+    "khách": [
+      "ID552"
+    ],
+    "tòa nhà": [
+      "ID553"
+    ],
+    "dãy núi": [
+      "ID554"
+    ],
+    "sự sinh": [
+      "ID555"
+    ],
+    "suy nghĩ": [
+      "ID556"
+    ],
+    "bài thơ": [
+      "ID557"
+    ],
+    "nguy hiểm": [
+      "ID558"
+    ],
+    "cảm giác": [
+      "ID559"
+    ],
+    "vùng": [
+      "ID560"
+    ],
+    "ngược lại": [
+      "ID561"
+    ],
+    "bí mật": [
+      "ID562"
+    ],
+    "não": [
+      "ID563"
+    ],
+    "cộng đồng": [
+      "ID564"
+    ],
+    "thế hệ": [
+      "ID565"
+    ],
+    "hành lý": [
+      "ID566"
+    ],
+    "tòa án / món ăn": [
+      "ID567"
+    ],
+    "mùi": [
+      "ID568"
+    ],
+    "câu chuyện / lịch sử": [
+      "ID569"
+    ],
+    "tốc độ": [
+      "ID570"
+    ],
+    "anh chị em": [
+      "ID571"
+    ],
+    "xã hội": [
+      "ID572"
+    ],
+    "cuộc trò chuyện": [
+      "ID573"
+    ],
+    "sức khỏe": [
+      "ID574"
+    ],
+    "đồ uống": [
+      "ID575"
+    ],
+    "cân nặng": [
+      "ID576"
+    ],
+    "giông bão": [
+      "ID577"
+    ],
+    "thói quen": [
+      "ID578"
+    ],
+    "chất độc": [
+      "ID579"
+    ],
+    "đỉnh": [
+      "ID580"
+    ],
+    "niềm tin": [
+      "ID581"
+    ],
+    "đường ray": [
+      "ID582"
+    ],
+    "chuông": [
+      "ID583"
+    ],
+    "thần": [
+      "ID585"
+    ],
+    "mộ": [
+      "ID586"
+    ],
+    "độ": [
+      "ID587"
+    ],
+    "biên giới": [
+      "ID588"
+    ],
+    "cúm": [
+      "ID589"
+    ],
+    "lý do": [
+      "ID590"
+    ],
+    "lời chào": [
+      "ID591"
+    ],
+    "thắt lưng": [
+      "ID592"
+    ]
+  },
+  "byArtikel": {
+    "der": [
+      "ID020",
+      "ID047",
+      "ID552",
+      "ID556",
+      "ID568",
+      "ID580",
+      "ID581",
+      "ID585",
+      "ID587",
+      "ID590",
+      "ID591",
+      "ID592"
+    ],
+    "die": [
+      "ID046",
+      "ID114",
+      "ID136",
+      "ID220",
+      "ID228",
+      "ID550",
+      "ID551",
+      "ID555",
+      "ID558",
+      "ID560",
+      "ID564",
+      "ID565",
+      "ID569",
+      "ID570",
+      "ID571",
+      "ID572",
+      "ID574",
+      "ID578",
+      "ID583",
+      "ID588",
+      "ID589"
+    ],
+    "das": [
+      "ID065",
+      "ID096",
+      "ID154",
+      "ID155",
+      "ID158",
+      "ID233",
+      "ID553",
+      "ID554",
+      "ID557",
+      "ID559",
+      "ID561",
+      "ID562",
+      "ID563",
+      "ID566",
+      "ID567",
+      "ID573",
+      "ID575",
+      "ID576",
+      "ID577",
+      "ID579",
+      "ID582",
+      "ID584",
+      "ID586"
+    ]
+  },
+  "entries": {
+    "ID020": {
+      "word": "Garten",
+      "artikel": "der",
+      "plural": "Gärten",
+      "english": "garden",
+      "vietnamese": "vườn",
+      "definition_en": "A piece of ground for growing plants.",
+      "definition_vi": "Một mảnh đất để trồng cây.",
+      "examples": [
+        {
+          "de": "Im Garten sind viele Blumen.",
+          "en": "There are many flowers in the garden.",
+          "vi": "Có nhiều hoa trong vườn."
+        }
+      ]
+    },
+    "ID046": {
+      "word": "Großmutter",
+      "artikel": "die",
+      "plural": "Großmütter",
+      "english": "grandmother",
+      "vietnamese": "bà",
+      "definition_en": "The mother of one's parent.",
+      "definition_vi": "Mẹ của cha hoặc mẹ.",
+      "examples": [
+        {
+          "de": "Meine Großmutter kocht gern.",
+          "en": "My grandmother likes to cook.",
+          "vi": "Bà tôi thích nấu ăn."
+        }
+      ]
+    },
+    "ID047": {
+      "word": "Großvater",
+      "artikel": "der",
+      "plural": "Großväter",
+      "english": "grandfather",
+      "vietnamese": "ông",
+      "definition_en": "The father of one's parent.",
+      "definition_vi": "Cha của cha hoặc mẹ.",
+      "examples": [
+        {
+          "de": "Mein Großvater liest die Zeitung.",
+          "en": "My grandfather reads the newspaper.",
+          "vi": "Ông tôi đọc báo."
+        }
+      ]
+    },
+    "ID065": {
+      "word": "Gemüse",
+      "artikel": "das",
+      "plural": "Gemüse",
+      "english": "vegetable",
+      "vietnamese": "rau",
+      "definition_en": "A plant or part of a plant used as food.",
+      "definition_vi": "Cây hoặc bộ phận của cây làm thức ăn.",
+      "examples": [
+        {
+          "de": "Gemüse ist gesund.",
+          "en": "Vegetables are healthy.",
+          "vi": "Rau rất tốt cho sức khỏe."
+        }
+      ]
+    },
+    "ID096": {
+      "word": "Geld",
+      "artikel": "das",
+      "plural": "Gelder",
+      "english": "money",
+      "vietnamese": "tiền",
+      "definition_en": "A medium of exchange.",
+      "definition_vi": "Phương tiện trao đổi.",
+      "examples": [
+        {
+          "de": "Ich habe kein Geld.",
+          "en": "I have no money.",
+          "vi": "Tôi không có tiền."
+        }
+      ]
+    },
+    "ID114": {
+      "word": "Geschäft",
+      "artikel": "das",
+      "plural": "Geschäfte",
+      "english": "shop",
+      "vietnamese": "cửa hàng",
+      "definition_en": "A place where things are sold.",
+      "definition_vi": "Nơi bán đồ.",
+      "examples": [
+        {
+          "de": "Das Geschäft ist geöffnet.",
+          "en": "The shop is open.",
+          "vi": "Cửa hàng đang mở."
+        }
+      ]
+    },
+    "ID136": {
+      "word": "Geldbörse",
+      "artikel": "die",
+      "plural": "Geldbörsen",
+      "english": "wallet",
+      "vietnamese": "ví tiền",
+      "definition_en": "A small container for money.",
+      "definition_vi": "Túi nhỏ đựng tiền.",
+      "examples": [
+        {
+          "de": "Die Geldbörse ist leer.",
+          "en": "The wallet is empty.",
+          "vi": "Ví tiền trống."
+        }
+      ]
+    },
+    "ID154": {
+      "word": "Grün",
+      "artikel": "das",
+      "plural": "Grün",
+      "english": "green",
+      "vietnamese": "xanh lá",
+      "definition_en": "The color of grass.",
+      "definition_vi": "Màu của cỏ.",
+      "examples": [
+        {
+          "de": "Das Grün ist frisch.",
+          "en": "The green is fresh.",
+          "vi": "Màu xanh lá tươi."
+        }
+      ]
+    },
+    "ID155": {
+      "word": "Gelb",
+      "artikel": "das",
+      "plural": "Gelb",
+      "english": "yellow",
+      "vietnamese": "vàng",
+      "definition_en": "The color of the sun.",
+      "definition_vi": "Màu của mặt trời.",
+      "examples": [
+        {
+          "de": "Das Gelb ist hell.",
+          "en": "The yellow is bright.",
+          "vi": "Màu vàng sáng."
+        }
+      ]
+    },
+    "ID158": {
+      "word": "Grau",
+      "artikel": "das",
+      "plural": "Grau",
+      "english": "gray",
+      "vietnamese": "xám",
+      "definition_en": "A color between black and white.",
+      "definition_vi": "Màu giữa đen và trắng.",
+      "examples": [
+        {
+          "de": "Das Grau ist neutral.",
+          "en": "The gray is neutral.",
+          "vi": "Màu xám trung tính."
+        }
+      ]
+    },
+    "ID220": {
+      "word": "Größe",
+      "artikel": "die",
+      "plural": "Größen",
+      "english": "size",
+      "vietnamese": "kích thước",
+      "definition_en": "The dimensions of something.",
+      "definition_vi": "Kích thước của cái gì đó.",
+      "examples": [
+        {
+          "de": "Welche Größe hast du?",
+          "en": "What size are you?",
+          "vi": "Bạn mặc size nào?"
+        }
+      ]
+    },
+    "ID228": {
+      "word": "Gruppe",
+      "artikel": "die",
+      "plural": "Gruppen",
+      "english": "group",
+      "vietnamese": "nhóm",
+      "definition_en": "A collection of people or things.",
+      "definition_vi": "Một tập hợp người hoặc vật.",
+      "examples": [
+        {
+          "de": "Eine kleine Gruppe.",
+          "en": "A small group.",
+          "vi": "Một nhóm nhỏ."
+        }
+      ]
+    },
+    "ID233": {
+      "word": "Gesetz",
+      "artikel": "das",
+      "plural": "Gesetze",
+      "english": "law",
+      "vietnamese": "luật",
+      "definition_en": "A rule established by authority.",
+      "definition_vi": "Quy tắc được thiết lập bởi cơ quan có thẩm quyền.",
+      "examples": [
+        {
+          "de": "Das Gesetz muss befolgt werden.",
+          "en": "The law must be followed.",
+          "vi": "Luật phải được tuân thủ."
+        }
+      ]
+    },
+    "ID550": {
+      "word": "Gabel",
+      "artikel": "die",
+      "plural": "Gabeln",
+      "english": "fork",
+      "vietnamese": "cái nĩa",
+      "definition_en": "A utensil with prongs for eating.",
+      "definition_vi": "Dụng cụ có răng để ăn.",
+      "examples": [
+        {
+          "de": "Ich esse mit einer Gabel.",
+          "en": "I eat with a fork.",
+          "vi": "Tôi ăn bằng cái nĩa."
+        }
+      ]
+    },
+    "ID551": {
+      "word": "Garage",
+      "artikel": "die",
+      "plural": "Garagen",
+      "english": "garage",
+      "vietnamese": "nhà để xe",
+      "definition_en": "A building for parking vehicles.",
+      "definition_vi": "Tòa nhà để đậu xe.",
+      "examples": [
+        {
+          "de": "Das Auto steht in der Garage.",
+          "en": "The car is in the garage.",
+          "vi": "Xe ô tô ở trong nhà để xe."
+        }
+      ]
+    },
+    "ID552": {
+      "word": "Gast",
+      "artikel": "der",
+      "plural": "Gäste",
+      "english": "guest",
+      "vietnamese": "khách",
+      "definition_en": "A person who visits.",
+      "definition_vi": "Người đến thăm.",
+      "examples": [
+        {
+          "de": "Der Gast kommt um 18 Uhr.",
+          "en": "The guest comes at 6 PM.",
+          "vi": "Khách đến lúc 6 giờ tối."
+        }
+      ]
+    },
+    "ID553": {
+      "word": "Gebäude",
+      "artikel": "das",
+      "plural": "Gebäude",
+      "english": "building",
+      "vietnamese": "tòa nhà",
+      "definition_en": "A structure with walls and a roof.",
+      "definition_vi": "Cấu trúc có tường và mái.",
+      "examples": [
+        {
+          "de": "Das Gebäude ist sehr alt.",
+          "en": "The building is very old.",
+          "vi": "Tòa nhà rất cũ."
+        }
+      ]
+    },
+    "ID554": {
+      "word": "Gebirge",
+      "artikel": "das",
+      "plural": "Gebirge",
+      "english": "mountain range",
+      "vietnamese": "dãy núi",
+      "definition_en": "A series of connected mountains.",
+      "definition_vi": "Một chuỗi núi liên kết.",
+      "examples": [
+        {
+          "de": "Die Alpen sind ein großes Gebirge.",
+          "en": "The Alps are a large mountain range.",
+          "vi": "Alps là một dãy núi lớn."
+        }
+      ]
+    },
+    "ID555": {
+      "word": "Geburt",
+      "artikel": "die",
+      "plural": "Geburten",
+      "english": "birth",
+      "vietnamese": "sự sinh",
+      "definition_en": "The process of being born.",
+      "definition_vi": "Quá trình được sinh ra.",
+      "examples": [
+        {
+          "de": "Die Geburt war gestern.",
+          "en": "The birth was yesterday.",
+          "vi": "Sự sinh diễn ra hôm qua."
+        }
+      ]
+    },
+    "ID556": {
+      "word": "Gedanke",
+      "artikel": "der",
+      "plural": "Gedanken",
+      "english": "thought",
+      "vietnamese": "suy nghĩ",
+      "definition_en": "An idea or opinion.",
+      "definition_vi": "Một ý tưởng hoặc quan điểm.",
+      "examples": [
+        {
+          "de": "Der Gedanke ist gut.",
+          "en": "The thought is good.",
+          "vi": "Suy nghĩ tốt đấy."
+        }
+      ]
+    },
+    "ID557": {
+      "word": "Gedicht",
+      "artikel": "das",
+      "plural": "Gedichte",
+      "english": "poem",
+      "vietnamese": "bài thơ",
+      "definition_en": "A piece of writing in verse.",
+      "definition_vi": "Một tác phẩm viết theo thể thơ.",
+      "examples": [
+        {
+          "de": "Das Gedicht ist schön.",
+          "en": "The poem is beautiful.",
+          "vi": "Bài thơ đẹp quá."
+        }
+      ]
+    },
+    "ID558": {
+      "word": "Gefahr",
+      "artikel": "die",
+      "plural": "Gefahren",
+      "english": "danger",
+      "vietnamese": "nguy hiểm",
+      "definition_en": "A situation involving risk.",
+      "definition_vi": "Tình huống có rủi ro.",
+      "examples": [
+        {
+          "de": "Es gibt eine Gefahr.",
+          "en": "There is a danger.",
+          "vi": "Có một mối nguy hiểm."
+        }
+      ]
+    },
+    "ID559": {
+      "word": "Gefühl",
+      "artikel": "das",
+      "plural": "Gefühle",
+      "english": "feeling",
+      "vietnamese": "cảm giác",
+      "definition_en": "An emotional state.",
+      "definition_vi": "Một trạng thái cảm xúc.",
+      "examples": [
+        {
+          "de": "Das Gefühl ist stark.",
+          "en": "The feeling is strong.",
+          "vi": "Cảm giác mạnh mẽ."
+        }
+      ]
+    },
+    "ID560": {
+      "word": "Gegend",
+      "artikel": "die",
+      "plural": "Gegenden",
+      "english": "area",
+      "vietnamese": "vùng",
+      "definition_en": "A region or district.",
+      "definition_vi": "Một khu vực hoặc vùng.",
+      "examples": [
+        {
+          "de": "Die Gegend ist schön.",
+          "en": "The area is beautiful.",
+          "vi": "Vùng này đẹp."
+        }
+      ]
+    },
+    "ID561": {
+      "word": "Gegenteil",
+      "artikel": "das",
+      "plural": "Gegenteile",
+      "english": "opposite",
+      "vietnamese": "ngược lại",
+      "definition_en": "Something completely different.",
+      "definition_vi": "Thứ gì đó hoàn toàn khác.",
+      "examples": [
+        {
+          "de": "Das Gegenteil ist wahr.",
+          "en": "The opposite is true.",
+          "vi": "Điều ngược lại mới đúng."
+        }
+      ]
+    },
+    "ID562": {
+      "word": "Geheimnis",
+      "artikel": "das",
+      "plural": "Geheimnisse",
+      "english": "secret",
+      "vietnamese": "bí mật",
+      "definition_en": "Something kept hidden.",
+      "definition_vi": "Điều gì đó được giữ kín.",
+      "examples": [
+        {
+          "de": "Das ist ein Geheimnis.",
+          "en": "That is a secret.",
+          "vi": "Đó là một bí mật."
+        }
+      ]
+    },
+    "ID563": {
+      "word": "Gehirn",
+      "artikel": "das",
+      "plural": "Gehirne",
+      "english": "brain",
+      "vietnamese": "não",
+      "definition_en": "The organ of thought.",
+      "definition_vi": "Cơ quan của tư duy.",
+      "examples": [
+        {
+          "de": "Das Gehirn ist wichtig.",
+          "en": "The brain is important.",
+          "vi": "Não rất quan trọng."
+        }
+      ]
+    },
+    "ID564": {
+      "word": "Gemeinde",
+      "artikel": "die",
+      "plural": "Gemeinden",
+      "english": "community",
+      "vietnamese": "cộng đồng",
+      "definition_en": "A group of people living together.",
+      "definition_vi": "Một nhóm người sống cùng nhau.",
+      "examples": [
+        {
+          "de": "Die Gemeinde ist groß.",
+          "en": "The community is large.",
+          "vi": "Cộng đồng lớn."
+        }
+      ]
+    },
+    "ID565": {
+      "word": "Generation",
+      "artikel": "die",
+      "plural": "Generationen",
+      "english": "generation",
+      "vietnamese": "thế hệ",
+      "definition_en": "All people born around the same time.",
+      "definition_vi": "Tất cả những người sinh cùng thời.",
+      "examples": [
+        {
+          "de": "Die junge Generation.",
+          "en": "The young generation.",
+          "vi": "Thế hệ trẻ."
+        }
+      ]
+    },
+    "ID566": {
+      "word": "Gepäck",
+      "artikel": "das",
+      "plural": "-",
+      "english": "luggage",
+      "vietnamese": "hành lý",
+      "definition_en": "Bags and cases for travel.",
+      "definition_vi": "Túi và va li cho du lịch.",
+      "examples": [
+        {
+          "de": "Das Gepäck ist schwer.",
+          "en": "The luggage is heavy.",
+          "vi": "Hành lý nặng."
+        }
+      ]
+    },
+    "ID567": {
+      "word": "Gericht",
+      "artikel": "das",
+      "plural": "Gerichte",
+      "english": "court / dish",
+      "vietnamese": "tòa án / món ăn",
+      "definition_en": "A legal institution or a prepared meal.",
+      "definition_vi": "Một cơ quan pháp lý hoặc bữa ăn.",
+      "examples": [
+        {
+          "de": "Das Gericht entscheidet.",
+          "en": "The court decides.",
+          "vi": "Tòa án quyết định."
+        }
+      ]
+    },
+    "ID568": {
+      "word": "Geruch",
+      "artikel": "der",
+      "plural": "Gerüche",
+      "english": "smell",
+      "vietnamese": "mùi",
+      "definition_en": "A scent detected by the nose.",
+      "definition_vi": "Mùi hương phát hiện bởi mũi.",
+      "examples": [
+        {
+          "de": "Der Geruch ist stark.",
+          "en": "The smell is strong.",
+          "vi": "Mùi rất nặng."
+        }
+      ]
+    },
+    "ID569": {
+      "word": "Geschichte",
+      "artikel": "die",
+      "plural": "Geschichten",
+      "english": "story / history",
+      "vietnamese": "câu chuyện / lịch sử",
+      "definition_en": "A narrative or past events.",
+      "definition_vi": "Một câu chuyện hoặc sự kiện quá khứ.",
+      "examples": [
+        {
+          "de": "Die Geschichte ist interessant.",
+          "en": "The story is interesting.",
+          "vi": "Câu chuyện thú vị."
+        }
+      ]
+    },
+    "ID570": {
+      "word": "Geschwindigkeit",
+      "artikel": "die",
+      "plural": "Geschwindigkeiten",
+      "english": "speed",
+      "vietnamese": "tốc độ",
+      "definition_en": "Rate of movement.",
+      "definition_vi": "Tốc độ di chuyển.",
+      "examples": [
+        {
+          "de": "Die Geschwindigkeit ist hoch.",
+          "en": "The speed is high.",
+          "vi": "Tốc độ cao."
+        }
+      ]
+    },
+    "ID571": {
+      "word": "Geschwister",
+      "artikel": "die",
+      "plural": "-",
+      "english": "siblings",
+      "vietnamese": "anh chị em",
+      "definition_en": "Brothers and sisters.",
+      "definition_vi": "Anh em trai và chị em gái.",
+      "examples": [
+        {
+          "de": "Ich habe drei Geschwister.",
+          "en": "I have three siblings.",
+          "vi": "Tôi có ba anh chị em."
+        }
+      ]
+    },
+    "ID572": {
+      "word": "Gesellschaft",
+      "artikel": "die",
+      "plural": "Gesellschaften",
+      "english": "society",
+      "vietnamese": "xã hội",
+      "definition_en": "People living together as a community.",
+      "definition_vi": "Mọi người sống cùng nhau như một cộng đồng.",
+      "examples": [
+        {
+          "de": "Die Gesellschaft verändert sich.",
+          "en": "Society is changing.",
+          "vi": "Xã hội đang thay đổi."
+        }
+      ]
+    },
+    "ID573": {
+      "word": "Gespräch",
+      "artikel": "das",
+      "plural": "Gespräche",
+      "english": "conversation",
+      "vietnamese": "cuộc trò chuyện",
+      "definition_en": "A talk between people.",
+      "definition_vi": "Cuộc nói chuyện giữa mọi người.",
+      "examples": [
+        {
+          "de": "Das Gespräch war gut.",
+          "en": "The conversation was good.",
+          "vi": "Cuộc trò chuyện tốt."
+        }
+      ]
+    },
+    "ID574": {
+      "word": "Gesundheit",
+      "artikel": "die",
+      "plural": "-",
+      "english": "health",
+      "vietnamese": "sức khỏe",
+      "definition_en": "The state of being well.",
+      "definition_vi": "Trạng thái khỏe mạnh.",
+      "examples": [
+        {
+          "de": "Die Gesundheit ist wichtig.",
+          "en": "Health is important.",
+          "vi": "Sức khỏe quan trọng."
+        }
+      ]
+    },
+    "ID575": {
+      "word": "Getränk",
+      "artikel": "das",
+      "plural": "Getränke",
+      "english": "drink",
+      "vietnamese": "đồ uống",
+      "definition_en": "A liquid for drinking.",
+      "definition_vi": "Chất lỏng để uống.",
+      "examples": [
+        {
+          "de": "Das Getränk ist kalt.",
+          "en": "The drink is cold.",
+          "vi": "Đồ uống lạnh."
+        }
+      ]
+    },
+    "ID576": {
+      "word": "Gewicht",
+      "artikel": "das",
+      "plural": "Gewichte",
+      "english": "weight",
+      "vietnamese": "cân nặng",
+      "definition_en": "How heavy something is.",
+      "definition_vi": "Mức độ nặng của cái gì.",
+      "examples": [
+        {
+          "de": "Das Gewicht ist 5 kg.",
+          "en": "The weight is 5 kg.",
+          "vi": "Cân nặng là 5 kg."
+        }
+      ]
+    },
+    "ID577": {
+      "word": "Gewitter",
+      "artikel": "das",
+      "plural": "Gewitter",
+      "english": "thunderstorm",
+      "vietnamese": "giông bão",
+      "definition_en": "A storm with thunder and lightning.",
+      "definition_vi": "Một cơn bão có sấm và chớp.",
+      "examples": [
+        {
+          "de": "Das Gewitter kommt.",
+          "en": "The thunderstorm is coming.",
+          "vi": "Giông bão đang đến."
+        }
+      ]
+    },
+    "ID578": {
+      "word": "Gewohnheit",
+      "artikel": "die",
+      "plural": "Gewohnheiten",
+      "english": "habit",
+      "vietnamese": "thói quen",
+      "definition_en": "A regular practice.",
+      "definition_vi": "Một thói quen thường xuyên.",
+      "examples": [
+        {
+          "de": "Die Gewohnheit ist gut.",
+          "en": "The habit is good.",
+          "vi": "Thói quen tốt."
+        }
+      ]
+    },
+    "ID579": {
+      "word": "Gift",
+      "artikel": "das",
+      "plural": "Gifte",
+      "english": "poison",
+      "vietnamese": "chất độc",
+      "definition_en": "A harmful substance.",
+      "definition_vi": "Một chất có hại.",
+      "examples": [
+        {
+          "de": "Das Gift ist gefährlich.",
+          "en": "The poison is dangerous.",
+          "vi": "Chất độc nguy hiểm."
+        }
+      ]
+    },
+    "ID580": {
+      "word": "Gipfel",
+      "artikel": "der",
+      "plural": "Gipfel",
+      "english": "peak / summit",
+      "vietnamese": "đỉnh",
+      "definition_en": "The top of a mountain.",
+      "definition_vi": "Đỉnh của một ngọn núi.",
+      "examples": [
+        {
+          "de": "Der Gipfel ist hoch.",
+          "en": "The peak is high.",
+          "vi": "Đỉnh cao."
+        }
+      ]
+    },
+    "ID581": {
+      "word": "Glaube",
+      "artikel": "der",
+      "plural": "-",
+      "english": "belief / faith",
+      "vietnamese": "niềm tin",
+      "definition_en": "Confidence in something.",
+      "definition_vi": "Sự tin tưởng vào điều gì.",
+      "examples": [
+        {
+          "de": "Der Glaube ist stark.",
+          "en": "The faith is strong.",
+          "vi": "Niềm tin mạnh mẽ."
+        }
+      ]
+    },
+    "ID582": {
+      "word": "Gleis",
+      "artikel": "das",
+      "plural": "Gleise",
+      "english": "track / platform",
+      "vietnamese": "đường ray",
+      "definition_en": "Railway tracks.",
+      "definition_vi": "Đường ray xe lửa.",
+      "examples": [
+        {
+          "de": "Der Zug fährt auf Gleis 3.",
+          "en": "The train runs on track 3.",
+          "vi": "Tàu chạy trên đường ray số 3."
+        }
+      ]
+    },
+    "ID583": {
+      "word": "Glocke",
+      "artikel": "die",
+      "plural": "Glocken",
+      "english": "bell",
+      "vietnamese": "chuông",
+      "definition_en": "A hollow object that rings.",
+      "definition_vi": "Vật rỗng phát ra tiếng chuông.",
+      "examples": [
+        {
+          "de": "Die Glocke läutet.",
+          "en": "The bell rings.",
+          "vi": "Chuông reo."
+        }
+      ]
+    },
+    "ID584": {
+      "word": "Gold",
+      "artikel": "das",
+      "plural": "-",
+      "english": "gold",
+      "vietnamese": "vàng",
+      "definition_en": "A precious yellow metal.",
+      "definition_vi": "Kim loại quý màu vàng.",
+      "examples": [
+        {
+          "de": "Das Gold glänzt.",
+          "en": "The gold shines.",
+          "vi": "Vàng lấp lánh."
+        }
+      ]
+    },
+    "ID585": {
+      "word": "Gott",
+      "artikel": "der",
+      "plural": "Götter",
+      "english": "god",
+      "vietnamese": "thần",
+      "definition_en": "A supreme being.",
+      "definition_vi": "Một sinh vật tối cao.",
+      "examples": [
+        {
+          "de": "An Gott glauben.",
+          "en": "To believe in God.",
+          "vi": "Tin vào Chúa."
+        }
+      ]
+    },
+    "ID586": {
+      "word": "Grab",
+      "artikel": "das",
+      "plural": "Gräber",
+      "english": "grave",
+      "vietnamese": "mộ",
+      "definition_en": "A place for burial.",
+      "definition_vi": "Nơi chôn cất.",
+      "examples": [
+        {
+          "de": "Das Grab ist alt.",
+          "en": "The grave is old.",
+          "vi": "Ngôi mộ cũ."
+        }
+      ]
+    },
+    "ID587": {
+      "word": "Grad",
+      "artikel": "der",
+      "plural": "Grade",
+      "english": "degree",
+      "vietnamese": "độ",
+      "definition_en": "A unit of measurement.",
+      "definition_vi": "Đơn vị đo lường.",
+      "examples": [
+        {
+          "de": "Es sind 20 Grad.",
+          "en": "It is 20 degrees.",
+          "vi": "Nhiệt độ 20 độ."
+        }
+      ]
+    },
+    "ID588": {
+      "word": "Grenze",
+      "artikel": "die",
+      "plural": "Grenzen",
+      "english": "border / limit",
+      "vietnamese": "biên giới",
+      "definition_en": "A boundary line.",
+      "definition_vi": "Đường ranh giới.",
+      "examples": [
+        {
+          "de": "Die Grenze ist hier.",
+          "en": "The border is here.",
+          "vi": "Biên giới ở đây."
+        }
+      ]
+    },
+    "ID589": {
+      "word": "Grippe",
+      "artikel": "die",
+      "plural": "-",
+      "english": "flu",
+      "vietnamese": "cúm",
+      "definition_en": "A viral infection.",
+      "definition_vi": "Một bệnh nhiễm virus.",
+      "examples": [
+        {
+          "de": "Ich habe die Grippe.",
+          "en": "I have the flu.",
+          "vi": "Tôi bị cúm."
+        }
+      ]
+    },
+    "ID590": {
+      "word": "Grund",
+      "artikel": "der",
+      "plural": "Gründe",
+      "english": "reason / ground",
+      "vietnamese": "lý do",
+      "definition_en": "A cause or basis.",
+      "definition_vi": "Một nguyên nhân hoặc cơ sở.",
+      "examples": [
+        {
+          "de": "Der Grund ist klar.",
+          "en": "The reason is clear.",
+          "vi": "Lý do rõ ràng."
+        }
+      ]
+    },
+    "ID591": {
+      "word": "Gruß",
+      "artikel": "der",
+      "plural": "Grüße",
+      "english": "greeting",
+      "vietnamese": "lời chào",
+      "definition_en": "A polite expression.",
+      "definition_vi": "Một biểu hiện lịch sự.",
+      "examples": [
+        {
+          "de": "Viele Grüße!",
+          "en": "Many greetings!",
+          "vi": "Lời chào!"
+        }
+      ]
+    },
+    "ID592": {
+      "word": "Gürtel",
+      "artikel": "der",
+      "plural": "Gürtel",
+      "english": "belt",
+      "vietnamese": "thắt lưng",
+      "definition_en": "A strap worn around the waist.",
+      "definition_vi": "Dây đeo quanh eo.",
+      "examples": [
+        {
+          "de": "Der Gürtel ist neu.",
+          "en": "The belt is new.",
+          "vi": "Thắt lưng mới."
+        }
+      ]
+    }
+  }
+}

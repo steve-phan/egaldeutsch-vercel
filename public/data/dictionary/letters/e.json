@@ -1,0 +1,1347 @@
+{
+  "byWord": {
+    "ei": "ID493",
+    "essen": "ID514",
+    "eis": "ID077",
+    "euro": "ID515",
+    "erde": "ID505",
+    "elefant": "ID197",
+    "ende": "ID499",
+    "ecke": "ID491",
+    "ehre": "ID492",
+    "einkommen": "ID494",
+    "einladung": "ID495",
+    "einwohner": "ID496",
+    "element": "ID497",
+    "eltern": "ID498",
+    "energie": "ID500",
+    "engel": "ID501",
+    "enkel": "ID502",
+    "entfernung": "ID503",
+    "entwicklung": "ID504",
+    "erdgeschoss": "ID506",
+    "erfolg": "ID507",
+    "ergebnis": "ID508",
+    "erklärung": "ID509",
+    "erlaubnis": "ID510",
+    "ernst": "ID511",
+    "erwachsene": "ID512",
+    "esel": "ID513",
+    "export": "ID516",
+    "experiment": "ID517"
+  },
+  "byEnglish": {
+    "egg": [
+      "ID030",
+      "ID402",
+      "ID493"
+    ],
+    "food": [
+      "ID061",
+      "ID423",
+      "ID514"
+    ],
+    "ice cream": [
+      "ID077"
+    ],
+    "euro": [
+      "ID097",
+      "ID424",
+      "ID515"
+    ],
+    "earth": [
+      "ID175",
+      "ID414",
+      "ID505"
+    ],
+    "elephant": [
+      "ID197"
+    ],
+    "end": [
+      "ID210",
+      "ID408",
+      "ID499"
+    ],
+    "corner": [
+      "ID211",
+      "ID400",
+      "ID491"
+    ],
+    "honor": [
+      "ID401",
+      "ID492"
+    ],
+    "income": [
+      "ID403",
+      "ID494"
+    ],
+    "invitation": [
+      "ID404",
+      "ID495"
+    ],
+    "inhabitant": [
+      "ID405",
+      "ID496"
+    ],
+    "element": [
+      "ID406",
+      "ID497"
+    ],
+    "parents": [
+      "ID407",
+      "ID498"
+    ],
+    "energy": [
+      "ID409",
+      "ID500"
+    ],
+    "angel": [
+      "ID410",
+      "ID501"
+    ],
+    "grandson": [
+      "ID411",
+      "ID502"
+    ],
+    "distance": [
+      "ID412",
+      "ID503"
+    ],
+    "development": [
+      "ID413",
+      "ID504"
+    ],
+    "ground floor": [
+      "ID415",
+      "ID506"
+    ],
+    "success": [
+      "ID416",
+      "ID507"
+    ],
+    "result": [
+      "ID417",
+      "ID508"
+    ],
+    "explanation": [
+      "ID418",
+      "ID509"
+    ],
+    "permission": [
+      "ID419",
+      "ID510"
+    ],
+    "seriousness": [
+      "ID420",
+      "ID511"
+    ],
+    "adult": [
+      "ID421",
+      "ID512"
+    ],
+    "donkey": [
+      "ID422",
+      "ID513"
+    ],
+    "export": [
+      "ID425",
+      "ID516"
+    ],
+    "experiment": [
+      "ID426",
+      "ID517"
+    ]
+  },
+  "byVietnamese": {
+    "quả trứng": [
+      "ID030"
+    ],
+    "thức ăn": [
+      "ID061",
+      "ID423",
+      "ID514"
+    ],
+    "kem": [
+      "ID077"
+    ],
+    "euro": [
+      "ID097"
+    ],
+    "trái đất": [
+      "ID175",
+      "ID414",
+      "ID505"
+    ],
+    "con voi": [
+      "ID197"
+    ],
+    "kết thúc": [
+      "ID210",
+      "ID408",
+      "ID499"
+    ],
+    "góc": [
+      "ID211",
+      "ID400",
+      "ID491"
+    ],
+    "danh dự": [
+      "ID401",
+      "ID492"
+    ],
+    "trứng": [
+      "ID402",
+      "ID493"
+    ],
+    "thu nhập": [
+      "ID403",
+      "ID494"
+    ],
+    "lời mời": [
+      "ID404",
+      "ID495"
+    ],
+    "cư dân": [
+      "ID405",
+      "ID496"
+    ],
+    "yếu tố": [
+      "ID406",
+      "ID497"
+    ],
+    "cha mẹ": [
+      "ID407",
+      "ID498"
+    ],
+    "năng lượng": [
+      "ID409",
+      "ID500"
+    ],
+    "thiên thần": [
+      "ID410",
+      "ID501"
+    ],
+    "cháu trai": [
+      "ID411",
+      "ID502"
+    ],
+    "khoảng cách": [
+      "ID412",
+      "ID503"
+    ],
+    "phát triển": [
+      "ID413",
+      "ID504"
+    ],
+    "tầng trệt": [
+      "ID415",
+      "ID506"
+    ],
+    "thành công": [
+      "ID416",
+      "ID507"
+    ],
+    "kết quả": [
+      "ID417",
+      "ID508"
+    ],
+    "giải thích": [
+      "ID418",
+      "ID509"
+    ],
+    "sự cho phép": [
+      "ID419",
+      "ID510"
+    ],
+    "sự nghiêm túc": [
+      "ID420",
+      "ID511"
+    ],
+    "người lớn": [
+      "ID421",
+      "ID512"
+    ],
+    "con lừa": [
+      "ID422",
+      "ID513"
+    ],
+    "đồng euro": [
+      "ID424",
+      "ID515"
+    ],
+    "xuất khẩu": [
+      "ID425",
+      "ID516"
+    ],
+    "thí nghiệm": [
+      "ID426",
+      "ID517"
+    ]
+  },
+  "byArtikel": {
+    "der": [
+      "ID197",
+      "ID405",
+      "ID410",
+      "ID411",
+      "ID416",
+      "ID420",
+      "ID422",
+      "ID424",
+      "ID425",
+      "ID496",
+      "ID501",
+      "ID502",
+      "ID507",
+      "ID511",
+      "ID513",
+      "ID515",
+      "ID516"
+    ],
+    "die": [
+      "ID175",
+      "ID211",
+      "ID400",
+      "ID401",
+      "ID404",
+      "ID407",
+      "ID409",
+      "ID412",
+      "ID413",
+      "ID414",
+      "ID418",
+      "ID419",
+      "ID491",
+      "ID492",
+      "ID495",
+      "ID498",
+      "ID500",
+      "ID503",
+      "ID504",
+      "ID505",
+      "ID509",
+      "ID510"
+    ],
+    "das": [
+      "ID030",
+      "ID061",
+      "ID077",
+      "ID097",
+      "ID210",
+      "ID402",
+      "ID403",
+      "ID406",
+      "ID408",
+      "ID415",
+      "ID417",
+      "ID423",
+      "ID426",
+      "ID493",
+      "ID494",
+      "ID497",
+      "ID499",
+      "ID506",
+      "ID508",
+      "ID514",
+      "ID517"
+    ],
+    "der/die": [
+      "ID421",
+      "ID512"
+    ]
+  },
+  "entries": {
+    "ID030": {
+      "word": "Ei",
+      "artikel": "das",
+      "plural": "Eier",
+      "english": "egg",
+      "vietnamese": "quả trứng",
+      "definition_en": "An oval object laid by birds.",
+      "definition_vi": "Một vật hình bầu dục được chim đẻ ra.",
+      "examples": [
+        {
+          "de": "Ich esse ein Ei zum Frühstück.",
+          "en": "I eat an egg for breakfast.",
+          "vi": "Tôi ăn một quả trứng cho bữa sáng."
+        }
+      ]
+    },
+    "ID061": {
+      "word": "Essen",
+      "artikel": "das",
+      "plural": "Essen",
+      "english": "food",
+      "vietnamese": "thức ăn",
+      "definition_en": "Any substance consumed for nutrition.",
+      "definition_vi": "Bất kỳ chất nào được tiêu thụ để dinh dưỡng.",
+      "examples": [
+        {
+          "de": "Das Essen schmeckt gut.",
+          "en": "The food tastes good.",
+          "vi": "Thức ăn ngon."
+        }
+      ]
+    },
+    "ID077": {
+      "word": "Eis",
+      "artikel": "das",
+      "plural": "Eis",
+      "english": "ice cream",
+      "vietnamese": "kem",
+      "definition_en": "A frozen dessert.",
+      "definition_vi": "Món tráng miệng đông lạnh.",
+      "examples": [
+        {
+          "de": "Das Eis ist kalt.",
+          "en": "The ice cream is cold.",
+          "vi": "Kem lạnh."
+        }
+      ]
+    },
+    "ID097": {
+      "word": "Euro",
+      "artikel": "der",
+      "plural": "Euro",
+      "english": "euro",
+      "vietnamese": "euro",
+      "definition_en": "The currency of the European Union.",
+      "definition_vi": "Đồng tiền của Liên minh châu Âu.",
+      "examples": [
+        {
+          "de": "Das kostet zehn Euro.",
+          "en": "That costs ten euros.",
+          "vi": "Cái đó giá mười euro."
+        }
+      ]
+    },
+    "ID175": {
+      "word": "Erde",
+      "artikel": "die",
+      "plural": "Erden",
+      "english": "earth",
+      "vietnamese": "trái đất",
+      "definition_en": "The planet we live on.",
+      "definition_vi": "Hành tinh chúng ta sống.",
+      "examples": [
+        {
+          "de": "Die Erde ist rund.",
+          "en": "The Earth is round.",
+          "vi": "Trái Đất tròn."
+        }
+      ]
+    },
+    "ID197": {
+      "word": "Elefant",
+      "artikel": "der",
+      "plural": "Elefanten",
+      "english": "elephant",
+      "vietnamese": "con voi",
+      "definition_en": "A large mammal with a trunk.",
+      "definition_vi": "Động vật có vú lớn có vòi.",
+      "examples": [
+        {
+          "de": "Der Elefant ist groß.",
+          "en": "The elephant is big.",
+          "vi": "Con voi lớn."
+        }
+      ]
+    },
+    "ID210": {
+      "word": "Ende",
+      "artikel": "das",
+      "plural": "Enden",
+      "english": "end",
+      "vietnamese": "kết thúc",
+      "definition_en": "The final part of something.",
+      "definition_vi": "Phần cuối của cái gì đó.",
+      "examples": [
+        {
+          "de": "Das Ende ist nah.",
+          "en": "The end is near.",
+          "vi": "Sự kết thúc đã gần."
+        }
+      ]
+    },
+    "ID211": {
+      "word": "Ecke",
+      "artikel": "die",
+      "plural": "Ecken",
+      "english": "corner",
+      "vietnamese": "góc",
+      "definition_en": "A point where two lines meet.",
+      "definition_vi": "Điểm nơi hai đường gặp nhau.",
+      "examples": [
+        {
+          "de": "Das Haus steht an der Ecke.",
+          "en": "The house stands on the corner.",
+          "vi": "Ngôi nhà đứng ở góc."
+        }
+      ]
+    },
+    "ID400": {
+      "word": "Ecke",
+      "artikel": "die",
+      "plural": "Ecken",
+      "english": "corner",
+      "vietnamese": "góc",
+      "definition_en": "A place where two sides meet.",
+      "definition_vi": "Nơi hai bên gặp nhau.",
+      "examples": [
+        {
+          "de": "Die Ecke ist dunkel.",
+          "en": "The corner is dark.",
+          "vi": "Góc tối."
+        }
+      ]
+    },
+    "ID401": {
+      "word": "Ehre",
+      "artikel": "die",
+      "plural": "-",
+      "english": "honor",
+      "vietnamese": "danh dự",
+      "definition_en": "High respect or reputation.",
+      "definition_vi": "Sự tôn trọng hoặc danh tiếng cao.",
+      "examples": [
+        {
+          "de": "Die Ehre ist wichtig.",
+          "en": "Honor is important.",
+          "vi": "Danh dự quan trọng."
+        }
+      ]
+    },
+    "ID402": {
+      "word": "Ei",
+      "artikel": "das",
+      "plural": "Eier",
+      "english": "egg",
+      "vietnamese": "trứng",
+      "definition_en": "An oval object laid by birds.",
+      "definition_vi": "Vật hình trứng do chim đẻ.",
+      "examples": [
+        {
+          "de": "Das Ei ist frisch.",
+          "en": "The egg is fresh.",
+          "vi": "Trứng tươi."
+        }
+      ]
+    },
+    "ID403": {
+      "word": "Einkommen",
+      "artikel": "das",
+      "plural": "Einkommen",
+      "english": "income",
+      "vietnamese": "thu nhập",
+      "definition_en": "Money received.",
+      "definition_vi": "Tiền nhận được.",
+      "examples": [
+        {
+          "de": "Das Einkommen ist hoch.",
+          "en": "The income is high.",
+          "vi": "Thu nhập cao."
+        }
+      ]
+    },
+    "ID404": {
+      "word": "Einladung",
+      "artikel": "die",
+      "plural": "Einladungen",
+      "english": "invitation",
+      "vietnamese": "lời mời",
+      "definition_en": "A request to attend.",
+      "definition_vi": "Yêu cầu tham dự.",
+      "examples": [
+        {
+          "de": "Die Einladung ist schön.",
+          "en": "The invitation is nice.",
+          "vi": "Lời mời đẹp."
+        }
+      ]
+    },
+    "ID405": {
+      "word": "Einwohner",
+      "artikel": "der",
+      "plural": "Einwohner",
+      "english": "inhabitant",
+      "vietnamese": "cư dân",
+      "definition_en": "A person who lives in a place.",
+      "definition_vi": "Người sống ở một nơi.",
+      "examples": [
+        {
+          "de": "Der Einwohner ist freundlich.",
+          "en": "The inhabitant is friendly.",
+          "vi": "Cư dân thân thiện."
+        }
+      ]
+    },
+    "ID406": {
+      "word": "Element",
+      "artikel": "das",
+      "plural": "Elemente",
+      "english": "element",
+      "vietnamese": "yếu tố",
+      "definition_en": "A basic part.",
+      "definition_vi": "Một phần cơ bản.",
+      "examples": [
+        {
+          "de": "Das Element ist wichtig.",
+          "en": "The element is important.",
+          "vi": "Yếu tố quan trọng."
+        }
+      ]
+    },
+    "ID407": {
+      "word": "Eltern",
+      "artikel": "die",
+      "plural": "-",
+      "english": "parents",
+      "vietnamese": "cha mẹ",
+      "definition_en": "Father and mother.",
+      "definition_vi": "Cha và mẹ.",
+      "examples": [
+        {
+          "de": "Die Eltern sind stolz.",
+          "en": "The parents are proud.",
+          "vi": "Cha mẹ tự hào."
+        }
+      ]
+    },
+    "ID408": {
+      "word": "Ende",
+      "artikel": "das",
+      "plural": "Enden",
+      "english": "end",
+      "vietnamese": "kết thúc",
+      "definition_en": "The final part.",
+      "definition_vi": "Phần cuối cùng.",
+      "examples": [
+        {
+          "de": "Das Ende ist nah.",
+          "en": "The end is near.",
+          "vi": "Kết thúc gần."
+        }
+      ]
+    },
+    "ID409": {
+      "word": "Energie",
+      "artikel": "die",
+      "plural": "Energien",
+      "english": "energy",
+      "vietnamese": "năng lượng",
+      "definition_en": "Power from resources.",
+      "definition_vi": "Sức mạnh từ tài nguyên.",
+      "examples": [
+        {
+          "de": "Die Energie ist sauber.",
+          "en": "The energy is clean.",
+          "vi": "Năng lượng sạch."
+        }
+      ]
+    },
+    "ID410": {
+      "word": "Engel",
+      "artikel": "der",
+      "plural": "Engel",
+      "english": "angel",
+      "vietnamese": "thiên thần",
+      "definition_en": "A spiritual being.",
+      "definition_vi": "Một sinh vật tâm linh.",
+      "examples": [
+        {
+          "de": "Der Engel ist schön.",
+          "en": "The angel is beautiful.",
+          "vi": "Thiên thần đẹp."
+        }
+      ]
+    },
+    "ID411": {
+      "word": "Enkel",
+      "artikel": "der",
+      "plural": "Enkel",
+      "english": "grandson",
+      "vietnamese": "cháu trai",
+      "definition_en": "Son of one's child.",
+      "definition_vi": "Con trai của con mình.",
+      "examples": [
+        {
+          "de": "Der Enkel ist klein.",
+          "en": "The grandson is small.",
+          "vi": "Cháu trai nhỏ."
+        }
+      ]
+    },
+    "ID412": {
+      "word": "Entfernung",
+      "artikel": "die",
+      "plural": "Entfernungen",
+      "english": "distance",
+      "vietnamese": "khoảng cách",
+      "definition_en": "The space between two points.",
+      "definition_vi": "Không gian giữa hai điểm.",
+      "examples": [
+        {
+          "de": "Die Entfernung ist groß.",
+          "en": "The distance is great.",
+          "vi": "Khoảng cách lớn."
+        }
+      ]
+    },
+    "ID413": {
+      "word": "Entwicklung",
+      "artikel": "die",
+      "plural": "Entwicklungen",
+      "english": "development",
+      "vietnamese": "phát triển",
+      "definition_en": "The process of growing.",
+      "definition_vi": "Quá trình phát triển.",
+      "examples": [
+        {
+          "de": "Die Entwicklung ist schnell.",
+          "en": "The development is fast.",
+          "vi": "Phát triển nhanh."
+        }
+      ]
+    },
+    "ID414": {
+      "word": "Erde",
+      "artikel": "die",
+      "plural": "-",
+      "english": "earth",
+      "vietnamese": "trái đất",
+      "definition_en": "The planet we live on.",
+      "definition_vi": "Hành tinh chúng ta sống.",
+      "examples": [
+        {
+          "de": "Die Erde ist rund.",
+          "en": "The earth is round.",
+          "vi": "Trái đất tròn."
+        }
+      ]
+    },
+    "ID415": {
+      "word": "Erdgeschoss",
+      "artikel": "das",
+      "plural": "Erdgeschosse",
+      "english": "ground floor",
+      "vietnamese": "tầng trệt",
+      "definition_en": "The floor at ground level.",
+      "definition_vi": "Tầng ở mức mặt đất.",
+      "examples": [
+        {
+          "de": "Das Erdgeschoss ist groß.",
+          "en": "The ground floor is large.",
+          "vi": "Tầng trệt lớn."
+        }
+      ]
+    },
+    "ID416": {
+      "word": "Erfolg",
+      "artikel": "der",
+      "plural": "Erfolge",
+      "english": "success",
+      "vietnamese": "thành công",
+      "definition_en": "Achievement of a goal.",
+      "definition_vi": "Đạt được mục tiêu.",
+      "examples": [
+        {
+          "de": "Der Erfolg ist sicher.",
+          "en": "Success is certain.",
+          "vi": "Thành công chắc chắn."
+        }
+      ]
+    },
+    "ID417": {
+      "word": "Ergebnis",
+      "artikel": "das",
+      "plural": "Ergebnisse",
+      "english": "result",
+      "vietnamese": "kết quả",
+      "definition_en": "The outcome.",
+      "definition_vi": "Kết quả.",
+      "examples": [
+        {
+          "de": "Das Ergebnis ist gut.",
+          "en": "The result is good.",
+          "vi": "Kết quả tốt."
+        }
+      ]
+    },
+    "ID418": {
+      "word": "Erklärung",
+      "artikel": "die",
+      "plural": "Erklärungen",
+      "english": "explanation",
+      "vietnamese": "giải thích",
+      "definition_en": "A statement that makes clear.",
+      "definition_vi": "Tuyên bố làm rõ.",
+      "examples": [
+        {
+          "de": "Die Erklärung ist klar.",
+          "en": "The explanation is clear.",
+          "vi": "Giải thích rõ ràng."
+        }
+      ]
+    },
+    "ID419": {
+      "word": "Erlaubnis",
+      "artikel": "die",
+      "plural": "Erlaubnisse",
+      "english": "permission",
+      "vietnamese": "sự cho phép",
+      "definition_en": "Authorization to do something.",
+      "definition_vi": "Ủy quyền để làm gì đó.",
+      "examples": [
+        {
+          "de": "Die Erlaubnis ist nötig.",
+          "en": "Permission is necessary.",
+          "vi": "Sự cho phép cần thiết."
+        }
+      ]
+    },
+    "ID420": {
+      "word": "Ernst",
+      "artikel": "der",
+      "plural": "-",
+      "english": "seriousness",
+      "vietnamese": "sự nghiêm túc",
+      "definition_en": "Being serious.",
+      "definition_vi": "Trở nên nghiêm túc.",
+      "examples": [
+        {
+          "de": "Der Ernst ist wichtig.",
+          "en": "Seriousness is important.",
+          "vi": "Sự nghiêm túc quan trọng."
+        }
+      ]
+    },
+    "ID421": {
+      "word": "Erwachsene",
+      "artikel": "der/die",
+      "plural": "Erwachsenen",
+      "english": "adult",
+      "vietnamese": "người lớn",
+      "definition_en": "A fully grown person.",
+      "definition_vi": "Một người trưởng thành đầy đủ.",
+      "examples": [
+        {
+          "de": "Der Erwachsene arbeitet.",
+          "en": "The adult works.",
+          "vi": "Người lớn làm việc."
+        }
+      ]
+    },
+    "ID422": {
+      "word": "Esel",
+      "artikel": "der",
+      "plural": "Esel",
+      "english": "donkey",
+      "vietnamese": "con lừa",
+      "definition_en": "A domesticated animal.",
+      "definition_vi": "Động vật được thuần hóa.",
+      "examples": [
+        {
+          "de": "Der Esel ist stark.",
+          "en": "The donkey is strong.",
+          "vi": "Con lừa mạnh."
+        }
+      ]
+    },
+    "ID423": {
+      "word": "Essen",
+      "artikel": "das",
+      "plural": "-",
+      "english": "food",
+      "vietnamese": "thức ăn",
+      "definition_en": "Substance consumed for nutrition.",
+      "definition_vi": "Chất được tiêu thụ để dinh dưỡng.",
+      "examples": [
+        {
+          "de": "Das Essen schmeckt gut.",
+          "en": "The food tastes good.",
+          "vi": "Thức ăn ngon."
+        }
+      ]
+    },
+    "ID424": {
+      "word": "Euro",
+      "artikel": "der",
+      "plural": "Euro",
+      "english": "euro",
+      "vietnamese": "đồng euro",
+      "definition_en": "European currency.",
+      "definition_vi": "Tiền tệ châu Âu.",
+      "examples": [
+        {
+          "de": "Der Euro ist stark.",
+          "en": "The euro is strong.",
+          "vi": "Đồng euro mạnh."
+        }
+      ]
+    },
+    "ID425": {
+      "word": "Export",
+      "artikel": "der",
+      "plural": "Exporte",
+      "english": "export",
+      "vietnamese": "xuất khẩu",
+      "definition_en": "Goods sent to another country.",
+      "definition_vi": "Hàng hóa gửi đến quốc gia khác.",
+      "examples": [
+        {
+          "de": "Der Export steigt.",
+          "en": "Exports are rising.",
+          "vi": "Xuất khẩu tăng."
+        }
+      ]
+    },
+    "ID426": {
+      "word": "Experiment",
+      "artikel": "das",
+      "plural": "Experimente",
+      "english": "experiment",
+      "vietnamese": "thí nghiệm",
+      "definition_en": "A scientific procedure.",
+      "definition_vi": "Một thủ tục khoa học.",
+      "examples": [
+        {
+          "de": "Das Experiment gelingt.",
+          "en": "The experiment succeeds.",
+          "vi": "Thí nghiệm thành công."
+        }
+      ]
+    },
+    "ID491": {
+      "word": "Ecke",
+      "artikel": "die",
+      "plural": "Ecken",
+      "english": "corner",
+      "vietnamese": "góc",
+      "definition_en": "A place where two sides meet.",
+      "definition_vi": "Nơi hai bên gặp nhau.",
+      "examples": [
+        {
+          "de": "Die Ecke ist dunkel.",
+          "en": "The corner is dark.",
+          "vi": "Góc tối."
+        }
+      ]
+    },
+    "ID492": {
+      "word": "Ehre",
+      "artikel": "die",
+      "plural": "-",
+      "english": "honor",
+      "vietnamese": "danh dự",
+      "definition_en": "High respect or reputation.",
+      "definition_vi": "Sự tôn trọng hoặc danh tiếng cao.",
+      "examples": [
+        {
+          "de": "Die Ehre ist wichtig.",
+          "en": "Honor is important.",
+          "vi": "Danh dự quan trọng."
+        }
+      ]
+    },
+    "ID493": {
+      "word": "Ei",
+      "artikel": "das",
+      "plural": "Eier",
+      "english": "egg",
+      "vietnamese": "trứng",
+      "definition_en": "An oval object laid by birds.",
+      "definition_vi": "Vật hình trứng do chim đẻ.",
+      "examples": [
+        {
+          "de": "Das Ei ist frisch.",
+          "en": "The egg is fresh.",
+          "vi": "Trứng tươi."
+        }
+      ]
+    },
+    "ID494": {
+      "word": "Einkommen",
+      "artikel": "das",
+      "plural": "Einkommen",
+      "english": "income",
+      "vietnamese": "thu nhập",
+      "definition_en": "Money received.",
+      "definition_vi": "Tiền nhận được.",
+      "examples": [
+        {
+          "de": "Das Einkommen ist hoch.",
+          "en": "The income is high.",
+          "vi": "Thu nhập cao."
+        }
+      ]
+    },
+    "ID495": {
+      "word": "Einladung",
+      "artikel": "die",
+      "plural": "Einladungen",
+      "english": "invitation",
+      "vietnamese": "lời mời",
+      "definition_en": "A request to attend.",
+      "definition_vi": "Yêu cầu tham dự.",
+      "examples": [
+        {
+          "de": "Die Einladung ist schön.",
+          "en": "The invitation is nice.",
+          "vi": "Lời mời đẹp."
+        }
+      ]
+    },
+    "ID496": {
+      "word": "Einwohner",
+      "artikel": "der",
+      "plural": "Einwohner",
+      "english": "inhabitant",
+      "vietnamese": "cư dân",
+      "definition_en": "A person who lives in a place.",
+      "definition_vi": "Người sống ở một nơi.",
+      "examples": [
+        {
+          "de": "Der Einwohner ist freundlich.",
+          "en": "The inhabitant is friendly.",
+          "vi": "Cư dân thân thiện."
+        }
+      ]
+    },
+    "ID497": {
+      "word": "Element",
+      "artikel": "das",
+      "plural": "Elemente",
+      "english": "element",
+      "vietnamese": "yếu tố",
+      "definition_en": "A basic part.",
+      "definition_vi": "Một phần cơ bản.",
+      "examples": [
+        {
+          "de": "Das Element ist wichtig.",
+          "en": "The element is important.",
+          "vi": "Yếu tố quan trọng."
+        }
+      ]
+    },
+    "ID498": {
+      "word": "Eltern",
+      "artikel": "die",
+      "plural": "-",
+      "english": "parents",
+      "vietnamese": "cha mẹ",
+      "definition_en": "Father and mother.",
+      "definition_vi": "Cha và mẹ.",
+      "examples": [
+        {
+          "de": "Die Eltern sind stolz.",
+          "en": "The parents are proud.",
+          "vi": "Cha mẹ tự hào."
+        }
+      ]
+    },
+    "ID499": {
+      "word": "Ende",
+      "artikel": "das",
+      "plural": "Enden",
+      "english": "end",
+      "vietnamese": "kết thúc",
+      "definition_en": "The final part.",
+      "definition_vi": "Phần cuối cùng.",
+      "examples": [
+        {
+          "de": "Das Ende ist nah.",
+          "en": "The end is near.",
+          "vi": "Kết thúc gần."
+        }
+      ]
+    },
+    "ID500": {
+      "word": "Energie",
+      "artikel": "die",
+      "plural": "Energien",
+      "english": "energy",
+      "vietnamese": "năng lượng",
+      "definition_en": "Power from resources.",
+      "definition_vi": "Sức mạnh từ tài nguyên.",
+      "examples": [
+        {
+          "de": "Die Energie ist sauber.",
+          "en": "The energy is clean.",
+          "vi": "Năng lượng sạch."
+        }
+      ]
+    },
+    "ID501": {
+      "word": "Engel",
+      "artikel": "der",
+      "plural": "Engel",
+      "english": "angel",
+      "vietnamese": "thiên thần",
+      "definition_en": "A spiritual being.",
+      "definition_vi": "Một sinh vật tâm linh.",
+      "examples": [
+        {
+          "de": "Der Engel ist schön.",
+          "en": "The angel is beautiful.",
+          "vi": "Thiên thần đẹp."
+        }
+      ]
+    },
+    "ID502": {
+      "word": "Enkel",
+      "artikel": "der",
+      "plural": "Enkel",
+      "english": "grandson",
+      "vietnamese": "cháu trai",
+      "definition_en": "Son of one's child.",
+      "definition_vi": "Con trai của con mình.",
+      "examples": [
+        {
+          "de": "Der Enkel ist klein.",
+          "en": "The grandson is small.",
+          "vi": "Cháu trai nhỏ."
+        }
+      ]
+    },
+    "ID503": {
+      "word": "Entfernung",
+      "artikel": "die",
+      "plural": "Entfernungen",
+      "english": "distance",
+      "vietnamese": "khoảng cách",
+      "definition_en": "The space between two points.",
+      "definition_vi": "Không gian giữa hai điểm.",
+      "examples": [
+        {
+          "de": "Die Entfernung ist groß.",
+          "en": "The distance is great.",
+          "vi": "Khoảng cách lớn."
+        }
+      ]
+    },
+    "ID504": {
+      "word": "Entwicklung",
+      "artikel": "die",
+      "plural": "Entwicklungen",
+      "english": "development",
+      "vietnamese": "phát triển",
+      "definition_en": "The process of growing.",
+      "definition_vi": "Quá trình phát triển.",
+      "examples": [
+        {
+          "de": "Die Entwicklung ist schnell.",
+          "en": "The development is fast.",
+          "vi": "Phát triển nhanh."
+        }
+      ]
+    },
+    "ID505": {
+      "word": "Erde",
+      "artikel": "die",
+      "plural": "-",
+      "english": "earth",
+      "vietnamese": "trái đất",
+      "definition_en": "The planet we live on.",
+      "definition_vi": "Hành tinh chúng ta sống.",
+      "examples": [
+        {
+          "de": "Die Erde ist rund.",
+          "en": "The earth is round.",
+          "vi": "Trái đất tròn."
+        }
+      ]
+    },
+    "ID506": {
+      "word": "Erdgeschoss",
+      "artikel": "das",
+      "plural": "Erdgeschosse",
+      "english": "ground floor",
+      "vietnamese": "tầng trệt",
+      "definition_en": "The floor at ground level.",
+      "definition_vi": "Tầng ở mức mặt đất.",
+      "examples": [
+        {
+          "de": "Das Erdgeschoss ist groß.",
+          "en": "The ground floor is large.",
+          "vi": "Tầng trệt lớn."
+        }
+      ]
+    },
+    "ID507": {
+      "word": "Erfolg",
+      "artikel": "der",
+      "plural": "Erfolge",
+      "english": "success",
+      "vietnamese": "thành công",
+      "definition_en": "Achievement of a goal.",
+      "definition_vi": "Đạt được mục tiêu.",
+      "examples": [
+        {
+          "de": "Der Erfolg ist sicher.",
+          "en": "Success is certain.",
+          "vi": "Thành công chắc chắn."
+        }
+      ]
+    },
+    "ID508": {
+      "word": "Ergebnis",
+      "artikel": "das",
+      "plural": "Ergebnisse",
+      "english": "result",
+      "vietnamese": "kết quả",
+      "definition_en": "The outcome.",
+      "definition_vi": "Kết quả.",
+      "examples": [
+        {
+          "de": "Das Ergebnis ist gut.",
+          "en": "The result is good.",
+          "vi": "Kết quả tốt."
+        }
+      ]
+    },
+    "ID509": {
+      "word": "Erklärung",
+      "artikel": "die",
+      "plural": "Erklärungen",
+      "english": "explanation",
+      "vietnamese": "giải thích",
+      "definition_en": "A statement that makes clear.",
+      "definition_vi": "Tuyên bố làm rõ.",
+      "examples": [
+        {
+          "de": "Die Erklärung ist klar.",
+          "en": "The explanation is clear.",
+          "vi": "Giải thích rõ ràng."
+        }
+      ]
+    },
+    "ID510": {
+      "word": "Erlaubnis",
+      "artikel": "die",
+      "plural": "Erlaubnisse",
+      "english": "permission",
+      "vietnamese": "sự cho phép",
+      "definition_en": "Authorization to do something.",
+      "definition_vi": "Ủy quyền để làm gì đó.",
+      "examples": [
+        {
+          "de": "Die Erlaubnis ist nötig.",
+          "en": "Permission is necessary.",
+          "vi": "Sự cho phép cần thiết."
+        }
+      ]
+    },
+    "ID511": {
+      "word": "Ernst",
+      "artikel": "der",
+      "plural": "-",
+      "english": "seriousness",
+      "vietnamese": "sự nghiêm túc",
+      "definition_en": "Being serious.",
+      "definition_vi": "Trở nên nghiêm túc.",
+      "examples": [
+        {
+          "de": "Der Ernst ist wichtig.",
+          "en": "Seriousness is important.",
+          "vi": "Sự nghiêm túc quan trọng."
+        }
+      ]
+    },
+    "ID512": {
+      "word": "Erwachsene",
+      "artikel": "der/die",
+      "plural": "Erwachsenen",
+      "english": "adult",
+      "vietnamese": "người lớn",
+      "definition_en": "A fully grown person.",
+      "definition_vi": "Một người trưởng thành đầy đủ.",
+      "examples": [
+        {
+          "de": "Der Erwachsene arbeitet.",
+          "en": "The adult works.",
+          "vi": "Người lớn làm việc."
+        }
+      ]
+    },
+    "ID513": {
+      "word": "Esel",
+      "artikel": "der",
+      "plural": "Esel",
+      "english": "donkey",
+      "vietnamese": "con lừa",
+      "definition_en": "A domesticated animal.",
+      "definition_vi": "Động vật được thuần hóa.",
+      "examples": [
+        {
+          "de": "Der Esel ist stark.",
+          "en": "The donkey is strong.",
+          "vi": "Con lừa mạnh."
+        }
+      ]
+    },
+    "ID514": {
+      "word": "Essen",
+      "artikel": "das",
+      "plural": "-",
+      "english": "food",
+      "vietnamese": "thức ăn",
+      "definition_en": "Substance consumed for nutrition.",
+      "definition_vi": "Chất được tiêu thụ để dinh dưỡng.",
+      "examples": [
+        {
+          "de": "Das Essen schmeckt gut.",
+          "en": "The food tastes good.",
+          "vi": "Thức ăn ngon."
+        }
+      ]
+    },
+    "ID515": {
+      "word": "Euro",
+      "artikel": "der",
+      "plural": "Euro",
+      "english": "euro",
+      "vietnamese": "đồng euro",
+      "definition_en": "European currency.",
+      "definition_vi": "Tiền tệ châu Âu.",
+      "examples": [
+        {
+          "de": "Der Euro ist stark.",
+          "en": "The euro is strong.",
+          "vi": "Đồng euro mạnh."
+        }
+      ]
+    },
+    "ID516": {
+      "word": "Export",
+      "artikel": "der",
+      "plural": "Exporte",
+      "english": "export",
+      "vietnamese": "xuất khẩu",
+      "definition_en": "Goods sent to another country.",
+      "definition_vi": "Hàng hóa gửi đến quốc gia khác.",
+      "examples": [
+        {
+          "de": "Der Export steigt.",
+          "en": "Exports are rising.",
+          "vi": "Xuất khẩu tăng."
+        }
+      ]
+    },
+    "ID517": {
+      "word": "Experiment",
+      "artikel": "das",
+      "plural": "Experimente",
+      "english": "experiment",
+      "vietnamese": "thí nghiệm",
+      "definition_en": "A scientific procedure.",
+      "definition_vi": "Một thủ tục khoa học.",
+      "examples": [
+        {
+          "de": "Das Experiment gelingt.",
+          "en": "The experiment succeeds.",
+          "vi": "Thí nghiệm thành công."
+        }
+      ]
+    }
+  }
+}

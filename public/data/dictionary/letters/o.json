@@ -1,0 +1,697 @@
+{
+  "byWord": {
+    "ohr": "ID826",
+    "obst": "ID822",
+    "orange": "ID832",
+    "ort": "ID839",
+    "ordnung": "ID834",
+    "oben": "ID818",
+    "ober": "ID819",
+    "oberfläche": "ID820",
+    "objekt": "ID821",
+    "ofen": "ID823",
+    "offizier": "ID824",
+    "öffnung": "ID825",
+    "oktober": "ID827",
+    "onkel": "ID828",
+    "oper": "ID829",
+    "operation": "ID830",
+    "opfer": "ID831",
+    "orchester": "ID833",
+    "organ": "ID835",
+    "organisation": "ID836",
+    "orient": "ID837",
+    "original": "ID838",
+    "osten": "ID840",
+    "ozean": "ID841"
+  },
+  "byEnglish": {
+    "ear": [
+      "ID051",
+      "ID826"
+    ],
+    "fruit": [
+      "ID066",
+      "ID822"
+    ],
+    "orange": [
+      "ID160",
+      "ID832"
+    ],
+    "location": [
+      "ID215"
+    ],
+    "order": [
+      "ID230",
+      "ID834"
+    ],
+    "top, above": [
+      "ID818"
+    ],
+    "waiter": [
+      "ID819"
+    ],
+    "surface": [
+      "ID820"
+    ],
+    "object": [
+      "ID821"
+    ],
+    "oven, stove": [
+      "ID823"
+    ],
+    "officer": [
+      "ID824"
+    ],
+    "opening": [
+      "ID825"
+    ],
+    "October": [
+      "ID827"
+    ],
+    "uncle": [
+      "ID828"
+    ],
+    "opera": [
+      "ID829"
+    ],
+    "operation": [
+      "ID830"
+    ],
+    "victim, sacrifice": [
+      "ID831"
+    ],
+    "orchestra": [
+      "ID833"
+    ],
+    "organ": [
+      "ID835"
+    ],
+    "organization": [
+      "ID836"
+    ],
+    "Orient": [
+      "ID837"
+    ],
+    "original": [
+      "ID838"
+    ],
+    "place, location": [
+      "ID839"
+    ],
+    "east": [
+      "ID840"
+    ],
+    "ocean": [
+      "ID841"
+    ]
+  },
+  "byVietnamese": {
+    "tai": [
+      "ID051",
+      "ID826"
+    ],
+    "trái cây": [
+      "ID066",
+      "ID822"
+    ],
+    "cam": [
+      "ID160"
+    ],
+    "địa điểm": [
+      "ID215"
+    ],
+    "thứ tự": [
+      "ID230"
+    ],
+    "phía trên": [
+      "ID818"
+    ],
+    "người phục vụ": [
+      "ID819"
+    ],
+    "bề mặt": [
+      "ID820"
+    ],
+    "vật thể": [
+      "ID821"
+    ],
+    "lò nướng": [
+      "ID823"
+    ],
+    "sĩ quan": [
+      "ID824"
+    ],
+    "lỗ hở": [
+      "ID825"
+    ],
+    "tháng Mười": [
+      "ID827"
+    ],
+    "chú, bác": [
+      "ID828"
+    ],
+    "nhạc kịch": [
+      "ID829"
+    ],
+    "ca phẫu thuật": [
+      "ID830"
+    ],
+    "nạn nhân": [
+      "ID831"
+    ],
+    "quả cam": [
+      "ID832"
+    ],
+    "dàn nhạc": [
+      "ID833"
+    ],
+    "trật tự": [
+      "ID834"
+    ],
+    "cơ quan": [
+      "ID835"
+    ],
+    "tổ chức": [
+      "ID836"
+    ],
+    "phương Đông": [
+      "ID837"
+    ],
+    "bản gốc": [
+      "ID838"
+    ],
+    "nơi": [
+      "ID839"
+    ],
+    "phía đông": [
+      "ID840"
+    ],
+    "đại dương": [
+      "ID841"
+    ]
+  },
+  "byArtikel": {
+    "der": [
+      "ID819",
+      "ID823",
+      "ID824",
+      "ID827",
+      "ID828",
+      "ID837",
+      "ID839",
+      "ID840",
+      "ID841"
+    ],
+    "die": [
+      "ID230",
+      "ID820",
+      "ID825",
+      "ID829",
+      "ID830",
+      "ID832",
+      "ID834",
+      "ID836"
+    ],
+    "das": [
+      "ID051",
+      "ID066",
+      "ID160",
+      "ID215",
+      "ID818",
+      "ID821",
+      "ID822",
+      "ID826",
+      "ID831",
+      "ID833",
+      "ID835",
+      "ID838"
+    ]
+  },
+  "entries": {
+    "ID051": {
+      "word": "Ohr",
+      "artikel": "das",
+      "plural": "Ohren",
+      "english": "ear",
+      "vietnamese": "tai",
+      "definition_en": "An organ of hearing.",
+      "definition_vi": "Cơ quan thính giác.",
+      "examples": [
+        {
+          "de": "Ich höre mit meinen Ohren.",
+          "en": "I hear with my ears.",
+          "vi": "Tôi nghe bằng tai."
+        }
+      ]
+    },
+    "ID066": {
+      "word": "Obst",
+      "artikel": "das",
+      "plural": "Obst",
+      "english": "fruit",
+      "vietnamese": "trái cây",
+      "definition_en": "The sweet product of a plant.",
+      "definition_vi": "Sản phẩm ngọt của cây.",
+      "examples": [
+        {
+          "de": "Ich esse gern Obst.",
+          "en": "I like to eat fruit.",
+          "vi": "Tôi thích ăn trái cây."
+        }
+      ]
+    },
+    "ID160": {
+      "word": "Orange",
+      "artikel": "das",
+      "plural": "Orange",
+      "english": "orange",
+      "vietnamese": "cam",
+      "definition_en": "A color between red and yellow.",
+      "definition_vi": "Màu giữa đỏ và vàng.",
+      "examples": [
+        {
+          "de": "Das Orange ist hell.",
+          "en": "The orange is bright.",
+          "vi": "Màu cam sáng."
+        }
+      ]
+    },
+    "ID215": {
+      "word": "Ort",
+      "artikel": "der",
+      "plural": "Orte",
+      "english": "location",
+      "vietnamese": "địa điểm",
+      "definition_en": "A particular place.",
+      "definition_vi": "Một địa điểm cụ thể.",
+      "examples": [
+        {
+          "de": "An diesem Ort.",
+          "en": "At this location.",
+          "vi": "Tại địa điểm này."
+        }
+      ]
+    },
+    "ID230": {
+      "word": "Ordnung",
+      "artikel": "die",
+      "plural": "Ordnungen",
+      "english": "order",
+      "vietnamese": "thứ tự",
+      "definition_en": "A systematic arrangement.",
+      "definition_vi": "Một sự sắp xếp có hệ thống.",
+      "examples": [
+        {
+          "de": "Alles in Ordnung.",
+          "en": "Everything in order.",
+          "vi": "Mọi thứ đều ổn."
+        }
+      ]
+    },
+    "ID818": {
+      "word": "Oben",
+      "artikel": "das",
+      "plural": "-",
+      "english": "top, above",
+      "vietnamese": "phía trên",
+      "definition_en": "A top, above.",
+      "definition_vi": "Một phía trên.",
+      "examples": [
+        {
+          "de": "Das Oben ist wichtig.",
+          "en": "The top, above is important.",
+          "vi": "Phía trên thì quan trọng."
+        }
+      ]
+    },
+    "ID819": {
+      "word": "Ober",
+      "artikel": "der",
+      "plural": "Ober",
+      "english": "waiter",
+      "vietnamese": "người phục vụ",
+      "definition_en": "A waiter.",
+      "definition_vi": "Một người phục vụ.",
+      "examples": [
+        {
+          "de": "Der Ober ist wichtig.",
+          "en": "The waiter is important.",
+          "vi": "Người phục vụ thì quan trọng."
+        }
+      ]
+    },
+    "ID820": {
+      "word": "Oberfläche",
+      "artikel": "die",
+      "plural": "Oberflächen",
+      "english": "surface",
+      "vietnamese": "bề mặt",
+      "definition_en": "A surface.",
+      "definition_vi": "Một bề mặt.",
+      "examples": [
+        {
+          "de": "Die Oberfläche ist wichtig.",
+          "en": "The surface is important.",
+          "vi": "Bề mặt thì quan trọng."
+        }
+      ]
+    },
+    "ID821": {
+      "word": "Objekt",
+      "artikel": "das",
+      "plural": "Objekte",
+      "english": "object",
+      "vietnamese": "vật thể",
+      "definition_en": "A object.",
+      "definition_vi": "Một vật thể.",
+      "examples": [
+        {
+          "de": "Das Objekt ist wichtig.",
+          "en": "The object is important.",
+          "vi": "Vật thể thì quan trọng."
+        }
+      ]
+    },
+    "ID822": {
+      "word": "Obst",
+      "artikel": "das",
+      "plural": "-",
+      "english": "fruit",
+      "vietnamese": "trái cây",
+      "definition_en": "A fruit.",
+      "definition_vi": "Một trái cây.",
+      "examples": [
+        {
+          "de": "Das Obst ist wichtig.",
+          "en": "The fruit is important.",
+          "vi": "Trái cây thì quan trọng."
+        }
+      ]
+    },
+    "ID823": {
+      "word": "Ofen",
+      "artikel": "der",
+      "plural": "Öfen",
+      "english": "oven, stove",
+      "vietnamese": "lò nướng",
+      "definition_en": "A oven, stove.",
+      "definition_vi": "Một lò nướng.",
+      "examples": [
+        {
+          "de": "Der Ofen ist wichtig.",
+          "en": "The oven, stove is important.",
+          "vi": "Lò nướng thì quan trọng."
+        }
+      ]
+    },
+    "ID824": {
+      "word": "Offizier",
+      "artikel": "der",
+      "plural": "Offiziere",
+      "english": "officer",
+      "vietnamese": "sĩ quan",
+      "definition_en": "A officer.",
+      "definition_vi": "Một sĩ quan.",
+      "examples": [
+        {
+          "de": "Der Offizier ist wichtig.",
+          "en": "The officer is important.",
+          "vi": "Sĩ quan thì quan trọng."
+        }
+      ]
+    },
+    "ID825": {
+      "word": "Öffnung",
+      "artikel": "die",
+      "plural": "Öffnungen",
+      "english": "opening",
+      "vietnamese": "lỗ hở",
+      "definition_en": "A opening.",
+      "definition_vi": "Một lỗ hở.",
+      "examples": [
+        {
+          "de": "Die Öffnung ist wichtig.",
+          "en": "The opening is important.",
+          "vi": "Lỗ hở thì quan trọng."
+        }
+      ]
+    },
+    "ID826": {
+      "word": "Ohr",
+      "artikel": "das",
+      "plural": "Ohren",
+      "english": "ear",
+      "vietnamese": "tai",
+      "definition_en": "A ear.",
+      "definition_vi": "Một tai.",
+      "examples": [
+        {
+          "de": "Das Ohr ist wichtig.",
+          "en": "The ear is important.",
+          "vi": "Tai thì quan trọng."
+        }
+      ]
+    },
+    "ID827": {
+      "word": "Oktober",
+      "artikel": "der",
+      "plural": "-",
+      "english": "October",
+      "vietnamese": "tháng Mười",
+      "definition_en": "A October.",
+      "definition_vi": "Một tháng Mười.",
+      "examples": [
+        {
+          "de": "Der Oktober ist wichtig.",
+          "en": "The October is important.",
+          "vi": "Tháng Mười thì quan trọng."
+        }
+      ]
+    },
+    "ID828": {
+      "word": "Onkel",
+      "artikel": "der",
+      "plural": "Onkel",
+      "english": "uncle",
+      "vietnamese": "chú, bác",
+      "definition_en": "A uncle.",
+      "definition_vi": "Một chú, bác.",
+      "examples": [
+        {
+          "de": "Der Onkel ist wichtig.",
+          "en": "The uncle is important.",
+          "vi": "Chú, bác thì quan trọng."
+        }
+      ]
+    },
+    "ID829": {
+      "word": "Oper",
+      "artikel": "die",
+      "plural": "Opern",
+      "english": "opera",
+      "vietnamese": "nhạc kịch",
+      "definition_en": "A opera.",
+      "definition_vi": "Một nhạc kịch.",
+      "examples": [
+        {
+          "de": "Die Oper ist wichtig.",
+          "en": "The opera is important.",
+          "vi": "Nhạc kịch thì quan trọng."
+        }
+      ]
+    },
+    "ID830": {
+      "word": "Operation",
+      "artikel": "die",
+      "plural": "Operationen",
+      "english": "operation",
+      "vietnamese": "ca phẫu thuật",
+      "definition_en": "A operation.",
+      "definition_vi": "Một ca phẫu thuật.",
+      "examples": [
+        {
+          "de": "Die Operation ist wichtig.",
+          "en": "The operation is important.",
+          "vi": "Ca phẫu thuật thì quan trọng."
+        }
+      ]
+    },
+    "ID831": {
+      "word": "Opfer",
+      "artikel": "das",
+      "plural": "Opfer",
+      "english": "victim, sacrifice",
+      "vietnamese": "nạn nhân",
+      "definition_en": "A victim, sacrifice.",
+      "definition_vi": "Một nạn nhân.",
+      "examples": [
+        {
+          "de": "Das Opfer ist wichtig.",
+          "en": "The victim, sacrifice is important.",
+          "vi": "Nạn nhân thì quan trọng."
+        }
+      ]
+    },
+    "ID832": {
+      "word": "Orange",
+      "artikel": "die",
+      "plural": "Orangen",
+      "english": "orange",
+      "vietnamese": "quả cam",
+      "definition_en": "A orange.",
+      "definition_vi": "Một quả cam.",
+      "examples": [
+        {
+          "de": "Die Orange ist wichtig.",
+          "en": "The orange is important.",
+          "vi": "Quả cam thì quan trọng."
+        }
+      ]
+    },
+    "ID833": {
+      "word": "Orchester",
+      "artikel": "das",
+      "plural": "Orchester",
+      "english": "orchestra",
+      "vietnamese": "dàn nhạc",
+      "definition_en": "A orchestra.",
+      "definition_vi": "Một dàn nhạc.",
+      "examples": [
+        {
+          "de": "Das Orchester ist wichtig.",
+          "en": "The orchestra is important.",
+          "vi": "Dàn nhạc thì quan trọng."
+        }
+      ]
+    },
+    "ID834": {
+      "word": "Ordnung",
+      "artikel": "die",
+      "plural": "Ordnungen",
+      "english": "order",
+      "vietnamese": "trật tự",
+      "definition_en": "A order.",
+      "definition_vi": "Một trật tự.",
+      "examples": [
+        {
+          "de": "Die Ordnung ist wichtig.",
+          "en": "The order is important.",
+          "vi": "Trật tự thì quan trọng."
+        }
+      ]
+    },
+    "ID835": {
+      "word": "Organ",
+      "artikel": "das",
+      "plural": "Organe",
+      "english": "organ",
+      "vietnamese": "cơ quan",
+      "definition_en": "A organ.",
+      "definition_vi": "Một cơ quan.",
+      "examples": [
+        {
+          "de": "Das Organ ist wichtig.",
+          "en": "The organ is important.",
+          "vi": "Cơ quan thì quan trọng."
+        }
+      ]
+    },
+    "ID836": {
+      "word": "Organisation",
+      "artikel": "die",
+      "plural": "Organisationen",
+      "english": "organization",
+      "vietnamese": "tổ chức",
+      "definition_en": "A organization.",
+      "definition_vi": "Một tổ chức.",
+      "examples": [
+        {
+          "de": "Die Organisation ist wichtig.",
+          "en": "The organization is important.",
+          "vi": "Tổ chức thì quan trọng."
+        }
+      ]
+    },
+    "ID837": {
+      "word": "Orient",
+      "artikel": "der",
+      "plural": "-",
+      "english": "Orient",
+      "vietnamese": "phương Đông",
+      "definition_en": "A Orient.",
+      "definition_vi": "Một phương Đông.",
+      "examples": [
+        {
+          "de": "Der Orient ist wichtig.",
+          "en": "The Orient is important.",
+          "vi": "Phương Đông thì quan trọng."
+        }
+      ]
+    },
+    "ID838": {
+      "word": "Original",
+      "artikel": "das",
+      "plural": "Originale",
+      "english": "original",
+      "vietnamese": "bản gốc",
+      "definition_en": "A original.",
+      "definition_vi": "Một bản gốc.",
+      "examples": [
+        {
+          "de": "Das Original ist wichtig.",
+          "en": "The original is important.",
+          "vi": "Bản gốc thì quan trọng."
+        }
+      ]
+    },
+    "ID839": {
+      "word": "Ort",
+      "artikel": "der",
+      "plural": "Orte",
+      "english": "place, location",
+      "vietnamese": "nơi",
+      "definition_en": "A place, location.",
+      "definition_vi": "Một nơi.",
+      "examples": [
+        {
+          "de": "Der Ort ist wichtig.",
+          "en": "The place, location is important.",
+          "vi": "Nơi thì quan trọng."
+        }
+      ]
+    },
+    "ID840": {
+      "word": "Osten",
+      "artikel": "der",
+      "plural": "-",
+      "english": "east",
+      "vietnamese": "phía đông",
+      "definition_en": "A east.",
+      "definition_vi": "Một phía đông.",
+      "examples": [
+        {
+          "de": "Der Osten ist wichtig.",
+          "en": "The east is important.",
+          "vi": "Phía đông thì quan trọng."
+        }
+      ]
+    },
+    "ID841": {
+      "word": "Ozean",
+      "artikel": "der",
+      "plural": "Ozeane",
+      "english": "ocean",
+      "vietnamese": "đại dương",
+      "definition_en": "A ocean.",
+      "definition_vi": "Một đại dương.",
+      "examples": [
+        {
+          "de": "Der Ozean ist wichtig.",
+          "en": "The ocean is important.",
+          "vi": "Đại dương thì quan trọng."
+        }
+      ]
+    }
+  }
+}

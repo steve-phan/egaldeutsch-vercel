@@ -1,4 +1,28 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# EgalDeutsch
+
+An English conversation learning web application with German language support.
+
+## Tech Stack
+
+- **Frontend**: Next.js 16 (App Router), React 19, TailwindCSS 4, shadcn-ui
+- **Backend**: Golang (Vercel Serverless Functions)
+- **Database**: MongoDB
+- **Authentication**: JWT (JSON Web Tokens)
+- **Email**: Brevo (Sendinblue) API
+- **Deployment**: Vercel
+
+## Features
+
+- **Lessons**: Audio lessons with transcripts and quizzes
+- **German Dictionary**: Comprehensive noun dictionary with trilingual support (German, English, Vietnamese)
+  - 40+ A1-level nouns with artikel, plural forms, and examples
+  - Search by German word, English translation, or Vietnamese translation
+  - Filter by grammatical artikel (der/die/das)
+  - [View Dictionary Documentation](./docs/DICTIONARY.md)
+- **User Authentication**: Sign up, login, password reset
+- **Dashboard**: Track learning progress
+- **Comments**: Discuss lessons with other learners
+- **Admin Panel**: Manage lessons and users
 
 ## Getting Started
 

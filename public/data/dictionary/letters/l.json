@@ -1,0 +1,1189 @@
+{
+  "byWord": {
+    "land": "ID017",
+    "lehrer": "ID717",
+    "lampe": "ID090",
+    "laden": "ID115",
+    "luft": "ID174",
+    "löwe": "ID196",
+    "linie": "ID217",
+    "lösung": "ID238",
+    "labor": "ID703",
+    "lachen": "ID704",
+    "lage": "ID705",
+    "lager": "ID706",
+    "laken": "ID707",
+    "landschaft": "ID708",
+    "landwirtschaft": "ID709",
+    "last": "ID710",
+    "laterne": "ID711",
+    "lautsprecher": "ID712",
+    "leben": "ID713",
+    "leber": "ID714",
+    "leder": "ID715",
+    "lehre": "ID716",
+    "lehrerin": "ID718",
+    "leiche": "ID719",
+    "leistung": "ID720",
+    "leiter": "ID721",
+    "leitung": "ID722",
+    "lernen": "ID723",
+    "leser": "ID724",
+    "leute": "ID725",
+    "licht": "ID726",
+    "lid": "ID727",
+    "liebe": "ID728",
+    "lied": "ID729",
+    "lieferant": "ID730",
+    "lieferung": "ID731",
+    "limonade": "ID732",
+    "lippe": "ID733",
+    "liste": "ID734",
+    "literatur": "ID735",
+    "lkw": "ID736",
+    "loch": "ID737",
+    "löffel": "ID738",
+    "lohn": "ID739",
+    "lokal": "ID740",
+    "lücke": "ID741",
+    "lunge": "ID742",
+    "lust": "ID743"
+  },
+  "byEnglish": {
+    "country": [
+      "ID017"
+    ],
+    "teacher": [
+      "ID022",
+      "ID717"
+    ],
+    "lamp": [
+      "ID090"
+    ],
+    "store": [
+      "ID115"
+    ],
+    "air": [
+      "ID174"
+    ],
+    "lion": [
+      "ID196"
+    ],
+    "line": [
+      "ID217"
+    ],
+    "solution": [
+      "ID238"
+    ],
+    "laboratory": [
+      "ID703"
+    ],
+    "laughter": [
+      "ID704"
+    ],
+    "location, situation": [
+      "ID705"
+    ],
+    "warehouse, camp": [
+      "ID706"
+    ],
+    "sheet": [
+      "ID707"
+    ],
+    "landscape": [
+      "ID708"
+    ],
+    "agriculture": [
+      "ID709"
+    ],
+    "load, burden": [
+      "ID710"
+    ],
+    "lantern": [
+      "ID711"
+    ],
+    "loudspeaker": [
+      "ID712"
+    ],
+    "life": [
+      "ID713"
+    ],
+    "liver": [
+      "ID714"
+    ],
+    "leather": [
+      "ID715"
+    ],
+    "teaching, apprenticeship": [
+      "ID716"
+    ],
+    "female teacher": [
+      "ID718"
+    ],
+    "corpse": [
+      "ID719"
+    ],
+    "performance, achievement": [
+      "ID720"
+    ],
+    "ladder, director": [
+      "ID721"
+    ],
+    "management, pipe": [
+      "ID722"
+    ],
+    "learning": [
+      "ID723"
+    ],
+    "reader": [
+      "ID724"
+    ],
+    "people": [
+      "ID725"
+    ],
+    "light": [
+      "ID726"
+    ],
+    "eyelid": [
+      "ID727"
+    ],
+    "love": [
+      "ID728"
+    ],
+    "song": [
+      "ID729"
+    ],
+    "supplier": [
+      "ID730"
+    ],
+    "delivery": [
+      "ID731"
+    ],
+    "lemonade": [
+      "ID732"
+    ],
+    "lip": [
+      "ID733"
+    ],
+    "list": [
+      "ID734"
+    ],
+    "literature": [
+      "ID735"
+    ],
+    "truck": [
+      "ID736"
+    ],
+    "hole": [
+      "ID737"
+    ],
+    "spoon": [
+      "ID738"
+    ],
+    "wage": [
+      "ID739"
+    ],
+    "pub, restaurant": [
+      "ID740"
+    ],
+    "gap": [
+      "ID741"
+    ],
+    "lung": [
+      "ID742"
+    ],
+    "desire, pleasure": [
+      "ID743"
+    ]
+  },
+  "byVietnamese": {
+    "đất nước": [
+      "ID017"
+    ],
+    "giáo viên": [
+      "ID022",
+      "ID717"
+    ],
+    "đèn": [
+      "ID090"
+    ],
+    "cửa tiệm": [
+      "ID115"
+    ],
+    "không khí": [
+      "ID174"
+    ],
+    "con sư tử": [
+      "ID196"
+    ],
+    "đường": [
+      "ID217"
+    ],
+    "giải pháp": [
+      "ID238"
+    ],
+    "phòng thí nghiệm": [
+      "ID703"
+    ],
+    "tiếng cười": [
+      "ID704"
+    ],
+    "vị trí, tình hình": [
+      "ID705"
+    ],
+    "kho, trại": [
+      "ID706"
+    ],
+    "khăn trải giường": [
+      "ID707"
+    ],
+    "phong cảnh": [
+      "ID708"
+    ],
+    "nông nghiệp": [
+      "ID709"
+    ],
+    "gánh nặng": [
+      "ID710"
+    ],
+    "đèn lồng": [
+      "ID711"
+    ],
+    "loa": [
+      "ID712"
+    ],
+    "cuộc sống": [
+      "ID713"
+    ],
+    "gan": [
+      "ID714"
+    ],
+    "da": [
+      "ID715"
+    ],
+    "giáo lý, nghề học": [
+      "ID716"
+    ],
+    "giáo viên nữ": [
+      "ID718"
+    ],
+    "xác chết": [
+      "ID719"
+    ],
+    "thành tích": [
+      "ID720"
+    ],
+    "thang, giám đốc": [
+      "ID721"
+    ],
+    "quản lý, ống": [
+      "ID722"
+    ],
+    "học tập": [
+      "ID723"
+    ],
+    "độc giả": [
+      "ID724"
+    ],
+    "mọi người": [
+      "ID725"
+    ],
+    "ánh sáng": [
+      "ID726"
+    ],
+    "mí mắt": [
+      "ID727"
+    ],
+    "tình yêu": [
+      "ID728"
+    ],
+    "bài hát": [
+      "ID729"
+    ],
+    "nhà cung cấp": [
+      "ID730"
+    ],
+    "giao hàng": [
+      "ID731"
+    ],
+    "nước chanh": [
+      "ID732"
+    ],
+    "môi": [
+      "ID733"
+    ],
+    "danh sách": [
+      "ID734"
+    ],
+    "văn học": [
+      "ID735"
+    ],
+    "xe tải": [
+      "ID736"
+    ],
+    "lỗ": [
+      "ID737"
+    ],
+    "cái thìa": [
+      "ID738"
+    ],
+    "tiền công": [
+      "ID739"
+    ],
+    "quán rượu": [
+      "ID740"
+    ],
+    "khoảng trống": [
+      "ID741"
+    ],
+    "phổi": [
+      "ID742"
+    ],
+    "ham muốn": [
+      "ID743"
+    ]
+  },
+  "byArtikel": {
+    "der": [
+      "ID022",
+      "ID115",
+      "ID196",
+      "ID712",
+      "ID717",
+      "ID721",
+      "ID724",
+      "ID730",
+      "ID736",
+      "ID738",
+      "ID739"
+    ],
+    "die": [
+      "ID090",
+      "ID174",
+      "ID217",
+      "ID238",
+      "ID705",
+      "ID708",
+      "ID709",
+      "ID710",
+      "ID711",
+      "ID714",
+      "ID716",
+      "ID718",
+      "ID719",
+      "ID720",
+      "ID722",
+      "ID725",
+      "ID728",
+      "ID731",
+      "ID732",
+      "ID733",
+      "ID734",
+      "ID735",
+      "ID741",
+      "ID742",
+      "ID743"
+    ],
+    "das": [
+      "ID017",
+      "ID703",
+      "ID704",
+      "ID706",
+      "ID707",
+      "ID713",
+      "ID715",
+      "ID723",
+      "ID726",
+      "ID727",
+      "ID729",
+      "ID737",
+      "ID740"
+    ]
+  },
+  "entries": {
+    "ID017": {
+      "word": "Land",
+      "artikel": "das",
+      "plural": "Länder",
+      "english": "country",
+      "vietnamese": "đất nước",
+      "definition_en": "A nation with its own government.",
+      "definition_vi": "Một quốc gia có chính phủ riêng.",
+      "examples": [
+        {
+          "de": "Deutschland ist ein Land in Europa.",
+          "en": "Germany is a country in Europe.",
+          "vi": "Đức là một đất nước ở châu Âu."
+        }
+      ]
+    },
+    "ID022": {
+      "word": "Lehrer",
+      "artikel": "der",
+      "plural": "Lehrer",
+      "english": "teacher",
+      "vietnamese": "giáo viên",
+      "definition_en": "A person who teaches.",
+      "definition_vi": "Một người dạy học.",
+      "examples": [
+        {
+          "de": "Der Lehrer ist nett.",
+          "en": "The teacher is nice.",
+          "vi": "Giáo viên thì tốt bụng."
+        }
+      ]
+    },
+    "ID090": {
+      "word": "Lampe",
+      "artikel": "die",
+      "plural": "Lampen",
+      "english": "lamp",
+      "vietnamese": "đèn",
+      "definition_en": "A device for giving light.",
+      "definition_vi": "Thiết bị phát sáng.",
+      "examples": [
+        {
+          "de": "Die Lampe ist hell.",
+          "en": "The lamp is bright.",
+          "vi": "Đèn sáng."
+        }
+      ]
+    },
+    "ID115": {
+      "word": "Laden",
+      "artikel": "der",
+      "plural": "Läden",
+      "english": "store",
+      "vietnamese": "cửa tiệm",
+      "definition_en": "A retail establishment.",
+      "definition_vi": "Cơ sở bán lẻ.",
+      "examples": [
+        {
+          "de": "Der Laden ist klein.",
+          "en": "The store is small.",
+          "vi": "Cửa tiệm nhỏ."
+        }
+      ]
+    },
+    "ID174": {
+      "word": "Luft",
+      "artikel": "die",
+      "plural": "Lüfte",
+      "english": "air",
+      "vietnamese": "không khí",
+      "definition_en": "The mixture of gases we breathe.",
+      "definition_vi": "Hỗn hợp khí chúng ta thở.",
+      "examples": [
+        {
+          "de": "Die Luft ist frisch.",
+          "en": "The air is fresh.",
+          "vi": "Không khí trong lành."
+        }
+      ]
+    },
+    "ID196": {
+      "word": "Löwe",
+      "artikel": "der",
+      "plural": "Löwen",
+      "english": "lion",
+      "vietnamese": "con sư tử",
+      "definition_en": "A large cat.",
+      "definition_vi": "Mèo lớn.",
+      "examples": [
+        {
+          "de": "Der Löwe brüllt.",
+          "en": "The lion roars.",
+          "vi": "Con sư tử gầm."
+        }
+      ]
+    },
+    "ID217": {
+      "word": "Linie",
+      "artikel": "die",
+      "plural": "Linien",
+      "english": "line",
+      "vietnamese": "đường",
+      "definition_en": "A straight mark or path.",
+      "definition_vi": "Một dấu hoặc đường thẳng.",
+      "examples": [
+        {
+          "de": "Eine gerade Linie.",
+          "en": "A straight line.",
+          "vi": "Một đường thẳng."
+        }
+      ]
+    },
+    "ID238": {
+      "word": "Lösung",
+      "artikel": "die",
+      "plural": "Lösungen",
+      "english": "solution",
+      "vietnamese": "giải pháp",
+      "definition_en": "An answer to a problem.",
+      "definition_vi": "Câu trả lời cho một vấn đề.",
+      "examples": [
+        {
+          "de": "Die Lösung ist einfach.",
+          "en": "The solution is simple.",
+          "vi": "Giải pháp đơn giản."
+        }
+      ]
+    },
+    "ID703": {
+      "word": "Labor",
+      "artikel": "das",
+      "plural": "Labore",
+      "english": "laboratory",
+      "vietnamese": "phòng thí nghiệm",
+      "definition_en": "A laboratory.",
+      "definition_vi": "Một phòng thí nghiệm.",
+      "examples": [
+        {
+          "de": "Das Labor ist wichtig.",
+          "en": "The laboratory is important.",
+          "vi": "Phòng thí nghiệm thì quan trọng."
+        }
+      ]
+    },
+    "ID704": {
+      "word": "Lachen",
+      "artikel": "das",
+      "plural": "-",
+      "english": "laughter",
+      "vietnamese": "tiếng cười",
+      "definition_en": "A laughter.",
+      "definition_vi": "Một tiếng cười.",
+      "examples": [
+        {
+          "de": "Das Lachen ist wichtig.",
+          "en": "The laughter is important.",
+          "vi": "Tiếng cười thì quan trọng."
+        }
+      ]
+    },
+    "ID705": {
+      "word": "Lage",
+      "artikel": "die",
+      "plural": "Lagen",
+      "english": "location, situation",
+      "vietnamese": "vị trí, tình hình",
+      "definition_en": "A location, situation.",
+      "definition_vi": "Một vị trí, tình hình.",
+      "examples": [
+        {
+          "de": "Die Lage ist wichtig.",
+          "en": "The location, situation is important.",
+          "vi": "Vị trí, tình hình thì quan trọng."
+        }
+      ]
+    },
+    "ID706": {
+      "word": "Lager",
+      "artikel": "das",
+      "plural": "Lager",
+      "english": "warehouse, camp",
+      "vietnamese": "kho, trại",
+      "definition_en": "A warehouse, camp.",
+      "definition_vi": "Một kho, trại.",
+      "examples": [
+        {
+          "de": "Das Lager ist wichtig.",
+          "en": "The warehouse, camp is important.",
+          "vi": "Kho, trại thì quan trọng."
+        }
+      ]
+    },
+    "ID707": {
+      "word": "Laken",
+      "artikel": "das",
+      "plural": "Laken",
+      "english": "sheet",
+      "vietnamese": "khăn trải giường",
+      "definition_en": "A sheet.",
+      "definition_vi": "Một khăn trải giường.",
+      "examples": [
+        {
+          "de": "Das Laken ist wichtig.",
+          "en": "The sheet is important.",
+          "vi": "Khăn trải giường thì quan trọng."
+        }
+      ]
+    },
+    "ID708": {
+      "word": "Landschaft",
+      "artikel": "die",
+      "plural": "Landschaften",
+      "english": "landscape",
+      "vietnamese": "phong cảnh",
+      "definition_en": "A landscape.",
+      "definition_vi": "Một phong cảnh.",
+      "examples": [
+        {
+          "de": "Die Landschaft ist wichtig.",
+          "en": "The landscape is important.",
+          "vi": "Phong cảnh thì quan trọng."
+        }
+      ]
+    },
+    "ID709": {
+      "word": "Landwirtschaft",
+      "artikel": "die",
+      "plural": "-",
+      "english": "agriculture",
+      "vietnamese": "nông nghiệp",
+      "definition_en": "A agriculture.",
+      "definition_vi": "Một nông nghiệp.",
+      "examples": [
+        {
+          "de": "Die Landwirtschaft ist wichtig.",
+          "en": "The agriculture is important.",
+          "vi": "Nông nghiệp thì quan trọng."
+        }
+      ]
+    },
+    "ID710": {
+      "word": "Last",
+      "artikel": "die",
+      "plural": "Lasten",
+      "english": "load, burden",
+      "vietnamese": "gánh nặng",
+      "definition_en": "A load, burden.",
+      "definition_vi": "Một gánh nặng.",
+      "examples": [
+        {
+          "de": "Die Last ist wichtig.",
+          "en": "The load, burden is important.",
+          "vi": "Gánh nặng thì quan trọng."
+        }
+      ]
+    },
+    "ID711": {
+      "word": "Laterne",
+      "artikel": "die",
+      "plural": "Laternen",
+      "english": "lantern",
+      "vietnamese": "đèn lồng",
+      "definition_en": "A lantern.",
+      "definition_vi": "Một đèn lồng.",
+      "examples": [
+        {
+          "de": "Die Laterne ist wichtig.",
+          "en": "The lantern is important.",
+          "vi": "Đèn lồng thì quan trọng."
+        }
+      ]
+    },
+    "ID712": {
+      "word": "Lautsprecher",
+      "artikel": "der",
+      "plural": "Lautsprecher",
+      "english": "loudspeaker",
+      "vietnamese": "loa",
+      "definition_en": "A loudspeaker.",
+      "definition_vi": "Một loa.",
+      "examples": [
+        {
+          "de": "Der Lautsprecher ist wichtig.",
+          "en": "The loudspeaker is important.",
+          "vi": "Loa thì quan trọng."
+        }
+      ]
+    },
+    "ID713": {
+      "word": "Leben",
+      "artikel": "das",
+      "plural": "Leben",
+      "english": "life",
+      "vietnamese": "cuộc sống",
+      "definition_en": "A life.",
+      "definition_vi": "Một cuộc sống.",
+      "examples": [
+        {
+          "de": "Das Leben ist wichtig.",
+          "en": "The life is important.",
+          "vi": "Cuộc sống thì quan trọng."
+        }
+      ]
+    },
+    "ID714": {
+      "word": "Leber",
+      "artikel": "die",
+      "plural": "Lebern",
+      "english": "liver",
+      "vietnamese": "gan",
+      "definition_en": "A liver.",
+      "definition_vi": "Một gan.",
+      "examples": [
+        {
+          "de": "Die Leber ist wichtig.",
+          "en": "The liver is important.",
+          "vi": "Gan thì quan trọng."
+        }
+      ]
+    },
+    "ID715": {
+      "word": "Leder",
+      "artikel": "das",
+      "plural": "-",
+      "english": "leather",
+      "vietnamese": "da",
+      "definition_en": "A leather.",
+      "definition_vi": "Một da.",
+      "examples": [
+        {
+          "de": "Das Leder ist wichtig.",
+          "en": "The leather is important.",
+          "vi": "Da thì quan trọng."
+        }
+      ]
+    },
+    "ID716": {
+      "word": "Lehre",
+      "artikel": "die",
+      "plural": "Lehren",
+      "english": "teaching, apprenticeship",
+      "vietnamese": "giáo lý, nghề học",
+      "definition_en": "A teaching, apprenticeship.",
+      "definition_vi": "Một giáo lý, nghề học.",
+      "examples": [
+        {
+          "de": "Die Lehre ist wichtig.",
+          "en": "The teaching, apprenticeship is important.",
+          "vi": "Giáo lý, nghề học thì quan trọng."
+        }
+      ]
+    },
+    "ID717": {
+      "word": "Lehrer",
+      "artikel": "der",
+      "plural": "Lehrer",
+      "english": "teacher",
+      "vietnamese": "giáo viên",
+      "definition_en": "A teacher.",
+      "definition_vi": "Một giáo viên.",
+      "examples": [
+        {
+          "de": "Der Lehrer ist wichtig.",
+          "en": "The teacher is important.",
+          "vi": "Giáo viên thì quan trọng."
+        }
+      ]
+    },
+    "ID718": {
+      "word": "Lehrerin",
+      "artikel": "die",
+      "plural": "Lehrerinnen",
+      "english": "female teacher",
+      "vietnamese": "giáo viên nữ",
+      "definition_en": "A female teacher.",
+      "definition_vi": "Một giáo viên nữ.",
+      "examples": [
+        {
+          "de": "Die Lehrerin ist wichtig.",
+          "en": "The female teacher is important.",
+          "vi": "Giáo viên nữ thì quan trọng."
+        }
+      ]
+    },
+    "ID719": {
+      "word": "Leiche",
+      "artikel": "die",
+      "plural": "Leichen",
+      "english": "corpse",
+      "vietnamese": "xác chết",
+      "definition_en": "A corpse.",
+      "definition_vi": "Một xác chết.",
+      "examples": [
+        {
+          "de": "Die Leiche ist wichtig.",
+          "en": "The corpse is important.",
+          "vi": "Xác chết thì quan trọng."
+        }
+      ]
+    },
+    "ID720": {
+      "word": "Leistung",
+      "artikel": "die",
+      "plural": "Leistungen",
+      "english": "performance, achievement",
+      "vietnamese": "thành tích",
+      "definition_en": "A performance, achievement.",
+      "definition_vi": "Một thành tích.",
+      "examples": [
+        {
+          "de": "Die Leistung ist wichtig.",
+          "en": "The performance, achievement is important.",
+          "vi": "Thành tích thì quan trọng."
+        }
+      ]
+    },
+    "ID721": {
+      "word": "Leiter",
+      "artikel": "der",
+      "plural": "Leiter",
+      "english": "ladder, director",
+      "vietnamese": "thang, giám đốc",
+      "definition_en": "A ladder, director.",
+      "definition_vi": "Một thang, giám đốc.",
+      "examples": [
+        {
+          "de": "Der Leiter ist wichtig.",
+          "en": "The ladder, director is important.",
+          "vi": "Thang, giám đốc thì quan trọng."
+        }
+      ]
+    },
+    "ID722": {
+      "word": "Leitung",
+      "artikel": "die",
+      "plural": "Leitungen",
+      "english": "management, pipe",
+      "vietnamese": "quản lý, ống",
+      "definition_en": "A management, pipe.",
+      "definition_vi": "Một quản lý, ống.",
+      "examples": [
+        {
+          "de": "Die Leitung ist wichtig.",
+          "en": "The management, pipe is important.",
+          "vi": "Quản lý, ống thì quan trọng."
+        }
+      ]
+    },
+    "ID723": {
+      "word": "Lernen",
+      "artikel": "das",
+      "plural": "-",
+      "english": "learning",
+      "vietnamese": "học tập",
+      "definition_en": "A learning.",
+      "definition_vi": "Một học tập.",
+      "examples": [
+        {
+          "de": "Das Lernen ist wichtig.",
+          "en": "The learning is important.",
+          "vi": "Học tập thì quan trọng."
+        }
+      ]
+    },
+    "ID724": {
+      "word": "Leser",
+      "artikel": "der",
+      "plural": "Leser",
+      "english": "reader",
+      "vietnamese": "độc giả",
+      "definition_en": "A reader.",
+      "definition_vi": "Một độc giả.",
+      "examples": [
+        {
+          "de": "Der Leser ist wichtig.",
+          "en": "The reader is important.",
+          "vi": "Độc giả thì quan trọng."
+        }
+      ]
+    },
+    "ID725": {
+      "word": "Leute",
+      "artikel": "die",
+      "plural": "-",
+      "english": "people",
+      "vietnamese": "mọi người",
+      "definition_en": "A people.",
+      "definition_vi": "Một mọi người.",
+      "examples": [
+        {
+          "de": "Die Leute ist wichtig.",
+          "en": "The people is important.",
+          "vi": "Mọi người thì quan trọng."
+        }
+      ]
+    },
+    "ID726": {
+      "word": "Licht",
+      "artikel": "das",
+      "plural": "Lichter",
+      "english": "light",
+      "vietnamese": "ánh sáng",
+      "definition_en": "A light.",
+      "definition_vi": "Một ánh sáng.",
+      "examples": [
+        {
+          "de": "Das Licht ist wichtig.",
+          "en": "The light is important.",
+          "vi": "Ánh sáng thì quan trọng."
+        }
+      ]
+    },
+    "ID727": {
+      "word": "Lid",
+      "artikel": "das",
+      "plural": "Lider",
+      "english": "eyelid",
+      "vietnamese": "mí mắt",
+      "definition_en": "A eyelid.",
+      "definition_vi": "Một mí mắt.",
+      "examples": [
+        {
+          "de": "Das Lid ist wichtig.",
+          "en": "The eyelid is important.",
+          "vi": "Mí mắt thì quan trọng."
+        }
+      ]
+    },
+    "ID728": {
+      "word": "Liebe",
+      "artikel": "die",
+      "plural": "-",
+      "english": "love",
+      "vietnamese": "tình yêu",
+      "definition_en": "A love.",
+      "definition_vi": "Một tình yêu.",
+      "examples": [
+        {
+          "de": "Die Liebe ist wichtig.",
+          "en": "The love is important.",
+          "vi": "Tình yêu thì quan trọng."
+        }
+      ]
+    },
+    "ID729": {
+      "word": "Lied",
+      "artikel": "das",
+      "plural": "Lieder",
+      "english": "song",
+      "vietnamese": "bài hát",
+      "definition_en": "A song.",
+      "definition_vi": "Một bài hát.",
+      "examples": [
+        {
+          "de": "Das Lied ist wichtig.",
+          "en": "The song is important.",
+          "vi": "Bài hát thì quan trọng."
+        }
+      ]
+    },
+    "ID730": {
+      "word": "Lieferant",
+      "artikel": "der",
+      "plural": "Lieferanten",
+      "english": "supplier",
+      "vietnamese": "nhà cung cấp",
+      "definition_en": "A supplier.",
+      "definition_vi": "Một nhà cung cấp.",
+      "examples": [
+        {
+          "de": "Der Lieferant ist wichtig.",
+          "en": "The supplier is important.",
+          "vi": "Nhà cung cấp thì quan trọng."
+        }
+      ]
+    },
+    "ID731": {
+      "word": "Lieferung",
+      "artikel": "die",
+      "plural": "Lieferungen",
+      "english": "delivery",
+      "vietnamese": "giao hàng",
+      "definition_en": "A delivery.",
+      "definition_vi": "Một giao hàng.",
+      "examples": [
+        {
+          "de": "Die Lieferung ist wichtig.",
+          "en": "The delivery is important.",
+          "vi": "Giao hàng thì quan trọng."
+        }
+      ]
+    },
+    "ID732": {
+      "word": "Limonade",
+      "artikel": "die",
+      "plural": "Limonaden",
+      "english": "lemonade",
+      "vietnamese": "nước chanh",
+      "definition_en": "A lemonade.",
+      "definition_vi": "Một nước chanh.",
+      "examples": [
+        {
+          "de": "Die Limonade ist wichtig.",
+          "en": "The lemonade is important.",
+          "vi": "Nước chanh thì quan trọng."
+        }
+      ]
+    },
+    "ID733": {
+      "word": "Lippe",
+      "artikel": "die",
+      "plural": "Lippen",
+      "english": "lip",
+      "vietnamese": "môi",
+      "definition_en": "A lip.",
+      "definition_vi": "Một môi.",
+      "examples": [
+        {
+          "de": "Die Lippe ist wichtig.",
+          "en": "The lip is important.",
+          "vi": "Môi thì quan trọng."
+        }
+      ]
+    },
+    "ID734": {
+      "word": "Liste",
+      "artikel": "die",
+      "plural": "Listen",
+      "english": "list",
+      "vietnamese": "danh sách",
+      "definition_en": "A list.",
+      "definition_vi": "Một danh sách.",
+      "examples": [
+        {
+          "de": "Die Liste ist wichtig.",
+          "en": "The list is important.",
+          "vi": "Danh sách thì quan trọng."
+        }
+      ]
+    },
+    "ID735": {
+      "word": "Literatur",
+      "artikel": "die",
+      "plural": "Literaturen",
+      "english": "literature",
+      "vietnamese": "văn học",
+      "definition_en": "A literature.",
+      "definition_vi": "Một văn học.",
+      "examples": [
+        {
+          "de": "Die Literatur ist wichtig.",
+          "en": "The literature is important.",
+          "vi": "Văn học thì quan trọng."
+        }
+      ]
+    },
+    "ID736": {
+      "word": "Lkw",
+      "artikel": "der",
+      "plural": "Lkws",
+      "english": "truck",
+      "vietnamese": "xe tải",
+      "definition_en": "A truck.",
+      "definition_vi": "Một xe tải.",
+      "examples": [
+        {
+          "de": "Der Lkw ist wichtig.",
+          "en": "The truck is important.",
+          "vi": "Xe tải thì quan trọng."
+        }
+      ]
+    },
+    "ID737": {
+      "word": "Loch",
+      "artikel": "das",
+      "plural": "Löcher",
+      "english": "hole",
+      "vietnamese": "lỗ",
+      "definition_en": "A hole.",
+      "definition_vi": "Một lỗ.",
+      "examples": [
+        {
+          "de": "Das Loch ist wichtig.",
+          "en": "The hole is important.",
+          "vi": "Lỗ thì quan trọng."
+        }
+      ]
+    },
+    "ID738": {
+      "word": "Löffel",
+      "artikel": "der",
+      "plural": "Löffel",
+      "english": "spoon",
+      "vietnamese": "cái thìa",
+      "definition_en": "A spoon.",
+      "definition_vi": "Một cái thìa.",
+      "examples": [
+        {
+          "de": "Der Löffel ist wichtig.",
+          "en": "The spoon is important.",
+          "vi": "Cái thìa thì quan trọng."
+        }
+      ]
+    },
+    "ID739": {
+      "word": "Lohn",
+      "artikel": "der",
+      "plural": "Löhne",
+      "english": "wage",
+      "vietnamese": "tiền công",
+      "definition_en": "A wage.",
+      "definition_vi": "Một tiền công.",
+      "examples": [
+        {
+          "de": "Der Lohn ist wichtig.",
+          "en": "The wage is important.",
+          "vi": "Tiền công thì quan trọng."
+        }
+      ]
+    },
+    "ID740": {
+      "word": "Lokal",
+      "artikel": "das",
+      "plural": "Lokale",
+      "english": "pub, restaurant",
+      "vietnamese": "quán rượu",
+      "definition_en": "A pub, restaurant.",
+      "definition_vi": "Một quán rượu.",
+      "examples": [
+        {
+          "de": "Das Lokal ist wichtig.",
+          "en": "The pub, restaurant is important.",
+          "vi": "Quán rượu thì quan trọng."
+        }
+      ]
+    },
+    "ID741": {
+      "word": "Lücke",
+      "artikel": "die",
+      "plural": "Lücken",
+      "english": "gap",
+      "vietnamese": "khoảng trống",
+      "definition_en": "A gap.",
+      "definition_vi": "Một khoảng trống.",
+      "examples": [
+        {
+          "de": "Die Lücke ist wichtig.",
+          "en": "The gap is important.",
+          "vi": "Khoảng trống thì quan trọng."
+        }
+      ]
+    },
+    "ID742": {
+      "word": "Lunge",
+      "artikel": "die",
+      "plural": "Lungen",
+      "english": "lung",
+      "vietnamese": "phổi",
+      "definition_en": "A lung.",
+      "definition_vi": "Một phổi.",
+      "examples": [
+        {
+          "de": "Die Lunge ist wichtig.",
+          "en": "The lung is important.",
+          "vi": "Phổi thì quan trọng."
+        }
+      ]
+    },
+    "ID743": {
+      "word": "Lust",
+      "artikel": "die",
+      "plural": "Lüste",
+      "english": "desire, pleasure",
+      "vietnamese": "ham muốn",
+      "definition_en": "A desire, pleasure.",
+      "definition_vi": "Một ham muốn.",
+      "examples": [
+        {
+          "de": "Die Lust ist wichtig.",
+          "en": "The desire, pleasure is important.",
+          "vi": "Ham muốn thì quan trọng."
+        }
+      ]
+    }
+  }
+}

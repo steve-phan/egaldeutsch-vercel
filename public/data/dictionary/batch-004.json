@@ -1,0 +1,775 @@
+{
+  "byWord": {
+    "bank": "ID121",
+    "post": "ID122",
+    "bahnhof": "ID123",
+    "flughafen": "ID124",
+    "zug": "ID125",
+    "bus": "ID126",
+    "taxi": "ID127",
+    "fahrrad": "ID128",
+    "motorrad": "ID129",
+    "flugzeug": "ID130",
+    "schiff": "ID131",
+    "ticket": "ID132",
+    "koffer": "ID133",
+    "tasche": "ID134",
+    "rucksack": "ID135",
+    "geldbörse": "ID136",
+    "schlüssel": "ID137",
+    "brille": "ID138",
+    "kleidung": "ID139",
+    "hemd": "ID140",
+    "hose": "ID141",
+    "rock": "ID142",
+    "kleid": "ID143",
+    "jacke": "ID144",
+    "mantel": "ID145",
+    "schuhe": "ID146",
+    "socke": "ID147",
+    "hut": "ID148",
+    "mütze": "ID149",
+    "handschuh": "ID150",
+    "farbe": "ID151",
+    "rot": "ID152",
+    "blau": "ID153",
+    "grün": "ID154",
+    "gelb": "ID155",
+    "schwarz": "ID156",
+    "weiß": "ID157",
+    "grau": "ID158",
+    "braun": "ID159",
+    "orange": "ID160"
+  },
+  "byEnglish": {
+    "bank": ["ID121"],
+    "post office": ["ID122"],
+    "train station": ["ID123"],
+    "airport": ["ID124"],
+    "train": ["ID125"],
+    "bus": ["ID126"],
+    "taxi": ["ID127"],
+    "bicycle": ["ID128"],
+    "motorcycle": ["ID129"],
+    "airplane": ["ID130"],
+    "ship": ["ID131"],
+    "ticket": ["ID132"],
+    "suitcase": ["ID133"],
+    "bag": ["ID134"],
+    "backpack": ["ID135"],
+    "wallet": ["ID136"],
+    "key": ["ID137"],
+    "glasses": ["ID138"],
+    "clothing": ["ID139"],
+    "shirt": ["ID140"],
+    "pants": ["ID141"],
+    "skirt": ["ID142"],
+    "dress": ["ID143"],
+    "jacket": ["ID144"],
+    "coat": ["ID145"],
+    "shoes": ["ID146"],
+    "sock": ["ID147"],
+    "hat": ["ID148"],
+    "cap": ["ID149"],
+    "glove": ["ID150"],
+    "color": ["ID151"],
+    "red": ["ID152"],
+    "blue": ["ID153"],
+    "green": ["ID154"],
+    "yellow": ["ID155"],
+    "black": ["ID156"],
+    "white": ["ID157"],
+    "gray": ["ID158"],
+    "brown": ["ID159"],
+    "orange": ["ID160"]
+  },
+  "byVietnamese": {
+    "ngân hàng": ["ID121"],
+    "bưu điện": ["ID122"],
+    "ga tàu": ["ID123"],
+    "sân bay": ["ID124"],
+    "tàu hỏa": ["ID125"],
+    "xe buýt": ["ID126"],
+    "taxi": ["ID127"],
+    "xe đạp": ["ID128"],
+    "xe máy": ["ID129"],
+    "máy bay": ["ID130"],
+    "tàu thủy": ["ID131"],
+    "vé": ["ID132"],
+    "vali": ["ID133"],
+    "túi": ["ID134"],
+    "ba lô": ["ID135"],
+    "ví tiền": ["ID136"],
+    "chìa khóa": ["ID137"],
+    "kính": ["ID138"],
+    "quần áo": ["ID139"],
+    "áo sơ mi": ["ID140"],
+    "quần": ["ID141"],
+    "váy": ["ID142"],
+    "đầm": ["ID143"],
+    "áo khoác": ["ID144"],
+    "áo choàng": ["ID145"],
+    "giày": ["ID146"],
+    "tất": ["ID147"],
+    "mũ": ["ID148"],
+    "nón": ["ID149"],
+    "găng tay": ["ID150"],
+    "màu sắc": ["ID151"],
+    "đỏ": ["ID152"],
+    "xanh dương": ["ID153"],
+    "xanh lá": ["ID154"],
+    "vàng": ["ID155"],
+    "đen": ["ID156"],
+    "trắng": ["ID157"],
+    "xám": ["ID158"],
+    "nâu": ["ID159"],
+    "cam": ["ID160"]
+  },
+  "byArtikel": {
+    "der": ["ID123", "ID125", "ID126", "ID129", "ID133", "ID135", "ID137", "ID145", "ID148", "ID150", "ID152"],
+    "die": ["ID121", "ID122", "ID134", "ID136", "ID138", "ID139", "ID141", "ID144", "ID147", "ID149", "ID151"],
+    "das": ["ID124", "ID127", "ID128", "ID130", "ID131", "ID132", "ID140", "ID142", "ID143", "ID146", "ID153", "ID154", "ID155", "ID156", "ID157", "ID158", "ID159", "ID160"]
+  },
+  "entries": {
+    "ID121": {
+      "word": "Bank",
+      "artikel": "die",
+      "plural": "Banken",
+      "english": "bank",
+      "vietnamese": "ngân hàng",
+      "definition_en": "A financial institution.",
+      "definition_vi": "Tổ chức tài chính.",
+      "examples": [
+        {
+          "de": "Die Bank ist dort.",
+          "en": "The bank is there.",
+          "vi": "Ngân hàng ở đó."
+        }
+      ]
+    },
+    "ID122": {
+      "word": "Post",
+      "artikel": "die",
+      "plural": "Posten",
+      "english": "post office",
+      "vietnamese": "bưu điện",
+      "definition_en": "A place for mailing letters.",
+      "definition_vi": "Nơi gửi thư.",
+      "examples": [
+        {
+          "de": "Ich gehe zur Post.",
+          "en": "I go to the post office.",
+          "vi": "Tôi đi bưu điện."
+        }
+      ]
+    },
+    "ID123": {
+      "word": "Bahnhof",
+      "artikel": "der",
+      "plural": "Bahnhöfe",
+      "english": "train station",
+      "vietnamese": "ga tàu",
+      "definition_en": "A place where trains stop.",
+      "definition_vi": "Nơi tàu dừng.",
+      "examples": [
+        {
+          "de": "Der Bahnhof ist groß.",
+          "en": "The train station is big.",
+          "vi": "Ga tàu lớn."
+        }
+      ]
+    },
+    "ID124": {
+      "word": "Flughafen",
+      "artikel": "der",
+      "plural": "Flughäfen",
+      "english": "airport",
+      "vietnamese": "sân bay",
+      "definition_en": "A place where airplanes take off and land.",
+      "definition_vi": "Nơi máy bay cất cánh và hạ cánh.",
+      "examples": [
+        {
+          "de": "Der Flughafen ist weit.",
+          "en": "The airport is far.",
+          "vi": "Sân bay xa."
+        }
+      ]
+    },
+    "ID125": {
+      "word": "Zug",
+      "artikel": "der",
+      "plural": "Züge",
+      "english": "train",
+      "vietnamese": "tàu hỏa",
+      "definition_en": "A rail vehicle for passengers.",
+      "definition_vi": "Phương tiện đường sắt cho hành khách.",
+      "examples": [
+        {
+          "de": "Der Zug fährt schnell.",
+          "en": "The train goes fast.",
+          "vi": "Tàu hỏa chạy nhanh."
+        }
+      ]
+    },
+    "ID126": {
+      "word": "Bus",
+      "artikel": "der",
+      "plural": "Busse",
+      "english": "bus",
+      "vietnamese": "xe buýt",
+      "definition_en": "A large vehicle for passengers.",
+      "definition_vi": "Phương tiện lớn cho hành khách.",
+      "examples": [
+        {
+          "de": "Der Bus kommt um acht Uhr.",
+          "en": "The bus comes at eight o'clock.",
+          "vi": "Xe buýt đến lúc tám giờ."
+        }
+      ]
+    },
+    "ID127": {
+      "word": "Taxi",
+      "artikel": "das",
+      "plural": "Taxis",
+      "english": "taxi",
+      "vietnamese": "taxi",
+      "definition_en": "A car for hire.",
+      "definition_vi": "Xe cho thuê.",
+      "examples": [
+        {
+          "de": "Ich nehme ein Taxi.",
+          "en": "I take a taxi.",
+          "vi": "Tôi bắt taxi."
+        }
+      ]
+    },
+    "ID128": {
+      "word": "Fahrrad",
+      "artikel": "das",
+      "plural": "Fahrräder",
+      "english": "bicycle",
+      "vietnamese": "xe đạp",
+      "definition_en": "A two-wheeled vehicle.",
+      "definition_vi": "Phương tiện hai bánh.",
+      "examples": [
+        {
+          "de": "Ich fahre mit dem Fahrrad.",
+          "en": "I ride a bicycle.",
+          "vi": "Tôi đi xe đạp."
+        }
+      ]
+    },
+    "ID129": {
+      "word": "Motorrad",
+      "artikel": "das",
+      "plural": "Motorräder",
+      "english": "motorcycle",
+      "vietnamese": "xe máy",
+      "definition_en": "A motorized two-wheeled vehicle.",
+      "definition_vi": "Phương tiện hai bánh có động cơ.",
+      "examples": [
+        {
+          "de": "Das Motorrad ist schnell.",
+          "en": "The motorcycle is fast.",
+          "vi": "Xe máy nhanh."
+        }
+      ]
+    },
+    "ID130": {
+      "word": "Flugzeug",
+      "artikel": "das",
+      "plural": "Flugzeuge",
+      "english": "airplane",
+      "vietnamese": "máy bay",
+      "definition_en": "An aircraft for flying.",
+      "definition_vi": "Phương tiện bay.",
+      "examples": [
+        {
+          "de": "Das Flugzeug fliegt hoch.",
+          "en": "The airplane flies high.",
+          "vi": "Máy bay bay cao."
+        }
+      ]
+    },
+    "ID131": {
+      "word": "Schiff",
+      "artikel": "das",
+      "plural": "Schiffe",
+      "english": "ship",
+      "vietnamese": "tàu thủy",
+      "definition_en": "A large boat.",
+      "definition_vi": "Thuyền lớn.",
+      "examples": [
+        {
+          "de": "Das Schiff ist groß.",
+          "en": "The ship is big.",
+          "vi": "Tàu thủy lớn."
+        }
+      ]
+    },
+    "ID132": {
+      "word": "Ticket",
+      "artikel": "das",
+      "plural": "Tickets",
+      "english": "ticket",
+      "vietnamese": "vé",
+      "definition_en": "A document for travel or entry.",
+      "definition_vi": "Giấy tờ để đi lại hoặc vào cửa.",
+      "examples": [
+        {
+          "de": "Ich kaufe ein Ticket.",
+          "en": "I buy a ticket.",
+          "vi": "Tôi mua vé."
+        }
+      ]
+    },
+    "ID133": {
+      "word": "Koffer",
+      "artikel": "der",
+      "plural": "Koffer",
+      "english": "suitcase",
+      "vietnamese": "vali",
+      "definition_en": "A case for carrying clothes.",
+      "definition_vi": "Vali để mang quần áo.",
+      "examples": [
+        {
+          "de": "Der Koffer ist schwer.",
+          "en": "The suitcase is heavy.",
+          "vi": "Vali nặng."
+        }
+      ]
+    },
+    "ID134": {
+      "word": "Tasche",
+      "artikel": "die",
+      "plural": "Taschen",
+      "english": "bag",
+      "vietnamese": "túi",
+      "definition_en": "A container for carrying things.",
+      "definition_vi": "Túi để đựng đồ.",
+      "examples": [
+        {
+          "de": "Die Tasche ist voll.",
+          "en": "The bag is full.",
+          "vi": "Túi đầy."
+        }
+      ]
+    },
+    "ID135": {
+      "word": "Rucksack",
+      "artikel": "der",
+      "plural": "Rucksäcke",
+      "english": "backpack",
+      "vietnamese": "ba lô",
+      "definition_en": "A bag carried on the back.",
+      "definition_vi": "Túi đeo trên lưng.",
+      "examples": [
+        {
+          "de": "Der Rucksack ist neu.",
+          "en": "The backpack is new.",
+          "vi": "Ba lô mới."
+        }
+      ]
+    },
+    "ID136": {
+      "word": "Geldbörse",
+      "artikel": "die",
+      "plural": "Geldbörsen",
+      "english": "wallet",
+      "vietnamese": "ví tiền",
+      "definition_en": "A small container for money.",
+      "definition_vi": "Túi nhỏ đựng tiền.",
+      "examples": [
+        {
+          "de": "Die Geldbörse ist leer.",
+          "en": "The wallet is empty.",
+          "vi": "Ví tiền trống."
+        }
+      ]
+    },
+    "ID137": {
+      "word": "Schlüssel",
+      "artikel": "der",
+      "plural": "Schlüssel",
+      "english": "key",
+      "vietnamese": "chìa khóa",
+      "definition_en": "A device for opening locks.",
+      "definition_vi": "Thiết bị để mở khóa.",
+      "examples": [
+        {
+          "de": "Wo ist der Schlüssel?",
+          "en": "Where is the key?",
+          "vi": "Chìa khóa ở đâu?"
+        }
+      ]
+    },
+    "ID138": {
+      "word": "Brille",
+      "artikel": "die",
+      "plural": "Brillen",
+      "english": "glasses",
+      "vietnamese": "kính",
+      "definition_en": "Lenses for correcting vision.",
+      "definition_vi": "Thấu kính để chỉnh thị lực.",
+      "examples": [
+        {
+          "de": "Ich brauche eine Brille.",
+          "en": "I need glasses.",
+          "vi": "Tôi cần kính."
+        }
+      ]
+    },
+    "ID139": {
+      "word": "Kleidung",
+      "artikel": "die",
+      "plural": "Kleidung",
+      "english": "clothing",
+      "vietnamese": "quần áo",
+      "definition_en": "Items worn on the body.",
+      "definition_vi": "Đồ mặc trên người.",
+      "examples": [
+        {
+          "de": "Die Kleidung ist schön.",
+          "en": "The clothing is beautiful.",
+          "vi": "Quần áo đẹp."
+        }
+      ]
+    },
+    "ID140": {
+      "word": "Hemd",
+      "artikel": "das",
+      "plural": "Hemden",
+      "english": "shirt",
+      "vietnamese": "áo sơ mi",
+      "definition_en": "A garment for the upper body.",
+      "definition_vi": "Quần áo cho phần trên cơ thể.",
+      "examples": [
+        {
+          "de": "Das Hemd ist weiß.",
+          "en": "The shirt is white.",
+          "vi": "Áo sơ mi trắng."
+        }
+      ]
+    },
+    "ID141": {
+      "word": "Hose",
+      "artikel": "die",
+      "plural": "Hosen",
+      "english": "pants",
+      "vietnamese": "quần",
+      "definition_en": "A garment for the legs.",
+      "definition_vi": "Quần áo cho chân.",
+      "examples": [
+        {
+          "de": "Die Hose ist blau.",
+          "en": "The pants are blue.",
+          "vi": "Quần xanh."
+        }
+      ]
+    },
+    "ID142": {
+      "word": "Rock",
+      "artikel": "der",
+      "plural": "Röcke",
+      "english": "skirt",
+      "vietnamese": "váy",
+      "definition_en": "A garment hanging from the waist.",
+      "definition_vi": "Quần áo treo từ eo.",
+      "examples": [
+        {
+          "de": "Der Rock ist kurz.",
+          "en": "The skirt is short.",
+          "vi": "Váy ngắn."
+        }
+      ]
+    },
+    "ID143": {
+      "word": "Kleid",
+      "artikel": "das",
+      "plural": "Kleider",
+      "english": "dress",
+      "vietnamese": "đầm",
+      "definition_en": "A one-piece garment for women.",
+      "definition_vi": "Quần áo một mảnh cho phụ nữ.",
+      "examples": [
+        {
+          "de": "Das Kleid ist elegant.",
+          "en": "The dress is elegant.",
+          "vi": "Đầm thanh lịch."
+        }
+      ]
+    },
+    "ID144": {
+      "word": "Jacke",
+      "artikel": "die",
+      "plural": "Jacken",
+      "english": "jacket",
+      "vietnamese": "áo khoác",
+      "definition_en": "A short coat.",
+      "definition_vi": "Áo khoác ngắn.",
+      "examples": [
+        {
+          "de": "Die Jacke ist warm.",
+          "en": "The jacket is warm.",
+          "vi": "Áo khoác ấm."
+        }
+      ]
+    },
+    "ID145": {
+      "word": "Mantel",
+      "artikel": "der",
+      "plural": "Mäntel",
+      "english": "coat",
+      "vietnamese": "áo choàng",
+      "definition_en": "A long outer garment.",
+      "definition_vi": "Áo khoác dài bên ngoài.",
+      "examples": [
+        {
+          "de": "Der Mantel ist lang.",
+          "en": "The coat is long.",
+          "vi": "Áo choàng dài."
+        }
+      ]
+    },
+    "ID146": {
+      "word": "Schuhe",
+      "artikel": "die",
+      "plural": "Schuhe",
+      "english": "shoes",
+      "vietnamese": "giày",
+      "definition_en": "Footwear covering the foot.",
+      "definition_vi": "Giày dép che chân.",
+      "examples": [
+        {
+          "de": "Die Schuhe sind neu.",
+          "en": "The shoes are new.",
+          "vi": "Giày mới."
+        }
+      ]
+    },
+    "ID147": {
+      "word": "Socke",
+      "artikel": "die",
+      "plural": "Socken",
+      "english": "sock",
+      "vietnamese": "tất",
+      "definition_en": "A garment for the foot.",
+      "definition_vi": "Quần áo cho bàn chân.",
+      "examples": [
+        {
+          "de": "Die Socke ist warm.",
+          "en": "The sock is warm.",
+          "vi": "Tất ấm."
+        }
+      ]
+    },
+    "ID148": {
+      "word": "Hut",
+      "artikel": "der",
+      "plural": "Hüte",
+      "english": "hat",
+      "vietnamese": "mũ",
+      "definition_en": "A head covering with a brim.",
+      "definition_vi": "Nón che đầu có vành.",
+      "examples": [
+        {
+          "de": "Der Hut ist elegant.",
+          "en": "The hat is elegant.",
+          "vi": "Mũ thanh lịch."
+        }
+      ]
+    },
+    "ID149": {
+      "word": "Mütze",
+      "artikel": "die",
+      "plural": "Mützen",
+      "english": "cap",
+      "vietnamese": "nón",
+      "definition_en": "A soft head covering.",
+      "definition_vi": "Nón mềm che đầu.",
+      "examples": [
+        {
+          "de": "Die Mütze ist rot.",
+          "en": "The cap is red.",
+          "vi": "Nón đỏ."
+        }
+      ]
+    },
+    "ID150": {
+      "word": "Handschuh",
+      "artikel": "der",
+      "plural": "Handschuhe",
+      "english": "glove",
+      "vietnamese": "găng tay",
+      "definition_en": "A covering for the hand.",
+      "definition_vi": "Bao tay.",
+      "examples": [
+        {
+          "de": "Der Handschuh ist warm.",
+          "en": "The glove is warm.",
+          "vi": "Găng tay ấm."
+        }
+      ]
+    },
+    "ID151": {
+      "word": "Farbe",
+      "artikel": "die",
+      "plural": "Farben",
+      "english": "color",
+      "vietnamese": "màu sắc",
+      "definition_en": "The visual property of objects.",
+      "definition_vi": "Thuộc tính thị giác của vật thể.",
+      "examples": [
+        {
+          "de": "Welche Farbe magst du?",
+          "en": "Which color do you like?",
+          "vi": "Bạn thích màu gì?"
+        }
+      ]
+    },
+    "ID152": {
+      "word": "Rot",
+      "artikel": "das",
+      "plural": "Rot",
+      "english": "red",
+      "vietnamese": "đỏ",
+      "definition_en": "The color of blood.",
+      "definition_vi": "Màu của máu.",
+      "examples": [
+        {
+          "de": "Das Rot ist schön.",
+          "en": "The red is beautiful.",
+          "vi": "Màu đỏ đẹp."
+        }
+      ]
+    },
+    "ID153": {
+      "word": "Blau",
+      "artikel": "das",
+      "plural": "Blau",
+      "english": "blue",
+      "vietnamese": "xanh dương",
+      "definition_en": "The color of the sky.",
+      "definition_vi": "Màu của bầu trời.",
+      "examples": [
+        {
+          "de": "Das Blau ist hell.",
+          "en": "The blue is bright.",
+          "vi": "Màu xanh dương sáng."
+        }
+      ]
+    },
+    "ID154": {
+      "word": "Grün",
+      "artikel": "das",
+      "plural": "Grün",
+      "english": "green",
+      "vietnamese": "xanh lá",
+      "definition_en": "The color of grass.",
+      "definition_vi": "Màu của cỏ.",
+      "examples": [
+        {
+          "de": "Das Grün ist frisch.",
+          "en": "The green is fresh.",
+          "vi": "Màu xanh lá tươi."
+        }
+      ]
+    },
+    "ID155": {
+      "word": "Gelb",
+      "artikel": "das",
+      "plural": "Gelb",
+      "english": "yellow",
+      "vietnamese": "vàng",
+      "definition_en": "The color of the sun.",
+      "definition_vi": "Màu của mặt trời.",
+      "examples": [
+        {
+          "de": "Das Gelb ist hell.",
+          "en": "The yellow is bright.",
+          "vi": "Màu vàng sáng."
+        }
+      ]
+    },
+    "ID156": {
+      "word": "Schwarz",
+      "artikel": "das",
+      "plural": "Schwarz",
+      "english": "black",
+      "vietnamese": "đen",
+      "definition_en": "The darkest color.",
+      "definition_vi": "Màu tối nhất.",
+      "examples": [
+        {
+          "de": "Das Schwarz ist dunkel.",
+          "en": "The black is dark.",
+          "vi": "Màu đen tối."
+        }
+      ]
+    },
+    "ID157": {
+      "word": "Weiß",
+      "artikel": "das",
+      "plural": "Weiß",
+      "english": "white",
+      "vietnamese": "trắng",
+      "definition_en": "The lightest color.",
+      "definition_vi": "Màu sáng nhất.",
+      "examples": [
+        {
+          "de": "Das Weiß ist hell.",
+          "en": "The white is bright.",
+          "vi": "Màu trắng sáng."
+        }
+      ]
+    },
+    "ID158": {
+      "word": "Grau",
+      "artikel": "das",
+      "plural": "Grau",
+      "english": "gray",
+      "vietnamese": "xám",
+      "definition_en": "A color between black and white.",
+      "definition_vi": "Màu giữa đen và trắng.",
+      "examples": [
+        {
+          "de": "Das Grau ist neutral.",
+          "en": "The gray is neutral.",
+          "vi": "Màu xám trung tính."
+        }
+      ]
+    },
+    "ID159": {
+      "word": "Braun",
+      "artikel": "das",
+      "plural": "Braun",
+      "english": "brown",
+      "vietnamese": "nâu",
+      "definition_en": "The color of wood.",
+      "definition_vi": "Màu của gỗ.",
+      "examples": [
+        {
+          "de": "Das Braun ist warm.",
+          "en": "The brown is warm.",
+          "vi": "Màu nâu ấm."
+        }
+      ]
+    },
+    "ID160": {
+      "word": "Orange",
+      "artikel": "das",
+      "plural": "Orange",
+      "english": "orange",
+      "vietnamese": "cam",
+      "definition_en": "A color between red and yellow.",
+      "definition_vi": "Màu giữa đỏ và vàng.",
+      "examples": [
+        {
+          "de": "Das Orange ist hell.",
+          "en": "The orange is bright.",
+          "vi": "Màu cam sáng."
+        }
+      ]
+    }
+  }
+}

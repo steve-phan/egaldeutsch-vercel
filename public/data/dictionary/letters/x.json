@@ -1,0 +1,34 @@
+{
+  "byWord": {
+    "xylophon": "ID256"
+  },
+  "byEnglish": {
+    "xylophone": ["ID256"]
+  },
+  "byVietnamese": {
+    "đàn mộc cầm": ["ID256"]
+  },
+  "byArtikel": {
+    "der": [],
+    "die": [],
+    "das": ["ID256"]
+  },
+  "entries": {
+    "ID256": {
+      "word": "Xylophon",
+      "artikel": "das",
+      "plural": "Xylophone",
+      "english": "xylophone",
+      "vietnamese": "đàn mộc cầm",
+      "definition_en": "A musical instrument with wooden bars.",
+      "definition_vi": "Nhạc cụ có các thanh gỗ.",
+      "examples": [
+        {
+          "de": "Das Xylophon klingt schön.",
+          "en": "The xylophone sounds beautiful.",
+          "vi": "Đàn mộc cầm nghe hay."
+        }
+      ]
+    }
+  }
+}

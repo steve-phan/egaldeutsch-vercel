@@ -1,0 +1,558 @@
+{
+  "byWord": {
+    "auto": "ID005",
+    "apfel": "ID029",
+    "auge": "ID050",
+    "arm": "ID057",
+    "arbeit": "ID099",
+    "arzt": "ID104",
+    "affe": "ID198",
+    "abend": "ID202",
+    "anfang": "ID209",
+    "antwort": "ID239",
+    "adresse": "ID267",
+    "alter": "ID268",
+    "angst": "ID269",
+    "anzug": "ID270",
+    "appetit": "ID271",
+    "april": "ID272",
+    "armband": "ID273",
+    "ast": "ID274",
+    "atmosphäre": "ID275",
+    "aufgabe": "ID276",
+    "aufzug": "ID277",
+    "august": "ID278",
+    "ausflug": "ID279",
+    "ausgang": "ID280",
+    "ausland": "ID281",
+    "ausstellung": "ID282",
+    "ausweis": "ID283"
+  },
+  "byEnglish": {
+    "car": ["ID005"],
+    "apple": ["ID029"],
+    "eye": ["ID050"],
+    "arm": ["ID057"],
+    "work": ["ID099"],
+    "doctor": ["ID104"],
+    "monkey": ["ID198"],
+    "evening": ["ID202"],
+    "beginning": ["ID209"],
+    "answer": ["ID239"],
+    "address": ["ID267"],
+    "age": ["ID268"],
+    "fear": ["ID269"],
+    "suit": ["ID270"],
+    "appetite": ["ID271"],
+    "april": ["ID272"],
+    "bracelet": ["ID273"],
+    "branch": ["ID274"],
+    "atmosphere": ["ID275"],
+    "task": ["ID276"],
+    "elevator": ["ID277"],
+    "august": ["ID278"],
+    "excursion": ["ID279"],
+    "exit": ["ID280"],
+    "foreign country": ["ID281"],
+    "exhibition": ["ID282"],
+    "id card": ["ID283"]
+  },
+  "byVietnamese": {
+    "xe ô tô": ["ID005"],
+    "quả táo": ["ID029"],
+    "mắt": ["ID050"],
+    "cánh tay": ["ID057"],
+    "công việc": ["ID099"],
+    "bác sĩ": ["ID104"],
+    "con khỉ": ["ID198"],
+    "buổi tối": ["ID202"],
+    "khởi đầu": ["ID209"],
+    "câu trả lời": ["ID239"],
+    "địa chỉ": ["ID267"],
+    "tuổi": ["ID268"],
+    "sợ hãi": ["ID269"],
+    "bộ vest": ["ID270"],
+    "sự ngon miệng": ["ID271"],
+    "tháng tư": ["ID272"],
+    "vòng tay": ["ID273"],
+    "cành cây": ["ID274"],
+    "bầu không khí": ["ID275"],
+    "nhiệm vụ": ["ID276"],
+    "thang máy": ["ID277"],
+    "tháng tám": ["ID278"],
+    "chuyến đi": ["ID279"],
+    "lối ra": ["ID280"],
+    "nước ngoài": ["ID281"],
+    "triển lãm": ["ID282"],
+    "thẻ căn cước": ["ID283"]
+  },
+  "byArtikel": {
+    "der": [
+      "ID029",
+      "ID057",
+      "ID104",
+      "ID198",
+      "ID202",
+      "ID209",
+      "ID270",
+      "ID271",
+      "ID272",
+      "ID274",
+      "ID277",
+      "ID278",
+      "ID279",
+      "ID280",
+      "ID283"
+    ],
+    "die": [
+      "ID099",
+      "ID239",
+      "ID267",
+      "ID269",
+      "ID275",
+      "ID276",
+      "ID282"
+    ],
+    "das": [
+      "ID005",
+      "ID050",
+      "ID268",
+      "ID273",
+      "ID281"
+    ]
+  },
+  "entries": {
+    "ID005": {
+      "word": "Auto",
+      "artikel": "das",
+      "plural": "Autos",
+      "english": "car",
+      "vietnamese": "xe ô tô",
+      "definition_en": "A road vehicle with an engine and four wheels.",
+      "definition_vi": "Một phương tiện đường bộ có động cơ và bốn bánh.",
+      "examples": [
+        {
+          "de": "Das Auto ist schnell.",
+          "en": "The car is fast.",
+          "vi": "Chiếc xe ô tô thì nhanh."
+        }
+      ]
+    },
+    "ID029": {
+      "word": "Apfel",
+      "artikel": "der",
+      "plural": "Äpfel",
+      "english": "apple",
+      "vietnamese": "quả táo",
+      "definition_en": "A round fruit with red or green skin.",
+      "definition_vi": "Một loại trái cây tròn có vỏ đỏ hoặc xanh.",
+      "examples": [
+        {
+          "de": "Der Apfel ist rot.",
+          "en": "The apple is red.",
+          "vi": "Quả táo màu đỏ."
+        }
+      ]
+    },
+    "ID050": {
+      "word": "Auge",
+      "artikel": "das",
+      "plural": "Augen",
+      "english": "eye",
+      "vietnamese": "mắt",
+      "definition_en": "An organ of sight.",
+      "definition_vi": "Cơ quan thị giác.",
+      "examples": [
+        {
+          "de": "Sie hat blaue Augen.",
+          "en": "She has blue eyes.",
+          "vi": "Cô ấy có đôi mắt xanh."
+        }
+      ]
+    },
+    "ID057": {
+      "word": "Arm",
+      "artikel": "der",
+      "plural": "Arme",
+      "english": "arm",
+      "vietnamese": "cánh tay",
+      "definition_en": "The upper limb of the body.",
+      "definition_vi": "Chi trên của cơ thể.",
+      "examples": [
+        {
+          "de": "Er hebt den Arm.",
+          "en": "He raises his arm.",
+          "vi": "Anh ấy giơ tay."
+        }
+      ]
+    },
+    "ID099": {
+      "word": "Arbeit",
+      "artikel": "die",
+      "plural": "Arbeiten",
+      "english": "work",
+      "vietnamese": "công việc",
+      "definition_en": "Activity involving effort.",
+      "definition_vi": "Hoạt động liên quan đến nỗ lực.",
+      "examples": [
+        {
+          "de": "Die Arbeit ist schwer.",
+          "en": "The work is hard.",
+          "vi": "Công việc khó."
+        }
+      ]
+    },
+    "ID104": {
+      "word": "Arzt",
+      "artikel": "der",
+      "plural": "Ärzte",
+      "english": "doctor",
+      "vietnamese": "bác sĩ",
+      "definition_en": "A medical professional.",
+      "definition_vi": "Chuyên gia y tế.",
+      "examples": [
+        {
+          "de": "Der Arzt hilft mir.",
+          "en": "The doctor helps me.",
+          "vi": "Bác sĩ giúp tôi."
+        }
+      ]
+    },
+    "ID198": {
+      "word": "Affe",
+      "artikel": "der",
+      "plural": "Affen",
+      "english": "monkey",
+      "vietnamese": "con khỉ",
+      "definition_en": "A primate animal.",
+      "definition_vi": "Động vật linh trưởng.",
+      "examples": [
+        {
+          "de": "Der Affe klettert.",
+          "en": "The monkey climbs.",
+          "vi": "Con khỉ leo."
+        }
+      ]
+    },
+    "ID202": {
+      "word": "Abend",
+      "artikel": "der",
+      "plural": "Abende",
+      "english": "evening",
+      "vietnamese": "buổi tối",
+      "definition_en": "The latter part of the day.",
+      "definition_vi": "Phần cuối ngày.",
+      "examples": [
+        {
+          "de": "Guten Abend!",
+          "en": "Good evening!",
+          "vi": "Chào buổi tối!"
+        }
+      ]
+    },
+    "ID209": {
+      "word": "Anfang",
+      "artikel": "der",
+      "plural": "Anfänge",
+      "english": "beginning",
+      "vietnamese": "khởi đầu",
+      "definition_en": "The start of something.",
+      "definition_vi": "Bắt đầu của cái gì đó.",
+      "examples": [
+        {
+          "de": "Am Anfang war es schwer.",
+          "en": "In the beginning it was difficult.",
+          "vi": "Lúc đầu thì khó."
+        }
+      ]
+    },
+    "ID239": {
+      "word": "Antwort",
+      "artikel": "die",
+      "plural": "Antworten",
+      "english": "answer",
+      "vietnamese": "câu trả lời",
+      "definition_en": "A response to a question.",
+      "definition_vi": "Phản hồi cho một câu hỏi.",
+      "examples": [
+        {
+          "de": "Die Antwort ist richtig.",
+          "en": "The answer is correct.",
+          "vi": "Câu trả lời đúng."
+        }
+      ]
+    },
+    "ID267": {
+      "word": "Adresse",
+      "artikel": "die",
+      "plural": "Adressen",
+      "english": "address",
+      "vietnamese": "địa chỉ",
+      "definition_en": "The details of where someone lives or works.",
+      "definition_vi": "Chi tiết về nơi ai đó sống hoặc làm việc.",
+      "examples": [
+        {
+          "de": "Wie ist deine Adresse?",
+          "en": "What is your address?",
+          "vi": "Địa chỉ của bạn là gì?"
+        }
+      ]
+    },
+    "ID268": {
+      "word": "Alter",
+      "artikel": "das",
+      "plural": "Alter",
+      "english": "age",
+      "vietnamese": "tuổi",
+      "definition_en": "The number of years someone has lived.",
+      "definition_vi": "Số năm ai đó đã sống.",
+      "examples": [
+        {
+          "de": "Wie ist dein Alter?",
+          "en": "What is your age?",
+          "vi": "Bạn bao nhiêu tuổi?"
+        }
+      ]
+    },
+    "ID269": {
+      "word": "Angst",
+      "artikel": "die",
+      "plural": "Ängste",
+      "english": "fear",
+      "vietnamese": "sợ hãi",
+      "definition_en": "An unpleasant emotion caused by danger.",
+      "definition_vi": "Một cảm xúc khó chịu gây ra bởi nguy hiểm.",
+      "examples": [
+        {
+          "de": "Ich habe keine Angst.",
+          "en": "I have no fear.",
+          "vi": "Tôi không sợ."
+        }
+      ]
+    },
+    "ID270": {
+      "word": "Anzug",
+      "artikel": "der",
+      "plural": "Anzüge",
+      "english": "suit",
+      "vietnamese": "bộ vest",
+      "definition_en": "A set of formal clothes.",
+      "definition_vi": "Một bộ quần áo trang trọng.",
+      "examples": [
+        {
+          "de": "Der Anzug ist elegant.",
+          "en": "The suit is elegant.",
+          "vi": "Bộ vest rất thanh lịch."
+        }
+      ]
+    },
+    "ID271": {
+      "word": "Appetit",
+      "artikel": "der",
+      "plural": "Appetite",
+      "english": "appetite",
+      "vietnamese": "sự ngon miệng",
+      "definition_en": "A desire for food.",
+      "definition_vi": "Ham muốn ăn uống.",
+      "examples": [
+        {
+          "de": "Guten Appetit!",
+          "en": "Enjoy your meal!",
+          "vi": "Chúc ngon miệng!"
+        }
+      ]
+    },
+    "ID272": {
+      "word": "April",
+      "artikel": "der",
+      "plural": "-",
+      "english": "april",
+      "vietnamese": "tháng tư",
+      "definition_en": "The fourth month of the year.",
+      "definition_vi": "Tháng thứ tư trong năm.",
+      "examples": [
+        {
+          "de": "Im April regnet es oft.",
+          "en": "It often rains in April.",
+          "vi": "Tháng tư thường mưa."
+        }
+      ]
+    },
+    "ID273": {
+      "word": "Armband",
+      "artikel": "das",
+      "plural": "Armbänder",
+      "english": "bracelet",
+      "vietnamese": "vòng tay",
+      "definition_en": "A piece of jewelry worn around the wrist.",
+      "definition_vi": "Một món trang sức đeo quanh cổ tay.",
+      "examples": [
+        {
+          "de": "Das Armband ist schön.",
+          "en": "The bracelet is beautiful.",
+          "vi": "Vòng tay đẹp."
+        }
+      ]
+    },
+    "ID274": {
+      "word": "Ast",
+      "artikel": "der",
+      "plural": "Äste",
+      "english": "branch",
+      "vietnamese": "cành cây",
+      "definition_en": "A part of a tree that grows out from the trunk.",
+      "definition_vi": "Một phần của cây mọc ra từ thân.",
+      "examples": [
+        {
+          "de": "Der Ast ist dick.",
+          "en": "The branch is thick.",
+          "vi": "Cành cây dày."
+        }
+      ]
+    },
+    "ID275": {
+      "word": "Atmosphäre",
+      "artikel": "die",
+      "plural": "Atmosphären",
+      "english": "atmosphere",
+      "vietnamese": "bầu không khí",
+      "definition_en": "The mood or feeling of a place.",
+      "definition_vi": "Tâm trạng hoặc cảm giác của một nơi.",
+      "examples": [
+        {
+          "de": "Die Atmosphäre ist angenehm.",
+          "en": "The atmosphere is pleasant.",
+          "vi": "Bầu không khí dễ chịu."
+        }
+      ]
+    },
+    "ID276": {
+      "word": "Aufgabe",
+      "artikel": "die",
+      "plural": "Aufgaben",
+      "english": "task",
+      "vietnamese": "nhiệm vụ",
+      "definition_en": "A piece of work to be done.",
+      "definition_vi": "Một công việc cần được hoàn thành.",
+      "examples": [
+        {
+          "de": "Die Aufgabe ist schwer.",
+          "en": "The task is difficult.",
+          "vi": "Nhiệm vụ khó."
+        }
+      ]
+    },
+    "ID277": {
+      "word": "Aufzug",
+      "artikel": "der",
+      "plural": "Aufzüge",
+      "english": "elevator",
+      "vietnamese": "thang máy",
+      "definition_en": "A platform or compartment for moving people between floors.",
+      "definition_vi": "Nền tảng hoặc khoang để di chuyển người giữa các tầng.",
+      "examples": [
+        {
+          "de": "Der Aufzug ist kaputt.",
+          "en": "The elevator is broken.",
+          "vi": "Thang máy bị hỏng."
+        }
+      ]
+    },
+    "ID278": {
+      "word": "August",
+      "artikel": "der",
+      "plural": "-",
+      "english": "august",
+      "vietnamese": "tháng tám",
+      "definition_en": "The eighth month of the year.",
+      "definition_vi": "Tháng thứ tám trong năm.",
+      "examples": [
+        {
+          "de": "Im August ist es heiß.",
+          "en": "It is hot in August.",
+          "vi": "Tháng tám thì nóng."
+        }
+      ]
+    },
+    "ID279": {
+      "word": "Ausflug",
+      "artikel": "der",
+      "plural": "Ausflüge",
+      "english": "excursion",
+      "vietnamese": "chuyến đi",
+      "definition_en": "A short journey or trip.",
+      "definition_vi": "Một hành trình ngắn.",
+      "examples": [
+        {
+          "de": "Der Ausflug macht Spaß.",
+          "en": "The excursion is fun.",
+          "vi": "Chuyến đi thú vị."
+        }
+      ]
+    },
+    "ID280": {
+      "word": "Ausgang",
+      "artikel": "der",
+      "plural": "Ausgänge",
+      "english": "exit",
+      "vietnamese": "lối ra",
+      "definition_en": "A way out of a building or area.",
+      "definition_vi": "Lối ra khỏi tòa nhà hoặc khu vực.",
+      "examples": [
+        {
+          "de": "Wo ist der Ausgang?",
+          "en": "Where is the exit?",
+          "vi": "Lối ra ở đâu?"
+        }
+      ]
+    },
+    "ID281": {
+      "word": "Ausland",
+      "artikel": "das",
+      "plural": "-",
+      "english": "foreign country",
+      "vietnamese": "nước ngoài",
+      "definition_en": "A country other than one's own.",
+      "definition_vi": "Một quốc gia khác với quốc gia của mình.",
+      "examples": [
+        {
+          "de": "Er lebt im Ausland.",
+          "en": "He lives in a foreign country.",
+          "vi": "Anh ấy sống ở nước ngoài."
+        }
+      ]
+    },
+    "ID282": {
+      "word": "Ausstellung",
+      "artikel": "die",
+      "plural": "Ausstellungen",
+      "english": "exhibition",
+      "vietnamese": "triển lãm",
+      "definition_en": "A public display of works of art or items of interest.",
+      "definition_vi": "Trưng bày công khai các tác phẩm nghệ thuật hoặc vật phẩm thú vị.",
+      "examples": [
+        {
+          "de": "Die Ausstellung ist interessant.",
+          "en": "The exhibition is interesting.",
+          "vi": "Triển lãm thú vị."
+        }
+      ]
+    },
+    "ID283": {
+      "word": "Ausweis",
+      "artikel": "der",
+      "plural": "Ausweise",
+      "english": "id card",
+      "vietnamese": "thẻ căn cước",
+      "definition_en": "An official document proving identity.",
+      "definition_vi": "Giấy tờ chính thức chứng minh danh tính.",
+      "examples": [
+        {
+          "de": "Ich brauche meinen Ausweis.",
+          "en": "I need my ID card.",
+          "vi": "Tôi cần thẻ căn cước của mình."
+        }
+      ]
+    }
+  }
+}

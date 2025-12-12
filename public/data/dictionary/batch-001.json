@@ -1,0 +1,775 @@
+{
+  "byWord": {
+    "haus": "ID001",
+    "tisch": "ID002",
+    "stuhl": "ID003",
+    "buch": "ID004",
+    "auto": "ID005",
+    "kind": "ID006",
+    "mann": "ID007",
+    "frau": "ID008",
+    "wasser": "ID009",
+    "brot": "ID010",
+    "tag": "ID011",
+    "nacht": "ID012",
+    "hand": "ID013",
+    "tür": "ID014",
+    "fenster": "ID015",
+    "stadt": "ID016",
+    "land": "ID017",
+    "baum": "ID018",
+    "blume": "ID019",
+    "garten": "ID020",
+    "schule": "ID021",
+    "lehrer": "ID022",
+    "schüler": "ID023",
+    "bild": "ID024",
+    "zeit": "ID025",
+    "jahr": "ID026",
+    "monat": "ID027",
+    "woche": "ID028",
+    "apfel": "ID029",
+    "ei": "ID030",
+    "milch": "ID031",
+    "kaffee": "ID032",
+    "tee": "ID033",
+    "hund": "ID034",
+    "katze": "ID035",
+    "straße": "ID036",
+    "name": "ID037",
+    "freund": "ID038",
+    "familie": "ID039",
+    "mutter": "ID040"
+  },
+  "byEnglish": {
+    "house": ["ID001"],
+    "table": ["ID002"],
+    "chair": ["ID003"],
+    "book": ["ID004"],
+    "car": ["ID005"],
+    "child": ["ID006"],
+    "man": ["ID007"],
+    "woman": ["ID008"],
+    "water": ["ID009"],
+    "bread": ["ID010"],
+    "day": ["ID011"],
+    "night": ["ID012"],
+    "hand": ["ID013"],
+    "door": ["ID014"],
+    "window": ["ID015"],
+    "city": ["ID016"],
+    "country": ["ID017"],
+    "tree": ["ID018"],
+    "flower": ["ID019"],
+    "garden": ["ID020"],
+    "school": ["ID021"],
+    "teacher": ["ID022"],
+    "student": ["ID023"],
+    "picture": ["ID024"],
+    "time": ["ID025"],
+    "year": ["ID026"],
+    "month": ["ID027"],
+    "week": ["ID028"],
+    "apple": ["ID029"],
+    "egg": ["ID030"],
+    "milk": ["ID031"],
+    "coffee": ["ID032"],
+    "tea": ["ID033"],
+    "dog": ["ID034"],
+    "cat": ["ID035"],
+    "street": ["ID036"],
+    "name": ["ID037"],
+    "friend": ["ID038"],
+    "family": ["ID039"],
+    "mother": ["ID040"]
+  },
+  "byVietnamese": {
+    "ngôi nhà": ["ID001"],
+    "cái bàn": ["ID002"],
+    "cái ghế": ["ID003"],
+    "quyển sách": ["ID004"],
+    "xe ô tô": ["ID005"],
+    "đứa trẻ": ["ID006"],
+    "người đàn ông": ["ID007"],
+    "người phụ nữ": ["ID008"],
+    "nước": ["ID009"],
+    "bánh mì": ["ID010"],
+    "ngày": ["ID011"],
+    "đêm": ["ID012"],
+    "bàn tay": ["ID013"],
+    "cửa ra vào": ["ID014"],
+    "cửa sổ": ["ID015"],
+    "thành phố": ["ID016"],
+    "đất nước": ["ID017"],
+    "cây": ["ID018"],
+    "bông hoa": ["ID019"],
+    "vườn": ["ID020"],
+    "trường học": ["ID021"],
+    "giáo viên": ["ID022"],
+    "học sinh": ["ID023"],
+    "bức tranh": ["ID024"],
+    "thời gian": ["ID025"],
+    "năm": ["ID026"],
+    "tháng": ["ID027"],
+    "tuần": ["ID028"],
+    "quả táo": ["ID029"],
+    "quả trứng": ["ID030"],
+    "sữa": ["ID031"],
+    "cà phê": ["ID032"],
+    "trà": ["ID033"],
+    "con chó": ["ID034"],
+    "con mèo": ["ID035"],
+    "đường phố": ["ID036"],
+    "tên": ["ID037"],
+    "bạn bè": ["ID038"],
+    "gia đình": ["ID039"],
+    "mẹ": ["ID040"]
+  },
+  "byArtikel": {
+    "der": ["ID002", "ID003", "ID007", "ID011", "ID018", "ID020", "ID022", "ID023", "ID027", "ID029", "ID032", "ID033", "ID034", "ID037", "ID038"],
+    "die": ["ID008", "ID012", "ID013", "ID014", "ID016", "ID019", "ID021", "ID025", "ID028", "ID031", "ID035", "ID036", "ID039", "ID040"],
+    "das": ["ID001", "ID004", "ID005", "ID006", "ID009", "ID010", "ID015", "ID017", "ID024", "ID026", "ID030"]
+  },
+  "entries": {
+    "ID001": {
+      "word": "Haus",
+      "artikel": "das",
+      "plural": "Häuser",
+      "english": "house",
+      "vietnamese": "ngôi nhà",
+      "definition_en": "A building used for living.",
+      "definition_vi": "Một tòa nhà dùng để ở.",
+      "examples": [
+        {
+          "de": "Das Haus ist groß.",
+          "en": "The house is big.",
+          "vi": "Ngôi nhà thì lớn."
+        }
+      ]
+    },
+    "ID002": {
+      "word": "Tisch",
+      "artikel": "der",
+      "plural": "Tische",
+      "english": "table",
+      "vietnamese": "cái bàn",
+      "definition_en": "A piece of furniture with a flat top and legs.",
+      "definition_vi": "Một món đồ nội thất có mặt phẳng và chân.",
+      "examples": [
+        {
+          "de": "Der Tisch ist aus Holz.",
+          "en": "The table is made of wood.",
+          "vi": "Cái bàn được làm từ gỗ."
+        }
+      ]
+    },
+    "ID003": {
+      "word": "Stuhl",
+      "artikel": "der",
+      "plural": "Stühle",
+      "english": "chair",
+      "vietnamese": "cái ghế",
+      "definition_en": "A seat with a back and usually four legs.",
+      "definition_vi": "Một chỗ ngồi có tựa lưng và thường có bốn chân.",
+      "examples": [
+        {
+          "de": "Der Stuhl ist bequem.",
+          "en": "The chair is comfortable.",
+          "vi": "Cái ghế thì thoải mái."
+        }
+      ]
+    },
+    "ID004": {
+      "word": "Buch",
+      "artikel": "das",
+      "plural": "Bücher",
+      "english": "book",
+      "vietnamese": "quyển sách",
+      "definition_en": "A written or printed work consisting of pages.",
+      "definition_vi": "Một tác phẩm viết hoặc in bao gồm các trang.",
+      "examples": [
+        {
+          "de": "Ich lese ein Buch.",
+          "en": "I am reading a book.",
+          "vi": "Tôi đang đọc một quyển sách."
+        }
+      ]
+    },
+    "ID005": {
+      "word": "Auto",
+      "artikel": "das",
+      "plural": "Autos",
+      "english": "car",
+      "vietnamese": "xe ô tô",
+      "definition_en": "A road vehicle with an engine and four wheels.",
+      "definition_vi": "Một phương tiện đường bộ có động cơ và bốn bánh.",
+      "examples": [
+        {
+          "de": "Das Auto ist schnell.",
+          "en": "The car is fast.",
+          "vi": "Chiếc xe ô tô thì nhanh."
+        }
+      ]
+    },
+    "ID006": {
+      "word": "Kind",
+      "artikel": "das",
+      "plural": "Kinder",
+      "english": "child",
+      "vietnamese": "đứa trẻ",
+      "definition_en": "A young human being.",
+      "definition_vi": "Một con người nhỏ tuổi.",
+      "examples": [
+        {
+          "de": "Das Kind spielt im Garten.",
+          "en": "The child plays in the garden.",
+          "vi": "Đứa trẻ chơi trong vườn."
+        }
+      ]
+    },
+    "ID007": {
+      "word": "Mann",
+      "artikel": "der",
+      "plural": "Männer",
+      "english": "man",
+      "vietnamese": "người đàn ông",
+      "definition_en": "An adult male human.",
+      "definition_vi": "Một người nam trưởng thành.",
+      "examples": [
+        {
+          "de": "Der Mann arbeitet.",
+          "en": "The man is working.",
+          "vi": "Người đàn ông đang làm việc."
+        }
+      ]
+    },
+    "ID008": {
+      "word": "Frau",
+      "artikel": "die",
+      "plural": "Frauen",
+      "english": "woman",
+      "vietnamese": "người phụ nữ",
+      "definition_en": "An adult female human.",
+      "definition_vi": "Một người nữ trưởng thành.",
+      "examples": [
+        {
+          "de": "Die Frau liest ein Buch.",
+          "en": "The woman is reading a book.",
+          "vi": "Người phụ nữ đang đọc sách."
+        }
+      ]
+    },
+    "ID009": {
+      "word": "Wasser",
+      "artikel": "das",
+      "plural": "Wässer",
+      "english": "water",
+      "vietnamese": "nước",
+      "definition_en": "A clear liquid necessary for life.",
+      "definition_vi": "Một chất lỏng trong suốt cần thiết cho sự sống.",
+      "examples": [
+        {
+          "de": "Ich trinke Wasser.",
+          "en": "I drink water.",
+          "vi": "Tôi uống nước."
+        }
+      ]
+    },
+    "ID010": {
+      "word": "Brot",
+      "artikel": "das",
+      "plural": "Brote",
+      "english": "bread",
+      "vietnamese": "bánh mì",
+      "definition_en": "A baked food made from flour and water.",
+      "definition_vi": "Một loại thức ăn nướng làm từ bột mì và nước.",
+      "examples": [
+        {
+          "de": "Das Brot ist frisch.",
+          "en": "The bread is fresh.",
+          "vi": "Bánh mì thì tươi."
+        }
+      ]
+    },
+    "ID011": {
+      "word": "Tag",
+      "artikel": "der",
+      "plural": "Tage",
+      "english": "day",
+      "vietnamese": "ngày",
+      "definition_en": "A 24-hour period.",
+      "definition_vi": "Một khoảng thời gian 24 giờ.",
+      "examples": [
+        {
+          "de": "Guten Tag!",
+          "en": "Good day!",
+          "vi": "Chào buổi sáng/chiều!"
+        }
+      ]
+    },
+    "ID012": {
+      "word": "Nacht",
+      "artikel": "die",
+      "plural": "Nächte",
+      "english": "night",
+      "vietnamese": "đêm",
+      "definition_en": "The period of darkness between sunset and sunrise.",
+      "definition_vi": "Khoảng thời gian tối giữa hoàng hôn và bình minh.",
+      "examples": [
+        {
+          "de": "Gute Nacht!",
+          "en": "Good night!",
+          "vi": "Chúc ngủ ngon!"
+        }
+      ]
+    },
+    "ID013": {
+      "word": "Hand",
+      "artikel": "die",
+      "plural": "Hände",
+      "english": "hand",
+      "vietnamese": "bàn tay",
+      "definition_en": "The end part of a person's arm.",
+      "definition_vi": "Phần cuối của cánh tay người.",
+      "examples": [
+        {
+          "de": "Ich wasche meine Hände.",
+          "en": "I wash my hands.",
+          "vi": "Tôi rửa tay."
+        }
+      ]
+    },
+    "ID014": {
+      "word": "Tür",
+      "artikel": "die",
+      "plural": "Türen",
+      "english": "door",
+      "vietnamese": "cửa ra vào",
+      "definition_en": "A movable barrier used to close an entrance.",
+      "definition_vi": "Một rào cản di động dùng để đóng lối vào.",
+      "examples": [
+        {
+          "de": "Die Tür ist offen.",
+          "en": "The door is open.",
+          "vi": "Cửa đang mở."
+        }
+      ]
+    },
+    "ID015": {
+      "word": "Fenster",
+      "artikel": "das",
+      "plural": "Fenster",
+      "english": "window",
+      "vietnamese": "cửa sổ",
+      "definition_en": "An opening in a wall with glass to let in light.",
+      "definition_vi": "Một lỗ mở trên tường có kính để ánh sáng vào.",
+      "examples": [
+        {
+          "de": "Das Fenster ist groß.",
+          "en": "The window is big.",
+          "vi": "Cửa sổ thì lớn."
+        }
+      ]
+    },
+    "ID016": {
+      "word": "Stadt",
+      "artikel": "die",
+      "plural": "Städte",
+      "english": "city",
+      "vietnamese": "thành phố",
+      "definition_en": "A large human settlement.",
+      "definition_vi": "Một khu định cư lớn của con người.",
+      "examples": [
+        {
+          "de": "Die Stadt ist schön.",
+          "en": "The city is beautiful.",
+          "vi": "Thành phố thì đẹp."
+        }
+      ]
+    },
+    "ID017": {
+      "word": "Land",
+      "artikel": "das",
+      "plural": "Länder",
+      "english": "country",
+      "vietnamese": "đất nước",
+      "definition_en": "A nation with its own government.",
+      "definition_vi": "Một quốc gia có chính phủ riêng.",
+      "examples": [
+        {
+          "de": "Deutschland ist ein Land in Europa.",
+          "en": "Germany is a country in Europe.",
+          "vi": "Đức là một đất nước ở châu Âu."
+        }
+      ]
+    },
+    "ID018": {
+      "word": "Baum",
+      "artikel": "der",
+      "plural": "Bäume",
+      "english": "tree",
+      "vietnamese": "cây",
+      "definition_en": "A woody plant with a trunk and branches.",
+      "definition_vi": "Một cây gỗ có thân và cành.",
+      "examples": [
+        {
+          "de": "Der Baum ist hoch.",
+          "en": "The tree is tall.",
+          "vi": "Cây thì cao."
+        }
+      ]
+    },
+    "ID019": {
+      "word": "Blume",
+      "artikel": "die",
+      "plural": "Blumen",
+      "english": "flower",
+      "vietnamese": "bông hoa",
+      "definition_en": "The colorful part of a plant that blooms.",
+      "definition_vi": "Phần đầy màu sắc của cây nở ra.",
+      "examples": [
+        {
+          "de": "Die Blume ist schön.",
+          "en": "The flower is beautiful.",
+          "vi": "Bông hoa thì đẹp."
+        }
+      ]
+    },
+    "ID020": {
+      "word": "Garten",
+      "artikel": "der",
+      "plural": "Gärten",
+      "english": "garden",
+      "vietnamese": "vườn",
+      "definition_en": "A piece of ground for growing plants.",
+      "definition_vi": "Một mảnh đất để trồng cây.",
+      "examples": [
+        {
+          "de": "Im Garten sind viele Blumen.",
+          "en": "There are many flowers in the garden.",
+          "vi": "Có nhiều hoa trong vườn."
+        }
+      ]
+    },
+    "ID021": {
+      "word": "Schule",
+      "artikel": "die",
+      "plural": "Schulen",
+      "english": "school",
+      "vietnamese": "trường học",
+      "definition_en": "An institution for education.",
+      "definition_vi": "Một cơ sở giáo dục.",
+      "examples": [
+        {
+          "de": "Ich gehe zur Schule.",
+          "en": "I go to school.",
+          "vi": "Tôi đi học."
+        }
+      ]
+    },
+    "ID022": {
+      "word": "Lehrer",
+      "artikel": "der",
+      "plural": "Lehrer",
+      "english": "teacher",
+      "vietnamese": "giáo viên",
+      "definition_en": "A person who teaches.",
+      "definition_vi": "Một người dạy học.",
+      "examples": [
+        {
+          "de": "Der Lehrer ist nett.",
+          "en": "The teacher is nice.",
+          "vi": "Giáo viên thì tốt bụng."
+        }
+      ]
+    },
+    "ID023": {
+      "word": "Schüler",
+      "artikel": "der",
+      "plural": "Schüler",
+      "english": "student",
+      "vietnamese": "học sinh",
+      "definition_en": "A person who is learning at a school.",
+      "definition_vi": "Một người đang học tại trường.",
+      "examples": [
+        {
+          "de": "Der Schüler lernt fleißig.",
+          "en": "The student studies diligently.",
+          "vi": "Học sinh học chăm chỉ."
+        }
+      ]
+    },
+    "ID024": {
+      "word": "Bild",
+      "artikel": "das",
+      "plural": "Bilder",
+      "english": "picture",
+      "vietnamese": "bức tranh",
+      "definition_en": "A visual representation or image.",
+      "definition_vi": "Một hình ảnh hoặc biểu tượng trực quan.",
+      "examples": [
+        {
+          "de": "Das Bild hängt an der Wand.",
+          "en": "The picture hangs on the wall.",
+          "vi": "Bức tranh treo trên tường."
+        }
+      ]
+    },
+    "ID025": {
+      "word": "Zeit",
+      "artikel": "die",
+      "plural": "Zeiten",
+      "english": "time",
+      "vietnamese": "thời gian",
+      "definition_en": "The indefinite continued progress of existence.",
+      "definition_vi": "Sự tiến triển liên tục không xác định của sự tồn tại.",
+      "examples": [
+        {
+          "de": "Ich habe keine Zeit.",
+          "en": "I have no time.",
+          "vi": "Tôi không có thời gian."
+        }
+      ]
+    },
+    "ID026": {
+      "word": "Jahr",
+      "artikel": "das",
+      "plural": "Jahre",
+      "english": "year",
+      "vietnamese": "năm",
+      "definition_en": "A period of 365 or 366 days.",
+      "definition_vi": "Một khoảng thời gian 365 hoặc 366 ngày.",
+      "examples": [
+        {
+          "de": "Ein Jahr hat zwölf Monate.",
+          "en": "A year has twelve months.",
+          "vi": "Một năm có mười hai tháng."
+        }
+      ]
+    },
+    "ID027": {
+      "word": "Monat",
+      "artikel": "der",
+      "plural": "Monate",
+      "english": "month",
+      "vietnamese": "tháng",
+      "definition_en": "One of the twelve divisions of a year.",
+      "definition_vi": "Một trong mười hai phần của một năm.",
+      "examples": [
+        {
+          "de": "Der Januar ist der erste Monat.",
+          "en": "January is the first month.",
+          "vi": "Tháng Giêng là tháng đầu tiên."
+        }
+      ]
+    },
+    "ID028": {
+      "word": "Woche",
+      "artikel": "die",
+      "plural": "Wochen",
+      "english": "week",
+      "vietnamese": "tuần",
+      "definition_en": "A period of seven days.",
+      "definition_vi": "Một khoảng thời gian bảy ngày.",
+      "examples": [
+        {
+          "de": "Eine Woche hat sieben Tage.",
+          "en": "A week has seven days.",
+          "vi": "Một tuần có bảy ngày."
+        }
+      ]
+    },
+    "ID029": {
+      "word": "Apfel",
+      "artikel": "der",
+      "plural": "Äpfel",
+      "english": "apple",
+      "vietnamese": "quả táo",
+      "definition_en": "A round fruit with red or green skin.",
+      "definition_vi": "Một loại trái cây tròn có vỏ đỏ hoặc xanh.",
+      "examples": [
+        {
+          "de": "Der Apfel ist rot.",
+          "en": "The apple is red.",
+          "vi": "Quả táo màu đỏ."
+        }
+      ]
+    },
+    "ID030": {
+      "word": "Ei",
+      "artikel": "das",
+      "plural": "Eier",
+      "english": "egg",
+      "vietnamese": "quả trứng",
+      "definition_en": "An oval object laid by birds.",
+      "definition_vi": "Một vật hình bầu dục được chim đẻ ra.",
+      "examples": [
+        {
+          "de": "Ich esse ein Ei zum Frühstück.",
+          "en": "I eat an egg for breakfast.",
+          "vi": "Tôi ăn một quả trứng cho bữa sáng."
+        }
+      ]
+    },
+    "ID031": {
+      "word": "Milch",
+      "artikel": "die",
+      "plural": "Milch",
+      "english": "milk",
+      "vietnamese": "sữa",
+      "definition_en": "A white liquid produced by mammals.",
+      "definition_vi": "Một chất lỏng màu trắng do động vật có vú tạo ra.",
+      "examples": [
+        {
+          "de": "Die Milch ist kalt.",
+          "en": "The milk is cold.",
+          "vi": "Sữa thì lạnh."
+        }
+      ]
+    },
+    "ID032": {
+      "word": "Kaffee",
+      "artikel": "der",
+      "plural": "Kaffees",
+      "english": "coffee",
+      "vietnamese": "cà phê",
+      "definition_en": "A hot drink made from roasted coffee beans.",
+      "definition_vi": "Một đồ uống nóng làm từ hạt cà phê rang.",
+      "examples": [
+        {
+          "de": "Ich trinke gerne Kaffee.",
+          "en": "I like to drink coffee.",
+          "vi": "Tôi thích uống cà phê."
+        }
+      ]
+    },
+    "ID033": {
+      "word": "Tee",
+      "artikel": "der",
+      "plural": "Tees",
+      "english": "tea",
+      "vietnamese": "trà",
+      "definition_en": "A hot drink made by infusing tea leaves.",
+      "definition_vi": "Một đồ uống nóng làm từ lá trà.",
+      "examples": [
+        {
+          "de": "Der Tee ist heiß.",
+          "en": "The tea is hot.",
+          "vi": "Trà thì nóng."
+        }
+      ]
+    },
+    "ID034": {
+      "word": "Hund",
+      "artikel": "der",
+      "plural": "Hunde",
+      "english": "dog",
+      "vietnamese": "con chó",
+      "definition_en": "A domesticated carnivorous mammal.",
+      "definition_vi": "Một động vật có vú ăn thịt đã được thuần hóa.",
+      "examples": [
+        {
+          "de": "Der Hund bellt.",
+          "en": "The dog barks.",
+          "vi": "Con chó sủa."
+        }
+      ]
+    },
+    "ID035": {
+      "word": "Katze",
+      "artikel": "die",
+      "plural": "Katzen",
+      "english": "cat",
+      "vietnamese": "con mèo",
+      "definition_en": "A small domesticated carnivorous mammal.",
+      "definition_vi": "Một động vật có vú ăn thịt nhỏ đã được thuần hóa.",
+      "examples": [
+        {
+          "de": "Die Katze schläft.",
+          "en": "The cat sleeps.",
+          "vi": "Con mèo ngủ."
+        }
+      ]
+    },
+    "ID036": {
+      "word": "Straße",
+      "artikel": "die",
+      "plural": "Straßen",
+      "english": "street",
+      "vietnamese": "đường phố",
+      "definition_en": "A public road in a city or town.",
+      "definition_vi": "Một con đường công cộng trong thành phố hoặc thị trấn.",
+      "examples": [
+        {
+          "de": "Die Straße ist lang.",
+          "en": "The street is long.",
+          "vi": "Đường phố thì dài."
+        }
+      ]
+    },
+    "ID037": {
+      "word": "Name",
+      "artikel": "der",
+      "plural": "Namen",
+      "english": "name",
+      "vietnamese": "tên",
+      "definition_en": "A word or set of words by which someone is known.",
+      "definition_vi": "Một từ hoặc cụm từ mà người ta được biết đến.",
+      "examples": [
+        {
+          "de": "Wie ist dein Name?",
+          "en": "What is your name?",
+          "vi": "Tên bạn là gì?"
+        }
+      ]
+    },
+    "ID038": {
+      "word": "Freund",
+      "artikel": "der",
+      "plural": "Freunde",
+      "english": "friend",
+      "vietnamese": "bạn bè",
+      "definition_en": "A person with whom one has a bond of mutual affection.",
+      "definition_vi": "Một người mà người ta có mối quan hệ tình cảm lẫn nhau.",
+      "examples": [
+        {
+          "de": "Er ist mein bester Freund.",
+          "en": "He is my best friend.",
+          "vi": "Anh ấy là bạn thân nhất của tôi."
+        }
+      ]
+    },
+    "ID039": {
+      "word": "Familie",
+      "artikel": "die",
+      "plural": "Familien",
+      "english": "family",
+      "vietnamese": "gia đình",
+      "definition_en": "A group of people related by blood or marriage.",
+      "definition_vi": "Một nhóm người có quan hệ huyết thống hoặc hôn nhân.",
+      "examples": [
+        {
+          "de": "Meine Familie ist groß.",
+          "en": "My family is big.",
+          "vi": "Gia đình tôi đông người."
+        }
+      ]
+    },
+    "ID040": {
+      "word": "Mutter",
+      "artikel": "die",
+      "plural": "Mütter",
+      "english": "mother",
+      "vietnamese": "mẹ",
+      "definition_en": "A female parent.",
+      "definition_vi": "Cha mẹ nữ.",
+      "examples": [
+        {
+          "de": "Meine Mutter kocht gut.",
+          "en": "My mother cooks well.",
+          "vi": "Mẹ tôi nấu ăn ngon."
+        }
+      ]
+    }
+  }
+}

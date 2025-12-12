@@ -1,0 +1,88 @@
+{
+  "byWord": {
+    "vater": "ID041",
+    "verkäufer": "ID107",
+    "vogel": "ID185"
+  },
+  "byEnglish": {
+    "father": [
+      "ID041"
+    ],
+    "salesperson": [
+      "ID107"
+    ],
+    "bird": [
+      "ID185"
+    ]
+  },
+  "byVietnamese": {
+    "cha": [
+      "ID041"
+    ],
+    "nhân viên bán hàng": [
+      "ID107"
+    ],
+    "con chim": [
+      "ID185"
+    ]
+  },
+  "byArtikel": {
+    "der": [
+      "ID041",
+      "ID107",
+      "ID185"
+    ],
+    "die": [],
+    "das": []
+  },
+  "entries": {
+    "ID041": {
+      "word": "Vater",
+      "artikel": "der",
+      "plural": "Väter",
+      "english": "father",
+      "vietnamese": "cha",
+      "definition_en": "A male parent.",
+      "definition_vi": "Cha mẹ nam.",
+      "examples": [
+        {
+          "de": "Mein Vater arbeitet viel.",
+          "en": "My father works a lot.",
+          "vi": "Cha tôi làm việc nhiều."
+        }
+      ]
+    },
+    "ID107": {
+      "word": "Verkäufer",
+      "artikel": "der",
+      "plural": "Verkäufer",
+      "english": "salesperson",
+      "vietnamese": "nhân viên bán hàng",
+      "definition_en": "A person who sells things.",
+      "definition_vi": "Người bán đồ.",
+      "examples": [
+        {
+          "de": "Der Verkäufer ist höflich.",
+          "en": "The salesperson is polite.",
+          "vi": "Nhân viên bán hàng lịch sự."
+        }
+      ]
+    },
+    "ID185": {
+      "word": "Vogel",
+      "artikel": "der",
+      "plural": "Vögel",
+      "english": "bird",
+      "vietnamese": "con chim",
+      "definition_en": "A feathered animal that flies.",
+      "definition_vi": "Động vật có lông vũ bay.",
+      "examples": [
+        {
+          "de": "Der Vogel singt.",
+          "en": "The bird sings.",
+          "vi": "Con chim hót."
+        }
+      ]
+    }
+  }
+}

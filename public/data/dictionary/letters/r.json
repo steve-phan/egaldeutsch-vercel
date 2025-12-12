@@ -1,0 +1,1650 @@
+{
+  "byWord": {
+    "reis": "ID073",
+    "radio": "ID092",
+    "restaurant": "ID118",
+    "rucksack": "ID135",
+    "rock": "ID142",
+    "rot": "ID152",
+    "regen": "ID171",
+    "reihe": "ID229",
+    "regel": "ID232",
+    "recht": "ID234",
+    "rabe": "ID916",
+    "rad": "ID917",
+    "rahmen": "ID918",
+    "rand": "ID919",
+    "rang": "ID920",
+    "rasen": "ID921",
+    "rat": "ID922",
+    "rate": "ID923",
+    "rathaus": "ID924",
+    "rauch": "ID925",
+    "raum": "ID926",
+    "reaktion": "ID927",
+    "realität": "ID928",
+    "rechnung": "ID929",
+    "rechteck": "ID930",
+    "rede": "ID931",
+    "regal": "ID932",
+    "regierung": "ID933",
+    "region": "ID934",
+    "regenschirm": "ID935",
+    "reich": "ID936",
+    "reim": "ID937",
+    "reiseführer": "ID938",
+    "reisende": "ID939",
+    "reißverschluss": "ID940",
+    "religion": "ID941",
+    "rente": "ID942",
+    "reparatur": "ID943",
+    "reporter": "ID944",
+    "republik": "ID945",
+    "respekt": "ID946",
+    "resultat": "ID947",
+    "rettung": "ID948",
+    "revolution": "ID949",
+    "rezept": "ID950",
+    "richter": "ID951",
+    "richtung": "ID952",
+    "ring": "ID953",
+    "risiko": "ID954",
+    "ritter": "ID955",
+    "rolle": "ID956",
+    "roman": "ID957",
+    "rose": "ID958",
+    "ruhe": "ID959",
+    "rücken": "ID960",
+    "rückfahrt": "ID961",
+    "rücksicht": "ID962",
+    "runde": "ID963",
+    "russland": "ID964",
+    "rätsel": "ID965",
+    "räuber": "ID966",
+    "raupe": "ID967",
+    "rhythmus": "ID968",
+    "riese": "ID969",
+    "rindfleisch": "ID970",
+    "röhre": "ID971",
+    "rutsche": "ID972",
+    "rüssel": "ID973"
+  },
+  "byEnglish": {
+    "rice": [
+      "ID073"
+    ],
+    "radio": [
+      "ID092"
+    ],
+    "restaurant": [
+      "ID118"
+    ],
+    "backpack": [
+      "ID135"
+    ],
+    "skirt": [
+      "ID142"
+    ],
+    "red": [
+      "ID152"
+    ],
+    "rain": [
+      "ID171"
+    ],
+    "row": [
+      "ID229"
+    ],
+    "rule": [
+      "ID232"
+    ],
+    "right": [
+      "ID234"
+    ],
+    "raven": [
+      "ID916"
+    ],
+    "wheel": [
+      "ID917"
+    ],
+    "frame": [
+      "ID918"
+    ],
+    "edge": [
+      "ID919"
+    ],
+    "rank": [
+      "ID920"
+    ],
+    "lawn": [
+      "ID921"
+    ],
+    "advice": [
+      "ID922"
+    ],
+    "installment": [
+      "ID923"
+    ],
+    "town hall": [
+      "ID924"
+    ],
+    "smoke": [
+      "ID925"
+    ],
+    "room/space": [
+      "ID926"
+    ],
+    "reaction": [
+      "ID927"
+    ],
+    "reality": [
+      "ID928"
+    ],
+    "bill": [
+      "ID929"
+    ],
+    "rectangle": [
+      "ID930"
+    ],
+    "speech": [
+      "ID931"
+    ],
+    "shelf": [
+      "ID932"
+    ],
+    "government": [
+      "ID933"
+    ],
+    "region": [
+      "ID934"
+    ],
+    "umbrella": [
+      "ID935"
+    ],
+    "empire": [
+      "ID936"
+    ],
+    "rhyme": [
+      "ID937"
+    ],
+    "travel guide": [
+      "ID938"
+    ],
+    "traveler": [
+      "ID939"
+    ],
+    "zipper": [
+      "ID940"
+    ],
+    "religion": [
+      "ID941"
+    ],
+    "pension": [
+      "ID942"
+    ],
+    "repair": [
+      "ID943"
+    ],
+    "reporter": [
+      "ID944"
+    ],
+    "republic": [
+      "ID945"
+    ],
+    "respect": [
+      "ID946"
+    ],
+    "result": [
+      "ID947"
+    ],
+    "rescue": [
+      "ID948"
+    ],
+    "revolution": [
+      "ID949"
+    ],
+    "recipe/prescription": [
+      "ID950"
+    ],
+    "judge": [
+      "ID951"
+    ],
+    "direction": [
+      "ID952"
+    ],
+    "ring": [
+      "ID953"
+    ],
+    "risk": [
+      "ID954"
+    ],
+    "knight": [
+      "ID955"
+    ],
+    "role": [
+      "ID956"
+    ],
+    "novel": [
+      "ID957"
+    ],
+    "rose": [
+      "ID958"
+    ],
+    "rest/quiet": [
+      "ID959"
+    ],
+    "back": [
+      "ID960"
+    ],
+    "return journey": [
+      "ID961"
+    ],
+    "consideration": [
+      "ID962"
+    ],
+    "round": [
+      "ID963"
+    ],
+    "Russia": [
+      "ID964"
+    ],
+    "riddle/puzzle": [
+      "ID965"
+    ],
+    "robber": [
+      "ID966"
+    ],
+    "caterpillar": [
+      "ID967"
+    ],
+    "rhythm": [
+      "ID968"
+    ],
+    "giant": [
+      "ID969"
+    ],
+    "beef": [
+      "ID970"
+    ],
+    "tube": [
+      "ID971"
+    ],
+    "slide": [
+      "ID972"
+    ],
+    "trunk/snout": [
+      "ID973"
+    ]
+  },
+  "byVietnamese": {
+    "gạo": [
+      "ID073"
+    ],
+    "radio": [
+      "ID092"
+    ],
+    "nhà hàng": [
+      "ID118"
+    ],
+    "ba lô": [
+      "ID135"
+    ],
+    "váy": [
+      "ID142"
+    ],
+    "đỏ": [
+      "ID152"
+    ],
+    "mưa": [
+      "ID171"
+    ],
+    "hàng": [
+      "ID229"
+    ],
+    "quy tắc": [
+      "ID232"
+    ],
+    "quyền": [
+      "ID234"
+    ],
+    "quạ": [
+      "ID916"
+    ],
+    "bánh xe": [
+      "ID917"
+    ],
+    "khung": [
+      "ID918"
+    ],
+    "rìa": [
+      "ID919"
+    ],
+    "cấp bậc": [
+      "ID920"
+    ],
+    "bãi cỏ": [
+      "ID921"
+    ],
+    "lời khuyên": [
+      "ID922"
+    ],
+    "trả góp": [
+      "ID923"
+    ],
+    "tòa thị chính": [
+      "ID924"
+    ],
+    "khói": [
+      "ID925"
+    ],
+    "phòng": [
+      "ID926"
+    ],
+    "phản ứng": [
+      "ID927"
+    ],
+    "thực tại": [
+      "ID928"
+    ],
+    "hóa đơn": [
+      "ID929"
+    ],
+    "hình chữ nhật": [
+      "ID930"
+    ],
+    "bài phát biểu": [
+      "ID931"
+    ],
+    "giá": [
+      "ID932"
+    ],
+    "chính phủ": [
+      "ID933"
+    ],
+    "vùng": [
+      "ID934"
+    ],
+    "ô": [
+      "ID935"
+    ],
+    "đế chế": [
+      "ID936"
+    ],
+    "vần": [
+      "ID937"
+    ],
+    "hướng dẫn viên du lịch": [
+      "ID938"
+    ],
+    "du khách": [
+      "ID939"
+    ],
+    "khóa kéo": [
+      "ID940"
+    ],
+    "tôn giáo": [
+      "ID941"
+    ],
+    "lương hưu": [
+      "ID942"
+    ],
+    "sửa chữa": [
+      "ID943"
+    ],
+    "phóng viên": [
+      "ID944"
+    ],
+    "cộng hòa": [
+      "ID945"
+    ],
+    "tôn trọng": [
+      "ID946"
+    ],
+    "kết quả": [
+      "ID947"
+    ],
+    "cứu hộ": [
+      "ID948"
+    ],
+    "cách mạng": [
+      "ID949"
+    ],
+    "công thức/đơn thuốc": [
+      "ID950"
+    ],
+    "thẩm phán": [
+      "ID951"
+    ],
+    "hướng": [
+      "ID952"
+    ],
+    "nhẫn": [
+      "ID953"
+    ],
+    "rủi ro": [
+      "ID954"
+    ],
+    "hiệp sĩ": [
+      "ID955"
+    ],
+    "vai trò": [
+      "ID956"
+    ],
+    "tiểu thuyết": [
+      "ID957"
+    ],
+    "hoa hồng": [
+      "ID958"
+    ],
+    "yên tĩnh": [
+      "ID959"
+    ],
+    "lưng": [
+      "ID960"
+    ],
+    "chuyến về": [
+      "ID961"
+    ],
+    "sự quan tâm": [
+      "ID962"
+    ],
+    "vòng": [
+      "ID963"
+    ],
+    "nước Nga": [
+      "ID964"
+    ],
+    "câu đố": [
+      "ID965"
+    ],
+    "tên cướp": [
+      "ID966"
+    ],
+    "sâu bướm": [
+      "ID967"
+    ],
+    "nhịp điệu": [
+      "ID968"
+    ],
+    "người khổng lồ": [
+      "ID969"
+    ],
+    "thịt bò": [
+      "ID970"
+    ],
+    "ống": [
+      "ID971"
+    ],
+    "cầu trượt": [
+      "ID972"
+    ],
+    "vòi": [
+      "ID973"
+    ]
+  },
+  "byArtikel": {
+    "der": [
+      "ID073",
+      "ID092",
+      "ID135",
+      "ID152",
+      "ID171",
+      "ID916",
+      "ID918",
+      "ID919",
+      "ID920",
+      "ID921",
+      "ID922",
+      "ID925",
+      "ID926",
+      "ID935",
+      "ID937",
+      "ID938",
+      "ID939",
+      "ID940",
+      "ID944",
+      "ID946",
+      "ID951",
+      "ID953",
+      "ID955",
+      "ID957",
+      "ID960",
+      "ID966",
+      "ID968",
+      "ID969",
+      "ID973"
+    ],
+    "die": [
+      "ID229",
+      "ID232",
+      "ID923",
+      "ID927",
+      "ID928",
+      "ID929",
+      "ID931",
+      "ID933",
+      "ID934",
+      "ID941",
+      "ID942",
+      "ID943",
+      "ID945",
+      "ID948",
+      "ID949",
+      "ID952",
+      "ID956",
+      "ID958",
+      "ID959",
+      "ID961",
+      "ID962",
+      "ID963",
+      "ID967",
+      "ID971",
+      "ID972"
+    ],
+    "das": [
+      "ID118",
+      "ID142",
+      "ID234",
+      "ID917",
+      "ID924",
+      "ID930",
+      "ID932",
+      "ID936",
+      "ID947",
+      "ID950",
+      "ID954",
+      "ID964",
+      "ID965",
+      "ID970"
+    ]
+  },
+  "entries": {
+    "ID073": {
+      "word": "Reis",
+      "artikel": "der",
+      "plural": "Reis",
+      "english": "rice",
+      "vietnamese": "gạo",
+      "definition_en": "A grain used as food.",
+      "definition_vi": "Hạt làm thức ăn.",
+      "examples": [
+        {
+          "de": "Ich koche Reis.",
+          "en": "I cook rice.",
+          "vi": "Tôi nấu cơm."
+        }
+      ]
+    },
+    "ID092": {
+      "word": "Radio",
+      "artikel": "das",
+      "plural": "Radios",
+      "english": "radio",
+      "vietnamese": "radio",
+      "definition_en": "A device for receiving radio broadcasts.",
+      "definition_vi": "Thiết bị nhận phát thanh.",
+      "examples": [
+        {
+          "de": "Das Radio spielt Musik.",
+          "en": "The radio plays music.",
+          "vi": "Radio phát nhạc."
+        }
+      ]
+    },
+    "ID118": {
+      "word": "Restaurant",
+      "artikel": "das",
+      "plural": "Restaurants",
+      "english": "restaurant",
+      "vietnamese": "nhà hàng",
+      "definition_en": "A place where meals are served.",
+      "definition_vi": "Nơi phục vụ bữa ăn.",
+      "examples": [
+        {
+          "de": "Das Restaurant ist voll.",
+          "en": "The restaurant is full.",
+          "vi": "Nhà hàng đầy."
+        }
+      ]
+    },
+    "ID135": {
+      "word": "Rucksack",
+      "artikel": "der",
+      "plural": "Rucksäcke",
+      "english": "backpack",
+      "vietnamese": "ba lô",
+      "definition_en": "A bag carried on the back.",
+      "definition_vi": "Túi đeo trên lưng.",
+      "examples": [
+        {
+          "de": "Der Rucksack ist neu.",
+          "en": "The backpack is new.",
+          "vi": "Ba lô mới."
+        }
+      ]
+    },
+    "ID142": {
+      "word": "Rock",
+      "artikel": "der",
+      "plural": "Röcke",
+      "english": "skirt",
+      "vietnamese": "váy",
+      "definition_en": "A garment hanging from the waist.",
+      "definition_vi": "Quần áo treo từ eo.",
+      "examples": [
+        {
+          "de": "Der Rock ist kurz.",
+          "en": "The skirt is short.",
+          "vi": "Váy ngắn."
+        }
+      ]
+    },
+    "ID152": {
+      "word": "Rot",
+      "artikel": "das",
+      "plural": "Rot",
+      "english": "red",
+      "vietnamese": "đỏ",
+      "definition_en": "The color of blood.",
+      "definition_vi": "Màu của máu.",
+      "examples": [
+        {
+          "de": "Das Rot ist schön.",
+          "en": "The red is beautiful.",
+          "vi": "Màu đỏ đẹp."
+        }
+      ]
+    },
+    "ID171": {
+      "word": "Regen",
+      "artikel": "der",
+      "plural": "Regen",
+      "english": "rain",
+      "vietnamese": "mưa",
+      "definition_en": "Water falling from clouds.",
+      "definition_vi": "Nước rơi từ mây.",
+      "examples": [
+        {
+          "de": "Der Regen fällt.",
+          "en": "The rain falls.",
+          "vi": "Mưa rơi."
+        }
+      ]
+    },
+    "ID229": {
+      "word": "Reihe",
+      "artikel": "die",
+      "plural": "Reihen",
+      "english": "row",
+      "vietnamese": "hàng",
+      "definition_en": "A line of things arranged side by side.",
+      "definition_vi": "Một dãy đồ xếp cạnh nhau.",
+      "examples": [
+        {
+          "de": "In der ersten Reihe.",
+          "en": "In the first row.",
+          "vi": "Ở hàng đầu tiên."
+        }
+      ]
+    },
+    "ID232": {
+      "word": "Regel",
+      "artikel": "die",
+      "plural": "Regeln",
+      "english": "rule",
+      "vietnamese": "quy tắc",
+      "definition_en": "A regulation or principle.",
+      "definition_vi": "Quy định hoặc nguyên tắc.",
+      "examples": [
+        {
+          "de": "Die Regel ist wichtig.",
+          "en": "The rule is important.",
+          "vi": "Quy tắc quan trọng."
+        }
+      ]
+    },
+    "ID234": {
+      "word": "Recht",
+      "artikel": "das",
+      "plural": "Rechte",
+      "english": "right",
+      "vietnamese": "quyền",
+      "definition_en": "A legal entitlement.",
+      "definition_vi": "Quyền lợi hợp pháp.",
+      "examples": [
+        {
+          "de": "Ich habe das Recht.",
+          "en": "I have the right.",
+          "vi": "Tôi có quyền."
+        }
+      ]
+    },
+    "ID916": {
+      "word": "Rabe",
+      "artikel": "der",
+      "plural": "Raben",
+      "english": "raven",
+      "vietnamese": "quạ",
+      "definition_en": "A raven.",
+      "definition_vi": "Một quạ.",
+      "examples": [
+        {
+          "de": "Der Rabe ist wichtig.",
+          "en": "The raven is important.",
+          "vi": "Quạ quan trọng."
+        }
+      ]
+    },
+    "ID917": {
+      "word": "Rad",
+      "artikel": "das",
+      "plural": "Räder",
+      "english": "wheel",
+      "vietnamese": "bánh xe",
+      "definition_en": "A wheel.",
+      "definition_vi": "Một bánh xe.",
+      "examples": [
+        {
+          "de": "Das Rad ist wichtig.",
+          "en": "The wheel is important.",
+          "vi": "Bánh xe quan trọng."
+        }
+      ]
+    },
+    "ID918": {
+      "word": "Rahmen",
+      "artikel": "der",
+      "plural": "Rahmen",
+      "english": "frame",
+      "vietnamese": "khung",
+      "definition_en": "A frame.",
+      "definition_vi": "Một khung.",
+      "examples": [
+        {
+          "de": "Der Rahmen ist wichtig.",
+          "en": "The frame is important.",
+          "vi": "Khung quan trọng."
+        }
+      ]
+    },
+    "ID919": {
+      "word": "Rand",
+      "artikel": "der",
+      "plural": "Ränder",
+      "english": "edge",
+      "vietnamese": "rìa",
+      "definition_en": "A edge.",
+      "definition_vi": "Một rìa.",
+      "examples": [
+        {
+          "de": "Der Rand ist wichtig.",
+          "en": "The edge is important.",
+          "vi": "Rìa quan trọng."
+        }
+      ]
+    },
+    "ID920": {
+      "word": "Rang",
+      "artikel": "der",
+      "plural": "Ränge",
+      "english": "rank",
+      "vietnamese": "cấp bậc",
+      "definition_en": "A rank.",
+      "definition_vi": "Một cấp bậc.",
+      "examples": [
+        {
+          "de": "Der Rang ist wichtig.",
+          "en": "The rank is important.",
+          "vi": "Cấp bậc quan trọng."
+        }
+      ]
+    },
+    "ID921": {
+      "word": "Rasen",
+      "artikel": "der",
+      "plural": "Rasen",
+      "english": "lawn",
+      "vietnamese": "bãi cỏ",
+      "definition_en": "A lawn.",
+      "definition_vi": "Một bãi cỏ.",
+      "examples": [
+        {
+          "de": "Der Rasen ist wichtig.",
+          "en": "The lawn is important.",
+          "vi": "Bãi cỏ quan trọng."
+        }
+      ]
+    },
+    "ID922": {
+      "word": "Rat",
+      "artikel": "der",
+      "plural": "Ratschläge",
+      "english": "advice",
+      "vietnamese": "lời khuyên",
+      "definition_en": "A advice.",
+      "definition_vi": "Một lời khuyên.",
+      "examples": [
+        {
+          "de": "Der Rat ist wichtig.",
+          "en": "The advice is important.",
+          "vi": "Lời khuyên quan trọng."
+        }
+      ]
+    },
+    "ID923": {
+      "word": "Rate",
+      "artikel": "die",
+      "plural": "Raten",
+      "english": "installment",
+      "vietnamese": "trả góp",
+      "definition_en": "A installment.",
+      "definition_vi": "Một trả góp.",
+      "examples": [
+        {
+          "de": "Die Rate ist wichtig.",
+          "en": "The installment is important.",
+          "vi": "Trả góp quan trọng."
+        }
+      ]
+    },
+    "ID924": {
+      "word": "Rathaus",
+      "artikel": "das",
+      "plural": "Rathäuser",
+      "english": "town hall",
+      "vietnamese": "tòa thị chính",
+      "definition_en": "A town hall.",
+      "definition_vi": "Một tòa thị chính.",
+      "examples": [
+        {
+          "de": "Das Rathaus ist wichtig.",
+          "en": "The town hall is important.",
+          "vi": "Tòa thị chính quan trọng."
+        }
+      ]
+    },
+    "ID925": {
+      "word": "Rauch",
+      "artikel": "der",
+      "plural": "-",
+      "english": "smoke",
+      "vietnamese": "khói",
+      "definition_en": "A smoke.",
+      "definition_vi": "Một khói.",
+      "examples": [
+        {
+          "de": "Der Rauch ist wichtig.",
+          "en": "The smoke is important.",
+          "vi": "Khói quan trọng."
+        }
+      ]
+    },
+    "ID926": {
+      "word": "Raum",
+      "artikel": "der",
+      "plural": "Räume",
+      "english": "room/space",
+      "vietnamese": "phòng",
+      "definition_en": "A room/space.",
+      "definition_vi": "Một phòng.",
+      "examples": [
+        {
+          "de": "Der Raum ist wichtig.",
+          "en": "The room/space is important.",
+          "vi": "Phòng quan trọng."
+        }
+      ]
+    },
+    "ID927": {
+      "word": "Reaktion",
+      "artikel": "die",
+      "plural": "Reaktionen",
+      "english": "reaction",
+      "vietnamese": "phản ứng",
+      "definition_en": "A reaction.",
+      "definition_vi": "Một phản ứng.",
+      "examples": [
+        {
+          "de": "Die Reaktion ist wichtig.",
+          "en": "The reaction is important.",
+          "vi": "Phản ứng quan trọng."
+        }
+      ]
+    },
+    "ID928": {
+      "word": "Realität",
+      "artikel": "die",
+      "plural": "Realitäten",
+      "english": "reality",
+      "vietnamese": "thực tại",
+      "definition_en": "A reality.",
+      "definition_vi": "Một thực tại.",
+      "examples": [
+        {
+          "de": "Die Realität ist wichtig.",
+          "en": "The reality is important.",
+          "vi": "Thực tại quan trọng."
+        }
+      ]
+    },
+    "ID929": {
+      "word": "Rechnung",
+      "artikel": "die",
+      "plural": "Rechnungen",
+      "english": "bill",
+      "vietnamese": "hóa đơn",
+      "definition_en": "A bill.",
+      "definition_vi": "Một hóa đơn.",
+      "examples": [
+        {
+          "de": "Die Rechnung ist wichtig.",
+          "en": "The bill is important.",
+          "vi": "Hóa đơn quan trọng."
+        }
+      ]
+    },
+    "ID930": {
+      "word": "Rechteck",
+      "artikel": "das",
+      "plural": "Rechtecke",
+      "english": "rectangle",
+      "vietnamese": "hình chữ nhật",
+      "definition_en": "A rectangle.",
+      "definition_vi": "Một hình chữ nhật.",
+      "examples": [
+        {
+          "de": "Das Rechteck ist wichtig.",
+          "en": "The rectangle is important.",
+          "vi": "Hình chữ nhật quan trọng."
+        }
+      ]
+    },
+    "ID931": {
+      "word": "Rede",
+      "artikel": "die",
+      "plural": "Reden",
+      "english": "speech",
+      "vietnamese": "bài phát biểu",
+      "definition_en": "A speech.",
+      "definition_vi": "Một bài phát biểu.",
+      "examples": [
+        {
+          "de": "Die Rede ist wichtig.",
+          "en": "The speech is important.",
+          "vi": "Bài phát biểu quan trọng."
+        }
+      ]
+    },
+    "ID932": {
+      "word": "Regal",
+      "artikel": "das",
+      "plural": "Regale",
+      "english": "shelf",
+      "vietnamese": "giá",
+      "definition_en": "A shelf.",
+      "definition_vi": "Một giá.",
+      "examples": [
+        {
+          "de": "Das Regal ist wichtig.",
+          "en": "The shelf is important.",
+          "vi": "Giá quan trọng."
+        }
+      ]
+    },
+    "ID933": {
+      "word": "Regierung",
+      "artikel": "die",
+      "plural": "Regierungen",
+      "english": "government",
+      "vietnamese": "chính phủ",
+      "definition_en": "A government.",
+      "definition_vi": "Một chính phủ.",
+      "examples": [
+        {
+          "de": "Die Regierung ist wichtig.",
+          "en": "The government is important.",
+          "vi": "Chính phủ quan trọng."
+        }
+      ]
+    },
+    "ID934": {
+      "word": "Region",
+      "artikel": "die",
+      "plural": "Regionen",
+      "english": "region",
+      "vietnamese": "vùng",
+      "definition_en": "A region.",
+      "definition_vi": "Một vùng.",
+      "examples": [
+        {
+          "de": "Die Region ist wichtig.",
+          "en": "The region is important.",
+          "vi": "Vùng quan trọng."
+        }
+      ]
+    },
+    "ID935": {
+      "word": "Regenschirm",
+      "artikel": "der",
+      "plural": "Regenschirme",
+      "english": "umbrella",
+      "vietnamese": "ô",
+      "definition_en": "A umbrella.",
+      "definition_vi": "Một ô.",
+      "examples": [
+        {
+          "de": "Der Regenschirm ist wichtig.",
+          "en": "The umbrella is important.",
+          "vi": "Ô quan trọng."
+        }
+      ]
+    },
+    "ID936": {
+      "word": "Reich",
+      "artikel": "das",
+      "plural": "Reiche",
+      "english": "empire",
+      "vietnamese": "đế chế",
+      "definition_en": "A empire.",
+      "definition_vi": "Một đế chế.",
+      "examples": [
+        {
+          "de": "Das Reich ist wichtig.",
+          "en": "The empire is important.",
+          "vi": "Đế chế quan trọng."
+        }
+      ]
+    },
+    "ID937": {
+      "word": "Reim",
+      "artikel": "der",
+      "plural": "Reime",
+      "english": "rhyme",
+      "vietnamese": "vần",
+      "definition_en": "A rhyme.",
+      "definition_vi": "Một vần.",
+      "examples": [
+        {
+          "de": "Der Reim ist wichtig.",
+          "en": "The rhyme is important.",
+          "vi": "Vần quan trọng."
+        }
+      ]
+    },
+    "ID938": {
+      "word": "Reiseführer",
+      "artikel": "der",
+      "plural": "Reiseführer",
+      "english": "travel guide",
+      "vietnamese": "hướng dẫn viên du lịch",
+      "definition_en": "A travel guide.",
+      "definition_vi": "Một hướng dẫn viên du lịch.",
+      "examples": [
+        {
+          "de": "Der Reiseführer ist wichtig.",
+          "en": "The travel guide is important.",
+          "vi": "Hướng dẫn viên du lịch quan trọng."
+        }
+      ]
+    },
+    "ID939": {
+      "word": "Reisende",
+      "artikel": "der",
+      "plural": "Reisenden",
+      "english": "traveler",
+      "vietnamese": "du khách",
+      "definition_en": "A traveler.",
+      "definition_vi": "Một du khách.",
+      "examples": [
+        {
+          "de": "Der Reisende ist wichtig.",
+          "en": "The traveler is important.",
+          "vi": "Du khách quan trọng."
+        }
+      ]
+    },
+    "ID940": {
+      "word": "Reißverschluss",
+      "artikel": "der",
+      "plural": "Reißverschlüsse",
+      "english": "zipper",
+      "vietnamese": "khóa kéo",
+      "definition_en": "A zipper.",
+      "definition_vi": "Một khóa kéo.",
+      "examples": [
+        {
+          "de": "Der Reißverschluss ist wichtig.",
+          "en": "The zipper is important.",
+          "vi": "Khóa kéo quan trọng."
+        }
+      ]
+    },
+    "ID941": {
+      "word": "Religion",
+      "artikel": "die",
+      "plural": "Religionen",
+      "english": "religion",
+      "vietnamese": "tôn giáo",
+      "definition_en": "A religion.",
+      "definition_vi": "Một tôn giáo.",
+      "examples": [
+        {
+          "de": "Die Religion ist wichtig.",
+          "en": "The religion is important.",
+          "vi": "Tôn giáo quan trọng."
+        }
+      ]
+    },
+    "ID942": {
+      "word": "Rente",
+      "artikel": "die",
+      "plural": "Renten",
+      "english": "pension",
+      "vietnamese": "lương hưu",
+      "definition_en": "A pension.",
+      "definition_vi": "Một lương hưu.",
+      "examples": [
+        {
+          "de": "Die Rente ist wichtig.",
+          "en": "The pension is important.",
+          "vi": "Lương hưu quan trọng."
+        }
+      ]
+    },
+    "ID943": {
+      "word": "Reparatur",
+      "artikel": "die",
+      "plural": "Reparaturen",
+      "english": "repair",
+      "vietnamese": "sửa chữa",
+      "definition_en": "A repair.",
+      "definition_vi": "Một sửa chữa.",
+      "examples": [
+        {
+          "de": "Die Reparatur ist wichtig.",
+          "en": "The repair is important.",
+          "vi": "Sửa chữa quan trọng."
+        }
+      ]
+    },
+    "ID944": {
+      "word": "Reporter",
+      "artikel": "der",
+      "plural": "Reporter",
+      "english": "reporter",
+      "vietnamese": "phóng viên",
+      "definition_en": "A reporter.",
+      "definition_vi": "Một phóng viên.",
+      "examples": [
+        {
+          "de": "Der Reporter ist wichtig.",
+          "en": "The reporter is important.",
+          "vi": "Phóng viên quan trọng."
+        }
+      ]
+    },
+    "ID945": {
+      "word": "Republik",
+      "artikel": "die",
+      "plural": "Republiken",
+      "english": "republic",
+      "vietnamese": "cộng hòa",
+      "definition_en": "A republic.",
+      "definition_vi": "Một cộng hòa.",
+      "examples": [
+        {
+          "de": "Die Republik ist wichtig.",
+          "en": "The republic is important.",
+          "vi": "Cộng hòa quan trọng."
+        }
+      ]
+    },
+    "ID946": {
+      "word": "Respekt",
+      "artikel": "der",
+      "plural": "-",
+      "english": "respect",
+      "vietnamese": "tôn trọng",
+      "definition_en": "A respect.",
+      "definition_vi": "Một tôn trọng.",
+      "examples": [
+        {
+          "de": "Der Respekt ist wichtig.",
+          "en": "The respect is important.",
+          "vi": "Tôn trọng quan trọng."
+        }
+      ]
+    },
+    "ID947": {
+      "word": "Resultat",
+      "artikel": "das",
+      "plural": "Resultate",
+      "english": "result",
+      "vietnamese": "kết quả",
+      "definition_en": "A result.",
+      "definition_vi": "Một kết quả.",
+      "examples": [
+        {
+          "de": "Das Resultat ist wichtig.",
+          "en": "The result is important.",
+          "vi": "Kết quả quan trọng."
+        }
+      ]
+    },
+    "ID948": {
+      "word": "Rettung",
+      "artikel": "die",
+      "plural": "Rettungen",
+      "english": "rescue",
+      "vietnamese": "cứu hộ",
+      "definition_en": "A rescue.",
+      "definition_vi": "Một cứu hộ.",
+      "examples": [
+        {
+          "de": "Die Rettung ist wichtig.",
+          "en": "The rescue is important.",
+          "vi": "Cứu hộ quan trọng."
+        }
+      ]
+    },
+    "ID949": {
+      "word": "Revolution",
+      "artikel": "die",
+      "plural": "Revolutionen",
+      "english": "revolution",
+      "vietnamese": "cách mạng",
+      "definition_en": "A revolution.",
+      "definition_vi": "Một cách mạng.",
+      "examples": [
+        {
+          "de": "Die Revolution ist wichtig.",
+          "en": "The revolution is important.",
+          "vi": "Cách mạng quan trọng."
+        }
+      ]
+    },
+    "ID950": {
+      "word": "Rezept",
+      "artikel": "das",
+      "plural": "Rezepte",
+      "english": "recipe/prescription",
+      "vietnamese": "công thức/đơn thuốc",
+      "definition_en": "A recipe/prescription.",
+      "definition_vi": "Một công thức/đơn thuốc.",
+      "examples": [
+        {
+          "de": "Das Rezept ist wichtig.",
+          "en": "The recipe/prescription is important.",
+          "vi": "Công thức/đơn thuốc quan trọng."
+        }
+      ]
+    },
+    "ID951": {
+      "word": "Richter",
+      "artikel": "der",
+      "plural": "Richter",
+      "english": "judge",
+      "vietnamese": "thẩm phán",
+      "definition_en": "A judge.",
+      "definition_vi": "Một thẩm phán.",
+      "examples": [
+        {
+          "de": "Der Richter ist wichtig.",
+          "en": "The judge is important.",
+          "vi": "Thẩm phán quan trọng."
+        }
+      ]
+    },
+    "ID952": {
+      "word": "Richtung",
+      "artikel": "die",
+      "plural": "Richtungen",
+      "english": "direction",
+      "vietnamese": "hướng",
+      "definition_en": "A direction.",
+      "definition_vi": "Một hướng.",
+      "examples": [
+        {
+          "de": "Die Richtung ist wichtig.",
+          "en": "The direction is important.",
+          "vi": "Hướng quan trọng."
+        }
+      ]
+    },
+    "ID953": {
+      "word": "Ring",
+      "artikel": "der",
+      "plural": "Ringe",
+      "english": "ring",
+      "vietnamese": "nhẫn",
+      "definition_en": "A ring.",
+      "definition_vi": "Một nhẫn.",
+      "examples": [
+        {
+          "de": "Der Ring ist wichtig.",
+          "en": "The ring is important.",
+          "vi": "Nhẫn quan trọng."
+        }
+      ]
+    },
+    "ID954": {
+      "word": "Risiko",
+      "artikel": "das",
+      "plural": "Risiken",
+      "english": "risk",
+      "vietnamese": "rủi ro",
+      "definition_en": "A risk.",
+      "definition_vi": "Một rủi ro.",
+      "examples": [
+        {
+          "de": "Das Risiko ist wichtig.",
+          "en": "The risk is important.",
+          "vi": "Rủi ro quan trọng."
+        }
+      ]
+    },
+    "ID955": {
+      "word": "Ritter",
+      "artikel": "der",
+      "plural": "Ritter",
+      "english": "knight",
+      "vietnamese": "hiệp sĩ",
+      "definition_en": "A knight.",
+      "definition_vi": "Một hiệp sĩ.",
+      "examples": [
+        {
+          "de": "Der Ritter ist wichtig.",
+          "en": "The knight is important.",
+          "vi": "Hiệp sĩ quan trọng."
+        }
+      ]
+    },
+    "ID956": {
+      "word": "Rolle",
+      "artikel": "die",
+      "plural": "Rollen",
+      "english": "role",
+      "vietnamese": "vai trò",
+      "definition_en": "A role.",
+      "definition_vi": "Một vai trò.",
+      "examples": [
+        {
+          "de": "Die Rolle ist wichtig.",
+          "en": "The role is important.",
+          "vi": "Vai trò quan trọng."
+        }
+      ]
+    },
+    "ID957": {
+      "word": "Roman",
+      "artikel": "der",
+      "plural": "Romane",
+      "english": "novel",
+      "vietnamese": "tiểu thuyết",
+      "definition_en": "A novel.",
+      "definition_vi": "Một tiểu thuyết.",
+      "examples": [
+        {
+          "de": "Der Roman ist wichtig.",
+          "en": "The novel is important.",
+          "vi": "Tiểu thuyết quan trọng."
+        }
+      ]
+    },
+    "ID958": {
+      "word": "Rose",
+      "artikel": "die",
+      "plural": "Rosen",
+      "english": "rose",
+      "vietnamese": "hoa hồng",
+      "definition_en": "A rose.",
+      "definition_vi": "Một hoa hồng.",
+      "examples": [
+        {
+          "de": "Die Rose ist wichtig.",
+          "en": "The rose is important.",
+          "vi": "Hoa hồng quan trọng."
+        }
+      ]
+    },
+    "ID959": {
+      "word": "Ruhe",
+      "artikel": "die",
+      "plural": "-",
+      "english": "rest/quiet",
+      "vietnamese": "yên tĩnh",
+      "definition_en": "A rest/quiet.",
+      "definition_vi": "Một yên tĩnh.",
+      "examples": [
+        {
+          "de": "Die Ruhe ist wichtig.",
+          "en": "The rest/quiet is important.",
+          "vi": "Yên tĩnh quan trọng."
+        }
+      ]
+    },
+    "ID960": {
+      "word": "Rücken",
+      "artikel": "der",
+      "plural": "Rücken",
+      "english": "back",
+      "vietnamese": "lưng",
+      "definition_en": "A back.",
+      "definition_vi": "Một lưng.",
+      "examples": [
+        {
+          "de": "Der Rücken ist wichtig.",
+          "en": "The back is important.",
+          "vi": "Lưng quan trọng."
+        }
+      ]
+    },
+    "ID961": {
+      "word": "Rückfahrt",
+      "artikel": "die",
+      "plural": "Rückfahrten",
+      "english": "return journey",
+      "vietnamese": "chuyến về",
+      "definition_en": "A return journey.",
+      "definition_vi": "Một chuyến về.",
+      "examples": [
+        {
+          "de": "Die Rückfahrt ist wichtig.",
+          "en": "The return journey is important.",
+          "vi": "Chuyến về quan trọng."
+        }
+      ]
+    },
+    "ID962": {
+      "word": "Rücksicht",
+      "artikel": "die",
+      "plural": "-",
+      "english": "consideration",
+      "vietnamese": "sự quan tâm",
+      "definition_en": "A consideration.",
+      "definition_vi": "Một sự quan tâm.",
+      "examples": [
+        {
+          "de": "Die Rücksicht ist wichtig.",
+          "en": "The consideration is important.",
+          "vi": "Sự quan tâm quan trọng."
+        }
+      ]
+    },
+    "ID963": {
+      "word": "Runde",
+      "artikel": "die",
+      "plural": "Runden",
+      "english": "round",
+      "vietnamese": "vòng",
+      "definition_en": "A round.",
+      "definition_vi": "Một vòng.",
+      "examples": [
+        {
+          "de": "Die Runde ist wichtig.",
+          "en": "The round is important.",
+          "vi": "Vòng quan trọng."
+        }
+      ]
+    },
+    "ID964": {
+      "word": "Russland",
+      "artikel": "das",
+      "plural": "-",
+      "english": "Russia",
+      "vietnamese": "nước Nga",
+      "definition_en": "A Russia.",
+      "definition_vi": "Một nước Nga.",
+      "examples": [
+        {
+          "de": "Das Russland ist wichtig.",
+          "en": "The Russia is important.",
+          "vi": "Nước Nga quan trọng."
+        }
+      ]
+    },
+    "ID965": {
+      "word": "Rätsel",
+      "artikel": "das",
+      "plural": "Rätsel",
+      "english": "riddle/puzzle",
+      "vietnamese": "câu đố",
+      "definition_en": "A riddle/puzzle.",
+      "definition_vi": "Một câu đố.",
+      "examples": [
+        {
+          "de": "Das Rätsel ist wichtig.",
+          "en": "The riddle/puzzle is important.",
+          "vi": "Câu đố quan trọng."
+        }
+      ]
+    },
+    "ID966": {
+      "word": "Räuber",
+      "artikel": "der",
+      "plural": "Räuber",
+      "english": "robber",
+      "vietnamese": "tên cướp",
+      "definition_en": "A robber.",
+      "definition_vi": "Một tên cướp.",
+      "examples": [
+        {
+          "de": "Der Räuber ist wichtig.",
+          "en": "The robber is important.",
+          "vi": "Tên cướp quan trọng."
+        }
+      ]
+    },
+    "ID967": {
+      "word": "Raupe",
+      "artikel": "die",
+      "plural": "Raupen",
+      "english": "caterpillar",
+      "vietnamese": "sâu bướm",
+      "definition_en": "A caterpillar.",
+      "definition_vi": "Một sâu bướm.",
+      "examples": [
+        {
+          "de": "Die Raupe ist wichtig.",
+          "en": "The caterpillar is important.",
+          "vi": "Sâu bướm quan trọng."
+        }
+      ]
+    },
+    "ID968": {
+      "word": "Rhythmus",
+      "artikel": "der",
+      "plural": "Rhythmen",
+      "english": "rhythm",
+      "vietnamese": "nhịp điệu",
+      "definition_en": "A rhythm.",
+      "definition_vi": "Một nhịp điệu.",
+      "examples": [
+        {
+          "de": "Der Rhythmus ist wichtig.",
+          "en": "The rhythm is important.",
+          "vi": "Nhịp điệu quan trọng."
+        }
+      ]
+    },
+    "ID969": {
+      "word": "Riese",
+      "artikel": "der",
+      "plural": "Riesen",
+      "english": "giant",
+      "vietnamese": "người khổng lồ",
+      "definition_en": "A giant.",
+      "definition_vi": "Một người khổng lồ.",
+      "examples": [
+        {
+          "de": "Der Riese ist wichtig.",
+          "en": "The giant is important.",
+          "vi": "Người khổng lồ quan trọng."
+        }
+      ]
+    },
+    "ID970": {
+      "word": "Rindfleisch",
+      "artikel": "das",
+      "plural": "-",
+      "english": "beef",
+      "vietnamese": "thịt bò",
+      "definition_en": "A beef.",
+      "definition_vi": "Một thịt bò.",
+      "examples": [
+        {
+          "de": "Das Rindfleisch ist wichtig.",
+          "en": "The beef is important.",
+          "vi": "Thịt bò quan trọng."
+        }
+      ]
+    },
+    "ID971": {
+      "word": "Röhre",
+      "artikel": "die",
+      "plural": "Röhren",
+      "english": "tube",
+      "vietnamese": "ống",
+      "definition_en": "A tube.",
+      "definition_vi": "Một ống.",
+      "examples": [
+        {
+          "de": "Die Röhre ist wichtig.",
+          "en": "The tube is important.",
+          "vi": "Ống quan trọng."
+        }
+      ]
+    },
+    "ID972": {
+      "word": "Rutsche",
+      "artikel": "die",
+      "plural": "Rutschen",
+      "english": "slide",
+      "vietnamese": "cầu trượt",
+      "definition_en": "A slide.",
+      "definition_vi": "Một cầu trượt.",
+      "examples": [
+        {
+          "de": "Die Rutsche ist wichtig.",
+          "en": "The slide is important.",
+          "vi": "Cầu trượt quan trọng."
+        }
+      ]
+    },
+    "ID973": {
+      "word": "Rüssel",
+      "artikel": "der",
+      "plural": "Rüssel",
+      "english": "trunk/snout",
+      "vietnamese": "vòi",
+      "definition_en": "A trunk/snout.",
+      "definition_vi": "Một vòi.",
+      "examples": [
+        {
+          "de": "Der Rüssel ist wichtig.",
+          "en": "The trunk/snout is important.",
+          "vi": "Vòi quan trọng."
+        }
+      ]
+    }
+  }
+}

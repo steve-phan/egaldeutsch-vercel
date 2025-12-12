@@ -1,0 +1,72 @@
+{
+  "byWord": {
+    "öl": "ID263",
+    "öffentlich": "ID264",
+    "österreich": "ID265"
+  },
+  "byEnglish": {
+    "oil": ["ID263"],
+    "public": ["ID264"],
+    "Austria": ["ID265"]
+  },
+  "byVietnamese": {
+    "dầu": ["ID263"],
+    "công cộng": ["ID264"],
+    "nước Áo": ["ID265"]
+  },
+  "byArtikel": {
+    "der": [],
+    "die": ["ID264"],
+    "das": ["ID263", "ID265"]
+  },
+  "entries": {
+    "ID263": {
+      "word": "Öl",
+      "artikel": "das",
+      "plural": "Öle",
+      "english": "oil",
+      "vietnamese": "dầu",
+      "definition_en": "A viscous liquid.",
+      "definition_vi": "Chất lỏng nhớt.",
+      "examples": [
+        {
+          "de": "Das Öl ist teuer.",
+          "en": "The oil is expensive.",
+          "vi": "Dầu đắt."
+        }
+      ]
+    },
+    "ID264": {
+      "word": "Öffentlichkeit",
+      "artikel": "die",
+      "plural": "Öffentlichkeiten",
+      "english": "public",
+      "vietnamese": "công cộng",
+      "definition_en": "The state of being public.",
+      "definition_vi": "Trạng thái công khai.",
+      "examples": [
+        {
+          "de": "Die Öffentlichkeit ist wichtig.",
+          "en": "The public is important.",
+          "vi": "Công chúng quan trọng."
+        }
+      ]
+    },
+    "ID265": {
+      "word": "Österreich",
+      "artikel": "das",
+      "plural": "Österreich",
+      "english": "Austria",
+      "vietnamese": "nước Áo",
+      "definition_en": "A country in central Europe.",
+      "definition_vi": "Một quốc gia ở Trung Âu.",
+      "examples": [
+        {
+          "de": "Österreich ist schön.",
+          "en": "Austria is beautiful.",
+          "vi": "Nước Áo đẹp."
+        }
+      ]
+    }
+  }
+}

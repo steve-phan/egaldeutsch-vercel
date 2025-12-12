@@ -1,0 +1,306 @@
+{
+  "byWord": {
+    "wasser": "ID009",
+    "woche": "ID028",
+    "wein": "ID080",
+    "wohnung": "ID082",
+    "wohnzimmer": "ID086",
+    "weiß": "ID157",
+    "winter": "ID164",
+    "wetter": "ID165",
+    "wolke": "ID170",
+    "wind": "ID173",
+    "wald": "ID182",
+    "wiese": "ID183"
+  },
+  "byEnglish": {
+    "water": [
+      "ID009"
+    ],
+    "week": [
+      "ID028"
+    ],
+    "wine": [
+      "ID080"
+    ],
+    "apartment": [
+      "ID082"
+    ],
+    "living room": [
+      "ID086"
+    ],
+    "white": [
+      "ID157"
+    ],
+    "winter": [
+      "ID164"
+    ],
+    "weather": [
+      "ID165"
+    ],
+    "cloud": [
+      "ID170"
+    ],
+    "wind": [
+      "ID173"
+    ],
+    "forest": [
+      "ID182"
+    ],
+    "meadow": [
+      "ID183"
+    ]
+  },
+  "byVietnamese": {
+    "nước": [
+      "ID009"
+    ],
+    "tuần": [
+      "ID028"
+    ],
+    "rượu vang": [
+      "ID080"
+    ],
+    "căn hộ": [
+      "ID082"
+    ],
+    "phòng khách": [
+      "ID086"
+    ],
+    "trắng": [
+      "ID157"
+    ],
+    "mùa đông": [
+      "ID164"
+    ],
+    "thời tiết": [
+      "ID165"
+    ],
+    "đám mây": [
+      "ID170"
+    ],
+    "gió": [
+      "ID173"
+    ],
+    "rừng": [
+      "ID182"
+    ],
+    "đồng cỏ": [
+      "ID183"
+    ]
+  },
+  "byArtikel": {
+    "der": [
+      "ID080",
+      "ID164",
+      "ID173",
+      "ID182"
+    ],
+    "die": [
+      "ID028",
+      "ID082",
+      "ID170",
+      "ID183"
+    ],
+    "das": [
+      "ID009",
+      "ID086",
+      "ID157",
+      "ID165"
+    ]
+  },
+  "entries": {
+    "ID009": {
+      "word": "Wasser",
+      "artikel": "das",
+      "plural": "Wässer",
+      "english": "water",
+      "vietnamese": "nước",
+      "definition_en": "A clear liquid necessary for life.",
+      "definition_vi": "Một chất lỏng trong suốt cần thiết cho sự sống.",
+      "examples": [
+        {
+          "de": "Ich trinke Wasser.",
+          "en": "I drink water.",
+          "vi": "Tôi uống nước."
+        }
+      ]
+    },
+    "ID028": {
+      "word": "Woche",
+      "artikel": "die",
+      "plural": "Wochen",
+      "english": "week",
+      "vietnamese": "tuần",
+      "definition_en": "A period of seven days.",
+      "definition_vi": "Một khoảng thời gian bảy ngày.",
+      "examples": [
+        {
+          "de": "Eine Woche hat sieben Tage.",
+          "en": "A week has seven days.",
+          "vi": "Một tuần có bảy ngày."
+        }
+      ]
+    },
+    "ID080": {
+      "word": "Wein",
+      "artikel": "der",
+      "plural": "Weine",
+      "english": "wine",
+      "vietnamese": "rượu vang",
+      "definition_en": "An alcoholic drink made from grapes.",
+      "definition_vi": "Đồ uống có cồn làm từ nho.",
+      "examples": [
+        {
+          "de": "Der Wein ist rot.",
+          "en": "The wine is red.",
+          "vi": "Rượu vang đỏ."
+        }
+      ]
+    },
+    "ID082": {
+      "word": "Wohnung",
+      "artikel": "die",
+      "plural": "Wohnungen",
+      "english": "apartment",
+      "vietnamese": "căn hộ",
+      "definition_en": "A set of rooms for living in.",
+      "definition_vi": "Một bộ phòng để ở.",
+      "examples": [
+        {
+          "de": "Die Wohnung hat drei Zimmer.",
+          "en": "The apartment has three rooms.",
+          "vi": "Căn hộ có ba phòng."
+        }
+      ]
+    },
+    "ID086": {
+      "word": "Wohnzimmer",
+      "artikel": "das",
+      "plural": "Wohnzimmer",
+      "english": "living room",
+      "vietnamese": "phòng khách",
+      "definition_en": "A room for relaxing and entertaining.",
+      "definition_vi": "Một phòng để thư giãn và giải trí.",
+      "examples": [
+        {
+          "de": "Das Wohnzimmer ist gemütlich.",
+          "en": "The living room is cozy.",
+          "vi": "Phòng khách ấm cúng."
+        }
+      ]
+    },
+    "ID157": {
+      "word": "Weiß",
+      "artikel": "das",
+      "plural": "Weiß",
+      "english": "white",
+      "vietnamese": "trắng",
+      "definition_en": "The lightest color.",
+      "definition_vi": "Màu sáng nhất.",
+      "examples": [
+        {
+          "de": "Das Weiß ist hell.",
+          "en": "The white is bright.",
+          "vi": "Màu trắng sáng."
+        }
+      ]
+    },
+    "ID164": {
+      "word": "Winter",
+      "artikel": "der",
+      "plural": "Winter",
+      "english": "winter",
+      "vietnamese": "mùa đông",
+      "definition_en": "The coldest season of the year.",
+      "definition_vi": "Mùa lạnh nhất trong năm.",
+      "examples": [
+        {
+          "de": "Der Winter ist kalt.",
+          "en": "Winter is cold.",
+          "vi": "Mùa đông lạnh."
+        }
+      ]
+    },
+    "ID165": {
+      "word": "Wetter",
+      "artikel": "das",
+      "plural": "Wetter",
+      "english": "weather",
+      "vietnamese": "thời tiết",
+      "definition_en": "The state of the atmosphere.",
+      "definition_vi": "Trạng thái của khí quyển.",
+      "examples": [
+        {
+          "de": "Das Wetter ist gut.",
+          "en": "The weather is good.",
+          "vi": "Thời tiết tốt."
+        }
+      ]
+    },
+    "ID170": {
+      "word": "Wolke",
+      "artikel": "die",
+      "plural": "Wolken",
+      "english": "cloud",
+      "vietnamese": "đám mây",
+      "definition_en": "A visible mass of water droplets.",
+      "definition_vi": "Khối nước hơi nhìn thấy được.",
+      "examples": [
+        {
+          "de": "Die Wolke ist weiß.",
+          "en": "The cloud is white.",
+          "vi": "Đám mây trắng."
+        }
+      ]
+    },
+    "ID173": {
+      "word": "Wind",
+      "artikel": "der",
+      "plural": "Winde",
+      "english": "wind",
+      "vietnamese": "gió",
+      "definition_en": "Moving air.",
+      "definition_vi": "Không khí di chuyển.",
+      "examples": [
+        {
+          "de": "Der Wind ist stark.",
+          "en": "The wind is strong.",
+          "vi": "Gió mạnh."
+        }
+      ]
+    },
+    "ID182": {
+      "word": "Wald",
+      "artikel": "der",
+      "plural": "Wälder",
+      "english": "forest",
+      "vietnamese": "rừng",
+      "definition_en": "A large area covered with trees.",
+      "definition_vi": "Khu vực lớn phủ đầy cây cối.",
+      "examples": [
+        {
+          "de": "Der Wald ist grün.",
+          "en": "The forest is green.",
+          "vi": "Rừng xanh."
+        }
+      ]
+    },
+    "ID183": {
+      "word": "Wiese",
+      "artikel": "die",
+      "plural": "Wiesen",
+      "english": "meadow",
+      "vietnamese": "đồng cỏ",
+      "definition_en": "A field of grass.",
+      "definition_vi": "Cánh đồng cỏ.",
+      "examples": [
+        {
+          "de": "Die Wiese ist grün.",
+          "en": "The meadow is green.",
+          "vi": "Đồng cỏ xanh."
+        }
+      ]
+    }
+  }
+}
