@@ -1,0 +1,12 @@
+<svg width="800" height="400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="400" fill="#00ADD8"/>
+  <text x="400" y="180" font-family="Arial, sans-serif" font-size="48" fill="white" text-anchor="middle" font-weight="bold">
+    Getting Started
+  </text>
+  <text x="400" y="240" font-family="Arial, sans-serif" font-size="48" fill="white" text-anchor="middle" font-weight="bold">
+    with Golang
+  </text>
+  <circle cx="100" cy="100" r="40" fill="white" opacity="0.3"/>
+  <circle cx="700" cy="300" r="60" fill="white" opacity="0.2"/>
+  <circle cx="150" cy="320" r="30" fill="white" opacity="0.25"/>
+</svg>
