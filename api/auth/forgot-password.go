@@ -10,8 +10,8 @@ import (
 	"os"
 	"time"
 
-	"egaldeutsch-vercel/api/db"
 	"egaldeutsch-vercel/api/utils"
+	"egaldeutsch-vercel/db"
 
 	"go.mongodb.org/mongo-driver/bson"
 )

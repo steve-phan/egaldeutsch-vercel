@@ -38,3 +38,4 @@ func GetCollection(collectionName string) *mongo.Collection {
 	client := GetClient()
 	return client.Database("egaldeutsch").Collection(collectionName)
 }
+

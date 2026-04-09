@@ -5,8 +5,8 @@ import (
 	"net/http"
 	"time"
 
-	"egaldeutsch-vercel/api/db"
 	"egaldeutsch-vercel/api/mock"
+	"egaldeutsch-vercel/db"
 
 	"go.mongodb.org/mongo-driver/bson"
 )
