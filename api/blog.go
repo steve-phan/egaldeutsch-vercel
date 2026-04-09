@@ -1,6 +1,7 @@
 package handler
 
 import (
+	"egaldeutsch-vercel/api/utils/blog"
 	"encoding/json"
 	"net/http"
 	"os"
@@ -8,8 +9,6 @@ import (
 	"sort"
 	"strings"
 	"time"
-
-	"egaldeutsch-vercel/api/utils/blog"
 )
 
 type BlogPost struct {
