@@ -4,7 +4,6 @@ import (
 	"context"
 	"encoding/json"
 	"net/http"
-	"strings"
 	"time"
 
 	"egaldeutsch-vercel/api/db"
@@ -28,7 +27,6 @@ func Handler(w http.ResponseWriter, r *http.Request) {
 
 	// Parse ID from query parameters if present
 	id := r.URL.Query().Get("id")
-	pathParts := strings.Split(strings.TrimPrefix(r.URL.Path, "/api/explanation-quiz"), "/")
 
 	switch r.Method {
 	case http.MethodGet:
