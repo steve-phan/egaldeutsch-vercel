@@ -324,14 +324,14 @@ func (db *MockDB) GetOrCreateLessonProgress(userID, lessonID primitive.ObjectID)
 
 	// Create new progress
 	progress := &MockLessonProgress{
-		ID:        primitive.NewObjectID(),
-		UserID:    userID,
-		LessonID:  lessonID,
-		Completed: false,
+		ID:         primitive.NewObjectID(),
+		UserID:     userID,
+		LessonID:   lessonID,
+		Completed:  false,
 		QuizPassed: false,
-		Attempts:  0,
-		CreatedAt: time.Now(),
-		UpdatedAt: time.Now(),
+		Attempts:   0,
+		CreatedAt:  time.Now(),
+		UpdatedAt:  time.Now(),
 	}
 
 	db.lessonProgress[progress.ID] = progress
@@ -402,3 +402,4 @@ func (db *MockDB) GetUserStats(userID primitive.ObjectID) map[string]interface{}
 		"completion_rate":   float64(completedLessons) / float64(max(totalLessons, 1)) * 100,
 	}
 }
+

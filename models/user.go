@@ -14,3 +14,4 @@ type User struct {
 	ResetToken       string             `bson:"reset_token,omitempty" json:"-"`
 	ResetTokenExpiry time.Time          `bson:"reset_token_expiry,omitempty" json:"-"`
 }
+

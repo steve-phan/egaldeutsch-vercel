@@ -76,3 +76,4 @@ func GetClaimsFromRequest(r *http.Request) (*Claims, error) {
 
 	return ValidateToken(tokenString)
 }
+

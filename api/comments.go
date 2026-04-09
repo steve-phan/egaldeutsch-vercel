@@ -6,9 +6,9 @@ import (
 	"net/http"
 	"time"
 
-	"egaldeutsch-vercel/api/mock"
-	"egaldeutsch-vercel/api/utils"
 	"egaldeutsch-vercel/db"
+	"egaldeutsch-vercel/mock"
+	"egaldeutsch-vercel/utils"
 
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/bson/primitive"

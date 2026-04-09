@@ -7,7 +7,7 @@ import (
 	"time"
 
 	"egaldeutsch-vercel/db"
-	"egaldeutsch-vercel/api/mock"
+	"egaldeutsch-vercel/mock"
 
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/bson/primitive"

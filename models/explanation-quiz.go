@@ -40,3 +40,4 @@ type UpdateExplanationQuizRequest struct {
 	Category string       `json:"category,omitempty"`
 	Options  []QuizOption `json:"options,omitempty"`
 }
+

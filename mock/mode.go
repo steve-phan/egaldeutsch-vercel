@@ -8,3 +8,4 @@ import (
 func IsMockMode() bool {
 	return os.Getenv("USE_MOCK_DB") == "true" || os.Getenv("MONGODB_URI") == ""
 }
+

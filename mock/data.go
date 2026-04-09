@@ -258,3 +258,4 @@ func (db *MockDB) seedData() {
 		UpdatedAt:   time.Now(),
 	}
 }
+

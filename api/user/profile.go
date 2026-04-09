@@ -7,8 +7,8 @@ import (
 	"strings"
 	"time"
 
-	"egaldeutsch-vercel/api/utils"
 	"egaldeutsch-vercel/db"
+	"egaldeutsch-vercel/utils"
 
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/bson/primitive"

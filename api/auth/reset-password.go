@@ -6,8 +6,8 @@ import (
 	"net/http"
 	"time"
 
-	"egaldeutsch-vercel/api/models"
 	"egaldeutsch-vercel/db"
+	"egaldeutsch-vercel/models"
 
 	"go.mongodb.org/mongo-driver/bson"
 	"golang.org/x/crypto/bcrypt"
