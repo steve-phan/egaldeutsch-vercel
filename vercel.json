@@ -1,14 +1,3 @@
 {
-  "$schema": "https://openapi.vercel.sh/vercel.json",
-  "functions": {
-    "api/*.go": {
-      "runtime": "go1.x"
-    }
-  },
-  "routes": [
-    {
-      "src": "/api/(.*)",
-      "dest": "/api/$1.go"
-    }
-  ]
+  "$schema": "https://openapi.vercel.sh/vercel.json"
 }
