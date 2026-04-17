@@ -171,20 +171,22 @@ export function useQuizSession(): UseQuizSessionResult {
       if (configuration.current) {
           const token = typeof window !== "undefined" ? localStorage.getItem("token") : null;
           
-          await fetch("/api/quiz/submit", {
-            method: "POST",
-            headers: { 
-                "Content-Type": "application/json",
-                ...(token ? { Authorization: `Bearer ${token}` } : {})
-            },
-            body: JSON.stringify({
-                category: configuration.current.category,
-                level: configuration.current.level,
-                score,
-                total_q: questions.length,
-                correct_q: correctCount
-            })
-          });
+          if (token) {
+            await fetch("/api/quiz/submit", {
+              method: "POST",
+              headers: { 
+                  "Content-Type": "application/json",
+                  "Authorization": `Bearer ${token}`
+              },
+              body: JSON.stringify({
+                  category: configuration.current.category,
+                  level: configuration.current.level,
+                  score,
+                  total_q: questions.length,
+                  correct_q: correctCount
+              })
+            });
+          }
       }
       setStatus("complete");
     } catch {

@@ -28,7 +28,8 @@ export const authOptions: NextAuthOptions = {
           return {
             ...data.user,
             id: data.user.id || data.user._id, // Handle both id formats
-            accessToken: data.token
+            accessToken: data.token,
+            role: data.user.role || "student" // Default fallback
           };
         }
         return null;
@@ -44,10 +45,13 @@ export const authOptions: NextAuthOptions = {
         token.id = (user as any).id || (user as any)._id;
         token.name = user.name;
         token.email = user.email;
+        token.role = (user as any).role || "student";
+        token.accessToken = (user as any).accessToken;
       }
       if (trigger === "update" && session) {
         token.name = session.name;
         token.email = session.email;
+        if (session.role) token.role = session.role;
       }
       return token;
     },
@@ -56,6 +60,8 @@ export const authOptions: NextAuthOptions = {
         (session.user as any).id = token.id;
         session.user.name = token.name;
         session.user.email = token.email;
+        (session.user as any).role = token.role;
+        (session.user as any).accessToken = token.accessToken;
       }
       return session;
     },

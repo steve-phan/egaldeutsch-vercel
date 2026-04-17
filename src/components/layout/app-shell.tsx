@@ -3,6 +3,7 @@
 import React from "react";
 import { BottomNav } from "@/components/dashboard/bottom-nav";
 import { usePathname } from "next/navigation";
+import { useSession } from "next-auth/react";
 
 interface AppShellProps {
   children: React.ReactNode;
@@ -16,9 +17,11 @@ export function AppShell({
   maxWidth = "xl" 
 }: AppShellProps) {
   const pathname = usePathname();
+  const { status } = useSession();
   
   // Hide nav on specific routes if needed (e.g., login, certain quiz states)
-  const shouldShowNav = showNav && !pathname.startsWith("/login") && !pathname.startsWith("/signup");
+  const isAuthPage = pathname.startsWith("/login") || pathname.startsWith("/signup");
+  const shouldShowNav = showNav && !isAuthPage;
 
   const maxWidthClasses = {
     sm: "max-w-screen-sm",
@@ -31,7 +34,7 @@ export function AppShell({
 
   return (
     <div className="min-h-screen bg-[#F8FAFC] flex flex-col items-center relative overflow-x-hidden">
-      {/* Dynamic Background Elements */}
+      {/* Premium Background Accents */}
       <div className="fixed inset-0 pointer-events-none overflow-hidden">
          <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[120px] -translate-y-1/2" />
          <div className="absolute bottom-0 right-1/4 w-[600px] h-[600px] bg-indigo-500/5 rounded-full blur-[140px] translate-y-1/2" />
@@ -44,7 +47,7 @@ export function AppShell({
          </main>
       </div>
 
-      {/* Floating Navigation */}
+      {/* Conditional Navigation */}
       {shouldShowNav && <BottomNav />}
     </div>
   );

@@ -2,10 +2,12 @@
 
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
-import { CheckCircle2, XCircle, BarChart3, Clock, Home, ArrowRight, Trophy } from "lucide-react";
+import { CheckCircle2, XCircle, BarChart3, Clock, Home, ArrowRight, Trophy, AlertCircle } from "lucide-react";
 import { useLanguage } from "@/contexts/language-context";
 import { AppShell } from "@/components/layout/app-shell";
+import { useSession } from "next-auth/react";
 import Image from "next/image";
+import Link from "next/link";
 
 interface SessionSummary {
   category: string;
@@ -22,7 +24,9 @@ interface SessionSummary {
 export default function ResultsPage() {
   const router = useRouter();
   const { language } = useLanguage();
+  const { status } = useSession();
   const [summary, setSummary] = useState<SessionSummary | null>(null);
+  const isGuest = status === "unauthenticated";
 
   useEffect(() => {
     const data = sessionStorage.getItem("lastSessionResult");
@@ -57,7 +61,7 @@ export default function ResultsPage() {
       <div className="w-full flex flex-col items-center">
         
         {/* Mission Card */}
-        <div className="w-full glass-card-premium rounded-[3rem] p-10 text-center relative overflow-hidden mb-12 animate-in zoom-in-95 duration-700">
+        <div className="w-full glass-card-premium rounded-[3rem] p-10 text-center relative overflow-hidden mb-6 animate-in zoom-in-95 duration-700">
            {/* Decorative Background */}
            <div className={`absolute -top-10 -right-10 w-48 h-48 rounded-full blur-3xl opacity-20 ${isExcellent ? "bg-primary" : "bg-slate-400"}`} />
            
@@ -104,6 +108,24 @@ export default function ResultsPage() {
               </div>
            </div>
         </div>
+
+        {/* Guest Conversion Hook */}
+        {isGuest && (
+           <div className="w-full p-6 rounded-[2rem] bg-indigo-50 border border-indigo-100 mb-8 flex items-center gap-4 animate-in slide-in-from-bottom-4 duration-1000">
+              <div className="w-12 h-12 rounded-2xl bg-white shadow-sm flex items-center justify-center shrink-0">
+                 <AlertCircle className="w-6 h-6 text-indigo-500" />
+              </div>
+              <div className="flex-1">
+                 <p className="text-sm font-black text-slate-800 italic leading-tight">Progress Not Saved!</p>
+                 <p className="text-[10px] font-bold text-slate-400 uppercase tracking-tight mt-1">Sign up for free to keep your scores and earn badges.</p>
+              </div>
+              <Link href="/signup">
+                 <button className="px-4 py-2 bg-indigo-500 text-white rounded-xl text-[10px] font-black uppercase tracking-widest shadow-lg shadow-indigo-500/30 hover:bg-indigo-600 transition-colors">
+                    Join Now
+                 </button>
+              </Link>
+           </div>
+        )}
 
         {/* Action Controls */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full">

@@ -1,8 +1,8 @@
+"use client";
+
 import { QuizQuestion } from "@/types/quiz";
-import { Button } from "@/components/ui/button";
-import { Edit2, Trash2 } from "lucide-react";
+import { Edit2, Trash2, FileText, Type, ListOrdered, Layers } from "lucide-react";
 import Link from "next/link";
-import { Badge } from "@/components/ui/badge";
 
 interface QuestionTableProps {
   questions: QuizQuestion[];
@@ -14,76 +14,70 @@ export function QuestionTable({ questions, onDelete, isDeleting }: QuestionTable
 
   if (questions.length === 0) {
     return (
-      <div className="bg-white p-12 text-center rounded-2xl border border-slate-200">
-         <p className="text-slate-500 text-lg">No questions found matching your filters.</p>
+      <div className="bg-white/50 backdrop-blur-md p-20 text-center rounded-[3rem] border border-white animate-in zoom-in-95 duration-700">
+         <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest">No matching records found in database.</p>
       </div>
     );
   }
 
+  const getTypeIcon = (type: string) => {
+    switch (type) {
+      case "multiple-choice": return <Type className="w-4 h-4" />;
+      case "fill-in-blank": return <FileText className="w-4 h-4" />;
+      case "word-order": return <ListOrdered className="w-4 h-4" />;
+      default: return <Layers className="w-4 h-4" />;
+    }
+  };
+
   return (
-    <div className="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
-      <div className="overflow-x-auto">
-        <table className="w-full text-left border-collapse">
-          <thead>
-            <tr className="bg-slate-50 border-b border-slate-200">
-              <th className="p-4 text-xs font-bold text-slate-500 uppercase tracking-wider">Level</th>
-              <th className="p-4 text-xs font-bold text-slate-500 uppercase tracking-wider">Category</th>
-              <th className="p-4 text-xs font-bold text-slate-500 uppercase tracking-wider w-1/3">Prompt (DE)</th>
-              <th className="p-4 text-xs font-bold text-slate-500 uppercase tracking-wider">Type</th>
-              <th className="p-4 text-xs font-bold text-slate-500 uppercase tracking-wider text-right">Actions</th>
-            </tr>
-          </thead>
-          <tbody className="divide-y divide-slate-100">
-            {questions.map((q) => (
-              <tr key={q.id} className="hover:bg-slate-50/50 transition-colors">
-                <td className="p-4">
-                  <Badge variant="outline" className="font-bold border-indigo-200 text-indigo-700 bg-white">
-                    {q.level}
-                  </Badge>
-                </td>
-                <td className="p-4">
-                  <div>
-                    <div className="font-semibold text-slate-800">{q.category}</div>
-                    {q.subcategory && <div className="text-xs text-slate-400">{q.subcategory}</div>}
-                  </div>
-                </td>
-                <td className="p-4">
-                  <p className="text-sm text-slate-800 font-medium line-clamp-2">
-                    {q.prompt_de.replace(/___/g, "___ (blank)")}
-                  </p>
-                </td>
-                <td className="p-4">
-                  <span className="text-xs font-medium text-slate-500 bg-slate-100 px-2 py-1 rounded-md">
-                    {q.type.replace("-", " ")}
-                  </span>
-                </td>
-                <td className="p-4 text-right">
-                  <div className="flex justify-end gap-2">
-                     <Link href={`/admin/questions/${q.id}`}>
-                        <Button variant="outline" size="sm" className="h-8 text-indigo-600 hover:text-indigo-800">
-                          <Edit2 className="w-3.5 h-3.5 mr-1" /> Edit
-                        </Button>
-                     </Link>
-                     <Button 
-                       variant="ghost" 
-                       size="sm" 
-                       className="h-8 text-red-500 hover:text-red-700 hover:bg-red-50"
-                       disabled={isDeleting}
-                       onClick={() => {
-                         if (confirm("Are you sure you want to delete this question?")) {
-                           onDelete(q.id);
-                         }
-                       }}
-                     >
-                        <Trash2 className="w-3.5 h-3.5" />
-                     </Button>
-                  </div>
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
+    <div className="space-y-4">
+      {questions.map((q, idx) => (
+        <div 
+          key={q.id} 
+          className="glass-card-premium p-6 rounded-[2rem] flex flex-col md:flex-row items-center justify-between gap-6 hover:translate-x-1 transition-all group animate-in slide-in-from-left-4 duration-500"
+          style={{ animationDelay: `${idx * 50}ms` }}
+        >
+          <div className="flex items-center gap-6 flex-1 w-full">
+            {/* Level & Type Indicators */}
+            <div className="flex flex-col gap-2 shrink-0">
+               <div className="w-12 h-12 bg-slate-50 rounded-2xl flex items-center justify-center text-primary shadow-inner border border-slate-100 group-hover:bg-primary group-hover:text-white transition-colors duration-500">
+                 {getTypeIcon(q.type)}
+               </div>
+               <div className="text-[10px] font-black text-center text-slate-400 uppercase tracking-widest">{q.level}</div>
+            </div>
+
+            {/* Content Context */}
+            <div className="flex-1 min-w-0">
+              <div className="flex items-center gap-2 mb-1">
+                 <span className="text-[10px] font-black text-primary uppercase tracking-[0.2em]">{q.category}</span>
+                 {q.subcategory && (
+                   <span className="text-[10px] font-bold text-slate-300 uppercase tracking-tighter">• {q.subcategory}</span>
+                 )}
+              </div>
+              <p className="text-sm font-bold text-slate-800 line-clamp-2 leading-tight italic decoration-primary/30 underline-offset-4 group-hover:underline">
+                {q.prompt_de.replace(/___/g, "______")}
+              </p>
+            </div>
+          </div>
+
+          <div className="flex items-center gap-3 shrink-0 self-end md:self-center">
+             <Link href={`/admin/questions/${q.id}`}>
+                <button className="h-10 px-6 rounded-xl bg-white border border-slate-100 text-[10px] font-black uppercase tracking-widest text-slate-400 hover:text-primary hover:border-primary/20 shadow-sm transition-all flex items-center gap-2">
+                   <Edit2 className="w-3 h-3" /> Edit
+                </button>
+             </Link>
+             <button 
+               onClick={() => {
+                 if (confirm("Delete this mission from the database?")) onDelete(q.id);
+               }}
+               disabled={isDeleting}
+               className="h-10 w-10 rounded-xl bg-rose-50 text-rose-400 hover:bg-rose-500 hover:text-white transition-all flex items-center justify-center shadow-sm"
+             >
+                <Trash2 className="w-4 h-4" />
+             </button>
+          </div>
+        </div>
+      ))}
     </div>
   );
 }
