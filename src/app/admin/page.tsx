@@ -45,6 +45,11 @@ export default function AdminDashboardPage() {
                >
                  <RefreshCw className={`w-5 h-5 ${loading ? "animate-spin" : ""}`} />
                </button>
+               <Link href="/admin/users">
+                  <button className="h-12 px-6 rounded-2xl bg-white border border-slate-100 text-[10px] font-black uppercase tracking-widest text-slate-400 hover:text-primary hover:border-primary/20 shadow-premium transition-all flex items-center gap-2">
+                      <Database className="w-3.5 h-3.5" /> User Hub
+                  </button>
+               </Link>
                <Link href="/admin/questions/new">
                  <button className="btn-orange h-12 px-6 rounded-2xl text-xs font-black flex items-center gap-2 shadow-lg shadow-primary/20 active:scale-95 transition-all uppercase tracking-widest">
                    <Plus className="w-4 h-4" /> New Question
