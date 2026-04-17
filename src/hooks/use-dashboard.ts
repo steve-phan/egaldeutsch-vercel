@@ -1,4 +1,5 @@
 import { useState, useEffect, useCallback } from "react";
+import { API_ROUTES } from "@/lib/constants";
 
 export interface DashboardStats {
   total_sessions: number;
@@ -40,7 +41,7 @@ export function useDashboard(): UseDashboardResult {
     }
 
     try {
-      const res = await fetch("/api/dashboard", {
+      const res = await fetch(API_ROUTES.DASHBOARD, {
         headers: { Authorization: `Bearer ${token}` },
       });
       if (!res.ok) throw new Error("Failed to fetch dashboard");

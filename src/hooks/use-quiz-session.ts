@@ -1,5 +1,6 @@
 import { useState, useCallback, useRef, useEffect } from "react";
 import { QuizQuestion, QuizSessionConfig, CEFRLevel, QuizCategory } from "@/types/quiz";
+import { API_ROUTES } from "@/lib/constants";
 
 export interface AnswerRecord {
   questionId: string;
@@ -99,7 +100,7 @@ export function useQuizSession(): UseQuizSessionResult {
     
     try {
       const levelParam = config.level === "mixed" ? "" : `&level=${config.level}`;
-      const res = await fetch(`/api/quiz/questions?category=${config.category}${levelParam}&limit=${config.totalQuestions}`);
+      const res = await fetch(`${API_ROUTES.QUIZ_QUESTIONS}?category=${config.category}${levelParam}&limit=${config.totalQuestions}`);
       
       if (!res.ok) throw new Error("Failed to fetch questions");
       
@@ -172,7 +173,7 @@ export function useQuizSession(): UseQuizSessionResult {
           const token = typeof window !== "undefined" ? localStorage.getItem("token") : null;
           
           if (token) {
-            await fetch("/api/quiz/submit", {
+            await fetch(API_ROUTES.QUIZ_SUBMIT, {
               method: "POST",
               headers: { 
                   "Content-Type": "application/json",

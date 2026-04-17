@@ -5,7 +5,7 @@ export default withAuth(
   function middleware(req) {
     const token = req.nextauth.token;
     const isAuth = !!token;
-    const pathname = req.nexturl.pathname;
+    const pathname = req.nextUrl.pathname;
 
     // Define Route Categories
     const isAdminRoute = pathname.startsWith("/admin");

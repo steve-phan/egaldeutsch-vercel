@@ -1,5 +1,6 @@
 import { useState, useCallback } from "react";
-import { QuizQuestion, LocalizedText, QuizOption } from "@/types/quiz";
+import { QuizQuestion } from "@/types/quiz";
+import { API_ROUTES } from "@/lib/constants";
 
 interface UseAdminQuestionsResult {
   questions: QuizQuestion[];
@@ -26,7 +27,7 @@ export function useAdminQuestions(): UseAdminQuestionsResult {
 
   const fetchQuestions = useCallback(async (category?: string, level?: string) => {
     setLoading(true);
-    let url = "/api/admin/questions";
+    let url = API_ROUTES.ADMIN_QUESTIONS;
     const params = new URLSearchParams();
     if (category) params.append("category", category);
     if (level) params.append("level", level);
@@ -48,7 +49,7 @@ export function useAdminQuestions(): UseAdminQuestionsResult {
   const createQuestion = async (question: Partial<QuizQuestion>) => {
     setLoading(true);
     try {
-      const res = await fetch("/api/admin/questions", {
+      const res = await fetch(API_ROUTES.ADMIN_QUESTIONS, {
         method: "POST",
         headers: getHeaders(),
         body: JSON.stringify(question)
@@ -69,7 +70,7 @@ export function useAdminQuestions(): UseAdminQuestionsResult {
   const updateQuestion = async (id: string, question: Partial<QuizQuestion>) => {
     setLoading(true);
     try {
-      const res = await fetch(`/api/admin/questions?id=${id}`, {
+      const res = await fetch(`${API_ROUTES.ADMIN_QUESTIONS}?id=${id}`, {
         method: "PUT",
         headers: getHeaders(),
         body: JSON.stringify(question)
@@ -90,7 +91,7 @@ export function useAdminQuestions(): UseAdminQuestionsResult {
   const deleteQuestion = async (id: string) => {
     setLoading(true);
     try {
-      const res = await fetch(`/api/admin/questions?id=${id}`, {
+      const res = await fetch(`${API_ROUTES.ADMIN_QUESTIONS}?id=${id}`, {
         method: "DELETE",
         headers: getHeaders()
       });

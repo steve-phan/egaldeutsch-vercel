@@ -1,18 +1,17 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { useSession } from "next-auth/react";
 import { useAdminQuestions } from "@/hooks/use-admin-questions";
-import { useRouter } from "next/navigation";
-import { Loader2, Plus, RefreshCw, BarChart3, Database, Layers, Sparkles } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { RefreshCw, BarChart3, Database, Layers, Sparkles, Plus } from "lucide-react";
 import { QuestionTable } from "@/components/admin/quiz/question-table";
 import { AppShell } from "@/components/layout/app-shell";
 import Link from "next/link";
+import { PremiumCard } from "@/components/shared/premium-card";
+import { StatCard } from "@/components/shared/stat-card";
+import { VisualPageHeader } from "@/components/shared/visual-page-header";
+import { CEFR_LEVELS, CATEGORY_META } from "@/lib/constants";
 
 export default function AdminDashboardPage() {
-  const router = useRouter();
-  const { data: session, status } = useSession();
   const { questions, loading, error, fetchQuestions, deleteQuestion } = useAdminQuestions();
   
   const [filterLevel, setFilterLevel] = useState<string>("");
@@ -23,27 +22,22 @@ export default function AdminDashboardPage() {
   }, [fetchQuestions, filterCategory, filterLevel]);
 
   const stats = [
-    { label: "Total Database", value: questions.length, icon: <Database className="w-4 h-4" />, color: "bg-indigo-500" },
-    { label: "Active Modules", value: "14", icon: <Layers className="w-4 h-4" />, color: "bg-emerald-500" },
-    { label: "Avg Mastery", value: "82%", icon: <Sparkles className="w-4 h-4" />, color: "bg-amber-500" },
+    { label: "Total Database", value: questions.length, icon: <Database className="w-5 h-5 focus:scale-110" />, color: "bg-indigo-500" },
+    { label: "Active Modules", value: CATEGORY_META.length, icon: <Layers className="w-5 h-5" />, color: "bg-emerald-500" },
+    { label: "Avg Mastery", value: "82%", icon: <Sparkles className="w-5 h-5" />, color: "bg-amber-500" },
   ];
 
   return (
     <AppShell showNav={true} maxWidth="2xl">
-      <div className="space-y-10">
+      <div className="space-y-12">
          
          {/* Premium Admin Header */}
-         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 animate-in slide-in-from-top-4 duration-700">
-            <div>
-               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 text-[10px] font-black text-slate-500 uppercase tracking-widest mb-3">
-                  <BarChart3 className="w-3 h-3" /> System Console
-               </div>
-               <h1 className="text-4xl font-black text-slate-800 tracking-tighter italic leading-none">
-                  Editorial Suite
-               </h1>
-               <p className="text-xs font-bold text-slate-400 mt-2 uppercase tracking-tight">Curating the path to German mastery</p>
-            </div>
-            
+         <VisualPageHeader
+            title="Editorial Suite"
+            subtitle="Curating the path to German mastery"
+            icon={<BarChart3 className="w-6 h-6" />}
+            iconColor="bg-slate-800"
+         >
             <div className="flex items-center gap-3">
                <button 
                  onClick={() => fetchQuestions(filterCategory, filterLevel)}
@@ -52,69 +46,70 @@ export default function AdminDashboardPage() {
                  <RefreshCw className={`w-5 h-5 ${loading ? "animate-spin" : ""}`} />
                </button>
                <Link href="/admin/questions/new">
-                 <button className="btn-orange h-12 px-6 text-sm font-black flex items-center gap-2">
+                 <button className="btn-orange h-12 px-6 rounded-2xl text-xs font-black flex items-center gap-2 shadow-lg shadow-primary/20 active:scale-95 transition-all uppercase tracking-widest">
                    <Plus className="w-4 h-4" /> New Question
                  </button>
                </Link>
             </div>
-         </div>
+         </VisualPageHeader>
 
          {/* Bento Stats */}
-         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 animate-in fade-in duration-1000 delay-100">
+         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {stats.map((stat, i) => (
-               <div key={i} className="glass-card-premium p-6 rounded-[2rem] flex items-center gap-5 hover:-translate-y-1 transition-all group">
-                  <div className={`w-12 h-12 ${stat.color} rounded-2xl flex items-center justify-center text-white shadow-lg shadow-black/5 group-hover:scale-110 transition-transform`}>
-                     {stat.icon}
-                  </div>
-                  <div>
-                     <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest">{stat.label}</p>
-                     <p className="text-2xl font-black text-slate-800 tracking-tighter">{stat.value}</p>
-                  </div>
-               </div>
+               <StatCard 
+                 key={i}
+                 label={stat.label}
+                 value={stat.value}
+                 icon={stat.icon}
+                 color={stat.color}
+                 delay={i * 100}
+               />
             ))}
          </div>
 
          {/* Editorial Management Area */}
          <div className="space-y-6 animate-in fade-in duration-1000 delay-200">
             <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-               <h2 className="text-xl font-black text-slate-800 tracking-tighter italic">Mission Database</h2>
+               <div className="flex items-center gap-2">
+                  <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
+                  <h2 className="text-xl font-black text-slate-800 tracking-tighter italic">Mission Database</h2>
+               </div>
                
                <div className="flex items-center gap-3 w-full sm:w-auto">
                   <select 
                     value={filterLevel} 
                     onChange={e => setFilterLevel(e.target.value)}
-                    className="h-10 px-4 rounded-xl border border-white bg-white/50 backdrop-blur-md shadow-premium text-xs font-black uppercase tracking-widest focus:ring-2 focus:ring-primary/20 outline-none transition-all cursor-pointer"
+                    className="h-10 px-4 rounded-xl border border-white bg-white/50 backdrop-blur-md shadow-premium text-[10px] font-black uppercase tracking-widest focus:ring-4 focus:ring-primary/5 outline-none transition-all cursor-pointer"
                   >
                     <option value="">All Levels</option>
-                    <option value="A1">A1</option>
-                    <option value="A2">A2</option>
-                    <option value="B1">B1</option>
-                    <option value="B2">B2</option>
+                    {CEFR_LEVELS.map(lvl => (
+                      <option key={lvl} value={lvl}>{lvl}</option>
+                    ))}
                   </select>
 
                   <select 
                     value={filterCategory} 
                     onChange={e => setFilterCategory(e.target.value)}
-                    className="h-10 px-4 rounded-xl border border-white bg-white/50 backdrop-blur-md shadow-premium text-xs font-black uppercase tracking-widest focus:ring-2 focus:ring-primary/20 outline-none transition-all cursor-pointer"
+                    className="h-10 px-4 rounded-xl border border-white bg-white/50 backdrop-blur-md shadow-premium text-[10px] font-black uppercase tracking-widest focus:ring-4 focus:ring-primary/5 outline-none transition-all cursor-pointer"
                   >
                     <option value="">All Categories</option>
-                    <option value="artikel">Artikel</option>
-                    <option value="kasus">Kasus</option>
-                    <option value="verb-konjugation">Conjugation</option>
+                    {CATEGORY_META.map(cat => (
+                      <option key={cat.id} value={cat.id}>{cat.label.de}</option>
+                    ))}
                   </select>
                </div>
             </div>
 
             {error && (
-               <div className="p-5 bg-rose-50 border border-rose-100 rounded-3xl text-rose-500 text-xs font-bold animate-in zoom-in-95">
-                  Error: {error}
-               </div>
+               <PremiumCard padding="md" className="bg-rose-50 border-rose-100 text-rose-500 animate-none">
+                  <p className="text-xs font-bold leading-none">Error synchronization: {error}</p>
+               </PremiumCard>
             )}
 
             <div className="w-full">
                {loading && questions.length === 0 ? (
                   <div className="flex flex-col items-center justify-center p-20 bg-white/50 backdrop-blur-md rounded-[3rem] border border-white">
-                     <Loader2 className="w-10 h-10 animate-spin text-primary mb-4" />
+                     <RefreshCw className="w-10 h-10 animate-spin text-primary mb-4" />
                      <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest">Accessing records...</p>
                   </div>
                ) : (

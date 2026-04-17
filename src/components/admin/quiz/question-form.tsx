@@ -242,4 +242,3 @@ export function QuestionForm({ initialData, onSubmit, isSubmitting }: QuestionFo
     </div>
   );
 }
-}
