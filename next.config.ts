@@ -1,6 +1,16 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'lh3.googleusercontent.com',
+        port: '',
+        pathname: '/a/**',
+      },
+    ],
+  },
   async rewrites() {
     // Only proxy during local development. 
     // In production, vercel.json handles routing /api/* to the single index.go serverless function.

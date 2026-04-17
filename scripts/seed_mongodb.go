@@ -2,6 +2,7 @@ package main
 
 import (
 	"context"
+	"encoding/json"
 	"fmt"
 	"log"
 	"os"
@@ -71,119 +72,41 @@ func main() {
 	}
 	fmt.Printf("✅ Admin created: %s (Password: %s)\n", adminEmail, adminPassword)
 
-	// 5. Seed Questions
-	fmt.Println("📚 Seeding quiz questions...")
-	questions := []models.QuizQuestion{
-		// ARTIKEL (A1)
-		{
-			ID:            primitive.NewObjectID(),
-			Category:      "artikel",
-			Level:         "A1",
-			Type:          "multiple-choice",
-			PromptDe:      "Was ist der richtige Artikel für 'Tisch'?",
-			CorrectAnswer: "der",
-			Options: []models.QuizOption{
-				{De: "der", En: "the (masculine)", Vi: "giống đực"},
-				{De: "die", En: "the (feminine)", Vi: "giống cái"},
-				{De: "das", En: "the (neuter)", Vi: "giống trung"},
-			},
-			ExplanationDe: "'Tisch' ist maskulin im Deutschen.",
-			ExplanationEn: "'Tisch' is masculine in German.",
-			ExplanationVi: "'Tisch' là giống đực trong tiếng Đức.",
-			CreatedAt:     time.Now(),
-			Status:        "published",
-		},
-		{
-			ID:            primitive.NewObjectID(),
-			Category:      "artikel",
-			Level:         "A1",
-			Type:          "fill-in-blank",
-			PromptDe:      "___ Apfel ist rot.",
-			CorrectAnswer: "Der",
-			ExplanationDe: "Apfel ist maskulin. Im Nominativ ist der Artikel 'der'.",
-			ExplanationEn: "Apfel is masculine. In the Nominative case, the article is 'der'.",
-			ExplanationVi: "Apfel là giống đực. Trong cách Nominative, mạo từ là 'der'.",
-			CreatedAt:     time.Now(),
-			Status:        "published",
-		},
-		// PRÄPOSITIONEN (A2)
-		{
-			ID:            primitive.NewObjectID(),
-			Category:      "praepositionen",
-			Level:         "A2",
-			Type:          "multiple-choice",
-			PromptDe:      "Ich fahre mit ___ Bus (m).",
-			CorrectAnswer: "dem",
-			Options: []models.QuizOption{
-				{De: "den", En: "the (Accusative)", Vi: "biến cách 4"},
-				{De: "dem", En: "the (Dative)", Vi: "biến cách 3"},
-				{De: "das", En: "the (Nominative)", Vi: "biến cách 1"},
-			},
-			ExplanationDe: "'mit' benutzt man immer mit dem Dativ. 'Der Bus' wird im Dativ zu 'dem Bus'.",
-			ExplanationEn: "'mit' is always used with the Dative case. 'Der Bus' becomes 'dem Bus'.",
-			ExplanationVi: "'mit' luôn đi với cách Dative. 'Der Bus' trở thành 'dem Bus'.",
-			CreatedAt:     time.Now(),
-			Status:        "published",
-		},
-		// ADJEKTIV-ENDUNGEN (B1)
-		{
-			ID:            primitive.NewObjectID(),
-			Category:      "adjektivendungen",
-			Level:         "B1",
-			Type:          "fill-in-blank",
-			PromptDe:      "Ein gut___ Kaffee ist wichtig.",
-			CorrectAnswer: "er",
-			ExplanationDe: "Maskulin, Nominativ, unbestimmter Artikel (gemischte Deklination).",
-			ExplanationEn: "Masculine, Nominative, indefinite article (mixed declension).",
-			ExplanationVi: "Giống đực, Nominative, mạo từ không xác định.",
-			CreatedAt:     time.Now(),
-			Status:        "published",
-		},
-		// KONJUNKTIV 2 (B2)
-		{
-			ID:            primitive.NewObjectID(),
-			Category:      "konjunktiv",
-			Level:         "B2",
-			Type:          "multiple-choice",
-			PromptDe:      "Wenn ich mehr Zeit ___, würde ich mehr lernen.",
-			CorrectAnswer: "hätte",
-			Options: []models.QuizOption{
-				{De: "habe", En: "have (Indicative)", Vi: "có (hiện tại)"},
-				{De: "hätte", En: "had (Subjunctive)", Vi: "có (giả định)"},
-				{De: "hatte", En: "had (Past)", Vi: "đã có (quá khứ)"},
-			},
-			ExplanationDe: "Konjunktiv II drückt eine irreale Bedingung in der Gegenwart aus.",
-			ExplanationEn: "Subjunctive II expresses an unreal condition in the present.",
-			ExplanationVi: "Konjunktiv II diễn tả một điều kiện không có thật ở hiện tại.",
-			CreatedAt:     time.Now(),
-			Status:        "published",
-		},
-		// WORD ORDER (A1)
-		{
-			ID:            primitive.NewObjectID(),
-			Category:      "wortstellung",
-			Level:         "A1",
-			Type:          "word-order",
-			PromptDe:      "Bauen Sie den Satz: (schön, ist, heute, Das Wetter)",
-			CorrectAnswer: "Das Wetter ist heute schön",
-			ExplanationDe: "Regel: Subjekt + Verb + Zeit + Adjektiv.",
-			ExplanationEn: "Rule: Subject + Verb + Time + Adjective.",
-			ExplanationVi: "Quy tắc: Chủ ngữ + Động từ + Thời gian + Tính từ.",
-			CreatedAt:     time.Now(),
-			Status:        "published",
-		},
+	// 5. Seed Questions from JSON
+	fmt.Println("📚 Loading quiz questions from JSON...")
+	questionsFile, err := os.ReadFile("scripts/data/questions.json")
+	if err != nil {
+		log.Fatalf("Failed to read questions file: %v", err)
+	}
+
+	var questions []models.QuizQuestion
+	if err := json.Unmarshal(questionsFile, &questions); err != nil {
+		log.Fatalf("Failed to unmarshal questions: %v", err)
 	}
 
 	var docs []interface{}
-	for _, q := range questions {
-		docs = append(docs, q)
+	for i := range questions {
+		if questions[i].ID.IsZero() {
+			questions[i].ID = primitive.NewObjectID()
+		}
+		if questions[i].CreatedAt.IsZero() {
+			questions[i].CreatedAt = time.Now()
+		}
+		if questions[i].UpdatedAt.IsZero() {
+			questions[i].UpdatedAt = time.Now()
+		}
+		docs = append(docs, questions[i])
 	}
 
-	result, err := questionsCol.InsertMany(ctx, docs)
-	if err != nil {
-		log.Fatalf("Failed to seed questions: %v", err)
+	if len(docs) > 0 {
+		result, err := questionsCol.InsertMany(ctx, docs)
+		if err != nil {
+			log.Fatalf("Failed to seed questions: %v", err)
+		}
+		fmt.Printf("✅ Successfully seeded %d questions into MongoDB!\n", len(result.InsertedIDs))
+	} else {
+		fmt.Println("⚠️ No questions found in JSON file to seed.")
 	}
 
-	fmt.Printf("✅ Successfully seeded %d questions into MongoDB!\n", len(result.InsertedIDs))
 	fmt.Println("🚀 Database reset and seeding complete!")
 }

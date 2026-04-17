@@ -1,0 +1,242 @@
+[
+  {
+    "category": "artikel",
+    "level": "A1",
+    "type": "multiple-choice",
+    "prompt_de": "Was ist der richtige Artikel für 'Haus'?",
+    "correct_answer": "das",
+    "options": [
+      { "de": "der", "en": "the (masculine)", "vi": "giống đực" },
+      { "de": "die", "en": "the (feminine)", "vi": "giống cái" },
+      { "de": "das", "en": "the (neuter)", "vi": "giống trung" }
+    ],
+    "explanation_de": "'Haus' ist neutral im Deutschen (das Haus).",
+    "explanation_en": "'Haus' is neuter in German (das Haus).",
+    "explanation_vi": "'Haus' là giống trung trong tiếng Đức (das Haus).",
+    "status": "published",
+    "tags": ["basics", "articles"]
+  },
+  {
+    "category": "verb-konjugation",
+    "level": "A1",
+    "type": "multiple-choice",
+    "prompt_de": "Ich _______ (kommen) aus Vietnam.",
+    "correct_answer": "komme",
+    "options": [
+      { "de": "komme", "en": "come (1st person)", "vi": "đến (ngôi thứ nhất)" },
+      { "de": "kommst", "en": "come (2nd person)", "vi": "đến (ngôi thứ hai)" },
+      { "de": "kommt", "en": "come (3rd person)", "vi": "đến (ngôi thứ ba)" }
+    ],
+    "explanation_de": "Động từ 'kommen' được chia theo ngôi 'ich' bằng cách bỏ đuôi '-en' và thêm '-e'.",
+    "explanation_en": "The verb 'kommen' is conjugated with 'ich' by removing '-en' and adding '-e'.",
+    "explanation_vi": "Động từ 'kommen' được chia với ngôi 'ich' bằng cách bỏ đuôi '-en' và thêm '-e'.",
+    "status": "published",
+    "tags": ["verbs", "basics"]
+  },
+  {
+    "category": "kasus",
+    "level": "A1",
+    "type": "multiple-choice",
+    "prompt_de": "Ich habe _______ Apfel (m).",
+    "correct_answer": "einen",
+    "options": [
+      { "de": "ein", "en": "a (Nominative)", "vi": "một (Danh cách)" },
+      { "de": "einen", "en": "a (Accusative)", "vi": "một (Đối cách)" },
+      { "de": "einem", "en": "a (Dative)", "vi": "một (Tặng cách)" }
+    ],
+    "explanation_de": "'Haben' verlangt den Akkusativ. Maskulin 'ein' wird zu 'einen'.",
+    "explanation_en": "'Haben' requires the Accusative case. Masculine 'ein' becomes 'einen'.",
+    "explanation_vi": "Động từ 'haben' yêu cầu cách Akkusativ. Giống đực 'ein' biến thành 'einen'.",
+    "status": "published",
+    "tags": ["cases", "accusative"]
+  },
+  {
+    "category": "praepositionen",
+    "level": "A2",
+    "type": "multiple-choice",
+    "prompt_de": "Wir gehen heute Abend _______ Kino.",
+    "correct_answer": "ins",
+    "options": [
+      { "de": "im", "en": "in the (Dative)", "vi": "trong (Tặng cách)" },
+      { "de": "ins", "en": "into the (Accusative)", "vi": "vào trong (Đối cách)" },
+      { "de": "in der", "en": "in the (Feminine Dative)", "vi": "trong (Tặng cách giống cái)" }
+    ],
+    "explanation_de": "Điểm đến (Wohin?) verlangt den Akkusativ. In + das = ins.",
+    "explanation_en": "Destination (Wohin?) requires the Accusative case. In + das = ins.",
+    "explanation_vi": "Chỉ hướng chuyển động (Wohin?) yêu cầu cách Akkusativ. In + das = ins.",
+    "status": "published",
+    "tags": ["prepositions", "motion"]
+  },
+  {
+    "category": "praepositionen",
+    "level": "A2",
+    "type": "multiple-choice",
+    "prompt_de": "Ich fahre mit _______ Auto (n).",
+    "correct_answer": "dem",
+    "options": [
+      { "de": "das", "en": "the (Nominative)", "vi": "mạo từ (Danh cách)" },
+      { "de": "dem", "en": "the (Dative)", "vi": "mạo từ (Tặng cách)" },
+      { "de": "den", "en": "the (Accusative)", "vi": "mạo từ (Đối cách)" }
+    ],
+    "explanation_de": "Die Präposition 'mit' verlangt immer den Dativ. 'Das' wird zu 'dem'.",
+    "explanation_en": "The preposition 'mit' always requires the Dative case. 'Das' becomes 'dem'.",
+    "explanation_vi": "Giới từ 'mit' luôn đi với cách Dativ. 'Das' biến thành 'dem'.",
+    "status": "published",
+    "tags": ["prepositions", "dative"]
+  },
+  {
+    "category": "negation",
+    "level": "A1",
+    "type": "multiple-choice",
+    "prompt_de": "Hast du ein Auto? - Nein, ich habe _______ Auto.",
+    "correct_answer": "kein",
+    "options": [
+      { "de": "nicht", "en": "not", "vi": "không (động từ/tính từ)" },
+      { "de": "kein", "en": "no/none", "vi": "không (danh từ)" },
+      { "de": "keine", "en": "no (feminine/plural)", "vi": "không (giống cái/số nhiều)" }
+    ],
+    "explanation_de": "Nomen werden mit 'kein' verneint.",
+    "explanation_en": "Nouns are negated with 'kein'.",
+    "explanation_vi": "Danh từ được phủ định bằng 'kein'.",
+    "status": "published",
+    "tags": ["basics", "negation"]
+  },
+  {
+    "category": "relativsaetze",
+    "level": "B1",
+    "type": "multiple-choice",
+    "prompt_de": "Er kommt nicht, _______ er krank ist.",
+    "correct_answer": "weil",
+    "options": [
+      { "de": "denn", "en": "because (main clause)", "vi": "vì (mệnh đề chính)" },
+      { "de": "weil", "en": "because (subordinate clause)", "vi": "vì (mệnh đề phụ)" },
+      { "de": "obwohl", "en": "although", "vi": "mặc dù" }
+    ],
+    "explanation_de": "'Weil' leitet einen Nebensatz ein, das Verb steht am Ende.",
+    "explanation_en": "'Weil' introduces a subordinate clause, the verb goes to the end.",
+    "explanation_vi": "'Weil' dẫn đầu một mệnh đề phụ, động từ đứng ở cuối câu.",
+    "status": "published",
+    "tags": ["conjunctions", "subordinate"]
+  },
+  {
+    "category": "adjektivendungen",
+    "level": "B1",
+    "type": "fill-in-blank",
+    "prompt_de": "Ich trage einen blau___ Mantel (m).",
+    "correct_answer": "en",
+    "explanation_de": "Maskulin, Akkusativ, unbestimmter Artikel (gemischte Deklination).",
+    "explanation_en": "Masculine, Accusative, indefinite article (mixed declension).",
+    "explanation_vi": "Giống đực, Akkusativ, mạo từ không xác định (biến cách hỗn hợp).",
+    "status": "published",
+    "tags": ["adjectives", "declension"]
+  },
+  {
+    "category": "passiv",
+    "level": "B2",
+    "type": "multiple-choice",
+    "prompt_de": "Der Bericht _______ gestern geschrieben.",
+    "correct_answer": "wurde",
+    "options": [
+      { "de": "ist", "en": "is (Active)", "vi": "là (chủ động)" },
+      { "de": "wird", "en": "is being (Passive Present)", "vi": "được (bị động hiện tại)" },
+      { "de": "wurde", "en": "was (Passive Past)", "vi": "đã được (bị động quá khứ)" }
+    ],
+    "explanation_de": "Passiv Präteritum: wurde + Partizip II.",
+    "explanation_en": "Passive Past: wurde + Past Participle.",
+    "explanation_vi": "Bị động quá khứ: wurde + Partizip II.",
+    "status": "published",
+    "tags": ["passive", "past"]
+  },
+  {
+    "category": "konjunktiv",
+    "level": "B2",
+    "type": "multiple-choice",
+    "prompt_de": "Wenn ich mehr Zeit _______, würde ich mehr reisen.",
+    "correct_answer": "hätte",
+    "options": [
+      { "de": "habe", "en": "have", "vi": "có" },
+      { "de": "hätte", "en": "had (Subjunctive)", "vi": "có (giả định)" },
+      { "de": "hatte", "en": "had (Past)", "vi": "đã có" }
+    ],
+    "explanation_de": "Konjunktiv II drückt irreale Wünsche/Bedingungen aus.",
+    "explanation_en": "Subjunctive II expresses unreal wishes/conditions.",
+    "explanation_vi": "Kiểu Konjunktiv II diễn tả những mong ước/điều kiện không có thực.",
+    "status": "published",
+    "tags": ["subjunctive", "wishes"]
+  },
+  {
+    "category": "trennbare-verben",
+    "level": "A2",
+    "type": "fill-in-blank",
+    "prompt_de": "Ich _______ um 7 Uhr auf (aufstehen).",
+    "correct_answer": "stehe",
+    "explanation_de": "Das Präfix 'auf' geht ans Ende des Satzes.",
+    "explanation_en": "The prefix 'auf' goes to the end of the sentence.",
+    "explanation_vi": "Tiền tố 'auf' đi xuống cuối câu.",
+    "status": "published",
+    "tags": ["verbs", "separable"]
+  },
+  {
+    "category": "relativsaetze",
+    "level": "B1",
+    "type": "multiple-choice",
+    "prompt_de": "Das ist der Mann, _______ ich gestern gesehen habe.",
+    "correct_answer": "den",
+    "options": [
+      { "de": "der", "en": "who (Nominative)", "vi": "người mà (Danh cách)" },
+      { "de": "den", "en": "whom (Accusative)", "vi": "người mà (Đối cách)" },
+      { "de": "dem", "en": "to whom (Dative)", "vi": "người mà (Tặng cách)" }
+    ],
+    "explanation_de": "Relativpronomen im Akkusativ (sehen + Wen/Was?).",
+    "explanation_en": "Relative pronoun in Accusative (sehen + Whom/What?).",
+    "explanation_vi": "Đại từ quan hệ ở cách Akkusativ (sehen + Ai/Cái gì?).",
+    "status": "published",
+    "tags": ["relative-clauses", "accusative"]
+  },
+  {
+    "category": "wortstellung",
+    "level": "B2",
+    "type": "word-order",
+    "prompt_de": "Anordnen: (gestern, Er ist, wegen des Regens, schnell, nach Hause, gefahren)",
+    "correct_answer": "Er ist gestern wegen des Regens schnell nach Hause gefahren",
+    "explanation_de": "Regel: TeKaMoLo (Temporal, Kausal, Modal, Lokal).",
+    "explanation_en": "Rule: TeKaMoLo (Temporal, Causal, Modal, Local).",
+    "explanation_vi": "Quy tắc: TeKaMoLo (Thời gian, Nguyên nhân, Cách thức, Địa điểm).",
+    "status": "published",
+    "tags": ["syntax", "advanced"]
+  },
+  {
+    "category": "praepositionen",
+    "level": "B2",
+    "type": "multiple-choice",
+    "prompt_de": "_______ des schlechten Wetters sind wir zu Hause geblieben.",
+    "correct_answer": "Wegen",
+    "options": [
+      { "de": "Wegen", "en": "Because of (Genitive)", "vi": "Bởi vì (Sở hữu cách)" },
+      { "de": "Trotz", "en": "Despite (Genitive)", "vi": "Mặc dù (Sở hữu cách)" },
+      { "de": "Während", "en": "During (Genitive)", "vi": "Trong khi (Sở hữu cách)" }
+    ],
+    "explanation_de": "'Wegen' verlangt standardsprachlich den Genitiv.",
+    "explanation_en": "'Wegen' requires the Genitive case in standard German.",
+    "explanation_vi": "'Wegen' yêu cầu cách Genitiv trong tiếng Đức chuẩn.",
+    "status": "published",
+    "tags": ["prepositions", "genitive"]
+  },
+  {
+    "category": "verb-konjugation",
+    "level": "A2",
+    "type": "multiple-choice",
+    "prompt_de": "Ich freue _______ auf das Wochenende.",
+    "correct_answer": "mich",
+    "options": [
+      { "de": "mir", "en": "myself (Dative)", "vi": "mình (Tặng cách)" },
+      { "de": "mich", "en": "myself (Accusative)", "vi": "mình (Đối cách)" },
+      { "de": "dich", "en": "yourself", "vi": "bạn (Đối cách)" }
+    ],
+    "explanation_de": "'Sich freuen auf' ist ein reflexives Verb mit Akkusativ.",
+    "explanation_en": "'Sich freuen auf' is a reflexive verb with Accusative.",
+    "explanation_vi": "'Sich freuen auf' là một động từ phản thân đi với Akkusativ.",
+    "status": "published",
+    "tags": ["verbs", "reflexive"]
+  }
+]
