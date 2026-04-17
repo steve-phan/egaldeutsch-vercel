@@ -20,15 +20,6 @@ export function McqQuestion({ question, onSubmit, disabled }: McqQuestionProps) 
   // eslint-disable-next-line react-hooks/set-state-in-effect
   }, [question.id]);
 
-  const getOptionLabel = (opt: QuizOption) => {
-    switch (language) {
-      case "de": return opt.de;
-      case "vi": return opt.vi;
-      case "en":
-      default: return opt.en;
-    }
-  };
-
   return (
     <div className="w-full flex flex-col items-center">
       {/* Question Prompt Area */}
@@ -54,12 +45,12 @@ export function McqQuestion({ question, onSubmit, disabled }: McqQuestionProps) 
          
          <div className="grid grid-cols-1 gap-3">
             {question.options?.map((opt, idx) => {
-               const isSelected = selected === opt.de;
+               const isSelected = selected === opt;
                return (
                   <button
                     key={idx}
                     disabled={disabled}
-                    onClick={() => setSelected(opt.de)}
+                    onClick={() => setSelected(opt)}
                     className={`
                       w-full h-12 px-6 rounded-2xl font-bold flex items-center justify-between transition-all duration-300 transform
                       ${isSelected 
@@ -72,7 +63,7 @@ export function McqQuestion({ question, onSubmit, disabled }: McqQuestionProps) 
                         <span className={`w-8 h-8 rounded-lg flex items-center justify-center text-xs font-black ${isSelected ? "bg-white/20 text-white" : "bg-slate-50 text-slate-400"}`}>
                            {String.fromCharCode(65 + idx)}
                         </span>
-                        {getOptionLabel(opt)}
+                        {opt}
                      </span>
                      {isSelected && <div className="w-2 h-2 rounded-full bg-white animate-pulse" />}
                   </button>

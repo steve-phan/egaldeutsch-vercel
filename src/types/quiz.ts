@@ -30,11 +30,7 @@ export interface LocalizedText {
   vi: string;
 }
 
-export interface QuizOption {
-  de: string;
-  en: string;
-  vi: string;
-}
+export type QuizOption = string;
 
 export interface QuizQuestion {
   id: string;

@@ -81,7 +81,8 @@ export function useQuizSession(): UseQuizSessionResult {
 
   // Effect to handle auto-submission when timer hits 0
   useEffect(() => {
-    if (timeRemainingMs === 0 && status === "in-progress") {
+    // Only auto-submit if a time limit was actually configured AND it hit 0
+    if (configuration.current?.timePerQuestion && timeRemainingMs === 0 && status === "in-progress") {
        // Using an empty string for timeout
        evaluateAndRecordAnswer("");
     }
@@ -121,7 +122,7 @@ export function useQuizSession(): UseQuizSessionResult {
     }
   };
 
-  const evaluateAndRecordAnswer = (userAnswer: string) => {
+  const evaluateAndRecordAnswer = useCallback((userAnswer: string) => {
     if (!currentQuestion || status !== "in-progress") return;
     
     clearTimer(); // Stop the countdown
@@ -129,20 +130,23 @@ export function useQuizSession(): UseQuizSessionResult {
     const timeSpent = Date.now() - questionStartTime.current;
     
     // Evaluate correctness based on question type
-    // Case-insensitive check generally appropriate for strings here, 
-    // unless exact match needed. For MCQ, exact string match works.
     const isCorrect = userAnswer.toLowerCase().trim() === currentQuestion.correct_answer.toLowerCase().trim();
     
-    setAnswers(prev => [...prev, {
-      questionId: currentQuestion.id,
-      isCorrect,
-      userAnswer,
-      timeSpentMs: timeSpent
-    }]);
+    setAnswers(prev => {
+      // Prevent duplicate records for the same question
+      if (prev.some(a => a.questionId === currentQuestion.id)) return prev;
+      
+      return [...prev, {
+        questionId: currentQuestion.id,
+        isCorrect,
+        userAnswer,
+        timeSpentMs: timeSpent
+      }];
+    });
     
     setLastAnswerEvaluated(isCorrect);
     setStatus("review");
-  };
+  }, [currentQuestion, status]);
 
   const submitAnswer = useCallback((answer: string) => {
      evaluateAndRecordAnswer(answer);

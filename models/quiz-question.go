@@ -6,13 +6,6 @@ import (
 	"go.mongodb.org/mongo-driver/bson/primitive"
 )
 
-// QuizOption holds a localized option for multiple-choice questions.
-type QuizOption struct {
-	De string `bson:"de" json:"de"`
-	En string `bson:"en" json:"en"`
-	Vi string `bson:"vi" json:"vi"`
-}
-
 // QuizQuestion represents a quiz question in the database.
 type QuizQuestion struct {
 	ID            primitive.ObjectID `bson:"_id,omitempty" json:"id"`
@@ -22,7 +15,7 @@ type QuizQuestion struct {
 	Type          string             `bson:"type"           json:"type"`
 	PromptDe      string             `bson:"prompt_de"      json:"prompt_de"`
 	BlankIndex    *int               `bson:"blank_index"    json:"blank_index,omitempty"`
-	Options       []QuizOption       `bson:"options"        json:"options,omitempty"`
+	Options       []string           `bson:"options"        json:"options,omitempty"`
 	CorrectAnswer string             `bson:"correct_answer" json:"correct_answer"`
 	ExplanationDe string             `bson:"explanation_de" json:"explanation_de"`
 	ExplanationEn string             `bson:"explanation_en" json:"explanation_en"`

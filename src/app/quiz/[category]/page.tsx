@@ -113,11 +113,15 @@ export default function QuizOrchestrator({ params }: { params: Promise<{ categor
                 language={language}
              />
              <button 
-               onClick={nextQuestion}
-               className="w-full btn-orange"
+                onClick={nextQuestion}
+                className="w-full h-14 bg-slate-900 text-white rounded-3xl font-black text-sm uppercase tracking-widest flex items-center justify-center gap-3 shadow-premium hover:bg-primary transition-all active:scale-[0.98] group mt-4 overflow-hidden relative"
              >
-               {language === "de" ? "Weiter" : language === "vi" ? "Tiếp theo" : "Next Question"}
-              </button>
+                <div className="absolute inset-0 bg-gradient-to-r from-orange-400 to-primary opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <span className="relative z-10">
+                   {language === "de" ? "Nächste Frage" : language === "vi" ? "Câu tiếp theo" : "Next Question"}
+                </span>
+                <ChevronLeft className="w-5 h-5 relative z-10 rotate-180 group-hover:translate-x-1 transition-transform" />
+             </button>
           </div>
         )}
       </div>

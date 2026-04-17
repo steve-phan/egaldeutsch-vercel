@@ -1,5 +1,6 @@
 import { QuizOption } from "@/types/quiz";
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 import { Trash2, Plus } from "lucide-react";
 
 interface OptionsEditorProps {
@@ -11,15 +12,15 @@ interface OptionsEditorProps {
 
 export function OptionsEditor({ options, onChange, correctAnswer, onCorrectAnswerChange }: OptionsEditorProps) {
   
-  const handleUpdate = (idx: number, lang: "de" | "en" | "vi", val: string) => {
+  const handleUpdate = (idx: number, val: string) => {
     const newOptions = [...options];
-    newOptions[idx] = { ...newOptions[idx], [lang]: val };
+    newOptions[idx] = val;
     onChange(newOptions);
   };
 
   const addOption = () => {
     if (options.length >= 4) return;
-    onChange([...options, { de: "", en: "", vi: "" }]);
+    onChange([...options, ""]);
   };
 
   const removeOption = (idx: number) => {
@@ -30,7 +31,7 @@ export function OptionsEditor({ options, onChange, correctAnswer, onCorrectAnswe
   return (
     <div className="space-y-6">
       <div className="flex justify-between items-center">
-        <h3 className="text-lg font-bold text-slate-800">MCQ Options (For multiple-choice only)</h3>
+        <h3 className="text-lg font-bold text-slate-800">MCQ Options (DE only)</h3>
         <Button onClick={addOption} disabled={options.length >= 4} variant="outline" size="sm">
           <Plus className="w-4 h-4 mr-1" /> Add Option
         </Button>
@@ -38,8 +39,7 @@ export function OptionsEditor({ options, onChange, correctAnswer, onCorrectAnswe
 
       <div className="space-y-6">
         {options.map((opt, idx) => {
-          // A radio button to easily select this option as the correct answer
-          const isCorrect = correctAnswer === opt.de && opt.de !== "";
+          const isCorrect = correctAnswer === opt && opt !== "";
 
           return (
             <div key={idx} className="relative bg-white p-4 rounded-xl border-2 border-slate-200">
@@ -53,7 +53,7 @@ export function OptionsEditor({ options, onChange, correctAnswer, onCorrectAnswe
                          type="radio" 
                          name="correct-answer" 
                          checked={isCorrect}
-                         onChange={() => onCorrectAnswerChange(opt.de)}
+                         onChange={() => onCorrectAnswerChange(opt)}
                          className="w-4 h-4 text-indigo-600 focus:ring-indigo-500"
                        />
                        <span className={`text-sm font-semibold ${isCorrect ? "text-green-600" : "text-slate-600"}`}>
@@ -65,7 +65,15 @@ export function OptionsEditor({ options, onChange, correctAnswer, onCorrectAnswe
                     <Trash2 className="w-4 h-4" />
                   </Button>
                </div>
-            
+
+               <div className="space-y-3">
+                  <Input 
+                    value={opt} 
+                    onChange={e => handleUpdate(idx, e.target.value)} 
+                    placeholder="German option text..."
+                    className="h-11 rounded-xl border-slate-100 font-bold"
+                  />
+               </div>
             </div>
           );
         })}

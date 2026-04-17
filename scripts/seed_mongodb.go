@@ -41,72 +41,94 @@ func main() {
 	defer client.Disconnect(ctx)
 
 	dbName := "egaldeutsch"
-	
+
 	// Collections
 	questionsCol := client.Database(dbName).Collection("questions")
 	usersCol := client.Database(dbName).Collection("users")
-	resultsCol := client.Database(dbName).Collection("results")
 
-	// 3. Purge Existing Data
-	fmt.Println("🧹 Purging existing data (questions, users, results)...")
-	questionsCol.DeleteMany(ctx, bson.M{})
-	usersCol.DeleteMany(ctx, bson.M{})
-	resultsCol.DeleteMany(ctx, bson.M{})
+	fmt.Println("🚀 Starting Incremental Seeding...")
 
-	// 4. Create Admin User
-	fmt.Println("👤 Creating default admin account...")
+	// 3. Handle Admin User (Upsert)
+	fmt.Println("👤 Checking admin account...")
 	adminEmail := "admin@egaldeutsch.de"
 	adminPassword := "admin123"
-	hashedPassword, _ := bcrypt.GenerateFromPassword([]byte(adminPassword), bcrypt.DefaultCost)
 
-	adminUser := models.User{
-		ID:       primitive.NewObjectID(),
-		Name:     "System Admin",
-		Email:    adminEmail,
-		Password: string(hashedPassword),
-		Role:     "admin",
-	}
-	_, err = usersCol.InsertOne(ctx, adminUser)
-	if err != nil {
-		log.Fatalf("Failed to create admin user: %v", err)
-	}
-	fmt.Printf("✅ Admin created: %s (Password: %s)\n", adminEmail, adminPassword)
+	// Check if admin exists
+	var existingAdmin models.User
+	err = usersCol.FindOne(ctx, bson.M{"email": adminEmail}).Decode(&existingAdmin)
 
-	// 5. Seed Questions from JSON
-	fmt.Println("📚 Loading quiz questions from JSON...")
+	if err == mongo.ErrNoDocuments {
+		fmt.Println("   Creating default admin account...")
+		hashedPassword, _ := bcrypt.GenerateFromPassword([]byte(adminPassword), bcrypt.DefaultCost)
+		adminUser := models.User{
+			ID:       primitive.NewObjectID(),
+			Name:     "System Admin",
+			Email:    adminEmail,
+			Password: string(hashedPassword),
+			Role:     "admin",
+		}
+		_, err = usersCol.InsertOne(ctx, adminUser)
+		if err != nil {
+			log.Fatalf("Failed to create admin user: %v", err)
+		}
+		fmt.Printf("✅ Admin created: %s\n", adminEmail)
+	} else if err != nil {
+		log.Fatalf("Error checking admin: %v", err)
+	} else {
+		fmt.Printf("✅ Admin already exists: %s\n", adminEmail)
+	}
+
+	// 4. Seed Questions incrementally
+	fmt.Println("📚 Loading questions from JSON...")
 	questionsFile, err := os.ReadFile("scripts/data/questions.json")
 	if err != nil {
 		log.Fatalf("Failed to read questions file: %v", err)
 	}
 
-	var questions []models.QuizQuestion
-	if err := json.Unmarshal(questionsFile, &questions); err != nil {
+	var jsonQuestions []models.QuizQuestion
+	if err := json.Unmarshal(questionsFile, &jsonQuestions); err != nil {
 		log.Fatalf("Failed to unmarshal questions: %v", err)
 	}
 
-	var docs []interface{}
-	for i := range questions {
-		if questions[i].ID.IsZero() {
-			questions[i].ID = primitive.NewObjectID()
+	fmt.Println("🔍 Filtering for new questions...")
+
+	// Load existing prompts to avoid duplicates
+	cursor, err := questionsCol.Find(ctx, bson.M{}, options.Find().SetProjection(bson.M{"prompt_de": 1}))
+	if err != nil {
+		log.Fatalf("Failed to fetch existing questions: %v", err)
+	}
+	defer cursor.Close(ctx)
+
+	existingPrompts := make(map[string]bool)
+	for cursor.Next(ctx) {
+		var q struct {
+			PromptDe string `bson:"prompt_de"`
 		}
-		if questions[i].CreatedAt.IsZero() {
-			questions[i].CreatedAt = time.Now()
+		if err := cursor.Decode(&q); err == nil {
+			existingPrompts[q.PromptDe] = true
 		}
-		if questions[i].UpdatedAt.IsZero() {
-			questions[i].UpdatedAt = time.Now()
-		}
-		docs = append(docs, questions[i])
 	}
 
-	if len(docs) > 0 {
-		result, err := questionsCol.InsertMany(ctx, docs)
+	var newQuestions []interface{}
+	for _, q := range jsonQuestions {
+		if !existingPrompts[q.PromptDe] {
+			// Populate ID and Timestamps for new items
+			q.ID = primitive.NewObjectID()
+			q.CreatedAt = time.Now()
+			q.UpdatedAt = time.Now()
+			newQuestions = append(newQuestions, q)
+		}
+	}
+
+	if len(newQuestions) > 0 {
+		_, err := questionsCol.InsertMany(ctx, newQuestions)
 		if err != nil {
-			log.Fatalf("Failed to seed questions: %v", err)
+			log.Fatalf("Failed to insert new questions: %v", err)
 		}
-		fmt.Printf("✅ Successfully seeded %d questions into MongoDB!\n", len(result.InsertedIDs))
+		fmt.Printf("✅ Successfully added %d NEW questions to the database!\n", len(newQuestions))
 	} else {
-		fmt.Println("⚠️ No questions found in JSON file to seed.")
+		fmt.Println("ℹ️ No new questions found in JSON. Database is up to date.")
 	}
 
-	fmt.Println("🚀 Database reset and seeding complete!")
+	fmt.Println("🚀 Incremental seeding complete!")
 }
