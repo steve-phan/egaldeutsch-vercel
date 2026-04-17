@@ -20,15 +20,6 @@ export function FillInBlank({ question, onSubmit, disabled }: FillInBlankProps) 
   // eslint-disable-next-line react-hooks/set-state-in-effect
   }, [question.id]);
 
-  const getPrompt = () => {
-    switch (language) {
-      case "de": return question.prompt_de;
-      case "vi": return question.prompt_vi;
-      case "en":
-      default: return question.prompt_en;
-    }
-  };
-
   return (
     <div className="w-full flex flex-col items-center">
       {/* Header Prompt */}
@@ -38,7 +29,7 @@ export function FillInBlank({ question, onSubmit, disabled }: FillInBlankProps) 
           </div>
           <p className="text-[10px] font-black text-slate-400 uppercase tracking-[0.3em] mb-4 text-center">Fill in the missing part</p>
           <h2 className="text-3xl md:text-4xl font-black text-slate-800 mb-2 italic tracking-tighter leading-tight text-center">
-             {getPrompt()}
+             {question.prompt_de}
           </h2>
           <p className="text-sm font-bold text-slate-400 mt-2">{question.category.toUpperCase()} Mastery</p>
       </div>

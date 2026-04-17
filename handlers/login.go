@@ -48,7 +48,7 @@ func LoginHandler(w http.ResponseWriter, r *http.Request) {
 			return
 		}
 
-		token, err := utils.GenerateToken(mockUser.ID.Hex(), mockUser.Email)
+		token, err := utils.GenerateToken(mockUser.ID.Hex(), mockUser.Email, mockUser.Role)
 		if err != nil {
 			http.Error(w, "Failed to generate token", http.StatusInternalServerError)
 			return
@@ -60,6 +60,7 @@ func LoginHandler(w http.ResponseWriter, r *http.Request) {
 				ID:    mockUser.ID,
 				Name:  mockUser.Name,
 				Email: mockUser.Email,
+				Role:  mockUser.Role,
 			},
 		})
 		return
@@ -82,7 +83,7 @@ func LoginHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	token, err := utils.GenerateToken(user.ID.Hex(), user.Email)
+	token, err := utils.GenerateToken(user.ID.Hex(), user.Email, user.Role)
 	if err != nil {
 		http.Error(w, "Failed to generate token", http.StatusInternalServerError)
 		return

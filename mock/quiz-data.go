@@ -19,7 +19,7 @@ func seedQuizQuestions(db *MockDB) {
 		{
 			ID: primitive.NewObjectID(), Category: "artikel", Subcategory: "der-die-das",
 			Level: "A1", Type: "multiple-choice",
-			PromptDe: "___ Hund spielt im Park.", PromptEn: "___ dog is playing in the park.", PromptVi: "___ con chó đang chơi trong công viên.",
+			PromptDe: "___ Hund spielt im Park.", 
 			Options: []QuizOption{
 				{De: "der", En: "der", Vi: "der"}, {De: "die", En: "die", Vi: "die"},
 				{De: "das", En: "das", Vi: "das"}, {De: "ein", En: "ein", Vi: "ein"},
@@ -33,7 +33,7 @@ func seedQuizQuestions(db *MockDB) {
 		{
 			ID: primitive.NewObjectID(), Category: "artikel", Subcategory: "der-die-das",
 			Level: "A1", Type: "multiple-choice",
-			PromptDe: "___ Frau arbeitet hier.", PromptEn: "___ woman works here.", PromptVi: "___ người phụ nữ làm việc ở đây.",
+			PromptDe: "___ Frau arbeitet hier.", 
 			Options: []QuizOption{
 				{De: "der", En: "der", Vi: "der"}, {De: "die", En: "die", Vi: "die"},
 				{De: "das", En: "das", Vi: "das"}, {De: "eine", En: "eine", Vi: "eine"},
@@ -47,7 +47,7 @@ func seedQuizQuestions(db *MockDB) {
 		{
 			ID: primitive.NewObjectID(), Category: "artikel", Subcategory: "der-die-das",
 			Level: "A1", Type: "multiple-choice",
-			PromptDe: "___ Kind spielt draußen.", PromptEn: "___ child is playing outside.", PromptVi: "___ đứa trẻ đang chơi ngoài trời.",
+			PromptDe: "___ Kind spielt draußen.", 
 			Options: []QuizOption{
 				{De: "der", En: "der", Vi: "der"}, {De: "die", En: "die", Vi: "die"},
 				{De: "das", En: "das", Vi: "das"}, {De: "ein", En: "ein", Vi: "ein"},
@@ -61,7 +61,7 @@ func seedQuizQuestions(db *MockDB) {
 		{
 			ID: primitive.NewObjectID(), Category: "artikel", Subcategory: "der-die-das",
 			Level: "A1", Type: "multiple-choice",
-			PromptDe: "___ Tisch ist neu.", PromptEn: "___ table is new.", PromptVi: "___ cái bàn mới.",
+			PromptDe: "___ Tisch ist neu.", 
 			Options: []QuizOption{
 				{De: "der", En: "der", Vi: "der"}, {De: "die", En: "die", Vi: "die"},
 				{De: "das", En: "das", Vi: "das"}, {De: "dem", En: "dem", Vi: "dem"},
@@ -75,7 +75,7 @@ func seedQuizQuestions(db *MockDB) {
 		{
 			ID: primitive.NewObjectID(), Category: "artikel", Subcategory: "der-die-das",
 			Level: "A1", Type: "multiple-choice",
-			PromptDe: "___ Buch liegt auf dem Tisch.", PromptEn: "___ book is on the table.", PromptVi: "___ cuốn sách đang ở trên bàn.",
+			PromptDe: "___ Buch liegt auf dem Tisch.", 
 			Options: []QuizOption{
 				{De: "der", En: "der", Vi: "der"}, {De: "die", En: "die", Vi: "die"},
 				{De: "das", En: "das", Vi: "das"}, {De: "ein", En: "ein", Vi: "ein"},
@@ -93,7 +93,7 @@ func seedQuizQuestions(db *MockDB) {
 		{
 			ID: primitive.NewObjectID(), Category: "verb-konjugation", Subcategory: "praesens-regular",
 			Level: "A1", Type: "fill-in-blank",
-			PromptDe: "Ich ___ jeden Tag Kaffee. (trinken)", PromptEn: "I ___ coffee every day. (trinken)", PromptVi: "Tôi ___ cà phê mỗi ngày. (trinken)",
+			PromptDe: "Ich ___ jeden Tag Kaffee. (trinken)", 
 			BlankIndex: bi(1), CorrectAnswer: "trinke",
 			ExplanationDe: "Mit 'ich': trinken → ich trinke.",
 			ExplanationEn: "With 'ich': trinken → ich trinke.",
@@ -104,7 +104,7 @@ func seedQuizQuestions(db *MockDB) {
 		{
 			ID: primitive.NewObjectID(), Category: "verb-konjugation", Subcategory: "praesens-regular",
 			Level: "A1", Type: "fill-in-blank",
-			PromptDe: "Du ___ sehr gut. (singen)", PromptEn: "You ___ very well. (singen)", PromptVi: "Bạn ___ rất hay. (singen)",
+			PromptDe: "Du ___ sehr gut. (singen)", 
 			BlankIndex: bi(1), CorrectAnswer: "singst",
 			ExplanationDe: "Mit 'du': singen → du singst.",
 			ExplanationEn: "With 'du': singen → du singst.",
@@ -115,7 +115,7 @@ func seedQuizQuestions(db *MockDB) {
 		{
 			ID: primitive.NewObjectID(), Category: "verb-konjugation", Subcategory: "praesens-irregular",
 			Level: "A1", Type: "multiple-choice",
-			PromptDe: "Er ___ ein Buch. (lesen)", PromptEn: "He ___ a book. (lesen)", PromptVi: "Anh ấy ___ một cuốn sách. (lesen)",
+			PromptDe: "Er ___ ein Buch. (lesen)", 
 			Options: []QuizOption{
 				{De: "lest", En: "lest", Vi: "lest"}, {De: "liest", En: "liest", Vi: "liest"},
 				{De: "lesen", En: "lesen", Vi: "lesen"}, {De: "lese", En: "lese", Vi: "lese"},
@@ -129,7 +129,7 @@ func seedQuizQuestions(db *MockDB) {
 		{
 			ID: primitive.NewObjectID(), Category: "verb-konjugation", Subcategory: "praesens-modal",
 			Level: "A1", Type: "multiple-choice",
-			PromptDe: "Wir ___ heute ins Kino gehen.", PromptEn: "We ___ go to the cinema today.", PromptVi: "Chúng tôi ___ đi xem phim hôm nay.",
+			PromptDe: "Wir ___ heute ins Kino gehen.", 
 			Options: []QuizOption{
 				{De: "können", En: "können", Vi: "können"}, {De: "kann", En: "kann", Vi: "kann"},
 				{De: "könnt", En: "könnt", Vi: "könnt"}, {De: "könnst", En: "könnst", Vi: "könnst"},
@@ -143,7 +143,7 @@ func seedQuizQuestions(db *MockDB) {
 		{
 			ID: primitive.NewObjectID(), Category: "verb-konjugation", Subcategory: "praesens-sein",
 			Level: "A1", Type: "fill-in-blank",
-			PromptDe: "Ich ___ müde. (sein)", PromptEn: "I ___ tired. (sein)", PromptVi: "Tôi ___ mệt. (sein)",
+			PromptDe: "Ich ___ müde. (sein)", 
 			BlankIndex: bi(1), CorrectAnswer: "bin",
 			ExplanationDe: "'sein' ist unregelmäßig: ich bin.",
 			ExplanationEn: "'sein' (to be) is irregular: ich bin.",
@@ -157,7 +157,7 @@ func seedQuizQuestions(db *MockDB) {
 		{
 			ID: primitive.NewObjectID(), Category: "negation", Subcategory: "nicht-kein",
 			Level: "A1", Type: "multiple-choice",
-			PromptDe: "Das ist ___ Hund. (Es ist eine Katze.)", PromptEn: "That is ___ dog. (It's a cat.)", PromptVi: "Đó ___ con chó. (Đó là con mèo.)",
+			PromptDe: "Das ist ___ Hund. (Es ist eine Katze.)", 
 			Options: []QuizOption{
 				{De: "nicht", En: "nicht", Vi: "nicht"}, {De: "kein", En: "kein", Vi: "kein"},
 				{De: "keine", En: "keine", Vi: "keine"}, {De: "keinen", En: "keinen", Vi: "keinen"},
@@ -171,7 +171,7 @@ func seedQuizQuestions(db *MockDB) {
 		{
 			ID: primitive.NewObjectID(), Category: "negation", Subcategory: "nicht-kein",
 			Level: "A1", Type: "multiple-choice",
-			PromptDe: "Er kommt ___ heute.", PromptEn: "He is ___ coming today.", PromptVi: "Anh ấy ___ đến hôm nay.",
+			PromptDe: "Er kommt ___ heute.", 
 			Options: []QuizOption{
 				{De: "nicht", En: "nicht", Vi: "nicht"}, {De: "kein", En: "kein", Vi: "kein"},
 				{De: "keine", En: "keine", Vi: "keine"}, {De: "nein", En: "nein", Vi: "nein"},
@@ -185,7 +185,7 @@ func seedQuizQuestions(db *MockDB) {
 		{
 			ID: primitive.NewObjectID(), Category: "negation", Subcategory: "nicht-kein",
 			Level: "A1", Type: "multiple-choice",
-			PromptDe: "Ich habe ___ Zeit.", PromptEn: "I have ___ time.", PromptVi: "Tôi ___ có thời gian.",
+			PromptDe: "Ich habe ___ Zeit.", 
 			Options: []QuizOption{
 				{De: "nicht", En: "nicht", Vi: "nicht"}, {De: "kein", En: "kein", Vi: "kein"},
 				{De: "keine", En: "keine", Vi: "keine"}, {De: "keinen", En: "keinen", Vi: "keinen"},
@@ -199,7 +199,7 @@ func seedQuizQuestions(db *MockDB) {
 		{
 			ID: primitive.NewObjectID(), Category: "negation", Subcategory: "nicht-kein",
 			Level: "A1", Type: "multiple-choice",
-			PromptDe: "Das Essen ist ___ gut.", PromptEn: "The food is ___ good.", PromptVi: "Thức ăn ___ ngon.",
+			PromptDe: "Das Essen ist ___ gut.", 
 			Options: []QuizOption{
 				{De: "nicht", En: "nicht", Vi: "nicht"}, {De: "kein", En: "kein", Vi: "kein"},
 				{De: "keine", En: "keine", Vi: "keine"}, {De: "nein", En: "nein", Vi: "nein"},
@@ -213,7 +213,7 @@ func seedQuizQuestions(db *MockDB) {
 		{
 			ID: primitive.NewObjectID(), Category: "negation", Subcategory: "nicht-kein",
 			Level: "A1", Type: "multiple-choice",
-			PromptDe: "Er hat ___ Bruder.", PromptEn: "He has ___ brother.", PromptVi: "Anh ấy ___ có anh/em trai.",
+			PromptDe: "Er hat ___ Bruder.", 
 			Options: []QuizOption{
 				{De: "nicht", En: "nicht", Vi: "nicht"}, {De: "kein", En: "kein", Vi: "kein"},
 				{De: "keine", En: "keine", Vi: "keine"}, {De: "keinen", En: "keinen", Vi: "keinen"},
@@ -231,7 +231,7 @@ func seedQuizQuestions(db *MockDB) {
 		{
 			ID: primitive.NewObjectID(), Category: "kasus", Subcategory: "akkusativ",
 			Level: "A2", Type: "fill-in-blank",
-			PromptDe: "Ich sehe ___ Mann dort.", PromptEn: "I see ___ man over there.", PromptVi: "Tôi thấy ___ người đàn ông ở đó.",
+			PromptDe: "Ich sehe ___ Mann dort.", 
 			BlankIndex: bi(2), CorrectAnswer: "den",
 			ExplanationDe: "'Mann' ist maskulin. Im Akkusativ: der → den.",
 			ExplanationEn: "'Mann' is masculine. Accusative: der → den.",
@@ -241,7 +241,7 @@ func seedQuizQuestions(db *MockDB) {
 		{
 			ID: primitive.NewObjectID(), Category: "kasus", Subcategory: "akkusativ",
 			Level: "A2", Type: "fill-in-blank",
-			PromptDe: "Wir kaufen ___ Buch.", PromptEn: "We are buying ___ book.", PromptVi: "Chúng tôi mua ___ cuốn sách.",
+			PromptDe: "Wir kaufen ___ Buch.", 
 			BlankIndex: bi(2), CorrectAnswer: "das",
 			ExplanationDe: "'Buch' ist neutral. Im Akkusativ bleibt 'das' gleich: das Buch.",
 			ExplanationEn: "'Buch' is neuter. The article stays 'das' in Accusative.",
@@ -251,7 +251,7 @@ func seedQuizQuestions(db *MockDB) {
 		{
 			ID: primitive.NewObjectID(), Category: "kasus", Subcategory: "akkusativ",
 			Level: "A2", Type: "multiple-choice",
-			PromptDe: "Er liebt ___ Frau.", PromptEn: "He loves ___ woman.", PromptVi: "Anh ấy yêu ___ người phụ nữ.",
+			PromptDe: "Er liebt ___ Frau.", 
 			Options: []QuizOption{
 				{De: "die", En: "die", Vi: "die"}, {De: "der", En: "der", Vi: "der"},
 				{De: "den", En: "den", Vi: "den"}, {De: "dem", En: "dem", Vi: "dem"},
@@ -265,7 +265,7 @@ func seedQuizQuestions(db *MockDB) {
 		{
 			ID: primitive.NewObjectID(), Category: "kasus", Subcategory: "akkusativ-pronomen",
 			Level: "A2", Type: "multiple-choice",
-			PromptDe: "Ich kenne ___. (er)", PromptEn: "I know ___. (him)", PromptVi: "Tôi biết ___. (anh ấy)",
+			PromptDe: "Ich kenne ___. (er)", 
 			Options: []QuizOption{
 				{De: "er", En: "he", Vi: "anh ấy"}, {De: "ihn", En: "him", Vi: "anh ấy (Akk)"},
 				{De: "ihm", En: "him (Dat)", Vi: "anh ấy (Dat)"}, {De: "sein", En: "his", Vi: "của anh ấy"},
@@ -279,7 +279,7 @@ func seedQuizQuestions(db *MockDB) {
 		{
 			ID: primitive.NewObjectID(), Category: "kasus", Subcategory: "akkusativ",
 			Level: "A2", Type: "fill-in-blank",
-			PromptDe: "Hast du ___ Schlüssel gefunden?", PromptEn: "Did you find ___ key?", PromptVi: "Bạn đã tìm thấy ___ cái chìa khóa chưa?",
+			PromptDe: "Hast du ___ Schlüssel gefunden?", 
 			BlankIndex: bi(2), CorrectAnswer: "den",
 			ExplanationDe: "'Schlüssel' ist maskulin. Im Akkusativ: der → den.",
 			ExplanationEn: "'Schlüssel' is masculine. Accusative: der → den.",
@@ -293,7 +293,7 @@ func seedQuizQuestions(db *MockDB) {
 		{
 			ID: primitive.NewObjectID(), Category: "kasus", Subcategory: "dativ",
 			Level: "A2", Type: "fill-in-blank",
-			PromptDe: "Ich gebe ___ Frau das Buch.", PromptEn: "I give ___ woman the book.", PromptVi: "Tôi đưa cuốn sách cho ___ người phụ nữ.",
+			PromptDe: "Ich gebe ___ Frau das Buch.", 
 			BlankIndex: bi(2), CorrectAnswer: "der",
 			ExplanationDe: "'Frau' ist feminin. Im Dativ: die → der.",
 			ExplanationEn: "'Frau' is feminine. Dative: die → der.",
@@ -303,7 +303,7 @@ func seedQuizQuestions(db *MockDB) {
 		{
 			ID: primitive.NewObjectID(), Category: "kasus", Subcategory: "dativ",
 			Level: "A2", Type: "fill-in-blank",
-			PromptDe: "Er hilft ___ Mann.", PromptEn: "He helps ___ man.", PromptVi: "Anh ấy giúp ___ người đàn ông.",
+			PromptDe: "Er hilft ___ Mann.", 
 			BlankIndex: bi(2), CorrectAnswer: "dem",
 			ExplanationDe: "'Mann' ist maskulin. Im Dativ: der → dem.",
 			ExplanationEn: "'Mann' is masculine. Dative: der → dem.",
@@ -313,7 +313,7 @@ func seedQuizQuestions(db *MockDB) {
 		{
 			ID: primitive.NewObjectID(), Category: "kasus", Subcategory: "dativ",
 			Level: "A2", Type: "multiple-choice",
-			PromptDe: "Mit ___ Kind gehe ich in den Park.", PromptEn: "I go to the park with ___ child.", PromptVi: "Tôi đi công viên với ___ đứa trẻ.",
+			PromptDe: "Mit ___ Kind gehe ich in den Park.", 
 			Options: []QuizOption{
 				{De: "das", En: "das", Vi: "das"}, {De: "dem", En: "dem", Vi: "dem"},
 				{De: "den", En: "den", Vi: "den"}, {De: "des", En: "des", Vi: "des"},
@@ -327,7 +327,7 @@ func seedQuizQuestions(db *MockDB) {
 		{
 			ID: primitive.NewObjectID(), Category: "kasus", Subcategory: "dativ-pronomen",
 			Level: "A2", Type: "multiple-choice",
-			PromptDe: "Er schreibt ___. (sie, Sg.)", PromptEn: "He writes to ___. (her)", PromptVi: "Anh ấy viết cho ___. (cô ấy)",
+			PromptDe: "Er schreibt ___. (sie, Sg.)", 
 			Options: []QuizOption{
 				{De: "sie", En: "she/her", Vi: "cô ấy"}, {De: "ihr", En: "her (Dat)", Vi: "cho cô ấy"},
 				{De: "ihre", En: "her (Poss)", Vi: "của cô ấy"}, {De: "sie (Akk)", En: "her (Acc)", Vi: "cô ấy (Akk)"},
@@ -341,7 +341,7 @@ func seedQuizQuestions(db *MockDB) {
 		{
 			ID: primitive.NewObjectID(), Category: "kasus", Subcategory: "dativ",
 			Level: "A2", Type: "fill-in-blank",
-			PromptDe: "Wir wohnen bei ___ Oma.", PromptEn: "We live with ___ grandma.", PromptVi: "Chúng tôi sống cùng ___ bà.",
+			PromptDe: "Wir wohnen bei ___ Oma.", 
 			BlankIndex: bi(3), CorrectAnswer: "der",
 			ExplanationDe: "'Oma' ist feminin. 'bei' + Dativ: die → der.",
 			ExplanationEn: "'Oma' is feminine. 'bei' + Dative: die → der.",
@@ -355,7 +355,7 @@ func seedQuizQuestions(db *MockDB) {
 		{
 			ID: primitive.NewObjectID(), Category: "praepositionen", Subcategory: "wechsel",
 			Level: "A2", Type: "multiple-choice",
-			PromptDe: "Das Buch liegt auf ___ Tisch. (Wo?)", PromptEn: "The book is on ___ table. (Where?)", PromptVi: "Cuốn sách nằm trên ___ bàn. (Ở đâu?)",
+			PromptDe: "Das Buch liegt auf ___ Tisch. (Wo?)", 
 			Options: []QuizOption{
 				{De: "dem", En: "dem", Vi: "dem"}, {De: "den", En: "den", Vi: "den"},
 				{De: "der", En: "der", Vi: "der"}, {De: "das", En: "das", Vi: "das"},
@@ -369,7 +369,7 @@ func seedQuizQuestions(db *MockDB) {
 		{
 			ID: primitive.NewObjectID(), Category: "praepositionen", Subcategory: "wechsel",
 			Level: "A2", Type: "multiple-choice",
-			PromptDe: "Ich lege das Buch auf ___ Tisch. (Wohin?)", PromptEn: "I put the book on ___ table. (Where to?)", PromptVi: "Tôi đặt cuốn sách lên ___ bàn. (Đi đâu?)",
+			PromptDe: "Ich lege das Buch auf ___ Tisch. (Wohin?)", 
 			Options: []QuizOption{
 				{De: "dem", En: "dem", Vi: "dem"}, {De: "den", En: "den", Vi: "den"},
 				{De: "der", En: "der", Vi: "der"}, {De: "das", En: "das", Vi: "das"},
@@ -383,7 +383,7 @@ func seedQuizQuestions(db *MockDB) {
 		{
 			ID: primitive.NewObjectID(), Category: "praepositionen", Subcategory: "wechsel",
 			Level: "A2", Type: "multiple-choice",
-			PromptDe: "Er hängt das Bild an ___ Wand. (Wohin?)", PromptEn: "He hangs the picture on ___ wall. (Where to?)", PromptVi: "Anh ấy treo bức tranh lên ___ tường. (Đi đâu?)",
+			PromptDe: "Er hängt das Bild an ___ Wand. (Wohin?)", 
 			Options: []QuizOption{
 				{De: "der", En: "der", Vi: "der"}, {De: "die", En: "die", Vi: "die"},
 				{De: "dem", En: "dem", Vi: "dem"}, {De: "den", En: "den", Vi: "den"},
@@ -397,7 +397,7 @@ func seedQuizQuestions(db *MockDB) {
 		{
 			ID: primitive.NewObjectID(), Category: "praepositionen", Subcategory: "wechsel",
 			Level: "A2", Type: "multiple-choice",
-			PromptDe: "Das Bild hängt an ___ Wand. (Wo?)", PromptEn: "The picture hangs on ___ wall. (Where?)", PromptVi: "Bức tranh treo trên ___ tường. (Ở đâu?)",
+			PromptDe: "Das Bild hängt an ___ Wand. (Wo?)", 
 			Options: []QuizOption{
 				{De: "der", En: "der", Vi: "der"}, {De: "die", En: "die", Vi: "die"},
 				{De: "dem", En: "dem", Vi: "dem"}, {De: "den", En: "den", Vi: "den"},
@@ -411,7 +411,7 @@ func seedQuizQuestions(db *MockDB) {
 		{
 			ID: primitive.NewObjectID(), Category: "praepositionen", Subcategory: "wechsel",
 			Level: "A2", Type: "multiple-choice",
-			PromptDe: "Sie geht in ___ Park. (Wohin?)", PromptEn: "She goes into ___ park. (Where to?)", PromptVi: "Cô ấy đi vào ___ công viên. (Đi đâu?)",
+			PromptDe: "Sie geht in ___ Park. (Wohin?)", 
 			Options: []QuizOption{
 				{De: "dem", En: "dem", Vi: "dem"}, {De: "den", En: "den", Vi: "den"},
 				{De: "der", En: "der", Vi: "der"}, {De: "die", En: "die", Vi: "die"},
@@ -429,7 +429,7 @@ func seedQuizQuestions(db *MockDB) {
 		{
 			ID: primitive.NewObjectID(), Category: "adjektivendungen", Subcategory: "schwach",
 			Level: "B1", Type: "fill-in-blank",
-			PromptDe: "Der alt___ Mann geht spazieren.", PromptEn: "The old man is going for a walk.", PromptVi: "Người đàn ông già đang đi dạo.",
+			PromptDe: "Der alt___ Mann geht spazieren.", 
 			BlankIndex: bi(1), CorrectAnswer: "e",
 			ExplanationDe: "Nach bestimmtem Artikel, Nominativ maskulin: -e (dee alt-E Mann).",
 			ExplanationEn: "After definite article, Nominative masculine: -e.",
@@ -439,7 +439,7 @@ func seedQuizQuestions(db *MockDB) {
 		{
 			ID: primitive.NewObjectID(), Category: "adjektivendungen", Subcategory: "schwach",
 			Level: "B1", Type: "fill-in-blank",
-			PromptDe: "Ich sehe den alt___ Mann.", PromptEn: "I see the old man.", PromptVi: "Tôi thấy người đàn ông già.",
+			PromptDe: "Ich sehe den alt___ Mann.", 
 			BlankIndex: bi(3), CorrectAnswer: "en",
 			ExplanationDe: "Nach bestimmtem Artikel, Akkusativ maskulin: -en.",
 			ExplanationEn: "After definite article, Accusative masculine: -en.",
@@ -449,7 +449,7 @@ func seedQuizQuestions(db *MockDB) {
 		{
 			ID: primitive.NewObjectID(), Category: "adjektivendungen", Subcategory: "schwach",
 			Level: "B1", Type: "fill-in-blank",
-			PromptDe: "Die schön___ Frau lächelt.", PromptEn: "The beautiful woman smiles.", PromptVi: "Người phụ nữ xinh đẹp mỉm cười.",
+			PromptDe: "Die schön___ Frau lächelt.", 
 			BlankIndex: bi(1), CorrectAnswer: "e",
 			ExplanationDe: "Nach bestimmtem Artikel, Nominativ feminin: -e.",
 			ExplanationEn: "After definite article, Nominative feminine: -e.",
@@ -459,7 +459,7 @@ func seedQuizQuestions(db *MockDB) {
 		{
 			ID: primitive.NewObjectID(), Category: "adjektivendungen", Subcategory: "schwach",
 			Level: "B1", Type: "fill-in-blank",
-			PromptDe: "Das klein___ Kind schläft.", PromptEn: "The little child is sleeping.", PromptVi: "Đứa trẻ nhỏ đang ngủ.",
+			PromptDe: "Das klein___ Kind schläft.", 
 			BlankIndex: bi(1), CorrectAnswer: "e",
 			ExplanationDe: "Nach bestimmtem Artikel, Nominativ neutral: -e.",
 			ExplanationEn: "After definite article, Nominative neuter: -e.",
@@ -469,7 +469,7 @@ func seedQuizQuestions(db *MockDB) {
 		{
 			ID: primitive.NewObjectID(), Category: "adjektivendungen", Subcategory: "schwach",
 			Level: "B1", Type: "fill-in-blank",
-			PromptDe: "Ich helfe dem alt___ Mann.", PromptEn: "I help the old man.", PromptVi: "Tôi giúp người đàn ông già.",
+			PromptDe: "Ich helfe dem alt___ Mann.", 
 			BlankIndex: bi(3), CorrectAnswer: "en",
 			ExplanationDe: "Nach bestimmtem Artikel, Dativ maskulin: -en.",
 			ExplanationEn: "After definite article, Dative masculine: -en.",
@@ -483,7 +483,7 @@ func seedQuizQuestions(db *MockDB) {
 		{
 			ID: primitive.NewObjectID(), Category: "adjektivendungen", Subcategory: "gemischt",
 			Level: "B1", Type: "fill-in-blank",
-			PromptDe: "Ein alt___ Mann sitzt dort.", PromptEn: "An old man sits there.", PromptVi: "Một người đàn ông già đang ngồi đó.",
+			PromptDe: "Ein alt___ Mann sitzt dort.", 
 			BlankIndex: bi(1), CorrectAnswer: "er",
 			ExplanationDe: "Nach unbestimmtem Artikel, Nominativ maskulin: -er (zeigt Genus).",
 			ExplanationEn: "After indefinite article, Nominative masculine: -er (shows gender).",
@@ -493,7 +493,7 @@ func seedQuizQuestions(db *MockDB) {
 		{
 			ID: primitive.NewObjectID(), Category: "adjektivendungen", Subcategory: "gemischt",
 			Level: "B1", Type: "fill-in-blank",
-			PromptDe: "Ich sehe einen alt___ Mann.", PromptEn: "I see an old man.", PromptVi: "Tôi thấy một người đàn ông già.",
+			PromptDe: "Ich sehe einen alt___ Mann.", 
 			BlankIndex: bi(3), CorrectAnswer: "en",
 			ExplanationDe: "Nach unbestimmtem Artikel, Akkusativ maskulin: -en.",
 			ExplanationEn: "After indefinite article, Accusative masculine: -en.",
@@ -503,7 +503,7 @@ func seedQuizQuestions(db *MockDB) {
 		{
 			ID: primitive.NewObjectID(), Category: "adjektivendungen", Subcategory: "gemischt",
 			Level: "B1", Type: "fill-in-blank",
-			PromptDe: "Eine schön___ Frau kommt herein.", PromptEn: "A beautiful woman comes in.", PromptVi: "Một người phụ nữ xinh đẹp bước vào.",
+			PromptDe: "Eine schön___ Frau kommt herein.", 
 			BlankIndex: bi(1), CorrectAnswer: "e",
 			ExplanationDe: "Nach unbestimmtem Artikel, Nominativ feminin: -e.",
 			ExplanationEn: "After indefinite article, Nominative feminine: -e.",
@@ -513,7 +513,7 @@ func seedQuizQuestions(db *MockDB) {
 		{
 			ID: primitive.NewObjectID(), Category: "adjektivendungen", Subcategory: "gemischt",
 			Level: "B1", Type: "fill-in-blank",
-			PromptDe: "Ein klein___ Kind weint.", PromptEn: "A little child is crying.", PromptVi: "Một đứa trẻ nhỏ đang khóc.",
+			PromptDe: "Ein klein___ Kind weint.", 
 			BlankIndex: bi(1), CorrectAnswer: "es",
 			ExplanationDe: "Nach unbestimmtem Artikel, Nominativ neutral: -es (zeigt Genus).",
 			ExplanationEn: "After indefinite article, Nominative neuter: -es (shows gender).",
@@ -523,7 +523,7 @@ func seedQuizQuestions(db *MockDB) {
 		{
 			ID: primitive.NewObjectID(), Category: "adjektivendungen", Subcategory: "gemischt",
 			Level: "B1", Type: "fill-in-blank",
-			PromptDe: "Mein neu___ Computer ist sehr schnell.", PromptEn: "My new computer is very fast.", PromptVi: "Máy tính mới của tôi rất nhanh.",
+			PromptDe: "Mein neu___ Computer ist sehr schnell.", 
 			BlankIndex: bi(1), CorrectAnswer: "er",
 			ExplanationDe: "Nach Possessivpronomen (mein), Nominativ maskulin: -er.",
 			ExplanationEn: "After possessive pronoun (mein), Nominative masculine: -er.",
@@ -537,7 +537,7 @@ func seedQuizQuestions(db *MockDB) {
 		{
 			ID: primitive.NewObjectID(), Category: "adjektivendungen", Subcategory: "stark",
 			Level: "B1", Type: "fill-in-blank",
-			PromptDe: "Frisch___ Kaffee schmeckt gut.", PromptEn: "Fresh coffee tastes good.", PromptVi: "Cà phê tươi có vị ngon.",
+			PromptDe: "Frisch___ Kaffee schmeckt gut.", 
 			BlankIndex: bi(0), CorrectAnswer: "er",
 			ExplanationDe: "Ohne Artikel, Nominativ maskulin: starke Deklination, -er.",
 			ExplanationEn: "No article, Nominative masculine: strong declension, -er.",
@@ -547,7 +547,7 @@ func seedQuizQuestions(db *MockDB) {
 		{
 			ID: primitive.NewObjectID(), Category: "adjektivendungen", Subcategory: "stark",
 			Level: "B1", Type: "fill-in-blank",
-			PromptDe: "Er trinkt kalt___ Wasser.", PromptEn: "He drinks cold water.", PromptVi: "Anh ấy uống nước lạnh.",
+			PromptDe: "Er trinkt kalt___ Wasser.", 
 			BlankIndex: bi(2), CorrectAnswer: "es",
 			ExplanationDe: "Ohne Artikel, Akkusativ neutral: starke Deklination, -es.",
 			ExplanationEn: "No article, Accusative neuter: strong declension, -es.",
@@ -557,7 +557,7 @@ func seedQuizQuestions(db *MockDB) {
 		{
 			ID: primitive.NewObjectID(), Category: "adjektivendungen", Subcategory: "stark",
 			Level: "B1", Type: "fill-in-blank",
-			PromptDe: "Mit frisch___ Milch schmeckt es besser.", PromptEn: "It tastes better with fresh milk.", PromptVi: "Với sữa tươi thì ngon hơn.",
+			PromptDe: "Mit frisch___ Milch schmeckt es besser.", 
 			BlankIndex: bi(1), CorrectAnswer: "er",
 			ExplanationDe: "Ohne Artikel, Dativ feminin: starke Deklination, -er.",
 			ExplanationEn: "No article, Dative feminine: strong declension, -er.",
@@ -567,7 +567,7 @@ func seedQuizQuestions(db *MockDB) {
 		{
 			ID: primitive.NewObjectID(), Category: "adjektivendungen", Subcategory: "stark",
 			Level: "B1", Type: "fill-in-blank",
-			PromptDe: "Jung___ Leute reisen gern.", PromptEn: "Young people like to travel.", PromptVi: "Người trẻ thích đi du lịch.",
+			PromptDe: "Jung___ Leute reisen gern.", 
 			BlankIndex: bi(0), CorrectAnswer: "e",
 			ExplanationDe: "Ohne Artikel, Nominativ Plural: starke Deklination, -e.",
 			ExplanationEn: "No article, Nominative plural: strong declension, -e.",
@@ -577,7 +577,7 @@ func seedQuizQuestions(db *MockDB) {
 		{
 			ID: primitive.NewObjectID(), Category: "adjektivendungen", Subcategory: "stark",
 			Level: "B1", Type: "fill-in-blank",
-			PromptDe: "Groß___ Hunger macht alles lecker.", PromptEn: "Great hunger makes everything tasty.", PromptVi: "Đói bụng làm mọi thứ trở nên ngon.",
+			PromptDe: "Groß___ Hunger macht alles lecker.", 
 			BlankIndex: bi(0), CorrectAnswer: "er",
 			ExplanationDe: "Ohne Artikel, Nominativ maskulin: starke Deklination, -er.",
 			ExplanationEn: "No article, Nominative masculine: strong declension, -er.",
@@ -591,7 +591,7 @@ func seedQuizQuestions(db *MockDB) {
 		{
 			ID: primitive.NewObjectID(), Category: "passiv", Subcategory: "praesens-passiv",
 			Level: "B1", Type: "multiple-choice",
-			PromptDe: "Das Auto ___ repariert.", PromptEn: "The car ___ being repaired.", PromptVi: "Chiếc xe đang ___ sửa chữa.",
+			PromptDe: "Das Auto ___ repariert.", 
 			Options: []QuizOption{
 				{De: "wird", En: "wird", Vi: "wird"}, {De: "werden", En: "werden", Vi: "werden"},
 				{De: "ist", En: "ist", Vi: "ist"}, {De: "war", En: "war", Vi: "war"},
@@ -605,7 +605,7 @@ func seedQuizQuestions(db *MockDB) {
 		{
 			ID: primitive.NewObjectID(), Category: "passiv", Subcategory: "praesens-passiv",
 			Level: "B1", Type: "multiple-choice",
-			PromptDe: "Die Briefe ___ geschrieben.", PromptEn: "The letters ___ being written.", PromptVi: "Các lá thư đang ___ viết.",
+			PromptDe: "Die Briefe ___ geschrieben.", 
 			Options: []QuizOption{
 				{De: "wird", En: "wird", Vi: "wird"}, {De: "werden", En: "werden", Vi: "werden"},
 				{De: "sind", En: "sind", Vi: "sind"}, {De: "wurden", En: "wurden", Vi: "wurden"},
@@ -619,7 +619,7 @@ func seedQuizQuestions(db *MockDB) {
 		{
 			ID: primitive.NewObjectID(), Category: "passiv", Subcategory: "praeteritum-passiv",
 			Level: "B1", Type: "multiple-choice",
-			PromptDe: "Das Buch ___ gestern geschrieben.", PromptEn: "The book ___ written yesterday.", PromptVi: "Cuốn sách ___ viết hôm qua.",
+			PromptDe: "Das Buch ___ gestern geschrieben.", 
 			Options: []QuizOption{
 				{De: "wird", En: "wird", Vi: "wird"}, {De: "wurde", En: "wurde", Vi: "wurde"},
 				{De: "war", En: "war", Vi: "war"}, {De: "ist", En: "ist", Vi: "ist"},
@@ -633,7 +633,7 @@ func seedQuizQuestions(db *MockDB) {
 		{
 			ID: primitive.NewObjectID(), Category: "passiv", Subcategory: "modal-passiv",
 			Level: "B2", Type: "multiple-choice",
-			PromptDe: "Das muss sofort gemacht ___.", PromptEn: "That must be done immediately.", PromptVi: "Điều đó phải ___ thực hiện ngay.",
+			PromptDe: "Das muss sofort gemacht ___.", 
 			Options: []QuizOption{
 				{De: "werden", En: "werden", Vi: "werden"}, {De: "worden", En: "worden", Vi: "worden"},
 				{De: "sein", En: "sein", Vi: "sein"}, {De: "wird", En: "wird", Vi: "wird"},
@@ -647,7 +647,7 @@ func seedQuizQuestions(db *MockDB) {
 		{
 			ID: primitive.NewObjectID(), Category: "passiv", Subcategory: "praesens-passiv",
 			Level: "B1", Type: "fill-in-blank",
-			PromptDe: "Die Tür ___ von Max geöffnet.", PromptEn: "The door ___ opened by Max.", PromptVi: "Cánh cửa ___ Max mở.",
+			PromptDe: "Die Tür ___ von Max geöffnet.", 
 			BlankIndex: bi(2), CorrectAnswer: "wird",
 			ExplanationDe: "Präsens Passiv: wird + Partizip II. 'Tür' ist feminin, Singular → wird.",
 			ExplanationEn: "Present passive: wird + past participle. 'Tür' is feminine, singular → wird.",
@@ -661,7 +661,7 @@ func seedQuizQuestions(db *MockDB) {
 		{
 			ID: primitive.NewObjectID(), Category: "konjunktiv", Subcategory: "konjunktiv-ii",
 			Level: "B2", Type: "multiple-choice",
-			PromptDe: "Wenn ich Zeit hätte, ___ ich reisen.", PromptEn: "If I had time, I ___ travel.", PromptVi: "Nếu tôi có thời gian, tôi ___ đi du lịch.",
+			PromptDe: "Wenn ich Zeit hätte, ___ ich reisen.", 
 			Options: []QuizOption{
 				{De: "würde", En: "würde", Vi: "würde"}, {De: "werde", En: "werde", Vi: "werde"},
 				{De: "wurde", En: "wurde", Vi: "wurde"}, {De: "wäre", En: "wäre", Vi: "wäre"},
@@ -675,7 +675,7 @@ func seedQuizQuestions(db *MockDB) {
 		{
 			ID: primitive.NewObjectID(), Category: "konjunktiv", Subcategory: "konjunktiv-ii",
 			Level: "B2", Type: "multiple-choice",
-			PromptDe: "Könntest du mir bitte helfen? — Ja, ich ___ gerne helfen.", PromptEn: "Could you help me? — Yes, I ___ gladly help.", PromptVi: "Bạn có thể giúp tôi không? — Vâng, tôi ___ giúp.",
+			PromptDe: "Könntest du mir bitte helfen? — Ja, ich ___ gerne helfen.", 
 			Options: []QuizOption{
 				{De: "würde", En: "würde", Vi: "würde"}, {De: "wollte", En: "wollte", Vi: "wollte"},
 				{De: "könnte", En: "könnte", Vi: "könnte"}, {De: "sollte", En: "sollte", Vi: "sollte"},
@@ -689,7 +689,7 @@ func seedQuizQuestions(db *MockDB) {
 		{
 			ID: primitive.NewObjectID(), Category: "konjunktiv", Subcategory: "konjunktiv-ii",
 			Level: "B2", Type: "multiple-choice",
-			PromptDe: "Wenn ich du ___, würde ich das nicht tun.", PromptEn: "If I ___ you, I wouldn't do that.", PromptVi: "Nếu tôi là bạn, tôi sẽ không làm vậy.",
+			PromptDe: "Wenn ich du ___, würde ich das nicht tun.", 
 			Options: []QuizOption{
 				{De: "wäre", En: "wäre", Vi: "wäre"}, {De: "bin", En: "bin", Vi: "bin"},
 				{De: "würde", En: "würde", Vi: "würde"}, {De: "war", En: "war", Vi: "war"},
@@ -703,7 +703,7 @@ func seedQuizQuestions(db *MockDB) {
 		{
 			ID: primitive.NewObjectID(), Category: "konjunktiv", Subcategory: "konjunktiv-ii",
 			Level: "B2", Type: "multiple-choice",
-			PromptDe: "___ du bitte das Fenster zumachen?", PromptEn: "___ you please close the window?", PromptVi: "Bạn ___ đóng cửa sổ lại được không?",
+			PromptDe: "___ du bitte das Fenster zumachen?", 
 			Options: []QuizOption{
 				{De: "Könntest", En: "Könntest", Vi: "Könntest"}, {De: "Kannst", En: "Kannst", Vi: "Kannst"},
 				{De: "Wirst", En: "Wirst", Vi: "Wirst"}, {De: "Würdest", En: "Würdest", Vi: "Würdest"},
@@ -717,7 +717,7 @@ func seedQuizQuestions(db *MockDB) {
 		{
 			ID: primitive.NewObjectID(), Category: "konjunktiv", Subcategory: "konjunktiv-ii",
 			Level: "B2", Type: "multiple-choice",
-			PromptDe: "Ohne ihn ___ das Projekt gescheitert.", PromptEn: "Without him, the project ___ have failed.", PromptVi: "Nếu không có anh ấy, dự án đã thất bại.",
+			PromptDe: "Ohne ihn ___ das Projekt gescheitert.", 
 			Options: []QuizOption{
 				{De: "wäre", En: "wäre", Vi: "wäre"}, {De: "würde", En: "würde", Vi: "würde"},
 				{De: "hätte", En: "hätte", Vi: "hätte"}, {De: "war", En: "war", Vi: "war"},
@@ -735,7 +735,7 @@ func seedQuizQuestions(db *MockDB) {
 		{
 			ID: primitive.NewObjectID(), Category: "relativsaetze", Subcategory: "relativpronomen",
 			Level: "B1", Type: "multiple-choice",
-			PromptDe: "Das ist der Mann, ___ hier wohnt.", PromptEn: "That is the man ___ lives here.", PromptVi: "Đó là người đàn ông ___ sống ở đây.",
+			PromptDe: "Das ist der Mann, ___ hier wohnt.", 
 			Options: []QuizOption{
 				{De: "der", En: "der", Vi: "der"}, {De: "den", En: "den", Vi: "den"},
 				{De: "dem", En: "dem", Vi: "dem"}, {De: "das", En: "das", Vi: "das"},
@@ -749,7 +749,7 @@ func seedQuizQuestions(db *MockDB) {
 		{
 			ID: primitive.NewObjectID(), Category: "relativsaetze", Subcategory: "relativpronomen",
 			Level: "B1", Type: "multiple-choice",
-			PromptDe: "Das ist die Frau, ___ ich kenne.", PromptEn: "That is the woman ___ I know.", PromptVi: "Đó là người phụ nữ ___ tôi biết.",
+			PromptDe: "Das ist die Frau, ___ ich kenne.", 
 			Options: []QuizOption{
 				{De: "die", En: "die", Vi: "die"}, {De: "der", En: "der", Vi: "der"},
 				{De: "den", En: "den", Vi: "den"}, {De: "das", En: "das", Vi: "das"},
@@ -763,7 +763,7 @@ func seedQuizQuestions(db *MockDB) {
 		{
 			ID: primitive.NewObjectID(), Category: "relativsaetze", Subcategory: "relativpronomen",
 			Level: "B1", Type: "multiple-choice",
-			PromptDe: "Das ist das Kind, ___ ich geholfen habe.", PromptEn: "That is the child ___ I helped.", PromptVi: "Đó là đứa trẻ ___ tôi đã giúp.",
+			PromptDe: "Das ist das Kind, ___ ich geholfen habe.", 
 			Options: []QuizOption{
 				{De: "das", En: "das", Vi: "das"}, {De: "dem", En: "dem", Vi: "dem"},
 				{De: "den", En: "den", Vi: "den"}, {De: "die", En: "die", Vi: "die"},
@@ -777,7 +777,7 @@ func seedQuizQuestions(db *MockDB) {
 		{
 			ID: primitive.NewObjectID(), Category: "relativsaetze", Subcategory: "relativpronomen",
 			Level: "B1", Type: "multiple-choice",
-			PromptDe: "Der Mann, ___ Frau krank ist, bleibt zu Hause.", PromptEn: "The man ___ wife is sick stays home.", PromptVi: "Người đàn ông ___ vợ bị ốm ở nhà.",
+			PromptDe: "Der Mann, ___ Frau krank ist, bleibt zu Hause.", 
 			Options: []QuizOption{
 				{De: "dessen", En: "dessen", Vi: "dessen"}, {De: "der", En: "der", Vi: "der"},
 				{De: "dem", En: "dem", Vi: "dem"}, {De: "des", En: "des", Vi: "des"},
@@ -791,7 +791,7 @@ func seedQuizQuestions(db *MockDB) {
 		{
 			ID: primitive.NewObjectID(), Category: "relativsaetze", Subcategory: "relativpronomen",
 			Level: "B1", Type: "multiple-choice",
-			PromptDe: "Das Buch, ___ auf dem Tisch liegt, gehört mir.", PromptEn: "The book ___ is on the table is mine.", PromptVi: "Cuốn sách ___ đang ở trên bàn là của tôi.",
+			PromptDe: "Das Buch, ___ auf dem Tisch liegt, gehört mir.", 
 			Options: []QuizOption{
 				{De: "das", En: "das", Vi: "das"}, {De: "den", En: "den", Vi: "den"},
 				{De: "dem", En: "dem", Vi: "dem"}, {De: "die", En: "die", Vi: "die"},
@@ -809,7 +809,7 @@ func seedQuizQuestions(db *MockDB) {
 		{
 			ID: primitive.NewObjectID(), Category: "trennbare-verben", Subcategory: "praesens",
 			Level: "B1", Type: "fill-in-blank",
-			PromptDe: "Ich rufe dich morgen ___. (anrufen)", PromptEn: "I will call you tomorrow. (anrufen)", PromptVi: "Tôi sẽ gọi cho bạn vào ngày mai. (anrufen)",
+			PromptDe: "Ich rufe dich morgen ___. (anrufen)", 
 			BlankIndex: bi(4), CorrectAnswer: "an",
 			ExplanationDe: "'anrufen' ist trennbar. Im Präsens: Das Präfix 'an' geht ans Satzende.",
 			ExplanationEn: "'anrufen' is separable. In present tense, prefix 'an' goes to end.",
@@ -819,7 +819,7 @@ func seedQuizQuestions(db *MockDB) {
 		{
 			ID: primitive.NewObjectID(), Category: "trennbare-verben", Subcategory: "praesens",
 			Level: "B1", Type: "fill-in-blank",
-			PromptDe: "Er steht jeden Morgen um 6 Uhr ___. (aufstehen)", PromptEn: "He gets up every morning at 6. (aufstehen)", PromptVi: "Anh ấy thức dậy lúc 6 giờ mỗi sáng. (aufstehen)",
+			PromptDe: "Er steht jeden Morgen um 6 Uhr ___. (aufstehen)", 
 			BlankIndex: bi(7), CorrectAnswer: "auf",
 			ExplanationDe: "'aufstehen' ist trennbar: 'auf' geht ans Satzende.",
 			ExplanationEn: "'aufstehen' is separable: 'auf' goes to the end.",
@@ -829,7 +829,7 @@ func seedQuizQuestions(db *MockDB) {
 		{
 			ID: primitive.NewObjectID(), Category: "trennbare-verben", Subcategory: "perfekt",
 			Level: "B1", Type: "multiple-choice",
-			PromptDe: "Er hat gestern ___ angerufen.", PromptEn: "He called yesterday. (Perfekt)", PromptVi: "Anh ấy đã gọi điện hôm qua. (Perfekt)",
+			PromptDe: "Er hat gestern ___ angerufen.", 
 			Options: []QuizOption{
 				{De: "mich", En: "mich", Vi: "mich"}, {De: "ich", En: "ich", Vi: "ich"},
 				{De: "mir", En: "mir", Vi: "mir"}, {De: "meinen", En: "meinen", Vi: "meinen"},
@@ -843,7 +843,7 @@ func seedQuizQuestions(db *MockDB) {
 		{
 			ID: primitive.NewObjectID(), Category: "trennbare-verben", Subcategory: "praesens",
 			Level: "B1", Type: "multiple-choice",
-			PromptDe: "Wann ___ der Zug ___? (abfahren)", PromptEn: "When does the train depart? (abfahren)", PromptVi: "Tàu khởi hành khi nào? (abfahren)",
+			PromptDe: "Wann ___ der Zug ___? (abfahren)", 
 			Options: []QuizOption{
 				{De: "fährt...ab", En: "fährt...ab", Vi: "fährt...ab"}, {De: "abfährt", En: "abfährt", Vi: "abfährt"},
 				{De: "fahren...ab", En: "fahren...ab", Vi: "fahren...ab"}, {De: "fährt...auf", En: "fährt...auf", Vi: "fährt...auf"},
@@ -857,7 +857,7 @@ func seedQuizQuestions(db *MockDB) {
 		{
 			ID: primitive.NewObjectID(), Category: "trennbare-verben", Subcategory: "praesens",
 			Level: "B1", Type: "fill-in-blank",
-			PromptDe: "Bitte mach das Licht ___! (ausmachen)", PromptEn: "Please turn off the light! (ausmachen)", PromptVi: "Hãy tắt đèn đi! (ausmachen)",
+			PromptDe: "Bitte mach das Licht ___! (ausmachen)", 
 			BlankIndex: bi(4), CorrectAnswer: "aus",
 			ExplanationDe: "Imperativ trennbares Verb: Das Präfix 'aus' steht am Ende.",
 			ExplanationEn: "Imperative separable verb: prefix 'aus' goes at the end.",
@@ -871,7 +871,7 @@ func seedQuizQuestions(db *MockDB) {
 		{
 			ID: primitive.NewObjectID(), Category: "wortstellung", Subcategory: "nebensatz-weil",
 			Level: "B2", Type: "word-order",
-			PromptDe: "Ich bleibe zu Hause, weil [krank / ich / bin].", PromptEn: "I stay home because [sick / I / am].", PromptVi: "Tôi ở nhà vì [ốm / tôi / bị].",
+			PromptDe: "Ich bleibe zu Hause, weil [krank / ich / bin].", 
 			CorrectAnswer: "ich krank bin",
 			ExplanationDe: "In 'weil'-Sätzen steht das Verb am Ende: weil ich krank bin.",
 			ExplanationEn: "In 'weil' clauses, verb goes to the end: weil ich krank bin.",
@@ -881,7 +881,7 @@ func seedQuizQuestions(db *MockDB) {
 		{
 			ID: primitive.NewObjectID(), Category: "wortstellung", Subcategory: "inversion",
 			Level: "B2", Type: "word-order",
-			PromptDe: "[Heute / er / kommt / nicht].", PromptEn: "[Today / he / comes / not].", PromptVi: "[Hôm nay / anh ấy / đến / không].",
+			PromptDe: "[Heute / er / kommt / nicht].", 
 			CorrectAnswer: "Heute kommt er nicht.",
 			ExplanationDe: "Mit Zeitadverb am Anfang: Inversion — Verb an Position 2: Heute kommt er nicht.",
 			ExplanationEn: "With time adverb at start: inversion — verb in position 2.",
@@ -891,7 +891,7 @@ func seedQuizQuestions(db *MockDB) {
 		{
 			ID: primitive.NewObjectID(), Category: "wortstellung", Subcategory: "nebensatz-dass",
 			Level: "B2", Type: "word-order",
-			PromptDe: "Er sagt, dass [schön / das Wetter / ist].", PromptEn: "He says that [beautiful / the weather / is].", PromptVi: "Anh ấy nói rằng [đẹp / thời tiết / là].",
+			PromptDe: "Er sagt, dass [schön / das Wetter / ist].", 
 			CorrectAnswer: "das Wetter schön ist",
 			ExplanationDe: "In 'dass'-Sätzen: Verb ans Ende: dass das Wetter schön ist.",
 			ExplanationEn: "In 'dass' clauses: verb to the end.",
@@ -901,7 +901,7 @@ func seedQuizQuestions(db *MockDB) {
 		{
 			ID: primitive.NewObjectID(), Category: "wortstellung", Subcategory: "perfekt-wortstellung",
 			Level: "B2", Type: "word-order",
-			PromptDe: "[Er / gestern / hat / das Buch / gelesen].", PromptEn: "[He / yesterday / has / the book / read].", PromptVi: "[Anh ấy / hôm qua / đã / cuốn sách / đọc].",
+			PromptDe: "[Er / gestern / hat / das Buch / gelesen].", 
 			CorrectAnswer: "Er hat das Buch gestern gelesen.",
 			ExplanationDe: "Im Perfekt: hat an Position 2, Partizip II ans Ende.",
 			ExplanationEn: "In Perfekt: auxiliary in position 2, past participle at end.",
@@ -911,7 +911,7 @@ func seedQuizQuestions(db *MockDB) {
 		{
 			ID: primitive.NewObjectID(), Category: "wortstellung", Subcategory: "nebensatz-wenn",
 			Level: "B2", Type: "word-order",
-			PromptDe: "[Wenn / ich / Zeit / hätte], würde ich reisen.", PromptEn: "[If / I / time / had], I would travel.", PromptVi: "[Nếu / tôi / thời gian / có], tôi sẽ đi du lịch.",
+			PromptDe: "[Wenn / ich / Zeit / hätte], würde ich reisen.", 
 			CorrectAnswer: "Wenn ich Zeit hätte",
 			ExplanationDe: "In 'wenn'-Sätzen: Verb (Konjunktiv) ans Ende: Wenn ich Zeit hätte.",
 			ExplanationEn: "In 'wenn' clauses: verb (subjunctive) to end.",

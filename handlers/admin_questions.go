@@ -128,8 +128,6 @@ func AdminQuestionsHandler(w http.ResponseWriter, r *http.Request) {
 				"level":          q.Level,
 				"type":           q.Type,
 				"prompt_de":      q.PromptDe,
-				"prompt_en":      q.PromptEn,
-				"prompt_vi":      q.PromptVi,
 				"options":        q.Options,
 				"correct_answer": q.CorrectAnswer,
 				"explanation_de": q.ExplanationDe,

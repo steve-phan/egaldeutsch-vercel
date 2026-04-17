@@ -21,8 +21,6 @@ type QuizQuestion struct {
 	Level         string             `bson:"level"          json:"level"`
 	Type          string             `bson:"type"           json:"type"`
 	PromptDe      string             `bson:"prompt_de"      json:"prompt_de"`
-	PromptEn      string             `bson:"prompt_en"      json:"prompt_en"`
-	PromptVi      string             `bson:"prompt_vi"      json:"prompt_vi"`
 	BlankIndex    *int               `bson:"blank_index"    json:"blank_index,omitempty"`
 	Options       []QuizOption       `bson:"options"        json:"options,omitempty"`
 	CorrectAnswer string             `bson:"correct_answer" json:"correct_answer"`

@@ -43,8 +43,6 @@ export interface QuizQuestion {
   level: CEFRLevel;
   type: QuizType;
   prompt_de: string;
-  prompt_en: string;
-  prompt_vi: string;
   blank_index?: number;
   options?: QuizOption[];
   correct_answer: string;
