@@ -1,5 +1,4 @@
 import { QuizOption } from "@/types/quiz";
-import { LocalizedTextField } from "./localized-text-field";
 import { Button } from "@/components/ui/button";
 import { Trash2, Plus } from "lucide-react";
 
@@ -66,16 +65,7 @@ export function OptionsEditor({ options, onChange, correctAnswer, onCorrectAnswe
                     <Trash2 className="w-4 h-4" />
                   </Button>
                </div>
-               
-               <LocalizedTextField 
-                 label={`Option ${idx + 1} Text`}
-                 deValue={opt.de}
-                 enValue={opt.en}
-                 viValue={opt.vi}
-                 onDeChange={(v) => handleUpdate(idx, "de", v)}
-                 onEnChange={(v) => handleUpdate(idx, "en", v)}
-                 onViChange={(v) => handleUpdate(idx, "vi", v)}
-               />
+            
             </div>
           );
         })}

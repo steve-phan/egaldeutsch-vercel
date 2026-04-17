@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import { QuizQuestion, CEFRLevel, QuizType } from "@/types/quiz";
-import { LocalizedTextField } from "./localized-text-field";
 import { OptionsEditor } from "./options-editor";
 import { TagsInput } from "./tags-input";
 import { Input } from "@/components/ui/input";
@@ -22,7 +21,7 @@ const DEFAULT_QUESTION: Partial<QuizQuestion> = {
   subcategory: "general",
   level: "A1",
   type: "multiple-choice",
-  prompt_de: "", prompt_en: "", prompt_vi: "",
+  prompt_de: "",
   explanation_de: "", explanation_en: "", explanation_vi: "",
   correct_answer: "",
   options: [],
@@ -139,17 +138,6 @@ export function QuestionForm({ initialData, onSubmit, isSubmitting }: QuestionFo
                 <Lightbulb className="w-3 h-3 text-amber-500" /> Pro Tip: Use <code className="bg-white px-1.5 py-0.5 rounded shadow-sm text-primary">___</code> for blanks.
               </p>
           </div>
-
-          <LocalizedTextField 
-              label=""
-              deValue={formData.prompt_de || ""}
-              enValue={formData.prompt_en || ""}
-              viValue={formData.prompt_vi || ""}
-              onDeChange={v => updateField("prompt_de", v)}
-              onEnChange={v => updateField("prompt_en", v)}
-              onViChange={v => updateField("prompt_vi", v)}
-              multiline
-          />
         </section>
 
         {/* 3. Evaluation Logic */}
@@ -195,17 +183,6 @@ export function QuestionForm({ initialData, onSubmit, isSubmitting }: QuestionFo
                 <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Explanations & Enrichment</p>
               </div>
           </div>
-
-          <LocalizedTextField 
-              label="Explanation (DE / EN / VI)"
-              deValue={formData.explanation_de || ""}
-              enValue={formData.explanation_en || ""}
-              viValue={formData.explanation_vi || ""}
-              onDeChange={v => updateField("explanation_de", v)}
-              onEnChange={v => updateField("explanation_en", v)}
-              onViChange={v => updateField("explanation_vi", v)}
-              multiline
-          />
           <TagsInput 
               tags={formData.tags || []} 
               onChange={tags => updateField("tags", tags)} 
