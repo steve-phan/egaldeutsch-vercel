@@ -2,265 +2,122 @@
 
 import { useEffect, useState } from "react";
 import { useAuth } from "@/components/auth-provider";
-import { Card, CardHeader, CardTitle, CardContent, CardDescription } from "@/components/ui/card";
+import { useAdminQuestions } from "@/hooks/use-admin-questions";
+import { useRouter } from "next/navigation";
+import { Loader2, Plus, RefreshCw, BarChart } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { QuestionTable } from "@/components/admin/quiz/question-table";
 import Link from "next/link";
-
-interface Lesson {
-  id: string;
-  title: string;
-  description: string;
-  created_at?: string;
-}
-
-interface User {
-  id: string;
-  name: string;
-  email: string;
-  role?: string;
-}
+import { CEFRLevel } from "@/types/quiz";
 
 export default function AdminDashboardPage() {
-  const { isAuthenticated } = useAuth();
-  const [lessons, setLessons] = useState<Lesson[]>([]);
-  const [users, setUsers] = useState<User[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [isAdmin, setIsAdmin] = useState(false);
+  const router = useRouter();
+  const { user, isAuthenticated } = useAuth();
+  
+  // Note: For mock MVP we rely on API returning 403 if fake 'role' doesn't match, 
+  // but we optionally protect route locally.
+  useEffect(() => {
+    if (!isAuthenticated) {
+       router.push("/login");
+    }
+  }, [isAuthenticated, router]);
+
+  const { questions, loading, error, fetchQuestions, deleteQuestion } = useAdminQuestions();
+  
+  const [filterLevel, setFilterLevel] = useState<string>("");
+  const [filterCategory, setFilterCategory] = useState<string>("");
 
   useEffect(() => {
-    if (!isAuthenticated) return;
+    fetchQuestions(filterCategory, filterLevel);
+  }, [fetchQuestions, filterCategory, filterLevel]);
 
-    const token = localStorage.getItem("token");
-    if (!token) return;
-
-    const fetchAdminData = async () => {
-      try {
-        // Check if user is admin by fetching users list
-        const usersRes = await fetch("/api/auth/admin/users", {
-          headers: { Authorization: `Bearer ${token}` },
-        });
-        
-        if (usersRes.ok) {
-          const usersData = await usersRes.json();
-          setUsers(usersData);
-          setIsAdmin(true);
-        } else if (usersRes.status === 403) {
-          setIsAdmin(false);
-          setLoading(false);
-          return;
-        }
-
-        // Fetch lessons
-        const lessonsRes = await fetch("/api/lessons");
-        if (lessonsRes.ok) {
-          const lessonsData = await lessonsRes.json();
-          setLessons(lessonsData);
-        }
-      } catch (error) {
-        console.error("Failed to fetch admin data:", error);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchAdminData();
-  }, [isAuthenticated]);
-
-  const handleDeleteLesson = async (lessonId: string) => {
-    if (!confirm("Are you sure you want to delete this lesson?")) return;
-
-    const token = localStorage.getItem("token");
-    if (!token) return;
-
-    try {
-      const res = await fetch(`/api/lesson-management?id=${lessonId}`, {
-        method: "DELETE",
-        headers: { Authorization: `Bearer ${token}` },
-      });
-
-      if (res.ok) {
-        setLessons(lessons.filter((l) => l.id !== lessonId));
-      }
-    } catch (error) {
-      console.error("Failed to delete lesson:", error);
-    }
-  };
-
-  const handleDeleteUser = async (userId: string) => {
-    if (!confirm("Are you sure you want to delete this user?")) return;
-
-    const token = localStorage.getItem("token");
-    if (!token) return;
-
-    try {
-      const res = await fetch(`/api/auth/admin/users?id=${userId}`, {
-        method: "DELETE",
-        headers: { Authorization: `Bearer ${token}` },
-      });
-
-      if (res.ok) {
-        setUsers(users.filter((u) => u.id !== userId));
-      }
-    } catch (error) {
-      console.error("Failed to delete user:", error);
-    }
-  };
-
-  if (!isAuthenticated) {
-    return (
-      <main className="flex min-h-screen items-center justify-center p-4 bg-slate-50">
-        <Card className="w-full max-w-md">
-          <CardContent className="pt-6">
-            <p className="text-center text-slate-600 mb-4">Please log in to access admin dashboard.</p>
-            <Link href="/login">
-              <Button className="w-full">Go to Login</Button>
-            </Link>
-          </CardContent>
-        </Card>
-      </main>
-    );
-  }
-
-  if (loading) {
-    return (
-      <main className="flex min-h-screen items-center justify-center bg-slate-50">
-        <p>Loading admin dashboard...</p>
-      </main>
-    );
-  }
-
-  if (!isAdmin) {
-    return (
-      <main className="flex min-h-screen items-center justify-center p-4 bg-slate-50">
-        <Card className="w-full max-w-md">
-          <CardContent className="pt-6">
-            <p className="text-center text-red-600 mb-4">
-              Access denied. Admin privileges required.
-            </p>
-            <Link href="/dashboard">
-              <Button className="w-full">Go to Dashboard</Button>
-            </Link>
-          </CardContent>
-        </Card>
-      </main>
-    );
-  }
+  if (!isAuthenticated) return null;
 
   return (
-    <main className="min-h-screen p-8 bg-slate-50">
-      <div className="max-w-6xl mx-auto">
-        <h1 className="text-3xl font-bold mb-2 text-slate-900">Admin Dashboard</h1>
-        <p className="text-slate-600 mb-8">Manage lessons and users</p>
-
-        {/* Stats Overview */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-          <Card>
-            <CardHeader className="pb-2">
-              <CardDescription>Total Lessons</CardDescription>
-              <CardTitle className="text-3xl">{lessons.length}</CardTitle>
-            </CardHeader>
-          </Card>
-          <Card>
-            <CardHeader className="pb-2">
-              <CardDescription>Total Users</CardDescription>
-              <CardTitle className="text-3xl">{users.length}</CardTitle>
-            </CardHeader>
-          </Card>
-        </div>
-
-        {/* Lessons Management */}
-        <Card className="mb-8">
-          <CardHeader className="flex flex-row items-center justify-between">
+    <main className="min-h-screen bg-slate-50 py-12 px-4 md:px-8">
+      <div className="max-w-6xl mx-auto space-y-8">
+         
+         {/* Settings Header */}
+         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
             <div>
-              <CardTitle>Lessons</CardTitle>
-              <CardDescription>Manage your lesson content</CardDescription>
+               <h1 className="text-3xl font-bold text-slate-900 mb-1">Quiz Administrator</h1>
+               <p className="text-slate-500 text-sm">Manage the grammar question database (A1-B2).</p>
             </div>
-            <Link href="/admin/lessons/new">
-              <Button>Add New Lesson</Button>
-            </Link>
-          </CardHeader>
-          <CardContent>
-            {lessons.length === 0 ? (
-              <p className="text-center text-slate-500 py-8">No lessons yet.</p>
-            ) : (
-              <div className="space-y-4">
-                {lessons.map((lesson) => (
-                  <div
-                    key={lesson.id}
-                    className="flex items-center justify-between p-4 border rounded-lg"
-                  >
-                    <div>
-                      <h3 className="font-medium">{lesson.title}</h3>
-                      <p className="text-sm text-slate-500">{lesson.description}</p>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <Link href={`/admin/lessons/${lesson.id}`}>
-                        <Button variant="outline" size="sm">
-                          Edit
-                        </Button>
-                      </Link>
-                      <Button
-                        variant="outline"
-                        size="sm"
-                        className="text-red-600"
-                        onClick={() => handleDeleteLesson(lesson.id)}
-                      >
-                        Delete
-                      </Button>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            )}
-          </CardContent>
-        </Card>
+            <div className="flex gap-4">
+               <Button variant="outline" onClick={() => fetchQuestions(filterCategory, filterLevel)}>
+                 <RefreshCw className={`w-4 h-4 mr-2 ${loading ? "animate-spin text-indigo-500" : ""}`} />
+                 Refresh
+               </Button>
+               <Link href="/admin/questions/new">
+                 <Button className="bg-indigo-600 hover:bg-indigo-700">
+                   <Plus className="w-4 h-4 mr-2" />
+                   New Question
+                 </Button>
+               </Link>
+            </div>
+         </div>
 
-        {/* Users Management */}
-        <Card>
-          <CardHeader>
-            <CardTitle>Users</CardTitle>
-            <CardDescription>Manage user accounts</CardDescription>
-          </CardHeader>
-          <CardContent>
-            {users.length === 0 ? (
-              <p className="text-center text-slate-500 py-8">No users yet.</p>
-            ) : (
-              <div className="space-y-4">
-                {users.map((user) => (
-                  <div
-                    key={user.id}
-                    className="flex items-center justify-between p-4 border rounded-lg"
-                  >
-                    <div>
-                      <h3 className="font-medium">{user.name}</h3>
-                      <p className="text-sm text-slate-500">{user.email}</p>
-                    </div>
-                    <div className="flex items-center gap-4">
-                      <span
-                        className={`px-2 py-1 text-xs rounded ${
-                          user.role === "admin"
-                            ? "bg-purple-100 text-purple-700"
-                            : "bg-slate-100 text-slate-700"
-                        }`}
-                      >
-                        {user.role || "user"}
-                      </span>
-                      <Button
-                        variant="outline"
-                        size="sm"
-                        className="text-red-600"
-                        onClick={() => handleDeleteUser(user.id)}
-                        disabled={user.role === "admin"}
-                      >
-                        Delete
-                      </Button>
-                    </div>
-                  </div>
-                ))}
-              </div>
+         {/* Stats Bar */}
+         <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+            <div className="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex items-center justify-between">
+               <div>
+                  <p className="text-sm font-semibold text-slate-500 uppercase tracking-wider mb-1">Total DB Size</p>
+                  <p className="text-3xl font-bold text-slate-800">{questions.length}</p>
+               </div>
+               <BarChart className="w-8 h-8 text-indigo-200" />
+            </div>
+            {/* Can add more dynamic stats later */}
+         </div>
+
+         {/* Database Viewer */}
+         <div className="space-y-4">
+            {/* Filters */}
+            <div className="flex gap-4 items-center">
+               <select 
+                 value={filterLevel} 
+                 onChange={e => setFilterLevel(e.target.value)}
+                 className="h-10 px-3 rounded-lg border border-slate-200 bg-white text-sm font-medium focus:outline-none focus:ring-2 focus:ring-indigo-500"
+               >
+                 <option value="">All Levels</option>
+                 <option value="A1">A1</option>
+                 <option value="A2">A2</option>
+                 <option value="B1">B1</option>
+                 <option value="B2">B2</option>
+               </select>
+
+               <select 
+                 value={filterCategory} 
+                 onChange={e => setFilterCategory(e.target.value)}
+                 className="h-10 px-3 rounded-lg border border-slate-200 bg-white text-sm font-medium focus:outline-none focus:ring-2 focus:ring-indigo-500"
+               >
+                 <option value="">All Categories</option>
+                 <option value="artikel">Artikel</option>
+                 <option value="kasus">Kasus</option>
+                 <option value="verb-konjugation">Verb Conjugation</option>
+                 {/* Expand as needed */}
+               </select>
+            </div>
+
+            {error && (
+               <div className="p-4 bg-red-50 text-red-700 border border-red-200 rounded-xl">
+                  {error}
+                  {error.includes("Forbidden") && <span className="ml-2 font-semibold border-l-2 pl-2 border-red-300">You must be logged in as an admin role to view this data.</span>}
+               </div>
             )}
-          </CardContent>
-        </Card>
+
+            {loading && questions.length === 0 ? (
+               <div className="flex justify-center p-12 bg-white rounded-2xl border border-slate-200">
+                  <Loader2 className="w-8 h-8 animate-spin text-indigo-500" />
+               </div>
+            ) : (
+               <QuestionTable 
+                  questions={questions} 
+                  onDelete={deleteQuestion} 
+                  isDeleting={loading} 
+               />
+            )}
+         </div>
+
       </div>
     </main>
   );
