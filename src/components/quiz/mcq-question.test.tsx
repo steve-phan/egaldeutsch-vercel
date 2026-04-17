@@ -1,7 +1,7 @@
 import { render, screen, fireEvent } from "@testing-library/react";
-import { Quiz } from "./quiz";
+import { Quiz } from "./mcq-question";
 
-describe("Quiz", () => {
+describe("Quiz (McqQuestion)", () => {
   const defaultProps = {
     question: "Test Question?",
     options: ["Option A", "Option B"],

@@ -10,14 +10,16 @@ import { ProgressList } from "@/components/dashboard/progress-list";
 
 export default function DashboardPage() {
   const { user, isAuthenticated } = useAuth();
-  const { stats, progress, loading } = useDashboard();
+  const { stats, loading } = useDashboard();
 
   if (!isAuthenticated) {
     return (
       <main className="flex min-h-screen items-center justify-center p-4 bg-slate-50">
         <Card className="w-full max-w-md">
           <CardContent className="pt-6">
-            <p className="text-center text-slate-600 mb-4">Please log in to view your dashboard.</p>
+            <p className="text-center text-slate-600 mb-4">
+              Please log in to view your dashboard.
+            </p>
             <Link href="/login">
               <Button className="w-full">Go to Login</Button>
             </Link>
@@ -37,42 +39,42 @@ export default function DashboardPage() {
 
   return (
     <main className="min-h-screen p-8 bg-slate-50">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-5xl mx-auto">
         <h1 className="text-3xl font-bold mb-2 text-slate-900">
           Welcome back, {user?.name || "Learner"}!
         </h1>
-        <p className="text-slate-600 mb-8">Track your learning progress</p>
+        <p className="text-slate-600 mb-8">Track your German quiz progress</p>
 
-        {/* Stats Cards */}
+        {/* Stats */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
           <StatCard
-            title="Total Lessons"
-            value={stats?.total_lessons || 0}
+            title="Quiz Sessions"
+            value={stats?.total_sessions ?? 0}
           />
           <StatCard
-            title="Completed Lessons"
-            value={stats?.completed_lessons || 0}
-            valueClassName="text-green-600"
-          />
-          <StatCard
-            title="Quizzes Passed"
-            value={stats?.quizzes_passed || 0}
+            title="Questions Answered"
+            value={stats?.total_questions ?? 0}
             valueClassName="text-blue-600"
           />
           <StatCard
-            title="Completion Rate"
-            value={`${stats?.completion_rate?.toFixed(0) || 0}%`}
+            title="Correct Answers"
+            value={stats?.total_correct ?? 0}
+            valueClassName="text-green-600"
+          />
+          <StatCard
+            title="Overall Accuracy"
+            value={`${(stats?.accuracy ?? 0).toFixed(0)}%`}
             valueClassName="text-purple-600"
           />
         </div>
 
-        {/* Progress Overview */}
-        <ProgressList progress={progress} />
+        {/* Per-category progress */}
+        <ProgressList categoryAverages={stats?.category_averages ?? {}} />
 
-        {/* Quick Actions */}
+        {/* Quick actions */}
         <div className="flex gap-4">
           <Link href="/">
-            <Button>Browse All Lessons</Button>
+            <Button>Browse Categories</Button>
           </Link>
           <Link href="/profile">
             <Button variant="outline">Edit Profile</Button>
