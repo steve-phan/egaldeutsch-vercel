@@ -4,12 +4,13 @@ import { use, useEffect } from "react";
 import { useQuizSession } from "@/hooks/use-quiz-session";
 import { useLanguage } from "@/contexts/language-context";
 import { QuizCategory } from "@/types/quiz";
-import { Loader2, ChevronLeft, MoreHorizontal } from "lucide-react";
+import { ChevronLeft, MoreHorizontal, Sparkles } from "lucide-react";
 import { useRouter } from "next/navigation";
 
 import { SessionSetup } from "@/components/quiz/session-setup";
 import { QuestionProgress } from "@/components/quiz/question-progress";
 import { ExplanationCard } from "@/components/quiz/explanation-card";
+import { AppShell } from "@/components/layout/app-shell";
 
 import { McqQuestion } from "@/components/quiz/mcq-question";
 import { FillInBlank } from "@/components/quiz/fill-in-blank";
@@ -47,13 +48,17 @@ export default function QuizOrchestrator({ params }: { params: Promise<{ categor
   }, [status, answers, category, questions.length, router]);
 
   if (status === "idle") {
-     return <SessionSetup category={category as QuizCategory} onStart={startSession} />;
+     return (
+       <AppShell showNav={true} maxWidth="md">
+         <SessionSetup category={category as QuizCategory} onStart={startSession} />
+       </AppShell>
+     );
   }
 
   const renderLoading = () => (
     <div className="flex flex-col items-center justify-center min-h-[60vh] animate-pulse">
-       <div className="text-6xl mb-6">🦊</div>
-       <p className="text-slate-400 font-black uppercase tracking-widest text-xs">Preparing your path...</p>
+       <div className="text-6xl mb-6 scale-110">🦊</div>
+       <p className="text-slate-400 font-black uppercase tracking-widest text-[10px]">Assembling your mastery...</p>
     </div>
   );
 
@@ -121,31 +126,40 @@ export default function QuizOrchestrator({ params }: { params: Promise<{ categor
   };
 
   return (
-    <main className="min-h-screen bg-background flex flex-col items-center px-6 pb-20 pt-8">
-      {/* Immersive Header */}
-      <div className="w-full max-w-2xl flex items-center justify-between mb-8">
+    <AppShell showNav={false} maxWidth="md">
+      {/* Immersive Responsive Header */}
+      <div className="w-full flex items-center justify-between mb-8 px-2">
          <button 
            onClick={() => router.push("/")} 
            className="w-10 h-10 bg-white/50 backdrop-blur-md rounded-xl flex items-center justify-center text-slate-400 shadow-premium border border-white/80 transition-all active:scale-90"
          >
             <ChevronLeft className="w-5 h-5" />
          </button>
-         <div className="text-center">
-            <h1 className="text-md font-black text-slate-800 tracking-tighter italic capitalize">
-               {category.replace("-", " ")}
-            </h1>
-            <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest">{currentIndex + 1} of {questions.length}</p>
+         
+         <div className="flex flex-col items-center">
+            <div className="flex items-center gap-2 group cursor-pointer">
+               <h1 className="text-[15px] font-black text-slate-800 tracking-tighter italic capitalize leading-none">
+                  {category.replace("-", " ")}
+               </h1>
+               <div className="p-1 px-1.5 bg-slate-100/50 rounded-lg hover:bg-slate-200 transition-colors">
+                  <MoreHorizontal className="w-4 h-4 text-slate-400" />
+               </div>
+            </div>
+            <p className="text-[9px] font-black text-slate-400 uppercase tracking-widest mt-1.5 opacity-60">
+               {currentIndex + 1} of {questions.length} • Module Active
+            </p>
          </div>
-         <button className="w-10 h-10 bg-white/50 backdrop-blur-md rounded-xl flex items-center justify-center text-slate-400 shadow-premium border border-white/80 transition-all active:scale-90">
-            <MoreHorizontal className="w-5 h-5" />
-         </button>
+
+         <div className="w-10 h-10 bg-white/50 backdrop-blur-md rounded-xl flex items-center justify-center text-primary/40 shadow-premium border border-white/80">
+            <Sparkles className="w-4 h-4" />
+         </div>
       </div>
 
-      <div className="w-full max-w-2xl">
+      <div className="w-full">
         {status === "loading" && renderLoading()}
         {status === "error" && renderError()}
         {(status === "in-progress" || status === "review") && renderQuestion()}
       </div>
-    </main>
+    </AppShell>
   );
 }

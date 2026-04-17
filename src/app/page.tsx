@@ -9,7 +9,7 @@ import { LanguageOnboarding } from "@/components/home/language-onboarding";
 import { useCategories } from "@/hooks/use-categories";
 import { useLanguage } from "@/contexts/language-context";
 import { DashboardHeader } from "@/components/dashboard/header";
-import { BottomNav } from "@/components/dashboard/bottom-nav";
+import { AppShell } from "@/components/layout/app-shell";
 import Image from "next/image";
 
 export default function Home() {
@@ -20,12 +20,12 @@ export default function Home() {
   const categoriesToDisplay = getCategoriesByLevel(selectedLevel);
 
   return (
-    <main className="flex min-h-screen flex-col bg-background pb-32">
+    <AppShell showNav={true} maxWidth="none">
       <LanguageOnboarding />
       
       <DashboardHeader />
 
-      <section className="w-full max-w-5xl mx-auto px-6">
+      <section className="w-full max-w-5xl mx-auto">
         {/* Bento Grid Layout */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 mb-10">
            {/* Hero / Welcome Card */}
@@ -36,7 +36,7 @@ export default function Home() {
                  <div className="inline-block px-3 py-1 rounded-full bg-primary/10 text-[10px] font-black text-primary uppercase tracking-[0.2em]">
                     Active Learning Path
                  </div>
-                 <h2 className="text-4xl md:text-5xl font-black text-slate-800 leading-[0.9] tracking-tighter">
+                 <h2 className="text-4xl md:text-5xl font-black text-slate-800 leading-[0.9] tracking-tighter italic">
                     Tschüss, <br className="hidden md:block" /> Language Barriers!
                  </h2>
                  <p className="text-sm font-bold text-slate-400 max-w-md">
@@ -86,7 +86,7 @@ export default function Home() {
         {/* Community / Social Highlights */}
         <section className="mb-20">
            <div className="flex items-center justify-between mb-8">
-              <h2 className="text-xl font-black text-slate-800 opacity-30 uppercase tracking-[0.3em]">Social</h2>
+              <h2 className="text-xl font-black text-slate-800 opacity-30 uppercase tracking-[0.3em] italic">Social</h2>
               <button className="text-[10px] font-black text-primary/50 hover:text-primary transition-colors tracking-widest uppercase">Leaderboard</button>
            </div>
            <div className="flex flex-wrap gap-6">
@@ -101,8 +101,6 @@ export default function Home() {
            </div>
         </section>
       </section>
-
-      <BottomNav />
-    </main>
+    </AppShell>
   );
 }

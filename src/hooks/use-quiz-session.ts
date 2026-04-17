@@ -89,7 +89,12 @@ export function useQuizSession(): UseQuizSessionResult {
 
 
   const startSession = async (config: QuizSessionConfig) => {
+    // Clear everything IMMEDIATELY to prevent state leakage
     setStatus("loading");
+    setQuestions([]);
+    setCurrentIndex(0);
+    setAnswers([]);
+    setLastAnswerEvaluated(false);
     configuration.current = config;
     
     try {

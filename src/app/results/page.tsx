@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { CheckCircle2, XCircle, BarChart3, Clock, Home, ArrowRight, Trophy } from "lucide-react";
 import { useLanguage } from "@/contexts/language-context";
+import { AppShell } from "@/components/layout/app-shell";
 import Image from "next/image";
 
 interface SessionSummary {
@@ -52,8 +53,8 @@ export default function ResultsPage() {
   };
 
   return (
-    <main className="min-h-screen bg-background flex flex-col items-center py-16 px-6">
-      <div className="w-full max-w-2xl flex flex-col items-center">
+    <AppShell showNav={true} maxWidth="md">
+      <div className="w-full flex flex-col items-center">
         
         {/* Mission Card */}
         <div className="w-full glass-card-premium rounded-[3rem] p-10 text-center relative overflow-hidden mb-12 animate-in zoom-in-95 duration-700">
@@ -121,7 +122,7 @@ export default function ResultsPage() {
         </div>
 
       </div>
-    </main>
+    </AppShell>
   );
 }
 
@@ -132,7 +133,7 @@ function StatPill({ icon, label, value }: { icon: React.ReactNode, label: string
           {icon}
        </div>
        <div className="flex flex-col">
-          <span className="text-xl font-black text-slate-800 tracking-tighter leading-none">{value}</span>
+          <span className="text-xl font-black text-slate-800 tracking-tighter leading-none text-center">{value}</span>
           <span className="text-[8px] font-black text-slate-400 uppercase tracking-widest mt-1 text-center">{label}</span>
        </div>
     </div>
