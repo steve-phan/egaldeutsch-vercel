@@ -26,7 +26,8 @@ const DEFAULT_QUESTION: Partial<QuizQuestion> = {
   explanation_de: "", explanation_en: "", explanation_vi: "",
   correct_answer: "",
   options: [],
-  tags: []
+  tags: [],
+  status: "draft"
 };
 
 const LEVELS: CEFRLevel[] = ["A1", "A2", "B1", "B2"];
@@ -100,6 +101,22 @@ export function QuestionForm({ initialData, onSubmit, isSubmitting }: QuestionFo
                   className="w-full h-12 px-4 rounded-2xl border border-slate-100 bg-white font-black text-xs uppercase tracking-widest shadow-sm outline-none transition-all"
                 >
                   {TYPES.map(t => <option key={t} value={t}>{t.replace("-", " ")}</option>)}
+                </select>
+            </div>
+            <div className="space-y-3">
+                <Label className="text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">Status</Label>
+                <select 
+                  value={formData.status} 
+                  onChange={e => updateField("status", e.target.value)}
+                  className={`w-full h-12 px-4 rounded-2xl border font-black text-xs uppercase tracking-widest shadow-sm outline-none transition-all
+                    ${formData.status === 'published' ? 'border-emerald-100 bg-emerald-50 text-emerald-600' : 
+                      formData.status === 'review' ? 'border-amber-100 bg-amber-50 text-amber-600' : 
+                      'border-slate-100 bg-white text-slate-400'}
+                  `}
+                >
+                  <option value="draft">Draft</option>
+                  <option value="review">Review</option>
+                  <option value="published">Published</option>
                 </select>
             </div>
           </div>

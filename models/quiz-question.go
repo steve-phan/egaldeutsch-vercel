@@ -33,6 +33,7 @@ type QuizQuestion struct {
 	HintEn        string             `bson:"hint_en"        json:"hint_en,omitempty"`
 	HintVi        string             `bson:"hint_vi"        json:"hint_vi,omitempty"`
 	Tags          []string           `bson:"tags"           json:"tags"`
+	Status        string             `bson:"status"         json:"status"` // "draft", "review", "published"
 	CreatedAt     time.Time          `bson:"created_at"     json:"created_at"`
 	UpdatedAt     time.Time          `bson:"updated_at"     json:"updated_at"`
 }

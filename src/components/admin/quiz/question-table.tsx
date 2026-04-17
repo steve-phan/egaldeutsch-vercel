@@ -53,6 +53,14 @@ export function QuestionTable({ questions, onDelete, isDeleting }: QuestionTable
                  {q.subcategory && (
                    <span className="text-[10px] font-bold text-slate-300 uppercase tracking-tighter">• {q.subcategory}</span>
                  )}
+                 <span className={`
+                    ml-2 px-2 py-0.5 rounded-full text-[8px] font-black uppercase tracking-widest border
+                    ${q.status === 'published' ? 'bg-emerald-50 text-emerald-500 border-emerald-100' : 
+                      q.status === 'review' ? 'bg-amber-50 text-amber-500 border-amber-100' : 
+                      'bg-slate-50 text-slate-400 border-slate-100'}
+                 `}>
+                    {q.status || 'draft'}
+                 </span>
               </div>
               <p className="text-sm font-bold text-slate-800 line-clamp-2 leading-tight italic decoration-primary/30 underline-offset-4 group-hover:underline">
                 {q.prompt_de.replace(/___/g, "______")}

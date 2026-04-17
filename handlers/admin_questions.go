@@ -84,6 +84,9 @@ func AdminQuestionsHandler(w http.ResponseWriter, r *http.Request) {
 		}
 
 		q.ID = primitive.NewObjectID()
+		if q.Status == "" {
+			q.Status = "draft"
+		}
 		q.CreatedAt = time.Now()
 		q.UpdatedAt = time.Now()
 
@@ -137,6 +140,7 @@ func AdminQuestionsHandler(w http.ResponseWriter, r *http.Request) {
 				"hint_vi":        q.HintVi,
 				"blank_index":    q.BlankIndex,
 				"tags":           q.Tags,
+				"status":         q.Status,
 				"updated_at":     time.Now(),
 			},
 		}

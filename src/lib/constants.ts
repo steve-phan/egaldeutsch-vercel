@@ -17,6 +17,7 @@ export const API_ROUTES = {
   
   // Admin
   ADMIN_QUESTIONS: "/api/admin/questions",
+  ADMIN_USERS: "/api/admin/users",
 };
 
 export const CEFR_LEVELS = ["A1", "A2", "B1", "B2"] as const;

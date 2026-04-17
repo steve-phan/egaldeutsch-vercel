@@ -55,6 +55,7 @@ export interface QuizQuestion {
   hint_en?: string;
   hint_vi?: string;
   tags: string[];
+  status: "draft" | "review" | "published";
   created_at: string;
   updated_at: string;
 }
