@@ -19,7 +19,6 @@ type DashboardStats struct {
 	TotalLessons     int     `json:"total_lessons"`
 	CompletedLessons int     `json:"completed_lessons"`
 	QuizzesPassed    int     `json:"quizzes_passed"`
-	TotalAttempts    int     `json:"total_attempts"`
 	CompletionRate   float64 `json:"completion_rate"`
 }
 
@@ -63,7 +62,6 @@ func DashboardHandler(w http.ResponseWriter, r *http.Request) {
 			TotalLessons:     stats["total_lessons"].(int),
 			CompletedLessons: stats["completed_lessons"].(int),
 			QuizzesPassed:    stats["quizzes_passed"].(int),
-			TotalAttempts:    stats["total_attempts"].(int),
 			CompletionRate:   stats["completion_rate"].(float64),
 		})
 		return
@@ -92,13 +90,11 @@ func DashboardHandler(w http.ResponseWriter, r *http.Request) {
 
 	completedLessons := 0
 	quizzesPassed := 0
-	totalAttempts := 0
 
 	for cursor.Next(ctx) {
 		var progress struct {
 			Completed  bool `bson:"completed"`
 			QuizPassed bool `bson:"quiz_passed"`
-			Attempts   int  `bson:"attempts"`
 		}
 		if err := cursor.Decode(&progress); err == nil {
 			if progress.Completed {
@@ -107,7 +103,6 @@ func DashboardHandler(w http.ResponseWriter, r *http.Request) {
 			if progress.QuizPassed {
 				quizzesPassed++
 			}
-			totalAttempts += progress.Attempts
 		}
 	}
 
@@ -120,7 +115,6 @@ func DashboardHandler(w http.ResponseWriter, r *http.Request) {
 		TotalLessons:     int(totalLessons),
 		CompletedLessons: completedLessons,
 		QuizzesPassed:    quizzesPassed,
-		TotalAttempts:    totalAttempts,
 		CompletionRate:   completionRate,
 	})
 }

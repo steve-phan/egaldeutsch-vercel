@@ -1,9 +1,9 @@
 "use client";
 
+import { useState, useCallback } from "react";
 import { useParams } from "next/navigation";
 import { useLesson } from "@/hooks/use-lesson";
 import { useAudioPlayer } from "@/hooks/use-audio-player";
-import { useQuiz } from "@/hooks/use-quiz";
 import { LessonHeader } from "@/components/lesson/lesson-header";
 import { AudioPlayer } from "@/components/lesson/audio-player";
 import { VideoPlayer } from "@/components/lesson/video-player";
@@ -17,13 +17,35 @@ export default function LessonPage() {
   const lessonId = Array.isArray(params.id) ? params.id[0] : params.id;
   const { lesson, loading, error } = useLesson(lessonId);
   const { isPlaying, togglePlay, hasAudio } = useAudioPlayer(lesson?.audio_url);
-  const { selectedAnswer, feedback, setSelectedAnswer, checkAnswer } = useQuiz();
 
-  const handleCheckAnswer = async () => {
-    if (lesson) {
-      await checkAnswer(lesson.id);
+  const [selectedAnswer, setSelectedAnswer] = useState("");
+  const [feedback, setFeedback] = useState<string | null>(null);
+
+  const handleCheckAnswer = useCallback(async () => {
+    if (!lesson || !selectedAnswer) return;
+
+    setFeedback("Answer submitted! Keep practicing.");
+
+    const token = localStorage.getItem("token");
+    if (token) {
+      try {
+        await fetch("/api/dashboard/progress", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`,
+          },
+          body: JSON.stringify({
+            lesson_id: lesson.id,
+            completed: true,
+            quiz_passed: false,
+          }),
+        });
+      } catch {
+        // Progress update failure is non-critical
+      }
     }
-  };
+  }, [lesson, selectedAnswer]);
 
   if (loading) {
     return <div className="flex min-h-screen items-center justify-center">Loading...</div>;

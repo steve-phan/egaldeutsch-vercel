@@ -14,48 +14,35 @@ import (
 	"go.mongodb.org/mongo-driver/bson/primitive"
 )
 
-// MatchingPairRequest represents a word-match pair for matching quiz
-type MatchingPairRequest struct {
-	ID    int    `json:"id"`
-	Word  string `json:"word"`
-	Match string `json:"match"`
-}
-
-// TranscriptSentenceRequest represents a sentence in the transcript with translation
-type TranscriptSentenceRequest struct {
-	Text        string `json:"text"`
-	Translation string `json:"translation"`
-}
-
 type CreateLessonRequest struct {
-	Title         string                      `json:"title"`
-	Description   string                      `json:"description"`
-	AudioURL      string                      `json:"audio_url"`
-	VideoURL      string                      `json:"video_url,omitempty"`
-	Transcript    []TranscriptSentenceRequest `json:"transcript"`
-	QuizType      string                      `json:"quiz_type"`
-	QuizQuestion  string                      `json:"quiz_question"`
-	QuizOptions   []string                    `json:"quiz_options"`
-	CorrectAnswer string                      `json:"correct_answer"`
-	ScrambleWord  string                      `json:"scramble_word,omitempty"`
-	MatchingPairs []MatchingPairRequest       `json:"matching_pairs,omitempty"`
+	Title         string               `json:"title"`
+	Description   string               `json:"description"`
+	AudioURL      string               `json:"audio_url"`
+	VideoURL      string               `json:"video_url,omitempty"`
+	Transcript    []TranscriptSentence `json:"transcript"`
+	QuizType      string               `json:"quiz_type"`
+	QuizQuestion  string               `json:"quiz_question"`
+	QuizOptions   []string             `json:"quiz_options"`
+	CorrectAnswer string               `json:"correct_answer"`
+	ScrambleWord  string               `json:"scramble_word,omitempty"`
+	MatchingPairs []MatchingPair       `json:"matching_pairs,omitempty"`
 }
 
 type LessonManagementResponse struct {
-	ID            string                      `json:"id"`
-	Title         string                      `json:"title"`
-	Description   string                      `json:"description"`
-	AudioURL      string                      `json:"audio_url"`
-	VideoURL      string                      `json:"video_url,omitempty"`
-	Transcript    []TranscriptSentenceRequest `json:"transcript"`
-	QuizType      string                      `json:"quiz_type"`
-	QuizQuestion  string                      `json:"quiz_question"`
-	QuizOptions   []string                    `json:"quiz_options"`
-	CorrectAnswer string                      `json:"correct_answer"`
-	ScrambleWord  string                      `json:"scramble_word,omitempty"`
-	MatchingPairs []MatchingPairRequest       `json:"matching_pairs,omitempty"`
-	CreatedAt     time.Time                   `json:"created_at"`
-	UpdatedAt     time.Time                   `json:"updated_at"`
+	ID            string               `json:"id"`
+	Title         string               `json:"title"`
+	Description   string               `json:"description"`
+	AudioURL      string               `json:"audio_url"`
+	VideoURL      string               `json:"video_url,omitempty"`
+	Transcript    []TranscriptSentence `json:"transcript"`
+	QuizType      string               `json:"quiz_type"`
+	QuizQuestion  string               `json:"quiz_question"`
+	QuizOptions   []string             `json:"quiz_options"`
+	CorrectAnswer string               `json:"correct_answer"`
+	ScrambleWord  string               `json:"scramble_word,omitempty"`
+	MatchingPairs []MatchingPair       `json:"matching_pairs,omitempty"`
+	CreatedAt     time.Time            `json:"created_at"`
+	UpdatedAt     time.Time            `json:"updated_at"`
 }
 
 // LessonManagementHandler handles CRUD operations for lessons (admin only)
@@ -148,9 +135,9 @@ func createLesson(w http.ResponseWriter, r *http.Request) {
 		}
 
 		// Convert matching pairs for response
-		var responsePairs []MatchingPairRequest
+		var responsePairs []MatchingPair
 		for _, mp := range lesson.MatchingPairs {
-			responsePairs = append(responsePairs, MatchingPairRequest{
+			responsePairs = append(responsePairs, MatchingPair{
 				ID:    mp.ID,
 				Word:  mp.Word,
 				Match: mp.Match,
@@ -158,9 +145,9 @@ func createLesson(w http.ResponseWriter, r *http.Request) {
 		}
 
 		// Convert transcript sentences for response
-		var responseTranscript []TranscriptSentenceRequest
+		var responseTranscript []TranscriptSentence
 		for _, ts := range lesson.Transcript {
-			responseTranscript = append(responseTranscript, TranscriptSentenceRequest{
+			responseTranscript = append(responseTranscript, TranscriptSentence{
 				Text:        ts.Text,
 				Translation: ts.Translation,
 			})
@@ -281,9 +268,9 @@ func updateLesson(w http.ResponseWriter, r *http.Request) {
 		}
 
 		// Convert matching pairs for response
-		var responsePairs []MatchingPairRequest
+		var responsePairs []MatchingPair
 		for _, mp := range lesson.MatchingPairs {
-			responsePairs = append(responsePairs, MatchingPairRequest{
+			responsePairs = append(responsePairs, MatchingPair{
 				ID:    mp.ID,
 				Word:  mp.Word,
 				Match: mp.Match,
@@ -291,9 +278,9 @@ func updateLesson(w http.ResponseWriter, r *http.Request) {
 		}
 
 		// Convert transcript sentences for response
-		var responseTranscript []TranscriptSentenceRequest
+		var responseTranscript []TranscriptSentence
 		for _, ts := range lesson.Transcript {
-			responseTranscript = append(responseTranscript, TranscriptSentenceRequest{
+			responseTranscript = append(responseTranscript, TranscriptSentence{
 				Text:        ts.Text,
 				Translation: ts.Translation,
 			})
