@@ -10,13 +10,14 @@ export function DashboardHeader() {
   const [hasNotifs, setHasNotifs] = useState(true);
 
   return (
-    <header className="w-full max-w-5xl mx-auto px-6 py-10 flex justify-between items-center">
-      <div className="flex items-center gap-4">
-        <div className="w-14 h-14 relative rounded-full overflow-hidden border-2 border-white shadow-xl bg-slate-100">
+    <header className="w-full max-w-5xl mx-auto px-6 py-6 md:py-8 flex justify-between items-center">
+      <div className="flex items-center gap-3">
+        <div className="w-12 h-12 relative rounded-full overflow-hidden border-2 border-white shadow-xl bg-slate-100">
           <Image 
             src={session?.user?.image || "/mascot.png"} 
             alt="Profile" 
             fill 
+            sizes="48px"
             className="object-contain" 
           />
         </div>
