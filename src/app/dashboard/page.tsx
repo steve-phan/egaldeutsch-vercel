@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useAuth } from "@/components/auth-provider";
+import { useSession } from "next-auth/react";
 import { useDashboard } from "@/hooks/use-dashboard";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -9,10 +9,10 @@ import { StatCard } from "@/components/dashboard/stat-card";
 import { ProgressList } from "@/components/dashboard/progress-list";
 
 export default function DashboardPage() {
-  const { user, isAuthenticated } = useAuth();
+  const { data: session, status } = useSession();
   const { stats, loading } = useDashboard();
 
-  if (!isAuthenticated) {
+  if (status === "unauthenticated") {
     return (
       <main className="flex min-h-screen items-center justify-center p-4 bg-slate-50">
         <Card className="w-full max-w-md">
@@ -29,10 +29,10 @@ export default function DashboardPage() {
     );
   }
 
-  if (loading) {
+  if (status === "loading" || loading) {
     return (
-      <main className="flex min-h-screen items-center justify-center bg-slate-50">
-        <p>Loading dashboard...</p>
+      <main className="flex min-h-screen items-center justify-center bg-background">
+        <div className="animate-float-gentle text-4xl">🦊</div>
       </main>
     );
   }
@@ -40,8 +40,8 @@ export default function DashboardPage() {
   return (
     <main className="min-h-screen p-8 bg-slate-50">
       <div className="max-w-5xl mx-auto">
-        <h1 className="text-3xl font-bold mb-2 text-slate-900">
-          Welcome back, {user?.name || "Learner"}!
+        <h1 className="text-3xl font-black mb-2 text-slate-900 tracking-tighter italic">
+          Welcome back, {session?.user?.name || "Learner"}!
         </h1>
         <p className="text-slate-600 mb-8">Track your German quiz progress</p>
 

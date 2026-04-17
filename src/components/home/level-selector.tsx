@@ -26,7 +26,7 @@ export function LevelSelector({ selectedLevel, onSelectLevel }: LevelSelectorPro
   ];
 
   return (
-    <div className="flex flex-wrap items-center gap-2 mb-8 bg-slate-100 p-1.5 rounded-2xl w-max">
+    <div className="flex flex-wrap items-center gap-1.5 bg-slate-50/80 p-1.5 rounded-full border border-slate-100/50 backdrop-blur-sm w-max self-start lg:self-center">
       {levels.map((level) => {
         const isSelected = selectedLevel === level.id;
         
@@ -35,10 +35,10 @@ export function LevelSelector({ selectedLevel, onSelectLevel }: LevelSelectorPro
              key={level.id}
              onClick={() => onSelectLevel(level.id)}
              className={`
-               px-4 py-2.5 rounded-xl font-bold text-sm transition-all duration-300
+               px-4 py-1.5 rounded-full font-black text-[10px] uppercase tracking-wider transition-all duration-300
                ${isSelected 
-                  ? "bg-white text-indigo-700 shadow-sm" 
-                  : "text-slate-500 hover:text-slate-700 hover:bg-slate-200/50"}
+                  ? "bg-white text-primary shadow-premium" 
+                  : "text-slate-400 hover:text-slate-600"}
              `}
            >
               {level.label}

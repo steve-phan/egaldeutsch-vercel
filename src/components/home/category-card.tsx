@@ -2,9 +2,8 @@
 
 import { CategoryMeta } from "@/types/quiz";
 import { useLanguage } from "@/contexts/language-context";
-import { Card, CardContent } from "@/components/ui/card";
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
+import { ChevronRight } from "lucide-react";
 
 interface CategoryCardProps {
   category: CategoryMeta;
@@ -23,27 +22,39 @@ export function CategoryCard({ category }: CategoryCardProps) {
   };
 
   return (
-    <Card className="min-w-[280px] w-[280px] h-[240px] rounded-[2.5rem] border-none shadow-lg bg-white overflow-hidden group">
-      <CardContent className="p-8 flex flex-col h-full relative">
-        <div className="flex justify-between items-start mb-2">
-           <h3 className="text-xl font-black text-slate-800 leading-tight">
-              {getLabel()}
-           </h3>
-           <div className="w-14 h-14 bg-secondary rounded-full flex items-center justify-center text-3xl group-hover:scale-110 transition-transform">
+    <Link href={`/quiz/${category.id}`} className="group block">
+      <div className="relative w-[280px] h-[180px] rounded-[2rem] glass-card-premium p-6 flex flex-col justify-between overflow-hidden">
+        {/* Background Accent Gradient */}
+        <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full -mr-16 -mt-16 blur-3xl group-hover:bg-primary/10 transition-colors" />
+
+        <div className="flex justify-between items-start z-10">
+           <div className="space-y-3">
+              <div className="flex gap-1.5 flex-wrap">
+                 {category.levels.map(lvl => (
+                    <span key={lvl} className="px-2.5 py-0.5 rounded-full bg-secondary text-[10px] font-black text-secondary-foreground uppercase tracking-wider shadow-sm">
+                       {lvl}
+                    </span>
+                 ))}
+              </div>
+              <h3 className="text-xl font-black text-slate-800 leading-tight tracking-tighter">
+                 {getLabel()}
+              </h3>
+           </div>
+           
+           <div className="w-12 h-12 glass-pill flex items-center justify-center text-2xl shadow-inner group-hover:scale-110 transition-transform duration-500">
               {category.icon}
            </div>
         </div>
         
-        <p className="text-xs font-bold text-slate-400 mt-1 uppercase tracking-wider mb-auto">
-          {category.levels.join(" • ")}
-        </p>
-        
-        <Link href={`/quiz/${category.id}`} className="block w-full">
-          <Button variant="default" className="w-full h-12 text-sm font-black btn-orange">
-             {language === "de" ? "Jetzt lernen" : language === "vi" ? "Bắt đầu học" : "Learn More"}
-          </Button>
-        </Link>
-      </CardContent>
-    </Card>
+        <div className="flex items-center justify-between z-10">
+           <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest">
+              Explore Grammar
+           </p>
+           <div className="w-8 h-8 rounded-full bg-slate-50 flex items-center justify-center text-slate-300 group-hover:bg-primary group-hover:text-white transition-all duration-300">
+              <ChevronRight className="w-4 h-4" />
+           </div>
+        </div>
+      </div>
+    </Link>
   );
 }

@@ -32,51 +32,41 @@ export function LanguageOnboarding() {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 backdrop-blur-md bg-white/40 animate-in fade-in duration-500">
-      <Card className="w-full max-w-lg shadow-2xl border-none">
-        <CardContent className="p-8 md:p-12 text-center">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 backdrop-blur-xl bg-white/40 animate-in fade-in duration-700">
+      <div className="w-full max-w-md glass-card-premium rounded-[3rem] p-8 md:p-10 text-center">
           <div className="mb-8">
-            <span className="text-6xl inline-block mb-6 animate-bounce">👋</span>
-            <h2 className="text-3xl font-bold text-slate-800 mb-2">Welcome to EgalDeutsch</h2>
-            <p className="text-slate-500 text-lg">Before we start, choose your preferred language for interfaces and grammar explanations.</p>
+            <span className="text-5xl inline-block mb-4 animate-float-gentle">👋</span>
+            <h2 className="text-3xl font-black text-slate-800 tracking-tighter mb-2 italic">Willkommen!</h2>
+            <p className="text-slate-400 font-bold text-sm tracking-tight">Choose your learning language.</p>
           </div>
 
-          <div className="grid grid-cols-1 gap-3 mb-10">
-            <button
-               onClick={() => handleSelect("en")}
-               className={`p-4 rounded-xl border-2 font-bold text-lg flex items-center justify-between transition-all
-                  ${language === "en" ? "bg-indigo-50 border-indigo-500 text-indigo-700 shadow-sm scale-100" : "bg-white border-slate-200 text-slate-600 hover:border-slate-300 scale-95 hover:scale-100"}`}
-            >
-               <span className="flex items-center gap-3">🇬🇧 English</span>
-               {language === "en" && <div className="w-3 h-3 rounded-full bg-indigo-500" />}
-            </button>
-            <button
-               onClick={() => handleSelect("de")}
-               className={`p-4 rounded-xl border-2 font-bold text-lg flex items-center justify-between transition-all
-                  ${language === "de" ? "bg-indigo-50 border-indigo-500 text-indigo-700 shadow-sm scale-100" : "bg-white border-slate-200 text-slate-600 hover:border-slate-300 scale-95 hover:scale-100"}`}
-            >
-               <span className="flex items-center gap-3">🇩🇪 Deutsch</span>
-               {language === "de" && <div className="w-3 h-3 rounded-full bg-indigo-500" />}
-            </button>
-            <button
-               onClick={() => handleSelect("vi")}
-               className={`p-4 rounded-xl border-2 font-bold text-lg flex items-center justify-between transition-all
-                  ${language === "vi" ? "bg-indigo-50 border-indigo-500 text-indigo-700 shadow-sm scale-100" : "bg-white border-slate-200 text-slate-600 hover:border-slate-300 scale-95 hover:scale-100"}`}
-            >
-               <span className="flex items-center gap-3">🇻🇳 Tiếng Việt</span>
-               {language === "vi" && <div className="w-3 h-3 rounded-full bg-indigo-500" />}
-            </button>
+          <div className="grid grid-cols-1 gap-3 mb-8">
+            {[
+              { id: "en", label: "English", flag: "🇬🇧" },
+              { id: "de", label: "Deutsch", flag: "🇩🇪" },
+              { id: "vi", label: "Tiếng Việt", flag: "🇻🇳" }
+            ].map((lang) => (
+              <button
+                key={lang.id}
+                onClick={() => handleSelect(lang.id as any)}
+                className={`p-4 rounded-2xl border-2 font-black text-sm flex items-center justify-between transition-all
+                   ${language === lang.id 
+                    ? "bg-primary/5 border-primary text-primary shadow-sm" 
+                    : "bg-white border-slate-100 text-slate-400 hover:border-slate-200"}`}
+              >
+                <span className="flex items-center gap-3">{lang.flag} {lang.label}</span>
+                {language === lang.id && <div className="w-2 h-2 rounded-full bg-primary" />}
+              </button>
+            ))}
           </div>
 
-          <Button 
-            size="lg" 
+          <button 
             onClick={handleFinish}
-            className="w-full h-14 text-lg bg-indigo-600 hover:bg-indigo-700 shadow-lg"
+            className="w-full btn-orange btn-compact flex items-center justify-center gap-2"
           >
-            Continue to App <ChevronRight className="ml-2 w-5 h-5" />
-          </Button>
-        </CardContent>
-      </Card>
+            Start Learning <ChevronRight className="w-4 h-4" />
+          </button>
+      </div>
     </div>
   );
 }
