@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { useAuth } from "@/components/auth-provider";
+import { useSession } from "next-auth/react";
 import { useAdminQuestions } from "@/hooks/use-admin-questions";
 import { useRouter } from "next/navigation";
 import { Loader2, Plus, RefreshCw, BarChart } from "lucide-react";
@@ -12,7 +12,9 @@ import { CEFRLevel } from "@/types/quiz";
 
 export default function AdminDashboardPage() {
   const router = useRouter();
-  const { user, isAuthenticated } = useAuth();
+  const { data: session, status } = useSession();
+  const isAuthenticated = status === "authenticated";
+  const user = session?.user;
   
   // Note: For local development, auth check is removed to allow direct testing
 

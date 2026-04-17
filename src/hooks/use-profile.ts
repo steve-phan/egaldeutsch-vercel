@@ -1,10 +1,11 @@
 import { useState, useEffect, useCallback } from "react";
-import { useAuth } from "@/components/auth-provider";
+import { useSession } from "next-auth/react";
 
 interface UserProfile {
   id: string;
   name: string;
   email: string;
+  image?: string;
   role?: string;
   created_at?: string;
 }
@@ -23,7 +24,7 @@ interface UseProfileResult {
 }
 
 export function useProfile(): UseProfileResult {
-  const { user, isAuthenticated } = useAuth();
+  const { data: session, status, update } = useSession();
   const [profile, setProfile] = useState<UserProfile | null>(null);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -33,37 +34,21 @@ export function useProfile(): UseProfileResult {
   const [success, setSuccess] = useState("");
 
   useEffect(() => {
-    if (!isAuthenticated) {
-      setLoading(false);
-      return;
+    if (status === "loading") return;
+
+    if (status === "authenticated" && session?.user) {
+      const userProfile: UserProfile = {
+        id: (session.user as any).id || "",
+        name: session.user.name || "",
+        email: session.user.email || "",
+        image: session.user.image || "",
+      };
+      setProfile(userProfile);
+      setName(userProfile.name);
+      setEmail(userProfile.email);
     }
-
-    const token = localStorage.getItem("token");
-    if (!token) {
-      setLoading(false);
-      return;
-    }
-
-    const fetchProfile = async () => {
-      try {
-        const res = await fetch("/api/auth/user", {
-          headers: { Authorization: `Bearer ${token}` },
-        });
-        if (res.ok) {
-          const data = await res.json();
-          setProfile(data);
-          setName(data.name);
-          setEmail(data.email);
-        }
-      } catch (err) {
-        console.error("Failed to fetch profile:", err);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchProfile();
-  }, [isAuthenticated]);
+    setLoading(false);
+  }, [status, session]);
 
   const handleSubmit = useCallback(async (e: React.FormEvent) => {
     e.preventDefault();
@@ -71,18 +56,11 @@ export function useProfile(): UseProfileResult {
     setSuccess("");
     setSaving(true);
 
-    const token = localStorage.getItem("token");
-    if (!token) {
-      setSaving(false);
-      return;
-    }
-
     try {
-      const res = await fetch("/api/auth/user", {
+      const res = await fetch("/api/account/user", {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
-          Authorization: `Bearer ${token}`,
         },
         body: JSON.stringify({ name, email }),
       });
@@ -92,12 +70,9 @@ export function useProfile(): UseProfileResult {
         throw new Error(data.message || "Failed to update profile");
       }
 
+      // Update the session explicitly
+      await update({ name, email });
       setSuccess("Profile updated successfully!");
-      // Update local storage with new user data
-      if (user) {
-        const updatedUser = { ...user, name, email };
-        localStorage.setItem("user", JSON.stringify(updatedUser));
-      }
     } catch (err) {
       if (err instanceof Error) {
         setError(err.message);
@@ -107,7 +82,7 @@ export function useProfile(): UseProfileResult {
     } finally {
       setSaving(false);
     }
-  }, [name, email, user]);
+  }, [name, email, update]);
 
   return {
     profile,

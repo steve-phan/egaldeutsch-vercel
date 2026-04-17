@@ -1,5 +1,6 @@
 import { useState, useCallback } from "react";
-import { useAuth } from "@/components/auth-provider";
+import { signIn } from "next-auth/react";
+import { useRouter } from "next/navigation";
 
 interface UseLoginResult {
   email: string;
@@ -9,6 +10,7 @@ interface UseLoginResult {
   setEmail: (email: string) => void;
   setPassword: (password: string) => void;
   handleSubmit: (e: React.FormEvent) => Promise<void>;
+  handleGoogleLogin: () => Promise<void>;
 }
 
 export function useLogin(): UseLoginResult {
@@ -16,7 +18,7 @@ export function useLogin(): UseLoginResult {
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const [isLoading, setIsLoading] = useState(false);
-  const { login } = useAuth();
+  const router = useRouter();
 
   const handleSubmit = useCallback(async (e: React.FormEvent) => {
     e.preventDefault();
@@ -24,29 +26,33 @@ export function useLogin(): UseLoginResult {
     setIsLoading(true);
 
     try {
-      const res = await fetch("/api/auth/login", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email, password }),
+      const result = await signIn("credentials", {
+        email,
+        password,
+        redirect: false,
       });
 
-      const data = await res.json();
-
-      if (!res.ok) {
-        throw new Error(data.message || "Login failed");
-      }
-
-      login(data.token, data.user);
-    } catch (err) {
-      if (err instanceof Error) {
-        setError(err.message);
+      if (result?.error) {
+        setError("Invalid email or password");
       } else {
-        setError("An unexpected error occurred");
+        router.push("/");
       }
+    } catch (err) {
+      setError("An unexpected error occurred during login");
     } finally {
       setIsLoading(false);
     }
-  }, [email, password, login]);
+  }, [email, password, router]);
+
+  const handleGoogleLogin = useCallback(async () => {
+    setIsLoading(true);
+    try {
+      await signIn("google", { callbackUrl: "/" });
+    } catch (err) {
+      setError("Failed to login with Google");
+      setIsLoading(false);
+    }
+  }, []);
 
   return {
     email,
@@ -56,5 +62,6 @@ export function useLogin(): UseLoginResult {
     setEmail,
     setPassword,
     handleSubmit,
+    handleGoogleLogin,
   };
 }

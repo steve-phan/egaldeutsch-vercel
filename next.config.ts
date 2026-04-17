@@ -7,8 +7,24 @@ const nextConfig: NextConfig = {
     if (process.env.NODE_ENV === 'development') {
       return [
         {
-          source: '/api/:path*',
-          destination: 'http://127.0.0.1:8080/api/:path*',
+          source: '/api/account/:path*',
+          destination: 'http://127.0.0.1:8080/api/account/:path*',
+        },
+        {
+          source: '/api/quiz/:path*',
+          destination: 'http://127.0.0.1:8080/api/quiz/:path*',
+        },
+        {
+          source: '/api/admin/:path*',
+          destination: 'http://127.0.0.1:8080/api/admin/:path*',
+        },
+        {
+          source: '/api/dashboard/:path*',
+          destination: 'http://127.0.0.1:8080/api/dashboard/:path*',
+        },
+        {
+          source: '/api/user/:path*',
+          destination: 'http://127.0.0.1:8080/api/user/:path*',
         },
       ];
     }

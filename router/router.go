@@ -10,13 +10,13 @@ import (
 func NewRouter() http.Handler {
 	mux := http.NewServeMux()
 
-	// --- Auth Routes ---
-	mux.HandleFunc("/api/auth/login", handlers.LoginHandler)
-	mux.HandleFunc("/api/auth/signup", handlers.SignupHandler)
-	mux.HandleFunc("/api/auth/forgot-password", handlers.ForgotPasswordHandler)
-	mux.HandleFunc("/api/auth/reset-password", handlers.ResetPasswordHandler)
-	mux.HandleFunc("/api/auth/user", handlers.UserHandler)
-	mux.HandleFunc("/api/auth/admin-users", handlers.AdminUsersHandler)
+	// --- Account Routes ---
+	mux.HandleFunc("/api/account/login", handlers.LoginHandler)
+	mux.HandleFunc("/api/account/signup", handlers.SignupHandler)
+	mux.HandleFunc("/api/account/forgot-password", handlers.ForgotPasswordHandler)
+	mux.HandleFunc("/api/account/reset-password", handlers.ResetPasswordHandler)
+	mux.HandleFunc("/api/account/user", handlers.UserHandler)
+	mux.HandleFunc("/api/account/admin-users", handlers.AdminUsersHandler)
 
 	// --- User Profile Routes ---
 	mux.HandleFunc("/api/user/profile", handlers.UpdateProfileHandler)

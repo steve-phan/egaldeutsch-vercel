@@ -19,9 +19,6 @@ const openSans = Open_Sans({
 export const metadata: Metadata = {
   title: "EgalDeutsch — German Grammar Quiz",
   description: "Master German grammar from A1 to B2 with interactive quizzes.",
-  icons: {
-    icon: "/favicon.png",
-  },
 };
 
 export default function RootLayout({

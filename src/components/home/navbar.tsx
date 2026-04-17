@@ -1,11 +1,14 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { useAuth } from "@/components/auth-provider";
+import { useSession, signOut } from "next-auth/react";
 import { useLanguage, Language } from "@/contexts/language-context";
 
 export function Navbar() {
-  const { user, isAuthenticated, logout } = useAuth();
+  const { data: session, status } = useSession();
   const { language, setLanguage } = useLanguage();
+  
+  const isAuthenticated = status === "authenticated";
+  const user = session?.user;
 
   return (
     <nav className="w-full max-w-6xl mb-12 flex justify-between items-center px-4 py-6">
@@ -32,7 +35,7 @@ export function Navbar() {
             <Link href="/profile">
               <Button variant="outline" size="sm">Profile</Button>
             </Link>
-            <Button variant="outline" size="sm" onClick={logout}>
+            <Button variant="outline" size="sm" onClick={() => signOut()}>
               Logout
             </Button>
           </>
