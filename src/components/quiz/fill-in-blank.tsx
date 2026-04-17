@@ -17,6 +17,7 @@ export function FillInBlank({ question, onSubmit, disabled }: FillInBlankProps) 
 
   useEffect(() => {
     setAnswer("");
+  // eslint-disable-next-line react-hooks/set-state-in-effect
   }, [question.id]);
 
   const getPrompt = () => {

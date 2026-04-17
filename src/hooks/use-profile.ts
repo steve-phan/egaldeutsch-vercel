@@ -38,7 +38,7 @@ export function useProfile(): UseProfileResult {
 
     if (status === "authenticated" && session?.user) {
       const userProfile: UserProfile = {
-        id: (session.user as any).id || "",
+        id: session.user.id || "",
         name: session.user.name || "",
         email: session.user.email || "",
         image: session.user.image || "",

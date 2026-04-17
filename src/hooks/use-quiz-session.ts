@@ -1,5 +1,5 @@
 import { useState, useCallback, useRef, useEffect } from "react";
-import { QuizQuestion, QuizSessionConfig, CEFRLevel, QuizCategory } from "@/types/quiz";
+import { QuizQuestion, QuizSessionConfig } from "@/types/quiz";
 import { API_ROUTES } from "@/lib/constants";
 
 export interface AnswerRecord {

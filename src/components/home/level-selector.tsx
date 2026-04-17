@@ -26,7 +26,7 @@ export function LevelSelector({ selectedLevel, onSelectLevel }: LevelSelectorPro
   ];
 
   return (
-    <div className="flex flex-wrap items-center gap-1.5 bg-slate-50/80 p-1.5 rounded-full border border-slate-100/50 backdrop-blur-sm w-max self-start lg:self-center">
+    <div className="flex flex-wrap items-center gap-1.5 bg-slate-50/80 p-1.5 rounded-full border border-slate-100/50 backdrop-blur-sm max-w-full self-start lg:self-center">
       {levels.map((level) => {
         const isSelected = selectedLevel === level.id;
         

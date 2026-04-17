@@ -1,7 +1,7 @@
 "use client";
 
 import { QuizQuestion } from "@/types/quiz";
-import { CheckCircle2, XCircle, Lightbulb, UserCheck } from "lucide-react";
+import { CheckCircle2, XCircle, Lightbulb } from "lucide-react";
 import Image from "next/image";
 
 interface ExplanationCardProps {
@@ -14,7 +14,6 @@ interface ExplanationCardProps {
 export function ExplanationCard({ 
   question, 
   isCorrect, 
-  userAnswer, 
   language = "en" 
 }: ExplanationCardProps) {
   

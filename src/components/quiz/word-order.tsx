@@ -17,17 +17,17 @@ export function WordOrder({ question, onSubmit, disabled }: WordOrderProps) {
   const [orderedWords, setOrderedWords] = useState<string[]>([]);
 
   useEffect(() => {
+    let words: string[] = [];
     if (question.options && question.options.length > 0) {
       // Shuffling options for the game feel
-      const words = [...question.options.map((o: any) => o.de || o.toString())].sort(() => Math.random() - 0.5);
-      setAvailableWords(words);
-      setOrderedWords([]);
+      words = [...question.options.map((o) => o.de || o.toString())].sort(() => Math.random() - 0.5);
     } else if (question.correct_answer) {
       // Fallback: Split correct answer into words if no explicit options provided
-      const words = question.correct_answer.split(/\s+/).sort(() => Math.random() - 0.5);
-      setAvailableWords(words);
-      setOrderedWords([]);
+      words = question.correct_answer.split(/\s+/).sort(() => Math.random() - 0.5);
     }
+    
+    setAvailableWords(words);
+    setOrderedWords([]);
   }, [question.id, question.options, question.correct_answer]);
 
   const handleWordClick = (word: string, isAvailable: boolean) => {
@@ -45,7 +45,7 @@ export function WordOrder({ question, onSubmit, disabled }: WordOrderProps) {
   const reset = () => {
     if (disabled) return;
     if (question.options) {
-      setAvailableWords([...question.options.map((o: any) => o.de)].sort(() => Math.random() - 0.5));
+      setAvailableWords([...question.options.map((o) => o.de)].sort(() => Math.random() - 0.5));
       setOrderedWords([]);
     }
   };

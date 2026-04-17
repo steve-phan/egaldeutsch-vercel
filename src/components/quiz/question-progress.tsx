@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import React from "react";
 import { Clock } from "lucide-react";
 
 interface QuestionProgressProps {
@@ -10,12 +10,7 @@ interface QuestionProgressProps {
 }
 
 export function QuestionProgress({ currentIndex, totalQuestions, timeRemainingMs }: QuestionProgressProps) {
-  const [progressWidth, setProgressWidth] = useState(0);
-
-  useEffect(() => {
-    const progress = ((currentIndex) / totalQuestions) * 100;
-    setProgressWidth(progress);
-  }, [currentIndex, totalQuestions]);
+  const progressWidth = (totalQuestions > 0) ? ((currentIndex) / totalQuestions) * 100 : 0;
 
   const seconds = Math.floor(timeRemainingMs / 1000);
   const minutes = Math.floor(seconds / 60);

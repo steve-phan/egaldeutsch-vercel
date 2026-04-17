@@ -23,8 +23,8 @@ export function useCategories(): UseCategoriesResult {
       const data = await res.json();
       setStats(data);
       setError(null);
-    } catch (e: any) {
-      setError(e.message);
+    } catch (e: unknown) {
+      setError(e instanceof Error ? e.message : "An unknown error occurred");
     } finally {
       setLoading(false);
     }
@@ -51,7 +51,7 @@ export function useCategories(): UseCategoriesResult {
 
   const getCategoriesByLevel = useCallback((level: string) => {
     if (level === "all") return getAllCategories();
-    return enrichMetaWithStats(CATEGORY_META.filter(cat => cat.levels.includes(level as any)));
+    return enrichMetaWithStats(CATEGORY_META.filter(cat => cat.levels.includes(level as never)));
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [stats, getAllCategories]);
 

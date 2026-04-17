@@ -26,15 +26,18 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     // Try to load language from localStorage
     const saved = localStorage.getItem("preferred_language") as Language;
+    let initialLang: Language = "en";
+
     if (saved && ["en", "de", "vi"].includes(saved)) {
-      setLanguageState(saved);
+      initialLang = saved;
     } else {
       // Auto-detect based on browser language
       const browserLang = navigator.language.slice(0, 2);
-      if (browserLang === "de") setLanguageState("de");
-      else if (browserLang === "vi") setLanguageState("vi");
-      // keep English as default
+      if (browserLang === "de") initialLang = "de";
+      else if (browserLang === "vi") initialLang = "vi";
     }
+    
+    setLanguageState(initialLang);
     setIsLoaded(true);
   }, []);
 
@@ -46,11 +49,11 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
   // Helper to get nested translation value (e.g. "common.start")
   const t = (key: string): string => {
     const keys = key.split(".");
-    let value: any = dictionaries[language];
+    let value: unknown = dictionaries[language];
     
     for (const k of keys) {
-      if (value === undefined) break;
-      value = value[k];
+      if (value === undefined || value === null) break;
+      value = (value as Record<string, unknown>)[k];
     }
     
     if (typeof value === "string") return value;

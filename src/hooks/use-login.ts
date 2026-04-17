@@ -37,7 +37,7 @@ export function useLogin(): UseLoginResult {
       } else {
         router.push("/");
       }
-    } catch (err) {
+    } catch {
       setError("An unexpected error occurred during login");
     } finally {
       setIsLoading(false);

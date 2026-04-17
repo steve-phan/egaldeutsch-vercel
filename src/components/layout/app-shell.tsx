@@ -17,7 +17,7 @@ export function AppShell({
   maxWidth = "xl" 
 }: AppShellProps) {
   const pathname = usePathname();
-  const { status } = useSession();
+  const { data: session } = useSession();
   
   // Hide nav on specific routes if needed (e.g., login, certain quiz states)
   const isAuthPage = pathname.startsWith("/login") || pathname.startsWith("/signup");

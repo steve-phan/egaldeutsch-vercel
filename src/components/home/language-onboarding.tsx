@@ -15,6 +15,7 @@ export function LanguageOnboarding() {
       // Check if user has explicitly set a language before
       const hasChosen = localStorage.getItem("language_onboarding_complete");
       if (!hasChosen) {
+        // eslint-disable-next-line react-hooks/set-state-in-effect
         setIsOpen(true);
       }
     }
@@ -48,7 +49,7 @@ export function LanguageOnboarding() {
             ].map((lang) => (
               <button
                 key={lang.id}
-                onClick={() => handleSelect(lang.id as any)}
+                onClick={() => handleSelect(lang.id as "en" | "de" | "vi")}
                 className={`p-4 rounded-2xl border-2 font-black text-sm flex items-center justify-between transition-all
                    ${language === lang.id 
                     ? "bg-primary/5 border-primary text-primary shadow-sm" 

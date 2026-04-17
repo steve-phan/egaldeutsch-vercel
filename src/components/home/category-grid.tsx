@@ -30,7 +30,7 @@ export function CategoryGrid({ categories, loading }: CategoryGridProps) {
 
   return (
     <div className="w-full">
-      <div className="flex gap-6 overflow-x-auto pb-8 no-scrollbar pt-2 px-2 -mx-2">
+      <div className="flex gap-6 overflow-x-auto pb-8 no-scrollbar pt-2">
         {categories.map((cat) => (
           <CategoryCard key={cat.id} category={cat} />
         ))}

@@ -7,8 +7,9 @@ import { OptionsEditor } from "./options-editor";
 import { TagsInput } from "./tags-input";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { ChevronRight, Save, X, Lightbulb, Target, Settings, Globe } from "lucide-react";
+import { ChevronRight, Save, X, Lightbulb, Target, Settings, Globe, Sparkles } from "lucide-react";
 import Link from "next/link";
+import { QuestionPreview } from "./question-preview";
 
 interface QuestionFormProps {
   initialData?: Partial<QuizQuestion>;

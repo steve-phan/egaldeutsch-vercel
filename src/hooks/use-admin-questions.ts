@@ -39,8 +39,8 @@ export function useAdminQuestions(): UseAdminQuestionsResult {
       const data = await res.json();
       setQuestions(data);
       setError(null);
-    } catch (e: any) {
-      setError(e.message);
+    } catch (e: unknown) {
+      setError(e instanceof Error ? e.message : "An unknown error occurred");
     } finally {
       setLoading(false);
     }
@@ -59,8 +59,8 @@ export function useAdminQuestions(): UseAdminQuestionsResult {
       setQuestions((prev) => [...prev, data]);
       setError(null);
       return data;
-    } catch (e: any) {
-      setError(e.message);
+    } catch (e: unknown) {
+      setError(e instanceof Error ? e.message : "An unknown error occurred");
       return null;
     } finally {
       setLoading(false);
@@ -80,8 +80,8 @@ export function useAdminQuestions(): UseAdminQuestionsResult {
       setQuestions((prev) => prev.map((q) => (q.id === id ? data : q)));
       setError(null);
       return data;
-    } catch (e: any) {
-      setError(e.message);
+    } catch (e: unknown) {
+      setError(e instanceof Error ? e.message : "An unknown error occurred");
       return null;
     } finally {
       setLoading(false);
@@ -99,8 +99,8 @@ export function useAdminQuestions(): UseAdminQuestionsResult {
       setQuestions((prev) => prev.filter((q) => q.id !== id));
       setError(null);
       return true;
-    } catch (e: any) {
-      setError(e.message);
+    } catch (e: unknown) {
+      setError(e instanceof Error ? e.message : "An unknown error occurred");
       return false;
     } finally {
       setLoading(false);

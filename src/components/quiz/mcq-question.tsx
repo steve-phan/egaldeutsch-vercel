@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { QuizQuestion } from "@/types/quiz";
+import { QuizQuestion, QuizOption } from "@/types/quiz";
 import { useLanguage } from "@/contexts/language-context";
 import { Volume2, Play, MousePointer2 } from "lucide-react";
 
@@ -17,6 +17,7 @@ export function McqQuestion({ question, onSubmit, disabled }: McqQuestionProps) 
 
   useEffect(() => {
     setSelected("");
+  // eslint-disable-next-line react-hooks/set-state-in-effect
   }, [question.id]);
 
   const getPrompt = () => {
@@ -28,7 +29,7 @@ export function McqQuestion({ question, onSubmit, disabled }: McqQuestionProps) 
     }
   };
 
-  const getOptionLabel = (opt: any) => {
+  const getOptionLabel = (opt: QuizOption) => {
     switch (language) {
       case "de": return opt.de;
       case "vi": return opt.vi;
