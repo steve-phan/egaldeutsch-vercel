@@ -27,19 +27,20 @@ export function BottomNav() {
 
   return (
     <nav className="fixed bottom-8 left-1/2 -translate-x-1/2 z-50 animate-in slide-in-from-bottom-8 duration-700">
-      <div className="glass-navigation rounded-full px-4 py-3 flex items-center gap-1 sm:gap-4 border border-white/50 shadow-floating">
+      <div className="glass-navigation rounded-[2rem] px-3 sm:px-4 py-3 flex items-center gap-1 sm:gap-4 shadow-floating">
         {navItems.map((item, idx) => {
           if (item.isHub) {
             return (
               <Link key={idx} href="/">
-                <div className="w-14 h-14 bg-primary rounded-full flex items-center justify-center -mt-8 shadow-lg shadow-primary/40 border-4 border-[#F8FAFC] active:scale-90 transition-transform cursor-pointer relative group">
-                   <div className="absolute inset-0 bg-white/20 rounded-full animate-ping opacity-20 group-hover:opacity-40" />
+                <div className="w-14 h-14 bg-primary rounded-2xl flex items-center justify-center -mt-9 shadow-lg shadow-primary/40 border-4 border-[#F8FAFC] active:scale-95 transition-all cursor-pointer relative group overflow-hidden">
+                   <div className="absolute inset-0 bg-white/20 animate-pulse" />
+                   <div className="absolute inset-0 bg-gradient-to-tr from-black/10 to-transparent" />
                    <Image 
                      src="/mascot.png" 
                      alt="Home" 
                      width={32} 
                      height={32} 
-                     className="object-contain" 
+                     className="object-contain relative z-10 group-hover:scale-110 transition-transform duration-500" 
                    />
                 </div>
               </Link>

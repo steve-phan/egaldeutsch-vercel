@@ -10,8 +10,8 @@ import (
 )
 
 const (
-	TemplateWelcome       = 1
-	TemplatePasswordReset = 2
+	TemplateWelcome       = 3
+	TemplatePasswordReset = 4
 )
 
 type Sender struct {
@@ -98,4 +98,3 @@ func sendEmail(reqBody EmailRequest) error {
 
 	return nil
 }
-

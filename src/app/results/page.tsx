@@ -137,7 +137,7 @@ export default function ResultsPage() {
            </button>
            <button 
              onClick={() => router.push("/")}
-             className="btn-orange btn-compact flex items-center justify-center gap-2"
+             className="btn-orange h-12"
            >
               Try Another <ArrowRight className="w-4 h-4" />
            </button>

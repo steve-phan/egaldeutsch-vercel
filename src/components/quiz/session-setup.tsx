@@ -104,10 +104,10 @@ export function SessionSetup({ category, onStart }: SessionSetupProps) {
 
          <div className="mt-12">
             <button 
-               className="w-full btn-orange btn-compact flex items-center justify-center gap-3"
+               className="w-full btn-orange h-12"
                onClick={handleStart}
             >
-               Begin Journey <ChevronRight className="w-5 h-5" />
+               Start Mission <ChevronRight className="w-5 h-5" />
             </button>
          </div>
     </div>

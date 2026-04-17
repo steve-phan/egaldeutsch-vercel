@@ -41,6 +41,8 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 8px);
+  
+  --breakpoint-xs: 400px;
 
   --shadow-premium: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05), 0 0 0 1px rgb(0 0 0 / 0.02);
   --shadow-floating: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1), 0 0 0 1px rgb(0 0 0 / 0.05);
@@ -95,28 +97,26 @@
   }
 }
 
-/* Custom Design Tokens */
-.glass-pill {
-  @apply bg-white/70 backdrop-blur-xl border border-white/60;
-  box-shadow: var(--shadow-premium);
-}
-
-.glass-card-premium {
-  @apply bg-white/80 backdrop-blur-lg border border-white/80 transition-all duration-500;
-  box-shadow: var(--shadow-premium);
-}
-
-.glass-card-premium:hover {
-  box-shadow: var(--shadow-floating);
-  @apply -translate-y-1;
+.glass-navigation {
+  @apply bg-white/70 backdrop-blur-2xl border border-white/80;
+  box-shadow: 0 8px 32px -4px rgba(0, 0, 0, 0.05), var(--shadow-premium);
 }
 
 .btn-orange {
-  @apply bg-primary text-white font-black tracking-tight rounded-2xl shadow-lg shadow-primary/20 hover:shadow-primary/40 hover:-translate-y-0.5 active:translate-y-0 active:scale-95 transition-all duration-300;
+  @apply bg-primary text-white font-black uppercase tracking-[0.15em] text-[10px] rounded-2xl shadow-lg shadow-primary/20 hover:shadow-primary/30 transition-all duration-300 flex items-center justify-center gap-2;
+  background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.05));
+}
+
+.btn-orange:hover {
+  @apply -translate-y-0.5;
+}
+
+.btn-orange:active {
+  @apply translate-y-0 scale-[0.98];
 }
 
 .btn-compact {
-  @apply h-11 px-6 text-sm;
+  @apply h-11 px-6 text-[10px];
 }
 
 /* Character Float Animation */
@@ -127,4 +127,23 @@
 
 .animate-float-gentle {
   animation: float-gentle 4s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+.animate-shimmer {
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes ring {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(-10deg); }
+  75% { transform: rotate(10deg); }
+}
+
+.animate-ring {
+  animation: ring 0.5s ease-in-out infinite;
 }

@@ -114,11 +114,10 @@ export default function QuizOrchestrator({ params }: { params: Promise<{ categor
              />
              <button 
                onClick={nextQuestion}
-               className="w-full btn-orange h-12 text-sm font-black flex items-center justify-center gap-2"
+               className="w-full btn-orange"
              >
                {language === "de" ? "Weiter" : language === "vi" ? "Tiếp theo" : "Next Question"}
-               <MoreHorizontal className="w-4 h-4 ml-2" />
-             </button>
+              </button>
           </div>
         )}
       </div>

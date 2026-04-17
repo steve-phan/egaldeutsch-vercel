@@ -24,7 +24,7 @@ export function GuestConversionBanner() {
 
          <div className="flex flex-col sm:flex-row gap-3 w-full md:w-auto">
             <Link href="/signup" className="w-full sm:w-auto">
-               <button className="btn-orange btn-compact w-full px-8 flex items-center justify-center gap-2 group-hover:scale-105 transition-transform">
+               <button className="btn-orange h-12 px-8 w-full group-hover:scale-105 transition-transform">
                   Create Account <ArrowRight className="w-4 h-4" />
                </button>
             </Link>
