@@ -1,28 +1,39 @@
 "use client";
 
+import { useState } from "react";
 import { Navbar } from "@/components/home/navbar";
 import { HeroSection } from "@/components/home/hero-section";
-
-// Phase 4 will add: CategoryGrid, LevelSelector, LanguageOnboarding
-// For now this is the cleaned-up placeholder home page
+import { CategoryGrid } from "@/components/home/category-grid";
+import { LevelSelector } from "@/components/home/level-selector";
+import { LanguageOnboarding } from "@/components/home/language-onboarding";
+import { useCategories } from "@/hooks/use-categories";
+import { useLanguage } from "@/contexts/language-context";
 
 export default function Home() {
+  const { language } = useLanguage();
+  const [selectedLevel, setSelectedLevel] = useState<string>("all");
+  const { getCategoriesByLevel, loading } = useCategories();
+
+  // Re-fetch when level selected changes
+  const categoriesToDisplay = getCategoriesByLevel(selectedLevel);
+
   return (
-    <main className="flex min-h-screen flex-col items-center bg-slate-50">
+    <main className="flex min-h-screen flex-col items-center bg-slate-50 selection:bg-indigo-100">
+      <LanguageOnboarding />
+      
       <Navbar />
+      
       <HeroSection />
 
-      <section className="w-full max-w-5xl px-8 py-12">
-        <div className="text-center py-24">
-          <div className="text-6xl mb-6">🇩🇪</div>
-          <h2 className="text-3xl font-bold text-slate-800 mb-4">
-            Quiz System Coming Soon
-          </h2>
-          <p className="text-slate-500 text-lg max-w-lg mx-auto">
-            We are building a comprehensive German grammar quiz system covering
-            A1 to B2. Categories like Artikel, Kasus, Adjektivendungen, and more.
-          </p>
+      <section className="w-full max-w-6xl px-4 md:px-8 pb-32">
+        <div className="flex flex-col md:flex-row md:items-center justify-between mb-8">
+           <h2 className="text-2xl font-bold text-slate-800 mb-4 md:mb-0">
+             {language === "de" ? "Kategorien" : language === "vi" ? "Chuyên mục" : "Categories"}
+           </h2>
+           <LevelSelector selectedLevel={selectedLevel} onSelectLevel={setSelectedLevel} />
         </div>
+        
+        <CategoryGrid categories={categoriesToDisplay} loading={loading} />
       </section>
     </main>
   );
