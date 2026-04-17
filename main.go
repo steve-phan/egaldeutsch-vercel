@@ -1,0 +1,34 @@
+package main
+
+import (
+	"fmt"
+	"log"
+	"net/http"
+
+	"egaldeutsch-vercel/db"
+	"egaldeutsch-vercel/mock"
+	"egaldeutsch-vercel/router"
+)
+
+func main() {
+	// Initialize mock database for localhost development
+	// You can also initialize real Mongo here if ENV is set
+	if mock.IsMockMode() {
+		log.Println("Initializing standalone Mock DB...")
+		mock.GetMockDB() // Triggers initialization
+	} else {
+		log.Println("Initializing standalone MongoDB connection...")
+		db.GetClient() // Fails gracefully if no uri
+	}
+
+	mux := router.NewRouter()
+
+	port := ":8080"
+	fmt.Printf("Locally serving EgalDeutsch API on http://localhost%s...\n", port)
+	
+	// Start standalone HTTP Server
+	err := http.ListenAndServe(port, mux)
+	if err != nil {
+		log.Fatalf("Failed to start localhost server: %v", err)
+	}
+}
