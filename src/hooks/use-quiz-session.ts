@@ -1,0 +1,216 @@
+import { useState, useCallback, useRef, useEffect } from "react";
+import { QuizQuestion, QuizSessionConfig, CEFRLevel, QuizCategory } from "@/types/quiz";
+
+export interface AnswerRecord {
+  questionId: string;
+  isCorrect: boolean;
+  userAnswer: string;
+  timeSpentMs: number;
+}
+
+interface UseQuizSessionResult {
+  // State
+  questions: QuizQuestion[];
+  currentIndex: number;
+  currentQuestion: QuizQuestion | null;
+  status: "idle" | "loading" | "setup" | "in-progress" | "review" | "complete" | "error";
+  answers: AnswerRecord[];
+  timeRemainingMs: number | null; // null if no timer
+  lastAnswerEvaluated: boolean | null; // null during question
+  
+  // Actions
+  startSession: (config: QuizSessionConfig) => Promise<void>;
+  submitAnswer: (answer: string) => void;
+  nextQuestion: () => void;
+  finishSession: () => Promise<void>;
+  reset: () => void;
+}
+
+export function useQuizSession(): UseQuizSessionResult {
+  const [questions, setQuestions] = useState<QuizQuestion[]>([]);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [status, setStatus] = useState<UseQuizSessionResult["status"]>("idle");
+  const [answers, setAnswers] = useState<AnswerRecord[]>([]);
+  const [timeRemainingMs, setTimeRemainingMs] = useState<number | null>(null);
+  const [lastAnswerEvaluated, setLastAnswerEvaluated] = useState<boolean | null>(null);
+  
+  // Refs for tracking time internally
+  const questionStartTime = useRef<number>(0);
+  const configuration = useRef<QuizSessionConfig | null>(null);
+  const timerInterval = useRef<NodeJS.Timeout | null>(null);
+
+  const clearTimer = () => {
+    if (timerInterval.current) {
+      clearInterval(timerInterval.current);
+      timerInterval.current = null;
+    }
+  };
+
+  const currentQuestion = questions[currentIndex] || null;
+
+  // Handles time tracking per question
+  useEffect(() => {
+    if (status === "in-progress" && currentQuestion) {
+      questionStartTime.current = Date.now();
+      
+      const config = configuration.current;
+      if (config?.timePerQuestion) {
+        setTimeRemainingMs(config.timePerQuestion * 1000);
+        
+        timerInterval.current = setInterval(() => {
+          setTimeRemainingMs((prev) => {
+            if (prev === null) return null;
+            if (prev <= 100) {
+              clearInterval(timerInterval.current!);
+              // Auto-submit empty answer on timeout
+              // We need to use slightly indirect logic here since submitAnswer depends on current state
+              return 0;
+            }
+            return prev - 100;
+          });
+        }, 100);
+      } else {
+        setTimeRemainingMs(null);
+      }
+    } else {
+      clearTimer();
+    }
+
+    return clearTimer;
+  }, [status, currentIndex, currentQuestion]);
+
+  // Effect to handle auto-submission when timer hits 0
+  useEffect(() => {
+    if (timeRemainingMs === 0 && status === "in-progress") {
+       // Using an empty string for timeout
+       evaluateAndRecordAnswer("");
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [timeRemainingMs, status]);
+
+
+  const startSession = async (config: QuizSessionConfig) => {
+    setStatus("loading");
+    configuration.current = config;
+    
+    try {
+      const levelParam = config.level === "mixed" ? "" : `&level=${config.level}`;
+      const res = await fetch(`/api/quiz/questions?category=${config.category}${levelParam}&limit=${config.totalQuestions}`);
+      
+      if (!res.ok) throw new Error("Failed to fetch questions");
+      
+      const data: QuizQuestion[] = await res.json();
+      
+      if (data.length === 0) {
+         setStatus("error");
+         return;
+      }
+
+      setQuestions(data);
+      setCurrentIndex(0);
+      setAnswers([]);
+      setLastAnswerEvaluated(null);
+      setStatus("in-progress");
+    } catch {
+      setStatus("error");
+    }
+  };
+
+  const evaluateAndRecordAnswer = (userAnswer: string) => {
+    if (!currentQuestion || status !== "in-progress") return;
+    
+    clearTimer(); // Stop the countdown
+    
+    const timeSpent = Date.now() - questionStartTime.current;
+    
+    // Evaluate correctness based on question type
+    // Case-insensitive check generally appropriate for strings here, 
+    // unless exact match needed. For MCQ, exact string match works.
+    const isCorrect = userAnswer.toLowerCase().trim() === currentQuestion.correct_answer.toLowerCase().trim();
+    
+    setAnswers(prev => [...prev, {
+      questionId: currentQuestion.id,
+      isCorrect,
+      userAnswer,
+      timeSpentMs: timeSpent
+    }]);
+    
+    setLastAnswerEvaluated(isCorrect);
+    setStatus("review");
+  };
+
+  const submitAnswer = useCallback((answer: string) => {
+     evaluateAndRecordAnswer(answer);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [currentQuestion, status]);
+
+  const nextQuestion = useCallback(() => {
+    if (status !== "review") return;
+    
+    if (currentIndex < questions.length - 1) {
+      setCurrentIndex(prev => prev + 1);
+      setLastAnswerEvaluated(null);
+      setStatus("in-progress");
+    } else {
+      finishSession();
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [status, currentIndex, questions.length]);
+
+  const finishSession = async () => {
+    setStatus("loading");
+    
+    const correctCount = answers.filter(a => a.isCorrect).length;
+    const score = (correctCount / questions.length) * 100;
+    
+    try {
+      if (configuration.current) {
+          const token = typeof window !== "undefined" ? localStorage.getItem("token") : null;
+          
+          await fetch("/api/quiz/submit", {
+            method: "POST",
+            headers: { 
+                "Content-Type": "application/json",
+                ...(token ? { Authorization: `Bearer ${token}` } : {})
+            },
+            body: JSON.stringify({
+                category: configuration.current.category,
+                level: configuration.current.level,
+                score,
+                total_q: questions.length,
+                correct_q: correctCount
+            })
+          });
+      }
+      setStatus("complete");
+    } catch {
+       // Even if submission fails, show user their local results
+       setStatus("complete");
+    }
+  };
+
+  const reset = () => {
+    setQuestions([]);
+    setCurrentIndex(0);
+    setAnswers([]);
+    setLastAnswerEvaluated(null);
+    configuration.current = null;
+    clearTimer();
+    setStatus("idle");
+  };
+
+  return {
+    questions,
+    currentIndex,
+    currentQuestion,
+    status,
+    answers,
+    timeRemainingMs,
+    lastAnswerEvaluated,
+    startSession,
+    submitAnswer,
+    nextQuestion,
+    finishSession,
+    reset,
+  };
+}
