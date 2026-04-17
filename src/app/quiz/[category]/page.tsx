@@ -4,8 +4,7 @@ import { use, useEffect } from "react";
 import { useQuizSession } from "@/hooks/use-quiz-session";
 import { useLanguage } from "@/contexts/language-context";
 import { QuizCategory } from "@/types/quiz";
-import { Button } from "@/components/ui/button";
-import { Loader2, ChevronLeft, MoreVertical } from "lucide-react";
+import { Loader2, ChevronLeft, MoreHorizontal } from "lucide-react";
 import { useRouter } from "next/navigation";
 
 import { SessionSetup } from "@/components/quiz/session-setup";
@@ -47,20 +46,23 @@ export default function QuizOrchestrator({ params }: { params: Promise<{ categor
     }
   }, [status, answers, category, questions.length, router]);
 
+  if (status === "idle") {
+     return <SessionSetup category={category as QuizCategory} onStart={startSession} />;
+  }
 
   const renderLoading = () => (
-    <div className="flex flex-col items-center justify-center min-h-[60vh]">
-       <Loader2 className="w-12 h-12 text-primary animate-spin mb-4" />
-       <p className="text-slate-500 font-bold">Preparing your quiz...</p>
+    <div className="flex flex-col items-center justify-center min-h-[60vh] animate-pulse">
+       <div className="text-6xl mb-6">🦊</div>
+       <p className="text-slate-400 font-black uppercase tracking-widest text-xs">Preparing your path...</p>
     </div>
   );
 
   const renderError = () => (
-    <div className="flex flex-col items-center justify-center min-h-[60vh] text-center max-w-md mx-auto">
-       <div className="text-6xl mb-6">🏜️</div>
-       <h2 className="text-2xl font-black text-slate-800 mb-2">No Questions Found</h2>
-       <p className="text-slate-500 mb-8 font-bold">Try adjusting your level or category.</p>
-       <Button onClick={() => window.location.reload()} className="btn-orange h-14 px-8">Go Back</Button>
+    <div className="flex flex-col items-center justify-center min-h-[60vh] text-center max-w-sm mx-auto px-6">
+       <div className="text-6xl mb-6 grayscale opacity-30">🏜️</div>
+       <h2 className="text-2xl font-black text-slate-800 mb-2 tracking-tighter italic">Out of Questions</h2>
+       <p className="text-slate-400 font-bold text-sm mb-8">Try adjusting your level or picking another category.</p>
+       <button onClick={() => router.push("/")} className="btn-orange btn-compact w-full">Go Back</button>
     </div>
   );
 
@@ -71,9 +73,9 @@ export default function QuizOrchestrator({ params }: { params: Promise<{ categor
     const answerForCurrent = answers.find(a => a.questionId === currentQuestion.id);
 
     return (
-      <div className="w-full animate-in fade-in slide-in-from-right-8 duration-500 max-w-2xl mx-auto">
-        {/* Progress */}
-        <div className="mb-6">
+      <div className="w-full flex flex-col gap-6 animate-in fade-in slide-in-from-bottom-4 duration-700">
+        {/* Progress & Meta */}
+        <div className="w-full">
           <QuestionProgress 
             currentIndex={currentIndex} 
             totalQuestions={questions.length} 
@@ -81,35 +83,37 @@ export default function QuizOrchestrator({ params }: { params: Promise<{ categor
           />
         </div>
 
-        {/* Question Interactive Component */}
-        <div className="w-full mb-8">
-           {currentQuestion.type === "multiple-choice" && (
-             <McqQuestion question={currentQuestion} onSubmit={submitAnswer} disabled={disabled} />
-           )}
-           {currentQuestion.type === "fill-in-blank" && (
-             <FillInBlank question={currentQuestion} onSubmit={submitAnswer} disabled={disabled} />
-           )}
-           {currentQuestion.type === "word-order" && (
-             <WordOrder question={currentQuestion} onSubmit={submitAnswer} disabled={disabled} />
-           )}
+        {/* Question Interactive Card */}
+        <div className="w-full perspective-1000">
+           <div className="glass-card-premium rounded-[2.5rem] overflow-hidden">
+              {currentQuestion.type === "multiple-choice" && (
+                <McqQuestion question={currentQuestion} onSubmit={submitAnswer} disabled={disabled} />
+              )}
+              {currentQuestion.type === "fill-in-blank" && (
+                <FillInBlank question={currentQuestion} onSubmit={submitAnswer} disabled={disabled} />
+              )}
+              {currentQuestion.type === "word-order" && (
+                <WordOrder question={currentQuestion} onSubmit={submitAnswer} disabled={disabled} />
+              )}
+           </div>
         </div>
 
-        {/* Review Stage: Next Button */}
+        {/* Review Stage: Next Button & Feedback Layer */}
         {status === "review" && (
-          <div className="w-full flex flex-col items-center gap-6">
+          <div className="w-full space-y-6 animate-in zoom-in-95 duration-500">
              <ExplanationCard 
                 question={currentQuestion} 
                 isCorrect={lastAnswerEvaluated}
                 userAnswer={answerForCurrent?.userAnswer || ""}
                 language={language}
              />
-             <Button 
-               size="lg" 
+             <button 
                onClick={nextQuestion}
-               className="w-full h-16 text-xl font-black btn-orange"
+               className="w-full btn-orange h-12 text-sm font-black flex items-center justify-center gap-2"
              >
                {language === "de" ? "Weiter" : language === "vi" ? "Tiếp theo" : "Next Question"}
-             </Button>
+               <MoreHorizontal className="w-4 h-4 ml-2" />
+             </button>
           </div>
         )}
       </div>
@@ -117,22 +121,27 @@ export default function QuizOrchestrator({ params }: { params: Promise<{ categor
   };
 
   return (
-    <main className="min-h-screen bg-background flex flex-col items-center pt-8 px-6 pb-32">
-      {/* Top Header from Prototype */}
-      <div className="w-full max-w-4xl flex items-center justify-between mb-10">
-         <button onClick={() => router.push("/")} className="w-10 h-10 bg-white rounded-full flex items-center justify-center text-slate-400 shadow-sm">
-            <ChevronLeft className="w-6 h-6" />
+    <main className="min-h-screen bg-background flex flex-col items-center px-6 pb-20 pt-8">
+      {/* Immersive Header */}
+      <div className="w-full max-w-2xl flex items-center justify-between mb-8">
+         <button 
+           onClick={() => router.push("/")} 
+           className="w-10 h-10 bg-white/50 backdrop-blur-md rounded-xl flex items-center justify-center text-slate-400 shadow-premium border border-white/80 transition-all active:scale-90"
+         >
+            <ChevronLeft className="w-5 h-5" />
          </button>
-         <h1 className="text-xl font-black text-slate-800 capitalize">
-            {category.replace("-", " ")}
-         </h1>
-         <button className="w-10 h-10 bg-white rounded-full flex items-center justify-center text-slate-400 shadow-sm">
-            <MoreVertical className="w-6 h-6" />
+         <div className="text-center">
+            <h1 className="text-md font-black text-slate-800 tracking-tighter italic capitalize">
+               {category.replace("-", " ")}
+            </h1>
+            <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest">{currentIndex + 1} of {questions.length}</p>
+         </div>
+         <button className="w-10 h-10 bg-white/50 backdrop-blur-md rounded-xl flex items-center justify-center text-slate-400 shadow-premium border border-white/80 transition-all active:scale-90">
+            <MoreHorizontal className="w-5 h-5" />
          </button>
       </div>
 
-      <div className="w-full max-w-4xl">
-        {status === "idle" && <SessionSetup category={category as QuizCategory} onStart={startSession} />}
+      <div className="w-full max-w-2xl">
         {status === "loading" && renderLoading()}
         {status === "error" && renderError()}
         {(status === "in-progress" || status === "review") && renderQuestion()}

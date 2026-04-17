@@ -2,12 +2,10 @@
 
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { CheckCircle2, XCircle, BarChart3, Clock, Home, ArrowRight } from "lucide-react";
+import { CheckCircle2, XCircle, BarChart3, Clock, Home, ArrowRight, Trophy } from "lucide-react";
 import { useLanguage } from "@/contexts/language-context";
+import Image from "next/image";
 
-// Local storage type mirror
 interface SessionSummary {
   category: string;
   total: number;
@@ -44,60 +42,99 @@ export default function ResultsPage() {
   const totalTime = summary.answers.reduce((acc, curr) => acc + curr.timeSpentMs, 0);
   const avgTimePerQ = Math.round((totalTime / summary.total) / 1000);
 
-  let message = "";
-  if (scorePct >= 90) message = "Hervorragend!";
-  else if (scorePct >= 75) message = "Sehr gut!";
-  else if (scorePct >= 50) message = "Gut gemacht!";
-  else message = "Übung macht den Meister!";
+  const isExcellent = scorePct >= 80;
+  const isGood = scorePct >= 50;
+
+  const getMessage = () => {
+    if (isExcellent) return language === "de" ? "Hervorragend!" : language === "vi" ? "Tuyệt đỉnh!" : "Outstanding!";
+    if (isGood) return language === "de" ? "Gut gemacht!" : language === "vi" ? "Làm tốt lắm!" : "Well Done!";
+    return language === "de" ? "Übung macht den Meister!" : language === "vi" ? "Cố gắng thêm nhé!" : "Keep Practicing!";
+  };
 
   return (
-    <main className="min-h-screen bg-slate-50 flex flex-col items-center py-12 px-4 md:px-8">
-      <div className="w-full max-w-3xl">
+    <main className="min-h-screen bg-background flex flex-col items-center py-16 px-6">
+      <div className="w-full max-w-2xl flex flex-col items-center">
         
-        {/* Score Header */}
-        <Card className="border-none shadow-xl bg-white overflow-hidden mb-8">
-           <div className={`h-4 ${scorePct >= 75 ? "bg-green-500" : scorePct >= 50 ? "bg-amber-400" : "bg-red-500"}`} />
-           <CardContent className="p-8 text-center flex flex-col items-center">
-             <div className="text-6xl mb-6">{scorePct >= 75 ? "🎉" : scorePct >= 50 ? "👍" : "💪"}</div>
-             <h1 className="text-3xl font-bold text-slate-800 mb-2">{message}</h1>
-             <p className="text-xl text-slate-600 mb-8 capitalize">
-               You completed the <span className="font-bold text-indigo-600">{summary.category.replace("-", " ")}</span> quiz!
-             </p>
+        {/* Mission Card */}
+        <div className="w-full glass-card-premium rounded-[3rem] p-10 text-center relative overflow-hidden mb-12 animate-in zoom-in-95 duration-700">
+           {/* Decorative Background */}
+           <div className={`absolute -top-10 -right-10 w-48 h-48 rounded-full blur-3xl opacity-20 ${isExcellent ? "bg-primary" : "bg-slate-400"}`} />
+           
+           <div className="relative z-10 flex flex-col items-center">
+              <div className="w-32 h-32 relative mb-6 animate-float-gentle">
+                 <Image 
+                   src="/mascot.png" 
+                   alt="Mission Mascot" 
+                   fill 
+                   sizes="128px"
+                   priority
+                   className={`object-contain transition-all ${!isGood && "grayscale opacity-40"}`} 
+                 />
+                 {isExcellent && (
+                    <div className="absolute -top-2 -right-2 w-12 h-12 bg-amber-400 rounded-full flex items-center justify-center text-white shadow-lg shadow-amber-500/30 animate-bounce">
+                       <Trophy className="w-6 h-6" />
+                    </div>
+                 )}
+              </div>
 
-             <div className="grid grid-cols-3 gap-4 w-full max-w-md">
-                <div className="bg-slate-50 rounded-xl p-4 border flex flex-col items-center">
-                   <BarChart3 className="text-indigo-500 mb-2" />
-                   <span className="text-2xl font-bold text-slate-800">{scorePct}%</span>
-                   <span className="text-xs text-slate-500 uppercase font-semibold">Score</span>
-                </div>
-                <div className="bg-slate-50 rounded-xl p-4 border flex flex-col items-center">
-                   <div className="flex gap-1 mb-2">
-                     <CheckCircle2 className="text-green-500 w-5 h-5" />
-                     <XCircle className="text-red-500 w-5 h-5" />
-                   </div>
-                   <span className="text-xl font-bold text-slate-800">{summary.correct}/{summary.total}</span>
-                   <span className="text-xs text-slate-500 uppercase font-semibold">Correct</span>
-                </div>
-                <div className="bg-slate-50 rounded-xl p-4 border flex flex-col items-center">
-                   <Clock className="text-amber-500 mb-2" />
-                   <span className="text-xl font-bold text-slate-800">{avgTimePerQ}s</span>
-                   <span className="text-xs text-slate-500 uppercase font-semibold">Avg / Q</span>
-                </div>
-             </div>
-           </CardContent>
-        </Card>
+              <h1 className="text-4xl md:text-5xl font-black text-slate-800 mb-2 italic tracking-tighter leading-none">
+                 {getMessage()}
+              </h1>
+              <p className="text-xs font-black text-slate-400 uppercase tracking-[0.3em] mb-10">
+                 Mission: {summary.category.replace("-", " ")} Complete
+              </p>
 
-        {/* Action Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-           <Button size="lg" variant="outline" className="h-14 px-8 text-lg bg-white" onClick={() => router.push("/")}>
-             <Home className="mr-2 w-5 h-5" /> Home
-           </Button>
-           <Button size="lg" className="h-14 px-8 text-lg bg-indigo-600 hover:bg-indigo-700" onClick={() => router.push("/dashboard")}>
-             Dashboard <ArrowRight className="ml-2 w-5 h-5" />
-           </Button>
+              <div className="grid grid-cols-3 gap-4 w-full">
+                 <StatPill 
+                   icon={<BarChart3 className="w-4 h-4 text-primary" />} 
+                   label="Precision" 
+                   value={`${scorePct}%`} 
+                 />
+                 <StatPill 
+                   icon={<div className="flex gap-0.5"><CheckCircle2 className="w-3 h-3 text-emerald-500" /><XCircle className="w-3 h-3 text-rose-500" /></div>} 
+                   label="Answered" 
+                   value={`${summary.correct}/${summary.total}`} 
+                 />
+                 <StatPill 
+                   icon={<Clock className="w-4 h-4 text-amber-500" />} 
+                   label="Avg Speed" 
+                   value={`${avgTimePerQ}s`} 
+                 />
+              </div>
+           </div>
+        </div>
+
+        {/* Action Controls */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full">
+           <button 
+             onClick={() => router.push("/")}
+             className="h-12 bg-white border border-slate-100 rounded-2xl font-black text-xs uppercase tracking-widest text-slate-400 hover:text-slate-600 hover:border-slate-200 shadow-premium transition-all flex items-center justify-center gap-2"
+           >
+              <Home className="w-4 h-4" /> Home
+           </button>
+           <button 
+             onClick={() => router.push("/")}
+             className="btn-orange btn-compact flex items-center justify-center gap-2"
+           >
+              Try Another <ArrowRight className="w-4 h-4" />
+           </button>
         </div>
 
       </div>
     </main>
+  );
+}
+
+function StatPill({ icon, label, value }: { icon: React.ReactNode, label: string, value: string }) {
+  return (
+    <div className="bg-white/50 backdrop-blur-md rounded-3xl p-5 border border-white/60 shadow-premium flex flex-col items-center gap-2 hover:-translate-y-1 transition-all">
+       <div className="w-8 h-8 rounded-xl bg-slate-50 flex items-center justify-center shadow-inner">
+          {icon}
+       </div>
+       <div className="flex flex-col">
+          <span className="text-xl font-black text-slate-800 tracking-tighter leading-none">{value}</span>
+          <span className="text-[8px] font-black text-slate-400 uppercase tracking-widest mt-1 text-center">{label}</span>
+       </div>
+    </div>
   );
 }

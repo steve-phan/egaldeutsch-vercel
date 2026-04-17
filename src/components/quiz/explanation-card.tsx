@@ -1,66 +1,91 @@
+"use client";
+
 import { QuizQuestion } from "@/types/quiz";
-import { CheckCircle2, XCircle } from "lucide-react";
+import { CheckCircle2, XCircle, Lightbulb, UserCheck } from "lucide-react";
+import Image from "next/image";
 
 interface ExplanationCardProps {
   question: QuizQuestion;
-  isCorrect: boolean | null;
+  isCorrect: boolean;
   userAnswer: string;
-  language: "de" | "en" | "vi";
+  language?: "en" | "de" | "vi";
 }
 
-export function ExplanationCard({ question, isCorrect, userAnswer, language }: ExplanationCardProps) {
-  if (isCorrect === null) return null;
-
-  const getExplanation = () => {
-    switch (language) {
-      case "de": return question.explanation_de;
-      case "vi": return question.explanation_vi;
-      case "en":
-      default: return question.explanation_en;
+export function ExplanationCard({ 
+  question, 
+  isCorrect, 
+  userAnswer, 
+  language = "en" 
+}: ExplanationCardProps) {
+  
+  const getFeedbackHeader = () => {
+    if (isCorrect) {
+       switch(language) {
+          case "de": return "Super!";
+          case "vi": return "Tuyệt vời!";
+          default: return "Awesome!";
+       }
+    } else {
+       switch(language) {
+          case "de": return "Fast!";
+          case "vi": return "Gần đúng!";
+          default: return "Not quite!";
+       }
     }
   };
-
-  const getExplanationTitle = () => {
-    switch (language) {
-      case "de": return "Erklärung";
-      case "vi": return "Giải thích";
-      case "en":
-      default: return "Explanation";
-    }
-  };
-
-  const isWin = isCorrect === true;
 
   return (
-    <div className={`mt-6 p-6 rounded-xl border ${
-      isWin 
-        ? "bg-green-50 border-green-200" 
-        : "bg-red-50 border-red-200"
-    } animate-in fade-in slide-in-from-bottom-4 duration-300`}>
-      <div className="flex items-start gap-4">
-        {isWin ? (
-          <CheckCircle2 className="w-6 h-6 text-green-600 shrink-0 mt-0.5" />
-        ) : (
-          <XCircle className="w-6 h-6 text-red-600 shrink-0 mt-0.5" />
-        )}
-        <div className="flex-1">
-          <h4 className={`text-lg font-bold mb-1 ${isWin ? "text-green-800" : "text-red-800"}`}>
-            {isWin ? "Correct!" : "Incorrect"}
-          </h4>
-          {!isWin && (
-             <p className="text-red-700 mb-3 font-medium">
-               Correct answer: <span className="font-bold bg-white/50 px-2 py-0.5 rounded ml-1">{question.correct_answer}</span>
-             </p>
-          )}
-          <div className="mt-4 pt-4 border-t border-black/10">
-            <p className="text-sm font-semibold uppercase tracking-wider opacity-70 mb-2">
-              {getExplanationTitle()}
-            </p>
-            <p className="text-slate-800 leading-relaxed">
-              {getExplanation() || "No explanation provided."}
-            </p>
-          </div>
-        </div>
+    <div className={`
+      relative w-full rounded-[2.5rem] p-8 md:p-10 overflow-hidden border-2 transition-all duration-700
+      ${isCorrect 
+        ? "bg-emerald-50/50 border-emerald-100 shadow-xl shadow-emerald-500/10" 
+        : "bg-rose-50/50 border-rose-100 shadow-xl shadow-rose-500/10"}
+    `}>
+      {/* Dynamic Background Accent */}
+      <div className={`absolute top-0 right-0 w-48 h-48 rounded-full blur-3xl -mr-20 -mt-20 opacity-20 ${isCorrect ? "bg-emerald-400" : "bg-rose-400"}`} />
+
+      <div className="flex items-start justify-between relative z-10 gap-6">
+         <div className="flex-1 space-y-6">
+            <div className="flex items-center gap-3">
+               {isCorrect ? <CheckCircle2 className="w-6 h-6 text-emerald-500" /> : <XCircle className="w-6 h-6 text-rose-500" />}
+               <h3 className={`text-3xl font-black italic tracking-tighter ${isCorrect ? "text-emerald-600" : "text-rose-600"}`}>
+                  {getFeedbackHeader()}
+               </h3>
+            </div>
+
+            {!isCorrect && (
+               <div className="space-y-1">
+                  <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest">Correct Answer</p>
+                  <p className="text-xl font-black text-slate-800 tracking-tight leading-none">{question.correct_answer}</p>
+               </div>
+            )}
+
+            <div className="space-y-4">
+               <div className="flex items-center gap-2 text-slate-400">
+                  <Lightbulb className="w-4 h-4" />
+                  <span className="text-[10px] font-black uppercase tracking-widest">Grammar Hint</span>
+               </div>
+               <p className="text-sm font-bold text-slate-600 leading-relaxed bg-white/40 p-5 rounded-2xl border border-white/60 shadow-sm">
+                  {question.explanation_de}
+               </p>
+            </div>
+         </div>
+
+         {/* Mascot Feedback fox */}
+         <div className="hidden sm:flex flex-col items-center shrink-0">
+            <div className="w-24 h-24 relative mb-2 animate-float-gentle">
+               <Image 
+                 src="/mascot.png" 
+                 alt="Feedback Fox" 
+                 fill 
+                 sizes="96px"
+                 className={`object-contain transition-all ${isCorrect ? "brightness-105" : "grayscale opacity-50"}`} 
+               />
+            </div>
+            <div className="glass-pill px-3 py-1 rounded-full text-[9px] font-black uppercase tracking-tighter text-slate-400 border-white/80">
+               {isCorrect ? "Proud of you!" : "Keep going!"}
+            </div>
+         </div>
       </div>
     </div>
   );

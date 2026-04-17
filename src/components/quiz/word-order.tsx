@@ -1,7 +1,9 @@
+"use client";
+
 import { useState, useEffect } from "react";
-import { Button } from "@/components/ui/button";
 import { QuizQuestion } from "@/types/quiz";
 import { useLanguage } from "@/contexts/language-context";
+import { ListOrdered, RotateCcw } from "lucide-react";
 
 interface WordOrderProps {
   question: QuizQuestion;
@@ -12,30 +14,41 @@ interface WordOrderProps {
 export function WordOrder({ question, onSubmit, disabled }: WordOrderProps) {
   const { language } = useLanguage();
   const [availableWords, setAvailableWords] = useState<string[]>([]);
-  const [selectedWords, setSelectedWords] = useState<string[]>([]);
+  const [orderedWords, setOrderedWords] = useState<string[]>([]);
 
   useEffect(() => {
-    // Break the correct answer into words, and shuffle them
-    const words = question.correct_answer.split(" ").filter(w => w.length > 0);
-    // Simple deterministic shuffle purely for the test UI to ensure they actually move
-    const shuffled = [...words].sort((a, b) => a.localeCompare(b) - 0.5); 
-    setAvailableWords(shuffled);
-    setSelectedWords([]);
-  }, [question.id, question.correct_answer]);
+    if (question.options && question.options.length > 0) {
+      // Shuffling options for the game feel
+      const words = [...question.options.map((o: any) => o.de || o.toString())].sort(() => Math.random() - 0.5);
+      setAvailableWords(words);
+      setOrderedWords([]);
+    } else if (question.correct_answer) {
+      // Fallback: Split correct answer into words if no explicit options provided
+      const words = question.correct_answer.split(/\s+/).sort(() => Math.random() - 0.5);
+      setAvailableWords(words);
+      setOrderedWords([]);
+    }
+  }, [question.id, question.options, question.correct_answer]);
 
-  const handleSelect = (word: string, idx: number) => {
+  const handleWordClick = (word: string, isAvailable: boolean) => {
     if (disabled) return;
-    setAvailableWords(prev => prev.filter((_, i) => i !== idx));
-    setSelectedWords(prev => [...prev, word]);
+    
+    if (isAvailable) {
+      setAvailableWords(availableWords.filter(w => w !== word));
+      setOrderedWords([...orderedWords, word]);
+    } else {
+      setOrderedWords(orderedWords.filter(w => w !== word));
+      setAvailableWords([...availableWords, word]);
+    }
   };
 
-  const handleUnselect = (word: string, idx: number) => {
+  const reset = () => {
     if (disabled) return;
-    setSelectedWords(prev => prev.filter((_, i) => i !== idx));
-    setAvailableWords(prev => [...prev, word]);
+    if (question.options) {
+      setAvailableWords([...question.options.map((o: any) => o.de)].sort(() => Math.random() - 0.5));
+      setOrderedWords([]);
+    }
   };
-
-  const currentSentence = selectedWords.join(" ");
 
   const getPrompt = () => {
     switch (language) {
@@ -46,64 +59,73 @@ export function WordOrder({ question, onSubmit, disabled }: WordOrderProps) {
     }
   };
 
-  const btnLabel = language === "de" ? "Überprüfen" : language === "vi" ? "Kiểm tra" : "Check Answer";
-
   return (
-    <div className="w-full max-w-3xl mx-auto flex flex-col items-center">
-      <h3 className="text-xl font-semibold text-slate-600 mb-8 text-center">{getPrompt()}</h3>
-      
-      {/* Target Area (Selected Words) */}
-      <div className="w-full min-h-[80px] p-4 bg-slate-50 border-2 border-dashed border-slate-300 flex flex-wrap gap-2 items-center rounded-xl mb-8">
-        {selectedWords.length === 0 && (
-           <span className="text-slate-400 font-medium italic select-none">
-             Click words below to build the sentence...
-           </span>
-        )}
-        {selectedWords.map((word, idx) => (
-          <button
-            key={`sel-${idx}`}
-            onClick={() => handleUnselect(word, idx)}
-            disabled={disabled}
-            className={`
-              px-4 py-2 bg-white border-2 border-indigo-200 text-indigo-900 font-bold rounded-lg shadow-sm
-              transition-transform hover:-translate-y-1 hover:shadow-md hover:border-indigo-400
-              ${disabled ? "cursor-default opacity-90" : "cursor-pointer"}
-            `}
-          >
-            {word}
-          </button>
-        ))}
+    <div className="w-full flex flex-col items-center">
+      {/* Header Prompt */}
+      <div className="w-full p-8 md:p-10 text-center relative border-b border-slate-100">
+          <div className="absolute top-4 right-8">
+             <button 
+               onClick={reset} 
+               disabled={disabled}
+               className="p-2 text-slate-300 hover:text-primary transition-all active:rotate-180 duration-500 disabled:opacity-30"
+             >
+                <RotateCcw className="w-4 h-4" />
+             </button>
+          </div>
+          <p className="text-[10px] font-black text-slate-400 uppercase tracking-[0.3em] mb-4">Reorder the sentence</p>
+          <h2 className="text-3xl md:text-4xl font-black text-slate-800 mb-2 italic tracking-tighter leading-tight">
+             {getPrompt()}
+          </h2>
+          <p className="text-sm font-bold text-slate-400 mt-2">Grammar Construction</p>
       </div>
 
-      {/* Source Area (Available Words) */}
-      <div className="w-full p-6 bg-white border border-slate-200 shadow-sm flex flex-wrap justify-center gap-3 rounded-xl mb-12">
-        {availableWords.map((word, idx) => (
-          <button
-            key={`avail-${idx}`}
-            onClick={() => handleSelect(word, idx)}
-            disabled={disabled}
-            className={`
-              px-4 py-2 bg-slate-100 border-2 border-slate-200 text-slate-700 font-medium rounded-lg
-              transition-all hover:bg-slate-200 hover:border-slate-300 active:scale-95
-              ${disabled ? "cursor-default opacity-50" : "cursor-pointer"}
-            `}
-          >
-            {word}
-          </button>
-        ))}
-        {availableWords.length === 0 && (
-          <span className="text-slate-400 italic text-sm">All words used</span>
-        )}
-      </div>
+      {/* interaction Area */}
+      <div className="w-full p-8 md:p-10 space-y-10 bg-slate-50/20">
+         {/* Build Area */}
+         <div className="space-y-4">
+            <div className="flex items-center justify-between mb-2">
+               <h4 className="text-[10px] font-black text-slate-400 uppercase tracking-widest italic leading-none">Your Construction</h4>
+               <ListOrdered className="w-4 h-4 text-slate-200" />
+            </div>
+            <div className="min-h-[80px] w-full p-4 bg-white/50 border-2 border-dashed border-slate-100 rounded-[2rem] flex flex-wrap gap-2 items-center content-center transition-colors">
+               {orderedWords.map((word, i) => (
+                  <button
+                    key={`${word}-${i}`}
+                    onClick={() => handleWordClick(word, false)}
+                    disabled={disabled}
+                    className="h-10 px-4 bg-primary text-white rounded-full font-black text-sm shadow-premium shadow-primary/20 animate-in zoom-in-90 hover:scale-105 active:scale-95 transition-all"
+                  >
+                     {word}
+                  </button>
+               ))}
+               {!orderedWords.length && <p className="text-slate-200 font-bold text-sm w-full text-center">Tap words to build your answer...</p>}
+            </div>
+         </div>
 
-      <Button 
-        size="lg"
-        disabled={availableWords.length > 0 || disabled} // Must use all words
-        className="w-full sm:w-64 h-14 text-lg bg-indigo-600 hover:bg-indigo-700"
-        onClick={() => onSubmit(currentSentence)}
-      >
-        {btnLabel}
-      </Button>
+         {/* Selection Area */}
+         <div className="flex flex-wrap gap-2 justify-center">
+            {availableWords.map((word, i) => (
+               <button
+                 key={`${word}-${i}`}
+                 onClick={() => handleWordClick(word, true)}
+                 disabled={disabled}
+                 className="h-10 px-4 bg-white border border-slate-100 rounded-full font-black text-sm text-slate-500 shadow-premium hover:border-primary/40 hover:text-primary active:scale-95 transition-all disabled:opacity-30"
+               >
+                  {word}
+               </button>
+            ))}
+         </div>
+
+         {!disabled && (
+           <button 
+             disabled={!orderedWords.length || disabled} 
+             onClick={() => onSubmit(orderedWords.join(" "))}
+             className={`w-full btn-orange btn-compact flex items-center justify-center gap-2 ${!orderedWords.length && "opacity-30 grayscale pointer-events-none"}`}
+           >
+              {language === "de" ? "Überprüfen" : language === "vi" ? "Kiểm tra" : "Submit Answer"}
+           </button>
+         )}
+      </div>
     </div>
   );
 }

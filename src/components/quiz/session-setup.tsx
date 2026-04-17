@@ -1,8 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
 import { ChevronRight, Settings2, Clock, Hash, Zap } from "lucide-react";
 import { QuizSessionConfig, CEFRLevel, QuizCategory } from "@/types/quiz";
 
@@ -26,104 +24,92 @@ export function SessionSetup({ category, onStart }: SessionSetupProps) {
   };
 
   return (
-    <Card className="w-full max-w-2xl border-none shadow-xl bg-white/80 backdrop-blur-sm">
-      <CardContent className="p-8 md:p-12">
+    <div className="w-full max-w-2xl glass-card-premium rounded-[3rem] p-8 md:p-12 animate-in zoom-in-95 duration-500">
          <div className="flex items-center gap-3 mb-2">
-            <Settings2 className="w-6 h-6 text-indigo-500" />
-            <h2 className="text-2xl font-bold text-slate-800">Auf geht&apos;s!</h2>
+            <div className="w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center text-primary">
+               <Settings2 className="w-6 h-6" />
+            </div>
+            <h2 className="text-3xl font-black text-slate-800 tracking-tighter italic">Auf geht&apos;s!</h2>
          </div>
-         <p className="text-slate-500 mb-8">Customize your quiz session to match your goals.</p>
+         <p className="text-slate-400 font-bold text-sm mb-10">Customize your session for maximum mastery.</p>
 
-         <div className="space-y-8">
+         <div className="space-y-10">
             {/* Level Selection */}
-            <div>
-               <label className="text-sm font-semibold uppercase tracking-wider text-slate-600 flex items-center gap-2 mb-3">
-                 <Zap className="w-4 h-4" /> CEFR Level
+            <div className="space-y-4">
+               <label className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 flex items-center gap-2">
+                 <Zap className="w-3 h-3" /> CEFR Level
                </label>
                <div className="grid grid-cols-5 gap-2">
                   {["mixed", "A1", "A2", "B1", "B2"].map(l => (
                      <button
                        key={l}
                        onClick={() => setLevel(l as CEFRLevel | "mixed")}
-                       className={`py-3 px-2 rounded-xl border-2 font-bold transition-all
+                       className={`h-11 rounded-xl border-2 font-black text-xs transition-all
                          ${level === l 
-                            ? "bg-indigo-50 border-indigo-500 text-indigo-700 shadow-sm" 
-                            : "bg-white border-slate-200 text-slate-600 hover:border-slate-300"}`}
+                            ? "bg-primary text-white border-primary shadow-lg shadow-primary/20" 
+                            : "bg-white border-slate-100 text-slate-400 hover:border-slate-200"}`}
                      >
-                       {l === "mixed" ? "Mix" : l}
+                       {l === "mixed" ? "MIX" : l}
                      </button>
                   ))}
                </div>
             </div>
 
             {/* Total Questions */}
-            <div>
-               <label className="text-sm font-semibold uppercase tracking-wider text-slate-600 flex items-center gap-2 mb-3">
-                 <Hash className="w-4 h-4" /> Questions
+            <div className="space-y-4">
+               <label className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 flex items-center gap-2">
+                 <Hash className="w-3 h-3" /> Quantity
                </label>
                <div className="grid grid-cols-3 gap-3">
                   {[5, 10, 20].map(n => (
                      <button
                        key={n}
                        onClick={() => setTotalQuestions(n)}
-                       className={`py-3 px-4 rounded-xl border-2 font-bold text-lg transition-all
+                       className={`h-11 rounded-xl border-2 font-black text-xs transition-all
                          ${totalQuestions === n 
-                            ? "bg-indigo-50 border-indigo-500 text-indigo-700 shadow-sm" 
-                            : "bg-white border-slate-200 text-slate-600 hover:border-slate-300"}`}
+                            ? "bg-primary text-white border-primary shadow-lg shadow-primary/20" 
+                            : "bg-white border-slate-100 text-slate-400 hover:border-slate-200"}`}
                      >
-                       {n}
+                        {n} Questions
                      </button>
                   ))}
                </div>
             </div>
 
             {/* Timer Selection */}
-            <div>
-               <label className="text-sm font-semibold uppercase tracking-wider text-slate-600 flex items-center gap-2 mb-3">
-                 <Clock className="w-4 h-4" /> Timer (Per Question)
+            <div className="space-y-4">
+               <label className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 flex items-center gap-2">
+                 <Clock className="w-3 h-3" /> Pace (Per Question)
                </label>
                <div className="grid grid-cols-3 gap-3">
-                  <button
-                     onClick={() => setTimeLimit(undefined)}
-                     className={`py-3 px-4 rounded-xl border-2 font-bold transition-all
-                       ${timeLimit === undefined 
-                          ? "bg-indigo-50 border-indigo-500 text-indigo-700 shadow-sm" 
-                          : "bg-white border-slate-200 text-slate-600 hover:border-slate-300"}`}
-                  >
-                     Off
-                  </button>
-                  <button
-                     onClick={() => setTimeLimit(30)}
-                     className={`py-3 px-4 rounded-xl border-2 font-bold transition-all
-                       ${timeLimit === 30 
-                          ? "bg-indigo-50 border-indigo-500 text-indigo-700 shadow-sm" 
-                          : "bg-white border-slate-200 text-slate-600 hover:border-slate-300"}`}
-                  >
-                     30s
-                  </button>
-                  <button
-                     onClick={() => setTimeLimit(60)}
-                     className={`py-3 px-4 rounded-xl border-2 font-bold transition-all
-                       ${timeLimit === 60 
-                          ? "bg-indigo-50 border-indigo-500 text-indigo-700 shadow-sm" 
-                          : "bg-white border-slate-200 text-slate-600 hover:border-slate-300"}`}
-                  >
-                     60s
-                  </button>
+                  {[
+                    { val: undefined, label: "ZEN" },
+                    { val: 30, label: "30s" },
+                    { val: 60, label: "60s" }
+                  ].map(t => (
+                     <button
+                       key={t.label}
+                       onClick={() => setTimeLimit(t.val)}
+                       className={`h-11 rounded-xl border-2 font-black text-xs transition-all
+                         ${timeLimit === t.val 
+                            ? "bg-primary text-white border-primary shadow-lg shadow-primary/20" 
+                            : "bg-white border-slate-100 text-slate-400 hover:border-slate-200"}`}
+                     >
+                        {t.label}
+                     </button>
+                  ))}
                </div>
             </div>
          </div>
 
          <div className="mt-12">
-            <Button 
-               size="lg" 
-               className="w-full h-14 bg-accent hover:bg-yellow-500 text-accent-foreground font-bold text-lg shadow-lg hover:shadow-xl transition-all hover:-translate-y-0.5"
+            <button 
+               className="w-full btn-orange btn-compact flex items-center justify-center gap-3"
                onClick={handleStart}
             >
-               Start Quiz <ChevronRight className="w-5 h-5 ml-1" />
-            </Button>
+               Begin Journey <ChevronRight className="w-5 h-5" />
+            </button>
          </div>
-      </CardContent>
-    </Card>
+    </div>
   );
 }

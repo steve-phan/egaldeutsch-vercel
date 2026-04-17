@@ -15,9 +15,8 @@ interface UseQuizSessionResult {
   currentQuestion: QuizQuestion | null;
   status: "idle" | "loading" | "setup" | "in-progress" | "review" | "complete" | "error";
   answers: AnswerRecord[];
-  timeRemainingMs: number | null; // null if no timer
-  lastAnswerEvaluated: boolean | null; // null during question
-  
+  timeRemainingMs: number 
+  lastAnswerEvaluated: boolean  
   // Actions
   startSession: (config: QuizSessionConfig) => Promise<void>;
   submitAnswer: (answer: string) => void;
@@ -31,8 +30,8 @@ export function useQuizSession(): UseQuizSessionResult {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [status, setStatus] = useState<UseQuizSessionResult["status"]>("idle");
   const [answers, setAnswers] = useState<AnswerRecord[]>([]);
-  const [timeRemainingMs, setTimeRemainingMs] = useState<number | null>(null);
-  const [lastAnswerEvaluated, setLastAnswerEvaluated] = useState<boolean | null>(null);
+  const [timeRemainingMs, setTimeRemainingMs] = useState<number>(0);
+  const [lastAnswerEvaluated, setLastAnswerEvaluated] = useState<boolean>(false);
   
   // Refs for tracking time internally
   const questionStartTime = useRef<number>(0);
@@ -59,7 +58,7 @@ export function useQuizSession(): UseQuizSessionResult {
         
         timerInterval.current = setInterval(() => {
           setTimeRemainingMs((prev) => {
-            if (prev === null) return null;
+            if (prev === 0) return 0;
             if (prev <= 100) {
               clearInterval(timerInterval.current!);
               // Auto-submit empty answer on timeout
@@ -70,7 +69,7 @@ export function useQuizSession(): UseQuizSessionResult {
           });
         }, 100);
       } else {
-        setTimeRemainingMs(null);
+        setTimeRemainingMs(0);
       }
     } else {
       clearTimer();
@@ -109,7 +108,7 @@ export function useQuizSession(): UseQuizSessionResult {
       setQuestions(data);
       setCurrentIndex(0);
       setAnswers([]);
-      setLastAnswerEvaluated(null);
+      setLastAnswerEvaluated(false);
       setStatus("in-progress");
     } catch {
       setStatus("error");
@@ -149,7 +148,7 @@ export function useQuizSession(): UseQuizSessionResult {
     
     if (currentIndex < questions.length - 1) {
       setCurrentIndex(prev => prev + 1);
-      setLastAnswerEvaluated(null);
+      setLastAnswerEvaluated(false);
       setStatus("in-progress");
     } else {
       finishSession();
@@ -193,7 +192,7 @@ export function useQuizSession(): UseQuizSessionResult {
     setQuestions([]);
     setCurrentIndex(0);
     setAnswers([]);
-    setLastAnswerEvaluated(null);
+    setLastAnswerEvaluated(false);
     configuration.current = null;
     clearTimer();
     setStatus("idle");
