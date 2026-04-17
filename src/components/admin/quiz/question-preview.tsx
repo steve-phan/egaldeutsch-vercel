@@ -12,10 +12,7 @@ export function QuestionPreview({ question }: QuestionPreviewProps) {
   // Mock data for preview if missing
   const prompt = question.prompt_de || "Hier steht die Frage...";
   const category = question.category || "ARTIKEL";
-  const options = question.options || [
-    { de: "Option A", en: "Option A", vi: "Lựa chọn A" },
-    { de: "Option B", en: "Option B", vi: "Lựa chọn B" }
-  ];
+  const options = question.options || [];
 
   return (
     <div className="w-full max-w-sm mx-auto overflow-hidden bg-white rounded-[2.5rem] shadow-floating border border-slate-100 flex flex-col scale-90 origin-top">
@@ -61,7 +58,7 @@ export function QuestionPreview({ question }: QuestionPreviewProps) {
                   <div className="w-6 h-6 rounded-md bg-slate-50 flex items-center justify-center text-[10px] font-black text-slate-400 shrink-0">
                      {String.fromCharCode(65 + idx)}
                   </div>
-                  <span className="text-xs font-bold text-slate-500 truncate">{opt.de || "..."}</span>
+                  <span className="text-xs font-bold text-slate-500 truncate">{opt|| "..."}</span>
                 </div>
               ))}
            </div>
