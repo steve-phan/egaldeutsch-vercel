@@ -6,9 +6,8 @@ import (
 	"egaldeutsch-vercel/handlers"
 )
 
-// NewRouter constructs a completely standard Go multiplexer
-// that maps all the previously detached Vercel endpoints to a given package handler.
-func NewRouter() *http.ServeMux {
+// NewRouter constructs a completely standard Go multiplexer wrapped with logging middleware.
+func NewRouter() http.Handler {
 	mux := http.NewServeMux()
 
 	// --- Auth Routes ---
@@ -33,5 +32,5 @@ func NewRouter() *http.ServeMux {
 	// --- Admin Routes ---
 	mux.HandleFunc("/api/admin/questions", handlers.AdminQuestionsHandler)
 
-	return mux
+	return LoggingMiddleware(mux)
 }

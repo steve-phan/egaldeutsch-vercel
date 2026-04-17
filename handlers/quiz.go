@@ -1,14 +1,20 @@
 package handlers
 
 import (
+	"context"
 	"encoding/json"
 	"net/http"
 	"strconv"
+	"time"
 
+	"egaldeutsch-vercel/db"
 	"egaldeutsch-vercel/mock"
+	"egaldeutsch-vercel/models"
 	"egaldeutsch-vercel/utils"
 
+	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/bson/primitive"
+	"go.mongodb.org/mongo-driver/mongo"
 )
 
 type QuizSubmitRequest struct {
@@ -46,8 +52,41 @@ func QuizQuestionsHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	// TODO: Phase 6 MongoDB logic
-	json.NewEncoder(w).Encode([]interface{}{})
+	collection := db.GetCollection("questions")
+	ctx, cancel := context.WithTimeout(context.Background(), 15*time.Second)
+	defer cancel()
+
+	matchStage := bson.M{}
+	if category != "" {
+		matchStage["category"] = category
+	}
+	if level != "" {
+		matchStage["level"] = level
+	}
+
+	pipeline := mongo.Pipeline{
+		{{Key: "$match", Value: matchStage}},
+		{{Key: "$sample", Value: bson.M{"size": limit}}},
+	}
+
+	cursor, err := collection.Aggregate(ctx, pipeline)
+	if err != nil {
+		utils.LogError(w, err, "Failed to aggregate questions", http.StatusInternalServerError)
+		return
+	}
+	defer cursor.Close(ctx)
+
+	var questions []models.QuizQuestion
+	if err = cursor.All(ctx, &questions); err != nil {
+		utils.LogError(w, err, "Failed to decode questions", http.StatusInternalServerError)
+		return
+	}
+
+	if questions == nil {
+		questions = []models.QuizQuestion{}
+	}
+
+	json.NewEncoder(w).Encode(questions)
 }
 
 // QuizCategoriesHandler handles GET /api/quiz/categories
@@ -66,8 +105,49 @@ func QuizCategoriesHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	// TODO: Phase 6 MongoDB logic
-	json.NewEncoder(w).Encode(map[string]map[string]int{})
+	collection := db.GetCollection("questions")
+	ctx, cancel := context.WithTimeout(context.Background(), 15*time.Second)
+	defer cancel()
+
+	// Pipeline: Group By Category and Level
+	pipeline := mongo.Pipeline{
+		{{Key: "$group", Value: bson.D{
+			{Key: "_id", Value: bson.D{
+				{Key: "category", Value: "$category"},
+				{Key: "level", Value: "$level"},
+			}},
+			{Key: "count", Value: bson.D{{Key: "$sum", Value: 1}}},
+		}}},
+	}
+
+	cursor, err := collection.Aggregate(ctx, pipeline)
+	if err != nil {
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+	defer cursor.Close(ctx)
+
+	var results []bson.M
+	if err = cursor.All(ctx, &results); err != nil {
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+
+	// Marshall into the map[string]map[string]int expected by the dashboard UI
+	stats := make(map[string]map[string]int)
+	for _, result := range results {
+		idDoc := result["_id"].(bson.M)
+		cat := idDoc["category"].(string)
+		lvl := idDoc["level"].(string)
+		count := int(result["count"].(int32))
+
+		if stats[cat] == nil {
+			stats[cat] = make(map[string]int)
+		}
+		stats[cat][lvl] = count
+	}
+
+	json.NewEncoder(w).Encode(stats)
 }
 
 // QuizSubmitHandler handles POST /api/quiz/submit
@@ -85,7 +165,7 @@ func QuizSubmitHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	// Try to get user from token, but don't fail if guest (no token)
+	// Optional User ID via JWT
 	var userID *primitive.ObjectID
 	claims, err := utils.GetClaimsFromRequest(r)
 	if err == nil {
@@ -109,6 +189,26 @@ func QuizSubmitHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	// TODO: Phase 6 MongoDB logic
-	json.NewEncoder(w).Encode(map[string]interface{}{"status": "success"})
+	collection := db.GetCollection("sessions")
+	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
+	defer cancel()
+
+	session := models.QuizSession{
+		ID:          primitive.NewObjectID(),
+		UserID:      userID,
+		Category:    req.Category,
+		Level:       req.Level,
+		Score:       req.Score,
+		TotalQ:      req.TotalQ,
+		CorrectQ:    req.CorrectQ,
+		CompletedAt: time.Now(),
+	}
+
+	_, iErr := collection.InsertOne(ctx, session)
+	if iErr != nil {
+		http.Error(w, "Failed to record session", http.StatusInternalServerError)
+		return
+	}
+
+	json.NewEncoder(w).Encode(session)
 }

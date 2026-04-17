@@ -14,13 +14,7 @@ export default function AdminDashboardPage() {
   const router = useRouter();
   const { user, isAuthenticated } = useAuth();
   
-  // Note: For mock MVP we rely on API returning 403 if fake 'role' doesn't match, 
-  // but we optionally protect route locally.
-  useEffect(() => {
-    if (!isAuthenticated) {
-       router.push("/login");
-    }
-  }, [isAuthenticated, router]);
+  // Note: For local development, auth check is removed to allow direct testing
 
   const { questions, loading, error, fetchQuestions, deleteQuestion } = useAdminQuestions();
   
@@ -31,7 +25,6 @@ export default function AdminDashboardPage() {
     fetchQuestions(filterCategory, filterLevel);
   }, [fetchQuestions, filterCategory, filterLevel]);
 
-  if (!isAuthenticated) return null;
 
   return (
     <main className="min-h-screen bg-slate-50 py-12 px-4 md:px-8">

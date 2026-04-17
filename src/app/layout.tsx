@@ -21,8 +21,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${outfit.variable} font-sans antialiased text-slate-800 bg-white`}>
+    <html lang="en" suppressHydrationWarning>
+      <body className={`${outfit.variable} font-sans antialiased text-slate-800 bg-white`} suppressHydrationWarning>
         <AuthProvider>
           <LanguageProvider>
             {children}

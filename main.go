@@ -8,9 +8,15 @@ import (
 	"egaldeutsch-vercel/db"
 	"egaldeutsch-vercel/mock"
 	"egaldeutsch-vercel/router"
+	"github.com/joho/godotenv"
 )
 
 func main() {
+	// Securely load NextJS adjacent ENV keys when running locally
+	if err := godotenv.Load(".env.local"); err != nil {
+		log.Println("No .env.local file found, relying on system vars")
+	}
+
 	// Initialize mock database for localhost development
 	// You can also initialize real Mongo here if ENV is set
 	if mock.IsMockMode() {
