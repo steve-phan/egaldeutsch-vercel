@@ -1,18 +1,27 @@
 import type { Metadata } from "next";
-import { Outfit } from "next/font/google";
+import { Montserrat, Open_Sans } from "next/font/google";
 import "./globals.css";
 import { AuthProvider } from "@/components/auth-provider";
 import { LanguageProvider } from "@/contexts/language-context";
 import { Toaster } from "@/components/ui/sonner";
 
-const outfit = Outfit({
+const montserrat = Montserrat({
   subsets: ["latin"],
-  variable: "--font-outfit",
+  variable: "--font-montserrat",
+  weight: ["700", "800", "900"],
+});
+
+const openSans = Open_Sans({
+  subsets: ["latin"],
+  variable: "--font-open-sans",
 });
 
 export const metadata: Metadata = {
   title: "EgalDeutsch — German Grammar Quiz",
   description: "Master German grammar from A1 to B2 with interactive quizzes.",
+  icons: {
+    icon: "/favicon.png",
+  },
 };
 
 export default function RootLayout({
@@ -22,7 +31,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${outfit.variable} font-sans antialiased text-slate-800 bg-white`} suppressHydrationWarning>
+      <body className={`${montserrat.variable} ${openSans.variable} font-sans antialiased text-slate-800 bg-background`} suppressHydrationWarning>
         <AuthProvider>
           <LanguageProvider>
             {children}
