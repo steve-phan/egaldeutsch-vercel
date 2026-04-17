@@ -1,34 +1,35 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
-import { ProgressItem } from "./progress-item";
-import type { LessonProgress } from "@/hooks/use-dashboard";
+import { CategoryProgress } from "./category-progress";
 
 interface ProgressListProps {
-  progress: LessonProgress[];
+  categoryAverages: Record<string, number>;
 }
 
-export function ProgressList({ progress }: ProgressListProps) {
+export function ProgressList({ categoryAverages }: ProgressListProps) {
+  const entries = Object.entries(categoryAverages);
+
   return (
     <Card className="mb-8">
       <CardHeader>
-        <CardTitle>Your Progress</CardTitle>
-        <CardDescription>Detailed view of your learning journey</CardDescription>
+        <CardTitle>Your Progress by Category</CardTitle>
+        <CardDescription>Average score across all quiz sessions</CardDescription>
       </CardHeader>
       <CardContent>
-        {progress.length === 0 ? (
+        {entries.length === 0 ? (
           <div className="text-center py-8">
             <p className="text-slate-500 mb-4">
-              You haven&apos;t started any lessons yet.
+              You haven&apos;t completed any quizzes yet.
             </p>
             <Link href="/">
-              <Button>Browse Lessons</Button>
+              <Button>Start a Quiz</Button>
             </Link>
           </div>
         ) : (
-          <div className="space-y-4">
-            {progress.map((p) => (
-              <ProgressItem key={p.id} progress={p} />
+          <div className="space-y-3">
+            {entries.map(([cat, avg]) => (
+              <CategoryProgress key={cat} category={cat} avgScore={avg} />
             ))}
           </div>
         )}
