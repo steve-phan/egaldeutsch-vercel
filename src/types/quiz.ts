@@ -61,6 +61,7 @@ export interface CategoryMeta {
   icon: string;
   levels: CEFRLevel[];
   question_counts: Partial<Record<CEFRLevel, number>>;
+  keywords?: string[];
 }
 
 export interface QuizSessionConfig {

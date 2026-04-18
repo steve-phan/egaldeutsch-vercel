@@ -148,7 +148,8 @@ export const CATEGORY_META: CategoryMeta[] = [
     },
     icon: "💭",
     levels: ["B2"],
-    question_counts: {}
+    question_counts: {},
+    keywords: ["B2 Beruf", "Business German", "TELC Exam Prep"]
   },
   {
     id: "wortstellung",
@@ -160,6 +161,7 @@ export const CATEGORY_META: CategoryMeta[] = [
     },
     icon: "📋",
     levels: ["B2"],
-    question_counts: {}
+    question_counts: {},
+    keywords: ["TELC B2 Prep", "B2 Beruf", "German for Professionals"]
   }
 ];
