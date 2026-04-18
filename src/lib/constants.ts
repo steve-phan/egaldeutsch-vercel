@@ -1,5 +1,7 @@
 import { CategoryMeta } from "@/types/quiz";
 
+export const BACKEND_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8080";
+
 export const API_ROUTES = {
   // Auth
   SIGNUP: "/api/account/signup",
@@ -18,6 +20,11 @@ export const API_ROUTES = {
   // Admin
   ADMIN_QUESTIONS: "/api/admin/questions",
   ADMIN_USERS: "/api/admin/users",
+
+  // Idioms
+  IDIOMS: "/api/idioms",
+  IDIOM_RANDOM: "/api/idioms/random",
+  IDIOM_DETAIL: "/api/idioms/",
 };
 
 export const CEFR_LEVELS = ["A1", "A2", "B1", "B2"] as const;

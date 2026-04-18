@@ -17,6 +17,7 @@ import Image from "next/image";
 import { PremiumCard } from "@/components/shared/premium-card";
 import { ArrowRight } from "lucide-react";
 import { HeaderSkeleton, HeroSkeleton } from "@/components/layout/header-skeleton";
+import { RandomIdiom } from "@/components/idioms/random-idiom";
 
 export default function Home() {
   const { language } = useLanguage();
@@ -80,6 +81,7 @@ export default function Home() {
                              fill 
                              sizes="(max-width: 768px) 160px, 224px"
                              priority
+                             loading="eager"
                              className="object-contain" 
                            />
                         </div>
@@ -96,6 +98,11 @@ export default function Home() {
                  </>
                )}
             </div>
+
+            {/* Random Idiom Section */}
+            <section className="mb-12">
+               <RandomIdiom />
+            </section>
 
             {/* Lessons Section */}
             <section className="mb-12">

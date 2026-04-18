@@ -36,6 +36,10 @@ const nextConfig: NextConfig = {
           source: '/api/user/:path*',
           destination: 'http://127.0.0.1:8080/api/user/:path*',
         },
+        {
+          source: '/api/idioms/:path*',
+          destination: 'http://127.0.0.1:8080/api/idioms/:path*',
+        },
       ];
     }
     return [];

@@ -32,5 +32,10 @@ func NewRouter() http.Handler {
 	// --- Admin Routes ---
 	mux.HandleFunc("/api/admin/questions", handlers.AdminQuestionsHandler)
 
+	// --- Idiom Routes ---
+	mux.HandleFunc("/api/idioms", handlers.IdiomsListHandler)
+	mux.HandleFunc("/api/idioms/random", handlers.IdiomRandomHandler)
+	mux.HandleFunc("/api/idioms/", handlers.IdiomBySlugHandler)
+
 	return LoggingMiddleware(mux)
 }
