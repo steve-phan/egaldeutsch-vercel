@@ -39,7 +39,7 @@ export function HeroQuizCard() {
       <div className="absolute bottom-0 left-0 w-48 h-48 bg-indigo-500/5 rounded-full -ml-24 -mb-24 blur-[60px] pointer-events-none" />
       <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary/20 via-primary to-primary/20 opacity-50 group-hover:opacity-100 transition-opacity" />
 
-      <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12 relative z-10 p-8 sm:p-10 md:p-14 lg:p-16">
+      <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12 relative z-10 p-5 sm:p-8 md:p-14 lg:p-16 text-balance">
         {/* Content Side */}
         <div className="flex-1 space-y-6 md:space-y-8 text-center md:text-left">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-primary/10 text-[10px] md:text-[11px] font-black text-primary uppercase tracking-[0.2em] border border-primary/5">

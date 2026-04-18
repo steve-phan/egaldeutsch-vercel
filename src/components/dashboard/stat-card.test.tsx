@@ -27,7 +27,7 @@ describe("StatCard", () => {
       <StatCard
         title="Success"
         value={100}
-        valueClassName="text-green-600"
+        className="text-green-600"
       />
     );
 

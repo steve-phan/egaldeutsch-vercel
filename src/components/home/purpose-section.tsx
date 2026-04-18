@@ -42,7 +42,7 @@ export function PurposeSection() {
   const current = content[language as keyof typeof content] || content.en;
 
   return (
-    <div className="w-full glass-card-premium rounded-[3rem] p-8 md:p-12 relative overflow-hidden border border-white/40">
+    <div className="w-full glass-card-premium rounded-[2.5rem] p-6 md:p-12 relative overflow-hidden border border-white/40 shadow-premium">
       <div className="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl -mr-32 -mt-32" />
       
       <div className="relative z-10 max-w-4xl mx-auto">

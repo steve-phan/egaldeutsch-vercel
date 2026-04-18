@@ -15,6 +15,7 @@ import { RandomIdiom } from "@/components/idioms/random-idiom";
 import { Facebook, Trophy, Users, Star } from "lucide-react";
 import { PremiumCard } from "@/components/shared/premium-card";
 import { PurposeSection } from "@/components/home/purpose-section";
+import { Section } from "@/components/shared/layout/section";
 
 export function HomeClientView() {
   const { language } = useLanguage();
@@ -30,13 +31,13 @@ export function HomeClientView() {
       <LanguageOnboarding />
       
       {status === "loading" ? (
-        <div className="w-full">
+        <Section spacing="sm">
           <HeroSkeleton />
-        </div>
+        </Section>
       ) : (
-        <div className="w-full space-y-16 md:space-y-24">
+        <div className="w-full">
           {/* Hero / Welcome Context */}
-          <section>
+          <Section spacing="sm">
              {isGuest ? (
                 <div className="space-y-12">
                    <GuestConversionBanner />
@@ -45,15 +46,15 @@ export function HomeClientView() {
              ) : (
                 <HeroQuizCard />
              )}
-          </section>
+          </Section>
 
           {/* Random Idiom Section */}
-          <section>
+          <Section spacing="md">
              <RandomIdiom />
-          </section>
+          </Section>
 
           {/* Lessons Section */}
-          <section id="lessons-section">
+          <Section id="lessons-section" spacing="lg">
              <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 mb-8">
                 <div>
                    <h2 className="text-3xl font-black text-slate-800 tracking-tighter italic">
@@ -65,13 +66,10 @@ export function HomeClientView() {
              </div>
              
              <CategoryGrid categories={categoriesToDisplay} loading={loading} />
-          </section>
+          </Section>
 
           {/* Community & Social Section */}
-          <section className="relative pb-12">
-             {/* Decorative Background Blob */}
-             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-full bg-primary/5 rounded-full blur-[120px] pointer-events-none -z-10" />
-
+          <Section spacing="lg" showBlob blobColor="primary" className="pb-16 md:pb-24">
              <div className="flex flex-col md:flex-row gap-8">
                 {/* Social Community Card */}
                 <PremiumCard glow className="flex-1 p-8 md:p-10 relative overflow-hidden group hover-lift-premium">
@@ -136,7 +134,7 @@ export function HomeClientView() {
                    </div>
                 </div>
              </div>
-          </section>
+          </Section>
         </div>
       )}
     </AppShell>
