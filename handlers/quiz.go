@@ -18,11 +18,12 @@ import (
 )
 
 type QuizSubmitRequest struct {
-	Category string  `json:"category"`
-	Level    string  `json:"level"`
-	Score    float64 `json:"score"`
-	TotalQ   int     `json:"total_q"`
-	CorrectQ int     `json:"correct_q"`
+	Category    string   `json:"category"`
+	Level       string   `json:"level"`
+	Score       float64  `json:"score"`
+	TotalQ      int      `json:"total_q"`
+	CorrectQ    int      `json:"correct_q"`
+	QuestionIDs []string `json:"question_ids"`
 }
 
 // QuizQuestionsHandler handles GET /api/quiz/questions
@@ -45,6 +46,15 @@ func QuizQuestionsHandler(w http.ResponseWriter, r *http.Request) {
 		}
 	}
 
+	// Optional User ID via JWT
+	var userID *primitive.ObjectID
+	claims, err := utils.GetClaimsFromRequest(r)
+	if err == nil {
+		if id, err := primitive.ObjectIDFromHex(claims.UserID); err == nil {
+			userID = &id
+		}
+	}
+
 	if mock.IsMockMode() {
 		mockDB := mock.GetMockDB()
 		questions := mockDB.GetQuestions(category, level, limit)
@@ -53,6 +63,7 @@ func QuizQuestionsHandler(w http.ResponseWriter, r *http.Request) {
 	}
 
 	collection := db.GetCollection("questions")
+	sessionColl := db.GetCollection("sessions")
 	ctx, cancel := context.WithTimeout(context.Background(), 15*time.Second)
 	defer cancel()
 
@@ -64,11 +75,36 @@ func QuizQuestionsHandler(w http.ResponseWriter, r *http.Request) {
 		matchStage["level"] = level
 	}
 
+	// IF LOGGED IN: Exclude previously answered questions
+	if userID != nil {
+		// Find all sessions for this user & category
+		filter := bson.M{"user_id": userID}
+		if category != "" {
+			filter["category"] = category
+		}
+
+		cursor, err := sessionColl.Find(ctx, filter)
+		if err == nil {
+			var sessions []models.QuizSession
+			if err = cursor.All(ctx, &sessions); err == nil {
+				answeredIDs := []primitive.ObjectID{}
+				for _, s := range sessions {
+					answeredIDs = append(answeredIDs, s.QuestionIDs...)
+				}
+
+				if len(answeredIDs) > 0 {
+					matchStage["_id"] = bson.M{"$nin": answeredIDs}
+				}
+			}
+		}
+	}
+
 	pipeline := mongo.Pipeline{
 		{{Key: "$match", Value: matchStage}},
 		{{Key: "$sample", Value: bson.M{"size": limit}}},
 	}
 
+	// Execute aggregation
 	cursor, err := collection.Aggregate(ctx, pipeline)
 	if err != nil {
 		utils.LogError(w, err, "Failed to aggregate questions", http.StatusInternalServerError)
@@ -80,6 +116,24 @@ func QuizQuestionsHandler(w http.ResponseWriter, r *http.Request) {
 	if err = cursor.All(ctx, &questions); err != nil {
 		utils.LogError(w, err, "Failed to decode questions", http.StatusInternalServerError)
 		return
+	}
+
+	// FALLBACK: If we have zero results (user answered everything), try again WITHOUT the repetition filter
+	if len(questions) == 0 && userID != nil && matchStage["_id"] != nil {
+		delete(matchStage, "_id")
+		pipeline = mongo.Pipeline{
+			{{Key: "$match", Value: matchStage}},
+			{{Key: "$sample", Value: bson.M{"size": limit}}},
+		}
+		cursor, err = collection.Aggregate(ctx, pipeline)
+		if err == nil {
+			defer cursor.Close(ctx)
+			cursor.All(ctx, &questions)
+		}
+	}
+
+	if questions == nil {
+		questions = []models.QuizQuestion{}
 	}
 
 	if questions == nil {
@@ -165,19 +219,23 @@ func QuizSubmitHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	// Optional User ID via JWT
-	var userID *primitive.ObjectID
+	// MANDATORY User ID for sessions
 	claims, err := utils.GetClaimsFromRequest(r)
-	if err == nil {
-		if id, err := primitive.ObjectIDFromHex(claims.UserID); err == nil {
-			userID = &id
-		}
+	if err != nil {
+		http.Error(w, "Unauthorized: Login required to save session", http.StatusUnauthorized)
+		return
+	}
+
+	userID, err := primitive.ObjectIDFromHex(claims.UserID)
+	if err != nil {
+		http.Error(w, "Invalid user ID in token", http.StatusBadRequest)
+		return
 	}
 
 	if mock.IsMockMode() {
 		mockDB := mock.GetMockDB()
 		session := &mock.MockQuizSession{
-			UserID:   userID,
+			UserID:   &userID,
 			Category: req.Category,
 			Level:    req.Level,
 			Score:    req.Score,
@@ -193,14 +251,23 @@ func QuizSubmitHandler(w http.ResponseWriter, r *http.Request) {
 	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
 	defer cancel()
 
+	// Convert string IDs to ObjectIDs
+	objIDs := make([]primitive.ObjectID, 0, len(req.QuestionIDs))
+	for _, idStr := range req.QuestionIDs {
+		if oid, err := primitive.ObjectIDFromHex(idStr); err == nil {
+			objIDs = append(objIDs, oid)
+		}
+	}
+
 	session := models.QuizSession{
 		ID:          primitive.NewObjectID(),
-		UserID:      userID,
+		UserID:      &userID,
 		Category:    req.Category,
 		Level:       req.Level,
 		Score:       req.Score,
 		TotalQ:      req.TotalQ,
 		CorrectQ:    req.CorrectQ,
+		QuestionIDs: objIDs,
 		CompletedAt: time.Now(),
 	}
 

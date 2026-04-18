@@ -29,6 +29,7 @@ func NewRouter() http.Handler {
 	mux.HandleFunc("/api/quiz/questions", handlers.QuizQuestionsHandler)
 	mux.HandleFunc("/api/quiz/categories", handlers.QuizCategoriesHandler)
 	mux.HandleFunc("/api/quiz/submit", handlers.QuizSubmitHandler)
+	mux.HandleFunc("/api/quiz/leaderboard", handlers.LeaderboardHandler)
 
 	// --- Admin Routes ---
 	mux.HandleFunc("/api/admin/questions", handlers.AdminQuestionsHandler)

@@ -188,7 +188,8 @@ export function useQuizSession(): UseQuizSessionResult {
                   level: configuration.current.level,
                   score,
                   total_q: questions.length,
-                  correct_q: correctCount
+                  correct_q: correctCount,
+                  question_ids: questions.map(q => q.id)
               })
             });
           }

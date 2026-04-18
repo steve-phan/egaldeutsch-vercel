@@ -15,5 +15,6 @@ type QuizSession struct {
 	Score       float64             `bson:"score"        json:"score"`
 	TotalQ      int                 `bson:"total_q"      json:"total_q"`
 	CorrectQ    int                 `bson:"correct_q"    json:"correct_q"`
+	QuestionIDs []primitive.ObjectID `bson:"question_ids" json:"question_ids"`
 	CompletedAt time.Time           `bson:"completed_at" json:"completed_at"`
 }
