@@ -32,8 +32,8 @@ export default function LoginPage() {
               priority
             />
           </div>
-          <h1 className="text-4xl font-display font-black text-slate-800 tracking-tight">
-            egal<span className="text-primary">deutsch</span>
+          <h1 className="text-4xl font-display font-black text-slate-800 tracking-tight italic">
+            Egal<span className="text-primary italic">Deutsch</span>
           </h1>
         </div>
 

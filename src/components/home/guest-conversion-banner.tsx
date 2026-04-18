@@ -15,10 +15,10 @@ export function GuestConversionBanner() {
                <Trophy className="w-3 h-3" /> Mastery Awaits
             </div>
             <h2 className="text-3xl md:text-4xl font-black text-slate-800 leading-[0.9] tracking-tighter italic">
-               Save Your Progress, <br className="hidden md:block" /> Master the Language.
+               Master German with <span className="text-primary italic">EgalDeutsch</span>.
             </h2>
             <p className="text-sm font-bold text-slate-400 max-w-md">
-               Join 5,000+ learners. Sign up for free to track your mastery points, save results, and climb the leaderboard.
+               EgalDeutsch is an interactive platform designed to help you master German grammar through gamified quizzes, structured lessons, and professional exam preparation.
             </p>
          </div>
 

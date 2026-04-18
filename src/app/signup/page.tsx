@@ -107,7 +107,7 @@ export default function SignupPage() {
 
         {/* Footer Brand */}
         <p className="mt-12 text-slate-400 font-black tracking-widest uppercase text-xs">
-          © 2024 EgalDeutsch • Learn German with Ease
+          © {new Date().getFullYear()} EgalDeutsch • Learn German with Ease
         </p>
       </div>
     </main>

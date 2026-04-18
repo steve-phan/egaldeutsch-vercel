@@ -14,6 +14,7 @@ import { HeroSkeleton } from "@/components/layout/header-skeleton";
 import { RandomIdiom } from "@/components/idioms/random-idiom";
 import { Facebook, Trophy, Users, Star } from "lucide-react";
 import { PremiumCard } from "@/components/shared/premium-card";
+import { PurposeSection } from "@/components/home/purpose-section";
 
 export function HomeClientView() {
   const { language } = useLanguage();
@@ -40,7 +41,12 @@ export function HomeClientView() {
             {/* Hero / Welcome Context */}
             <div className="mb-12">
                {isGuest ? (
-                  <GuestConversionBanner />
+                  <>
+                     <GuestConversionBanner />
+                     <div className="mt-12">
+                        <PurposeSection />
+                     </div>
+                  </>
                ) : (
                   <HeroQuizCard />
                )}

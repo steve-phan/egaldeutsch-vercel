@@ -19,10 +19,10 @@ const openSans = Open_Sans({
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.egaldeutsch.com"),
   title: {
-    default: "EgalDeutsch — Master German Grammar",
+    default: "EgalDeutsch — German Grammar Learning Platform",
     template: "%s | EgalDeutsch"
   },
-  description: "Master German grammar from A1 to B2 with interactive quizzes, TELC & Goethe exam preparation, and professional B2 Beruf training.",
+  description: "EgalDeutsch is the ultimate interactive platform for mastering German grammar from A1 to B2. Prepare for TELC, Goethe exams, and B2 Beruf with our structured modules and quizzes.",
   keywords: ["German Grammar", "German Quiz", "TELC B2", "B2 Beruf Deutsch", "Goethe Exam Prep", "Learn German", "A1-B2 German"],
   authors: [{ name: "EgalDeutsch Team" }],
   creator: "EgalDeutsch",
@@ -31,8 +31,8 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://www.egaldeutsch.com",
     siteName: "EgalDeutsch",
-    title: "EgalDeutsch — Master German Grammar",
-    description: "The ultimate interactive platform for German grammar mastery and exam success.",
+    title: "EgalDeutsch — German Grammar Mastery",
+    description: "EgalDeutsch is the ultimate interactive platform for German grammar mastery and exam success.",
     images: [
       {
         url: "/og-image.png", // Recommended size 1200x630
