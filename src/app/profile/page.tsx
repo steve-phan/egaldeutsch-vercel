@@ -1,7 +1,6 @@
 "use client";
 
 import { useProfile } from "@/hooks/use-profile";
-import { DashboardHeader } from "@/components/dashboard/header";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -25,9 +24,7 @@ export default function ProfilePage() {
 
   return (
     <AppShell showNav={true} maxWidth="md">
-        <DashboardHeader />
-
-        <section className="w-full pt-10">
+        <section className="w-full pt-6">
            <div className="mb-10">
               <h1 className="text-4xl font-black text-slate-800 tracking-tighter italic">Dein Profil</h1>
               <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest mt-1">Manage your Mastery Account</p>

@@ -49,8 +49,10 @@ export default function QuizOrchestrator({ params }: { params: Promise<{ categor
 
   if (status === "idle") {
      return (
-       <AppShell showNav={true} maxWidth="md">
-         <SessionSetup category={category as QuizCategory} onStart={startSession} />
+       <AppShell showNav={true} showHeader={true} maxWidth="md">
+         <div className="pt-6">
+           <SessionSetup category={category as QuizCategory} onStart={startSession} />
+         </div>
        </AppShell>
      );
   }
@@ -129,12 +131,13 @@ export default function QuizOrchestrator({ params }: { params: Promise<{ categor
   };
 
   return (
-    <AppShell showNav={false} maxWidth="md">
+    <AppShell showNav={false} showHeader={false} maxWidth="md">
       {/* Immersive Responsive Header */}
-      <div className="w-full flex items-center justify-between mb-8 px-2">
+      <div className="w-full flex items-center justify-between mb-8 px-2 pt-4">
          <button 
            onClick={() => router.push("/")} 
-           className="w-10 h-10 bg-white/50 backdrop-blur-md rounded-xl flex items-center justify-center text-slate-400 shadow-premium border border-white/80 transition-all active:scale-90"
+           className="w-10 h-10 bg-white shadow-premium rounded-xl flex items-center justify-center text-slate-400 hover:text-primary border border-slate-50 transition-all active:scale-90"
+           title="Go Home"
          >
             <ChevronLeft className="w-5 h-5" />
          </button>

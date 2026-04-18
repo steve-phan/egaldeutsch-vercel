@@ -70,7 +70,7 @@ export default async function IdiomDetailPage({ params }: Props) {
 
   return (
     <AppShell showNav={false} maxWidth="lg">
-      <div className="py-8">
+      <div className="pt-6">
         {/* Navigation Top */}
         <div className="flex items-center justify-between mb-8">
             <Link 

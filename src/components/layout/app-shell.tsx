@@ -6,16 +6,19 @@ import { usePathname } from "next/navigation";
 import { useSession } from "next-auth/react";
 import { Footer } from "@/components/layout/footer";
 import { CookieBanner } from "@/components/layout/cookie-banner";
+import { Navbar } from "@/components/layout/navbar";
 
 interface AppShellProps {
   children: React.ReactNode;
   showNav?: boolean;
+  showHeader?: boolean;
   maxWidth?: "sm" | "md" | "lg" | "xl" | "2xl" | "none";
 }
 
 export function AppShell({ 
   children, 
   showNav = true, 
+  showHeader = true,
   maxWidth = "xl" 
 }: AppShellProps) {
   const pathname = usePathname();
@@ -43,8 +46,9 @@ export function AppShell({
       </div>
 
       {/* Content Container */}
-      <div className={`w-full ${maxWidthClasses[maxWidth]} px-6 z-10 flex flex-col flex-1`}>
-         <main className="flex-1 py-8 animate-in fade-in duration-700">
+      <div className={`w-full ${maxWidthClasses[maxWidth]} z-10 flex flex-col flex-1`}>
+         {showHeader && <Navbar />}
+         <main className="flex-1 py-4 md:py-8 animate-in fade-in duration-700 px-6">
             {children}
          </main>
          <Footer />

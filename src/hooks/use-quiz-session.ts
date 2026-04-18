@@ -169,17 +169,22 @@ export function useQuizSession(): UseQuizSessionResult {
   }, [status, currentIndex, questions.length]);
 
   const finishSession = async () => {
+    // Prevent multiple submissions if already loading or complete
+    if (status === "loading" || status === "complete") return;
+    
     setStatus("loading");
     
     const correctCount = answers.filter(a => a.isCorrect).length;
-    const score = (correctCount / questions.length) * 100;
+    const score = questions.length > 0 ? (correctCount / questions.length) * 100 : 0;
     
     try {
       if (configuration.current) {
-          const token = (session as any)?.user?.accessToken;
+          const typedSession = session as any;
+          const token = typedSession?.user?.accessToken;
           
           if (token) {
-            await fetch(API_ROUTES.QUIZ_SUBMIT, {
+            console.log("DEBUG: Finalizing quiz session. Token found, submitting...");
+            const response = await fetch(API_ROUTES.QUIZ_SUBMIT, {
               method: "POST",
               headers: { 
                   "Content-Type": "application/json",
@@ -194,10 +199,22 @@ export function useQuizSession(): UseQuizSessionResult {
                   question_ids: questions.map(q => q.id)
               })
             });
+
+            if (!response.ok) {
+              const errorText = await response.text();
+              console.error("Failed to submit quiz session:", response.status, errorText);
+            } else {
+              console.log("Quiz session submitted successfully");
+            }
+          } else {
+            console.warn("No access token found in session, session will not be saved.");
           }
       }
+      
+      // We set complete AFTER the fetch finishes (or fails) to avoid unmounting race conditions
       setStatus("complete");
-    } catch {
+    } catch (err) {
+       console.error("Error during finishSession:", err);
        // Even if submission fails, show user their local results
        setStatus("complete");
     }

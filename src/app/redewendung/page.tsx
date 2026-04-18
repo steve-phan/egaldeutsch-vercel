@@ -27,7 +27,7 @@ export default async function IdiomsDirectory() {
 
   return (
     <AppShell showNav={true} maxWidth="lg">
-      <div className="space-y-12 py-8">
+      <div className="space-y-12 pt-6 pb-20">
         {/* Header */}
         <div className="text-center space-y-4">
           <h1 className="text-5xl md:text-7xl font-black text-slate-900 tracking-tighter italic">

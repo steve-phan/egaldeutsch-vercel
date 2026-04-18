@@ -7,8 +7,6 @@ import { LanguageOnboarding } from "@/components/home/language-onboarding";
 import { HeroQuizCard } from "@/components/home/hero-quiz-card";
 import { useCategories } from "@/hooks/use-categories";
 import { useLanguage } from "@/contexts/language-context";
-import { DashboardHeader } from "@/components/dashboard/header";
-import { GuestHeader } from "@/components/layout/guest-header";
 import { GuestConversionBanner } from "@/components/home/guest-conversion-banner";
 import { AppShell } from "@/components/layout/app-shell";
 import { useSession } from "next-auth/react";
@@ -30,18 +28,13 @@ export default function Home() {
       
       {status === "loading" ? (
         <div className="w-full max-w-5xl mx-auto">
-          <HeaderSkeleton />
           <div className="mt-6 md:mt-10">
             <HeroSkeleton />
           </div>
         </div>
       ) : (
         <>
-          <div className="w-full max-w-5xl mx-auto">
-            {isGuest ? <GuestHeader /> : <DashboardHeader />}
-          </div>
-
-          <section className="w-full max-w-5xl mx-auto">
+          <section className="w-full max-w-5xl mx-auto mt-6">
             {/* Hero / Welcome Context */}
             <div className="mb-12">
                {isGuest ? (
