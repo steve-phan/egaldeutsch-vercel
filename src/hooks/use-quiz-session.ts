@@ -2,6 +2,7 @@ import { useState, useCallback, useRef, useEffect } from "react";
 import { useSession } from "next-auth/react";
 import { QuizQuestion, QuizSessionConfig } from "@/types/quiz";
 import { API_ROUTES } from "@/lib/constants";
+import { useAudio } from "@/hooks/use-audio";
 
 export interface AnswerRecord {
   questionId: string;
@@ -29,6 +30,7 @@ interface UseQuizSessionResult {
 
 export function useQuizSession(): UseQuizSessionResult {
   const { data: session } = useSession();
+  const { playCorrect, playWrong, playFinish } = useAudio();
   const [questions, setQuestions] = useState<QuizQuestion[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [status, setStatus] = useState<UseQuizSessionResult["status"]>("idle");
@@ -146,9 +148,15 @@ export function useQuizSession(): UseQuizSessionResult {
       }];
     });
     
+    if (isCorrect) {
+      playCorrect();
+    } else {
+      playWrong();
+    }
+    
     setLastAnswerEvaluated(isCorrect);
     setStatus("review");
-  }, [currentQuestion, status]);
+  }, [currentQuestion, status, playCorrect, playWrong]);
 
   const submitAnswer = useCallback((answer: string) => {
      evaluateAndRecordAnswer(answer);
@@ -213,6 +221,7 @@ export function useQuizSession(): UseQuizSessionResult {
       
       // We set complete AFTER the fetch finishes (or fails) to avoid unmounting race conditions
       setStatus("complete");
+      playFinish();
     } catch (err) {
        console.error("Error during finishSession:", err);
        // Even if submission fails, show user their local results

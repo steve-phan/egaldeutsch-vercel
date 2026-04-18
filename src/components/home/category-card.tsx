@@ -22,8 +22,8 @@ export function CategoryCard({ category }: CategoryCardProps) {
   };
 
   return (
-    <Link href={`/quiz/${category.id}`} className="group block active:scale-[0.98] transition-all">
-      <div className="relative w-[280px] h-[180px] rounded-[2rem] glass-card-premium p-6 flex flex-col justify-between overflow-hidden group-hover:-translate-y-2 group-hover:shadow-floating transition-all duration-500">
+    <Link href={`/quiz/${category.id}`} className="group block active:scale-[0.98] transition-all h-full">
+      <div className="relative h-[180px] rounded-[2rem] glass-card-premium p-6 flex flex-col justify-between overflow-hidden group-hover:-translate-y-2 group-hover:shadow-floating transition-all duration-500 border border-white/40">
         {/* Background Accent Gradient */}
         <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full -mr-16 -mt-16 blur-3xl group-hover:bg-primary/10 transition-colors" />
 
@@ -31,12 +31,12 @@ export function CategoryCard({ category }: CategoryCardProps) {
            <div className="space-y-3">
               <div className="flex gap-1.5 flex-wrap">
                  {category.levels.map(lvl => (
-                    <span key={lvl} className="px-2.5 py-0.5 rounded-full bg-secondary text-[10px] font-black text-secondary-foreground uppercase tracking-wider shadow-sm">
+                    <span key={lvl} className="px-2.5 py-0.5 rounded-full bg-secondary text-[10px] font-bold text-secondary-foreground uppercase tracking-widest shadow-sm border border-white/50">
                        {lvl}
                     </span>
                  ))}
               </div>
-              <h3 className="text-xl font-black text-slate-800 leading-tight tracking-tighter">
+              <h3 className="text-xl font-black text-slate-800 leading-tight tracking-tighter italic">
                  {getLabel()}
               </h3>
            </div>
@@ -47,7 +47,7 @@ export function CategoryCard({ category }: CategoryCardProps) {
         </div>
         
         <div className="flex items-center justify-between z-10">
-           <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest">
+           <p className="text-[9px] font-bold text-slate-400 uppercase tracking-[0.2em] group-hover:text-primary transition-colors">
               Explore Grammar
            </p>
            <div className="w-8 h-8 rounded-full bg-slate-50 flex items-center justify-center text-slate-300 group-hover:bg-primary group-hover:text-white transition-all duration-300">

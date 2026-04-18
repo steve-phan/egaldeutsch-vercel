@@ -90,10 +90,13 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground font-sans selection:bg-primary/20;
+    @apply bg-background text-foreground font-sans selection:bg-primary/20 antialiased;
   }
-  h1, h2, h3, h4, h5, h6 {
+  h1, h2, h3 {
     @apply font-display font-black tracking-tighter;
+  }
+  h4, h5, h6 {
+    @apply font-display font-extrabold tracking-tight;
   }
 }
 
@@ -103,7 +106,7 @@
 }
 
 .btn-orange {
-  @apply bg-primary text-white font-black uppercase tracking-[0.15em] text-[10px] rounded-2xl shadow-lg shadow-primary/20 hover:shadow-primary/30 transition-all duration-300 flex items-center justify-center gap-2;
+  @apply bg-primary text-white font-extrabold uppercase tracking-[0.15em] text-[10px] rounded-2xl shadow-lg shadow-primary/20 hover:shadow-primary/30 transition-all duration-300 flex items-center justify-center gap-2;
   background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.05));
 }
 

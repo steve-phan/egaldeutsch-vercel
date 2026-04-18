@@ -46,9 +46,9 @@ export function AppShell({
       </div>
 
       {/* Content Container */}
-      <div className={`w-full ${maxWidthClasses[maxWidth]} z-10 flex flex-col flex-1`}>
+      <div className={`w-full ${maxWidthClasses[maxWidth]} z-10 flex flex-col min-h-screen`}>
          {showHeader && <Navbar />}
-         <main className="flex-1 py-4 md:py-8 animate-in fade-in duration-700 px-6">
+         <main className="flex-1 py-6 md:py-10 animate-in fade-in duration-700 px-4 md:px-8">
             {children}
          </main>
          <Footer />
