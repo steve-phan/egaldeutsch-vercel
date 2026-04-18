@@ -47,10 +47,18 @@ func GoogleSyncHandler(w http.ResponseWriter, r *http.Request) {
 	err := collection.FindOne(ctx, bson.M{"email": req.Email}).Decode(&existingUser)
 
 	if err == nil {
-		// User already exists, just return success
+		// User already exists, generate a fresh token
+		token, tokenErr := utils.GenerateToken(existingUser.ID.Hex(), existingUser.Email, existingUser.Role)
+		if tokenErr != nil {
+			http.Error(w, "Failed to generate token", http.StatusInternalServerError)
+			return
+		}
+
+		// User already exists, return success with token
 		json.NewEncoder(w).Encode(map[string]interface{}{
 			"message": "User already synchronized",
 			"user":    existingUser,
+			"token":   token,
 		})
 		return
 	}
@@ -75,8 +83,17 @@ func GoogleSyncHandler(w http.ResponseWriter, r *http.Request) {
 		utils.SendWelcomeEmail(newUser.Email, newUser.Name)
 	}()
 
+	// Generate token for new user
+	token, tokenErr := utils.GenerateToken(newUser.ID.Hex(), newUser.Email, newUser.Role)
+	if tokenErr != nil {
+		// Even if token fails, user was created. But for consistency we return error.
+		http.Error(w, "User created but failed to generate token", http.StatusInternalServerError)
+		return
+	}
+
 	json.NewEncoder(w).Encode(map[string]interface{}{
 		"message": "User created and welcome email triggered",
 		"user":    newUser,
+		"token":   token,
 	})
 }

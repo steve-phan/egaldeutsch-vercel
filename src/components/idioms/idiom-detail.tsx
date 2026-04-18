@@ -2,8 +2,7 @@
 
 import { Idiom } from "@/types/idiom";
 import { useLanguage } from "@/contexts/language-context";
-import { Quote } from "lucide-react";
-
+ 
 interface IdiomDetailProps {
   idiom: Idiom;
 }
@@ -45,13 +44,13 @@ export function IdiomDetail({ idiom }: IdiomDetailProps) {
         </div>
 
         {/* Literal Translation Highlight */}
-        <div className="bg-primary/5 border border-primary/10 rounded-[2.5rem] p-8 mt-12 relative overflow-hidden">
+        {/* <div className="bg-primary/5 border border-primary/10 rounded-[2.5rem] p-8 mt-12 relative overflow-hidden">
           <Quote className="absolute -top-4 -left-4 w-24 h-24 text-primary/10 -rotate-12" />
           <div className="relative z-10">
             <p className="text-xs font-black uppercase tracking-widest text-primary/60 mb-2">Literal Translation</p>
             <p className="text-2xl font-black text-slate-800 italic">"{idiom.literal}"</p>
           </div>
-        </div>
+        </div> */}
       </div>
 
       {/* Main Content (Raw HTML) */}

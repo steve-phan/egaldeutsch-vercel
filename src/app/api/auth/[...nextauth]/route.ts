@@ -70,7 +70,7 @@ export const authOptions: NextAuthOptions = {
       if (account?.provider === "google") {
         try {
           // Sync Google user with our Go backend
-          await fetch(`${process.env.NEXT_PUBLIC_API_URL || "http://localhost:8080"}/api/account/google-sync`, {
+          const syncRes = await fetch(`${process.env.NEXT_PUBLIC_API_URL || "http://localhost:8080"}/api/account/google-sync`, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
@@ -78,6 +78,14 @@ export const authOptions: NextAuthOptions = {
               name: user.name,
             }),
           });
+          
+          if (syncRes.ok) {
+            const syncData = await syncRes.json();
+            if (syncData.token) {
+              (user as any).accessToken = syncData.token;
+              (user as any).id = syncData.user?.id || syncData.user?._id;
+            }
+          }
         } catch (error) {
           console.error("Failed to sync Google user with backend:", error);
         }

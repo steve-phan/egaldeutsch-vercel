@@ -1,4 +1,5 @@
 import { useState, useCallback, useRef, useEffect } from "react";
+import { useSession } from "next-auth/react";
 import { QuizQuestion, QuizSessionConfig } from "@/types/quiz";
 import { API_ROUTES } from "@/lib/constants";
 
@@ -27,6 +28,7 @@ interface UseQuizSessionResult {
 }
 
 export function useQuizSession(): UseQuizSessionResult {
+  const { data: session } = useSession();
   const [questions, setQuestions] = useState<QuizQuestion[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [status, setStatus] = useState<UseQuizSessionResult["status"]>("idle");
@@ -174,7 +176,7 @@ export function useQuizSession(): UseQuizSessionResult {
     
     try {
       if (configuration.current) {
-          const token = typeof window !== "undefined" ? localStorage.getItem("token") : null;
+          const token = (session as any)?.user?.accessToken;
           
           if (token) {
             await fetch(API_ROUTES.QUIZ_SUBMIT, {
