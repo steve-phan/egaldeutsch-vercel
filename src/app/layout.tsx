@@ -19,7 +19,7 @@ const openSans = Open_Sans({
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.egaldeutsch.com"),
   title: {
-    default: "EgalDeutsch — German Grammar Mastery",
+    default: "EgalDeutsch — Master German Grammar",
     template: "%s | EgalDeutsch"
   },
   description: "Master German grammar from A1 to B2 with interactive quizzes, TELC & Goethe exam preparation, and professional B2 Beruf training.",
@@ -63,6 +63,9 @@ export const metadata: Metadata = {
     icon: "/favicon.ico?v=1",
     shortcut: "/favicon.ico",
     apple: "/icon.png",
+  },
+  verification: {
+    google: "YOUR_GOOGLE_VERIFICATION_CODE_HERE",
   },
 };
 
