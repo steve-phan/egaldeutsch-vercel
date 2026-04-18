@@ -37,7 +37,7 @@ export function PremiumCard({
       onClick={onClick}
       className={cn(
         "glass-card-premium rounded-[2.5rem] border border-white/50 relative overflow-hidden",
-        hover && "hover:-translate-y-1 hover:shadow-floating transition-all duration-500 cursor-pointer",
+        hover && "hover-lift-premium cursor-pointer",
         animate && "animate-in fade-in slide-in-from-bottom-4 duration-700 fill-mode-both text-balance",
         paddings[padding],
         className

@@ -50,7 +50,7 @@ export function BottomNav() {
           return (
             <Link key={idx} href={item.href}>
               <div
-                className={`flex flex-col items-center justify-center w-12 h-12 rounded-2xl transition-all duration-300 relative group
+                className={`flex flex-col items-center justify-center w-12 h-12 rounded-2xl transition-all duration-300 relative group active:scale-90
                   ${item.active ? "text-primary scale-110" : "text-slate-400 hover:text-slate-600 hover:bg-slate-50/50"}
                 `}
               >

@@ -52,10 +52,10 @@ export function McqQuestion({ question, onSubmit, disabled }: McqQuestionProps) 
                     disabled={disabled}
                     onClick={() => setSelected(opt)}
                     className={`
-                      w-full h-12 px-6 rounded-2xl font-bold flex items-center justify-between transition-all duration-300 transform
+                      w-full h-12 px-6 rounded-2xl font-bold flex items-center justify-between transition-all duration-300 transform active-bounce
                       ${isSelected 
                          ? "bg-primary text-white shadow-lg shadow-primary/20 scale-[1.02] border-transparent" 
-                         : "bg-white border border-slate-100 text-slate-500 hover:border-primary/30 hover:bg-slate-50 active:scale-98"}
+                         : "bg-white border border-slate-100 text-slate-500 hover:border-primary/30 hover:bg-slate-50"}
                       ${disabled && "pointer-events-none"}
                     `}
                   >

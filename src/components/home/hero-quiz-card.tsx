@@ -63,7 +63,7 @@ export function HeroQuizCard() {
                   lessonsSection.scrollIntoView({ behavior: 'smooth' });
                 }
               }}
-              className="btn-orange h-14 md:h-16 px-10 md:px-12 group text-base md:text-xl font-black shadow-premium active:scale-95 transition-all"
+              className="btn-orange h-14 md:h-16 px-10 md:px-12 group text-base md:text-xl font-black shadow-premium active-bounce transition-all"
             >
               {getButtonText()} <ArrowRight className="w-5 h-5 md:w-6 md:h-6 group-hover:translate-x-1.5 transition-transform" />
             </button>

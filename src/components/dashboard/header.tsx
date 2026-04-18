@@ -17,7 +17,7 @@ export function DashboardHeader() {
             alt="Profile" 
             fill 
             sizes="(max-width: 768px) 40px, 48px"
-            className="object-contain" 
+            className="object-contain hover:scale-110 transition-transform duration-500" 
           />
         </div>
         <div>
@@ -32,14 +32,14 @@ export function DashboardHeader() {
 
       <div className="flex items-center gap-3">
          <Link href="/notifications">
-            <button className="w-10 h-10 bg-white shadow-premium rounded-xl flex items-center justify-center text-slate-400 hover:text-primary transition-all active:scale-90 border border-slate-50 relative group">
+            <button className="w-10 h-10 bg-white shadow-premium rounded-xl flex items-center justify-center text-slate-400 hover:text-primary transition-all active-bounce border border-slate-50 relative group">
                <Bell className="w-5 h-5 group-hover:animate-ring" />
                <span className="absolute top-2 right-2 w-2 h-2 bg-primary rounded-full border-2 border-white shadow-sm" />
             </button>
          </Link>
 
          <Link href="/profile">
-            <button className="w-10 h-10 bg-white shadow-premium rounded-xl flex items-center justify-center text-slate-400 hover:text-primary transition-all active:scale-95 border border-slate-50">
+            <button className="w-10 h-10 bg-white shadow-premium rounded-xl flex items-center justify-center text-slate-400 hover:text-primary transition-all active-bounce border border-slate-50">
                <Settings className="w-5 h-5" />
             </button>
          </Link>

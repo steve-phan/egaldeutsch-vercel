@@ -50,13 +50,13 @@ export function ExploreClientView() {
                      placeholder="Search categories..."
                      value={search}
                      onChange={(e) => setSearch(e.target.value)}
-                     className="w-full h-12 pl-12 pr-6 rounded-2xl bg-white border-slate-100 shadow-premium focus:ring-4 focus:ring-primary/5 outline-none transition-all font-bold text-sm"
+                     className="w-full h-12 pl-12 pr-6 rounded-2xl bg-white border border-slate-100 shadow-premium input-focus-premium font-bold text-sm"
                   />
                </div>
             </VisualPageHeader>
 
             {!search && featuredCategory && (
-               <PremiumCard padding="none" glow className="h-[28rem] md:h-80 overflow-hidden animate-in zoom-in-95 duration-1000 relative group">
+               <PremiumCard padding="none" glow className="h-[28rem] md:h-80 overflow-hidden animate-in zoom-in-95 duration-1000 relative group hover-lift-premium">
                   <div className="absolute inset-0 bg-gradient-to-r from-indigo-600 via-indigo-600/90 to-transparent z-10" />
                   <div className="absolute inset-0 z-0">
                      <div className="absolute inset-0 flex items-center justify-end pr-20 opacity-10 group-hover:scale-110 transition-transform duration-1000">

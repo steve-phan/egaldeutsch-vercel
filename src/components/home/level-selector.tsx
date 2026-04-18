@@ -35,7 +35,7 @@ export function LevelSelector({ selectedLevel, onSelectLevel }: LevelSelectorPro
              key={level.id}
              onClick={() => onSelectLevel(level.id)}
              className={`
-               px-4 py-1.5 rounded-full font-black text-[10px] uppercase tracking-wider transition-all duration-300
+               px-4 py-1.5 rounded-full font-black text-[10px] uppercase tracking-wider transition-all duration-300 active:scale-95
                ${isSelected 
                   ? "bg-white text-primary shadow-premium" 
                   : "text-slate-400 hover:text-slate-600"}

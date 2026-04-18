@@ -73,7 +73,7 @@ export function HomeClientView() {
 
                <div className="flex flex-col md:flex-row gap-8">
                   {/* Social Community Card */}
-                  <PremiumCard glow className="flex-1 p-8 md:p-10 relative overflow-hidden group">
+                  <PremiumCard glow className="flex-1 p-8 md:p-10 relative overflow-hidden group hover-lift-premium">
                      <div className="absolute top-0 right-0 w-32 h-32 bg-[#1877F2]/10 rounded-full -mr-16 -mt-16 blur-3xl group-hover:bg-[#1877F2]/20 transition-colors" />
                      
                      <div className="flex flex-col h-full justify-between">
@@ -94,7 +94,7 @@ export function HomeClientView() {
                               href="https://www.facebook.com/profile.php?id=61588340432355"
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="inline-flex items-center gap-2 h-12 px-6 rounded-xl bg-[#1877F2] text-white text-xs font-black uppercase tracking-widest hover:bg-[#0d65d9] transition-all hover:shadow-lg active:scale-95"
+                              className="inline-flex items-center gap-2 h-12 px-6 rounded-xl bg-[#1877F2] text-white text-xs font-black uppercase tracking-widest hover:bg-[#0d65d9] transition-all hover:shadow-lg active-bounce"
                            >
                               {language === "de" ? "Jetzt beitreten" : language === "vi" ? "Tham gia ngay" : "Join Now"}
                               <Users className="w-4 h-4 ml-1" />

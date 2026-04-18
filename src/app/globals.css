@@ -147,3 +147,21 @@
 .animate-ring {
   animation: ring 0.5s ease-in-out infinite;
 }
+
+@layer utilities {
+  .hover-lift-premium {
+    @apply transition-all duration-500 hover:-translate-y-2 hover:shadow-floating;
+  }
+  
+  .active-bounce {
+    @apply transition-transform duration-200 active:scale-95;
+  }
+  
+  .link-premium {
+    @apply text-primary hover:text-orange-600 underline underline-offset-4 decoration-2 transition-all;
+  }
+  
+  .input-focus-premium {
+    @apply focus:ring-4 focus:ring-primary/5 focus:border-primary/30 transition-all outline-none;
+  }
+}
