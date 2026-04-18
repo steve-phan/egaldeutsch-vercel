@@ -3,7 +3,7 @@
 import { AppShell } from "@/components/layout/app-shell";
 import { Trophy, Zap, MessageCircle, Star, Clock, ChevronRight } from "lucide-react";
 import { VisualPageHeader } from "@/components/shared/visual-page-header";
-import { PremiumCard } from "@/components/shared/premium-card";
+import { Card } from "@/components/shared/layout/card";
 
 export default function NotificationsPage() {
    const notifications = [
@@ -57,11 +57,12 @@ export default function NotificationsPage() {
 
             <div className="space-y-4">
                {notifications.map((notif, idx) => (
-                  <PremiumCard
+                  <Card
                      key={notif.id}
-                     delay={idx * 100}
                      padding="md"
-                     className="flex items-center gap-5 translate-x-0"
+                     radius="2xl"
+                     hover
+                     className="flex items-center gap-5 translate-x-0 animate-in slide-in-from-right-4 duration-500 fill-mode-both"
                   >
                      <div className={`w-14 h-14 ${notif.color} rounded-2xl flex items-center justify-center shrink-0`}>
                         {notif.icon}
@@ -82,14 +83,14 @@ export default function NotificationsPage() {
                      <div className="w-8 h-8 rounded-full bg-slate-50 flex items-center justify-center text-slate-200">
                         <ChevronRight className="w-4 h-4" />
                      </div>
-                  </PremiumCard>
+                  </Card>
                ))}
             </div>
 
-            <div className="mt-12 p-8 glass-card-premium rounded-[3rem] bg-slate-50/50 border-dashed border-slate-200 text-center">
+            <Card padding="lg" glass={false} className="mt-12 bg-slate-50/50 border-dashed border-slate-200 text-center">
                <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-1">That's everything for now</p>
                <p className="text-[8px] font-bold text-slate-300 uppercase tracking-[0.2em]">Check back later for more updates</p>
-            </div>
+            </Card>
          </section>
       </AppShell>
    );

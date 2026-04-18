@@ -4,7 +4,7 @@ import { useState } from "react";
 import { AppShell } from "@/components/layout/app-shell";
 import { HeartHandshake, Bug, Lightbulb, PartyPopper, MessageSquare, Send, CheckCircle2, Star } from "lucide-react";
 import { VisualPageHeader } from "@/components/shared/visual-page-header";
-import { PremiumCard } from "@/components/shared/premium-card";
+import { Card } from "@/components/shared/layout/card";
 import { useFeedback, FeedbackSubmission } from "@/hooks/use-feedback";
 import { useSession } from "next-auth/react";
 
@@ -94,19 +94,19 @@ export default function FeedbackPage() {
                      ))}
                   </div>
 
-                  <PremiumCard padding="md" className="bg-primary/5 border-primary/10">
+                  <Card padding="md" glass={false} className="bg-primary/5 border-primary/10">
                      <div className="flex items-start gap-3">
                         <Star className="w-5 h-5 text-primary fill-primary/20 shrink-0" />
                         <p className="text-[10px] font-black text-primary uppercase tracking-widest leading-relaxed">
                            Earn 100 XP for your first feedback submission!
                         </p>
                      </div>
-                  </PremiumCard>
+                  </Card>
                </div>
 
                {/* Right Column: Form */}
                <div className="lg:col-span-3">
-                  <PremiumCard padding="lg" className="space-y-8">
+                  <Card padding="lg" radius="3xl" className="space-y-8 shadow-premium">
                      <form onSubmit={handleSubmit} className="space-y-8">
                         {/* Honeypot Field */}
                         <input
@@ -211,7 +211,7 @@ export default function FeedbackPage() {
                            )}
                         </button>
                      </form>
-                  </PremiumCard>
+                  </Card>
                </div>
             </div>
          </section>

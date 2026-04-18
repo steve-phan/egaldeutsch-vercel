@@ -5,7 +5,7 @@ import { AppShell } from "@/components/layout/app-shell";
 import { useFeedback, FeedbackRecord } from "@/hooks/use-feedback";
 import { MessageSquareHeart, ShieldAlert, Calendar, User, Mail, Star, RefreshCw, ChevronRight } from "lucide-react";
 import { VisualPageHeader } from "@/components/shared/visual-page-header";
-import { PremiumCard } from "@/components/shared/premium-card";
+import { Card } from "@/components/shared/layout/card";
 import { format } from "date-fns";
 
 export default function AdminFeedbackPage() {
@@ -48,12 +48,12 @@ export default function AdminFeedbackPage() {
             </VisualPageHeader>
 
             {error && (
-               <PremiumCard padding="md" className="bg-rose-50 border-rose-100 text-rose-500">
+               <Card padding="md" glass={false} className="bg-rose-50 border-rose-100 text-rose-500">
                   <div className="flex items-center gap-3">
                      <ShieldAlert className="w-5 h-5" />
                      <p className="text-xs font-bold uppercase tracking-widest">{error}</p>
                   </div>
-               </PremiumCard>
+               </Card>
             )}
 
             <div className="grid grid-cols-1 gap-6">
@@ -69,16 +69,16 @@ export default function AdminFeedbackPage() {
                   </div>
                ) : (
                   feedbacks.map((item, idx) => (
-                     <PremiumCard
+                     <Card
                         key={item.id}
                         padding="none"
                         glow
-                        delay={idx * 50}
-                        className="overflow-hidden group"
+                        radius="3xl"
+                        className="overflow-hidden group animate-in slide-in-from-bottom-4 duration-500 fill-mode-both shadow-premium"
                      >
                         <div className="flex flex-col md:flex-row h-full">
                            {/* Context Side */}
-                           <div className="p-8 md:w-80 bg-slate-50 border-r border-white flex flex-col justify-between space-y-6">
+                           <div className="p-8 md:w-80 bg-slate-50 border-r border-slate-100 flex flex-col justify-between space-y-6">
                               <div className="space-y-4">
                                  <div className={`inline-flex items-center gap-2 px-3 py-1 rounded-full border text-[9px] font-black uppercase tracking-widest ${getCategoryColor(item.category)}`}>
                                     {item.category}
@@ -139,7 +139,7 @@ export default function AdminFeedbackPage() {
                               </div>
                            </div>
                         </div>
-                     </PremiumCard>
+                     </Card>
                   ))
                )}
             </div>

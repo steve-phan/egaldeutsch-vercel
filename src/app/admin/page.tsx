@@ -6,7 +6,7 @@ import { RefreshCw, BarChart3, Database, Layers, Sparkles, Plus } from "lucide-r
 import { QuestionTable } from "@/components/admin/quiz/question-table";
 import { AppShell } from "@/components/layout/app-shell";
 import Link from "next/link";
-import { PremiumCard } from "@/components/shared/premium-card";
+import { Card } from "@/components/shared/layout/card";
 import { StatCard } from "@/components/shared/stat-card";
 import { VisualPageHeader } from "@/components/shared/visual-page-header";
 import { Section } from "@/components/shared/layout/section";
@@ -112,9 +112,9 @@ export default function AdminDashboardPage() {
                </div>
 
                {error && (
-                  <PremiumCard padding="md" className="bg-rose-50 border-rose-100 text-rose-500 animate-none rounded-2xl">
+                  <Card padding="md" glass={false} radius="2xl" className="bg-rose-50 border-rose-100 text-rose-500 animate-none">
                      <p className="text-xs font-bold leading-none">Error synchronization: {error}</p>
-                  </PremiumCard>
+                  </Card>
                )}
 
                <div className="w-full">
