@@ -39,5 +39,9 @@ func NewRouter() http.Handler {
 	mux.HandleFunc("/api/idioms/random", handlers.IdiomRandomHandler)
 	mux.HandleFunc("/api/idioms/", handlers.IdiomBySlugHandler)
 
+	// --- Feedback Routes ---
+	mux.HandleFunc("/api/feedback", handlers.FeedbackHandler)
+	mux.HandleFunc("/api/admin/feedback", handlers.AdminFeedbackHandler)
+
 	return LoggingMiddleware(mux)
 }

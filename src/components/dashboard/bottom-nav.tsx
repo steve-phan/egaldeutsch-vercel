@@ -4,7 +4,7 @@ import React from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useSession } from "next-auth/react";
-import { Home, Search, Bell, User, MessageCircle, LogIn } from "lucide-react";
+import { Home, Search, Bell, User, MessageSquareHeart, LogIn } from "lucide-react";
 import Image from "next/image";
 
 export function BottomNav() {
@@ -16,7 +16,7 @@ export function BottomNav() {
     { icon: <Home className="w-5 h-5" />, label: "Home", href: "/", active: pathname === "/" },
     { icon: <Search className="w-5 h-5" />, label: "Explore", href: "/explore", active: pathname === "/explore" },
     { icon: null, label: "Hub", href: "/", isHub: true },
-    { icon: <MessageCircle className="w-5 h-5" />, label: "Social", href: "/chat", active: pathname === "/chat" },
+    { icon: <MessageSquareHeart className="w-5 h-5" />, label: "Feedback", href: "/feedback", active: pathname === "/feedback" },
     { 
        icon: isGuest ? <LogIn className="w-5 h-5" /> : <User className="w-5 h-5" />, 
        label: isGuest ? "Join" : "Profile", 
