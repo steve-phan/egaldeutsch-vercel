@@ -4,6 +4,8 @@ import React from "react";
 import { BottomNav } from "@/components/dashboard/bottom-nav";
 import { usePathname } from "next/navigation";
 import { useSession } from "next-auth/react";
+import { Footer } from "@/components/layout/footer";
+import { CookieBanner } from "@/components/layout/cookie-banner";
 
 interface AppShellProps {
   children: React.ReactNode;
@@ -42,13 +44,15 @@ export function AppShell({
 
       {/* Content Container */}
       <div className={`w-full ${maxWidthClasses[maxWidth]} px-6 z-10 flex flex-col flex-1`}>
-         <main className="flex-1 py-8 pb-32 animate-in fade-in duration-700">
+         <main className="flex-1 py-8 animate-in fade-in duration-700">
             {children}
          </main>
+         <Footer />
       </div>
 
-      {/* Conditional Navigation */}
+      {/* Conditional Components */}
       {shouldShowNav && <BottomNav />}
+      <CookieBanner />
     </div>
   );
 }

@@ -10,8 +10,8 @@ import (
 )
 
 const (
-	TemplateWelcome       = 3
-	TemplatePasswordReset = 4
+	TemplateWelcome       = 4
+	TemplatePasswordReset = 3
 )
 
 type Sender struct {

@@ -66,6 +66,24 @@ export const authOptions: NextAuthOptions = {
       }
       return session;
     },
+    async signIn({ user, account }) {
+      if (account?.provider === "google") {
+        try {
+          // Sync Google user with our Go backend
+          await fetch(`${process.env.NEXT_PUBLIC_API_URL || "http://localhost:8080"}/api/account/google-sync`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              email: user.email,
+              name: user.name,
+            }),
+          });
+        } catch (error) {
+          console.error("Failed to sync Google user with backend:", error);
+        }
+      }
+      return true; // Allow sign in to proceed regardless of sync success
+    },
   },
   session: {
     strategy: "jwt",
