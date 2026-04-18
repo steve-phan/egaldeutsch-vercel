@@ -1,13 +1,12 @@
 "use client";
 
-import React from "react";
+import { Card } from "@/components/shared/layout/card";
 import { cn } from "@/lib/utils";
-import { PremiumCard } from "./premium-card";
 
 interface StatCardProps {
   label: string;
   value: string | number;
-  icon: React.ReactNode;
+  icon?: React.ReactNode;
   color?: string;
   delay?: number;
   className?: string;
@@ -22,21 +21,28 @@ export function StatCard({
   className 
 }: StatCardProps) {
   return (
-    <PremiumCard 
-      delay={delay} 
-      padding="md"
-      className={cn("flex items-center gap-5 group", className)}
+    <Card 
+      padding="md" 
+      radius="3xl" 
+      hover 
+      className={cn("flex flex-col justify-between h-full group animate-in zoom-in-95 duration-700", className)}
+      style={{ animationDelay: `${delay}ms` }}
     >
-      <div className={cn(
-        "w-12 h-12 rounded-2xl flex items-center justify-center text-white shadow-lg shadow-black/5 group-hover:scale-110 transition-transform duration-500",
-        color
-      )}>
-        {icon}
+      <div className="flex items-start justify-between mb-4">
+         <div className="flex flex-col">
+            <span className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-1">{label}</span>
+            <span className="text-3xl font-black text-slate-800 tracking-tighter italic leading-none">{value}</span>
+         </div>
+         {icon && (
+            <div className={cn("w-10 h-10 rounded-xl flex items-center justify-center text-white shadow-lg transition-transform group-hover:scale-110 duration-500", color)}>
+               {icon}
+            </div>
+         )}
       </div>
-      <div>
-        <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest">{label}</p>
-        <p className="text-2xl font-black text-slate-800 tracking-tighter italic">{value}</p>
+      
+      <div className="h-1 w-full bg-slate-50/50 rounded-full overflow-hidden">
+         <div className={cn("h-full w-2/3 rounded-full opacity-50", color)} />
       </div>
-    </PremiumCard>
+    </Card>
   );
 }

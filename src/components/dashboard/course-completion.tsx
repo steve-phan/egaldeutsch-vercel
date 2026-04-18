@@ -1,39 +1,25 @@
 "use client";
 
-import { useLanguage } from "@/contexts/language-context";
+import { Card } from "@/components/shared/layout/card";
+import { GraduationCap, Award } from "lucide-react";
 
 export function CourseCompletion() {
-  const { language } = useLanguage();
-  const data = [10, 20, 30, 15, 25, 35, 20];
-  const days = ["M", "D", "M", "D", "F", "S", "S"];
-
   return (
-    <div className="glass-card-premium rounded-[2.5rem] p-6 flex flex-col justify-between h-full relative group overflow-hidden">
-      {/* Background Accent */}
-      <div className="absolute -top-10 -right-10 w-32 h-32 bg-primary/5 rounded-full blur-3xl group-hover:bg-primary/10 transition-colors" />
-
-      <div className="mb-4 relative z-10">
-        <h3 className="text-sm font-black text-slate-400 uppercase tracking-[0.2em]">
-          {language === "de" ? "Aktivität" : language === "vi" ? "Hoạt động" : "Activity"}
-        </h3>
-        <p className="text-2xl font-black text-slate-800 tracking-tighter">7.2h this week</p>
+    <Card padding="md" radius="3xl" hover className="flex items-center justify-between gap-6 group">
+      <div className="flex items-center gap-4">
+        <div className="w-12 h-12 rounded-2xl bg-amber-500 flex items-center justify-center text-white shadow-lg shadow-amber-500/20 group-hover:scale-110 transition-transform">
+          <GraduationCap className="w-6 h-6" />
+        </div>
+        <div>
+          <h3 className="text-lg font-black text-slate-800 italic">Course Progress</h3>
+          <p className="text-xs font-bold text-slate-400 uppercase tracking-tight">Level A1 Complete</p>
+        </div>
       </div>
       
-      <div className="flex items-end justify-between h-24 gap-1.5 relative z-10">
-        {data.map((val, i) => (
-          <div key={i} className="flex flex-col items-center flex-1 gap-2 group/bar">
-            <div className="w-full bg-slate-50 rounded-full h-full relative overflow-hidden flex items-end">
-               <div 
-                 className="w-full bg-primary rounded-full transition-all duration-700 ease-out shadow-sm shadow-primary/20"
-                 style={{ height: `${val * 2}%` }}
-               />
-            </div>
-            <span className="text-[10px] font-black text-slate-300 group-hover/bar:text-primary transition-colors">
-              {days[i]}
-            </span>
-          </div>
-        ))}
+      <div className="flex items-center gap-2 px-4 py-2 bg-amber-50 rounded-xl border border-amber-100 italic">
+         <Award className="w-4 h-4 text-amber-500" />
+         <span className="text-[10px] font-black text-amber-700 uppercase tracking-widest">Certified</span>
       </div>
-    </div>
+    </Card>
   );
 }

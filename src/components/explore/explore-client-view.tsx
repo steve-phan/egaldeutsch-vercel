@@ -7,7 +7,7 @@ import { useCategories } from "@/hooks/use-categories";
 import { Search, Compass, Target, ArrowRight, Sparkles } from "lucide-react";
 import Image from "next/image";
 import { VisualPageHeader } from "@/components/shared/visual-page-header";
-import { PremiumCard } from "@/components/shared/premium-card";
+import { Card } from "@/components/shared/layout/card";
 import { useRouter } from "next/navigation";
 import { useLanguage } from "@/contexts/language-context";
 import { Section } from "@/components/shared/layout/section";
@@ -60,7 +60,7 @@ export function ExploreClientView() {
 
             {!search && featuredCategory && (
                <Section spacing="md">
-                  <PremiumCard padding="none" glow className="h-[28rem] md:h-80 overflow-hidden animate-in zoom-in-95 duration-1000 relative group hover-lift-premium border-none">
+                  <Card padding="none" glow className="h-[28rem] md:h-80 overflow-hidden animate-in zoom-in-95 duration-1000 relative group hover-lift-premium border-none">
                      <div className="absolute inset-0 bg-gradient-to-r from-indigo-600 via-indigo-600/90 to-transparent z-10" />
                      <div className="absolute inset-0 z-0">
                         <div className="absolute inset-0 flex items-center justify-end pr-20 opacity-10 group-hover:scale-110 transition-transform duration-1000">
@@ -88,12 +88,12 @@ export function ExploreClientView() {
                         </div>
                         <button
                            onClick={() => router.push(`/quiz/${featuredCategory.id}`)}
-                           className="btn-orange h-12 px-8 group text-xs font-black flex items-center gap-2 active:scale-95 transition-all shadow-lg border border-white/20"
+                           className="btn-orange h-14 px-8 group text-xs font-black flex items-center gap-2 active-bounce shadow-lg border border-white/20"
                         >
                            Start Mission <ArrowRight className="w-4 h-4 group-hover:translate-x-1.5 transition-transform" />
                         </button>
                      </div>
-                  </PremiumCard>
+                  </Card>
                </Section>
             )}
 
@@ -107,10 +107,10 @@ export function ExploreClientView() {
                   <CategoryGrid categories={filteredCategories} loading={loading} />
 
                   {filteredCategories.length === 0 && !loading && (
-                     <div className="flex flex-col items-center justify-center py-20 bg-white/50 backdrop-blur-md rounded-[3rem] border border-dashed border-slate-200 shadow-premium">
+                     <Card padding="xl" className="flex flex-col items-center justify-center border-dashed">
                         <Target className="w-12 h-12 text-slate-200 mb-4" />
                         <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest">No matching grammar mission found</p>
-                     </div>
+                     </Card>
                   )}
                </div>
             </Section>

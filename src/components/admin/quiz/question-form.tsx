@@ -9,6 +9,7 @@ import { Label } from "@/components/ui/label";
 import { ChevronRight, Save, X, Lightbulb, Target, Settings, Globe, Sparkles } from "lucide-react";
 import Link from "next/link";
 import { QuestionPreview } from "./question-preview";
+import { Card } from "@/components/shared/layout/card";
 
 interface QuestionFormProps {
   initialData?: Partial<QuizQuestion>;
@@ -52,14 +53,14 @@ export function QuestionForm({ initialData, onSubmit, isSubmitting }: QuestionFo
       <form onSubmit={handleSave} className="flex-1 space-y-12 w-full">
         
         {/* 1. Meta Information */}
-        <section className="glass-card-premium p-8 md:p-10 rounded-[3rem] space-y-8 animate-in slide-in-from-bottom-4 duration-500">
+        <Card padding="lg" radius="3xl" className="space-y-8 animate-in slide-in-from-bottom-4 duration-500">
           <div className="flex items-center gap-3 border-b border-slate-100 pb-6">
             <div className="w-10 h-10 rounded-xl bg-slate-50 flex items-center justify-center text-slate-400">
                 <Settings className="w-5 h-5" />
             </div>
             <div>
-                <h2 className="text-xl font-black text-slate-800 tracking-tighter italic">Mission Metadata</h2>
-                <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Classification & Logic</p>
+                <h2 className="text-xl font-black text-slate-800 tracking-tighter italic leading-none">Mission Metadata</h2>
+                <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mt-1">Classification & Logic</p>
             </div>
           </div>
 
@@ -119,36 +120,17 @@ export function QuestionForm({ initialData, onSubmit, isSubmitting }: QuestionFo
                 </select>
             </div>
           </div>
-        </section>
+        </Card>
 
-        {/* 2. Language Content */}
-        <section className="glass-card-premium p-8 md:p-10 rounded-[3rem] space-y-8 animate-in slide-in-from-bottom-4 duration-700">
-          <div className="flex items-center gap-3 border-b border-slate-100 pb-6">
-              <div className="w-10 h-10 rounded-xl bg-slate-50 flex items-center justify-center text-slate-400">
-                <Globe className="w-5 h-5" />
-              </div>
-              <div>
-                <h2 className="text-xl font-black text-slate-800 tracking-tighter italic">Multilingual Prompt</h2>
-                <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Question Text (DE / EN / VI)</p>
-              </div>
-          </div>
-          
-          <div className="bg-slate-50/50 p-4 rounded-2xl border border-dashed border-slate-200">
-              <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest flex items-center gap-2">
-                <Lightbulb className="w-3 h-3 text-amber-500" /> Pro Tip: Use <code className="bg-white px-1.5 py-0.5 rounded shadow-sm text-primary">___</code> for blanks.
-              </p>
-          </div>
-        </section>
-
-        {/* 3. Evaluation Logic */}
-        <section className="glass-card-premium p-8 md:p-10 rounded-[3rem] space-y-8 animate-in slide-in-from-bottom-4 duration-1000">
+        {/* 2. Evaluation Logic */}
+        <Card padding="lg" radius="3xl" className="space-y-8 animate-in slide-in-from-bottom-4 duration-1000">
           <div className="flex items-center gap-3 border-b border-slate-100 pb-6">
               <div className="w-10 h-10 rounded-xl bg-slate-50 flex items-center justify-center text-slate-400">
                 <Target className="w-5 h-5" />
               </div>
               <div>
-                <h2 className="text-xl font-black text-slate-800 tracking-tighter italic">Mastery Target</h2>
-                <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Correct Answer & Options</p>
+                <h2 className="text-xl font-black text-slate-800 tracking-tighter italic leading-none">Mastery Target</h2>
+                <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mt-1">Correct Answer & Options</p>
               </div>
           </div>
 
@@ -170,24 +152,24 @@ export function QuestionForm({ initialData, onSubmit, isSubmitting }: QuestionFo
                 onCorrectAnswerChange={val => updateField("correct_answer", val)}
               />
           )}
-        </section>
+        </Card>
 
-        {/* 4. Feedback & Explanations */}
-        <section className="glass-card-premium p-8 md:p-10 rounded-[3rem] space-y-8 animate-in slide-in-from-bottom-4 duration-1000">
+        {/* 3. Feedback & Explanations */}
+        <Card padding="lg" radius="3xl" className="space-y-8 animate-in slide-in-from-bottom-4 duration-1000">
           <div className="flex items-center gap-3 border-b border-slate-100 pb-6">
               <div className="w-10 h-10 rounded-xl bg-slate-50 flex items-center justify-center text-slate-400">
                 <Lightbulb className="w-5 h-5" />
               </div>
               <div>
-                <h2 className="text-xl font-black text-slate-800 tracking-tighter italic">Educational Feedback</h2>
-                <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Explanations & Enrichment</p>
+                <h2 className="text-xl font-black text-slate-800 tracking-tighter italic leading-none">Educational Feedback</h2>
+                <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mt-1">Explanations & Enrichment</p>
               </div>
           </div>
           <TagsInput 
               tags={formData.tags || []} 
               onChange={tags => updateField("tags", tags)} 
           />
-        </section>
+        </Card>
 
         {/* Sticky Action Bar */}
         <div className="fixed bottom-10 left-1/2 -translate-x-1/2 z-50 w-full max-w-lg px-6 animate-in slide-in-from-bottom-8 duration-700">
@@ -217,7 +199,7 @@ export function QuestionForm({ initialData, onSubmit, isSubmitting }: QuestionFo
          </div>
          <QuestionPreview question={formData} />
          
-         <div className="mt-10 p-6 glass-card-premium rounded-3xl border border-white/50 space-y-4">
+         <Card radius="xl" padding="md" className="mt-10 space-y-4">
             <h4 className="text-[10px] font-black text-slate-400 uppercase tracking-widest">Editorial Checklist</h4>
             <div className="space-y-3">
                {[
@@ -232,7 +214,7 @@ export function QuestionForm({ initialData, onSubmit, isSubmitting }: QuestionFo
                   </div>
                ))}
             </div>
-         </div>
+         </Card>
       </div>
     </div>
   );

@@ -4,6 +4,7 @@ import { CategoryMeta } from "@/types/quiz";
 import { useLanguage } from "@/contexts/language-context";
 import Link from "next/link";
 import { ChevronRight } from "lucide-react";
+import { Card } from "@/components/shared/layout/card";
 
 interface CategoryCardProps {
   category: CategoryMeta;
@@ -23,7 +24,12 @@ export function CategoryCard({ category }: CategoryCardProps) {
 
   return (
     <Link href={`/quiz/${category.id}`} className="group block active:scale-[0.98] transition-all h-full">
-      <div className="relative h-[180px] rounded-[2rem] glass-card-premium p-6 flex flex-col justify-between overflow-hidden group-hover:-translate-y-2 group-hover:shadow-floating transition-all duration-500 border border-white/40">
+      <Card 
+        radius="2xl" 
+        padding="md" 
+        hover 
+        className="h-[180px] flex flex-col justify-between"
+      >
         {/* Background Accent Gradient */}
         <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full -mr-16 -mt-16 blur-3xl group-hover:bg-primary/10 transition-colors" />
 
@@ -54,7 +60,7 @@ export function CategoryCard({ category }: CategoryCardProps) {
               <ChevronRight className="w-4 h-4" />
            </div>
         </div>
-      </div>
+      </Card>
     </Link>
   );
 }
