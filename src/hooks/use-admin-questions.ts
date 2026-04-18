@@ -1,6 +1,7 @@
 import { useState, useCallback } from "react";
 import { QuizQuestion } from "@/types/quiz";
 import { API_ROUTES } from "@/lib/constants";
+import { useSession } from "next-auth/react";
 
 interface UseAdminQuestionsResult {
   questions: QuizQuestion[];
@@ -13,12 +14,13 @@ interface UseAdminQuestionsResult {
 }
 
 export function useAdminQuestions(): UseAdminQuestionsResult {
+  const { data: session } = useSession();
   const [questions, setQuestions] = useState<QuizQuestion[]>([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
   const getHeaders = () => {
-    const token = typeof window !== "undefined" ? localStorage.getItem("token") : null;
+    const token = (session?.user as any)?.accessToken;
     return {
       "Content-Type": "application/json",
       ...(token ? { Authorization: `Bearer ${token}` } : {})

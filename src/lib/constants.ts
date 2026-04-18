@@ -21,6 +21,10 @@ export const API_ROUTES = {
   ADMIN_QUESTIONS: "/api/admin/questions",
   ADMIN_USERS: "/api/admin/users",
 
+  // Feedback
+  FEEDBACK: "/api/feedback",
+  ADMIN_FEEDBACK: "/api/admin/feedback",
+
   // Idioms
   IDIOMS: "/api/idioms",
   IDIOM_RANDOM: "/api/idioms/random",

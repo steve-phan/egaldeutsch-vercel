@@ -31,17 +31,31 @@ export function useFeedback() {
       setError(null);
       setSuccess(false);
 
-      const response = await fetch("/api/feedback", {
+      const token = (session?.user as any)?.accessToken;
+      const response = await fetch(API_ROUTES.FEEDBACK, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
+          ...(token ? { "Authorization": `Bearer ${token}` } : {}),
         },
         body: JSON.stringify(data),
       });
 
       if (!response.ok) {
-        const errorData = await response.text();
-        throw new Error(errorData || "Failed to submit feedback");
+        const contentType = response.headers.get("content-type");
+        let errorMessage = "Failed to submit feedback";
+        
+        if (contentType && contentType.includes("application/json")) {
+           const errorData = await response.json();
+           errorMessage = errorData.message || errorData.error || errorMessage;
+        } else {
+           // If it's HTML (likely a 404/500 page), use a generic error
+           const text = await response.text();
+           if (response.status === 404) errorMessage = "Feedback service temporarily unavailable (404)";
+           else if (response.status === 500) errorMessage = "Server error occurred. Please try again later.";
+        }
+        
+        throw new Error(errorMessage);
       }
 
       setSuccess(true);
@@ -59,7 +73,12 @@ export function useFeedback() {
       setLoading(true);
       setError(null);
 
-      const response = await fetch("/api/admin/feedback");
+      const token = (session?.user as any)?.accessToken;
+      const response = await fetch(API_ROUTES.ADMIN_FEEDBACK, {
+        headers: {
+          ...(token ? { "Authorization": `Bearer ${token}` } : {}),
+        },
+      });
 
       if (!response.ok) {
         if (response.status === 401) throw new Error("Unauthorized: Admin access required");

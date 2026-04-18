@@ -1,5 +1,6 @@
 import { useState, useCallback } from "react";
 import { API_ROUTES } from "@/lib/constants";
+import { useSession } from "next-auth/react";
 
 export interface AdminUser {
   id: string;
@@ -18,12 +19,13 @@ interface UseAdminUsersResult {
 }
 
 export function useAdminUsers(): UseAdminUsersResult {
+  const { data: session } = useSession();
   const [users, setUsers] = useState<AdminUser[]>([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
   const getHeaders = () => {
-    const token = typeof window !== "undefined" ? localStorage.getItem("token") : null;
+    const token = (session?.user as any)?.accessToken;
     return {
       "Content-Type": "application/json",
       ...(token ? { Authorization: `Bearer ${token}` } : {})

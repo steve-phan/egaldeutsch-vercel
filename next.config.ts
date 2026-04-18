@@ -40,6 +40,10 @@ const nextConfig: NextConfig = {
           source: '/api/idioms/:path*',
           destination: 'http://127.0.0.1:8080/api/idioms/:path*',
         },
+        {
+          source: '/api/feedback',
+          destination: 'http://127.0.0.1:8080/api/feedback',
+        },
       ];
     }
     return [];

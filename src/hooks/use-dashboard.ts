@@ -1,5 +1,6 @@
 import { useState, useEffect, useCallback } from "react";
 import { API_ROUTES } from "@/lib/constants";
+import { useSession } from "next-auth/react";
 
 export interface DashboardStats {
   total_sessions: number;
@@ -25,6 +26,7 @@ const emptyStats: DashboardStats = {
 };
 
 export function useDashboard(): UseDashboardResult {
+  const { data: session, status } = useSession();
   const [stats, setStats] = useState<DashboardStats | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -33,7 +35,9 @@ export function useDashboard(): UseDashboardResult {
     setLoading(true);
     setError(null);
 
-    const token = typeof window !== "undefined" ? localStorage.getItem("token") : null;
+    if (status === "loading") return;
+    
+    const token = (session?.user as any)?.accessToken;
     if (!token) {
       setStats(emptyStats);
       setLoading(false);
@@ -57,7 +61,7 @@ export function useDashboard(): UseDashboardResult {
 
   useEffect(() => {
     fetchStats();
-  }, [fetchStats]);
+  }, [fetchStats, status]);
 
   return { stats, loading, error, refetch: fetchStats };
 }
