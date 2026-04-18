@@ -1,287 +1,1130 @@
 [
   {
     "category": "artikel",
-    "level": "A1",
+    "level": "B1",
     "type": "multiple-choice",
-    "prompt_de": "Was ist der richtige Artikel für 'Haus'?",
+    "prompt_de": "Was ist der richtige Artikel für 'Möglichkeit'?",
+    "correct_answer": "die",
+    "options": [
+      "der",
+      "die",
+      "das"
+    ],
+    "explanation_de": "Nomen, die auf '-keit' enden, sind im Deutschen immer feminin.",
+    "explanation_en": "Nouns ending in '-keit' are always feminine in German.",
+    "explanation_vi": "Các danh từ kết thúc bằng đuôi '-keit' luôn là giống cái trong tiếng Đức.",
+    "status": "published",
+    "tags": [
+      "basics",
+      "articles",
+      "suffixes"
+    ]
+  },
+  {
+    "category": "artikel",
+    "level": "B2",
+    "type": "multiple-choice",
+    "prompt_de": "Was ist der richtige Artikel für 'Irrtum'?",
+    "correct_answer": "der",
+    "options": [
+      "der",
+      "die",
+      "das"
+    ],
+    "explanation_de": "Obwohl die meisten Wörter auf '-tum' neutral sind, ist 'der Irrtum' eine Ausnahme und maskulin.",
+    "explanation_en": "Although most words ending in '-tum' are neuter, 'der Irrtum' is an exception and is masculine.",
+    "explanation_vi": "Mặc dù hầu hết các từ có đuôi '-tum' là giống trung, 'der Irrtum' (sai lầm) là một ngoại lệ và là giống đực.",
+    "status": "published",
+    "tags": [
+      "basics",
+      "articles",
+      "exceptions"
+    ]
+  },
+  {
+    "category": "artikel",
+    "level": "B1",
+    "type": "multiple-choice",
+    "prompt_de": "Was ist der richtige Artikel für 'Erlebnis'?",
     "correct_answer": "das",
     "options": [
       "der",
       "die",
       "das"
     ],
-    "explanation_de": "'Haus' ist neutral im Deutschen (das Haus).",
-    "explanation_en": "'Haus' is neuter in German (das Haus).",
-    "explanation_vi": "'Haus' là giống trung trong tiếng Đức (das Haus).",
+    "explanation_de": "Die meisten Nomen mit der Endung '-nis' sind sächlich (neutral).",
+    "explanation_en": "Most nouns ending in '-nis' are neuter.",
+    "explanation_vi": "Hầu hết các danh từ kết thúc bằng '-nis' là giống trung.",
     "status": "published",
     "tags": [
       "basics",
-      "articles"
+      "articles",
+      "suffixes"
+    ]
+  },
+  {
+    "category": "artikel",
+    "level": "B2",
+    "type": "multiple-choice",
+    "prompt_de": "Was ist der richtige Artikel für 'Optimismus'?",
+    "correct_answer": "der",
+    "options": [
+      "der",
+      "die",
+      "das"
+    ],
+    "explanation_de": "Alle Nomen, die auf '-ismus' enden, sind maskulin.",
+    "explanation_en": "All nouns ending in '-ismus' are masculine.",
+    "explanation_vi": "Tất cả các danh từ kết thúc bằng '-ismus' đều là giống đực.",
+    "status": "published",
+    "tags": [
+      "basics",
+      "articles",
+      "suffixes"
+    ]
+  },
+  {
+    "category": "artikel",
+    "level": "B1",
+    "type": "multiple-choice",
+    "prompt_de": "Was ist der richtige Artikel für 'Konferenz'?",
+    "correct_answer": "die",
+    "options": [
+      "der",
+      "die",
+      "das"
+    ],
+    "explanation_de": "Fremdwörter mit der Endung '-enz' sind im Deutschen feminin.",
+    "explanation_en": "Foreign words ending in '-enz' are feminine in German.",
+    "explanation_vi": "Các từ ngoại lai kết thúc bằng '-enz' là giống cái trong tiếng Đức.",
+    "status": "published",
+    "tags": [
+      "basics",
+      "articles",
+      "foreign-words"
     ]
   },
   {
     "category": "verb-konjugation",
-    "level": "A1",
+    "level": "B1",
     "type": "multiple-choice",
-    "prompt_de": "Ich _______ (kommen) aus Vietnam.",
-    "correct_answer": "komme",
+    "prompt_de": "Der Arzt _______ mir, mich auszuruhen. (empfehlen - Präteritum)",
+    "correct_answer": "empfahl",
     "options": [
-      "komme",
-      "kommst",
-      "kommt"
+      "empfiehl",
+      "empfahl",
+      "empfohl"
     ],
-    "explanation_de": "Động từ 'kommen' được chia theo ngôi 'ich' bằng cách bỏ đuôi '-en' và thêm '-e'.",
-    "explanation_en": "The verb 'kommen' is conjugated with 'ich' by removing '-en' and adding '-e'.",
-    "explanation_vi": "Động từ 'kommen' được chia với ngôi 'ich' bằng cách bỏ đuôi '-en' và thêm '-e'.",
+    "explanation_de": "Das Präteritum von 'empfehlen' lautet 'empfahl' (unregelmäßiges Verb).",
+    "explanation_en": "The simple past of 'empfehlen' is 'empfahl' (irregular verb).",
+    "explanation_vi": "Quá khứ đơn của 'empfehlen' (khuyên bảo) là 'empfahl' (động từ bất quy tắc).",
     "status": "published",
     "tags": [
       "verbs",
-      "basics"
+      "preterite",
+      "irregular"
+    ]
+  },
+  {
+    "category": "verb-konjugation",
+    "level": "B2",
+    "type": "multiple-choice",
+    "prompt_de": "Die Umstände _______ uns zum Handeln. (zwingen - Präteritum)",
+    "correct_answer": "zwangen",
+    "options": [
+      "zwingten",
+      "zwang",
+      "zwangen"
+    ],
+    "explanation_de": "Das Präteritum Plural von 'zwingen' lautet 'zwangen'.",
+    "explanation_en": "The simple past plural of 'zwingen' is 'zwangen'.",
+    "explanation_vi": "Quá khứ đơn số nhiều của 'zwingen' (ép buộc) là 'zwangen'.",
+    "status": "published",
+    "tags": [
+      "verbs",
+      "preterite",
+      "irregular"
+    ]
+  },
+  {
+    "category": "verb-konjugation",
+    "level": "B2",
+    "type": "multiple-choice",
+    "prompt_de": "Sie _______ sehr unter den Folgen des Unfalls. (leiden - Präteritum)",
+    "correct_answer": "litt",
+    "options": [
+      "leidete",
+      "litt",
+      "gelitten"
+    ],
+    "explanation_de": "Das Präteritum von 'leiden' ist 'litt' (leiden - litt - hat gelitten).",
+    "explanation_en": "The simple past of 'leiden' is 'litt' (leiden - litt - hat gelitten).",
+    "explanation_vi": "Quá khứ đơn của 'leiden' (chịu đựng) là 'litt' (leiden - litt - hat gelitten).",
+    "status": "published",
+    "tags": [
+      "verbs",
+      "preterite",
+      "irregular"
+    ]
+  },
+  {
+    "category": "verb-konjugation",
+    "level": "B1",
+    "type": "multiple-choice",
+    "prompt_de": "Er _______ sich um die freie Stelle. (bewerben - Präteritum)",
+    "correct_answer": "bewarb",
+    "options": [
+      "bewerbte",
+      "bewarb",
+      "bewurb"
+    ],
+    "explanation_de": "Das Präteritum von 'bewerben' in der 3. Person Singular lautet 'bewarb'.",
+    "explanation_en": "The simple past of 'bewerben' in the 3rd person singular is 'bewarb'.",
+    "explanation_vi": "Quá khứ đơn của 'bewerben' (ứng tuyển) ở ngôi thứ 3 số ít là 'bewarb'.",
+    "status": "published",
+    "tags": [
+      "verbs",
+      "preterite",
+      "irregular"
+    ]
+  },
+  {
+    "category": "verb-konjugation",
+    "level": "B2",
+    "type": "multiple-choice",
+    "prompt_de": "Der Friseur _______ ihr die Haare sehr kurz. (schneiden - Präteritum)",
+    "correct_answer": "schnitt",
+    "options": [
+      "schneidete",
+      "schnit",
+      "schnitt"
+    ],
+    "explanation_de": "Das unregelmäßige Verb 'schneiden' bildet das Präteritum mit 'schnitt'.",
+    "explanation_en": "The irregular verb 'schneiden' forms the simple past with 'schnitt'.",
+    "explanation_vi": "Động từ bất quy tắc 'schneiden' (cắt) tạo quá khứ đơn với 'schnitt'.",
+    "status": "published",
+    "tags": [
+      "verbs",
+      "preterite",
+      "irregular"
     ]
   },
   {
     "category": "kasus",
-    "level": "A1",
+    "level": "B1",
     "type": "multiple-choice",
-    "prompt_de": "Ich habe _______ Apfel (m).",
-    "correct_answer": "einen",
+    "prompt_de": "Aufgrund _______ schlechten Wetters (n) fiel das Spiel aus.",
+    "correct_answer": "des",
     "options": [
-      "ein",
-      "einen",
-      "einem"
+      "dem",
+      "den",
+      "des"
     ],
-    "explanation_de": "'Haben' verlangt den Akkusativ. Maskulin 'ein' wird zu 'einen'.",
-    "explanation_en": "'Haben' requires the Accusative case. Masculine 'ein' becomes 'einen'.",
-    "explanation_vi": "Động từ 'haben' yêu cầu cách Akkusativ. Giống đực 'ein' biến thành 'einen'.",
+    "explanation_de": "Die Präposition 'aufgrund' verlangt den Genitiv.",
+    "explanation_en": "The preposition 'aufgrund' requires the Genitive case.",
+    "explanation_vi": "Giới từ 'aufgrund' (do/bởi vì) yêu cầu cách Genitiv.",
     "status": "published",
     "tags": [
       "cases",
-      "accusative"
+      "genitive",
+      "prepositions"
     ]
   },
   {
-    "category": "praepositionen",
-    "level": "A2",
+    "category": "kasus",
+    "level": "B2",
     "type": "multiple-choice",
-    "prompt_de": "Wir gehen heute Abend _______ Kino.",
-    "correct_answer": "ins",
+    "prompt_de": "Er widmete sein Leben _______ Wissenschaft (f).",
+    "correct_answer": "der",
     "options": [
-      "im",
-      "ins",
-      "in der"
-    ],
-    "explanation_de": "Điểm đến (Wohin?) verlangt den Akkusativ. In + das = ins.",
-    "explanation_en": "Destination (Wohin?) requires the Accusative case. In + das = ins.",
-    "explanation_vi": "Chỉ hướng chuyển động (Wohin?) yêu cầu cách Akkusativ. In + das = ins.",
-    "status": "published",
-    "tags": [
-      "prepositions",
-      "motion"
-    ]
-  },
-  {
-    "category": "praepositionen",
-    "level": "A2",
-    "type": "multiple-choice",
-    "prompt_de": "Ich fahre mit _______ Auto (n).",
-    "correct_answer": "dem",
-    "options": [
-      "das",
-      "dem",
+      "die",
+      "der",
       "den"
     ],
-    "explanation_de": "Die Präposition 'mit' verlangt immer den Dativ. 'Das' wird zu 'dem'.",
-    "explanation_en": "The preposition 'mit' always requires the Dative case. 'Das' becomes 'dem'.",
-    "explanation_vi": "Giới từ 'mit' luôn đi với cách Dativ. 'Das' biến thành 'dem'.",
+    "explanation_de": "Das Verb 'sich/etwas widmen' verlangt ein Dativobjekt.",
+    "explanation_en": "The verb 'sich/etwas widmen' (to dedicate oneself/something to) requires a Dative object.",
+    "explanation_vi": "Động từ 'sich/etwas widmen' (cống hiến) yêu cầu tân ngữ ở cách Dativ.",
+    "status": "published",
+    "tags": [
+      "cases",
+      "dative",
+      "advanced-verbs"
+    ]
+  },
+  {
+    "category": "kasus",
+    "level": "B2",
+    "type": "multiple-choice",
+    "prompt_de": "Die Einbrecher konnten _______ Polizei (f) in letzter Sekunde entkommen.",
+    "correct_answer": "der",
+    "options": [
+      "die",
+      "der",
+      "den"
+    ],
+    "explanation_de": "Das Verb 'entkommen' steht immer mit dem Dativ.",
+    "explanation_en": "The verb 'entkommen' (to escape) is always used with the Dative.",
+    "explanation_vi": "Động từ 'entkommen' (trốn thoát) luôn đi với cách Dativ.",
+    "status": "published",
+    "tags": [
+      "cases",
+      "dative",
+      "verbs"
+    ]
+  },
+  {
+    "category": "kasus",
+    "level": "B2",
+    "type": "multiple-choice",
+    "prompt_de": "Man klagte ihn _______ Mordes (m) an.",
+    "correct_answer": "des",
+    "options": [
+      "dem",
+      "den",
+      "des"
+    ],
+    "explanation_de": "Das Verb 'anklagen' verlangt eine Person im Akkusativ und die Straftat im Genitiv.",
+    "explanation_en": "The verb 'anklagen' (to accuse) requires a person in the Accusative and the crime in the Genitive.",
+    "explanation_vi": "Động từ 'anklagen' (buộc tội) yêu cầu tân ngữ chỉ người ở Đối cách và tội danh ở Sở hữu cách (Genitiv).",
+    "status": "published",
+    "tags": [
+      "cases",
+      "genitive",
+      "advanced-verbs"
+    ]
+  },
+  {
+    "category": "kasus",
+    "level": "B1",
+    "type": "multiple-choice",
+    "prompt_de": "Du kannst _______ Experten (m) wirklich vertrauen.",
+    "correct_answer": "dem",
+    "options": [
+      "den",
+      "dem",
+      "des"
+    ],
+    "explanation_de": "Das Verb 'vertrauen' erfordert den Dativ.",
+    "explanation_en": "The verb 'vertrauen' requires the Dative.",
+    "explanation_vi": "Động từ 'vertrauen' (tin tưởng) yêu cầu cách Dativ.",
+    "status": "published",
+    "tags": [
+      "cases",
+      "dative",
+      "verbs"
+    ]
+  },
+  {
+    "category": "praepositionen",
+    "level": "B1",
+    "type": "multiple-choice",
+    "prompt_de": "Du musst dich bei dieser Entscheidung _______ dein Gefühl verlassen.",
+    "correct_answer": "auf",
+    "options": [
+      "an",
+      "auf",
+      "für"
+    ],
+    "explanation_de": "'sich verlassen' steht immer mit der Präposition 'auf' (+ Akkusativ).",
+    "explanation_en": "'sich verlassen' (to rely on) is always used with the preposition 'auf' (+ Accusative).",
+    "explanation_vi": "'sich verlassen' (dựa vào/tin cậy) luôn đi với giới từ 'auf' (+ cách Akkusativ).",
     "status": "published",
     "tags": [
       "prepositions",
-      "dative"
+      "verbs",
+      "reflexive"
     ]
   },
   {
-    "category": "negation",
-    "level": "A1",
+    "category": "praepositionen",
+    "level": "B2",
     "type": "multiple-choice",
-    "prompt_de": "Hast du ein Auto? - Nein, ich habe _______ Auto.",
-    "correct_answer": "kein",
+    "prompt_de": "Nach dem langen Winter sehne ich mich _______ der Sonne.",
+    "correct_answer": "nach",
     "options": [
-      "nicht",
-      "kein",
-      "keine"
+      "für",
+      "nach",
+      "auf"
     ],
-    "explanation_de": "Nomen werden mit 'kein' verneint.",
-    "explanation_en": "Nouns are negated with 'kein'.",
-    "explanation_vi": "Danh từ được phủ định bằng 'kein'.",
+    "explanation_de": "Das Verb 'sich sehnen' fordert zwingend die Präposition 'nach' (+ Dativ).",
+    "explanation_en": "The verb 'sich sehnen' (to long for) strictly requires the preposition 'nach' (+ Dative).",
+    "explanation_vi": "Động từ 'sich sehnen' (khao khát) bắt buộc dùng giới từ 'nach' (+ cách Dativ).",
     "status": "published",
     "tags": [
-      "basics",
-      "negation"
+      "prepositions",
+      "verbs",
+      "reflexive"
     ]
   },
   {
-    "category": "relativsaetze",
+    "category": "praepositionen",
     "level": "B1",
     "type": "multiple-choice",
-    "prompt_de": "Er kommt nicht, _______ er krank ist.",
-    "correct_answer": "weil",
+    "prompt_de": "Diese alte Brücke besteht komplett _______ Holz.",
+    "correct_answer": "aus",
     "options": [
-      "denn",
-      "weil",
-      "obwohl"
+      "von",
+      "aus",
+      "mit"
     ],
-    "explanation_de": "'Weil' leitet einen Nebensatz ein, das Verb steht am Ende.",
-    "explanation_en": "'Weil' introduces a subordinate clause, the verb goes to the end.",
-    "explanation_vi": "'Weil' dẫn đầu một mệnh đề phụ, động từ đứng ở cuối câu.",
+    "explanation_de": "Um das Material einer Sache zu benennen, verwendet man 'bestehen aus' (+ Dativ).",
+    "explanation_en": "To name the material of a thing, 'bestehen aus' (+ Dative) is used.",
+    "explanation_vi": "Để gọi tên chất liệu của một vật, người ta dùng 'bestehen aus' (làm từ) (+ cách Dativ).",
     "status": "published",
     "tags": [
-      "conjunctions",
-      "subordinate"
+      "prepositions",
+      "verbs",
+      "materials"
+    ]
+  },
+  {
+    "category": "praepositionen",
+    "level": "B2",
+    "type": "multiple-choice",
+    "prompt_de": "Er zögerte _______ der Antwort, weil er sich unsicher war.",
+    "correct_answer": "mit",
+    "options": [
+      "an",
+      "mit",
+      "bei"
+    ],
+    "explanation_de": "Das Verb 'zögern' steht im Deutschen oft mit der Präposition 'mit' (+ Dativ).",
+    "explanation_en": "The verb 'zögern' (to hesitate) is often used with the preposition 'mit' (+ Dative) in German.",
+    "explanation_vi": "Động từ 'zögern' (chần chừ) trong tiếng Đức thường đi với giới từ 'mit' (+ cách Dativ).",
+    "status": "published",
+    "tags": [
+      "prepositions",
+      "verbs"
+    ]
+  },
+  {
+    "category": "praepositionen",
+    "level": "B2",
+    "type": "multiple-choice",
+    "prompt_de": "Wir zweifeln stark _______ seiner Version der Geschichte.",
+    "correct_answer": "an",
+    "options": [
+      "über",
+      "von",
+      "an"
+    ],
+    "explanation_de": "Das Verb 'zweifeln' verlangt die Präposition 'an' + Dativ.",
+    "explanation_en": "The verb 'zweifeln' (to doubt) requires the preposition 'an' + Dative.",
+    "explanation_vi": "Động từ 'zweifeln' (nghi ngờ) yêu cầu giới từ 'an' + cách Dativ.",
+    "status": "published",
+    "tags": [
+      "prepositions",
+      "verbs",
+      "doubts"
+    ]
+  },
+  {
+    "category": "adjektivendungen",
+    "level": "B2",
+    "type": "multiple-choice",
+    "prompt_de": "Trotz schlecht_______ Wetters (n) fand das Konzert statt.",
+    "correct_answer": "en",
+    "options": [
+      "es",
+      "en",
+      "em"
+    ],
+    "explanation_de": "Genitiv Neutral ohne Artikel (starke Deklination). Bei Nomen auf '-s' (Wetters) endet das Adjektiv auf '-en' statt '-es'.",
+    "explanation_en": "Genitive Neuter without an article (strong declension). For nouns ending in '-s' (Wetters), the adjective ends in '-en' instead of '-es'.",
+    "explanation_vi": "Sở hữu cách giống trung không mạo từ (biến cách mạnh). Với danh từ kết thúc bằng '-s' (Wetters), tính từ có đuôi '-en' thay vì '-es'.",
+    "status": "published",
+    "tags": [
+      "adjectives",
+      "genitive",
+      "strong-declension"
     ]
   },
   {
     "category": "adjektivendungen",
     "level": "B1",
-    "type": "fill-in-blank",
-    "prompt_de": "Ich trage einen blau___ Mantel (m).",
-    "correct_answer": "en",
-    "explanation_de": "Maskulin, Akkusativ, unbestimmter Artikel (gemischte Deklination).",
-    "explanation_en": "Masculine, Accusative, indefinite article (mixed declension).",
-    "explanation_vi": "Giống đực, Akkusativ, mạo từ không xác định (biến cách hỗn hợp).",
+    "type": "multiple-choice",
+    "prompt_de": "Er hat mir gestern etwas sehr _______ erzählt.",
+    "correct_answer": "Lustiges",
+    "options": [
+      "Lustiges",
+      "Lustige",
+      "Lustigen"
+    ],
+    "explanation_de": "Nach 'etwas' wird das Adjektiv großgeschrieben und erhält im Akkusativ Neutrum die Endung '-es'.",
+    "explanation_en": "After 'etwas', the adjective is capitalized and takes the ending '-es' in Accusative Neuter.",
+    "explanation_vi": "Sau 'etwas', tính từ được viết hoa và nhận đuôi '-es' ở Đối cách giống trung.",
     "status": "published",
     "tags": [
       "adjectives",
-      "declension"
+      "nominalization",
+      "accusative"
+    ]
+  },
+  {
+    "category": "adjektivendungen",
+    "level": "B1",
+    "type": "multiple-choice",
+    "prompt_de": "Wir haben uns mit groß_______ Problemen (Plural) auseinandersetzen müssen.",
+    "correct_answer": "en",
+    "options": [
+      "e",
+      "en",
+      "er"
+    ],
+    "explanation_de": "Dativ Plural ohne Artikel. Das Adjektiv übernimmt die Endung des Dativ-Plural-Artikels ('den') -> '-en'.",
+    "explanation_en": "Dative plural without article. The adjective takes the ending of the Dative plural article ('den') -> '-en'.",
+    "explanation_vi": "Tặng cách số nhiều không mạo từ. Tính từ lấy đuôi của mạo từ số nhiều ở Tặng cách ('den') -> '-en'.",
+    "status": "published",
+    "tags": [
+      "adjectives",
+      "dative",
+      "plural"
+    ]
+  },
+  {
+    "category": "adjektivendungen",
+    "level": "B2",
+    "type": "multiple-choice",
+    "prompt_de": "Sämtliche neu_______ Bestimmungen (Plural) treten ab sofort in Kraft.",
+    "correct_answer": "en",
+    "options": [
+      "e",
+      "en",
+      "er"
+    ],
+    "explanation_de": "'Sämtliche' verhält sich wie 'alle'. Das Adjektiv wird im Plural Nominativ schwach dekliniert und endet auf '-en'.",
+    "explanation_en": "'Sämtliche' behaves like 'alle'. The adjective is weakly declined in the Nominative plural and ends in '-en'.",
+    "explanation_vi": "'Sämtliche' (tất cả) hoạt động giống 'alle'. Tính từ được chia yếu ở Danh cách số nhiều và kết thúc bằng '-en'.",
+    "status": "published",
+    "tags": [
+      "adjectives",
+      "plural",
+      "weak-declension"
+    ]
+  },
+  {
+    "category": "adjektivendungen",
+    "level": "B1",
+    "type": "multiple-choice",
+    "prompt_de": "Aufgrund eines technisch_______ Defekts (m) verspätet sich der Zug.",
+    "correct_answer": "en",
+    "options": [
+      "er",
+      "es",
+      "en"
+    ],
+    "explanation_de": "Genitiv Maskulin nach unbestimmtem Artikel ('eines'). Das Adjektiv bekommt die Endung '-en'.",
+    "explanation_en": "Genitive masculine after indefinite article ('eines'). The adjective takes the ending '-en'.",
+    "explanation_vi": "Sở hữu cách giống đực sau mạo từ không xác định ('eines'). Tính từ nhận đuôi '-en'.",
+    "status": "published",
+    "tags": [
+      "adjectives",
+      "genitive",
+      "mixed-declension"
     ]
   },
   {
     "category": "passiv",
     "level": "B2",
     "type": "multiple-choice",
-    "prompt_de": "Der Bericht _______ gestern geschrieben.",
-    "correct_answer": "wurde",
+    "prompt_de": "Diese wichtige Aufgabe ist bis morgen unbedingt zu _______.",
+    "correct_answer": "erledigen",
     "options": [
-      "ist",
-      "wird",
-      "wurde"
+      "erledigen",
+      "erledigt",
+      "erledigend"
     ],
-    "explanation_de": "Passiv Präteritum: wurde + Partizip II.",
-    "explanation_en": "Passive Past: wurde + Past Participle.",
-    "explanation_vi": "Bị động quá khứ: wurde + Partizip II.",
+    "explanation_de": "Die Passiversatzform 'sein + zu + Infinitiv' drückt eine Notwendigkeit aus (muss erledigt werden).",
+    "explanation_en": "The passive alternative 'sein + zu + infinitive' expresses a necessity (must be done).",
+    "explanation_vi": "Dạng thay thế bị động 'sein + zu + nguyên thể' diễn đạt một sự cần thiết (phải được hoàn thành).",
     "status": "published",
     "tags": [
       "passive",
-      "past"
+      "alternatives",
+      "infinitive-zu"
     ]
   },
   {
-    "category": "konjunktiv",
+    "category": "passiv",
+    "level": "B1",
+    "type": "multiple-choice",
+    "prompt_de": "Das neue Museum _______ letztes Jahr vom Bürgermeister feierlich eröffnet.",
+    "correct_answer": "wurde",
+    "options": [
+      "ist",
+      "wurde",
+      "wird"
+    ],
+    "explanation_de": "Präteritum Passiv für eine abgeschlossene Handlung in der Vergangenheit ('wurde' + Partizip II).",
+    "explanation_en": "Preterite passive for a completed action in the past ('wurde' + Participle II).",
+    "explanation_vi": "Bị động quá khứ đơn cho một hành động đã hoàn thành trong quá khứ ('wurde' + Phân từ II).",
+    "status": "published",
+    "tags": [
+      "passive",
+      "preterite"
+    ]
+  },
+  {
+    "category": "passiv",
+    "level": "B1",
+    "type": "multiple-choice",
+    "prompt_de": "Das Paket muss heute noch zur Post gebracht _______.",
+    "correct_answer": "werden",
+    "options": [
+      "werden",
+      "worden",
+      "sein"
+    ],
+    "explanation_de": "Passiv mit Modalverben (muss) verlangt den Infinitiv 'werden' am Satzende.",
+    "explanation_en": "Passive with modal verbs (muss) requires the infinitive 'werden' at the end of the sentence.",
+    "explanation_vi": "Câu bị động với động từ khuyết thiếu (muss) yêu cầu động từ nguyên thể 'werden' ở cuối câu.",
+    "status": "published",
+    "tags": [
+      "passive",
+      "modals",
+      "infinitive"
+    ]
+  },
+  {
+    "category": "passiv",
     "level": "B2",
     "type": "multiple-choice",
-    "prompt_de": "Wenn ich mehr Zeit _______, würde ich mehr reisen.",
-    "correct_answer": "hätte",
+    "prompt_de": "Der Antrag ist wegen fehlender Dokumente abgelehnt _______.",
+    "correct_answer": "worden",
     "options": [
-      "habe",
-      "hätte",
-      "hatte"
+      "werden",
+      "geworden",
+      "worden"
     ],
-    "explanation_de": "Konjunktiv II drückt irreale Wünsche/Bedingungen aus.",
-    "explanation_en": "Subjunctive II expresses unreal wishes/conditions.",
-    "explanation_vi": "Kiểu Konjunktiv II diễn tả những mong ước/điều kiện không có thực.",
+    "explanation_de": "Perfekt Passiv wird mit 'sein' + Partizip II + 'worden' gebildet.",
+    "explanation_en": "Perfect passive is formed with 'sein' + Participle II + 'worden'.",
+    "explanation_vi": "Bị động hiện tại hoàn thành được tạo bằng 'sein' + Phân từ II + 'worden'.",
     "status": "published",
     "tags": [
-      "subjunctive",
-      "wishes"
+      "passive",
+      "perfect",
+      "advanced"
     ]
   },
   {
-    "category": "trennbare-verben",
-    "level": "A2",
-    "type": "fill-in-blank",
-    "prompt_de": "Ich _______ um 7 Uhr auf (aufstehen).",
-    "correct_answer": "stehe",
-    "explanation_de": "Das Präfix 'auf' geht ans Ende des Satzes.",
-    "explanation_en": "The prefix 'auf' goes to the end of the sentence.",
-    "explanation_vi": "Tiền tố 'auf' đi xuống cuối câu.",
+    "category": "passiv",
+    "level": "B1",
+    "type": "multiple-choice",
+    "prompt_de": "In diesem Konferenzraum _______ oft stundenlang diskutiert.",
+    "correct_answer": "wird",
+    "options": [
+      "wurde",
+      "wird",
+      "ist"
+    ],
+    "explanation_de": "Unpersönliches Passiv im Präsens (ohne Subjekt). Das Hilfsverb steht immer in der 3. Person Singular ('wird').",
+    "explanation_en": "Impersonal passive in the present (without a subject). The auxiliary verb is always in the 3rd person singular ('wird').",
+    "explanation_vi": "Bị động không ngôi ở thì hiện tại (không có chủ ngữ). Trợ động từ luôn ở ngôi thứ 3 số ít ('wird').",
     "status": "published",
     "tags": [
-      "verbs",
-      "separable"
+      "passive",
+      "impersonal",
+      "present"
     ]
   },
   {
     "category": "relativsaetze",
     "level": "B1",
     "type": "multiple-choice",
-    "prompt_de": "Das ist der Mann, _______ ich gestern gesehen habe.",
-    "correct_answer": "den",
+    "prompt_de": "Die Klimaveränderung ist ein Thema, _______ wir dringend sprechen müssen.",
+    "correct_answer": "worüber",
     "options": [
-      "der",
-      "den",
-      "dem"
+      "über das",
+      "worüber",
+      "über was"
     ],
-    "explanation_de": "Relativpronomen im Akkusativ (sehen + Wen/Was?).",
-    "explanation_en": "Relative pronoun in Accusative (sehen + Whom/What?).",
-    "explanation_vi": "Đại từ quan hệ ở cách Akkusativ (sehen + Ai/Cái gì?).",
+    "explanation_de": "Bezieht sich das Relativpronomen auf eine Sache und wird eine Präposition benötigt (sprechen über), benutzt man ein Pronominaladverb (worüber).",
+    "explanation_en": "If the relative pronoun refers to a thing and a preposition is needed (sprechen über), a pronominal adverb (worüber) is used.",
+    "explanation_vi": "Nếu đại từ quan hệ chỉ một sự vật và cần có giới từ (sprechen über), ta dùng trạng từ đại từ (worüber).",
     "status": "published",
     "tags": [
       "relative-clauses",
+      "pronominal-adverbs",
+      "prepositions"
+    ]
+  },
+  {
+    "category": "relativsaetze",
+    "level": "B2",
+    "type": "multiple-choice",
+    "prompt_de": "Der Mitarbeiter, _______ Leistungen außergewöhnlich sind, erhält eine Prämie.",
+    "correct_answer": "dessen",
+    "options": [
+      "dem",
+      "den",
+      "dessen"
+    ],
+    "explanation_de": "Das Relativpronomen im Genitiv drückt Besitz/Zugehörigkeit aus. Maskulin Singular ('Der Mitarbeiter') -> 'dessen'.",
+    "explanation_en": "The relative pronoun in the Genitive expresses possession/affiliation. Masculine singular ('Der Mitarbeiter') -> 'dessen'.",
+    "explanation_vi": "Đại từ quan hệ ở Sở hữu cách thể hiện sự sở hữu/thuộc về. Giống đực số ít ('Der Mitarbeiter') -> 'dessen'.",
+    "status": "published",
+    "tags": [
+      "relative-clauses",
+      "genitive",
+      "possession"
+    ]
+  },
+  {
+    "category": "relativsaetze",
+    "level": "B1",
+    "type": "multiple-choice",
+    "prompt_de": "Ist das die Kollegin, in _______ er sich verliebt hat?",
+    "correct_answer": "die",
+    "options": [
+      "der",
+      "die",
+      "den"
+    ],
+    "explanation_de": "Das reflexive Verb 'sich verlieben' steht mit 'in' + Akkusativ. Feminin Akkusativ -> 'die'.",
+    "explanation_en": "The reflexive verb 'sich verlieben' takes 'in' + Accusative. Feminine Accusative -> 'die'.",
+    "explanation_vi": "Động từ phản thân 'sich verlieben' (phải lòng) đi với 'in' + Đối cách. Giống cái Đối cách -> 'die'.",
+    "status": "published",
+    "tags": [
+      "relative-clauses",
+      "prepositions",
       "accusative"
+    ]
+  },
+  {
+    "category": "relativsaetze",
+    "level": "B2",
+    "type": "multiple-choice",
+    "prompt_de": "_______ das nicht glaubt, der sollte selbst nachsehen.",
+    "correct_answer": "Wer",
+    "options": [
+      "Wer",
+      "Der",
+      "Wem"
+    ],
+    "explanation_de": "Freier Relativsatz mit 'Wer' (Nominativ). Er wird oft mit 'der' im Hauptsatz wieder aufgenommen.",
+    "explanation_en": "Free relative clause with 'Wer' (Nominative). It is often resumed with 'der' in the main clause.",
+    "explanation_vi": "Mệnh đề quan hệ tự do với 'Wer' (Danh cách). Nó thường được nối lại bằng 'der' trong mệnh đề chính.",
+    "status": "published",
+    "tags": [
+      "relative-clauses",
+      "free-relative",
+      "advanced"
+    ]
+  },
+  {
+    "category": "relativsaetze",
+    "level": "B2",
+    "type": "multiple-choice",
+    "prompt_de": "Es gibt vieles, _______ ich mich noch nicht gewöhnt habe.",
+    "correct_answer": "woran",
+    "options": [
+      "an das",
+      "woran",
+      "an was"
+    ],
+    "explanation_de": "Nach Indefinitpronomen ('vieles') mit Präposition ('sich gewöhnen an') verwendet man das Pronominaladverb (wo + r + an = woran).",
+    "explanation_en": "After indefinite pronouns ('vieles') with a preposition ('sich gewöhnen an'), the pronominal adverb (wo + r + an = woran) is used.",
+    "explanation_vi": "Sau đại từ bất định ('vieles') kèm giới từ ('sich gewöhnen an'), ta dùng trạng từ đại từ (wo + r + an = woran).",
+    "status": "published",
+    "tags": [
+      "relative-clauses",
+      "indefinite-pronouns",
+      "pronominal-adverbs"
+    ]
+  },
+  {
+    "category": "trennbare-verben",
+    "level": "B1",
+    "type": "multiple-choice",
+    "prompt_de": "Es ist mir extrem schwergefallen, mit dem Projekt _______.",
+    "correct_answer": "aufzuhören",
+    "options": [
+      "aufhören",
+      "aufzuhören",
+      "zu aufhören"
+    ],
+    "explanation_de": "In einer Infinitivkonstruktion mit 'zu' steht das 'zu' bei trennbaren Verben zwischen Präfix und Stamm.",
+    "explanation_en": "In an infinitive construction with 'zu', 'zu' stands between the prefix and the stem for separable verbs.",
+    "explanation_vi": "Trong cấu trúc nguyên thể với 'zu', chữ 'zu' nằm giữa tiền tố và gốc của động từ tách.",
+    "status": "published",
+    "tags": [
+      "verbs",
+      "separable",
+      "infinitive-zu"
+    ]
+  },
+  {
+    "category": "trennbare-verben",
+    "level": "B2",
+    "type": "multiple-choice",
+    "prompt_de": "Die Demonstration hat wie geplant friedlich _______.",
+    "correct_answer": "stattgefunden",
+    "options": [
+      "gefunden statt",
+      "stattfinden",
+      "stattgefunden"
+    ],
+    "explanation_de": "Das Partizip II von 'stattfinden' (trennbar) lautet 'stattgefunden'. Das '-ge-' steht in der Mitte.",
+    "explanation_en": "The Participle II of 'stattfinden' (separable) is 'stattgefunden'. The '-ge-' is in the middle.",
+    "explanation_vi": "Phân từ II của 'stattfinden' (diễn ra) là 'stattgefunden'. Chữ '-ge-' đứng ở giữa.",
+    "status": "published",
+    "tags": [
+      "verbs",
+      "separable",
+      "participle"
+    ]
+  },
+  {
+    "category": "trennbare-verben",
+    "level": "B1",
+    "type": "multiple-choice",
+    "prompt_de": "Ich war froh, dass er seinen Termin nicht _______.",
+    "correct_answer": "absagte",
+    "options": [
+      "absagte",
+      "sagte ab",
+      "abgesagt"
+    ],
+    "explanation_de": "Nebensatz mit 'dass'. Das trennbare Verb bleibt zusammen und steht konjugiert (Präteritum) am Ende.",
+    "explanation_en": "Subordinate clause with 'dass'. The separable verb stays together and is conjugated (preterite) at the end.",
+    "explanation_vi": "Mệnh đề phụ với 'dass'. Động từ tách giữ nguyên dạng không tách và được chia (quá khứ đơn) ở cuối câu.",
+    "status": "published",
+    "tags": [
+      "verbs",
+      "separable",
+      "subordinate-clauses"
+    ]
+  },
+  {
+    "category": "trennbare-verben",
+    "level": "B2",
+    "type": "multiple-choice",
+    "prompt_de": "Wir müssen versuchen, die neuen Kollegen schnell _______.",
+    "correct_answer": "einzuarbeiten",
+    "options": [
+      "einarbeiten",
+      "einzuarbeiten",
+      "zu einarbeiten"
+    ],
+    "explanation_de": "'einarbeiten' ist ein trennbares Verb. Das 'zu' rutscht im Infinitiv in die Mitte.",
+    "explanation_en": "'einarbeiten' is a separable verb. The 'zu' slides into the middle in the infinitive.",
+    "explanation_vi": "'einarbeiten' (hướng dẫn công việc) là động từ tách. Chữ 'zu' trượt vào giữa trong dạng nguyên thể.",
+    "status": "published",
+    "tags": [
+      "verbs",
+      "separable",
+      "infinitive-zu"
+    ]
+  },
+  {
+    "category": "trennbare-verben",
+    "level": "B1",
+    "type": "multiple-choice",
+    "prompt_de": "Bitte _______ dich auf das wichtige Vorstellungsgespräch gut _______.",
+    "correct_answer": "bereite ... vor",
+    "options": [
+      "bereite ... vor",
+      "bereitest ... vor",
+      "vorbereite ..."
+    ],
+    "explanation_de": "Imperativ (du-Form) von 'vorbereiten'. Das Verb (bereite) steht vorne, das Präfix (vor) am Ende.",
+    "explanation_en": "Imperative (du-form) of 'vorbereiten'. The verb (bereite) is at the front, the prefix (vor) at the end.",
+    "explanation_vi": "Thể mệnh lệnh (ngôi du) của 'vorbereiten' (chuẩn bị). Động từ (bereite) đứng đầu, tiền tố (vor) đứng cuối.",
+    "status": "published",
+    "tags": [
+      "verbs",
+      "separable",
+      "imperative"
+    ]
+  },
+  {
+    "category": "konjunktiv",
+    "level": "B1",
+    "type": "multiple-choice",
+    "prompt_de": "Wenn ich das Geld _______, würde ich mir ein Haus kaufen.",
+    "correct_answer": "hätte",
+    "options": [
+      "habe",
+      "hatte",
+      "hätte"
+    ],
+    "explanation_de": "Für eine irreale Bedingung in der Gegenwart nutzt man den Konjunktiv II von 'haben' (hätte).",
+    "explanation_en": "For an unreal condition in the present, use the Subjunctive II of 'haben' (hätte).",
+    "explanation_vi": "Đối với điều kiện không có thực ở hiện tại, dùng Konjunktiv II của 'haben' (hätte).",
+    "status": "published",
+    "tags": [
+      "subjunctive",
+      "conditionals",
+      "unreal"
+    ]
+  },
+  {
+    "category": "konjunktiv",
+    "level": "B2",
+    "type": "multiple-choice",
+    "prompt_de": "Der Sprecher betonte, die Regierung _______ alles im Griff.",
+    "correct_answer": "habe",
+    "options": [
+      "hat",
+      "habe",
+      "hätte"
+    ],
+    "explanation_de": "In der formellen indirekten Rede verwendet man bevorzugt den Konjunktiv I (habe).",
+    "explanation_en": "In formal indirect speech, Subjunctive I (habe) is preferred.",
+    "explanation_vi": "Trong câu tường thuật gián tiếp trang trọng, ưu tiên dùng Konjunktiv I (habe).",
+    "status": "published",
+    "tags": [
+      "subjunctive",
+      "indirect-speech",
+      "advanced"
+    ]
+  },
+  {
+    "category": "konjunktiv",
+    "level": "B1",
+    "type": "multiple-choice",
+    "prompt_de": "An seiner Stelle _______ ich das Angebot sofort annehmen.",
+    "correct_answer": "würde",
+    "options": [
+      "werde",
+      "würde",
+      "wurde"
+    ],
+    "explanation_de": "Ein Ratschlag ('an seiner Stelle') wird mit Konjunktiv II ('würde' + Infinitiv) gebildet.",
+    "explanation_en": "Advice ('an seiner Stelle') is formed with Subjunctive II ('würde' + infinitive).",
+    "explanation_vi": "Một lời khuyên ('nếu ở vị trí của anh ấy') được tạo bằng Konjunktiv II ('würde' + nguyên thể).",
+    "status": "published",
+    "tags": [
+      "subjunctive",
+      "advice",
+      "conditionals"
+    ]
+  },
+  {
+    "category": "konjunktiv",
+    "level": "B2",
+    "type": "multiple-choice",
+    "prompt_de": "Sie benimmt sich so, als _______ sie nie hier gewesen.",
+    "correct_answer": "wäre",
+    "options": [
+      "ist",
+      "sei",
+      "wäre"
+    ],
+    "explanation_de": "Nach 'als ob' oder 'als' in irrealen Vergleichen (Vergangenheit) nutzt man den Konjunktiv II (wäre + Partizip II).",
+    "explanation_en": "After 'als ob' or 'als' in unreal comparisons (past), use the Subjunctive II (wäre + Participle II).",
+    "explanation_vi": "Sau 'als ob' hoặc 'als' trong so sánh không có thực (quá khứ), dùng Konjunktiv II (wäre + Phân từ II).",
+    "status": "published",
+    "tags": [
+      "subjunctive",
+      "comparisons",
+      "unreal"
+    ]
+  },
+  {
+    "category": "konjunktiv",
+    "level": "B2",
+    "type": "multiple-choice",
+    "prompt_de": "Wenn sie doch nur gestern die Wahrheit _______!",
+    "correct_answer": "gesagt hätte",
+    "options": [
+      "gesagt hat",
+      "sagen würde",
+      "gesagt hätte"
+    ],
+    "explanation_de": "Irrealer Wunsch in der Vergangenheit: Konjunktiv II der Vergangenheit (hätte + Partizip II).",
+    "explanation_en": "Unreal wish in the past: Past Subjunctive II (hätte + Participle II).",
+    "explanation_vi": "Mong ước không có thực trong quá khứ: Konjunktiv II quá khứ (hätte + Phân từ II).",
+    "status": "published",
+    "tags": [
+      "subjunctive",
+      "wishes",
+      "past"
     ]
   },
   {
     "category": "wortstellung",
     "level": "B2",
     "type": "word-order",
-    "prompt_de": "Anordnen: (gestern, Er ist, wegen des Regens, schnell, nach Hause, gefahren)",
-    "correct_answer": "Er ist gestern wegen des Regens schnell nach Hause gefahren",
-    "explanation_de": "Regel: TeKaMoLo (Temporal, Kausal, Modal, Lokal).",
-    "explanation_en": "Rule: TeKaMoLo (Temporal, Causal, Modal, Local).",
-    "explanation_vi": "Quy tắc: TeKaMoLo (Thời gian, Nguyên nhân, Cách thức, Địa điểm).",
+    "prompt_de": "Anordnen: (desto, wir, lernen, Je, verstehen, mehr, wir, besser)",
+    "correct_answer": "Je mehr wir lernen desto besser verstehen wir",
+    "explanation_de": "'Je' + Komparativ (Nebensatz -> Verb am Ende). 'desto' + Komparativ (Hauptsatz -> Verb auf Pos. 2 nach 'desto besser').",
+    "explanation_en": "'Je' + comparative (subclause -> verb at end). 'desto' + comparative (main clause -> verb in pos. 2 after 'desto besser').",
+    "explanation_vi": "'Je' + so sánh hơn (mệnh đề phụ -> động từ ở cuối). 'desto' + so sánh hơn (mệnh đề chính -> động từ vị trí 2 sau 'desto besser').",
     "status": "published",
     "tags": [
       "syntax",
+      "comparisons",
+      "two-part-conjunctions"
+    ]
+  },
+  {
+    "category": "wortstellung",
+    "level": "B1",
+    "type": "word-order",
+    "prompt_de": "Anordnen: (wir, ins Kino, Entweder, oder, bleiben, gehen, zu Hause, wir)",
+    "correct_answer": "Entweder gehen wir ins Kino oder wir bleiben zu Hause",
+    "explanation_de": "'Entweder' auf Position 1 verlangt Inversion (gehen wir). 'oder' steht auf Position 0 (wir bleiben).",
+    "explanation_en": "'Entweder' in pos 1 requires inversion (gehen wir). 'oder' is in pos 0 (wir bleiben).",
+    "explanation_vi": "'Entweder' ở vị trí 1 yêu cầu đảo ngữ (gehen wir). 'oder' đứng ở vị trí 0 (wir bleiben).",
+    "status": "published",
+    "tags": [
+      "syntax",
+      "two-part-conjunctions",
+      "main-clauses"
+    ]
+  },
+  {
+    "category": "wortstellung",
+    "level": "B2",
+    "type": "word-order",
+    "prompt_de": "Anordnen: (zwar, Der, ist, interessant, sehr, anspruchsvoll, Kurs, aber)",
+    "correct_answer": "Der Kurs ist zwar anspruchsvoll aber sehr interessant",
+    "explanation_de": "Der Doppelkonnektor 'zwar ... aber' verbindet Gegensätze. 'zwar' steht oft im Mittelfeld, 'aber' leitet den Gegenpunkt ein.",
+    "explanation_en": "The double connector 'zwar ... aber' connects opposites. 'zwar' is often in the middle field, 'aber' introduces the counterpoint.",
+    "explanation_vi": "Liên từ kép 'zwar ... aber' nối các ý đối lập. 'zwar' thường ở giữa, 'aber' mở đầu điểm tương phản.",
+    "status": "published",
+    "tags": [
+      "syntax",
+      "two-part-conjunctions",
+      "main-clauses"
+    ]
+  },
+  {
+    "category": "wortstellung",
+    "level": "B1",
+    "type": "word-order",
+    "prompt_de": "Anordnen: (bin, ich, Deshalb, heute, so, geblieben, lange, zu Hause)",
+    "correct_answer": "Deshalb bin ich heute so lange zu Hause geblieben",
+    "explanation_de": "'Deshalb' auf Position 1 verlangt die Inversion: Das Hilfsverb 'bin' rückt auf Position 2, das Partizip 'geblieben' ans Ende.",
+    "explanation_en": "'Deshalb' in position 1 requires inversion: The auxiliary verb 'bin' moves to pos 2, the participle 'geblieben' to the end.",
+    "explanation_vi": "'Deshalb' ở vị trí 1 yêu cầu đảo ngữ: Trợ động từ 'bin' chuyển sang vị trí 2, phân từ 'geblieben' nằm ở cuối.",
+    "status": "published",
+    "tags": [
+      "syntax",
+      "adverbs",
+      "inversion"
+    ]
+  },
+  {
+    "category": "wortstellung",
+    "level": "B2",
+    "type": "word-order",
+    "prompt_de": "Anordnen: (nicht nur, sondern, Sie, klug, ist, auch, fleißig, sie, ist)",
+    "correct_answer": "Sie ist nicht nur klug sondern sie ist auch fleißig",
+    "explanation_de": "Zweiteilige Konjunktion 'nicht nur ... sondern auch'. Der Satzbau der Hauptsätze bleibt erhalten.",
+    "explanation_en": "Two-part conjunction 'nicht nur ... sondern auch'. The structure of the main clauses is maintained.",
+    "explanation_vi": "Liên từ kép 'không những ... mà còn'. Cấu trúc của các mệnh đề chính được giữ nguyên.",
+    "status": "published",
+    "tags": [
+      "syntax",
+      "two-part-conjunctions",
+      "main-clauses"
+    ]
+  },
+  {
+    "category": "negation",
+    "level": "B1",
+    "type": "multiple-choice",
+    "prompt_de": "Wir fliegen dieses Jahr _______ nach Spanien _______ nach Italien. Wir bleiben zu Hause.",
+    "correct_answer": "weder ... noch",
+    "options": [
+      "nicht ... und",
+      "weder ... noch",
+      "entweder ... oder"
+    ],
+    "explanation_de": "Die doppelte Verneinung 'weder ... noch' (neither ... nor) schließt beide genannten Alternativen aus.",
+    "explanation_en": "The double negation 'weder ... noch' (neither ... nor) excludes both mentioned alternatives.",
+    "explanation_vi": "Phủ định kép 'weder ... noch' (không ... cũng không) loại trừ cả hai lựa chọn được nêu.",
+    "status": "published",
+    "tags": [
+      "negation",
+      "conjunctions",
+      "two-part"
+    ]
+  },
+  {
+    "category": "negation",
+    "level": "B2",
+    "type": "multiple-choice",
+    "prompt_de": "Das war _______ meine Absicht, dich so zu kränken.",
+    "correct_answer": "keineswegs",
+    "options": [
+      "keineswegs",
+      "nicht mehr",
+      "keine"
+    ],
+    "explanation_de": "'keineswegs' ist ein starkes Adverb der Verneinung und bedeutet 'auf gar keinen Fall'.",
+    "explanation_en": "'keineswegs' is a strong adverb of negation meaning 'by no means' or 'under no circumstances'.",
+    "explanation_vi": "'keineswegs' là một trạng từ phủ định mạnh mang nghĩa 'tuyệt đối không' hoặc 'hoàn toàn không'.",
+    "status": "published",
+    "tags": [
+      "negation",
+      "adverbs",
       "advanced"
     ]
   },
   {
-    "category": "praepositionen",
-    "level": "B2",
+    "category": "negation",
+    "level": "B1",
     "type": "multiple-choice",
-    "prompt_de": "_______ des schlechten Wetters sind wir zu Hause geblieben.",
-    "correct_answer": "Wegen",
+    "prompt_de": "Ich habe den entlaufenen Hund leider _______ finden können.",
+    "correct_answer": "nirgends",
     "options": [
-      "Wegen",
-      "Trotz",
-      "Während"
+      "nichts",
+      "niemals",
+      "nirgends"
     ],
-    "explanation_de": "'Wegen' verlangt standardsprachlich den Genitiv.",
-    "explanation_en": "'Wegen' requires the Genitive case in standard German.",
-    "explanation_vi": "'Wegen' yêu cầu cách Genitiv trong tiếng Đức chuẩn.",
+    "explanation_de": "Zur Verneinung von Orten ('an keinem Ort') verwendet man 'nirgends' oder 'nirgendwo'.",
+    "explanation_en": "To negate places ('in no place'), 'nirgends' or 'nirgendwo' (nowhere) is used.",
+    "explanation_vi": "Để phủ định về địa điểm ('không ở nơi nào'), ta dùng 'nirgends' hoặc 'nirgendwo'.",
     "status": "published",
     "tags": [
-      "prepositions",
-      "genitive"
+      "negation",
+      "locations",
+      "adverbs"
     ]
   },
   {
-    "category": "verb-konjugation",
-    "level": "A2",
+    "category": "negation",
+    "level": "B2",
     "type": "multiple-choice",
-    "prompt_de": "Ich freue _______ auf das Wochenende.",
-    "correct_answer": "mich",
+    "prompt_de": "Er hat sich für den enormen Schaden _______ entschuldigt.",
+    "correct_answer": "nicht einmal",
     "options": [
-      "mir",
-      "mich",
-      "dich"
+      "nicht einmal",
+      "keinesfalls",
+      "nichts"
     ],
-    "explanation_de": "'Sich freuen auf' ist ein reflexives Verb mit Akkusativ.",
-    "explanation_en": "'Sich freuen auf' is a reflexive verb with Accusative.",
-    "explanation_vi": "'Sich freuen auf' là một động từ phản thân đi với Akkusativ.",
+    "explanation_de": "'nicht einmal' (not even) drückt aus, dass nicht einmal das Mindeste getan wurde.",
+    "explanation_en": "'nicht einmal' (not even) expresses that not even the bare minimum was done.",
+    "explanation_vi": "'nicht einmal' (thậm chí không) diễn tả rằng ngay cả một hành động tối thiểu nhất cũng không được thực hiện.",
     "status": "published",
     "tags": [
-      "verbs",
-      "reflexive"
+      "negation",
+      "phrases",
+      "advanced"
+    ]
+  },
+  {
+    "category": "negation",
+    "level": "B2",
+    "type": "multiple-choice",
+    "prompt_de": "Ich bin mit dem Ergebnis des Tests _______ einverstanden.",
+    "correct_answer": "durchaus nicht",
+    "options": [
+      "durchaus nicht",
+      "nicht durchaus",
+      "keineswegs nicht"
+    ],
+    "explanation_de": "'durchaus nicht' ist eine nachdrückliche Wendung für 'absolut nicht'.",
+    "explanation_en": "'durchaus nicht' is an emphatic phrase for 'absolutely not' or 'not at all'.",
+    "explanation_vi": "'durchaus nicht' là một cụm từ nhấn mạnh mang nghĩa 'hoàn toàn không'.",
+    "status": "published",
+    "tags": [
+      "negation",
+      "emphasis",
+      "adverbs"
     ]
   }
 ]

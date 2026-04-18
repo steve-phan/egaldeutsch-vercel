@@ -1,0 +1,222 @@
+[
+  {
+    "title": "Das ist mir Wurst",
+    "slug": "das-ist-mir-wurst",
+    "thumbnail": "🌭",
+    "meaning_de": "Etwas ist einem völlig egal oder gleichgültig.",
+    "meaning_en": "I don't care / It's all the same to me.",
+    "meaning_vi": "Tôi không quan tâm / Thế nào cũng được.",
+    "literal_translation": "That is sausage to me.",
+    "content_html": "<div class=\"space-y-6\">\n<section>\n<h3 class=\"text-xl font-bold mb-2\">Bedeutung</h3>\n<p>Dieser sehr umgangssprachliche Ausdruck wird verwendet, wenn man keine Präferenz hat oder eine Entscheidung für unwichtig hält.</p>\n</section>\n<section class=\"bg-slate-50 p-4 rounded-2xl border border-slate-100\">\n<h3 class=\"text-xl font-bold mb-2\">Herkunft</h3>\n<p>Die Redewendung stammt wahrscheinlich von Metzgern. Wenn am Ende der Wurstherstellung Reste übrig blieben, war es egal, in welches Ende der Wurstpelle sie gestopft wurden – das Ergebnis war immer eine Wurst.</p>\n</section>\n<section>\n<h3 class=\"text-xl font-bold mb-2\">Beispiel</h3>\n<p class=\"italic text-slate-600\">\"Möchtest du Pizza oder Pasta?\" - \"Das ist mir Wurst, such du einfach etwas aus.\"</p>\n</section>\n</div>",
+    "tags": ["alltag", "umgangssprachlich"]
+  },
+  {
+    "title": "Mit den Wölfen heulen",
+    "slug": "mit-den-woelfen-heulen",
+    "thumbnail": "🐺",
+    "meaning_de": "Sich der Mehrheit anpassen, oft gegen die eigene Überzeugung.",
+    "meaning_en": "To howl with the wolves / To go with the flow.",
+    "meaning_vi": "Gió chiều nào che chiều nấy / Làm theo số đông.",
+    "literal_translation": "To howl with the wolves.",
+    "content_html": "<div class=\"space-y-6\">\n<section>\n<h3 class=\"text-xl font-bold mb-2\">Bedeutung</h3>\n<p>Man nutzt dies kritisch für Menschen, die kein Rückgrat zeigen und ihre Meinung ändern, nur um keinen Konflikt mit der Gruppe zu riskieren.</p>\n</section>\n<section class=\"bg-slate-50 p-4 rounded-2xl border border-slate-100\">\n<h3 class=\"text-xl font-bold mb-2\">Herkunft</h3>\n<p>Ein altes Sprichwort besagt: „Wer unter Wölfen lebt, muss mit ihnen heulen.“ Es beschreibt eine Überlebensstrategie in einer gefährlichen Umgebung.</p>\n</section>\n<section>\n<h3 class=\"text-xl font-bold mb-2\">Beispiel</h3>\n<p class=\"italic text-slate-600\">\"Er war eigentlich gegen den Plan, aber im Meeting hat er dann doch mit den Wölfen geheult.\"</p>\n</section>\n</div>",
+    "tags": ["charakter", "gesellschaft"]
+  },
+  {
+    "title": "Die Würfel sind gefallen",
+    "slug": "die-wuerfel-sind-gefallen",
+    "thumbnail": "🎲",
+    "meaning_de": "Eine Entscheidung ist endgültig getroffen und kann nicht mehr rückgängig gemacht werden.",
+    "meaning_en": "The die is cast.",
+    "meaning_vi": "Ván đã đóng thuyền / Mọi chuyện đã được quyết định.",
+    "literal_translation": "The dice have fallen.",
+    "content_html": "<div class=\"space-y-6\">\n<section>\n<h3 class=\"text-xl font-bold mb-2\">Bedeutung</h3>\n<p>Wird verwendet, wenn ein wichtiger Schritt getan wurde und man nun die Konsequenzen abwarten muss, ohne noch eingreifen zu können.</p>\n</section>\n<section class=\"bg-slate-50 p-4 rounded-2xl border border-slate-100\">\n<h3 class=\"text-xl font-bold mb-2\">Herkunft</h3>\n<p>Die Wendung geht auf Julius Caesar zurück, der beim Überschreiten des Flusses Rubikon den lateinischen Satz „Alea iacta est“ gesagt haben soll.</p>\n</section>\n<section>\n<h3 class=\"text-xl font-bold mb-2\">Beispiel</h3>\n<p class=\"italic text-slate-600\">\"Ich habe den Mietvertrag unterschrieben. Die Würfel sind gefallen, wir ziehen nächsten Monat um.\"</p>\n</section>\n</div>",
+    "tags": ["entscheidung", "geschichte"]
+  },
+  {
+    "title": "Etwas auf die leichte Schulter nehmen",
+    "slug": "etwas-auf-die-leichte-schulter-nehmen",
+    "thumbnail": "🤷",
+    "meaning_de": "Eine Sache oder Gefahr unterschätzen; nicht ernst genug nehmen.",
+    "meaning_en": "To take something lightly / To underestimate.",
+    "meaning_vi": "Xem nhẹ / Coi thường vấn đề.",
+    "literal_translation": "To take something on the light shoulder.",
+    "content_html": "<div class=\"space-y-6\">\n<section>\n<h3 class=\"text-xl font-bold mb-2\">Bedeutung</h3>\n<p>Man warnt jemanden damit, dass er sorgfältiger sein sollte, da die Situation schwieriger sein könnte, als sie aussieht.</p>\n</section>\n<section class=\"bg-slate-50 p-4 rounded-2xl border border-slate-100\">\n<h3 class=\"text-xl font-bold mb-2\">Herkunft</h3>\n<p>Das Bild bezieht sich auf das Tragen von Lasten. Wer eine schwere Last nur locker auf eine Schulter legt, riskiert, dass sie herunterfällt oder ihn verletzt.</p>\n</section>\n<section>\n<h3 class=\"text-xl font-bold mb-2\">Beispiel</h3>\n<p class=\"italic text-slate-600\">\"Du solltest die Prüfung nicht auf die leichte Schulter nehmen, sie ist schwerer als du denkst.\"</p>\n</section>\n</div>",
+    "tags": ["warnung", "verhalten"]
+  },
+  {
+    "title": "Ins Blaue hinein",
+    "slug": "ins-blaue-hinein",
+    "thumbnail": "🏙️",
+    "meaning_de": "Etwas ohne Plan, Ziel oder Vorbereitung tun.",
+    "meaning_en": "Into the blue / At random / Aimlessly.",
+    "meaning_vi": "Làm bừa / Không có kế hoạch / Vô định.",
+    "literal_translation": "Into the blue.",
+    "content_html": "<div class=\"space-y-6\">\n<section>\n<h3 class=\"text-xl font-bold mb-2\">Bedeutung</h3>\n<p>Man handelt spontan oder rät eine Antwort, ohne wirkliche Informationen zu haben.</p>\n</section>\n<section class=\"bg-slate-50 p-4 rounded-2xl border border-slate-100\">\n<h3 class=\"text-xl font-bold mb-2\">Herkunft</h3>\n<p>Das „Blaue“ symbolisiert hier die Ferne oder den Himmel, wo keine festen Wege oder Orientierungspunkte erkennbar sind.</p>\n</section>\n<section>\n<h3 class=\"text-xl font-bold mb-2\">Beispiel</h3>\n<p class=\"italic text-slate-600\">\"Ich habe keine Ahnung von dem Thema, ich habe bei der Prüfung einfach ins Blaue hinein geraten.\"</p>\n</section>\n</div>",
+    "tags": ["spontan", "unwissenheit"]
+  },
+  {
+    "title": "Den Kürzeren ziehen",
+    "slug": "den-kuerzeren-ziehen",
+    "thumbnail": "📉",
+    "meaning_de": "Verlieren; benachteiligt werden.",
+    "meaning_en": "To get the short end of the stick / To lose out.",
+    "meaning_vi": "Chịu thiệt thòi / Thất thế / Thua cuộc.",
+    "literal_translation": "To draw the shorter one.",
+    "content_html": "<div class=\"space-y-6\">\n<section>\n<h3 class=\"text-xl font-bold mb-2\">Bedeutung</h3>\n<p>Wird verwendet, wenn man bei einer Aufteilung oder einem Wettbewerb das schlechtere Los gezogen hat.</p>\n</section>\n<section class=\"bg-slate-50 p-4 rounded-2xl border border-slate-100\">\n<h3 class=\"text-xl font-bold mb-2\">Herkunft</h3>\n<p>Stammt vom Losziehen mit Grashalmen oder Stöckchen. Wer den kürzesten Halm aus der Hand des anderen zog, hatte verloren.</p>\n</section>\n<section>\n<h3 class=\"text-xl font-bold mb-2\">Beispiel</h3>\n<p class=\"italic text-slate-600\">\"Bei der Erbschaft hat mein Onkel leider den Kürzeren gezogen und fast nichts bekommen.\"</p>\n</section>\n</div>",
+    "tags": ["pech", "wettbewerb"]
+  },
+  {
+    "title": "Die Fliege machen",
+    "slug": "die-fliege-machen",
+    "thumbnail": "🪰",
+    "meaning_de": "Schnell verschwinden; sich heimlich entfernen.",
+    "meaning_en": "To buzz off / To beat it.",
+    "meaning_vi": "Chuồn lẹ / Rời đi nhanh chóng.",
+    "literal_translation": "To make the fly.",
+    "content_html": "<div class=\"space-y-6\">\n<section>\n<h3 class=\"text-xl font-bold mb-2\">Bedeutung</h3>\n<p>Ein sehr umgangssprachlicher Ausdruck für einen schnellen Aufbruch, oft um einer unangenehmen Situation zu entgehen.</p>\n</section>\n<section class=\"bg-slate-50 p-4 rounded-2xl border border-slate-100\">\n<h3 class=\"text-xl font-bold mb-2\">Herkunft</h3>\n<p>Bezieht sich auf das Verhalten von Fliegen, die bei der kleinsten Bewegung blitzschnell davonfliegen.</p>\n</section>\n<section>\n<h3 class=\"text-xl font-bold mb-2\">Beispiel</h3>\n<p class=\"italic text-slate-600\">\"Bevor der Lehrer den Test austeilt, mache ich lieber schnell die Fliege!\"</p>\n</section>\n</div>",
+    "tags": ["flucht", "umgangssprachlich"]
+  },
+  {
+    "title": "Das Zeitliche segnen",
+    "slug": "das-zeitliche-segnen",
+    "thumbnail": "⛪",
+    "meaning_de": "Sterben (gehobene oder leicht ironische Umschreibung).",
+    "meaning_en": "To pass away / To depart this life.",
+    "meaning_vi": "Vĩnh biệt cõi đời / Qua đời.",
+    "literal_translation": "To bless the temporal.",
+    "content_html": "<div class=\"space-y-6\">\n<section>\n<h3 class=\"text-xl font-bold mb-2\">Bedeutung</h3>\n<p>Ein Euphemismus für den Tod. Man nutzt es heute oft auch für Gegenstände, die nicht mehr funktionieren.</p>\n</section>\n<section class=\"bg-slate-50 p-4 rounded-2xl border border-slate-100\">\n<h3 class=\"text-xl font-bold mb-2\">Herkunft</h3>\n<p>Aus der Kirchensprache: „Das Zeitliche“ ist das irdische Leben. Wer es „segnet“, verabschiedet sich davon, um ins ewige Leben einzugehen.</p>\n</section>\n<section>\n<h3 class=\"text-xl font-bold mb-2\">Beispiel</h3>\n<p class=\"italic text-slate-600\">\"Mein alter Laptop hat gestern endgültig das Zeitliche gesegnet.\"</p>\n</section>\n</div>",
+    "tags": ["leben", "sprache"]
+  },
+  {
+    "title": "Jemandem das Fell über die Ohren ziehen",
+    "slug": "jemandem-das-fell-ueber-die-ohren-ziehen",
+    "thumbnail": "🦊",
+    "meaning_de": "Jemanden betrügen; jemanden finanziell ausbeuten.",
+    "meaning_en": "To rip someone off / To fleece someone.",
+    "meaning_vi": "Lừa gạt / Trấn lột / Bóc lột ai đó.",
+    "literal_translation": "To pull the fur over someone's ears.",
+    "content_html": "<div class=\"space-y-6\">\n<section>\n<h3 class=\"text-xl font-bold mb-2\">Bedeutung</h3>\n<p>Man nutzt diesen Ausdruck, wenn jemand bei einem Geschäft skrupellos übervorteilt wurde.</p>\n</section>\n<section class=\"bg-slate-50 p-4 rounded-2xl border border-slate-100\">\n<h3 class=\"text-xl font-bold mb-2\">Herkunft</h3>\n<p>Stammt aus der Pelzjagd. Das Abziehen des Fells über den Kopf des Tieres ist der letzte Schritt der Verwertung. Metaphorisch wird dem Menschen sein „Schutz“ (sein Geld) weggenommen.</p>\n</section>\n<section>\n<h3 class=\"text-xl font-bold mb-2\">Beispiel</h3>\n<p class=\"italic text-slate-600\">\"Der Handwerker hat für die kleine Reparatur 500 Euro verlangt. Der hat mir echt das Fell über die Ohren gezogen!\"</p>\n</section>\n</div>",
+    "tags": ["kriminalität", "geld"]
+  },
+  {
+    "title": "Viel Lärm um nichts",
+    "slug": "viel-laerm-um-nichts",
+    "thumbnail": "📣",
+    "meaning_de": "Eine Sache wird viel wichtiger dargestellt, als sie eigentlich ist.",
+    "meaning_en": "Much ado about nothing.",
+    "meaning_vi": "Chuyện bé xé ra to / Làm ầm ĩ vô ích.",
+    "literal_translation": "Much noise about nothing.",
+    "content_html": "<div class=\"space-y-6\">\n<section>\n<h3 class=\"text-xl font-bold mb-2\">Bedeutung</h3>\n<p>Wird verwendet, wenn eine große Aufregung oder Diskussion herrscht, obwohl das Thema völlig unbedeutend ist.</p>\n</section>\n<section class=\"bg-slate-50 p-4 rounded-2xl border border-slate-100\">\n<h3 class=\"text-xl font-bold mb-2\">Herkunft</h3>\n<p>Berühmt geworden als Titel einer Komödie von William Shakespeare.</p>\n</section>\n<section>\n<h3 class=\"text-xl font-bold mb-2\">Beispiel</h3>\n<p class=\"italic text-slate-600\">\"Alle haben über den Skandal geredet, aber am Ende war es nur viel Lärm um nichts.\"</p>\n</section>\n</div>",
+    "tags": ["übertreibung", "kommunikation"]
+  },
+  {
+    "title": "Den Vogel abschießen",
+    "slug": "den-vogel-abschiessen",
+    "thumbnail": "🎯",
+    "meaning_de": "Eine außergewöhnliche Leistung erbringen (positiv) oder etwas besonders Dummes tun (ironisch).",
+    "meaning_en": "To take the cake / To outdo everyone.",
+    "meaning_vi": "Làm một việc nổi bật (tốt hoặc tệ) / Gây bất ngờ.",
+    "literal_translation": "To shoot down the bird.",
+    "content_html": "<div class=\"space-y-6\">\n<section>\n<h3 class=\"text-xl font-bold mb-2\">Bedeutung</h3>\n<p>Wird oft verwendet, wenn jemand alle anderen übertrifft – im Guten wie im Schlechten.</p>\n</section>\n<section class=\"bg-slate-50 p-4 rounded-2xl border border-slate-100\">\n<h3 class=\"text-xl font-bold mb-2\">Herkunft</h3>\n<p>Stammt von Schützenfesten. Wer den hölzernen Vogel an der Spitze der Stange abschoss, wurde Schützenkönig.</p>\n</section>\n<section>\n<h3 class=\"text-xl font-bold mb-2\">Beispiel</h3>\n<p class=\"italic text-slate-600\">\"Mit deinem Kostüm hast du gestern echt den Vogel abgeschossen, alle haben dich bewundert!\"</p>\n</section>\n</div>",
+    "tags": ["leistung", "erfolg"]
+  },
+  {
+    "title": "Eine Lanze für jemanden brechen",
+    "slug": "eine-lanze-fuer-jemanden-brechen",
+    "thumbnail": "🤺",
+    "meaning_de": "Sich für jemanden einsetzen; jemanden verteidigen.",
+    "meaning_en": "To stand up for someone / To champion someone.",
+    "meaning_vi": "Đứng ra bảo vệ / Biện hộ cho ai đó.",
+    "literal_translation": "To break a lance for someone.",
+    "content_html": "<div class=\"space-y-6\">\n<section>\n<h3 class=\"text-xl font-bold mb-2\">Bedeutung</h3>\n<p>Man unterstützt eine Person oder eine Idee öffentlich, besonders wenn diese kritisiert wird.</p>\n</section>\n<section class=\"bg-slate-50 p-4 rounded-2xl border border-slate-100\">\n<h3 class=\"text-xl font-bold mb-2\">Herkunft</h3>\n<p>Aus der Zeit der Ritterturniere. Wer für einen Freund in den Kampf zog, riskierte, dass seine Lanze im Duell zerbrach.</p>\n</section>\n<section>\n<h3 class=\"text-xl font-bold mb-2\">Beispiel</h3>\n<p class=\"italic text-slate-600\">\"Alle haben über ihn gelacht, aber ich muss mal eine Lanze für ihn brechen: Er hat es wenigstens versucht.\"</p>\n</section>\n</div>",
+    "tags": ["hilfe", "mut"]
+  },
+  {
+    "title": "Sein Licht unter den Scheffel stellen",
+    "slug": "sein-licht-unter-den-scheffel-stellen",
+    "thumbnail": "🕯️",
+    "meaning_de": "Zu bescheiden sein; seine eigenen Talente oder Erfolge verstecken.",
+    "meaning_en": "To hide one's light under a bushel.",
+    "meaning_vi": "Quá khiêm tốn / Giấu tài.",
+    "literal_translation": "To put one's light under the bushel.",
+    "content_html": "<div class=\"space-y-6\">\n<section>\n<h3 class=\"text-xl font-bold mb-2\">Bedeutung</h3>\n<p>Eine Aufforderung, selbstbewusster zu sein und zu zeigen, was man kann.</p>\n</section>\n<section class=\"bg-slate-50 p-4 rounded-2xl border border-slate-100\">\n<h3 class=\"text-xl font-bold mb-2\">Herkunft</h3>\n<p>Ein biblisches Gleichnis aus der Bergpredigt. Ein „Scheffel“ war ein Messgefäß für Getreide. Wer eine Kerze darunter stellt, verdunkelt den Raum völlig sinnlos.</p>\n</section>\n<section>\n<h3 class=\"text-xl font-bold mb-2\">Beispiel</h3>\n<p class=\"italic text-slate-600\">\"Du bist eine tolle Malerin! Stell dein Licht nicht unter den Scheffel und zeig deine Bilder.\"</p>\n</section>\n</div>",
+    "tags": ["bescheidenheit", "charakter"]
+  },
+  {
+    "title": "Sich in die Riemen legen",
+    "slug": "sich-in-die-riemen-legen",
+    "thumbnail": "🚣",
+    "meaning_de": "Sich sehr anstrengen; mit ganzer Kraft arbeiten.",
+    "meaning_en": "To pull one's weight / To work hard.",
+    "meaning_vi": "Nỗ lực hết mình / Dốc sức làm việc.",
+    "literal_translation": "To lay oneself into the straps.",
+    "content_html": "<div class=\"space-y-6\">\n<section>\n<h3 class=\"text-xl font-bold mb-2\">Bedeutung</h3>\n<p>Besonders in Teams wird dies gefordert, wenn ein gemeinsames Ziel erreicht werden soll.</p>\n</section>\n<section class=\"bg-slate-50 p-4 rounded-2xl border border-slate-100\">\n<h3 class=\"text-xl font-bold mb-2\">Herkunft</h3>\n<p>Stammt aus der Seefahrt. Die „Riemen“ sind die Ruder. Wer sich „hineinlegt“, nutzt sein ganzes Körpergewicht, um das Boot voranzubringen.</p>\n</section>\n<section>\n<h3 class=\"text-xl font-bold mb-2\">Beispiel</h3>\n<p class=\"italic text-slate-600\">\"Wir haben nur noch zwei Tage Zeit. Jetzt müssen wir uns alle richtig in die Riemen legen!\"</p>\n</section>\n</div>",
+    "tags": ["arbeit", "motivation"]
+  },
+  {
+    "title": "In der Luft hängen",
+    "slug": "in-der-luft-haengen",
+    "thumbnail": "🎈",
+    "meaning_de": "Ungewiss sein; noch keine Entscheidung oder Basis haben.",
+    "meaning_en": "To be up in the air / To be left hanging.",
+    "meaning_vi": "Chưa có quyết định / Còn lơ lửng / Bấp bênh.",
+    "literal_translation": "To hang in the air.",
+    "content_html": "<div class=\"space-y-6\">\n<section>\n<h3 class=\"text-xl font-bold mb-2\">Bedeutung</h3>\n<p>Man weiß nicht, wie es weitergeht, weil eine wichtige Information oder Zusage fehlt.</p>\n</section>\n<section class=\"bg-slate-50 p-4 rounded-2xl border border-slate-100\">\n<h3 class=\"text-xl font-bold mb-2\">Herkunft</h3>\n<p>Das Bild beschreibt den Mangel an festem Boden unter den Füßen. Ohne Fundament kann man nicht planen.</p>\n</section>\n<section>\n<h3 class=\"text-xl font-bold mb-2\">Beispiel</h3>\n<p class=\"italic text-slate-600\">\"Da mein Vertrag noch nicht verlängert wurde, hänge ich beruflich gerade völlig in der Luft.\"</p>\n</section>\n</div>",
+    "tags": ["ungewissheit", "alltag"]
+  },
+  {
+    "title": "Ein Drahtseilakt sein",
+    "slug": "ein-drahtseilakt-sein",
+    "thumbnail": "🧘",
+    "meaning_de": "Eine sehr schwierige Aufgabe sein, die viel Geschick und Vorsicht erfordert.",
+    "meaning_en": "A tightrope walk / A balancing act.",
+    "meaning_vi": "Làm việc mạo hiểm / Đòi hỏi sự khéo léo cực hạn.",
+    "literal_translation": "To be a wire-rope act.",
+    "content_html": "<div class=\"space-y-6\">\n<section>\n<h3 class=\"text-xl font-bold mb-2\">Bedeutung</h3>\n<p>Beschreibt eine Situation, in der man zwischen zwei extremen Positionen abwägen muss, ohne einen Fehler zu machen.</p>\n</section>\n<section class=\"bg-slate-50 p-4 rounded-2xl border border-slate-100\">\n<h3 class=\"text-xl font-bold mb-2\">Herkunft</h3>\n<p>Vom Seiltänzer im Zirkus, der auf einem dünnen Drahtseil balanciert. Ein kleiner Fehler führt zum Absturz.</p>\n</section>\n<section>\n<h3 class=\"text-xl font-bold mb-2\">Beispiel</h3>\n<p class=\"italic text-slate-600\">\"Die Verhandlungen zwischen den beiden Ländern waren ein politischer Drahtseilakt.\"</p>\n</section>\n</div>",
+    "tags": ["risiko", "politik"]
+  },
+  {
+    "title": "Tiefstapeln",
+    "slug": "tiefstapeln",
+    "thumbnail": "📉",
+    "meaning_de": "Seine eigenen Leistungen oder Ziele bewusst kleiner darstellen, als sie sind.",
+    "meaning_en": "To play something down / To undersell oneself.",
+    "meaning_vi": "Nói giảm nói tránh thành công / Giấu bớt năng lực.",
+    "literal_translation": "To stack low.",
+    "content_html": "<div class=\"space-y-6\">\n<section>\n<h3 class=\"text-xl font-bold mb-2\">Bedeutung</h3>\n<p>Oft aus Taktik oder Bescheidenheit gemacht, um den Erwartungsdruck niedrig zu halten.</p>\n</section>\n<section class=\"bg-slate-50 p-4 rounded-2xl border border-slate-100\">\n<h3 class=\"text-xl font-bold mb-2\">Herkunft</h3>\n<p>Gegenteil von „hochstapeln“ (so tun, als sei man mehr). Wer tief stapelt, baut seinen „Haufen“ an Erfolgen optisch kleiner auf.</p>\n</section>\n<section>\n<h3 class=\"text-xl font-bold mb-2\">Beispiel</h3>\n<p class=\"italic text-slate-600\">\"Er hat behauptet, er könne kaum kochen, und hat uns dann ein Fünf-Gänge-Menü serviert. Er stapelt echt tief!\"</p>\n</section>\n</div>",
+    "tags": ["bescheidenheit", "taktik"]
+  },
+  {
+    "title": "Klar Schiff machen",
+    "slug": "klar-schiff-machen",
+    "thumbnail": "🧹",
+    "meaning_de": "Aufräumen; Ordnung schaffen; eine Angelegenheit klären.",
+    "meaning_en": "To clear the decks / To tidy up.",
+    "meaning_vi": "Dọn dẹp ngăn nắp / Giải quyết dứt điểm vấn đề.",
+    "literal_translation": "To make clear ship.",
+    "content_html": "<div class=\"space-y-6\">\n<section>\n<h3 class=\"text-xl font-bold mb-2\">Bedeutung</h3>\n<p>Kann sich auf die Wohnung beziehen, aber auch auf einen Streit, bei dem endlich alles ausgesprochen wird.</p>\n</section>\n<section class=\"bg-slate-50 p-4 rounded-2xl border border-slate-100\">\n<h3 class=\"text-xl font-bold mb-2\">Herkunft</h3>\n<p>Aus der Seefahrt: Vor einem Kampf oder Sturm musste das Deck von allen unnötigen Gegenständen befreit werden, damit die Mannschaft Platz zum Arbeiten hatte.</p>\n</section>\n<section>\n<h3 class=\"text-xl font-bold mb-2\">Beispiel</h3>\n<p class=\"italic text-slate-600\">\"Bevor wir das neue Projekt starten, müssen wir bei den alten Akten erst mal ordentlich klar Schiff machen.\"</p>\n</section>\n</div>",
+    "tags": ["ordnung", "alltag"]
+  },
+  {
+    "title": "Den Stein ins Rollen bringen",
+    "slug": "den-stein-ins-rollen-bringen",
+    "thumbnail": "🪨",
+    "meaning_de": "Einen Prozess oder eine Entwicklung anstoßen.",
+    "meaning_en": "To set the ball rolling / To trigger something.",
+    "meaning_vi": "Khởi xướng / Làm bùng nổ một chuỗi sự kiện.",
+    "literal_translation": "To bring the stone into rolling.",
+    "content_html": "<div class=\"space-y-6\">\n<section>\n<h3 class=\"text-xl font-bold mb-2\">Bedeutung</h3>\n<p>Man macht den entscheidenden ersten Schritt, der eine ganze Kette von Ereignissen auslöst.</p>\n</section>\n<section class=\"bg-slate-50 p-4 rounded-2xl border border-slate-100\">\n<h3 class=\"text-xl font-bold mb-2\">Herkunft</h3>\n<p>Das Bild einer Lawine oder eines Felsens am Hang: Ein kleiner Schubs genügt, um eine große Bewegung zu starten.</p>\n</section>\n<section>\n<h3 class=\"text-xl font-bold mb-2\">Beispiel</h3>\n<p class=\"italic text-slate-600\">\"Ihre Beschwerde hat den Stein ins Rollen gebracht und jetzt wird die ganze Firma untersucht.\"</p>\n</section>\n</div>",
+    "tags": ["anfang", "aktion"]
+  },
+  {
+    "title": "Vom Hölzchen aufs Stöckchen kommen",
+    "slug": "vom-hoelzchen-aufs-stoeckchen-kommen",
+    "thumbnail": "🌿",
+    "meaning_de": "Sich beim Reden immer mehr in Details verlieren und vom eigentlichen Thema abkommen.",
+    "meaning_en": "To get sidetracked / To go off on a tangent.",
+    "meaning_vi": "Nói chuyện lan man / Lạc đề.",
+    "literal_translation": "To come from the little wood to the little stick.",
+    "content_html": "<div class=\"space-y-6\">\n<section>\n<h3 class=\"text-xl font-bold mb-2\">Bedeutung</h3>\n<p>Beschreibt jemanden, der so viele Nebensächlichkeiten erzählt, dass man am Ende vergessen hat, worum es ursprünglich ging.</p>\n</section>\n<section class=\"bg-slate-50 p-4 rounded-2xl border border-slate-100\">\n<h3 class=\"text-xl font-bold mb-2\">Herkunft</h3>\n<p>Das Bild zeigt den Weg über immer kleinere Holzteile, bis man sich völlig in der Natur verliert.</p>\n</section>\n<section>\n<h3 class=\"text-xl font-bold mb-2\">Beispiel</h3>\n<p class=\"italic text-slate-600\">\"Eigentlich wollten wir über den Urlaub sprechen, aber dann kamen wir vom Hölzchen aufs Stöckchen und redeten über Politik.\"</p>\n</section>\n</div>",
+    "tags": ["kommunikation", "humor"]
+  }
+]
