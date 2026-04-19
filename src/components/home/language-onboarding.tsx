@@ -9,17 +9,21 @@ import { ChevronRight } from "lucide-react";
 export function LanguageOnboarding() {
   const { language, setLanguage, isLoaded } = useLanguage();
   const [isOpen, setIsOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    if (isLoaded) {
+    setMounted(true);
+  }, []);
+
+  useEffect(() => {
+    if (isLoaded && mounted) {
       // Check if user has explicitly set a language before
       const hasChosen = localStorage.getItem("language_onboarding_complete");
       if (!hasChosen) {
-        // eslint-disable-next-line react-hooks/set-state-in-effect
         setIsOpen(true);
       }
     }
-  }, [isLoaded]);
+  }, [isLoaded, mounted]);
 
   const handleSelect = (lang: "en" | "de" | "vi") => {
     setLanguage(lang);

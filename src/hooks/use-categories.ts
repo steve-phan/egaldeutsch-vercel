@@ -10,9 +10,9 @@ interface UseCategoriesResult {
   getAllCategories: () => CategoryMeta[];
 }
 
-export function useCategories(): UseCategoriesResult {
-  const [stats, setStats] = useState<Record<string, Record<string, number>>>({});
-  const [loading, setLoading] = useState(true);
+export function useCategories(initialStats?: Record<string, Record<string, number>>): UseCategoriesResult {
+  const [stats, setStats] = useState<Record<string, Record<string, number>>>(initialStats || {});
+  const [loading, setLoading] = useState(!initialStats);
   const [error, setError] = useState<string | null>(null);
 
   const fetchStats = useCallback(async () => {
@@ -31,8 +31,11 @@ export function useCategories(): UseCategoriesResult {
   }, []);
 
   useEffect(() => {
-    fetchStats();
-  }, [fetchStats]);
+    // Only fetch if we don't have initial stats from the server
+    if (!initialStats || Object.keys(initialStats).length === 0) {
+      fetchStats();
+    }
+  }, [fetchStats, initialStats]);
 
   const enrichMetaWithStats = (meta: CategoryMeta[]): CategoryMeta[] => {
     return meta.map(cat => {

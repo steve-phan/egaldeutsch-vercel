@@ -8,13 +8,24 @@ import { Card } from "@/components/shared/layout/card";
 import { Section } from "@/components/shared/layout/section";
 import { useEffect } from "react";
 
-export function RandomIdiom() {
-  const { randomIdiom, randomLoading, fetchRandomIdiom } = useIdioms();
+import { Idiom } from "@/types/idiom";
+
+interface RandomIdiomProps {
+  initialIdiom?: Idiom | null;
+}
+
+export function RandomIdiom({ initialIdiom = null }: RandomIdiomProps) {
+  const { randomIdiom: clientIdiom, randomLoading, fetchRandomIdiom } = useIdioms();
   const { language } = useLanguage();
 
+  const randomIdiom = clientIdiom || initialIdiom;
+
   useEffect(() => {
-    fetchRandomIdiom();
-  }, [fetchRandomIdiom]);
+    // Only fetch if we don't have an initial idiom from the server
+    if (!initialIdiom) {
+      fetchRandomIdiom();
+    }
+  }, [fetchRandomIdiom, initialIdiom]);
 
   if (!randomIdiom && !randomLoading) return null;
 

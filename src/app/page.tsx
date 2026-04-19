@@ -1,5 +1,10 @@
 import { Metadata } from "next";
 import { HomeClientView } from "@/components/home/home-client-view";
+import { getServerSession } from "next-auth";
+import { authOptions } from "./api/auth/[...nextauth]/route";
+import { API_ROUTES, BACKEND_URL } from "@/lib/constants";
+import { CategoryMeta } from "@/types/quiz";
+import { Idiom } from "@/types/idiom";
 
 export const metadata: Metadata = {
   title: "EgalDeutsch — Professional German Learning Platform",
@@ -25,6 +30,27 @@ export const metadata: Metadata = {
   },
 };
 
-export default function Home() {
-  return <HomeClientView />;
+async function getInitialData() {
+  const [catRes, idiomRes] = await Promise.all([
+    fetch(`${BACKEND_URL}${API_ROUTES.QUIZ_CATEGORIES}`, { next: { revalidate: 3600 } }),
+    fetch(`${BACKEND_URL}${API_ROUTES.IDIOM_RANDOM}`, { next: { revalidate: 3600 } })
+  ]);
+
+  const categories = catRes.ok ? await catRes.json() : [];
+  const randomIdiom = idiomRes.ok ? await idiomRes.json() : null;
+
+  return { categories, randomIdiom };
+}
+
+export default async function Home() {
+  const session = await getServerSession(authOptions);
+  const { categories, randomIdiom } = await getInitialData();
+  
+  return (
+    <HomeClientView 
+      initialSession={session} 
+      initialCategories={categories}
+      initialIdiom={randomIdiom}
+    />
+  );
 }

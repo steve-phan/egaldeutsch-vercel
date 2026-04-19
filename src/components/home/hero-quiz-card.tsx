@@ -79,7 +79,7 @@ export function HeroQuizCard() {
               src="/mascot.png"
               alt="Fox Mascot"
               fill
-              sizes="(max-width: 640px) 192px, (max-width: 768px) 224px, (max-width: 1024px) 256px, 384px"
+              sizes="(max-width: 640px) 200px, (max-width: 768px) 250px, (max-width: 1024px) 300px, 400px"
               priority
               loading="eager"
               className="object-contain relative z-10 drop-shadow-2xl"

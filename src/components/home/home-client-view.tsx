@@ -12,12 +12,26 @@ import { AppShell } from "@/components/layout/app-shell";
 import { Section } from "@/components/shared/layout/section";
 import { Card } from "@/components/shared/layout/card";
 
-export function HomeClientView() {
+import { Session } from "next-auth";
+import { CategoryMeta } from "@/types/quiz";
+import { Idiom } from "@/types/idiom";
+
+interface HomeClientViewProps {
+   initialSession: Session | null;
+   initialCategories?: Record<string, any>;
+   initialIdiom?: Idiom | null;
+}
+
+export function HomeClientView({ initialSession, initialCategories = {}, initialIdiom = null }: HomeClientViewProps) {
    const { status } = useSession();
-   const { getAllCategories, loading } = useCategories();
+   const { getAllCategories, loading: catLoading } = useCategories(initialCategories);
 
    const categories = getAllCategories();
-   const isGuest = status === "unauthenticated";
+
+   // Use server-side status during hydration, then sync with client-side status
+   const isGuest = status === "loading"
+      ? initialSession === null
+      : status === "unauthenticated";
 
    return (
       <AppShell showNav={true} maxWidth="lg">
@@ -35,7 +49,7 @@ export function HomeClientView() {
             )}
 
             {/* Featured Idiom Section */}
-            <RandomIdiom />
+            <RandomIdiom initialIdiom={initialIdiom} />
 
             {/* Main Content Area */}
             <Section spacing="md" id="lessons-section">
@@ -44,7 +58,7 @@ export function HomeClientView() {
                      <h2 className="text-xl font-black text-slate-800 tracking-tighter italic leading-none pb-3">Grammar Modules</h2>
                      <div className="h-0.5 flex-1 bg-slate-100/50 rounded-full" />
                   </div>
-                  <CategoryGrid categories={categories} loading={loading} />
+                  <CategoryGrid categories={categories} loading={catLoading} />
                </Card>
             </Section>
          </div>
