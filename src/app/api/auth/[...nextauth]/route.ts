@@ -25,12 +25,12 @@ export const authOptions: NextAuthOptions = {
         const data = await res.json();
 
         if (res.ok && data?.user) {
-          // Return the actual user object, and maybe attach the token for later use
           return {
             ...data.user,
-            id: data.user.id || data.user._id, // Handle both id formats
+            id: data.user.id || data.user._id,
             accessToken: data.token,
-            role: data.user.role || "student" // Default fallback
+            role: data.user.role || "student",
+            language: data.user.language || "en"
           };
         }
         return null;
@@ -48,11 +48,13 @@ export const authOptions: NextAuthOptions = {
         token.email = user.email;
         token.role = (user as any).role || "student";
         token.accessToken = (user as any).accessToken;
+        token.language = (user as any).language || "en";
       }
       if (trigger === "update" && session) {
         token.name = session.name;
         token.email = session.email;
         if (session.role) token.role = session.role;
+        if (session.language) token.language = session.language;
       }
       return token;
     },
@@ -63,6 +65,7 @@ export const authOptions: NextAuthOptions = {
         session.user.email = token.email;
         (session.user as any).role = token.role;
         (session.user as any).accessToken = token.accessToken;
+        (session.user as any).language = token.language;
       }
       return session;
     },
@@ -84,6 +87,7 @@ export const authOptions: NextAuthOptions = {
             if (syncData.token) {
               (user as any).accessToken = syncData.token;
               (user as any).id = syncData.user?.id || syncData.user?._id;
+              (user as any).language = syncData.user?.language || "en";
             }
           }
         } catch (error) {

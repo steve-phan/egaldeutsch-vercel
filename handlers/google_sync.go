@@ -70,6 +70,7 @@ func GoogleSyncHandler(w http.ResponseWriter, r *http.Request) {
 		Email:      req.Email,
 		Role:       "student",
 		AuthSource: "google",
+		Language:   "en",
 	}
 
 	_, err = collection.InsertOne(ctx, newUser)

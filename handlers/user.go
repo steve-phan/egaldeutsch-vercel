@@ -20,12 +20,14 @@ type UserResponse struct {
 	Name      string    `json:"name"`
 	Email     string    `json:"email"`
 	Role      string    `json:"role,omitempty"`
+	Language  string    `json:"language,omitempty"`
 	CreatedAt time.Time `json:"created_at,omitempty"`
 }
 
 type UpdateUserRequest struct {
-	Name  string `json:"name"`
-	Email string `json:"email"`
+	Name     string `json:"name"`
+	Email    string `json:"email"`
+	Language string `json:"language"`
 }
 
 type ChangePasswordRequest struct {
@@ -74,6 +76,7 @@ func getUserProfile(w http.ResponseWriter, claims *utils.Claims) {
 			Name:      mockUser.Name,
 			Email:     mockUser.Email,
 			Role:      mockUser.Role,
+			Language:  mockUser.Language,
 			CreatedAt: mockUser.CreatedAt,
 		})
 		return
@@ -91,9 +94,10 @@ func getUserProfile(w http.ResponseWriter, claims *utils.Claims) {
 	}
 
 	json.NewEncoder(w).Encode(UserResponse{
-		ID:    user.ID.Hex(),
-		Name:  user.Name,
-		Email: user.Email,
+		ID:       user.ID.Hex(),
+		Name:     user.Name,
+		Email:    user.Email,
+		Language: user.Language,
 	})
 }
 
@@ -132,6 +136,7 @@ func updateUserProfile(w http.ResponseWriter, r *http.Request, claims *utils.Cla
 			Name:      mockUser.Name,
 			Email:     mockUser.Email,
 			Role:      mockUser.Role,
+			Language:  mockUser.Language,
 			CreatedAt: mockUser.CreatedAt,
 		})
 		return
@@ -154,8 +159,9 @@ func updateUserProfile(w http.ResponseWriter, r *http.Request, claims *utils.Cla
 
 	update := bson.M{
 		"$set": bson.M{
-			"name":  req.Name,
-			"email": req.Email,
+			"name":     req.Name,
+			"email":    req.Email,
+			"language": req.Language,
 		},
 	}
 

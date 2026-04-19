@@ -79,6 +79,7 @@ export function Navbar() {
               src={session?.user?.image || "/mascot.png"}
               alt="Profile"
               fill
+              sizes="40px"
               className="object-contain"
             />
           </div>
@@ -104,9 +105,9 @@ export function Navbar() {
           <h1 className="text-lg md:text-xl font-black text-slate-800 tracking-tighter leading-tight italic">
             EgalDeutsch
           </h1>
-          <p className="text-[9px] md:text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] flex items-center gap-1">
+          <div className="text-[9px] md:text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] flex items-center gap-1">
             {renderTitle()}
-          </p>
+          </div>
         </div>
       </Link>
 

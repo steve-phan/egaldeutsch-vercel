@@ -5,6 +5,7 @@ interface UserProfile {
   id: string;
   name: string;
   email: string;
+  language: string;
   image?: string;
   role?: string;
   created_at?: string;
@@ -14,12 +15,14 @@ interface UseProfileResult {
   profile: UserProfile | null;
   name: string;
   email: string;
+  language: string;
   loading: boolean;
   saving: boolean;
   error: string;
   success: string;
   setName: (name: string) => void;
   setEmail: (email: string) => void;
+  setLanguage: (lang: string) => void;
   handleSubmit: (e: React.FormEvent) => Promise<void>;
 }
 
@@ -28,6 +31,7 @@ export function useProfile(): UseProfileResult {
   const [profile, setProfile] = useState<UserProfile | null>(null);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
+  const [language, setLanguage] = useState("en");
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState("");
@@ -41,11 +45,13 @@ export function useProfile(): UseProfileResult {
         id: session.user.id || "",
         name: session.user.name || "",
         email: session.user.email || "",
+        language: (session.user as { language?: string }).language || "en",
         image: session.user.image || "",
       };
       setProfile(userProfile);
       setName(userProfile.name);
       setEmail(userProfile.email);
+      setLanguage(userProfile.language);
     }
     setLoading(false);
   }, [status, session]);
@@ -57,14 +63,18 @@ export function useProfile(): UseProfileResult {
     setSaving(true);
 
     try {
-      const token = session?.user?.accessToken;
+      const token = (session?.user as { accessToken?: string })?.accessToken;
       const res = await fetch("/api/account/user", {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
           ...(token ? { "Authorization": `Bearer ${token}` } : {}),
         },
-        body: JSON.stringify({ name, email }),
+        body: JSON.stringify({ 
+          name, 
+          email, 
+          language: language 
+        }),
       });
 
       if (!res.ok) {
@@ -73,7 +83,7 @@ export function useProfile(): UseProfileResult {
       }
 
       // Update the session explicitly
-      await update({ name, email });
+      await update({ name, email, language });
       setSuccess("Profile updated successfully!");
     } catch (err) {
       if (err instanceof Error) {
@@ -84,18 +94,20 @@ export function useProfile(): UseProfileResult {
     } finally {
       setSaving(false);
     }
-  }, [name, email, update, session?.user?.accessToken]);
+  }, [name, email, language, update, session?.user, session?.user?.accessToken]);
 
   return {
     profile,
     name,
     email,
+    language,
     loading,
     saving,
     error,
     success,
     setName,
     setEmail,
+    setLanguage,
     handleSubmit,
   };
 }

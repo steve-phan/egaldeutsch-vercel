@@ -90,6 +90,7 @@ func SignupHandler(w http.ResponseWriter, r *http.Request) {
 		Name:     req.Name,
 		Email:    req.Email,
 		Password: string(hashedPassword),
+		Language: "en",
 	}
 
 	_, err = collection.InsertOne(ctx, user)
