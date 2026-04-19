@@ -16,7 +16,12 @@ export default function ForgotPasswordPage() {
       <div className="w-full max-w-xl flex flex-col items-center">
         {/* Mascot */}
         <div className="relative w-40 h-40 mb-6 animate-float">
-          <Image src="/mascot.png" alt="Mascot" fill className="object-contain" />
+          <Image 
+            src="/mascot.png" 
+            alt="EgalDeutsch Mascot - Password recovery support" 
+            fill 
+            className="object-contain" 
+          />
         </div>
 
         {/* Card */}

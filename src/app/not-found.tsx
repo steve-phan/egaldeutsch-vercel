@@ -17,7 +17,7 @@ export default function NotFound() {
         <div className="relative w-64 h-64 mb-12 drop-shadow-[0_25px_25px_rgba(0,0,0,0.15)] animate-float">
           <Image 
             src="/mascot.png" 
-            alt="Lost Mascot" 
+            alt="EgalDeutsch Mascot looking lost and confused on a 404 page" 
             fill 
             className="object-contain"
             priority
@@ -29,12 +29,12 @@ export default function NotFound() {
 
         {/* Error Content */}
         <div className="space-y-6 mb-12">
-          <h1 className="text-8xl font-display font-black text-slate-200 tracking-tighter leading-none mb-2">
+          <div className="text-8xl font-display font-black text-slate-200 tracking-tighter leading-none mb-2">
             404
-          </h1>
-          <h2 className="text-4xl font-display font-black text-slate-800 tracking-tight">
+          </div>
+          <h1 className="text-4xl font-display font-black text-slate-800 tracking-tight">
             Oh nein! Seite nicht gefunden.
-          </h2>
+          </h1>
           <p className="text-xl text-slate-500 font-medium max-w-md mx-auto leading-relaxed">
             It seems you've wandered into a grammar-free zone. Even our mascot is confused!
           </p>

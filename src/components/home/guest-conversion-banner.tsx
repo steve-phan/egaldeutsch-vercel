@@ -4,6 +4,7 @@ import { Sparkles, ArrowRight, Trophy } from "lucide-react";
 import Link from "next/link";
 import { Card } from "@/components/shared/layout/card";
 import { Section } from "@/components/shared/layout/section";
+import { Brand } from "@/components/shared/brand";
 
 export function GuestConversionBanner() {
    return (
@@ -18,10 +19,10 @@ export function GuestConversionBanner() {
                      <Trophy className="w-3 h-3" /> Mastery Awaits
                   </div>
                   <h2 className="text-3xl md:text-4xl font-black text-slate-800 leading-[0.9] tracking-tighter italic">
-                     Master German with <span className="text-primary italic">EgalDeutsch</span>.
+                     Master German with <Brand as="span" inline />.
                   </h2>
                   <p className="text-sm font-bold text-slate-400 max-w-md">
-                     EgalDeutsch is an interactive platform designed to help you master German grammar through gamified quizzes, structured lessons, and professional exam preparation.
+                     <Brand as="span" inline className="font-bold tracking-normal italic-normal text-slate-400" /> is an interactive platform designed to help you master German grammar through gamified quizzes, structured lessons, and professional exam preparation.
                   </p>
                </div>
 

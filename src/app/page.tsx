@@ -7,7 +7,22 @@ export const metadata: Metadata = {
   openGraph: {
     title: "EgalDeutsch — German Grammar Mastery",
     description: "Master German grammar, ace your TELC exams, and prepare for German business communication with EgalDeutsch.",
-  }
+    type: "website",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "EgalDeutsch — Professional German Learning",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "EgalDeutsch — German Grammar Mastery",
+    description: "Interactive German grammar quizzes and exam prep for TELC, Goethe, and B2 Beruf.",
+    images: ["/og-image.png"],
+  },
 };
 
 export default function Home() {

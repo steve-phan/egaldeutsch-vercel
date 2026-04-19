@@ -4,6 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { LogIn, Sparkles, User, X } from "lucide-react";
+import { Brand } from "../shared/brand";
 
 export function GuestHeader() {
   const [isOpen, setIsOpen] = useState(false);
@@ -21,9 +22,7 @@ export function GuestHeader() {
           />
         </div>
         <div>
-          <h1 className="text-lg md:text-xl font-black text-slate-800 tracking-tighter leading-tight italic hidden xs:block">
-             EgalDeutsch
-          </h1>
+          <Brand size="lg" as="h1" className="hidden xs:block" />
           <p className="text-[9px] md:text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] flex items-center gap-1">
              <Sparkles className="w-2.5 h-2.5 text-primary" /> Guest
           </p>
@@ -52,7 +51,7 @@ export function GuestHeader() {
          >
            {isOpen ? <X className="w-5 h-5" /> : <User className="w-5 h-5" />}
          </button>
-
+ 
          {isOpen && (
            <div className="absolute top-full right-0 mt-3 w-48 bg-white/90 backdrop-blur-xl border border-white shadow-floating rounded-2xl p-2 z-50 animate-in zoom-in-95 fade-in duration-200 origin-top-right">
              <Link href="/login" onClick={() => setIsOpen(false)}>

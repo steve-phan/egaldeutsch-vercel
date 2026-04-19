@@ -3,6 +3,8 @@
 import Link from "next/link";
 import { useLanguage } from "@/contexts/language-context";
 
+import { Brand } from "../shared/brand";
+
 export function Footer() {
   const { language } = useLanguage();
 
@@ -12,9 +14,7 @@ export function Footer() {
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
           {/* Logo / Brand */}
           <div className="flex flex-col items-center md:items-start gap-2">
-            <div className="text-2xl font-black text-slate-800 tracking-tighter italic">
-              Egal<span className="text-primary italic">Deutsch</span>
-            </div>
+            <Brand size="lg" />
             <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest">
               Lerne Deutsch, egal wie.
             </p>

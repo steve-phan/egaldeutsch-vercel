@@ -25,7 +25,21 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: `Practice ${meta.label.en} on EgalDeutsch`,
       description: `Test your skills in ${meta.label.en}. Interactive German grammar practice for all levels.`,
       type: "website",
-    }
+      images: [
+        {
+          url: "/og-image.png",
+          width: 1200,
+          height: 630,
+          alt: `German Grammar Quiz: ${meta.label.en}`,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `German Grammar Quiz: ${meta.label.en}`,
+      description: meta.description.en,
+      images: ["/og-image.png"],
+    },
   };
 }
 

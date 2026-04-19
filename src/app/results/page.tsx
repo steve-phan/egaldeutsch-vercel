@@ -70,7 +70,7 @@ export default function ResultsPage() {
                   <div className="w-32 h-32 relative mb-8 animate-float-gentle">
                      <Image 
                        src="/mascot.png" 
-                       alt="Mission Mascot" 
+                       alt="EgalDeutsch Mascot celebrating your mission completion" 
                        fill 
                        sizes="128px"
                        priority
@@ -84,10 +84,10 @@ export default function ResultsPage() {
                   </div>
 
                   <h1 className="text-4xl md:text-5xl font-black text-slate-800 mb-2 italic tracking-tighter leading-none">
-                     {getMessage()}
+                     {summary.category.replace("-", " ")} Mission {getMessage()}
                   </h1>
                   <p className="text-xs font-black text-slate-400 uppercase tracking-[0.3em] mb-12">
-                     Mission: {summary.category.replace("-", " ")} Complete
+                     Your performance summary is ready
                   </p>
 
                   <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 w-full">

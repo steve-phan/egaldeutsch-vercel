@@ -45,9 +45,9 @@ export default function SignupPage() {
                     <div className="w-full flex flex-col items-center">
                         <div className="mb-10 flex flex-col items-center text-center">
                             <h1 className="text-4xl md:text-5xl font-display font-black text-slate-800 tracking-tighter italic leading-none">
-                                Konto <span className="text-primary">erstellen</span>
+                                EgalDeutsch <span className="text-primary">Konto</span>
                             </h1>
-                            <p className="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] mt-3">Start your German learning journey</p>
+                            <p className="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] mt-3">Start your German language mastery today</p>
                         </div>
 
                         {/* Signup Card */}

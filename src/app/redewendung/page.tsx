@@ -6,7 +6,26 @@ import { IdiomCard } from "@/components/idioms/idiom-card";
 
 export const metadata: Metadata = {
   title: "Redewendung — German Idioms Directory",
-  description: "Explore the colorful world of German idioms. meanings, origins, and examples for learners of all levels.",
+  description: "Explore the colorful world of German idioms. Meanings, origins, and examples for learners of all levels.",
+  openGraph: {
+    title: "German Idioms Directory — EgalDeutsch",
+    description: "Explore the colorful world of German idioms and mastery.",
+    type: "website",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "German Idioms Directory on EgalDeutsch",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "German Idioms Directory — EgalDeutsch",
+    description: "Master German idioms and sound like a native.",
+    images: ["/og-image.png"],
+  },
 };
 
 async function getIdioms(): Promise<Idiom[]> {

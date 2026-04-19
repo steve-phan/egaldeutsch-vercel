@@ -7,6 +7,8 @@ import { useSession } from "next-auth/react";
 import { Bell, Sparkles, LogIn } from "lucide-react";
 import { Skeleton } from "../ui/skeleton";
 
+import { Brand } from "../shared/brand";
+
 export function Navbar() {
   const { data: session, status } = useSession();
   const isGuest = status === "unauthenticated";
@@ -94,7 +96,7 @@ export function Navbar() {
         <div className="w-9 h-9 md:w-10 md:h-10 relative rounded-xl overflow-hidden shadow-premium bg-white border border-white p-1.5 md:p-2 group-hover:rotate-6 transition-transform">
           <Image
             src="/mascot.png"
-            alt="EgalDeutsch Mascot"
+            alt="EgalDeutsch Mascot - Helping you master German grammar"
             fill
             sizes="(max-width: 768px) 36px, 40px"
             className="object-contain"
@@ -102,9 +104,7 @@ export function Navbar() {
           />
         </div>
         <div>
-          <h1 className="text-lg md:text-xl font-black text-slate-800 tracking-tighter leading-tight italic">
-            EgalDeutsch
-          </h1>
+          <Brand size="lg" as="div" />
           <div className="text-[9px] md:text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] flex items-center gap-1">
             {renderTitle()}
           </div>

@@ -5,14 +5,16 @@ import { useLanguage } from "@/contexts/language-context";
 import { Card } from "@/components/shared/layout/card";
 import { Section } from "@/components/shared/layout/section";
 
+import { Brand } from "@/components/shared/brand";
+
 export function PurposeSection() {
   const { language } = useLanguage();
 
   const getTitle = () => {
     switch (language) {
-      case "de": return "Warum EgalDeutsch?";
-      case "vi": return "Tại sao chọn EgalDeutsch?";
-      default: return "Why EgalDeutsch?";
+      case "de": return <>Warum <Brand as="span" inline />?</>;
+      case "vi": return <>Tại sao chọn <Brand as="span" inline />?</>;
+      default: return <>Why <Brand as="span" inline />?</>;
     }
   };
 

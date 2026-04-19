@@ -64,6 +64,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     };
   }
 
+  const isUrl = (str?: string) => str?.startsWith("http") || str?.startsWith("/");
+  const ogImage = isUrl(idiom.thumbnail) ? idiom.thumbnail! : "/og-image.png";
+
   return {
     title: `${idiom.title} — German Idiom Meaning & Origin`,
     description: idiom.meaning_de,
@@ -71,6 +74,20 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: idiom.title,
       description: idiom.meaning_de,
       type: "article",
+      images: [
+        {
+          url: ogImage,
+          width: 1200,
+          height: 630,
+          alt: idiom.title,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: idiom.title,
+      description: idiom.meaning_de,
+      images: [ogImage],
     },
   };
 }

@@ -2,6 +2,7 @@
 
 import { Idiom } from "@/types/idiom";
 import { useLanguage } from "@/contexts/language-context";
+import Image from "next/image";
 
 interface IdiomDetailProps {
   idiom: Idiom;
@@ -22,8 +23,20 @@ export function IdiomDetail({ idiom }: IdiomDetailProps) {
     <div className="w-full max-w-4xl mx-auto space-y-12">
       {/* Hero Section */}
       <div className="relative text-center space-y-6 pt-8">
-        <div className="inline-flex w-24 h-24 bg-white shadow-floating rounded-3xl items-center justify-center text-5xl border border-slate-100 animate-bounce-slow">
-          {idiom.thumbnail || "🇩🇪"}
+        <div className="inline-flex w-24 h-24 bg-white shadow-floating rounded-3xl items-center justify-center text-5xl border border-slate-100 animate-bounce-slow overflow-hidden">
+          {idiom.thumbnail && (idiom.thumbnail.startsWith("http") || idiom.thumbnail.startsWith("/")) ? (
+            <div className="relative w-full h-full">
+              <Image 
+                src={idiom.thumbnail} 
+                alt={idiom.title} 
+                fill 
+                className="object-cover"
+                sizes="96px"
+              />
+            </div>
+          ) : (
+            idiom.thumbnail || "🇩🇪"
+          )}
         </div>
 
         <h1 className="text-3xl md:text-5xl font-black text-slate-900 tracking-tighter italic leading-tight">

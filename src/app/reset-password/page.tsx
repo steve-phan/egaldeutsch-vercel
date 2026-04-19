@@ -86,7 +86,12 @@ export default function ResetPasswordPage() {
     <main className="flex min-h-screen items-center justify-center p-6 bg-background">
       <div className="w-full max-w-xl flex flex-col items-center">
         <div className="relative w-40 h-40 mb-6 animate-float">
-          <Image src="/mascot.png" alt="Mascot" fill className="object-contain" />
+          <Image 
+            src="/mascot.png" 
+            alt="EgalDeutsch Mascot - Securing your account" 
+            fill 
+            className="object-contain" 
+          />
         </div>
         <Suspense fallback={<div>Loading...</div>}>
           <ResetPasswordForm />

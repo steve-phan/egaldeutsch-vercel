@@ -14,16 +14,16 @@ export function DashboardHeader() {
         <div className="w-10 h-10 md:w-12 md:h-12 relative rounded-xl md:rounded-2xl overflow-hidden shadow-premium bg-white border-2 border-white ring-4 ring-slate-50">
           <Image 
             src={session?.user?.image || "/mascot.png"} 
-            alt="Profile" 
+            alt={session?.user?.name ? `${session.user.name}'s profile picture` : "User profile picture"} 
             fill 
             sizes="(max-width: 768px) 40px, 48px"
             className="object-contain hover:scale-110 transition-transform duration-500" 
           />
         </div>
         <div>
-          <h1 className="text-lg md:text-xl font-black text-slate-800 tracking-tighter leading-tight italic hidden xs:block">
+          <div className="text-lg md:text-xl font-black text-slate-800 tracking-tighter leading-tight italic hidden xs:block">
              Moin, {session?.user?.name?.split(' ')[0] || "Explorer"}!
-          </h1>
+          </div>
           <p className="text-[9px] md:text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] flex items-center gap-1">
              <Sparkles className="w-2.5 h-2.5 text-primary" /> Mastery: A2
           </p>

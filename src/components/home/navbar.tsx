@@ -3,6 +3,8 @@ import { Button } from "@/components/ui/button";
 import { useSession, signOut } from "next-auth/react";
 import { useLanguage, Language } from "@/contexts/language-context";
 
+import { Brand } from "../shared/brand";
+
 export function Navbar() {
   const { data: session, status } = useSession();
   const { language, setLanguage } = useLanguage();
@@ -12,7 +14,9 @@ export function Navbar() {
 
   return (
     <nav className="w-full max-w-6xl mb-12 flex justify-between items-center px-4 py-6">
-      <h1 className="text-2xl font-bold bg-gradient-to-r from-indigo-600 to-indigo-800 bg-clip-text text-transparent">EgalDeutsch</h1>
+      <Link href="/" className="active:scale-95 transition-all">
+        <Brand size="lg" as="h1" />
+      </Link>
       <div className="flex gap-4 items-center">
         {/* Language Selection */}
         <select 

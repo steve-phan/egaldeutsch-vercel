@@ -9,6 +9,8 @@ import { Section } from "@/components/shared/layout/section";
 import { PageContainer } from "@/components/shared/layout/page-container";
 import { AppShell } from "@/components/layout/app-shell";
 
+import { Brand } from "@/components/shared/brand";
+
 export default function LoginPage() {
     const {
         email,
@@ -33,10 +35,8 @@ export default function LoginPage() {
                 <Section spacing="md">
                     <div className="w-full flex flex-col items-center">
                         <div className="mb-10 flex flex-col items-center text-center">
-                            <h1 className="text-4xl md:text-5xl font-display font-black text-slate-800 tracking-tighter italic leading-none">
-                                Egal<span className="text-primary">Deutsch</span>
-                            </h1>
-                            <p className="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] mt-3">Curating your path to mastery</p>
+                            <Brand size="2xl" as="h1" />
+                            <p className="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] mt-3">Log in to your account to continue your mastery</p>
                         </div>
 
                         {/* Login Form */}
