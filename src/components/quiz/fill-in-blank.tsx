@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { QuizQuestion } from "@/types/quiz";
 import { useLanguage } from "@/contexts/language-context";
 import { Edit3, Sparkles } from "lucide-react";
@@ -15,10 +15,7 @@ export function FillInBlank({ question, onSubmit, disabled }: FillInBlankProps) 
   const { language } = useLanguage();
   const [answer, setAnswer] = useState("");
 
-  useEffect(() => {
-    setAnswer("");
-  // eslint-disable-next-line react-hooks/set-state-in-effect
-  }, [question.id]);
+
 
   return (
     <div className="w-full flex flex-col items-center">

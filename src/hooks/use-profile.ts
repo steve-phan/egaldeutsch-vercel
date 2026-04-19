@@ -57,7 +57,7 @@ export function useProfile(): UseProfileResult {
     setSaving(true);
 
     try {
-      const token = (session?.user as any)?.accessToken;
+      const token = session?.user?.accessToken;
       const res = await fetch("/api/account/user", {
         method: "PUT",
         headers: {
@@ -84,7 +84,7 @@ export function useProfile(): UseProfileResult {
     } finally {
       setSaving(false);
     }
-  }, [name, email, update]);
+  }, [name, email, update, session?.user?.accessToken]);
 
   return {
     profile,

@@ -20,8 +20,10 @@ interface LanguageContextType {
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
 export function LanguageProvider({ children }: { children: React.ReactNode }) {
-  const [language, setLanguageState] = useState<Language>("en");
-  const [isLoaded, setIsLoaded] = useState(false);
+  const [state, setState] = useState<{ language: Language; isLoaded: boolean }>({
+    language: "en",
+    isLoaded: false
+  });
 
   useEffect(() => {
     // Try to load language from localStorage
@@ -37,19 +39,23 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
       else if (browserLang === "vi") initialLang = "vi";
     }
     
-    setLanguageState(initialLang);
-    setIsLoaded(true);
+    // We update state in the next tick to avoid cascading render warnings 
+    // and ensure hydration consistency.
+    setTimeout(() => {
+       setState({ language: initialLang, isLoaded: true });
+    }, 0);
   }, []);
 
+
   const setLanguage = (lang: Language) => {
-    setLanguageState(lang);
+    setState(prev => ({ ...prev, language: lang }));
     localStorage.setItem("preferred_language", lang);
   };
 
   // Helper to get nested translation value (e.g. "common.start")
   const t = (key: string): string => {
     const keys = key.split(".");
-    let value: unknown = dictionaries[language];
+    let value: unknown = dictionaries[state.language];
     
     for (const k of keys) {
       if (value === undefined || value === null) break;
@@ -63,7 +69,7 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
   };
 
   return (
-    <LanguageContext.Provider value={{ language, setLanguage, t, isLoaded }}>
+    <LanguageContext.Provider value={{ language: state.language, setLanguage, t, isLoaded: state.isLoaded }}>
       {children}
     </LanguageContext.Provider>
   );

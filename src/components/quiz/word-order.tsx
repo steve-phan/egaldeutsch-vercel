@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { QuizQuestion } from "@/types/quiz";
 import { useLanguage } from "@/contexts/language-context";
 import { ListOrdered, RotateCcw } from "lucide-react";
@@ -13,22 +13,17 @@ interface WordOrderProps {
 
 export function WordOrder({ question, onSubmit, disabled }: WordOrderProps) {
   const { language } = useLanguage();
-  const [availableWords, setAvailableWords] = useState<string[]>([]);
+  const [availableWords, setAvailableWords] = useState<string[]>(() => {
+    if (question.options && question.options.length > 0) {
+      return [...question.options].sort(() => Math.random() - 0.5);
+    } else if (question.correct_answer) {
+      return question.correct_answer.split(/\s+/).sort(() => Math.random() - 0.5);
+    }
+    return [];
+  });
   const [orderedWords, setOrderedWords] = useState<string[]>([]);
 
-  useEffect(() => {
-    let words: string[] = [];
-    if (question.options && question.options.length > 0) {
-      // Shuffling options for the game feel
-      words = [...question.options].sort(() => Math.random() - 0.5);
-    } else if (question.correct_answer) {
-      // Fallback: Split correct answer into words if no explicit options provided
-      words = question.correct_answer.split(/\s+/).sort(() => Math.random() - 0.5);
-    }
-    
-    setAvailableWords(words);
-    setOrderedWords([]);
-  }, [question.id, question.options, question.correct_answer]);
+
 
   const handleWordClick = (word: string, isAvailable: boolean) => {
     if (disabled) return;

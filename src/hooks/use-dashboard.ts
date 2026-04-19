@@ -37,7 +37,7 @@ export function useDashboard(): UseDashboardResult {
 
     if (status === "loading") return;
     
-    const token = (session?.user as any)?.accessToken;
+    const token = session?.user?.accessToken;
     if (!token) {
       setStats(emptyStats);
       setLoading(false);
@@ -57,7 +57,7 @@ export function useDashboard(): UseDashboardResult {
     } finally {
       setLoading(false);
     }
-  }, []);
+  }, [session?.user?.accessToken, status]);
 
   useEffect(() => {
     fetchStats();

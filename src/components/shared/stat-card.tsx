@@ -26,6 +26,7 @@ export function StatCard({
       radius="3xl"
       hover
       className={cn("flex flex-col justify-between h-full group animate-in zoom-in-95 duration-700", className)}
+      style={{ animationDelay: `${delay}ms` }}
     >
       <div className="flex items-start justify-between mb-4">
         <div className="flex flex-col">

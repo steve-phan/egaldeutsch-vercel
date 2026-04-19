@@ -12,6 +12,7 @@ interface CardProps {
   glow?: boolean;
   glass?: boolean;
   border?: boolean;
+  style?: React.CSSProperties;
   onClick?: () => void;
 }
 
@@ -43,11 +44,13 @@ export function Card({
   glow = false,
   glass = true,
   border = true,
+  style,
   onClick
 }: CardProps) {
   return (
     <div 
       onClick={onClick}
+      style={style}
       className={cn(
         "relative overflow-hidden transition-all duration-500",
         glass && "glass-card-premium backdrop-blur-xl",

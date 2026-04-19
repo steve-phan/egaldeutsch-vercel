@@ -4,7 +4,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useSession } from "next-auth/react";
-import { Bell, Settings, Sparkles, LogIn, User } from "lucide-react";
+import { Bell, Settings, Sparkles, LogIn } from "lucide-react";
 
 export function Navbar() {
   const { data: session, status } = useSession();
@@ -34,7 +34,7 @@ export function Navbar() {
                </>
              ) : (
                <>
-                 <Sparkles className="w-2.5 h-2.5 text-primary" /> Mastery: { (session?.user as any)?.role === 'admin' ? 'Admin' : 'A2' }
+                 <Sparkles className="w-2.5 h-2.5 text-primary" /> Mastery: { session?.user?.role === 'admin' ? 'Admin' : 'A2' }
                </>
              )}
           </p>
@@ -85,7 +85,7 @@ export function Navbar() {
               </div>
               <div className="w-10 h-10 relative rounded-xl overflow-hidden shadow-premium bg-white border border-slate-100 p-0.5">
                 <Image 
-                  src={(session?.user as any)?.image || "/mascot.png"} 
+                  src={session?.user?.image || "/mascot.png"} 
                   alt="Profile" 
                   fill 
                   className="object-contain" 

@@ -31,7 +31,7 @@ export function useFeedback() {
       setError(null);
       setSuccess(false);
 
-      const token = (session?.user as any)?.accessToken;
+      const token = session?.user?.accessToken;
       const response = await fetch(API_ROUTES.FEEDBACK, {
         method: "POST",
         headers: {
@@ -50,7 +50,6 @@ export function useFeedback() {
            errorMessage = errorData.message || errorData.error || errorMessage;
         } else {
            // If it's HTML (likely a 404/500 page), use a generic error
-           const text = await response.text();
            if (response.status === 404) errorMessage = "Feedback service temporarily unavailable (404)";
            else if (response.status === 500) errorMessage = "Server error occurred. Please try again later.";
         }
@@ -60,20 +59,20 @@ export function useFeedback() {
 
       setSuccess(true);
       return await response.json();
-    } catch (err: any) {
-      setError(err.message);
+    } catch (err: unknown) {
+      setError(err instanceof Error ? err.message : "An unknown error occurred");
       return null;
     } finally {
       setLoading(false);
     }
-  }, []);
+  }, [session?.user?.accessToken]);
 
   const fetchAllFeedback = useCallback(async () => {
     try {
       setLoading(true);
       setError(null);
 
-      const token = (session?.user as any)?.accessToken;
+      const token = session?.user?.accessToken;
       const response = await fetch(API_ROUTES.ADMIN_FEEDBACK, {
         headers: {
           ...(token ? { "Authorization": `Bearer ${token}` } : {}),
@@ -86,13 +85,13 @@ export function useFeedback() {
       }
 
       return await response.json();
-    } catch (err: any) {
-      setError(err.message);
+    } catch (err: unknown) {
+      setError(err instanceof Error ? err.message : "An unknown error occurred");
       return [];
     } finally {
       setLoading(false);
     }
-  }, []);
+  }, [session?.user?.accessToken]);
 
   return {
     submitFeedback,

@@ -43,56 +43,14 @@ export function useQuizSession(): UseQuizSessionResult {
   const configuration = useRef<QuizSessionConfig | null>(null);
   const timerInterval = useRef<NodeJS.Timeout | null>(null);
 
-  const clearTimer = () => {
+  const clearTimer = useCallback(() => {
     if (timerInterval.current) {
       clearInterval(timerInterval.current);
       timerInterval.current = null;
     }
-  };
+  }, []);
 
   const currentQuestion = questions[currentIndex] || null;
-
-  // Handles time tracking per question
-  useEffect(() => {
-    if (status === "in-progress" && currentQuestion) {
-      questionStartTime.current = Date.now();
-      
-      const config = configuration.current;
-      if (config?.timePerQuestion) {
-        setTimeRemainingMs(config.timePerQuestion * 1000);
-        
-        timerInterval.current = setInterval(() => {
-          setTimeRemainingMs((prev) => {
-            if (prev === 0) return 0;
-            if (prev <= 100) {
-              clearInterval(timerInterval.current!);
-              // Auto-submit empty answer on timeout
-              // We need to use slightly indirect logic here since submitAnswer depends on current state
-              return 0;
-            }
-            return prev - 100;
-          });
-        }, 100);
-      } else {
-        setTimeRemainingMs(0);
-      }
-    } else {
-      clearTimer();
-    }
-
-    return clearTimer;
-  }, [status, currentIndex, currentQuestion]);
-
-  // Effect to handle auto-submission when timer hits 0
-  useEffect(() => {
-    // Only auto-submit if a time limit was actually configured AND it hit 0
-    if (configuration.current?.timePerQuestion && timeRemainingMs === 0 && status === "in-progress") {
-       // Using an empty string for timeout
-       evaluateAndRecordAnswer("");
-    }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [timeRemainingMs, status]);
-
 
   const startSession = async (config: QuizSessionConfig) => {
     // Clear everything IMMEDIATELY to prevent state leakage
@@ -126,6 +84,50 @@ export function useQuizSession(): UseQuizSessionResult {
     }
   };
 
+  const finishSession = useCallback(async () => {
+    // Prevent multiple submissions if already loading or complete
+    if (status === "loading" || status === "complete") return;
+    
+    setStatus("loading");
+    
+    const correctCount = answers.filter(a => a.isCorrect).length;
+    const score = questions.length > 0 ? (correctCount / questions.length) * 100 : 0;
+    
+    try {
+      if (configuration.current) {
+          const token = session?.user?.accessToken;
+          
+          if (token) {
+            const response = await fetch(API_ROUTES.QUIZ_SUBMIT, {
+              method: "POST",
+              headers: { 
+                  "Content-Type": "application/json",
+                  "Authorization": `Bearer ${token}`
+              },
+              body: JSON.stringify({
+                  category: configuration.current.category,
+                  level: configuration.current.level,
+                  score,
+                  total_q: questions.length,
+                  correct_q: correctCount,
+                  question_ids: questions.map(q => q.id)
+              })
+            });
+
+            if (!response.ok) {
+              const errorText = await response.text();
+              console.error("Failed to submit quiz session:", response.status, errorText);
+            }
+          }
+      }
+      
+      setStatus("complete");
+      playFinish();
+    } catch {
+       setStatus("complete");
+    }
+  }, [status, answers, questions, session?.user?.accessToken, playFinish]);
+
   const evaluateAndRecordAnswer = useCallback((userAnswer: string) => {
     if (!currentQuestion || status !== "in-progress") return;
     
@@ -156,12 +158,11 @@ export function useQuizSession(): UseQuizSessionResult {
     
     setLastAnswerEvaluated(isCorrect);
     setStatus("review");
-  }, [currentQuestion, status, playCorrect, playWrong]);
+  }, [currentQuestion, status, clearTimer, playCorrect, playWrong]);
 
   const submitAnswer = useCallback((answer: string) => {
      evaluateAndRecordAnswer(answer);
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [currentQuestion, status]);
+  }, [evaluateAndRecordAnswer]);
 
   const nextQuestion = useCallback(() => {
     if (status !== "review") return;
@@ -173,61 +174,43 @@ export function useQuizSession(): UseQuizSessionResult {
     } else {
       finishSession();
     }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [status, currentIndex, questions.length]);
+  }, [status, currentIndex, questions.length, finishSession]);
 
-  const finishSession = async () => {
-    // Prevent multiple submissions if already loading or complete
-    if (status === "loading" || status === "complete") return;
-    
-    setStatus("loading");
-    
-    const correctCount = answers.filter(a => a.isCorrect).length;
-    const score = questions.length > 0 ? (correctCount / questions.length) * 100 : 0;
-    
-    try {
-      if (configuration.current) {
-          const typedSession = session as any;
-          const token = typedSession?.user?.accessToken;
-          
-          if (token) {
-            console.log("DEBUG: Finalizing quiz session. Token found, submitting...");
-            const response = await fetch(API_ROUTES.QUIZ_SUBMIT, {
-              method: "POST",
-              headers: { 
-                  "Content-Type": "application/json",
-                  "Authorization": `Bearer ${token}`
-              },
-              body: JSON.stringify({
-                  category: configuration.current.category,
-                  level: configuration.current.level,
-                  score,
-                  total_q: questions.length,
-                  correct_q: correctCount,
-                  question_ids: questions.map(q => q.id)
-              })
-            });
-
-            if (!response.ok) {
-              const errorText = await response.text();
-              console.error("Failed to submit quiz session:", response.status, errorText);
-            } else {
-              console.log("Quiz session submitted successfully");
-            }
-          } else {
-            console.warn("No access token found in session, session will not be saved.");
-          }
-      }
+  // Handles time tracking per question
+  useEffect(() => {
+    if (status === "in-progress" && currentQuestion) {
+      questionStartTime.current = Date.now();
       
-      // We set complete AFTER the fetch finishes (or fails) to avoid unmounting race conditions
-      setStatus("complete");
-      playFinish();
-    } catch (err) {
-       console.error("Error during finishSession:", err);
-       // Even if submission fails, show user their local results
-       setStatus("complete");
+      const config = configuration.current;
+      if (config?.timePerQuestion) {
+        setTimeRemainingMs(config.timePerQuestion * 1000);
+        
+        timerInterval.current = setInterval(() => {
+          setTimeRemainingMs((prev) => {
+            if (prev === 0) return 0;
+            if (prev <= 100) {
+              clearInterval(timerInterval.current!);
+              return 0;
+            }
+            return prev - 100;
+          });
+        }, 100);
+      } else {
+        setTimeRemainingMs(0);
+      }
+    } else {
+      clearTimer();
     }
-  };
+
+    return () => clearTimer();
+  }, [status, currentIndex, currentQuestion, clearTimer]);
+
+  // Effect to handle auto-submission when timer hits 0
+  useEffect(() => {
+    if (configuration.current?.timePerQuestion && timeRemainingMs === 0 && status === "in-progress") {
+       evaluateAndRecordAnswer("");
+    }
+  }, [timeRemainingMs, status, evaluateAndRecordAnswer]);
 
   const reset = () => {
     setQuestions([]);

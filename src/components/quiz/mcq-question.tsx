@@ -1,7 +1,7 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import { QuizQuestion, QuizOption } from "@/types/quiz";
+import { useState } from "react";
+import { QuizQuestion } from "@/types/quiz";
 import { useLanguage } from "@/contexts/language-context";
 import { Volume2, Play, MousePointer2 } from "lucide-react";
 
@@ -15,10 +15,7 @@ export function McqQuestion({ question, onSubmit, disabled }: McqQuestionProps) 
   const { language } = useLanguage();
   const [selected, setSelected] = useState<string>("");
 
-  useEffect(() => {
-    setSelected("");
-  // eslint-disable-next-line react-hooks/set-state-in-effect
-  }, [question.id]);
+
 
   return (
     <div className="w-full flex flex-col items-center">

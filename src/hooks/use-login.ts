@@ -48,7 +48,7 @@ export function useLogin(): UseLoginResult {
     setIsLoading(true);
     try {
       await signIn("google", { callbackUrl: "/" });
-    } catch (err) {
+    } catch {
       setError("Failed to login with Google");
       setIsLoading(false);
     }

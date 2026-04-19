@@ -1,6 +1,6 @@
 "use client";
 
-import { use, useEffect } from "react";
+import { useEffect } from "react";
 import { useQuizSession } from "@/hooks/use-quiz-session";
 import { useLanguage } from "@/contexts/language-context";
 import { QuizCategory } from "@/types/quiz";
@@ -92,13 +92,13 @@ export function QuizClientView({ category }: { category: string }) {
         <Section spacing="none" className="perspective-1000">
           <div className="glass-card-premium rounded-[2.5rem] overflow-hidden border border-white/50 shadow-premium">
             {currentQuestion.type === "multiple-choice" && (
-              <McqQuestion question={currentQuestion} onSubmit={submitAnswer} disabled={disabled} />
+              <McqQuestion key={currentQuestion.id} question={currentQuestion} onSubmit={submitAnswer} disabled={disabled} />
             )}
             {currentQuestion.type === "fill-in-blank" && (
-              <FillInBlank question={currentQuestion} onSubmit={submitAnswer} disabled={disabled} />
+              <FillInBlank key={currentQuestion.id} question={currentQuestion} onSubmit={submitAnswer} disabled={disabled} />
             )}
             {currentQuestion.type === "word-order" && (
-              <WordOrder question={currentQuestion} onSubmit={submitAnswer} disabled={disabled} />
+              <WordOrder key={currentQuestion.id} question={currentQuestion} onSubmit={submitAnswer} disabled={disabled} />
             )}
           </div>
         </Section>

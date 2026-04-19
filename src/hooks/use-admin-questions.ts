@@ -19,13 +19,13 @@ export function useAdminQuestions(): UseAdminQuestionsResult {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  const getHeaders = () => {
-    const token = (session?.user as any)?.accessToken;
+  const getHeaders = useCallback(() => {
+    const token = session?.user?.accessToken;
     return {
       "Content-Type": "application/json",
       ...(token ? { Authorization: `Bearer ${token}` } : {})
     };
-  };
+  }, [session?.user?.accessToken]);
 
   const fetchQuestions = useCallback(async (category?: string, level?: string) => {
     setLoading(true);
@@ -46,7 +46,7 @@ export function useAdminQuestions(): UseAdminQuestionsResult {
     } finally {
       setLoading(false);
     }
-  }, []);
+  }, [getHeaders]);
 
   const createQuestion = async (question: Partial<QuizQuestion>) => {
     setLoading(true);

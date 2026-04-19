@@ -24,13 +24,13 @@ export function useAdminUsers(): UseAdminUsersResult {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  const getHeaders = () => {
-    const token = (session?.user as any)?.accessToken;
+  const getHeaders = useCallback(() => {
+    const token = session?.user?.accessToken;
     return {
       "Content-Type": "application/json",
       ...(token ? { Authorization: `Bearer ${token}` } : {})
     };
-  };
+  }, [session?.user?.accessToken]);
 
   const fetchUsers = useCallback(async () => {
     setLoading(true);
@@ -45,7 +45,7 @@ export function useAdminUsers(): UseAdminUsersResult {
     } finally {
       setLoading(false);
     }
-  }, []);
+  }, [getHeaders]);
 
   const deleteUser = async (id: string) => {
     setLoading(true);
