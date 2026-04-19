@@ -10,7 +10,7 @@ export default function LessonsPage() {
        <DashboardHeader />
        <section className="flex-1 flex flex-col items-center justify-center px-6 text-center">
           <div className="relative w-64 h-64 mb-10 animate-float opacity-50 grayscale">
-             <Image src="/mascot.png" alt="Coming Soon" fill className="object-contain" />
+             <Image src="/mascot.png" alt="Coming Soon" fill sizes="256px" className="object-contain" />
           </div>
           <h1 className="text-4xl font-black text-slate-800 mb-4">Lessons Coming Soon</h1>
           <p className="text-slate-500 font-bold max-w-md">We are currently curating the best German grammar lessons for you. Stay tuned!</p>

@@ -72,7 +72,11 @@ func ForgotPasswordHandler(w http.ResponseWriter, r *http.Request) {
 	// Send reset email (async)
 	// In a real app, you'd want a more robust queue system
 	go func() {
-		resetLink := fmt.Sprintf("%s/reset-password?token=%s", os.Getenv("NEXT_PUBLIC_APP_URL"), resetToken)
+		appURL := os.Getenv("NEXT_PUBLIC_APP_URL")
+		if appURL == "" {
+			appURL = "https://egaldeutsch.com"
+		}
+		resetLink := fmt.Sprintf("%s/reset-password?token=%s", appURL, resetToken)
 		utils.SendPasswordResetEmail(req.Email, resetLink)
 	}()
 

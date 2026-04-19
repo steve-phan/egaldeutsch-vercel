@@ -40,7 +40,7 @@ func SendWelcomeEmail(email, name string) error {
 		},
 		TemplateID: TemplateWelcome,
 		Params: map[string]interface{}{
-			"NAME": name,
+			"userName": name,
 		},
 	})
 }
@@ -52,7 +52,7 @@ func SendPasswordResetEmail(email, resetLink string) error {
 		},
 		TemplateID: TemplatePasswordReset,
 		Params: map[string]interface{}{
-			"RESET_LINK": resetLink,
+			"resetURL": resetLink,
 		},
 	})
 }

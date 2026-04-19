@@ -19,6 +19,7 @@ export function MasteryHero({ session, currentLevel }: MasteryHeroProps) {
             src={session?.user?.image || "/mascot.png"}
             alt="Profile Avatar"
             fill
+            sizes="(max-width: 768px) 96px, 128px"
             className="object-contain"
           />
         </div>

@@ -70,6 +70,7 @@ export function ExploreClientView() {
                            src="/mascot.png"
                            alt="Featured"
                            fill
+                           sizes="(max-width: 1280px) 100vw, 1280px"
                            className="object-cover opacity-10 grayscale mix-blend-overlay"
                         />
                      </div>

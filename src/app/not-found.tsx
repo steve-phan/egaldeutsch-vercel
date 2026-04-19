@@ -19,6 +19,7 @@ export default function NotFound() {
             src="/mascot.png" 
             alt="EgalDeutsch Mascot looking lost and confused on a 404 page" 
             fill 
+            sizes="256px"
             className="object-contain"
             priority
           />
