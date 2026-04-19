@@ -22,7 +22,7 @@ export function GuestConversionBanner() {
                      Master German with <Brand as="span" inline />.
                   </h2>
                   <p className="text-sm font-bold text-slate-400 max-w-md">
-                     <Brand as="span" inline className="font-bold tracking-normal italic-normal text-slate-400" /> is an interactive platform designed to help you master German grammar through gamified quizzes, structured lessons, and professional exam preparation.
+                     <Brand as="span" inline /> is an interactive platform designed to help you master German grammar through gamified quizzes, structured lessons, and professional exam preparation.
                   </p>
                </div>
 

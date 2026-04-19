@@ -54,7 +54,7 @@ export function UserTable({ users, onDelete, isDeleting }: UserTableProps) {
                 {user.created_at && (
                   <div className="flex items-center gap-1.5 text-slate-400">
                     <Calendar className="w-3.5 h-3.5" />
-                    <span className="text-xs font-bold">Joined {new Date(user.created_at).toLocaleDateString()}</span>
+                    <span className="text-xs font-bold">Joined {new Date(user.created_at).toLocaleDateString("de-DE")}</span>
                   </div>
                 )}
               </div>

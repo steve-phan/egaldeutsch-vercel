@@ -50,8 +50,6 @@ export interface QuizQuestion {
   hint_vi?: string;
   tags: string[];
   status: "draft" | "review" | "published";
-  created_at: string;
-  updated_at: string;
 }
 
 export interface CategoryMeta {

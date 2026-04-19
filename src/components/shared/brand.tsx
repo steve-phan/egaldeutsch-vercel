@@ -18,14 +18,14 @@ const sizeClasses: Record<BrandSize, string> = {
   "2xl": "text-4xl md:text-5xl",
 };
 
-export function Brand({ 
-  size = "md", 
-  className, 
+export function Brand({
+  size = "md",
+  className,
   as: Component = "div",
   inline = false
 }: BrandProps) {
   return (
-    <Component 
+    <Component
       className={cn(
         "font-black tracking-tighter italic",
         !inline && "text-slate-800 leading-none",
@@ -33,7 +33,7 @@ export function Brand({
         className
       )}
     >
-      {!inline && "Egal"}<span className={cn("text-primary", inline && "italic")}>{inline ? "EgalDeutsch" : "Deutsch"}</span>
+      Egal<span className="text-primary">Deutsch</span>
     </Component>
   );
 }

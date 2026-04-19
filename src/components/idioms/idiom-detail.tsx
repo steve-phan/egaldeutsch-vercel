@@ -79,7 +79,7 @@ export function IdiomDetail({ idiom }: IdiomDetailProps) {
       {/* Footer Meta */}
       <div className="text-center pt-8 pb-16">
         <p className="text-[10px] font-black uppercase tracking-widest text-slate-300">
-          Last Updated: {new Date(idiom.updated_at).toLocaleDateString()}
+          Last Updated: {new Date(idiom.updated_at).toLocaleDateString("de-DE")}
         </p>
       </div>
     </div>
