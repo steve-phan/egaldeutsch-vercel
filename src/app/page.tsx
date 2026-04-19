@@ -72,9 +72,11 @@ export default async function Home() {
         <ServerIdiomSection />
       </Suspense>
 
-      <Suspense fallback={<CategorySkeleton />}>
-        <ServerCategorySection />
-      </Suspense>
+      <div id="lessons-section" className="scroll-mt-24">
+        <Suspense fallback={<CategorySkeleton />}>
+          <ServerCategorySection />
+        </Suspense>
+      </div>
     </HomeClientView>
   );
 }

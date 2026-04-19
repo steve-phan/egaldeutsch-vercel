@@ -1,6 +1,7 @@
 import { useState, useCallback } from "react";
 import { useRouter } from "next/navigation";
 import { useLanguage, type Language } from "@/contexts/language-context";
+import { signIn } from "next-auth/react";
 
 interface UseSignupResult {
   name: string;
@@ -14,6 +15,7 @@ interface UseSignupResult {
   setPassword: (password: string) => void;
   setLanguage: (language: Language) => void;
   handleSubmit: (e: React.FormEvent) => Promise<void>;
+  handleGoogleLogin: () => Promise<void>;
 }
 
 export function useSignup(): UseSignupResult {
@@ -25,6 +27,12 @@ export function useSignup(): UseSignupResult {
   const [error, setError] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const router = useRouter();
+
+  const handleGoogleLogin = useCallback(async () => {
+    setIsLoading(true);
+    await signIn("google", { callbackUrl: "/dashboard" });
+    setIsLoading(false);
+  }, []);
 
   const handleSubmit = useCallback(async (e: React.FormEvent) => {
     e.preventDefault();
@@ -69,5 +77,6 @@ export function useSignup(): UseSignupResult {
     setPassword,
     setLanguage,
     handleSubmit,
+    handleGoogleLogin,
   };
 }
