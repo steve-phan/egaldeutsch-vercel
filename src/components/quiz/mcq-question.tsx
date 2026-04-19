@@ -4,6 +4,7 @@ import { useState } from "react";
 import { QuizQuestion } from "@/types/quiz";
 import { useLanguage } from "@/contexts/language-context";
 import { MousePointer2 } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 interface McqQuestionProps {
    question: QuizQuestion;
@@ -47,13 +48,12 @@ export function McqQuestion({ question, onSubmit, disabled }: McqQuestionProps) 
                         key={idx}
                         disabled={disabled}
                         onClick={() => setSelected(opt)}
-                        className={`
-                      w-full h-12 px-6 rounded-2xl font-bold flex items-center justify-between transition-all duration-300 transform active-bounce
+                        className={cn(`w-full h-12 px-6 rounded-2xl font-bold flex items-center justify-between transition-all duration-300 transform active-bounce
                       ${isSelected
                               ? "bg-primary text-white shadow-lg shadow-primary/20 scale-[1.02] border-transparent"
                               : "bg-white border border-slate-100 text-slate-500 hover:border-primary/30 hover:bg-slate-50"}
-                      ${disabled && "pointer-events-none"}
-                    `}
+                      ${disabled && "pointer-events-none"}`
+                        )}
                      >
                         <span className="flex items-center gap-4">
                            <span className={`w-8 h-8 rounded-lg flex items-center justify-center text-xs font-black ${isSelected ? "bg-white/20 text-white" : "bg-slate-50 text-slate-400"}`}>
@@ -71,7 +71,10 @@ export function McqQuestion({ question, onSubmit, disabled }: McqQuestionProps) 
                <button
                   disabled={!selected || disabled}
                   onClick={() => onSubmit(selected)}
-                  className={`w-full btn-orange btn-compact flex items-center justify-center gap-2 ${!selected && "opacity-30 grayscale pointer-events-none"}`}
+                  className={cn(
+                     "w-full btn-orange btn-compact flex items-center justify-center gap-2",
+                     (!selected || disabled) && "opacity-30 grayscale pointer-events-none"
+                  )}
                >
                   {language === "de" ? "Überprüfen" : language === "vi" ? "Kiểm tra" : "Submit Answer"}
                </button>

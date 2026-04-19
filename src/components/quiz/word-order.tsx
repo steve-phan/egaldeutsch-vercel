@@ -5,6 +5,12 @@ import { QuizQuestion } from "@/types/quiz";
 import { useLanguage } from "@/contexts/language-context";
 import { ListOrdered, RotateCcw } from "lucide-react";
 
+interface WordItem {
+  id: string;
+  text: string;
+  isUsed: boolean;
+}
+
 interface WordOrderProps {
   question: QuizQuestion;
   onSubmit: (answer: string) => void;
@@ -13,37 +19,50 @@ interface WordOrderProps {
 
 export function WordOrder({ question, onSubmit, disabled }: WordOrderProps) {
   const { language } = useLanguage();
-  const [availableWords, setAvailableWords] = useState<string[]>(() => {
+
+  // The static pool of words that never changes its layout order
+  const [wordPool, setWordPool] = useState<WordItem[]>(() => {
+    let source: string[] = [];
     if (question.options && question.options.length > 0) {
-      return [...question.options].sort(() => Math.random() - 0.5);
+      source = [...question.options];
     } else if (question.correct_answer) {
-      return question.correct_answer.split(/\s+/).sort(() => Math.random() - 0.5);
+      source = question.correct_answer.split(/\s+/);
     }
-    return [];
+
+    return source
+      .sort(() => Math.random() - 0.5)
+      .map((text, index) => ({
+        id: `word-${index}-${Math.random().toString(36).substr(2, 9)}`,
+        text,
+        isUsed: false
+      }));
   });
-  const [orderedWords, setOrderedWords] = useState<string[]>([]);
 
+  // Track the order in which IDs were selected
+  const [orderedIds, setOrderedIds] = useState<string[]>([]);
 
-
-  const handleWordClick = (word: string, isAvailable: boolean) => {
+  const handleWordClick = (id: string, isAvailable: boolean) => {
     if (disabled) return;
 
     if (isAvailable) {
-      setAvailableWords(availableWords.filter(w => w !== word));
-      setOrderedWords([...orderedWords, word]);
+      setWordPool(prev => prev.map(w => w.id === id ? { ...w, isUsed: true } : w));
+      setOrderedIds(prev => [...prev, id]);
     } else {
-      setOrderedWords(orderedWords.filter(w => w !== word));
-      setAvailableWords([...availableWords, word]);
+      setWordPool(prev => prev.map(w => w.id === id ? { ...w, isUsed: false } : w));
+      setOrderedIds(prev => prev.filter(i => i !== id));
     }
   };
 
   const reset = () => {
     if (disabled) return;
-    if (question.options) {
-      setAvailableWords([...question.options].sort(() => Math.random() - 0.5));
-      setOrderedWords([]);
-    }
+    setWordPool(prev => prev.map(w => ({ ...w, isUsed: false })));
+    setOrderedIds([]);
   };
+
+  // Helper to get selected words in order
+  const orderedWords = orderedIds
+    .map(id => wordPool.find(w => w.id === id))
+    .filter((w): w is WordItem => !!w);
 
   return (
     <div className="w-full flex flex-col items-center">
@@ -76,12 +95,12 @@ export function WordOrder({ question, onSubmit, disabled }: WordOrderProps) {
           <div className="min-h-[80px] w-full p-4 bg-white/50 border-2 border-dashed border-slate-100 rounded-[2rem] flex flex-wrap gap-2 items-center content-center transition-colors">
             {orderedWords.map((word, i) => (
               <button
-                key={`${word}-${i}`}
-                onClick={() => handleWordClick(word, false)}
+                key={word.id}
+                onClick={() => handleWordClick(word.id, false)}
                 disabled={disabled}
                 className="h-10 px-4 bg-primary text-white rounded-full font-black text-sm shadow-premium shadow-primary/20 animate-in zoom-in-90 hover:scale-105 active:scale-95 transition-all"
               >
-                {word}
+                {word.text}
               </button>
             ))}
             {!orderedWords.length && <p className="text-slate-200 font-bold text-sm w-full text-center">Tap words to build your answer...</p>}
@@ -90,22 +109,33 @@ export function WordOrder({ question, onSubmit, disabled }: WordOrderProps) {
 
         {/* Selection Area */}
         <div className="flex flex-wrap gap-2 justify-center">
-          {availableWords.map((word, i) => (
-            <button
-              key={`${word}-${i}`}
-              onClick={() => handleWordClick(word, true)}
-              disabled={disabled}
-              className="h-10 px-4 bg-white border border-slate-100 rounded-full font-black text-sm text-slate-500 shadow-premium hover:border-primary/40 hover:text-primary active:scale-95 transition-all disabled:opacity-30"
-            >
-              {word}
-            </button>
+          {wordPool.map((word) => (
+            <div key={word.id} className="relative">
+              {/* Visible placeholder to indicate an empty slot */}
+              <div 
+                className="h-10 px-4 rounded-full border border-dashed border-slate-200 bg-slate-50/50 font-black text-sm text-transparent flex items-center select-none"
+              >
+                {word.text}
+              </div>
+
+              {/* Actual Button */}
+              {!word.isUsed && (
+                <button
+                  onClick={() => handleWordClick(word.id, true)}
+                  disabled={disabled}
+                  className="absolute inset-0 h-10 px-4 bg-white border border-slate-100 rounded-full font-black text-sm text-slate-500 shadow-premium hover:border-primary/40 hover:text-primary active:scale-95 transition-all disabled:opacity-30 flex items-center justify-center animate-in fade-in zoom-in-90 fill-mode-forwards"
+                >
+                  {word.text}
+                </button>
+              )}
+            </div>
           ))}
         </div>
 
         {!disabled && (
           <button
             disabled={!orderedWords.length || disabled}
-            onClick={() => onSubmit(orderedWords.join(" "))}
+            onClick={() => onSubmit(orderedWords.map(w => w.text).join(" "))}
             className={`w-full btn-orange btn-compact flex items-center justify-center gap-2 ${!orderedWords.length && "opacity-30 grayscale pointer-events-none"}`}
           >
             {language === "de" ? "Überprüfen" : language === "vi" ? "Kiểm tra" : "Submit Answer"}
