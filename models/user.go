@@ -16,4 +16,5 @@ type User struct {
 	ResetToken       string             `bson:"reset_token,omitempty" json:"-"`
 	ResetTokenExpiry time.Time          `bson:"reset_token_expiry,omitempty" json:"-"`
 	Language         string             `bson:"language,omitempty" json:"language"`
+	SeenIdioms       []string           `bson:"seen_idioms,omitempty" json:"seen_idioms,omitempty"`
 }

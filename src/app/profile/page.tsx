@@ -3,7 +3,6 @@
 import { AppShell } from "@/components/layout/app-shell";
 import { IdentitySection } from "@/components/profile/IdentitySection";
 import { MasteryHero } from "@/components/profile/MasteryHero";
-import { PreferencesSection } from "@/components/profile/PreferencesSection";
 import { ProgressTab } from "@/components/profile/ProgressTab";
 import { SecuritySection } from "@/components/profile/SecuritySection";
 import { Card } from "@/components/shared/layout/card";
@@ -101,16 +100,13 @@ export default function ProfilePage() {
                   setName={setName}
                   email={email}
                   setEmail={setEmail}
+                  language={language}
+                  setLanguage={setLanguage}
+                  languages={languages}
                   handleSubmit={handleSubmit}
                   saving={saving}
                   error={error}
                   success={success}
-                />
-
-                <PreferencesSection
-                  languages={languages}
-                  language={language}
-                  setLanguage={setLanguage}
                 />
 
                 <SecuritySection session={session} />

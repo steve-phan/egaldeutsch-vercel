@@ -8,8 +8,12 @@ import (
 	"time"
 
 	"egaldeutsch-vercel/db"
+	"egaldeutsch-vercel/mock"
 	"egaldeutsch-vercel/models"
+	"egaldeutsch-vercel/utils"
 	"go.mongodb.org/mongo-driver/bson"
+	"go.mongodb.org/mongo-driver/bson/primitive"
+	"go.mongodb.org/mongo-driver/mongo"
 	"go.mongodb.org/mongo-driver/mongo/options"
 )
 
@@ -87,13 +91,65 @@ func IdiomRandomHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
+	w.Header().Set("Content-Type", "application/json")
+
+	// Optional User ID via JWT
+	var userID *primitive.ObjectID
+	claims, err := utils.GetClaimsFromRequest(r)
+	if err == nil {
+		if id, err := primitive.ObjectIDFromHex(claims.UserID); err == nil {
+			userID = &id
+		}
+	}
+
 	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
 	defer cancel()
 
-	collection := db.GetClient().Database("egaldeutsch").Collection("idioms")
+	// Logic for Mock Mode
+	if mock.IsMockMode() {
+		mockDB := mock.GetMockDB()
+		var excludeSlugs []string
+		if userID != nil {
+			u, err := mockDB.GetUserByID(*userID)
+			if err == nil {
+				excludeSlugs = u.SeenIdioms
+			}
+		}
+		
+		idiom := mockDB.GetRandomIdiom(excludeSlugs)
+		if idiom == nil {
+			http.Error(w, "No idioms found", http.StatusNotFound)
+			return
+		}
 
-	// Use aggregation to pick 1 random document
-	pipeline := bson.A{bson.M{"$sample": bson.M{"size": 1}}}
+		// Record seen idiom for logged-in user
+		if userID != nil {
+			mockDB.MarkIdiomSeen(*userID, idiom.Slug)
+		}
+
+		json.NewEncoder(w).Encode(idiom)
+		return
+	}
+
+	collection := db.GetCollection("idioms")
+	userColl := db.GetCollection("users")
+
+	matchStage := bson.M{}
+
+	// If logged in, fetch seen idioms to exclude
+	if userID != nil {
+		var user models.User
+		err := userColl.FindOne(ctx, bson.M{"_id": userID}).Decode(&user)
+		if err == nil && len(user.SeenIdioms) > 0 {
+			matchStage["slug"] = bson.M{"$nin": user.SeenIdioms}
+		}
+	}
+
+	pipeline := mongo.Pipeline{
+		{{Key: "$match", Value: matchStage}},
+		{{Key: "$sample", Value: bson.M{"size": 1}}},
+	}
+
 	cursor, err := collection.Aggregate(ctx, pipeline)
 	if err != nil {
 		http.Error(w, "Failed to fetch random idiom", http.StatusInternalServerError)
@@ -107,11 +163,35 @@ func IdiomRandomHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
+	// FALLBACK: If we have zero results (user seen everything), try again WITHOUT the filter
+	if len(idioms) == 0 && len(matchStage) > 0 {
+		pipeline = mongo.Pipeline{
+			{{Key: "$sample", Value: bson.M{"size": 1}}},
+		}
+		cursor, err = collection.Aggregate(ctx, pipeline)
+		if err == nil {
+			defer cursor.Close(ctx)
+			cursor.All(ctx, &idioms)
+		}
+	}
+
 	if len(idioms) == 0 {
 		http.Error(w, "No idioms found", http.StatusNotFound)
 		return
 	}
 
-	w.Header().Set("Content-Type", "application/json")
-	json.NewEncoder(w).Encode(idioms[0])
+	selected := idioms[0]
+
+	// Record seen idiom for logged-in user (async)
+	if userID != nil {
+		go func(uid primitive.ObjectID, slug string) {
+			bgCtx, bgCancel := context.WithTimeout(context.Background(), 5*time.Second)
+			defer bgCancel()
+			userColl.UpdateOne(bgCtx, bson.M{"_id": uid}, bson.M{
+				"$addToSet": bson.M{"seen_idioms": slug},
+			})
+		}(*userID, selected.Slug)
+	}
+
+	json.NewEncoder(w).Encode(selected)
 }

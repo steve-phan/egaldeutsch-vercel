@@ -5,11 +5,20 @@ import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 
+interface LanguageOption {
+  code: string;
+  name: string;
+  flag: string;
+}
+
 interface IdentitySectionProps {
   name: string;
   setName: (name: string) => void;
   email: string;
   setEmail: (email: string) => void;
+  language: string;
+  setLanguage: (lang: string) => void;
+  languages: LanguageOption[];
   handleSubmit: (e: React.FormEvent) => Promise<void>;
   saving: boolean;
   error: string;
@@ -17,7 +26,8 @@ interface IdentitySectionProps {
 }
 
 export function IdentitySection({
-  name, setName, email, setEmail, handleSubmit, saving, error, success
+  name, setName, email, setEmail, language, setLanguage, languages,
+  handleSubmit, saving, error, success
 }: IdentitySectionProps) {
   return (
     <form onSubmit={handleSubmit} className="space-y-8">
@@ -55,6 +65,34 @@ export function IdentitySection({
             className="h-14 rounded-2xl border-slate-100 bg-slate-50/50 shadow-sm transition-all px-6 font-bold text-slate-400 cursor-not-allowed"
             readOnly
           />
+        </div>
+
+        {/* Interface Language Integrated */}
+        <div className="space-y-4 pt-4 border-t border-slate-50">
+          <Label className="text-[10px] font-black text-slate-400 ml-1 uppercase tracking-widest flex items-center gap-2">
+            Interface Language
+          </Label>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
+            {languages.map((lang) => (
+              <button
+                key={lang.code}
+                type="button"
+                onClick={() => setLanguage(lang.code)}
+                className={`flex items-center gap-3 px-4 py-3 rounded-2xl border-2 transition-all ${
+                  language === lang.code
+                    ? "border-primary bg-primary/5 shadow-inner"
+                    : "border-slate-50 bg-white hover:border-slate-200"
+                }`}
+              >
+                <span className="text-xl">{lang.flag}</span>
+                <span className={`text-[10px] font-black uppercase tracking-widest ${
+                  language === lang.code ? "text-primary" : "text-slate-500"
+                }`}>
+                  {lang.name}
+                </span>
+              </button>
+            ))}
+          </div>
         </div>
       </div>
 

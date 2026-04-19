@@ -339,3 +339,59 @@ func (db *MockDB) GetUserStats(userID primitive.ObjectID) map[string]interface{}
 		"category_averages": catAvg,
 	}
 }
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Idiom operations
+// ─────────────────────────────────────────────────────────────────────────────
+
+// GetRandomIdiom returns a random idiom, optionally excluding some slugs.
+func (db *MockDB) GetRandomIdiom(excludeSlugs []string) *MockIdiom {
+	db.mu.RLock()
+	defer db.mu.RUnlock()
+
+	var pool []*MockIdiom
+	excludeMap := make(map[string]bool)
+	for _, s := range excludeSlugs {
+		excludeMap[s] = true
+	}
+
+	for _, i := range db.idioms {
+		if !excludeMap[i.Slug] {
+			pool = append(pool, i)
+		}
+	}
+
+	// Fallback if all idioms seen
+	if len(pool) == 0 && len(db.idioms) > 0 {
+		for _, i := range db.idioms {
+			pool = append(pool, i)
+		}
+	}
+
+	if len(pool) == 0 {
+		return nil
+	}
+
+	rand.Shuffle(len(pool), func(i, j int) { pool[i], pool[j] = pool[j], pool[i] })
+	return pool[0]
+}
+
+// MarkIdiomSeen records an idiom as seen by a user.
+func (db *MockDB) MarkIdiomSeen(id primitive.ObjectID, slug string) {
+	db.mu.Lock()
+	defer db.mu.Unlock()
+
+	user, exists := db.users[id]
+	if !exists {
+		return
+	}
+
+	// Check if already seen
+	for _, s := range user.SeenIdioms {
+		if s == slug {
+			return
+		}
+	}
+
+	user.SeenIdioms = append(user.SeenIdioms, slug)
+}

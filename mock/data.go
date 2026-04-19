@@ -18,6 +18,7 @@ type MockUser struct {
 	Language  string             `bson:"language"   json:"language"`
 	CreatedAt time.Time          `bson:"created_at" json:"created_at"`
 	UpdatedAt time.Time          `bson:"updated_at" json:"updated_at"`
+	SeenIdioms []string          `bson:"seen_idioms,omitempty" json:"seen_idioms,omitempty"`
 }
 
 // QuizOption holds a localized option for multiple-choice questions.
@@ -49,6 +50,17 @@ type MockQuizQuestion struct {
 	UpdatedAt     time.Time          `bson:"updated_at"     json:"updated_at"`
 }
 
+// MockIdiom is the in-memory representation of an idiom.
+type MockIdiom struct {
+	ID        primitive.ObjectID `bson:"_id,omitempty" json:"id"`
+	Title     string             `bson:"title"          json:"title"`
+	Slug      string             `bson:"slug"           json:"slug"`
+	MeaningDe string             `bson:"meaning_de"     json:"meaning_de"`
+	MeaningEn string             `bson:"meaning_en"     json:"meaning_en"`
+	MeaningVi string             `bson:"meaning_vi"     json:"meaning_vi"`
+	CreatedAt time.Time          `bson:"created_at"     json:"created_at"`
+}
+
 // MockQuizSession records a completed user quiz session.
 type MockQuizSession struct {
 	ID          primitive.ObjectID  `bson:"_id,omitempty" json:"id"`
@@ -65,6 +77,7 @@ type MockQuizSession struct {
 type MockDB struct {
 	users     map[primitive.ObjectID]*MockUser
 	questions map[primitive.ObjectID]*MockQuizQuestion
+	idioms    map[primitive.ObjectID]*MockIdiom
 	sessions  map[primitive.ObjectID]*MockQuizSession
 	mu        sync.RWMutex
 }
@@ -80,6 +93,7 @@ func GetMockDB() *MockDB {
 		mockDBInstance = &MockDB{
 			users:     make(map[primitive.ObjectID]*MockUser),
 			questions: make(map[primitive.ObjectID]*MockQuizQuestion),
+			idioms:    make(map[primitive.ObjectID]*MockIdiom),
 			sessions:  make(map[primitive.ObjectID]*MockQuizSession),
 		}
 		mockDBInstance.seedData()
@@ -122,4 +136,42 @@ func (db *MockDB) seedData() {
 
 	// Seed quiz questions
 	seedQuizQuestions(db)
+
+	// Seed idioms
+	seedIdioms(db)
+}
+
+func seedIdioms(db *MockDB) {
+	idioms := []*MockIdiom{
+		{
+			ID:        primitive.NewObjectID(),
+			Title:     "Tomaten auf den Augen haben",
+			Slug:      "tomaten-auf-den-augen-haben",
+			MeaningDe: "Etwas Offensichtliches nicht sehen.",
+			MeaningEn: "To be oblivious to something obvious.",
+			MeaningVi: "Không thấy điều rõ ràng trước mắt.",
+			CreatedAt: time.Now(),
+		},
+		{
+			ID:        primitive.NewObjectID(),
+			Title:     "Um den heißen Brei herumreden",
+			Slug:      "um-den-heissen-brei-herumreden",
+			MeaningDe: "Nicht zum Punkt kommen.",
+			MeaningEn: "To beat around the bush.",
+			MeaningVi: "Nói vòng vo tam quốc.",
+			CreatedAt: time.Now(),
+		},
+		{
+			ID:        primitive.NewObjectID(),
+			Title:     "Da steppt der Bär",
+			Slug:      "da-steppt-der-baer",
+			MeaningDe: "Hier ist viel los.",
+			MeaningEn: "It's a party over here / Lots of action.",
+			MeaningVi: "Ở đây rất nhộn nhịp.",
+			CreatedAt: time.Now(),
+		},
+	}
+	for _, i := range idioms {
+		db.idioms[i.ID] = i
+	}
 }
