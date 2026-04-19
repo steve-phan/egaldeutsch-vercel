@@ -35,7 +35,7 @@ export function CategoryGrid({ categories, loading }: CategoryGridProps) {
           <CategoryCard key={cat.id} category={cat} />
         ))}
       </div>
-      
+
       <style jsx global>{`
         .no-scrollbar::-webkit-scrollbar {
           display: none;

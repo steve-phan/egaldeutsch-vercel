@@ -1,10 +1,5 @@
 import { Metadata } from "next";
 import { HomeClientView } from "@/components/home/home-client-view";
-import { getServerSession } from "next-auth";
-import { authOptions } from "./api/auth/[...nextauth]/route";
-import { API_ROUTES, BACKEND_URL } from "@/lib/constants";
-import { CategoryMeta } from "@/types/quiz";
-import { Idiom } from "@/types/idiom";
 
 export const metadata: Metadata = {
   title: "EgalDeutsch — Professional German Learning Platform",
@@ -29,28 +24,57 @@ export const metadata: Metadata = {
     images: ["/og-image.png"],
   },
 };
+import { getServerSession } from "next-auth";
+import { authOptions } from "./api/auth/[...nextauth]/route";
+import { Suspense } from "react";
+import { ServerCategorySection } from "@/components/home/server-category-section";
+import { ServerIdiomSection } from "@/components/home/server-idiom-section";
+import { Section } from "@/components/shared/layout/section";
+import { Card } from "@/components/shared/layout/card";
+import { Skeleton } from "@/components/ui/skeleton";
 
-async function getInitialData() {
-  const [catRes, idiomRes] = await Promise.all([
-    fetch(`${BACKEND_URL}${API_ROUTES.QUIZ_CATEGORIES}`, { next: { revalidate: 3600 } }),
-    fetch(`${BACKEND_URL}${API_ROUTES.IDIOM_RANDOM}`, { next: { revalidate: 3600 } })
-  ]);
+// Loading skeleton for the grammar modules
+function CategorySkeleton() {
+  return (
+    <Section spacing="md">
+      <Card className="space-y-8">
+        <div className="flex items-center gap-3">
+          <Skeleton className="h-8 w-48 mb-3" />
+          <div className="h-0.5 flex-1 bg-slate-100/50 rounded-full" />
+        </div>
+        <div className="flex gap-6 overflow-x-auto pb-8">
+          {[1, 2, 3, 4].map((i) => (
+            <Skeleton key={i} className="min-w-[280px] h-[190px] rounded-2xl" />
+          ))}
+        </div>
+      </Card>
+    </Section>
+  );
+}
 
-  const categories = catRes.ok ? await catRes.json() : [];
-  const randomIdiom = idiomRes.ok ? await idiomRes.json() : null;
-
-  return { categories, randomIdiom };
+// Loading skeleton for the featured idiom
+function IdiomSkeleton() {
+  return (
+    <Section spacing="md">
+      <Skeleton className="w-full h-[320px] rounded-[2rem]" />
+    </Section>
+  );
 }
 
 export default async function Home() {
+  // Session check is fast (JWT/Cookie), so we keep it here to avoid Hero flicker.
+  // The slow category/idiom calls are moved into streamed components.
   const session = await getServerSession(authOptions);
-  const { categories, randomIdiom } = await getInitialData();
   
   return (
-    <HomeClientView 
-      initialSession={session} 
-      initialCategories={categories}
-      initialIdiom={randomIdiom}
-    />
+    <HomeClientView initialSession={session}>
+      <Suspense fallback={<IdiomSkeleton />}>
+        <ServerIdiomSection />
+      </Suspense>
+
+      <Suspense fallback={<CategorySkeleton />}>
+        <ServerCategorySection />
+      </Suspense>
+    </HomeClientView>
   );
 }
