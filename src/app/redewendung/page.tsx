@@ -28,6 +28,8 @@ export const metadata: Metadata = {
   },
 };
 
+import { IdiomsClientView } from "@/components/idioms/idioms-client-view";
+
 async function getIdioms(): Promise<Idiom[]> {
   try {
     const res = await fetch(`${BACKEND_URL}${API_ROUTES.IDIOMS}`, {
@@ -66,20 +68,8 @@ export default async function IdiomsDirectory() {
           </p>
         </div>
 
-        {/* Grid */}
-        {idioms.length > 0 ? (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {idioms.map((idiom) => (
-              <IdiomCard key={idiom.id} idiom={idiom} />
-            ))}
-          </div>
-        ) : (
-          <div className="flex flex-col items-center justify-center py-24 text-center">
-            <div className="text-6xl mb-6 opacity-20 grayscale">🥨</div>
-            <h2 className="text-2xl font-black text-slate-800 italic">No idioms found</h2>
-            <p className="text-slate-400 font-bold">Please check back later or start the backend server.</p>
-          </div>
-        )}
+        {/* Client View with Search & Grid */}
+        <IdiomsClientView initialIdioms={idioms} />
       </div>
     </AppShell>
   );
