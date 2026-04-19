@@ -1,12 +1,17 @@
 {
   "rewrites": [
+    { "source": "/api/account", "destination": "/api/index.go" },
     { "source": "/api/account/(.*)", "destination": "/api/index.go" },
+    { "source": "/api/quiz", "destination": "/api/index.go" },
     { "source": "/api/quiz/(.*)", "destination": "/api/index.go" },
+    { "source": "/api/admin", "destination": "/api/index.go" },
     { "source": "/api/admin/(.*)", "destination": "/api/index.go" },
+    { "source": "/api/dashboard", "destination": "/api/index.go" },
     { "source": "/api/dashboard/(.*)", "destination": "/api/index.go" },
+    { "source": "/api/user", "destination": "/api/index.go" },
     { "source": "/api/user/(.*)", "destination": "/api/index.go" },
-    { "source": "/api/idioms/(.*)", "destination": "/api/index.go" },
     { "source": "/api/idioms", "destination": "/api/index.go" },
+    { "source": "/api/idioms/(.*)", "destination": "/api/index.go" },
     { "source": "/api/feedback", "destination": "/api/index.go" }
   ]
 }
