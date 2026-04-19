@@ -30,7 +30,7 @@ export function RandomIdiom() {
   return (
     <Section spacing="md">
       <div className="w-full">
-        <div className="sm:flex items-center justify-between mb-6">
+        <Card className="sm:flex items-center justify-between mb-6">
           <div className="flex items-center gap-3 pb-3">
             <h2 className="text-xl font-black text-slate-800 tracking-tighter italic leading-none">Redewendung</h2>
           </div>
@@ -49,7 +49,7 @@ export function RandomIdiom() {
               Library <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1.5 transition-transform" />
             </Link>
           </div>
-        </div>
+        </Card>
 
         <Card padding="none" hover className="min-h-[220px]">
           {randomIdiom ? (

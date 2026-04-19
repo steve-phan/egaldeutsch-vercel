@@ -12,12 +12,21 @@ export const metadata: Metadata = {
 async function getIdioms(): Promise<Idiom[]> {
   try {
     const res = await fetch(`${BACKEND_URL}${API_ROUTES.IDIOMS}`, {
-      next: { revalidate: 3600 }, // Cache for 1 hour
+      next: { revalidate: 3600 },
+      signal: AbortSignal.timeout(5000),
     });
+
     if (!res.ok) return [];
+
+    const contentType = res.headers.get("content-type");
+    if (!contentType || !contentType.includes("application/json")) {
+      console.warn("Idioms Directory: Backend returned non-JSON response.");
+      return [];
+    }
+
     return res.json();
   } catch (error) {
-    console.error("Failed to fetch idioms:", error);
+    console.warn("Failed to fetch idioms:", error);
     return [];
   }
 }

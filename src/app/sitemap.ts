@@ -24,19 +24,28 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   let idiomRoutes: MetadataRoute.Sitemap = [];
   try {
     const res = await fetch(`${BACKEND_URL}${API_ROUTES.IDIOMS}`, {
-        next: { revalidate: 3600 } // Cache for 1 hour
+        next: { revalidate: 3600 },
+        signal: AbortSignal.timeout(5000) // Don't hang the build
     });
+
     if (res.ok) {
-        const idioms = await res.json();
-        idiomRoutes = idioms.map((idiom: any) => ({
-            url: `${baseUrl}/redewendung/${idiom.slug}`,
-            lastModified: new Date(idiom.updated_at || new Date()),
-            changeFrequency: "monthly",
-            priority: 0.6,
-        }));
+        const contentType = res.headers.get("content-type");
+        if (contentType && contentType.includes("application/json")) {
+            const idioms = await res.json();
+            if (Array.isArray(idioms)) {
+                idiomRoutes = idioms.map((idiom: any) => ({
+                    url: `${baseUrl}/redewendung/${idiom.slug}`,
+                    lastModified: new Date(idiom.updated_at || new Date()),
+                    changeFrequency: "monthly",
+                    priority: 0.6,
+                }));
+            }
+        } else {
+            console.warn("Sitemap: Backend returned non-JSON response for idioms.");
+        }
     }
   } catch (error) {
-    console.error("Sitemap generation error (idioms):", error);
+    console.warn("Sitemap: Could not fetch idioms for sitemap, skipping dynamic routes.");
   }
 
   return [...staticRoutes, ...categoryRoutes, ...idiomRoutes];

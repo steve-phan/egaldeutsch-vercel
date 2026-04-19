@@ -10,6 +10,7 @@ import { GuestConversionBanner } from "@/components/home/guest-conversion-banner
 import { LanguageOnboarding } from "@/components/home/language-onboarding";
 import { AppShell } from "@/components/layout/app-shell";
 import { Section } from "@/components/shared/layout/section";
+import { Card } from "@/components/shared/layout/card";
 
 export function HomeClientView() {
    const { status } = useSession();
@@ -38,13 +39,13 @@ export function HomeClientView() {
 
             {/* Main Content Area */}
             <Section spacing="md" id="lessons-section">
-               <div className="space-y-8">
+               <Card className="space-y-8">
                   <div className="flex items-center gap-3">
-                     <h2 className="text-xl font-black text-slate-800 tracking-tighter italic leading-none">Grammar Modules</h2>
+                     <h2 className="text-xl font-black text-slate-800 tracking-tighter italic leading-none pb-3">Grammar Modules</h2>
                      <div className="h-0.5 flex-1 bg-slate-100/50 rounded-full" />
                   </div>
                   <CategoryGrid categories={categories} loading={loading} />
-               </div>
+               </Card>
             </Section>
          </div>
       </AppShell>

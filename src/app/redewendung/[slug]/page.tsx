@@ -15,11 +15,19 @@ async function getIdiom(slug: string): Promise<Idiom | null> {
   try {
     const res = await fetch(`${BACKEND_URL}${API_ROUTES.IDIOM_DETAIL}${slug}`, {
       next: { revalidate: 3600 },
+      signal: AbortSignal.timeout(5000),
     });
+
     if (!res.ok) return null;
+
+    const contentType = res.headers.get("content-type");
+    if (!contentType || !contentType.includes("application/json")) {
+        return null;
+    }
+
     return res.json();
   } catch (error) {
-    console.error("Failed to fetch idiom:", error);
+    console.warn(`Failed to fetch idiom [${slug}]:`, error);
     return null;
   }
 }
@@ -28,9 +36,17 @@ async function getIdiom(slug: string): Promise<Idiom | null> {
 async function getRandomSlug(): Promise<string | null> {
     try {
         const res = await fetch(`${BACKEND_URL}${API_ROUTES.IDIOM_RANDOM}`, {
-            cache: 'no-store'
+            cache: 'no-store',
+            signal: AbortSignal.timeout(3000),
         });
+
         if (!res.ok) return null;
+
+        const contentType = res.headers.get("content-type");
+        if (!contentType || !contentType.includes("application/json")) {
+            return null;
+        }
+
         const data = await res.json();
         return data.slug;
     } catch {
