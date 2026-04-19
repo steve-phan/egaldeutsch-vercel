@@ -7,10 +7,12 @@ import { useSession } from "next-auth/react";
 import { Bell, Sparkles, LogIn } from "lucide-react";
 import { Skeleton } from "../ui/skeleton";
 
+import { useNotifications } from "@/hooks/use-notifications";
 import { Brand } from "../shared/brand";
 
 export function Navbar() {
   const { data: session, status } = useSession();
+  const { unreadCount } = useNotifications();
   const isGuest = status === "unauthenticated";
   const isLoading = status === "loading";
 
@@ -63,7 +65,9 @@ export function Navbar() {
         <Link href="/notifications">
           <button className="w-10 h-10 bg-white/50 shadow-sm rounded-xl flex items-center justify-center text-slate-400 hover:text-primary transition-all active:scale-90 border border-slate-100 relative group">
             <Bell className="w-5 h-5 group-hover:animate-ring" />
-            <span className="absolute top-2.5 right-2.5 w-2 h-2 bg-primary rounded-full border-2 border-white shadow-sm" />
+            {unreadCount > 0 && (
+              <span className="absolute top-2.5 right-2.5 w-2 h-2 bg-primary rounded-full border-2 border-white shadow-sm" />
+            )}
           </button>
         </Link>
 

@@ -84,6 +84,9 @@ func GoogleSyncHandler(w http.ResponseWriter, r *http.Request) {
 		utils.SendWelcomeEmail(newUser.Email, newUser.Name)
 	}()
 
+	// Trigger welcome notification
+	utils.CreateNotification(newUser.ID, "Willkommen bei EgalDeutsch!", "Du hast dein Mastery-Konto erfolgreich erstellt. Starte deinen ersten Quiz, um deinen Fortschritt zu verfolgen!", "system", "/")
+
 	// Generate token for new user
 	token, tokenErr := utils.GenerateToken(newUser.ID.Hex(), newUser.Email, newUser.Role)
 	if tokenErr != nil {

@@ -128,6 +128,30 @@ func (db *MockDB) DeleteUser(id primitive.ObjectID) error {
 	return nil
 }
 
+func (db *MockDB) ChangePassword(id primitive.ObjectID, currentPassword, newPassword string) error {
+	db.mu.Lock()
+	defer db.mu.Unlock()
+
+	user, exists := db.users[id]
+	if !exists {
+		return ErrNotFound
+	}
+
+	// Verify current password
+	if err := bcrypt.CompareHashAndPassword([]byte(user.Password), []byte(currentPassword)); err != nil {
+		return ErrUnauthorized
+	}
+
+	// Hash and update new password
+	hashedPassword, err := bcrypt.GenerateFromPassword([]byte(newPassword), bcrypt.DefaultCost)
+	if err != nil {
+		return err
+	}
+	user.Password = string(hashedPassword)
+	user.UpdatedAt = time.Now()
+	return nil
+}
+
 func (db *MockDB) ValidatePassword(email, password string) (*MockUser, error) {
 	user, err := db.GetUserByEmail(email)
 	if err != nil {

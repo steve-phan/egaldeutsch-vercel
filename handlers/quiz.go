@@ -277,5 +277,17 @@ func QuizSubmitHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
+	// Trigger Mastery Notification for high scores
+	if req.Score >= 90 {
+		title := "Mission Accomplished!"
+		desc := "You've successfully mastered the '" + req.Category + "' module with perfect precision."
+		if req.Score < 100 {
+			title = "Great Progress!"
+			desc = "You're getting closer to mastery in '" + req.Category + "'! Keep it up."
+		}
+		
+		utils.CreateNotification(*session.UserID, title, desc, "achievement", "/notifications")
+	}
+
 	json.NewEncoder(w).Encode(session)
 }

@@ -1,13 +1,17 @@
 package handlers
 
 import (
+	"context"
 	"encoding/json"
 	"net/http"
-
-	"egaldeutsch-vercel/mock"
+	"time"
+ 
+	"egaldeutsch-vercel/db"
 	"egaldeutsch-vercel/utils"
-
+ 
+	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/bson/primitive"
+	"go.mongodb.org/mongo-driver/mongo"
 )
 
 // DashboardStats is the quiz-based stats response for the dashboard.
@@ -41,23 +45,74 @@ func DashboardHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	if mock.IsMockMode() {
-		mockDB := mock.GetMockDB()
-		raw := mockDB.GetUserStats(userID)
+	collection := db.GetCollection("sessions")
+	ctx, cancel := context.WithTimeout(context.Background(), 15*time.Second)
+	defer cancel()
 
-		stats := DashboardStats{
-			TotalSessions:    toInt(raw["total_sessions"]),
-			TotalQuestions:   toInt(raw["total_questions"]),
-			TotalCorrect:     toInt(raw["total_correct"]),
-			Accuracy:         toFloat(raw["accuracy"]),
-			CategoryAverages: toCatAvg(raw["category_averages"]),
-		}
-		json.NewEncoder(w).Encode(stats)
+	// Pipeline: Filter by User, then Facet into Overall and Category slices
+	pipeline := mongo.Pipeline{
+		{{Key: "$match", Value: bson.D{{Key: "user_id", Value: userID}}}},
+		{{Key: "$facet", Value: bson.D{
+			{Key: "overall", Value: mongo.Pipeline{
+				{{Key: "$group", Value: bson.D{
+					{Key: "_id", Value: nil},
+					{Key: "total_sessions", Value: bson.D{{Key: "$sum", Value: 1}}},
+					{Key: "total_questions", Value: bson.D{{Key: "$sum", Value: "$total_q"}}},
+					{Key: "total_correct", Value: bson.D{{Key: "$sum", Value: "$correct_q"}}},
+				}}},
+			}},
+			{Key: "categories", Value: mongo.Pipeline{
+				{{Key: "$group", Value: bson.D{
+					{Key: "_id", Value: "$category"},
+					{Key: "avg_score", Value: bson.D{{Key: "$avg", Value: "$score"}}},
+				}}},
+			}},
+		}}},
+	}
+
+	cursor, err := collection.Aggregate(ctx, pipeline)
+	if err != nil {
+		utils.LogError(w, err, "Failed to aggregate dashboard stats", http.StatusInternalServerError)
+		return
+	}
+	defer cursor.Close(ctx)
+
+	var results []bson.M
+	if err = cursor.All(ctx, &results); err != nil {
+		utils.LogError(w, err, "Failed to decode dashboard stats", http.StatusInternalServerError)
 		return
 	}
 
-	// TODO: MongoDB aggregation in Phase 6
-	json.NewEncoder(w).Encode(DashboardStats{CategoryAverages: map[string]float64{}})
+	stats := DashboardStats{
+		CategoryAverages: make(map[string]float64),
+	}
+
+	if len(results) > 0 {
+		facet := results[0]
+
+		// Extract Overall Stats
+		if overall, ok := facet["overall"].(primitive.A); ok && len(overall) > 0 {
+			data := overall[0].(bson.M)
+			stats.TotalSessions = int(data["total_sessions"].(int32))
+			stats.TotalQuestions = int(data["total_questions"].(int32))
+			stats.TotalCorrect = int(data["total_correct"].(int32))
+			if stats.TotalQuestions > 0 {
+				stats.Accuracy = (float64(stats.TotalCorrect) / float64(stats.TotalQuestions)) * 100
+			}
+		}
+
+		// Extract Category Averages
+		if categories, ok := facet["categories"].(primitive.A); ok {
+			for _, c := range categories {
+				data := c.(bson.M)
+				if catID, ok := data["_id"].(string); ok {
+					stats.CategoryAverages[catID] = data["avg_score"].(float64)
+				}
+			}
+		}
+	}
+
+	json.NewEncoder(w).Encode(stats)
 }
 
 // ─── helpers ─────────────────────────────────────────────────────────────────

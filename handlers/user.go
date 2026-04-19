@@ -13,6 +13,7 @@ import (
 
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/bson/primitive"
+	"golang.org/x/crypto/bcrypt"
 )
 
 type UserResponse struct {
@@ -172,4 +173,94 @@ func updateUserProfile(w http.ResponseWriter, r *http.Request, claims *utils.Cla
 	}
 
 	json.NewEncoder(w).Encode(map[string]string{"message": "User updated successfully"})
+}
+
+// ChangePasswordHandler handles POST /api/account/change-password
+func ChangePasswordHandler(w http.ResponseWriter, r *http.Request) {
+	w.Header().Set("Content-Type", "application/json")
+
+	if r.Method != http.MethodPost {
+		http.Error(w, "Method not allowed", http.StatusMethodNotAllowed)
+		return
+	}
+
+	// Get user from token
+	claims, err := utils.GetClaimsFromRequest(r)
+	if err != nil {
+		http.Error(w, "Unauthorized", http.StatusUnauthorized)
+		return
+	}
+
+	userID, err := primitive.ObjectIDFromHex(claims.UserID)
+	if err != nil {
+		http.Error(w, "Invalid user ID", http.StatusBadRequest)
+		return
+	}
+
+	var req ChangePasswordRequest
+	if err := json.NewDecoder(r.Body).Decode(&req); err != nil {
+		http.Error(w, "Invalid request body", http.StatusBadRequest)
+		return
+	}
+
+	if req.CurrentPassword == "" || req.NewPassword == "" {
+		http.Error(w, "Current and new passwords are required", http.StatusBadRequest)
+		return
+	}
+
+	if len(req.NewPassword) < 6 {
+		http.Error(w, "New password must be at least 6 characters long", http.StatusBadRequest)
+		return
+	}
+
+	// Use mock database if mock mode is enabled
+	if mock.IsMockMode() {
+		mockDB := mock.GetMockDB()
+		err := mockDB.ChangePassword(userID, req.CurrentPassword, req.NewPassword)
+		if err != nil {
+			if err == mock.ErrUnauthorized {
+				http.Error(w, "Incorrect current password", http.StatusUnauthorized)
+				return
+			}
+			http.Error(w, "Failed to update password", http.StatusInternalServerError)
+			return
+		}
+
+		json.NewEncoder(w).Encode(map[string]string{"message": "Password updated successfully"})
+		return
+	}
+
+	collection := db.GetCollection("users")
+	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
+	defer cancel()
+
+	var user models.User
+	err = collection.FindOne(ctx, bson.M{"_id": userID}).Decode(&user)
+	if err != nil {
+		http.Error(w, "User not found", http.StatusNotFound)
+		return
+	}
+
+	// Verify current password
+	err = bcrypt.CompareHashAndPassword([]byte(user.Password), []byte(req.CurrentPassword))
+	if err != nil {
+		http.Error(w, "Incorrect current password", http.StatusUnauthorized)
+		return
+	}
+
+	// Hash new password
+	hashedPassword, err := bcrypt.GenerateFromPassword([]byte(req.NewPassword), bcrypt.DefaultCost)
+	if err != nil {
+		http.Error(w, "Failed to secure password", http.StatusInternalServerError)
+		return
+	}
+
+	// Update user record
+	_, err = collection.UpdateOne(ctx, bson.M{"_id": userID}, bson.M{"$set": bson.M{"password": string(hashedPassword)}})
+	if err != nil {
+		http.Error(w, "Failed to update password", http.StatusInternalServerError)
+		return
+	}
+
+	json.NewEncoder(w).Encode(map[string]string{"message": "Password updated successfully"})
 }

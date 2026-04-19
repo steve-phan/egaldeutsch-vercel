@@ -18,6 +18,7 @@ func NewRouter() http.Handler {
 	mux.HandleFunc("/api/account/user", handlers.UserHandler)
 	mux.HandleFunc("/api/account/admin-users", handlers.AdminUsersHandler)
 	mux.HandleFunc("/api/account/google-sync", handlers.GoogleSyncHandler)
+	mux.HandleFunc("/api/account/change-password", handlers.ChangePasswordHandler)
 
 	// --- User Profile Routes ---
 	mux.HandleFunc("/api/user/profile", handlers.UpdateProfileHandler)
@@ -42,6 +43,10 @@ func NewRouter() http.Handler {
 	// --- Feedback Routes ---
 	mux.HandleFunc("/api/feedback", handlers.FeedbackHandler)
 	mux.HandleFunc("/api/admin/feedback", handlers.AdminFeedbackHandler)
+
+	// --- Notification Routes ---
+	mux.HandleFunc("/api/user/notifications", handlers.GetNotificationsHandler)
+	mux.HandleFunc("/api/user/notifications/read", handlers.MarkNotificationReadHandler)
 
 	return LoggingMiddleware(mux)
 }
