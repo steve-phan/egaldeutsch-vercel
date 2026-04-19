@@ -20,13 +20,24 @@ interface LanguageContextType {
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
-export function LanguageProvider({ children }: { children: React.ReactNode }) {
+export function LanguageProvider({ 
+  children,
+  initialLanguage,
+  initialIsLoaded = false
+}: { 
+  children: React.ReactNode;
+  initialLanguage?: Language;
+  initialIsLoaded?: boolean;
+}) {
   const [state, setState] = useState<{ language: Language; isLoaded: boolean }>({
-    language: "en",
-    isLoaded: false
+    language: initialLanguage || "en",
+    isLoaded: initialIsLoaded
   });
 
   useEffect(() => {
+    // If server provided a value, we can skip detection
+    if (initialIsLoaded && initialLanguage) return;
+
     // Try to load language from localStorage
     const saved = localStorage.getItem("language") as Language;
     let initialLang: Language = "en";
@@ -35,7 +46,7 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
       initialLang = saved;
     } else {
       // Auto-detect based on browser language
-      const browserLang = navigator.language.slice(0, 2);
+      const browserLang = typeof navigator !== "undefined" ? navigator.language.slice(0, 2) : "en";
       if (browserLang === "de") initialLang = "de";
       else if (browserLang === "vi") initialLang = "vi";
     }
@@ -45,7 +56,7 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
     setTimeout(() => {
       setState({ language: initialLang, isLoaded: true });
     }, 0);
-  }, []);
+  }, [initialLanguage, initialIsLoaded]);
 
   const { data: session } = useSession();
 
@@ -66,6 +77,10 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
   const setLanguage = (lang: Language) => {
     setState(prev => ({ ...prev, language: lang }));
     localStorage.setItem("language", lang);
+    // Sync with cookie for server-side detection
+    if (typeof document !== "undefined") {
+      document.cookie = `language=${lang}; path=/; max-age=31536000; samesite=lax`;
+    }
   };
 
   // Helper to get nested translation value (e.g. "common.start")

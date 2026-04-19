@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   },
 };
 import { getServerSession } from "next-auth";
-import { authOptions } from "./api/auth/[...nextauth]/route";
+import { authOptions } from "@/lib/auth";
 import { Suspense } from "react";
 import { ServerCategorySection } from "@/components/home/server-category-section";
 import { ServerIdiomSection } from "@/components/home/server-idiom-section";

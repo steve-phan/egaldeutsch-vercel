@@ -2,8 +2,11 @@ import type { Metadata } from "next";
 import { Montserrat, Open_Sans } from "next/font/google";
 import "./globals.css";
 import { AuthProvider } from "@/components/auth-provider";
-import { LanguageProvider } from "@/contexts/language-context";
+import { LanguageProvider, Language } from "@/contexts/language-context";
 import { Toaster } from "@/components/ui/sonner";
+import { getServerSession } from "next-auth/next";
+import { authOptions } from "@/lib/auth";
+import { cookies } from "next/headers";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -68,16 +71,23 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const session = await getServerSession(authOptions);
+  const cookieStore = await cookies();
+  const cookieLang = cookieStore.get("language")?.value as Language;
+
+  // Priority: Session > Cookie > Default
+  const initialLanguage = (session?.user as any)?.language || cookieLang || "en";
+
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang={initialLanguage} suppressHydrationWarning>
       <body className={`${montserrat.variable} ${openSans.variable} font-sans antialiased text-slate-800 bg-background`} suppressHydrationWarning>
         <AuthProvider>
-          <LanguageProvider>
+          <LanguageProvider initialLanguage={initialLanguage} initialIsLoaded={true}>
             {children}
             <Toaster />
           </LanguageProvider>

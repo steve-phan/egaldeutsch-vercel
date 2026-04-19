@@ -84,6 +84,10 @@ export function useProfile(): UseProfileResult {
 
       // Update the session explicitly
       await update({ name, email, language });
+      
+      // Update language cookie for server-side detection
+      document.cookie = `language=${language}; path=/; max-age=31536000; samesite=lax`;
+      
       setSuccess("Profile updated successfully!");
     } catch (err) {
       if (err instanceof Error) {
