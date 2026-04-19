@@ -43,16 +43,16 @@ export function Navbar() {
     if (isGuest) {
       return (
         <div className="flex items-center gap-2">
-          <Link href="/login" className="hidden xs:block">
-            <button className="h-10 px-4 rounded-xl text-xs font-black text-slate-500 uppercase tracking-widest hover:text-primary transition-colors">
-              Login
+          <Link href="/login">
+            <button className="btn-orange h-10 px-5 text-xs font-black flex items-center gap-2">
+              Login <LogIn className="w-3.5 h-3.5" />
             </button>
           </Link>
-          <Link href="/signup">
+          {/* <Link href="/signup">
             <button className="btn-orange h-10 px-5 text-xs font-black flex items-center gap-2">
               Join <span className="hidden sm:inline">Us</span> <LogIn className="w-3.5 h-3.5" />
             </button>
-          </Link>
+          </Link> */}
         </div>
       )
     }

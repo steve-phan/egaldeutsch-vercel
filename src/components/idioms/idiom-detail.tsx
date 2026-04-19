@@ -2,7 +2,7 @@
 
 import { Idiom } from "@/types/idiom";
 import { useLanguage } from "@/contexts/language-context";
- 
+
 interface IdiomDetailProps {
   idiom: Idiom;
 }
@@ -25,22 +25,22 @@ export function IdiomDetail({ idiom }: IdiomDetailProps) {
         <div className="inline-flex w-24 h-24 bg-white shadow-floating rounded-3xl items-center justify-center text-5xl border border-slate-100 animate-bounce-slow">
           {idiom.thumbnail || "🇩🇪"}
         </div>
-        
-        <h1 className="text-4xl md:text-6xl font-black text-slate-900 tracking-tighter italic leading-tight">
+
+        <h1 className="text-3xl md:text-5xl font-black text-slate-900 tracking-tighter italic leading-tight">
           {idiom.title}
         </h1>
 
         <div className="flex flex-col items-center gap-2">
-            <p className="text-lg md:text-xl text-slate-500 font-bold max-w-2xl mx-auto leading-relaxed">
-              {getMeaning()}
-            </p>
-            <div className="flex gap-2 mt-4">
-              {idiom.tags.map((tag) => (
-                <span key={tag} className="px-4 py-1.5 bg-slate-100 rounded-full text-[11px] font-black uppercase tracking-widest text-slate-500">
-                  #{tag}
-                </span>
-              ))}
-            </div>
+          <p className="text-lg md:text-xl text-slate-500 font-bold max-w-2xl mx-auto leading-relaxed">
+            {getMeaning()}
+          </p>
+          <div className="flex gap-2 mt-4">
+            {idiom.tags.map((tag) => (
+              <span key={tag} className="px-4 py-1.5 bg-slate-100 rounded-full text-[11px] font-black uppercase tracking-widest text-slate-500">
+                #{tag}
+              </span>
+            ))}
+          </div>
         </div>
 
         {/* Literal Translation Highlight */}
@@ -54,7 +54,7 @@ export function IdiomDetail({ idiom }: IdiomDetailProps) {
       </div>
 
       {/* Main Content (Raw HTML) */}
-      <div 
+      <div
         className="prose prose-slate prose-lg max-w-none 
           prose-headings:font-black prose-headings:tracking-tighter prose-headings:italic prose-headings:text-slate-900
           prose-p:text-slate-600 prose-p:leading-relaxed
@@ -62,7 +62,7 @@ export function IdiomDetail({ idiom }: IdiomDetailProps) {
           bg-white rounded-[3rem] p-8 md:p-12 shadow-premium border border-slate-100"
         dangerouslySetInnerHTML={{ __html: idiom.content_html }}
       />
-      
+
       {/* Footer Meta */}
       <div className="text-center pt-8 pb-16">
         <p className="text-[10px] font-black uppercase tracking-widest text-slate-300">

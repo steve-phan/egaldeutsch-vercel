@@ -6,27 +6,35 @@ import { Clock } from "lucide-react";
 interface QuestionProgressProps {
   currentIndex: number;
   totalQuestions: number;
-  timeRemainingMs: number;
+  timeRemainingMs: number | null;
 }
 
 export function QuestionProgress({ currentIndex, totalQuestions, timeRemainingMs }: QuestionProgressProps) {
   const progressWidth = (totalQuestions > 0) ? ((currentIndex) / totalQuestions) * 100 : 0;
 
-  const seconds = Math.floor(timeRemainingMs / 1000);
-  const minutes = Math.floor(seconds / 60);
-  const displaySeconds = seconds % 60;
+  // If timeRemainingMs is null, we show 0:00
+  const totalSeconds = timeRemainingMs !== null ? Math.floor(Math.abs(timeRemainingMs) / 1000) : 0;
+  const minutes = Math.floor(totalSeconds / 60);
+  const seconds = totalSeconds % 60;
+  
+  // Logic to determine if we are counting down (timed) or up (ZEN)
+  // We can't know for sure here without more props, but we can infer based on context from useQuizSession
+  // Actually, we'll just display it.
+  
+  const isCoundown = timeRemainingMs !== null && timeRemainingMs > 0;
+  const isLowTime = isCoundown && totalSeconds < 10;
 
   return (
     <div className="w-full space-y-3">
       <div className="flex items-center justify-between">
          <div className="flex items-center gap-2">
-            <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
+            <span className={`w-2 h-2 rounded-full bg-primary ${timeRemainingMs !== null ? "animate-pulse" : ""}`} />
             <span className="text-[10px] font-black text-slate-800 uppercase tracking-widest italic">Live Quiz</span>
          </div>
-         <div className="flex items-center gap-2 glass-pill px-3 py-1 rounded-full border-slate-100/50">
-            <Clock className={`w-3 h-3 ${seconds < 10 ? "text-rose-500 animate-bounce" : "text-slate-400"}`} />
-            <span className={`text-[10px] font-black tabular-nums transition-colors ${seconds < 10 ? "text-rose-500" : "text-slate-400"}`}>
-               {minutes}:{displaySeconds < 10 ? `0${displaySeconds}` : displaySeconds}
+         <div className="flex items-center gap-2 glass-pill px-3 py-1 rounded-full border-slate-100/50 min-w-[70px] justify-center">
+            <Clock className={`w-3 h-3 ${isLowTime ? "text-rose-500 animate-bounce" : "text-slate-400"}`} />
+            <span className={`text-[10px] font-black tabular-nums transition-colors ${isLowTime ? "text-rose-500" : "text-slate-400"}`}>
+               {minutes}:{seconds < 10 ? `0${seconds}` : seconds}
             </span>
          </div>
       </div>

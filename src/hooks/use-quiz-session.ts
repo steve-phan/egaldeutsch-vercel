@@ -59,6 +59,7 @@ export function useQuizSession(): UseQuizSessionResult {
     setCurrentIndex(0);
     setAnswers([]);
     setLastAnswerEvaluated(false);
+    setTimeRemainingMs(0);
     configuration.current = config;
     
     try {
@@ -182,24 +183,28 @@ export function useQuizSession(): UseQuizSessionResult {
       questionStartTime.current = Date.now();
       
       const config = configuration.current;
-      if (config?.timePerQuestion) {
-        setTimeRemainingMs(config.timePerQuestion * 1000);
+      const limitMs = config?.timePerQuestion ? config.timePerQuestion * 1000 : null;
+      
+      if (limitMs !== null) {
+        setTimeRemainingMs(limitMs);
         
         timerInterval.current = setInterval(() => {
           setTimeRemainingMs((prev) => {
-            if (prev === 0) return 0;
-            if (prev <= 100) {
-              clearInterval(timerInterval.current!);
-              return 0;
-            }
-            return prev - 100;
+            if (prev === null || prev <= 0) return 0;
+            const next = prev - 100;
+            return next <= 0 ? 0 : next;
           });
         }, 100);
       } else {
+        // ZEN mode - count UP
         setTimeRemainingMs(0);
+        timerInterval.current = setInterval(() => {
+          setTimeRemainingMs((prev) => (prev ?? 0) + 100);
+        }, 100);
       }
     } else {
       clearTimer();
+      // Don't reset timeRemainingMs to null here, we might want to see the final time in review
     }
 
     return () => clearTimer();
@@ -207,7 +212,8 @@ export function useQuizSession(): UseQuizSessionResult {
 
   // Effect to handle auto-submission when timer hits 0
   useEffect(() => {
-    if (configuration.current?.timePerQuestion && timeRemainingMs === 0 && status === "in-progress") {
+    const isTimed = !!configuration.current?.timePerQuestion;
+    if (isTimed && timeRemainingMs === 0 && status === "in-progress") {
        evaluateAndRecordAnswer("");
     }
   }, [timeRemainingMs, status, evaluateAndRecordAnswer]);

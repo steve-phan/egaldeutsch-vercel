@@ -49,7 +49,7 @@ export function HeroQuizCard() {
             </div>
 
             <div className="space-y-4 md:space-y-5">
-              <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-slate-800 leading-[0.95] md:leading-[0.9] tracking-tighter italic">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-slate-800 leading-[1.05] md:leading-[1.05] tracking-tighter italic">
                 {getTitle()}
               </h2>
               <p className="text-base md:text-lg font-bold text-slate-400 max-w-md mx-auto md:mx-0 leading-relaxed">

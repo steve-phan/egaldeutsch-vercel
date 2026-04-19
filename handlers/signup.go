@@ -20,6 +20,7 @@ type SignupRequest struct {
 	Name     string `json:"name"`
 	Email    string `json:"email"`
 	Password string `json:"password"`
+	Language string `json:"language"`
 }
 
 func SignupHandler(w http.ResponseWriter, r *http.Request) {
@@ -85,12 +86,18 @@ func SignupHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
+	// Set language with a default of "en" if not provided
+	lang := req.Language
+	if lang == "" {
+		lang = "en"
+	}
+
 	user := models.User{
 		ID:       primitive.NewObjectID(),
 		Name:     req.Name,
 		Email:    req.Email,
 		Password: string(hashedPassword),
-		Language: "en",
+		Language: lang,
 	}
 
 	_, err = collection.InsertOne(ctx, user)

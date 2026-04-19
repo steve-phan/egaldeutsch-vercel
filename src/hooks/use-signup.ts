@@ -1,22 +1,27 @@
 import { useState, useCallback } from "react";
 import { useRouter } from "next/navigation";
+import { useLanguage, type Language } from "@/contexts/language-context";
 
 interface UseSignupResult {
   name: string;
   email: string;
   password: string;
+  language: Language;
   error: string;
   isLoading: boolean;
   setName: (name: string) => void;
   setEmail: (email: string) => void;
   setPassword: (password: string) => void;
+  setLanguage: (language: Language) => void;
   handleSubmit: (e: React.FormEvent) => Promise<void>;
 }
 
 export function useSignup(): UseSignupResult {
+  const { language: initialLanguage } = useLanguage();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [language, setLanguage] = useState<Language>(initialLanguage);
   const [error, setError] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const router = useRouter();
@@ -30,7 +35,7 @@ export function useSignup(): UseSignupResult {
       const res = await fetch("/api/account/signup", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name, email, password }),
+        body: JSON.stringify({ name, email, password, language }),
       });
 
       const data = await res.json();
@@ -50,17 +55,19 @@ export function useSignup(): UseSignupResult {
     } finally {
       setIsLoading(false);
     }
-  }, [name, email, password, router]);
+  }, [name, email, password, language, router]);
 
   return {
     name,
     email,
     password,
+    language,
     error,
     isLoading,
     setName,
     setEmail,
     setPassword,
+    setLanguage,
     handleSubmit,
   };
 }

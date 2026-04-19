@@ -31,11 +31,6 @@ export function GuestConversionBanner() {
                         Create Account <ArrowRight className="w-4 h-4" />
                      </button>
                   </Link>
-                  <Link href="/login" className="w-full sm:w-auto">
-                     <button className="h-14 px-10 rounded-2xl bg-white border border-slate-100 font-black text-xs uppercase tracking-widest text-slate-400 hover:text-slate-600 transition-all shadow-premium">
-                        Sign In
-                     </button>
-                  </Link>
                </div>
             </div>
 
