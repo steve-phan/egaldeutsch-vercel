@@ -95,23 +95,17 @@ export function Navbar() {
   }
 
   return (
-    <header className="w-full h-20 flex items-center justify-between px-6 bg-white/70 backdrop-blur-xl border-b border-white z-50 sticky top-0">
+    <header className="w-full h-20 flex items-center justify-between px-2 md:px-6 bg-white/70 backdrop-blur-xl border-b border-white z-50 sticky top-0">
       <Link href="/" className="flex items-center gap-2 md:gap-3 group active:scale-95 transition-all">
-        <div className="w-9 h-9 md:w-10 md:h-10 relative rounded-xl overflow-hidden shadow-premium bg-white border border-white p-1.5 md:p-2 group-hover:rotate-6 transition-transform">
+        <div className="w-50 h-20 md:w-60 md:h-20 relative overflow-hidden bg-white border border-white p-0.5 md:p-2 group-hover:rotate-6 transition-transform">
           <Image
-            src="/mascot.png"
-            alt="EgalDeutsch Mascot - Helping you master German grammar"
+            src="/ed_logo.svg"
+            alt="EgalDeutsch - Helping you master German grammar"
             fill
-            sizes="(max-width: 768px) 36px, 40px"
+            sizes="(max-width: 768px) 140px, 140px"
             className="object-contain"
             priority
           />
-        </div>
-        <div>
-          <Brand size="lg" as="div" />
-          <div className="text-[9px] md:text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] flex items-center gap-1">
-            {renderTitle()}
-          </div>
         </div>
       </Link>
 

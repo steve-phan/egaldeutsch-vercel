@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     description: "EgalDeutsch is the ultimate interactive platform for German grammar mastery and exam success.",
     images: [
       {
-        url: "/og-image.png", // Recommended size 1200x630
+        url: "/ed_logo.svg", // Recommended size 1200x630
         width: 1200,
         height: 630,
         alt: "EgalDeutsch Learning Platform",
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "EgalDeutsch — Master German Grammar",
     description: "Interactive German grammar quizzes and exam prep for TELC, Goethe, and B2 Beruf.",
-    images: ["/og-image.png"],
+    images: ["/ed_logo.svg"],
   },
   robots: {
     index: true,
@@ -65,9 +65,9 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: "/favicon.ico?v=1",
-    shortcut: "/favicon.ico",
-    apple: "/icon.png",
+    icon: "/ed_favicon.svg?v=1",
+    shortcut: "/ed_favicon.svg",
+    apple: "/ed_favicon.svg",
   },
 };
 
