@@ -9,34 +9,41 @@ import { Brand } from "@/components/shared/brand";
 export function GuestConversionBanner() {
    return (
       <Section spacing="sm">
-         <Card padding="lg" className="w-full group" glow>
-            {/* Animated Gradient Border */}
-            <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-indigo-500/20 via-indigo-500 to-indigo-500/20" />
-
-            <div className="flex flex-col md:flex-row items-center justify-between gap-8 relative z-10">
-               <div className="space-y-4 flex-1 text-center md:text-left">
-                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/10 text-[10px] font-black text-indigo-600 uppercase tracking-[0.2em]">
-                     <Trophy className="w-3 h-3" /> Mastery Awaits
+         <Card 
+           padding="none" 
+           className="w-full group overflow-hidden bg-[#F1F5F9] border-slate-200/50 shadow-xl shadow-slate-200/20"
+         >
+            {/* Metallic Gloss Overlay */}
+            <div className="absolute inset-0 bg-gradient-to-tr from-white/0 via-white/30 to-white/0 pointer-events-none" />
+            
+            <div className="flex flex-col md:flex-row items-center justify-between relative min-h-[360px] md:min-h-[420px]">
+               {/* Content Side */}
+               <div className="p-8 md:p-14 space-y-6 flex-1 relative z-10">
+                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white shadow-sm text-[10px] font-black text-slate-500 uppercase tracking-[0.2em] border border-slate-100">
+                     <Sparkles className="w-3 h-3 text-primary" /> Professional German Mastery
                   </div>
-                  <h2 className="text-3xl md:text-4xl font-black text-slate-800 leading-[0.9] tracking-tighter italic">
-                     Master German with <Brand as="span" inline />.
-                  </h2>
-                  <p className="text-sm font-bold text-slate-400 max-w-md">
-                     <Brand as="span" inline /> is an interactive platform designed to help you master German grammar through gamified quizzes, structured lessons, and professional exam preparation.
+                  <h1 className="text-4xl md:text-6xl font-black text-slate-900 leading-[0.85] tracking-tighter italic uppercase">
+                     Master German, <br />
+                     <span className="text-primary italic">Egal Wie!</span>
+                  </h1>
+                  <p className="text-sm md:text-base font-bold text-slate-500 max-w-md leading-relaxed px-1">
+                     Experience the growth of your language skills with our gamified platform, designed for your success.
                   </p>
+                  
+                  <div className="pt-4">
+                    <Link href="/signup">
+                       <button className="btn-orange h-14 md:h-16 px-12 text-sm group-hover:scale-105 transition-all shadow-xl shadow-primary/20 rounded-full font-black">
+                          GET STARTED NOW <ArrowRight className="w-4 h-4 ml-2" />
+                       </button>
+                    </Link>
+                  </div>
                </div>
 
-               <div className="flex flex-col sm:flex-row gap-3 w-full md:w-auto">
-                  <Link href="/signup" className="w-full sm:w-auto">
-                     <button className="btn-orange h-14 px-10 w-full group-hover:scale-105 transition-transform shadow-lg shadow-primary/20">
-                        Create Account <ArrowRight className="w-4 h-4" />
-                     </button>
-                  </Link>
+               {/* Design Side - Subtle Silhouette */}
+               <div className="hidden md:flex w-1/3 h-full absolute right-0 bottom-0 opacity-[0.03] pointer-events-none items-end justify-end">
+                  <div className="text-[240px] leading-none select-none grayscale">🏙️</div>
                </div>
             </div>
-
-            {/* Background Decorative Element */}
-            <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-indigo-500/5 rounded-full blur-3xl" />
          </Card>
       </Section>
    );

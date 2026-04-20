@@ -95,21 +95,21 @@ export function Navbar() {
   }
 
   return (
-    <header className="w-full h-20 flex items-center justify-between px-2 md:px-6 bg-white/70 backdrop-blur-xl border-b border-white z-50 sticky top-0">
-      <Link href="/" className="flex items-center gap-2 md:gap-3 group active:scale-95 transition-all">
-        <div className="w-50 h-20 md:w-60 md:h-20 relative overflow-hidden bg-white border border-white p-0.5 md:p-2 group-hover:rotate-6 transition-transform">
+    <header className="w-full h-16 flex items-center justify-between px-6 md:px-16 bg-white/95 backdrop-blur-xl border-b border-slate-100/50 z-50 sticky top-0">
+      <Link href="/" className="flex items-center gap-3 active:scale-95 transition-all">
+        <div className="h-8 md:h-10 w-40 md:w-48 relative overflow-hidden">
           <Image
             src="/ed_logo.svg"
-            alt="EgalDeutsch - Helping you master German grammar"
+            alt="Egal Deutsch"
             fill
-            sizes="(max-width: 768px) 140px, 140px"
             className="object-contain"
             priority
           />
         </div>
       </Link>
 
-      <div className="flex items-center gap-2 md:gap-4">
+      <div className="flex items-center gap-4 md:gap-8">
+
         {renderRightSide()}
       </div>
     </header>

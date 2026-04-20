@@ -11,6 +11,7 @@ import { Card } from "@/components/shared/layout/card";
 import { useRouter } from "next/navigation";
 import { useLanguage } from "@/contexts/language-context";
 import { Section } from "@/components/shared/layout/section";
+import { Button } from "../ui/button";
 
 export function ExploreClientView() {
    const { getAllCategories, loading } = useCategories();
@@ -87,12 +88,12 @@ export function ExploreClientView() {
                               {featuredCategory.description[language as keyof typeof featuredCategory.description] || featuredCategory.description.de}
                            </p>
                         </div>
-                        <button
+                        <Button
                            onClick={() => router.push(`/quiz/${featuredCategory.id}`)}
                            className="btn-orange h-14 px-8 group text-xs font-black flex items-center gap-2 active-bounce shadow-lg border border-white/20"
                         >
                            Start Mission <ArrowRight className="w-4 h-4 group-hover:translate-x-1.5 transition-transform" />
-                        </button>
+                        </Button>
                      </div>
                   </Card>
                </Section>

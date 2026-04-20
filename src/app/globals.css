@@ -44,45 +44,44 @@
   
   --breakpoint-xs: 400px;
 
-  --shadow-premium: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05), 0 0 0 1px rgb(0 0 0 / 0.02);
-  --shadow-floating: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1), 0 0 0 1px rgb(0 0 0 / 0.05);
+  --shadow-premium: 0 10px 30px -10px rgba(0, 0, 0, 0.04), 0 4px 12px -4px rgba(0, 0, 0, 0.02);
+  --shadow-floating: 0 20px 40px -15px rgba(0, 51, 102, 0.08);
 }
 
 :root {
-  --radius: 1.25rem;
-  /* Light Blue/Cyan Background from the prototype */
-  --background: oklch(0.96 0.02 220); 
-  --foreground: oklch(0.25 0.05 240); 
+  --radius: 0.75rem; /* Slightly tighter radius for a more modern, precise feel */
+  --background: #FFFFFF;
+  --foreground: #333333;
   
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.25 0.05 240);
+  --card: #FFFFFF;
+  --card-foreground: #333333;
   
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.25 0.05 240);
+  --popover: #FFFFFF;
+  --popover-foreground: #333333;
   
-  /* Primary Orange from the prototype */
-  --primary: oklch(0.62 0.22 45); 
-  --primary-foreground: oklch(1 0 0);
+  /* Brand Emerald Green - Primary Action Color (Wood Element) */
+  --primary: #064E3B; 
+  --primary-foreground: #FFFFFF;
   
-  /* Secondary Soft Cyan/Teal */
-  --secondary: oklch(0.92 0.04 200);
-  --secondary-foreground: oklch(0.3 0.1 220);
+  /* Brand Silver/Gray - Secondary Accent Color (Metal Element) */
+  --secondary: #F1F5F9;
+  --secondary-foreground: #333333;
   
-  --muted: oklch(0.94 0.01 240);
-  --muted-foreground: oklch(0.45 0.05 240);
+  --muted: #F8FAFC;
+  --muted-foreground: #64748B;
   
-  --accent: oklch(0.92 0.1 85); 
-  --accent-foreground: oklch(0.2 0.1 40);
+  --accent: #CBD5E1; 
+  --accent-foreground: #0F172A;
   
-  --success: oklch(0.65 0.2 150);
-  --success-foreground: oklch(1 0 0);
+  --success: #059669;
+  --success-foreground: #FFFFFF;
   
-  --destructive: oklch(0.6 0.2 25);
-  --destructive-foreground: oklch(1 0 0);
+  --destructive: #DC2626;
+  --destructive-foreground: #FFFFFF;
   
-  --border: oklch(0.9 0.03 220);
-  --input: oklch(0.9 0.03 220);
-  --ring: oklch(0.62 0.22 45);
+  --border: #E2E8F0;
+  --input: #E2E8F0;
+  --ring: #064E3B;
 }
 
 @layer base {
@@ -90,31 +89,46 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground font-sans selection:bg-primary/20 antialiased;
+    @apply bg-background text-foreground font-sans selection:bg-accent/30 antialiased;
+    font-size: 16px;
+    line-height: 1.6;
   }
   h1, h2, h3 {
-    @apply font-display font-black tracking-tighter;
+    @apply font-display font-black tracking-tighter italic leading-[1.1]; /* Added italic and tight leading for brand feel */
   }
   h4, h5, h6 {
     @apply font-display font-extrabold tracking-tight;
   }
 }
 
+/* Custom UI Components adjusted for new branding */
 .glass-navigation {
-  @apply bg-white/70 backdrop-blur-2xl border border-white/80;
-  box-shadow: 0 8px 32px -4px rgba(0, 0, 0, 0.05), var(--shadow-premium);
+  @apply bg-white/90 backdrop-blur-2xl border-b border-slate-100;
+  box-shadow: 0 4px 20px -5px rgba(0, 0, 0, 0.05);
 }
 
 .btn-orange {
-  @apply bg-primary text-white font-extrabold uppercase tracking-[0.15em] text-[10px] rounded-2xl shadow-lg shadow-primary/20 hover:shadow-primary/30 transition-all duration-300 flex items-center justify-center gap-2;
-  background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.05));
+  @apply bg-primary text-white font-black uppercase tracking-[0.1em] text-[11px] rounded-lg shadow-lg shadow-primary/20 hover:shadow-primary/30 transition-all duration-300 flex items-center justify-center gap-2;
+  /* Redesigned to red brand color */
 }
 
-.btn-orange:hover {
+.btn-secondary {
+  @apply bg-white text-primary border-2 border-primary font-black uppercase tracking-[0.1em] text-[11px] rounded-lg hover:bg-primary/5 transition-all duration-300 flex items-center justify-center gap-2;
+}
+
+.btn-gold {
+  @apply bg-accent text-black font-black uppercase tracking-[0.1em] text-[11px] rounded-lg shadow-lg shadow-accent/20 hover:shadow-accent/30 transition-all duration-300 flex items-center justify-center gap-2;
+}
+
+.btn-ghost {
+  @apply bg-transparent text-slate-500 font-bold text-xs hover:text-primary hover:bg-primary/5 transition-all duration-300 rounded-lg flex items-center justify-center gap-2;
+}
+
+.btn-orange:hover, .btn-gold:hover {
   @apply -translate-y-0.5;
 }
 
-.btn-orange:active {
+.btn-orange:active, .btn-gold:active, .btn-secondary:active {
   @apply translate-y-0 scale-[0.98];
 }
 
@@ -166,5 +180,10 @@
   
   .input-focus-premium {
     @apply focus:ring-4 focus:ring-primary/5 focus:border-primary/30 transition-all outline-none;
+  }
+
+  .bg-noise {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    opacity: 0.015;
   }
 }

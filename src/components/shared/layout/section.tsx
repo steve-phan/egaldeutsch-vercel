@@ -9,20 +9,20 @@ interface SectionProps {
   id?: string;
   spacing?: "none" | "sm" | "md" | "lg" | "xl";
   showBlob?: boolean;
-  blobColor?: "primary" | "indigo" | "rose";
+  blobColor?: "primary" | "accent" | "rose";
 }
 
 const spacingClasses = {
   none: "py-0",
-  sm: "py-6 md:py-10",
-  md: "py-10 md:py-16",
-  lg: "py-16 md:py-24",
-  xl: "py-24 md:py-32",
+  sm: "py-8 md:py-12",
+  md: "py-12 md:py-20",
+  lg: "py-16 md:py-28",
+  xl: "py-20 md:py-36",
 };
 
 const blobColors = {
   primary: "bg-primary/5",
-  indigo: "bg-indigo-500/5",
+  accent: "bg-accent/10",
   rose: "bg-rose-500/5",
 };
 

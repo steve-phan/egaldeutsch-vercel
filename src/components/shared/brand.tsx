@@ -27,13 +27,13 @@ export function Brand({
   return (
     <Component
       className={cn(
-        "font-black tracking-tighter italic",
-        !inline && "text-slate-800 leading-none",
+        "font-display font-black tracking-tighter italic",
+        !inline && "text-[#0F172A] leading-none",
         !inline && sizeClasses[size],
         className
       )}
     >
-      Egal<span className="text-primary">Deutsch</span>
+      Egal <span className="text-primary italic">Deutsch</span>
     </Component>
   );
 }

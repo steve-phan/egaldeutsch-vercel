@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils";
 interface PageContainerProps {
   children: React.ReactNode;
   className?: string;
-  maxWidth?: "sm" | "md" | "lg" | "xl" | "2xl" | "none";
+  maxWidth?: "sm" | "md" | "lg" | "xl" | "2xl" | "brand" | "none";
 }
 
 const maxWidthClasses = {
@@ -15,18 +15,19 @@ const maxWidthClasses = {
   lg: "max-w-screen-lg",
   xl: "max-w-screen-xl",
   "2xl": "max-w-screen-2xl",
+  "brand": "max-w-[1440px]",
   none: "max-w-none",
 };
 
 export function PageContainer({ 
   children, 
   className, 
-  maxWidth = "xl" 
+  maxWidth = "brand" 
 }: PageContainerProps) {
   return (
     <div className={cn(
       "w-full mx-auto",
-      "px-3 sm:px-6 md:px-8", // Mobile-first padding: tight on small screens
+      "px-6 sm:px-8 lg:px-16", // 24px mobile (Hòa Khí), 32px tablet, 64px desktop
       maxWidthClasses[maxWidth],
       className
     )}>

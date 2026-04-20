@@ -3,8 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Home, Search, MessageSquareHeart, Sparkles } from "lucide-react";
-import Image from "next/image";
+import { Home, Search, MessageSquareHeart, Sparkles, User } from "lucide-react";
 
 export function BottomNav() {
   const pathname = usePathname();
@@ -12,32 +11,16 @@ export function BottomNav() {
   const navItems = [
     { icon: <Home className="w-5 h-5" />, label: "Home", href: "/", active: pathname === "/" },
     { icon: <Search className="w-5 h-5" />, label: "Explore", href: "/explore", active: pathname === "/explore" },
-    { icon: null, label: "Hub", href: "/", isHub: true },
     { icon: <Sparkles className="w-5 h-5" />, label: "Redewendung", href: "/redewendung", active: pathname === "/redewendung" },
     { icon: <MessageSquareHeart className="w-5 h-5" />, label: "Feedback", href: "/feedback", active: pathname === "/feedback" },
+    { icon: <User className="w-5 h-5" />, label: "Profile", href: "/profile", active: pathname === "/profile" },
   ];
 
   return (
     <nav className="fixed bottom-8 left-1/2 -translate-x-1/2 z-50 animate-in slide-in-from-bottom-8 duration-700">
       <div className="glass-navigation rounded-[2rem] px-3 sm:px-4 py-3 flex items-center gap-1 sm:gap-4 shadow-floating">
         {navItems.map((item, idx) => {
-          if (item.isHub) {
-            return (
-              <Link key={idx} href="/">
-                <div className="w-14 h-14 bg-primary rounded-2xl flex items-center justify-center -mt-9 shadow-lg shadow-primary/40 border-4 border-[#F8FAFC] active:scale-95 transition-all cursor-pointer relative group overflow-hidden">
-                  <div className="absolute inset-0 bg-white/20 animate-pulse" />
-                  <div className="absolute inset-0 bg-gradient-to-tr from-black/10 to-transparent" />
-                  <Image
-                    src="/mascot.png"
-                    alt="EgalDeutsch Mascot - Password recovery support"
-                    width={32}
-                    height={32}
-                    className="object-contain relative z-10 group-hover:scale-110 transition-transform duration-500"
-                  />
-                </div>
-              </Link>
-            );
-          }
+
 
           return (
             <Link key={idx} href={item.href}>

@@ -36,9 +36,9 @@ export function HeroQuizCard() {
   return (
     <Section spacing="sm">
       <Card padding="none" glow className="group h-full">
-        {/* Premium Background Accents */}
+        {/* Zen/Growth Background Accents */}
         <div className="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full -mr-32 -mt-32 blur-[80px] group-hover:bg-primary/10 transition-colors pointer-events-none" />
-        <div className="absolute bottom-0 left-0 w-48 h-48 bg-indigo-500/5 rounded-full -ml-24 -mb-24 blur-[60px] pointer-events-none" />
+        <div className="absolute bottom-0 left-0 w-48 h-48 bg-accent/10 rounded-full -ml-24 -mb-24 blur-[60px] pointer-events-none" />
         <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary/20 via-primary to-primary/20 opacity-50 group-hover:opacity-100 transition-opacity" />
 
         <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12 relative z-10 p-3 sm:p-8 md:p-14 lg:p-16 text-balance">

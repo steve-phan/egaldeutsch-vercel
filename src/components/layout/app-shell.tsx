@@ -14,7 +14,7 @@ interface AppShellProps {
   children: React.ReactNode;
   showNav?: boolean;
   showHeader?: boolean;
-  maxWidth?: "sm" | "md" | "lg" | "xl" | "2xl" | "none";
+  maxWidth?: "sm" | "md" | "lg" | "xl" | "2xl" | "brand" | "none";
 }
 
 export function AppShell({ 
@@ -30,11 +30,14 @@ export function AppShell({
   const shouldShowNav = showNav && !isAuthPage;
 
   return (
-    <div className="min-h-screen bg-[#F8FAFC] flex flex-col relative overflow-x-hidden">
-      {/* Premium Background Accents - Global */}
+    <div className="min-h-screen bg-slate-50 flex flex-col relative overflow-x-hidden pt-px">
+      {/* Premium Texture Overlay */}
+      <div className="fixed inset-0 bg-noise pointer-events-none" />
+
+      {/* Brand Background Accents - Global */}
       <div className="fixed inset-0 pointer-events-none overflow-hidden">
-         <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[120px] -translate-y-1/2" />
-         <div className="absolute bottom-0 right-1/4 w-[600px] h-[600px] bg-indigo-500/5 rounded-full blur-[140px] translate-y-1/2" />
+         <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-primary/[0.08] rounded-full blur-[120px] -translate-y-1/2" />
+         <div className="absolute bottom-0 right-1/4 w-[600px] h-[600px] bg-accent/[0.1] rounded-full blur-[140px] translate-y-1/2" />
       </div>
 
       {showHeader && <Navbar />}

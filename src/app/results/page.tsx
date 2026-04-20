@@ -118,16 +118,16 @@ export default function ResultsPage() {
          {/* Guest Conversion Hook */}
          {isGuest && (
             <Section spacing="sm">
-               <div className="w-full p-6 rounded-[2.5rem] bg-indigo-50 border border-indigo-100 flex items-center gap-4 animate-in slide-in-from-bottom-4 duration-1000 shadow-sm">
-                  <div className="w-12 h-12 rounded-2xl bg-white shadow-sm flex items-center justify-center shrink-0">
-                     <AlertCircle className="w-6 h-6 text-indigo-500" />
+               <div className="w-full p-6 rounded-[2.5rem] bg-accent border border-accent/20 flex items-center gap-4 animate-in slide-in-from-bottom-4 duration-1000 shadow-xl shadow-accent/10">
+                  <div className="w-12 h-12 rounded-2xl bg-white/50 backdrop-blur-md shadow-sm flex items-center justify-center shrink-0">
+                     <AlertCircle className="w-6 h-6 text-black" />
                   </div>
                   <div className="flex-1">
-                     <p className="text-sm font-black text-slate-800 italic leading-tight">Progress Not Saved!</p>
-                     <p className="text-[10px] font-bold text-slate-400 uppercase tracking-tight mt-1">Sign up to keep your scores and earn badges.</p>
+                     <p className="text-sm font-black text-black italic leading-tight uppercase tracking-tight">Progress Not Saved!</p>
+                     <p className="text-[10px] font-bold text-black/50 uppercase tracking-tight mt-1">Sign up to keep your scores and earn badges.</p>
                   </div>
                   <Link href="/signup">
-                     <button className="px-5 py-2.5 bg-indigo-500 text-white rounded-xl text-[10px] font-black uppercase tracking-widest shadow-lg shadow-indigo-500/30 hover:bg-indigo-600 transition-colors active-bounce">
+                     <button className="px-5 py-2.5 bg-black text-white rounded-xl text-[10px] font-black uppercase tracking-widest shadow-lg shadow-black/20 hover:bg-zinc-800 transition-colors active-bounce">
                         Join Now
                      </button>
                   </Link>
