@@ -19,7 +19,8 @@ interface UseQuizSessionResult {
   status: "idle" | "loading" | "setup" | "in-progress" | "review" | "complete" | "error";
   answers: AnswerRecord[];
   timeRemainingMs: number 
-  lastAnswerEvaluated: boolean  
+  lastAnswerEvaluated: boolean
+  config: QuizSessionConfig | null;
   // Actions
   startSession: (config: QuizSessionConfig) => Promise<void>;
   submitAnswer: (answer: string) => void;
@@ -241,5 +242,6 @@ export function useQuizSession(): UseQuizSessionResult {
     nextQuestion,
     finishSession,
     reset,
+    config: configuration.current,
   };
 }

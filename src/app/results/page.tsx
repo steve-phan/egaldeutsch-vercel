@@ -2,13 +2,15 @@
 
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
-import { CheckCircle2, XCircle, BarChart3, Clock, Home, ArrowRight, Trophy, AlertCircle } from "lucide-react";
+import { CheckCircle2, XCircle, BarChart3, Clock, Home, ArrowRight, Trophy, AlertCircle, Zap, Settings2 } from "lucide-react";
 import { useLanguage } from "@/contexts/language-context";
 import { AppShell } from "@/components/layout/app-shell";
 import { useSession } from "next-auth/react";
 import Image from "next/image";
 import Link from "next/link";
 import { Section } from "@/components/shared/layout/section";
+
+import { QuizSessionConfig } from "@/types/quiz";
 
 interface SessionSummary {
   category: string;
@@ -20,6 +22,7 @@ interface SessionSummary {
     userAnswer: string;
     timeSpentMs: number;
   }>;
+  config?: QuizSessionConfig;
 }
 
 export default function ResultsPage() {
@@ -134,18 +137,36 @@ export default function ResultsPage() {
 
          {/* Action Controls */}
          <Section spacing="md">
-            <div className="grid grid-cols-2 gap-4 w-full">
+            <div className="flex flex-col gap-4 w-full">
+               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <button 
+                    onClick={() => router.push(`/quiz/${summary.category}?retry=true`)}
+                    className="h-16 btn-orange shadow-premium active-bounce flex items-center justify-center gap-3 transition-transform"
+                  >
+                     <Zap className="w-5 h-5 fill-current" />
+                     <div className="flex flex-col items-start leading-none">
+                        <span className="text-[10px] font-black uppercase tracking-widest opacity-70">New Quiz</span>
+                        <span className="text-xs sm:text-sm font-black">{language === "de" ? "Nochmal versuchen" : "Try again"}</span>
+                     </div>
+                  </button>
+
+                  <button 
+                    onClick={() => router.push(`/quiz/${summary.category}`)}
+                    className="h-16 bg-white border border-slate-100 rounded-2xl font-black text-slate-600 hover:border-primary/30 hover:bg-slate-50 shadow-premium transition-all flex items-center justify-center gap-3 active-bounce"
+                  >
+                     <Settings2 className="w-5 h-5 text-primary" />
+                     <div className="flex flex-col items-start leading-none text-left">
+                        <span className="text-[10px] font-black uppercase tracking-widest text-slate-400">Settings</span>
+                        <span className="text-xs sm:text-sm">{language === "de" ? "Quiz-Einstellungen" : "Quiz Settings"}</span>
+                     </div>
+                  </button>
+               </div>
+
                <button 
                  onClick={() => router.push("/")}
-                 className="h-14 bg-white border border-slate-100 rounded-2xl font-black text-[10px] sm:text-xs uppercase tracking-widest text-slate-400 hover:text-slate-600 hover:border-slate-200 shadow-premium transition-all flex items-center justify-center gap-2 active-bounce"
+                 className="h-12 w-full bg-slate-50 rounded-xl font-black text-[10px] uppercase tracking-[0.2em] text-slate-400 hover:text-slate-600 hover:bg-slate-100 transition-all flex items-center justify-center gap-2 active:scale-95"
                >
-                  <Home className="w-4 h-4" /> Home
-               </button>
-               <button 
-                 onClick={() => router.push("/")}
-                 className="btn-orange h-14 shadow-premium active-bounce"
-               >
-                  <span className="text-[10px] sm:text-xs">{language === "de" ? "Weiter Üben" : "Try Another"}</span> <ArrowRight className="w-4 h-4" />
+                  <Home className="w-3 h-3" /> Back to Dashboard
                </button>
             </div>
          </Section>

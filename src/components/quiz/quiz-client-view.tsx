@@ -5,7 +5,7 @@ import { useQuizSession } from "@/hooks/use-quiz-session";
 import { useLanguage } from "@/contexts/language-context";
 import { QuizCategory } from "@/types/quiz";
 import { ChevronLeft, MoreHorizontal, Sparkles } from "lucide-react";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 
 import { SessionSetup } from "@/components/quiz/session-setup";
 import { QuestionProgress } from "@/components/quiz/question-progress";
@@ -19,6 +19,7 @@ import { WordOrder } from "@/components/quiz/word-order";
 
 export function QuizClientView({ category }: { category: string }) {
   const router = useRouter();
+  const searchParams = useSearchParams();
   const { language } = useLanguage();
 
   const {
@@ -32,7 +33,26 @@ export function QuizClientView({ category }: { category: string }) {
     startSession,
     submitAnswer,
     nextQuestion,
+    config,
   } = useQuizSession();
+
+  // Handle retry logic from URL
+  useEffect(() => {
+    const isRetry = searchParams.get("retry") === "true";
+    if (isRetry && status === "idle") {
+      const lastResult = sessionStorage.getItem("lastSessionResult");
+      if (lastResult) {
+        try {
+          const parsed = JSON.parse(lastResult);
+          if (parsed.config && parsed.config.category === category) {
+            startSession(parsed.config);
+          }
+        } catch (e) {
+          console.error("Failed to parse last session for retry", e);
+        }
+      }
+    }
+  }, [searchParams, status, category, startSession]);
 
   useEffect(() => {
     if (status === "complete") {
@@ -40,12 +60,13 @@ export function QuizClientView({ category }: { category: string }) {
         category,
         total: questions.length,
         correct: answers.filter(a => a.isCorrect).length,
-        answers: answers
+        answers: answers,
+        config: config
       };
       sessionStorage.setItem("lastSessionResult", JSON.stringify(summary));
       router.push("/results");
     }
-  }, [status, answers, category, questions.length, router]);
+  }, [status, answers, category, questions.length, router, config]);
 
   if (status === "idle") {
     return (
