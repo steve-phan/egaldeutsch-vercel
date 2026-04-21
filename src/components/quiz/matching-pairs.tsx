@@ -1,6 +1,8 @@
 import { RotateCcw, Trophy, Shuffle, Sparkles, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/language-context";
+import { useCallback, useState } from "react";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "../ui/card";
 
 interface MatchingPair {
   id: number;
