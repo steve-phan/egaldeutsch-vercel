@@ -25,7 +25,7 @@ interface UseQuizSessionResult {
     | "complete"
     | "error";
   answers: AnswerRecord[];
-  timeRemainingMs: number;
+  timeRemainingMs: number | null;
   lastAnswerEvaluated: boolean;
   config: QuizSessionConfig | null;
   // Actions
@@ -43,7 +43,7 @@ export function useQuizSession(): UseQuizSessionResult {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [status, setStatus] = useState<UseQuizSessionResult["status"]>("idle");
   const [answers, setAnswers] = useState<AnswerRecord[]>([]);
-  const [timeRemainingMs, setTimeRemainingMs] = useState<number>(0);
+  const [timeRemainingMs, setTimeRemainingMs] = useState<number | null>(null);
   const [lastAnswerEvaluated, setLastAnswerEvaluated] =
     useState<boolean>(false);
 
@@ -68,7 +68,7 @@ export function useQuizSession(): UseQuizSessionResult {
     setCurrentIndex(0);
     setAnswers([]);
     setLastAnswerEvaluated(false);
-    setTimeRemainingMs(0);
+    setTimeRemainingMs(null);
     configuration.current = config;
 
     try {
@@ -199,6 +199,7 @@ export function useQuizSession(): UseQuizSessionResult {
     if (status !== "review") return;
 
     if (currentIndex < questions.length - 1) {
+      setTimeRemainingMs(null);
       setCurrentIndex((prev) => prev + 1);
       setLastAnswerEvaluated(false);
       setStatus("in-progress");
@@ -257,6 +258,7 @@ export function useQuizSession(): UseQuizSessionResult {
     setLastAnswerEvaluated(false);
     configuration.current = null;
     clearTimer();
+    setTimeRemainingMs(null);
     setStatus("idle");
   };
 
