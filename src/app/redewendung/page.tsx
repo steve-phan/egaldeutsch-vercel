@@ -2,11 +2,11 @@ import { Idiom } from "@/types/idiom";
 import { Metadata } from "next";
 import { API_ROUTES, BACKEND_URL } from "@/lib/constants";
 import { AppShell } from "@/components/layout/app-shell";
-import { IdiomCard } from "@/components/idioms/idiom-card";
 
 export const metadata: Metadata = {
   title: "Redewendung — German Idioms Directory",
-  description: "Explore the colorful world of German idioms. Meanings, origins, and examples for learners of all levels.",
+  description:
+    "Explore the colorful world of German idioms. Meanings, origins, and examples for learners of all levels.",
   openGraph: {
     title: "German Idioms Directory — EgalDeutsch",
     description: "Explore the colorful world of German idioms and mastery.",
@@ -60,11 +60,12 @@ export default async function IdiomsDirectory() {
       <div className="space-y-12 pt-6 pb-20">
         {/* Header */}
         <div className="text-center space-y-4">
-          <h1 className="text-5xl md:text-7xl font-black text-slate-900 tracking-tighter italic">
+          <h1 className="text-2xl md:text-4xl font-black text-slate-900 tracking-tighter italic">
             Redewendung
           </h1>
           <p className="text-slate-500 font-bold max-w-xl mx-auto">
-            German is a colorful language. Master these idioms to sound more like a native speaker and understand the culture better.
+            German is a colorful language. Master these idioms to sound more
+            like a native speaker and understand the culture better.
           </p>
         </div>
 
