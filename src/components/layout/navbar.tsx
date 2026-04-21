@@ -95,7 +95,7 @@ export function Navbar() {
   }
 
   return (
-    <header className="w-full h-16 flex items-center justify-between px-6 md:px-16 bg-white/95 backdrop-blur-xl border-b border-slate-100/50 z-50 sticky top-0">
+    <header className="w-full h-16 flex items-center justify-between px-2 md:px-16 bg-white/95 backdrop-blur-xl border-b border-slate-100/50 z-50 sticky top-0">
       <Link href="/" className="flex items-center gap-3 active:scale-95 transition-all">
         <div className="h-8 md:h-10 w-40 md:w-48 relative overflow-hidden">
           <Image
