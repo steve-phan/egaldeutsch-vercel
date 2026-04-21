@@ -28,6 +28,7 @@ interface UseQuizSessionResult {
   timeRemainingMs: number | null;
   lastAnswerEvaluated: boolean;
   config: QuizSessionConfig | null;
+  estimatedLevel: string | null;
   // Actions
   startSession: (config: QuizSessionConfig) => Promise<void>;
   submitAnswer: (answer: string) => void;
@@ -46,6 +47,7 @@ export function useQuizSession(): UseQuizSessionResult {
   const [timeRemainingMs, setTimeRemainingMs] = useState<number | null>(null);
   const [lastAnswerEvaluated, setLastAnswerEvaluated] =
     useState<boolean>(false);
+  const [estimatedLevel, setEstimatedLevel] = useState<string | null>(null);
 
   // Refs for tracking time internally
   const questionStartTime = useRef<number>(0);
@@ -74,8 +76,10 @@ export function useQuizSession(): UseQuizSessionResult {
     try {
       const levelParam =
         config.level === "mixed" ? "" : `&level=${config.level}`;
+      const modeParam = config.mode ? `&mode=${config.mode}` : "";
+      
       const res = await fetch(
-        `${API_ROUTES.QUIZ_QUESTIONS}?category=${config.category}${levelParam}&limit=${config.totalQuestions}`,
+        `${API_ROUTES.QUIZ_QUESTIONS}?category=${config.category}${levelParam}${modeParam}&limit=${config.totalQuestions}`,
       );
 
       if (!res.ok) throw new Error("Failed to fetch questions");
@@ -121,14 +125,20 @@ export function useQuizSession(): UseQuizSessionResult {
             body: JSON.stringify({
               category: configuration.current.category,
               level: configuration.current.level,
+              mode: configuration.current.mode,
               score,
               total_q: questions.length,
               correct_q: correctCount,
               question_ids: questions.map((q) => q.id),
             }),
           });
-
-          if (!response.ok) {
+  
+          if (response.ok) {
+            const result = await response.json();
+            if (result.estimated_level) {
+              setEstimatedLevel(result.estimated_level);
+            }
+          } else {
             const errorText = await response.text();
             console.error(
               "Failed to submit quiz session:",
@@ -276,5 +286,6 @@ export function useQuizSession(): UseQuizSessionResult {
     finishSession,
     reset,
     config: configuration.current,
+    estimatedLevel
   };
 }

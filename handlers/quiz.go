@@ -37,9 +37,13 @@ func QuizQuestionsHandler(w http.ResponseWriter, r *http.Request) {
 
 	category := r.URL.Query().Get("category")
 	level := r.URL.Query().Get("level")
+	mode := r.URL.Query().Get("mode")
 	limitStr := r.URL.Query().Get("limit")
 	limit := 10 // Default
 
+	if mode == "test" || mode == "practice" {
+		limit = 30
+	}
 	if limitStr != "" {
 		if l, err := strconv.Atoi(limitStr); err == nil && l > 0 {
 			limit = l
@@ -62,6 +66,26 @@ func QuizQuestionsHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
+	var questions []models.QuizQuestion
+	if mode == "test" {
+		questions, err = fetchBalancedQuestions("", limit, userID)
+	} else {
+		questions, err = fetchQuestions(category, level, limit, userID)
+	}
+
+	if err != nil {
+		utils.LogError(w, err, "Failed to fetch questions", http.StatusInternalServerError)
+		return
+	}
+
+	if questions == nil {
+		questions = []models.QuizQuestion{}
+	}
+
+	json.NewEncoder(w).Encode(questions)
+}
+
+func fetchQuestions(category, level string, limit int, userID *primitive.ObjectID) ([]models.QuizQuestion, error) {
 	collection := db.GetCollection("questions")
 	sessionColl := db.GetCollection("sessions")
 	ctx, cancel := context.WithTimeout(context.Background(), 15*time.Second)
@@ -75,9 +99,7 @@ func QuizQuestionsHandler(w http.ResponseWriter, r *http.Request) {
 		matchStage["level"] = level
 	}
 
-	// IF LOGGED IN: Exclude previously answered questions
 	if userID != nil {
-		// Find all sessions for this user & category
 		filter := bson.M{"user_id": userID}
 		if category != "" {
 			filter["category"] = category
@@ -104,21 +126,17 @@ func QuizQuestionsHandler(w http.ResponseWriter, r *http.Request) {
 		{{Key: "$sample", Value: bson.M{"size": limit}}},
 	}
 
-	// Execute aggregation
 	cursor, err := collection.Aggregate(ctx, pipeline)
 	if err != nil {
-		utils.LogError(w, err, "Failed to aggregate questions", http.StatusInternalServerError)
-		return
+		return nil, err
 	}
 	defer cursor.Close(ctx)
 
 	var questions []models.QuizQuestion
 	if err = cursor.All(ctx, &questions); err != nil {
-		utils.LogError(w, err, "Failed to decode questions", http.StatusInternalServerError)
-		return
+		return nil, err
 	}
 
-	// FALLBACK: If we have zero results (user answered everything), try again WITHOUT the repetition filter
 	if len(questions) == 0 && userID != nil && matchStage["_id"] != nil {
 		delete(matchStage, "_id")
 		pipeline = mongo.Pipeline{
@@ -132,15 +150,36 @@ func QuizQuestionsHandler(w http.ResponseWriter, r *http.Request) {
 		}
 	}
 
-	if questions == nil {
-		questions = []models.QuizQuestion{}
+	return questions, nil
+}
+
+func fetchBalancedQuestions(category string, totalLimit int, userID *primitive.ObjectID) ([]models.QuizQuestion, error) {
+	levels := []string{"A1", "A2", "B1", "B2"}
+	perLevel := totalLimit / len(levels)
+	if perLevel == 0 {
+		perLevel = 1
 	}
 
-	if questions == nil {
-		questions = []models.QuizQuestion{}
+	var allQuestions []models.QuizQuestion
+	for _, level := range levels {
+		qs, err := fetchQuestions(category, level, perLevel, userID)
+		if err != nil {
+			continue
+		}
+		allQuestions = append(allQuestions, qs...)
 	}
 
-	json.NewEncoder(w).Encode(questions)
+	if len(allQuestions) < totalLimit {
+		needed := totalLimit - len(allQuestions)
+		qs, _ := fetchQuestions(category, "", needed, userID)
+		allQuestions = append(allQuestions, qs...)
+	}
+
+	if len(allQuestions) > totalLimit {
+		allQuestions = allQuestions[:totalLimit]
+	}
+
+	return allQuestions, nil
 }
 
 // QuizCategoriesHandler handles GET /api/quiz/categories
@@ -213,7 +252,15 @@ func QuizSubmitHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	var req QuizSubmitRequest
+	var req struct {
+		Category    string   `json:"category"`
+		Level       string   `json:"level"`
+		Mode        string   `json:"mode"`
+		Score       float64  `json:"score"`
+		TotalQ      int      `json:"total_q"`
+		CorrectQ    int      `json:"correct_q"`
+		QuestionIDs []string `json:"question_ids"`
+	}
 	if err := json.NewDecoder(r.Body).Decode(&req); err != nil {
 		http.Error(w, "Invalid request body", http.StatusBadRequest)
 		return
@@ -259,16 +306,31 @@ func QuizSubmitHandler(w http.ResponseWriter, r *http.Request) {
 		}
 	}
 
+	estimatedLevel := ""
+	if req.Mode == "test" {
+		if req.Score >= 85 {
+			estimatedLevel = "B2"
+		} else if req.Score >= 70 {
+			estimatedLevel = "B1"
+		} else if req.Score >= 50 {
+			estimatedLevel = "A2"
+		} else {
+			estimatedLevel = "A1"
+		}
+	}
+
 	session := models.QuizSession{
-		ID:          primitive.NewObjectID(),
-		UserID:      &userID,
-		Category:    req.Category,
-		Level:       req.Level,
-		Score:       req.Score,
-		TotalQ:      req.TotalQ,
-		CorrectQ:    req.CorrectQ,
-		QuestionIDs: objIDs,
-		CompletedAt: time.Now(),
+		ID:             primitive.NewObjectID(),
+		UserID:         &userID,
+		Category:       req.Category,
+		Level:          req.Level,
+		Mode:           req.Mode,
+		Score:          req.Score,
+		TotalQ:         req.TotalQ,
+		CorrectQ:       req.CorrectQ,
+		QuestionIDs:    objIDs,
+		EstimatedLevel: estimatedLevel,
+		CompletedAt:    time.Now(),
 	}
 
 	_, iErr := collection.InsertOne(ctx, session)
@@ -285,7 +347,7 @@ func QuizSubmitHandler(w http.ResponseWriter, r *http.Request) {
 			title = "Great Progress!"
 			desc = "You're getting closer to mastery in '" + req.Category + "'! Keep it up."
 		}
-		
+
 		utils.CreateNotification(*session.UserID, title, desc, "achievement", "/notifications")
 	}
 

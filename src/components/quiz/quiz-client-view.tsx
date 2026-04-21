@@ -34,22 +34,35 @@ export function QuizClientView({ category }: { category: string }) {
     submitAnswer,
     nextQuestion,
     config,
+    estimatedLevel,
   } = useQuizSession();
 
-  // Handle retry logic from URL
+  // Handle retry and autoStart logic from URL
   useEffect(() => {
     const isRetry = searchParams.get("retry") === "true";
-    if (isRetry && status === "idle") {
-      const lastResult = sessionStorage.getItem("lastSessionResult");
-      if (lastResult) {
-        try {
-          const parsed = JSON.parse(lastResult);
-          if (parsed.config && parsed.config.category === category) {
-            startSession(parsed.config);
+    const autoStart = searchParams.get("autoStart") === "true";
+    const mode = searchParams.get("mode") as "test" | "practice" | null;
+
+    if (status === "idle") {
+      if (isRetry) {
+        const lastResult = sessionStorage.getItem("lastSessionResult");
+        if (lastResult) {
+          try {
+            const parsed = JSON.parse(lastResult);
+            if (parsed.config && parsed.config.category === category) {
+              startSession(parsed.config);
+            }
+          } catch (e) {
+            console.error("Failed to parse last session for retry", e);
           }
-        } catch (e) {
-          console.error("Failed to parse last session for retry", e);
         }
+      } else if (autoStart) {
+        startSession({
+          category: category as any,
+          level: "mixed",
+          totalQuestions: 30,
+          mode: mode || "practice",
+        });
       }
     }
   }, [searchParams, status, category, startSession]);
@@ -61,7 +74,8 @@ export function QuizClientView({ category }: { category: string }) {
         total: questions.length,
         correct: answers.filter(a => a.isCorrect).length,
         answers: answers,
-        config: config
+        config: config,
+        estimatedLevel: estimatedLevel
       };
       sessionStorage.setItem("lastSessionResult", JSON.stringify(summary));
       router.push("/results");

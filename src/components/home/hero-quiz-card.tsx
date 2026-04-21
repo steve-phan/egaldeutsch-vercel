@@ -1,12 +1,14 @@
 "use client";
 
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import { ArrowRight, Sparkles } from "lucide-react";
 import { Card } from "@/components/shared/layout/card";
 import { Section } from "@/components/shared/layout/section";
 import { useLanguage } from "@/contexts/language-context";
 
 export function HeroQuizCard() {
+  const router = useRouter();
   const { language } = useLanguage();
 
   const getTitle = () => {
@@ -57,7 +59,14 @@ export function HeroQuizCard() {
               </p>
             </div>
 
-            <div className="pt-2 flex items-center justify-center md:justify-start">
+            <div className="pt-2 flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4">
+              <button
+                onClick={() => router.push('/estimate')}
+                className="btn-orange h-14 md:h-16 px-10 md:px-12 group text-base md:text-xl font-black shadow-premium active-bounce transition-all w-full sm:w-auto"
+              >
+                Estimate Proficiency <ArrowRight className="w-5 h-5 md:w-6 md:h-6 group-hover:translate-x-1.5 transition-transform" />
+              </button>
+              
               <button
                 onClick={() => {
                   const lessonsSection = document.getElementById('lessons-section');
@@ -65,9 +74,9 @@ export function HeroQuizCard() {
                     lessonsSection.scrollIntoView({ behavior: 'smooth' });
                   }
                 }}
-                className="btn-orange h-14 md:h-16 px-10 md:px-12 group text-base md:text-xl font-black shadow-premium active-bounce transition-all"
+                className="h-14 md:h-16 px-10 md:px-12 bg-white/20 hover:bg-white/30 backdrop-blur-md rounded-[2rem] text-slate-800 text-base md:text-xl font-black border border-white/50 transition-all w-full sm:w-auto"
               >
-                {getButtonText()} <ArrowRight className="w-5 h-5 md:w-6 md:h-6 group-hover:translate-x-1.5 transition-transform" />
+                Targeted Practice
               </button>
             </div>
           </div>

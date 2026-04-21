@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
-import { CheckCircle2, XCircle, BarChart3, Clock, Home, ArrowRight, Trophy, AlertCircle, Zap, Settings2 } from "lucide-react";
+import { CheckCircle2, XCircle, BarChart3, Clock, Home, ArrowRight, Trophy, AlertCircle, Zap, Settings2, Sparkles } from "lucide-react";
 import { useLanguage } from "@/contexts/language-context";
 import { AppShell } from "@/components/layout/app-shell";
 import { useSession } from "next-auth/react";
@@ -23,6 +23,7 @@ interface SessionSummary {
     timeSpentMs: number;
   }>;
   config?: QuizSessionConfig;
+  estimatedLevel?: string;
 }
 
 export default function ResultsPage() {
@@ -104,16 +105,44 @@ export default function ResultsPage() {
                        label="Answered" 
                        value={`${summary.correct}/${summary.total}`} 
                      />
-                     <StatPill 
-                       icon={<Clock className="w-4 h-4 text-amber-500" />} 
-                       label="Avg Speed" 
-                       value={`${avgTimePerQ}s`} 
-                       className="col-span-2 sm:col-span-1"
-                     />
+                     {summary.estimatedLevel ? (
+                       <StatPill 
+                         icon={<Zap className="w-4 h-4 text-orange-500 fill-orange-500" />} 
+                         label="Est. Level" 
+                         value={summary.estimatedLevel} 
+                         className="col-span-2 sm:col-span-1 border-orange-200 bg-orange-50/50"
+                       />
+                     ) : (
+                       <StatPill 
+                         icon={<Clock className="w-4 h-4 text-amber-500" />} 
+                         label="Avg Speed" 
+                         value={`${avgTimePerQ}s`} 
+                         className="col-span-2 sm:col-span-1"
+                       />
+                     )}
                   </div>
                </div>
             </div>
          </Section>
+
+         {summary.estimatedLevel && (
+            <Section spacing="sm">
+               <div className="w-full glass-card-premium rounded-[2.5rem] p-6 border-2 border-primary/20 bg-primary/5 flex items-center justify-between animate-in slide-in-from-bottom-4 duration-700">
+                  <div className="flex items-center gap-4">
+                     <div className="w-14 h-14 rounded-2xl bg-primary flex items-center justify-center text-white shadow-lg shadow-primary/30">
+                        <span className="text-2xl font-black">{summary.estimatedLevel}</span>
+                     </div>
+                     <div>
+                        <p className="text-xs font-black text-primary uppercase tracking-widest">Level Assessment</p>
+                        <p className="text-lg font-black text-slate-800 italic tracking-tight">Your calculated proficiency.</p>
+                     </div>
+                  </div>
+                  <div className="hidden sm:block">
+                     <Sparkles className="w-6 h-6 text-primary/40" />
+                  </div>
+               </div>
+            </Section>
+          )}
 
          {/* Guest Conversion Hook */}
          {isGuest && (

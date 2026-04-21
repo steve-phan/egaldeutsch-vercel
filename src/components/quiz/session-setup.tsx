@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
-import { ChevronRight, Settings2, Clock, Hash, Zap, LayoutGrid } from "lucide-react";
+import { ChevronRight, Settings2, Clock, Hash, Zap, LayoutGrid, AlertCircle } from "lucide-react";
 import { QuizSessionConfig, CEFRLevel, QuizCategory } from "@/types/quiz";
 import { Card } from "@/components/shared/layout/card";
 import { CATEGORY_META } from "@/lib/constants";
@@ -18,17 +18,19 @@ export function SessionSetup({ category, onStart }: SessionSetupProps) {
   const router = useRouter();
   const { language } = useLanguage();
   const [level, setLevel] = useState<CEFRLevel | "mixed">("mixed");
-  const [totalQuestions, setTotalQuestions] = useState<number>(10);
+  const [totalQuestions, setTotalQuestions] = useState<number>(30);
   const [timeLimit, setTimeLimit] = useState<number | undefined>(undefined); // seconds
+  const [mode, setMode] = useState<"test" | "practice">("practice");
 
   // Persistent Settings Logic
   useEffect(() => {
     const saved = sessionStorage.getItem("egaldeutsch_quiz_setup");
     if (saved) {
       try {
-        const { level: sLevel, totalQuestions: sTotal, timeLimit: sTime } = JSON.parse(saved);
+        const { level: sLevel, totalQuestions: sTotal, timeLimit: sTime, mode: sMode } = JSON.parse(saved);
         if (sLevel) setLevel(sLevel);
         if (sTotal) setTotalQuestions(sTotal);
+        if (sMode) setMode(sMode);
         setTimeLimit(sTime);
       } catch (e) {
         console.error("Failed to load quiz setup from session storage", e);
@@ -37,15 +39,16 @@ export function SessionSetup({ category, onStart }: SessionSetupProps) {
   }, []);
 
   useEffect(() => {
-    sessionStorage.setItem("egaldeutsch_quiz_setup", JSON.stringify({ level, totalQuestions, timeLimit }));
-  }, [level, totalQuestions, timeLimit]);
+    sessionStorage.setItem("egaldeutsch_quiz_setup", JSON.stringify({ level, totalQuestions, timeLimit, mode }));
+  }, [level, totalQuestions, timeLimit, mode]);
 
   const handleStart = () => {
     onStart({
       category,
-      level,
-      totalQuestions,
+      level: mode === "test" ? "mixed" : level,
+      totalQuestions: mode === "test" ? 30 : totalQuestions,
       timePerQuestion: timeLimit,
+      mode,
     });
   };
 
@@ -79,15 +82,56 @@ export function SessionSetup({ category, onStart }: SessionSetupProps) {
 
       <div className="space-y-10">
         {/* Topic Selection */}
-        <div className="space-y-4">
+        <div className={`space-y-4 transition-opacity duration-300 ${mode === "test" ? "opacity-30 pointer-events-none" : "opacity-100"}`}>
           <label className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 flex items-center gap-2">
             <LayoutGrid className="w-3 h-3" /> Mission Topic
           </label>
           {categoryGrid}
         </div>
 
-        {/* Level Selection */}
+        {/* Mode Selection */}
         <div className="space-y-4">
+          <label className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 flex items-center gap-2">
+            <Zap className="w-3 h-3" /> Mission Type
+          </label>
+          <div className="grid grid-cols-2 gap-3">
+            <button
+              onClick={() => setMode("practice")}
+              className={`flex flex-col items-center justify-center p-4 rounded-2xl border-2 transition-all gap-2
+                           ${mode === "practice"
+                  ? "bg-primary/5 border-primary shadow-lg shadow-primary/10"
+                  : "bg-white border-slate-100 text-slate-400 hover:border-slate-200"}`}
+            >
+              <div className={`w-8 h-8 rounded-full flex items-center justify-center ${mode === "practice" ? "bg-primary text-white" : "bg-slate-100 text-slate-400"}`}>
+                <Settings2 className="w-4 h-4" />
+              </div>
+              <span className={`text-[10px] font-black uppercase tracking-widest ${mode === "practice" ? "text-primary" : ""}`}>Practice</span>
+            </button>
+            <button
+              onClick={() => setMode("test")}
+              className={`flex flex-col items-center justify-center p-4 rounded-2xl border-2 transition-all gap-2
+                           ${mode === "test"
+                  ? "bg-primary/5 border-primary shadow-lg shadow-primary/10"
+                  : "bg-white border-slate-100 text-slate-400 hover:border-slate-200"}`}
+            >
+              <div className={`w-8 h-8 rounded-full flex items-center justify-center ${mode === "test" ? "bg-primary text-white" : "bg-slate-100 text-slate-400"}`}>
+                < Zap className="w-4 h-4" />
+              </div>
+              <span className={`text-[10px] font-black uppercase tracking-widest ${mode === "test" ? "text-primary" : ""}`}>Placement Test</span>
+            </button>
+          </div>
+          {mode === "test" && (
+            <div className="bg-amber-50 border border-amber-100 rounded-xl p-3 flex gap-3 animate-in fade-in slide-in-from-top-2">
+              <AlertCircle className="w-4 h-4 text-amber-500 shrink-0 mt-0.5" />
+              <p className="text-[10px] font-bold text-amber-700 leading-relaxed uppercase tracking-tight">
+                30 balanced questions from ALL categories and levels for a global proficiency score.
+              </p>
+            </div>
+          )}
+        </div>
+
+        {/* Level Selection */}
+        <div className={`space-y-4 transition-opacity duration-300 ${mode === "test" ? "opacity-30 pointer-events-none" : "opacity-100"}`}>
           <label className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 flex items-center gap-2">
             <Zap className="w-3 h-3" /> CEFR Level
           </label>
@@ -108,12 +152,12 @@ export function SessionSetup({ category, onStart }: SessionSetupProps) {
         </div>
 
         {/* Total Questions */}
-        <div className="space-y-4">
+        <div className={`space-y-4 transition-opacity duration-300 ${mode === "test" ? "opacity-30 pointer-events-none" : "opacity-100"}`}>
           <label className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 flex items-center gap-2">
             <Hash className="w-3 h-3" /> Quantity
           </label>
-          <div className="grid grid-cols-2 xs:grid-cols-3 gap-3">
-            {[5, 10, 20].map(n => (
+          <div className="grid grid-cols-2 xs:grid-cols-4 gap-3">
+            {[10, 20, 30, 50].map(n => (
               <button
                 key={n}
                 onClick={() => setTotalQuestions(n)}

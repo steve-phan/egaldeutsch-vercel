@@ -21,7 +21,7 @@ export function ProgressTab({ accuracyProgress, levelInfo, stats }: ProgressTabP
         <div className="flex justify-between items-baseline mb-4">
           <div>
             <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-1">Overall Accuracy</p>
-            <h2 className="text-3xl font-black text-slate-800 italic">Mastery {Math.round(accuracyProgress)}%</h2>
+            <h2 className="text-xl font-black text-slate-800 italic">Mastery {Math.round(accuracyProgress)}%</h2>
           </div>
           <div className="text-right">
             <p className="text-[8px] md:text-[10px] font-black text-primary uppercase tracking-widest flex items-center gap-1 leading-none">

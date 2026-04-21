@@ -15,6 +15,7 @@ export type QuizCategory =
   | "trennbare-verben"
   | "n-deklination"
   | "praepositionalverben"
+  | "mixed"
   | "genitiv";
 
 export type QuizType =
@@ -67,6 +68,7 @@ export interface QuizSessionConfig {
   level: CEFRLevel | "mixed";
   totalQuestions: number;
   timePerQuestion?: number; // In seconds, undefined = no limit
+  mode?: "test" | "practice";
 }
 
 export interface QuizSessionResult {
@@ -76,4 +78,6 @@ export interface QuizSessionResult {
   questionsAnswered: number;
   correctAnswers: number;
   date: Date;
+  mode?: "test" | "practice";
+  estimatedLevel?: string;
 }
