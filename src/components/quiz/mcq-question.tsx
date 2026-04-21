@@ -5,16 +5,22 @@ import { QuizQuestion } from "@/types/quiz";
 import { useLanguage } from "@/contexts/language-context";
 import { MousePointer2 } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { Button } from "../ui/button";
 
 interface McqQuestionProps {
    question: QuizQuestion;
-   onSubmit: (answer: string) => void;
+   onAnswerChange: (answer: string) => void;
    disabled: boolean;
 }
 
-export function McqQuestion({ question, onSubmit, disabled }: McqQuestionProps) {
+export function McqQuestion({ question, onAnswerChange, disabled }: McqQuestionProps) {
    const { language } = useLanguage();
    const [selected, setSelected] = useState<string>("");
+
+   const handleSelect = (opt: string) => {
+      setSelected(opt);
+      onAnswerChange(opt);
+   };
 
 
 
@@ -23,8 +29,8 @@ export function McqQuestion({ question, onSubmit, disabled }: McqQuestionProps) 
          {/* Question Prompt Area */}
          <div className="w-full p-8 md:p-10 text-center relative border-b border-slate-100">
             {/* <div className="absolute top-4 right-8 flex items-center gap-2 text-slate-300">
-               <button className="p-2 hover:text-primary transition-colors"><Volume2 className="w-4 h-4" /></button>
-               <button className="p-2 hover:text-primary transition-colors"><Play className="w-4 h-4" /></button>
+               <Button className="p-2 hover:text-primary transition-colors"><Volume2 className="w-4 h-4" /></Button>
+               <Button className="p-2 hover:text-primary transition-colors"><Play className="w-4 h-4" /></Button>
             </div> */}
 
             <h2 className="text-2xl md:text-3xl font-black text-slate-800 mb-2 italic tracking-tighter leading-tight">
@@ -44,10 +50,10 @@ export function McqQuestion({ question, onSubmit, disabled }: McqQuestionProps) 
                {question.options?.map((opt, idx) => {
                   const isSelected = selected === opt;
                   return (
-                     <button
+                     <Button
                         key={idx}
                         disabled={disabled}
-                        onClick={() => setSelected(opt)}
+                        onClick={() => handleSelect(opt)}
                         className={cn(`w-full h-12 px-6 rounded-2xl font-bold flex items-center justify-between transition-all duration-300 transform active-bounce
                       ${isSelected
                               ? "bg-primary text-white shadow-lg shadow-primary/20 scale-[1.02] border-transparent"
@@ -62,23 +68,11 @@ export function McqQuestion({ question, onSubmit, disabled }: McqQuestionProps) 
                            {opt}
                         </span>
                         {isSelected && <div className="w-2 h-2 rounded-full bg-white animate-pulse" />}
-                     </button>
+                     </Button>
                   )
                })}
             </div>
 
-            {!disabled && (
-               <button
-                  disabled={!selected || disabled}
-                  onClick={() => onSubmit(selected)}
-                  className={cn(
-                     "w-full btn-orange btn-compact flex items-center justify-center gap-2",
-                     (!selected || disabled) && "opacity-30 grayscale pointer-events-none"
-                  )}
-               >
-                  {language === "de" ? "Überprüfen" : language === "vi" ? "Kiểm tra" : "Submit Answer"}
-               </button>
-            )}
          </div>
       </div>
    );

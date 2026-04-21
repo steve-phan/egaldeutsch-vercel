@@ -13,11 +13,11 @@ interface WordItem {
 
 interface WordOrderProps {
   question: QuizQuestion;
-  onSubmit: (answer: string) => void;
+  onAnswerChange: (answer: string) => void;
   disabled: boolean;
 }
 
-export function WordOrder({ question, onSubmit, disabled }: WordOrderProps) {
+export function WordOrder({ question, onAnswerChange, disabled }: WordOrderProps) {
   const { language } = useLanguage();
 
   // The static pool of words that never changes its layout order
@@ -44,19 +44,40 @@ export function WordOrder({ question, onSubmit, disabled }: WordOrderProps) {
   const handleWordClick = (id: string, isAvailable: boolean) => {
     if (disabled) return;
 
+    let newOrderedIds: string[];
     if (isAvailable) {
       setWordPool(prev => prev.map(w => w.id === id ? { ...w, isUsed: true } : w));
-      setOrderedIds(prev => [...prev, id]);
+      newOrderedIds = [...orderedIds, id];
     } else {
       setWordPool(prev => prev.map(w => w.id === id ? { ...w, isUsed: false } : w));
-      setOrderedIds(prev => prev.filter(i => i !== id));
+      newOrderedIds = orderedIds.filter(i => i !== id);
     }
+    setOrderedIds(newOrderedIds);
+
+    // Notify parent of the new construction
+    const currentConstruction = newOrderedIds
+      .map(oid => {
+        // We look it up in the pool, but we need to be careful with state updates
+        // To be safe, we calculate it from the previous pool + the current change
+        const word = wordPool.find(w => w.id === oid);
+        return word ? word.text : "";
+      })
+      .filter(t => t !== "")
+      .join(" ");
+    
+    // Better way: recalculate ordered words from the upcoming state
+    const draftWords = newOrderedIds
+      .map(oid => wordPool.find(w => w.id === oid)?.text || "")
+      .filter(Boolean)
+      .join(" ");
+    onAnswerChange(draftWords);
   };
 
   const reset = () => {
     if (disabled) return;
     setWordPool(prev => prev.map(w => ({ ...w, isUsed: false })));
     setOrderedIds([]);
+    onAnswerChange("");
   };
 
   // Helper to get selected words in order
@@ -132,15 +153,6 @@ export function WordOrder({ question, onSubmit, disabled }: WordOrderProps) {
           ))}
         </div>
 
-        {!disabled && (
-          <button
-            disabled={!orderedWords.length || disabled}
-            onClick={() => onSubmit(orderedWords.map(w => w.text).join(" "))}
-            className={`w-full btn-orange btn-compact flex items-center justify-center gap-2 ${!orderedWords.length && "opacity-30 grayscale pointer-events-none"}`}
-          >
-            {language === "de" ? "Überprüfen" : language === "vi" ? "Kiểm tra" : "Submit Answer"}
-          </button>
-        )}
       </div>
     </div>
   );

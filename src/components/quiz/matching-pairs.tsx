@@ -1,7 +1,6 @@
-import { useState, useCallback } from "react";
+import { RotateCcw, Trophy, Shuffle, Sparkles, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { RotateCcw, Trophy, Shuffle } from "lucide-react";
+import { useLanguage } from "@/contexts/language-context";
 
 interface MatchingPair {
   id: number;
@@ -26,7 +25,7 @@ interface CardState {
 // Shuffle function outside component to avoid lint warnings
 function createShuffledCards(pairs: MatchingPair[]): CardState[] {
   const cards: CardState[] = [];
-  
+
   pairs.forEach((pair) => {
     cards.push({
       id: `word-${pair.id}`,
@@ -61,13 +60,14 @@ function getInitialCards(pairs: MatchingPair[]) {
 }
 
 export function MatchingPairs({ pairs, onComplete }: MatchingPairsProps) {
+  const { language } = useLanguage();
   const [cards, setCards] = useState<CardState[]>(() => getInitialCards(pairs));
   const [selectedCards, setSelectedCards] = useState<CardState[]>([]);
   const [attempts, setAttempts] = useState(0);
   const [matches, setMatches] = useState(0);
   const [isChecking, setIsChecking] = useState(false);
   const [hasCompleted, setHasCompleted] = useState(false);
-  
+
   // Compute isComplete from matches count
   const isComplete = matches === pairs.length;
 
@@ -100,7 +100,7 @@ export function MatchingPairs({ pairs, onComplete }: MatchingPairsProps) {
           );
           const newMatchCount = matches + 1;
           setMatches(newMatchCount);
-          
+
           // Check for completion and call onComplete only once
           // hasCompleted prevents duplicate calls, isComplete is derived for UI
           if (newMatchCount === pairs.length && !hasCompleted) {
@@ -164,20 +164,19 @@ export function MatchingPairs({ pairs, onComplete }: MatchingPairsProps) {
         {/* Cards Grid */}
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
           {cards.map((card) => (
-            <button
+            <Button
               key={card.id}
               onClick={() => handleCardClick(card)}
               disabled={card.isFlipped || card.isMatched || isChecking}
               className={`
-                relative h-20 sm:h-24 rounded-lg font-medium text-sm sm:text-base
-                transition-all duration-300 transform
+                relative h-20 sm:h-24 rounded-2xl font-black text-sm sm:text-base
+                transition-all duration-300 transform active:scale-95
                 ${card.isMatched
-                  ? "bg-green-500 text-white cursor-default scale-95"
+                  ? "bg-emerald-500 text-white cursor-default scale-95 shadow-lg shadow-emerald-200"
                   : card.isFlipped
-                    ? "bg-primary text-primary-foreground"
-                    : "bg-gradient-to-br from-slate-200 to-slate-300 dark:from-slate-700 dark:to-slate-800 hover:scale-105 hover:shadow-lg cursor-pointer"
+                    ? "bg-primary text-white shadow-lg shadow-primary/30"
+                    : "bg-white border-2 border-slate-100 text-slate-400 hover:border-primary/30 hover:text-primary hover:shadow-premium"
                 }
-                ${!card.isFlipped && !card.isMatched ? "shadow-md" : ""}
               `}
               style={{
                 perspective: "1000px",
@@ -199,7 +198,7 @@ export function MatchingPairs({ pairs, onComplete }: MatchingPairsProps) {
               >
                 ❓
               </span>
-            </button>
+            </Button>
           ))}
         </div>
 
@@ -217,10 +216,14 @@ export function MatchingPairs({ pairs, onComplete }: MatchingPairsProps) {
           </div>
         )}
       </CardContent>
-      <CardFooter>
-        <Button variant="outline" onClick={handleReset} className="w-full sm:w-auto">
-          <RotateCcw className="mr-2 h-4 w-4" />
-          Play Again
+      <CardFooter className="flex flex-col gap-4">
+        <Button
+          onClick={handleReset}
+          variant="outline"
+          className="w-full h-12 rounded-2xl border-2 border-slate-100 font-black text-slate-400 hover:text-primary hover:border-primary/30 transition-all flex items-center justify-center gap-2"
+        >
+          <RotateCcw className="w-4 h-4" />
+          {language === "de" ? "Nochmal spielen" : "Play Again"}
         </Button>
       </CardFooter>
     </Card>

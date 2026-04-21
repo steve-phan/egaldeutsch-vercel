@@ -4,16 +4,22 @@ import { useState } from "react";
 import { QuizQuestion } from "@/types/quiz";
 import { useLanguage } from "@/contexts/language-context";
 import { Edit3, Sparkles } from "lucide-react";
+import { Button } from "../ui/button";
 
 interface FillInBlankProps {
    question: QuizQuestion;
-   onSubmit: (answer: string) => void;
+   onAnswerChange: (answer: string) => void;
    disabled: boolean;
 }
 
-export function FillInBlank({ question, onSubmit, disabled }: FillInBlankProps) {
+export function FillInBlank({ question, onAnswerChange, disabled }: FillInBlankProps) {
    const { language } = useLanguage();
    const [answer, setAnswer] = useState("");
+
+   const handleChange = (val: string) => {
+      setAnswer(val);
+      onAnswerChange(val);
+   };
 
 
 
@@ -39,25 +45,16 @@ export function FillInBlank({ question, onSubmit, disabled }: FillInBlankProps) 
             </div>
 
             <div className="relative group">
-               <input
-                  type="text"
-                  value={answer}
-                  onChange={(e) => setAnswer(e.target.value)}
-                  disabled={disabled}
-                  placeholder="Enter response..."
-                  className="w-full h-14 px-6 bg-white border-2 border-slate-100 rounded-2xl text-slate-800 placeholder:text-slate-200 outline-none focus:border-primary/50 focus:shadow-lg focus:shadow-primary/10 transition-all duration-300"
-               />
+                <input
+                   type="text"
+                   value={answer}
+                   onChange={(e) => handleChange(e.target.value)}
+                   disabled={disabled}
+                   placeholder="Enter response..."
+                   className="w-full h-14 px-6 bg-white border-2 border-slate-100 rounded-2xl text-slate-800 placeholder:text-slate-200 outline-none focus:border-primary/50 focus:shadow-lg focus:shadow-primary/10 transition-all duration-300"
+                />
             </div>
 
-            {!disabled && (
-               <button
-                  disabled={!answer.trim() || disabled}
-                  onClick={() => onSubmit(answer)}
-                  className={`w-full btn-orange btn-compact flex items-center justify-center gap-2 ${!answer.trim() && "opacity-30 grayscale pointer-events-none"}`}
-               >
-                  {language === "de" ? "Überprüfen" : language === "vi" ? "Kiểm tra" : "Submit Answer"}
-               </button>
-            )}
          </div>
       </div>
    );

@@ -16,6 +16,8 @@ import { Section } from "@/components/shared/layout/section";
 import { McqQuestion } from "@/components/quiz/mcq-question";
 import { FillInBlank } from "@/components/quiz/fill-in-blank";
 import { WordOrder } from "@/components/quiz/word-order";
+import { Button } from "@/components/ui/button";
+import { useState } from "react";
 
 export function QuizClientView({ category }: { category: string }) {
   const router = useRouter();
@@ -36,6 +38,13 @@ export function QuizClientView({ category }: { category: string }) {
     config,
     estimatedLevel,
   } = useQuizSession();
+
+  const [answerDraft, setAnswerDraft] = useState<string>("");
+
+  // Reset draft when question changes
+  useEffect(() => {
+    setAnswerDraft("");
+  }, [currentIndex]);
 
   // Handle retry and autoStart logic from URL
   useEffect(() => {
@@ -127,26 +136,52 @@ export function QuizClientView({ category }: { category: string }) {
         <Section spacing="none" className="perspective-1000">
           <div className="glass-card-premium rounded-[2.5rem] overflow-hidden border border-white/50 shadow-premium">
             {currentQuestion.type === "multiple-choice" && (
-              <McqQuestion key={currentQuestion.id} question={currentQuestion} onSubmit={submitAnswer} disabled={disabled} />
+              <McqQuestion 
+                key={currentQuestion.id} 
+                question={currentQuestion} 
+                onAnswerChange={setAnswerDraft} 
+                disabled={disabled} 
+              />
             )}
             {currentQuestion.type === "fill-in-blank" && (
-              <FillInBlank key={currentQuestion.id} question={currentQuestion} onSubmit={submitAnswer} disabled={disabled} />
+              <FillInBlank 
+                key={currentQuestion.id} 
+                question={currentQuestion} 
+                onAnswerChange={setAnswerDraft} 
+                disabled={disabled} 
+              />
             )}
             {currentQuestion.type === "word-order" && (
-              <WordOrder key={currentQuestion.id} question={currentQuestion} onSubmit={submitAnswer} disabled={disabled} />
+              <WordOrder 
+                key={currentQuestion.id} 
+                question={currentQuestion} 
+                onAnswerChange={setAnswerDraft} 
+                disabled={disabled} 
+              />
             )}
           </div>
         </Section>
 
+        {/* Unified Submit Button (when in progress) */}
+        {status === "in-progress" && (
+          <Section spacing="none" className="animate-in fade-in slide-in-from-bottom-2 duration-500">
+            <Button
+              onClick={() => submitAnswer(answerDraft)}
+              disabled={!answerDraft.trim()}
+              className="w-full h-14 bg-slate-900 text-white rounded-[2rem] font-black text-sm uppercase tracking-widest flex items-center justify-center gap-3 shadow-premium hover:bg-primary transition-all active-bounce group mt-4 overflow-hidden relative disabled:opacity-30 disabled:grayscale disabled:pointer-events-none"
+            >
+              <div className="absolute inset-0 bg-gradient-to-r from-orange-400 to-primary opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <span className="relative z-10">
+                {language === "de" ? "Überprüfen" : language === "vi" ? "Kiểm tra" : "Check Answer"}
+              </span>
+              <Sparkles className="w-5 h-5 relative z-10 animate-pulse" />
+            </Button>
+          </Section>
+        )}
+
         {status === "review" && (
           <Section spacing="none" className="space-y-6 animate-in zoom-in-95 duration-500">
-            <ExplanationCard
-              question={currentQuestion}
-              isCorrect={lastAnswerEvaluated}
-              userAnswer={answerForCurrent?.userAnswer || ""}
-              language={language}
-            />
-            <button
+            <Button
               onClick={nextQuestion}
               className="w-full h-14 bg-slate-900 text-white rounded-[2rem] font-black text-sm uppercase tracking-widest flex items-center justify-center gap-3 shadow-premium hover:bg-primary transition-all active-bounce group mt-4 overflow-hidden relative"
             >
@@ -155,7 +190,14 @@ export function QuizClientView({ category }: { category: string }) {
                 {language === "de" ? "Nächste Frage" : language === "vi" ? "Câu tiếp theo" : "Next Question"}
               </span>
               <ChevronLeft className="w-5 h-5 relative z-10 rotate-180 group-hover:translate-x-1 transition-transform" />
-            </button>
+            </Button>
+
+            <ExplanationCard
+              question={currentQuestion}
+              isCorrect={lastAnswerEvaluated}
+              userAnswer={answerForCurrent?.userAnswer || ""}
+              language={language}
+            />
           </Section>
         )}
       </div>
@@ -165,33 +207,33 @@ export function QuizClientView({ category }: { category: string }) {
   return (
     <AppShell showNav={false} showHeader={true} maxWidth="md">
       <Section spacing="sm">
-         <div className="w-full flex items-center justify-between px-1">
-           <button
-             onClick={() => router.push("/")}
-             className="w-10 h-10 bg-white shadow-premium rounded-xl flex items-center justify-center text-slate-400 hover:text-primary border border-slate-50 transition-all active:scale-90"
-             title="Go Home"
-           >
-             <ChevronLeft className="w-5 h-5" />
-           </button>
+        <div className="w-full flex items-center justify-between px-1">
+          <button
+            onClick={() => router.push("/")}
+            className="w-10 h-10 bg-white shadow-premium rounded-xl flex items-center justify-center text-slate-400 hover:text-primary border border-slate-50 transition-all active:scale-90"
+            title="Go Home"
+          >
+            <ChevronLeft className="w-5 h-5" />
+          </button>
 
-           <div className="flex flex-col items-center">
-             <div className="flex items-center gap-2 group cursor-pointer">
-               <h1 className="text-[15px] font-black text-slate-800 tracking-tighter italic capitalize leading-none">
-                 {category.replace("-", " ")}
-               </h1>
-               <div className="p-1 px-1.5 bg-slate-100/50 rounded-lg hover:bg-slate-200 transition-colors">
-                 <MoreHorizontal className="w-4 h-4 text-slate-400" />
-               </div>
-             </div>
-             <p className="text-[9px] font-black text-slate-400 uppercase tracking-widest mt-1.5 opacity-60">
-               {currentIndex + 1} of {questions.length} • Module Active
-             </p>
-           </div>
+          <div className="flex flex-col items-center">
+            <div className="flex items-center gap-2 group cursor-pointer">
+              <h1 className="text-[15px] font-black text-slate-800 tracking-tighter italic capitalize leading-none">
+                {category.replace("-", " ")}
+              </h1>
+              <div className="p-1 px-1.5 bg-slate-100/50 rounded-lg hover:bg-slate-200 transition-colors">
+                <MoreHorizontal className="w-4 h-4 text-slate-400" />
+              </div>
+            </div>
+            <p className="text-[9px] font-black text-slate-400 uppercase tracking-widest mt-1.5 opacity-60">
+              {currentIndex + 1} of {questions.length} • Module Active
+            </p>
+          </div>
 
-           <div className="w-10 h-10 bg-white/50 backdrop-blur-md rounded-xl flex items-center justify-center text-primary/40 shadow-premium border border-white/80">
-             <Sparkles className="w-4 h-4" />
-           </div>
-         </div>
+          <div className="w-10 h-10 bg-white/50 backdrop-blur-md rounded-xl flex items-center justify-center text-primary/40 shadow-premium border border-white/80">
+            <Sparkles className="w-4 h-4" />
+          </div>
+        </div>
       </Section>
 
       <div className="w-full pb-12">
