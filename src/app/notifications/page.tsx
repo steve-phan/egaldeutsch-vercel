@@ -13,10 +13,16 @@ import { Skeleton } from "@/components/ui/skeleton";
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 
+import { useLanguage } from "@/contexts/language-context";
+import { enUS, vi as viLocale } from "date-fns/locale";
+
 export default function NotificationsPage() {
+   const { t, language } = useLanguage();
    const { status } = useSession();
    const router = useRouter();
    const { notifications, isLoading, markAsRead } = useNotifications();
+
+   const dateLocale = language === "vi" ? viLocale : language === "de" ? de : enUS;
 
    // Route Protection: Redirect guests to login
    useEffect(() => {
@@ -66,8 +72,8 @@ export default function NotificationsPage() {
       <AppShell showNav={true} maxWidth="md">
          <section className="w-full pt-10 space-y-10 pb-20">
             <VisualPageHeader
-               title="Activity Feed"
-               subtitle="Your Mastery Timeline"
+               title={t("notifications.title")}
+               subtitle={t("notifications.subtitle")}
                icon={<Clock className="w-6 h-6" />}
             />
 
@@ -95,7 +101,7 @@ export default function NotificationsPage() {
                                  <div className="flex items-center justify-between mb-1">
                                     <h3 className="text-sm font-black text-slate-800 tracking-tight">{notif.title}</h3>
                                     <div className="flex items-center gap-1 text-[8px] font-bold text-slate-300 uppercase shrink-0">
-                                       <Clock className="w-2.5 h-2.5" /> {formatDistanceToNow(new Date(notif.created_at), { addSuffix: true, locale: de })}
+                                       <Clock className="w-2.5 h-2.5" /> {formatDistanceToNow(new Date(notif.created_at), { addSuffix: true, locale: dateLocale })}
                                     </div>
                                  </div>
                                  <p className="text-xs font-bold text-slate-400 leading-tight">
@@ -113,16 +119,16 @@ export default function NotificationsPage() {
                ) : (
                   <Card padding="lg" glass={false} className="bg-slate-50/50 border-dashed border-slate-200 text-center py-16">
                      <BellOff className="w-8 h-8 text-slate-200 mx-auto mb-4" />
-                     <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-1">No activity yet</p>
-                     <p className="text-[8px] font-bold text-slate-300 uppercase tracking-[0.2em]">Start a quiz to see your achievements here</p>
+                     <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-1">{t("notifications.no_activity")}</p>
+                     <p className="text-[8px] font-bold text-slate-300 uppercase tracking-[0.2em]">{t("notifications.no_activity_desc")}</p>
                   </Card>
                )}
             </div>
 
             {notifications.length > 0 && (
                <Card padding="lg" glass={false} className="mt-12 bg-slate-50/50 border-dashed border-slate-200 text-center">
-                  <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-1">That's everything for now</p>
-                  <p className="text-[8px] font-bold text-slate-300 uppercase tracking-[0.2em]">Check back later for more updates</p>
+                  <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-1">{t("notifications.footer_title")}</p>
+                  <p className="text-[8px] font-bold text-slate-300 uppercase tracking-[0.2em]">{t("notifications.footer_desc")}</p>
                </Card>
             )}
          </section>

@@ -18,7 +18,7 @@ interface WordOrderProps {
 }
 
 export function WordOrder({ question, onAnswerChange, disabled }: WordOrderProps) {
-  const { language } = useLanguage();
+  const { t } = useLanguage();
 
   // The static pool of words that never changes its layout order
   const [wordPool, setWordPool] = useState<WordItem[]>(() => {
@@ -54,16 +54,6 @@ export function WordOrder({ question, onAnswerChange, disabled }: WordOrderProps
     }
     setOrderedIds(newOrderedIds);
 
-    // Notify parent of the new construction
-    const currentConstruction = newOrderedIds
-      .map(oid => {
-        // We look it up in the pool, but we need to be careful with state updates
-        // To be safe, we calculate it from the previous pool + the current change
-        const word = wordPool.find(w => w.id === oid);
-        return word ? word.text : "";
-      })
-      .filter(t => t !== "")
-      .join(" ");
 
     // Better way: recalculate ordered words from the upcoming state
     const draftWords = newOrderedIds
@@ -98,7 +88,7 @@ export function WordOrder({ question, onAnswerChange, disabled }: WordOrderProps
             <RotateCcw className="w-4 h-4" />
           </button>
         </div>
-        <p className="text-[10px] font-black text-slate-400 uppercase tracking-[0.3em] mb-4">Reorder the sentence</p>
+        <p className="text-[10px] font-black text-slate-400 uppercase tracking-[0.3em] mb-4">{t("quiz_ui.reorder_sentence")}</p>
         <h2 className="text-xl md:text-2xl font-black text-slate-800 mb-2 italic tracking-tighter leading-tight">
           {question.prompt_de}
         </h2>
@@ -110,11 +100,11 @@ export function WordOrder({ question, onAnswerChange, disabled }: WordOrderProps
         {/* Build Area */}
         <div className="space-y-4">
           <div className="flex items-center justify-between mb-2">
-            <h4 className="text-[10px] font-black text-slate-400 uppercase tracking-widest italic leading-none">Your Construction</h4>
+            <h4 className="text-[10px] font-black text-slate-400 uppercase tracking-widest italic leading-none">{t("quiz_ui.your_construction")}</h4>
             <ListOrdered className="w-4 h-4 text-slate-200" />
           </div>
           <div className="min-h-[80px] w-full p-4 bg-white/50 border-2 border-dashed border-slate-100 rounded-[2rem] flex flex-wrap gap-2 items-center content-center transition-colors">
-            {orderedWords.map((word, i) => (
+            {orderedWords.map((word) => (
               <button
                 key={word.id}
                 onClick={() => handleWordClick(word.id, false)}
@@ -124,7 +114,7 @@ export function WordOrder({ question, onAnswerChange, disabled }: WordOrderProps
                 {word.text}
               </button>
             ))}
-            {!orderedWords.length && <p className="text-slate-200 font-bold text-sm w-full text-center">Tap words to build your answer...</p>}
+            {!orderedWords.length && <p className="text-slate-200 font-bold text-sm w-full text-center">{t("quiz_ui.tap_to_build")}</p>}
           </div>
         </div>
 

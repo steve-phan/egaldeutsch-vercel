@@ -13,19 +13,23 @@ interface ProgressTabProps {
   stats: DashboardStats | null;
 }
 
+import { useLanguage } from "@/contexts/language-context";
+
 export function ProgressTab({ accuracyProgress, levelInfo, stats }: ProgressTabProps) {
+  const { t } = useLanguage();
+
   return (
     <div className="space-y-6 animate-in slide-in-from-bottom-4 duration-500">
       {/* Global Progress Bar Card */}
       <Card padding="lg" glass className="bg-gradient-to-br from-white to-slate-50 border-white/60 shadow-premium">
         <div className="flex justify-between items-baseline mb-4">
           <div>
-            <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-1">Overall Accuracy</p>
-            <h2 className="text-xl font-black text-slate-800 italic">Mastery {Math.round(accuracyProgress)}%</h2>
+            <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-1">{t("profile.stats.accuracy")}</p>
+            <h2 className="text-xl font-black text-slate-800 italic">{t("profile.stats.mastery")} {Math.round(accuracyProgress)}%</h2>
           </div>
           <div className="text-right">
             <p className="text-[8px] md:text-[10px] font-black text-primary uppercase tracking-widest flex items-center gap-1 leading-none">
-              Next: {levelInfo.next} <ChevronRight className="w-3 h-3" />
+              {t("profile.stats.next")}: {levelInfo.next} <ChevronRight className="w-3 h-3" />
             </p>
           </div>
         </div>
@@ -45,7 +49,7 @@ export function ProgressTab({ accuracyProgress, levelInfo, stats }: ProgressTabP
               <TrendingUp className="w-6 h-6" />
             </div>
             <p className="text-2xl font-black text-slate-800 leading-none">{stats?.total_sessions || 0}</p>
-            <p className="text-[9px] font-black text-slate-400 uppercase tracking-widest mt-2 px-2">Total Labs Complete</p>
+            <p className="text-[9px] font-black text-slate-400 uppercase tracking-widest mt-2 px-2">{t("profile.stats.total_labs")}</p>
           </div>
         </Card>
 
@@ -55,7 +59,7 @@ export function ProgressTab({ accuracyProgress, levelInfo, stats }: ProgressTabP
               <Zap className="w-6 h-6" />
             </div>
             <p className="text-2xl font-black text-slate-800 leading-none">{stats?.total_questions || 0}</p>
-            <p className="text-[9px] font-black text-slate-400 uppercase tracking-widest mt-2 px-2">Questions Mastered</p>
+            <p className="text-[9px] font-black text-slate-400 uppercase tracking-widest mt-2 px-2">{t("profile.stats.questions_mastered")}</p>
           </div>
         </Card>
       </div>
@@ -67,8 +71,8 @@ export function ProgressTab({ accuracyProgress, levelInfo, stats }: ProgressTabP
               <Target className="w-5 h-5" />
             </div>
             <div>
-              <p className="text-xs font-black text-slate-800 italic">Daily Streak: 0 Days</p>
-              <p className="text-[9px] font-bold text-slate-400 uppercase tracking-widest mt-0.5">Maintain consistency</p>
+              <p className="text-xs font-black text-slate-800 italic">{t("profile.stats.streak_label")}: 0 {t("profile.hero.streak_unit")}</p>
+              <p className="text-[9px] font-bold text-slate-400 uppercase tracking-widest mt-0.5">{t("profile.stats.streak_desc")}</p>
             </div>
           </div>
           <ChevronRight className="w-4 h-4 text-slate-300" />

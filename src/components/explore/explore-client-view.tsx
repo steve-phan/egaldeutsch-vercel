@@ -82,7 +82,7 @@ export function ExploreClientView() {
                         </div>
                         <div className="space-y-3">
                            <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-white italic tracking-tighter leading-[0.9]">
-                              {featuredCategory.label[language as keyof typeof featuredCategory.label] || featuredCategory.label.de}
+                              {featuredCategory.label.de || featuredCategory.label.en}
                            </h2>
                            <p className="text-base font-bold text-indigo-100/70 leading-relaxed max-w-md">
                               {featuredCategory.description[language as keyof typeof featuredCategory.description] || featuredCategory.description.de}

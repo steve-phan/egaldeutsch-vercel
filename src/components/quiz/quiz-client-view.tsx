@@ -22,7 +22,7 @@ import { Button } from "@/components/ui/button";
 export function QuizClientView({ category }: { category: string }) {
   const router = useRouter();
   const searchParams = useSearchParams();
-  const { language } = useLanguage();
+  const { t } = useLanguage();
 
   const {
     questions,
@@ -104,16 +104,16 @@ export function QuizClientView({ category }: { category: string }) {
   const renderLoading = () => (
     <Section spacing="xl" className="flex flex-col items-center justify-center min-h-[50vh] animate-pulse">
       <div className="text-6xl mb-6 scale-110">🦊</div>
-      <p className="text-slate-400 font-black uppercase tracking-widest text-[10px]">Assembling your mastery...</p>
+      <p className="text-slate-400 font-black uppercase tracking-widest text-[10px]">{t("quiz_ui.assembling_mastery")}</p>
     </Section>
   );
 
   const renderError = () => (
     <Section spacing="lg" className="flex flex-col items-center justify-center min-h-[50vh] text-center max-w-sm mx-auto">
       <div className="text-6xl mb-6 grayscale opacity-30">🏜️</div>
-      <h2 className="text-2xl font-black text-slate-800 mb-2 tracking-tighter italic">Out of Questions</h2>
-      <p className="text-slate-400 font-bold text-sm mb-8">Try adjusting your level or picking another category.</p>
-      <button onClick={() => router.push("/")} className="btn-orange btn-compact w-full shadow-premium">Go Back</button>
+      <h2 className="text-2xl font-black text-slate-800 mb-2 tracking-tighter italic">{t("quiz_ui.out_of_questions")}</h2>
+      <p className="text-slate-400 font-bold text-sm mb-8">{t("quiz_ui.try_adjust_filter")}</p>
+      <button onClick={() => router.push("/")} className="btn-orange btn-compact w-full shadow-premium">{t("quiz_ui.go_back")}</button>
     </Section>
   );
 
@@ -187,7 +187,7 @@ export function QuizClientView({ category }: { category: string }) {
             >
               <div className="absolute inset-0 bg-gradient-to-r from-orange-400 to-primary opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               <span className="relative z-10">
-                {language === "de" ? "Überprüfen" : language === "vi" ? "Kiểm tra" : "Check Answer"}
+                {t("quiz_ui.check")}
               </span>
               <Sparkles className="w-5 h-5 relative z-10 animate-pulse" />
             </Button>
@@ -200,7 +200,7 @@ export function QuizClientView({ category }: { category: string }) {
                 onClick={nextQuestion}
                 className="text-[10px] font-black text-slate-300 uppercase tracking-widest hover:text-primary transition-colors text-center"
               >
-                {language === "de" ? "Frage überspringen" : "Skip this question"}
+                {t("quiz_ui.skip_question")}
               </button>
             )}
           </Section>
@@ -214,7 +214,7 @@ export function QuizClientView({ category }: { category: string }) {
             >
               <div className="absolute inset-0 bg-gradient-to-r from-orange-400 to-primary opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               <span className="relative z-10">
-                {language === "de" ? "Nächste Frage" : language === "vi" ? "Câu tiếp theo" : "Next Question"}
+                {t("quiz_ui.next")}
               </span>
               <ChevronLeft className="w-5 h-5 relative z-10 rotate-180 group-hover:translate-x-1 transition-transform" />
             </Button>
@@ -223,7 +223,6 @@ export function QuizClientView({ category }: { category: string }) {
               question={currentQuestion}
               isCorrect={lastAnswerEvaluated}
               userAnswer={answerForCurrent?.userAnswer || ""}
-              language={language}
             />
           </Section>
         )}
@@ -253,7 +252,7 @@ export function QuizClientView({ category }: { category: string }) {
               </div>
             </div>
             <p className="text-[9px] font-black text-slate-400 uppercase tracking-widest mt-1.5 opacity-60">
-              {currentIndex + 1} of {questions.length} • Module Active
+              {currentIndex + 1} {t("quiz_ui.of")} {questions.length} • {t("quiz_ui.module_active")}
             </p>
           </div>
 

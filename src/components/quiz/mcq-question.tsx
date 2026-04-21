@@ -14,15 +14,13 @@ interface McqQuestionProps {
 }
 
 export function McqQuestion({ question, onAnswerChange, disabled }: McqQuestionProps) {
-   const { language } = useLanguage();
+   const { t } = useLanguage();
    const [selected, setSelected] = useState<string>("");
 
    const handleSelect = (opt: string) => {
       setSelected(opt);
       onAnswerChange(opt);
    };
-
-
 
    return (
       <div className="w-full flex flex-col items-center">
@@ -42,7 +40,7 @@ export function McqQuestion({ question, onAnswerChange, disabled }: McqQuestionP
          {/* Answer Area */}
          <div className="w-full p-6 md:p-8 space-y-8 bg-slate-50/20">
             <div className="flex items-center justify-between">
-               <h4 className="text-[10px] font-black text-slate-400 uppercase tracking-widest">Select the correct choice</h4>
+               <h4 className="text-[10px] font-black text-slate-400 uppercase tracking-widest">{t("quiz_ui.select_correct")}</h4>
                <MousePointer2 className="w-4 h-4 text-slate-200" />
             </div>
 

@@ -9,31 +9,7 @@ import { useLanguage } from "@/contexts/language-context";
 
 export function HeroQuizCard() {
   const router = useRouter();
-  const { language } = useLanguage();
-
-  const getTitle = () => {
-    switch (language) {
-      case "de": return "Tschüss, Sprachbarrieren!";
-      case "vi": return "Tạm biệt rào cản ngôn ngữ!";
-      default: return "Tschüss, Language Barriers!";
-    }
-  };
-
-  const getSubtext = () => {
-    switch (language) {
-      case "de": return "Meistere die deutsche Grammatik mit interaktiven Übungen, die auf dein Niveau zugeschnitten sind.";
-      case "vi": return "Chinh phục ngữ pháp tiếng Đức với các bài tập tương tác được thiết kế riêng cho trình độ của bạn.";
-      default: return "Master German grammar with interactive exercises tailored for your level.";
-    }
-  };
-
-  const getButtonText = () => {
-    switch (language) {
-      case "de": return "Quiz starten";
-      case "vi": return "Bắt đầu Quiz";
-      default: return "Start Quiz";
-    }
-  };
+  const { t } = useLanguage();
 
   return (
     <Section spacing="sm">
@@ -47,15 +23,15 @@ export function HeroQuizCard() {
           {/* Content Side */}
           <div className="flex-1 space-y-6 md:space-y-8 text-center md:text-left">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-primary/10 text-[10px] md:text-[11px] font-black text-primary uppercase tracking-[0.2em] border border-primary/5">
-              <Sparkles className="w-3.5 h-3.5" /> Active Learning Path
+              <Sparkles className="w-3.5 h-3.5" /> {t("home.hero.badge")}
             </div>
 
             <div className="space-y-4 md:space-y-5">
               <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-slate-800 leading-[1.05] md:leading-[1.05] tracking-tighter italic">
-                {getTitle()}
+                {t("home.hero.title")}
               </h2>
               <p className="text-base md:text-lg font-bold text-slate-400 max-w-md mx-auto md:mx-0 leading-relaxed">
-                {getSubtext()}
+                {t("home.hero.subtitle")}
               </p>
             </div>
 
@@ -64,7 +40,7 @@ export function HeroQuizCard() {
                 onClick={() => router.push('/estimate')}
                 className="btn-orange h-14 md:h-16 px-10 md:px-12 group text-base md:text-xl font-black shadow-premium active-bounce transition-all w-full sm:w-auto"
               >
-                Estimate Proficiency <ArrowRight className="w-5 h-5 md:w-6 md:h-6 group-hover:translate-x-1.5 transition-transform" />
+                {t("home.hero.estimate_btn")} <ArrowRight className="w-5 h-5 md:w-6 md:h-6 group-hover:translate-x-1.5 transition-transform" />
               </button>
               
               <button
@@ -76,7 +52,7 @@ export function HeroQuizCard() {
                 }}
                 className="h-14 md:h-16 px-10 md:px-12 bg-white/20 hover:bg-white/30 backdrop-blur-md rounded-[2rem] text-slate-800 text-base md:text-xl font-black border border-white/50 transition-all w-full sm:w-auto"
               >
-                Targeted Practice
+                {t("home.hero.practice_btn")}
               </button>
             </div>
           </div>

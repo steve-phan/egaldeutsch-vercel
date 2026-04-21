@@ -4,34 +4,19 @@ import { QuizQuestion } from "@/types/quiz";
 import { CheckCircle2, XCircle, Lightbulb } from "lucide-react";
 import Image from "next/image";
 
+import { useLanguage } from "@/contexts/language-context";
+
 interface ExplanationCardProps {
    question: QuizQuestion;
    isCorrect: boolean;
    userAnswer: string;
-   language?: "en" | "de" | "vi";
 }
 
 export function ExplanationCard({
    question,
    isCorrect,
-   language = "en"
 }: ExplanationCardProps) {
-
-   const getFeedbackHeader = () => {
-      if (isCorrect) {
-         switch (language) {
-            case "de": return "Super!";
-            case "vi": return "Tuyệt vời!";
-            default: return "Awesome!";
-         }
-      } else {
-         switch (language) {
-            case "de": return "Fast!";
-            case "vi": return "Gần đúng!";
-            default: return "Not quite!";
-         }
-      }
-   };
+   const { t, language } = useLanguage();
 
    const getExplanationText = () => {
       switch (language) {
@@ -56,13 +41,13 @@ export function ExplanationCard({
                <div className="flex items-center gap-3">
                   {isCorrect ? <CheckCircle2 className="w-6 h-6 text-emerald-500" /> : <XCircle className="w-6 h-6 text-rose-500" />}
                   <h3 className={`text-xl font-black italic tracking-tighter ${isCorrect ? "text-emerald-600" : "text-rose-600"}`}>
-                     {getFeedbackHeader()}
+                     {isCorrect ? t("quiz_ui.feedback_correct") : t("quiz_ui.feedback_incorrect")}
                   </h3>
                </div>
 
                {!isCorrect && (
                   <div className="space-y-1">
-                     <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest">Correct Answer</p>
+                     <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest">{t("quiz_ui.correct_answer")}</p>
                      <h3 className="text-lg font-semibold italic text-primary-600">{question.correct_answer}</h3>
                   </div>
                )}
@@ -70,7 +55,7 @@ export function ExplanationCard({
                <div className="space-y-4">
                   <div className="flex items-center gap-2 text-slate-400">
                      <Lightbulb className="w-4 h-4" />
-                     <span className="text-[10px] font-black uppercase tracking-widest">Grammar Hint</span>
+                     <span className="text-[10px] font-black uppercase tracking-widest">{t("quiz_ui.grammar_hint")}</span>
                   </div>
                   <p className="text-sm font-bold text-slate-600 leading-relaxed bg-white/40 p-5 rounded-2xl border border-white/60 shadow-sm">
                      {getExplanationText()}
@@ -90,7 +75,7 @@ export function ExplanationCard({
                   />
                </div>
                <div className="glass-pill px-3 py-1 rounded-full text-[9px] font-black uppercase tracking-tighter text-slate-400 border-white/80">
-                  {isCorrect ? "Proud of you!" : "Keep going!"}
+                  {isCorrect ? t("quiz_ui.mascot_success") : t("quiz_ui.mascot_keep_going")}
                </div>
             </div>
          </div>

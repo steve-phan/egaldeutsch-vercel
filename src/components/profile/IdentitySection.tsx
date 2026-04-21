@@ -25,10 +25,14 @@ interface IdentitySectionProps {
   success: string;
 }
 
+import { useLanguage } from "@/contexts/language-context";
+
 export function IdentitySection({
   name, setName, email, setEmail, language, setLanguage, languages,
   handleSubmit, saving, error, success
 }: IdentitySectionProps) {
+  const { t } = useLanguage();
+
   return (
     <form onSubmit={handleSubmit} className="space-y-8">
       <div className="flex items-center gap-4 mb-2">
@@ -36,15 +40,15 @@ export function IdentitySection({
           <User className="w-6 h-6" />
         </div>
         <div>
-          <h3 className="text-lg font-black text-slate-800 tracking-tight italic">Personal Information</h3>
-          <p className="text-[10px] font-bold text-slate-400 uppercase tracking-tight">Update your public identity</p>
+          <h3 className="text-lg font-black text-slate-800 tracking-tight italic">{t("profile.identity.title")}</h3>
+          <p className="text-[10px] font-bold text-slate-400 uppercase tracking-tight">{t("profile.identity.subtitle")}</p>
         </div>
       </div>
 
       <div className="space-y-6">
         <div className="space-y-3">
           <Label htmlFor="name" className="text-[10px] font-black text-slate-400 ml-1 uppercase tracking-widest flex items-center gap-2">
-            Full Name
+            {t("profile.identity.name_label")}
           </Label>
           <Input
             id="name"
@@ -56,7 +60,7 @@ export function IdentitySection({
 
         <div className="space-y-3">
           <Label htmlFor="email" className="text-[10px] font-black text-slate-400 ml-1 uppercase tracking-widest flex items-center gap-2">
-             E-Mail Address
+             {t("profile.identity.email_label")}
           </Label>
           <Input
             id="email"
@@ -70,7 +74,7 @@ export function IdentitySection({
         {/* Interface Language Integrated */}
         <div className="space-y-4 pt-4 border-t border-slate-50">
           <Label className="text-[10px] font-black text-slate-400 ml-1 uppercase tracking-widest flex items-center gap-2">
-            Interface Language
+            {t("profile.identity.language_label")}
           </Label>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
             {languages.map((lang) => (
@@ -100,7 +104,7 @@ export function IdentitySection({
       {success && <p className="text-xs font-bold text-emerald-600 text-center uppercase tracking-tight">{success}</p>}
 
       <Button type="submit" className="w-full h-16 rounded-2xl text-base font-black btn-orange shadow-premium active-bounce" disabled={saving}>
-        {saving ? "Wird gespeichert..." : "Profil speichern"}
+        {saving ? t("profile.identity.saving") : t("profile.identity.save_btn")}
       </Button>
     </form>
   );

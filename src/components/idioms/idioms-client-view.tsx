@@ -10,7 +10,10 @@ interface IdiomsClientViewProps {
   initialIdioms: Idiom[];
 }
 
+import { useLanguage } from "@/contexts/language-context";
+
 export function IdiomsClientView({ initialIdioms }: IdiomsClientViewProps) {
+  const { t } = useLanguage();
   const [searchQuery, setSearchQuery] = useState("");
 
   const filteredIdioms = useMemo(() => {
@@ -47,15 +50,15 @@ export function IdiomsClientView({ initialIdioms }: IdiomsClientViewProps) {
           <div className="w-20 h-20 bg-slate-50 rounded-3xl flex items-center justify-center text-slate-300 border border-slate-100 mb-6 drop-shadow-sm">
             <AlertCircle className="w-10 h-10" />
           </div>
-          <h2 className="text-2xl font-black text-slate-800 italic">No idioms found</h2>
+          <h2 className="text-2xl font-black text-slate-800 italic">{t("idioms.no_results")}</h2>
           <p className="text-slate-400 font-bold max-w-xs mx-auto">
-            We couldn't find any idioms matching "{searchQuery}". Try a different keyword or check your spelling.
+            {t("idioms.no_results_desc").replace("{query}", searchQuery)}
           </p>
           <button 
             onClick={() => setSearchQuery("")}
             className="mt-8 px-6 py-2.5 bg-slate-100 text-slate-500 rounded-xl text-xs font-black uppercase tracking-widest hover:bg-slate-200 transition-colors"
           >
-            Clear Search
+            {t("idioms.clear_search")}
           </button>
         </div>
       )}
@@ -64,7 +67,9 @@ export function IdiomsClientView({ initialIdioms }: IdiomsClientViewProps) {
       {searchQuery.length >= 3 && filteredIdioms.length > 0 && (
         <div className="text-center">
             <span className="px-4 py-2 bg-slate-50 rounded-full text-[10px] font-black text-slate-400 uppercase tracking-widest border border-slate-100">
-                Showing {filteredIdioms.length} results for "{searchQuery}"
+                {t("idioms.results_count")
+                  .replace("{count}", filteredIdioms.length.toString())
+                  .replace("{query}", searchQuery)}
             </span>
         </div>
       )}

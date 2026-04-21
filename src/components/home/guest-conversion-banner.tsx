@@ -6,36 +6,40 @@ import { Card } from "@/components/shared/layout/card";
 import { Section } from "@/components/shared/layout/section";
 import { Brand } from "@/components/shared/brand";
 
+import { useLanguage } from "@/contexts/language-context";
+
 export function GuestConversionBanner() {
+   const { t } = useLanguage();
+
    return (
       <Section spacing="sm">
-         <Card 
-           padding="none" 
-           className="w-full group overflow-hidden bg-[#F1F5F9] border-slate-200/50 shadow-xl shadow-slate-200/20"
+         <Card
+            padding="none"
+            className="w-full group overflow-hidden bg-[#F1F5F9] border-slate-200/50 shadow-xl shadow-slate-200/20"
          >
             {/* Metallic Gloss Overlay */}
             <div className="absolute inset-0 bg-gradient-to-tr from-white/0 via-white/30 to-white/0 pointer-events-none" />
-            
+
             <div className="flex flex-col md:flex-row items-center justify-between relative min-h-[360px] md:min-h-[420px]">
                {/* Content Side */}
                <div className="p-8 md:p-14 space-y-6 flex-1 relative z-10">
                   <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white shadow-sm text-[10px] font-black text-slate-500 uppercase tracking-[0.2em] border border-slate-100">
-                     <Sparkles className="w-3 h-3 text-primary" /> Professional German Mastery
+                     <Sparkles className="w-3 h-3 text-primary" /> {t("home.guest.badge")}
                   </div>
-                  <h1 className="text-4xl md:text-6xl font-black text-slate-900 leading-[0.85] tracking-tighter italic uppercase">
-                     Master German, <br />
-                     <span className="text-primary italic">Egal Wie!</span>
+                  <h1 className="text-3xl md:text-5xl font-black text-slate-900 leading-[0.85] tracking-tighter italic uppercase">
+                     {t("home.guest.title_prefix")} <Brand /> <br />
+                     <span className="text-primary italic">{t("home.guest.title_highlight")}</span>
                   </h1>
                   <p className="text-sm md:text-base font-bold text-slate-500 max-w-md leading-relaxed px-1">
-                     Experience the growth of your language skills with our gamified platform, designed for your success.
+                     {t("home.guest.subtitle")}
                   </p>
-                  
+
                   <div className="pt-4">
-                    <Link href="/signup">
-                       <button className="btn-orange h-14 md:h-16 px-12 text-sm group-hover:scale-105 transition-all shadow-xl shadow-primary/20 rounded-full font-black">
-                          GET STARTED NOW <ArrowRight className="w-4 h-4 ml-2" />
-                       </button>
-                    </Link>
+                     <Link href="/signup">
+                        <button className="btn-orange h-14 md:h-16 px-12 text-sm group-hover:scale-105 transition-all shadow-xl shadow-primary/20 rounded-full font-black">
+                           {t("home.guest.cta")} <ArrowRight className="w-4 h-4 ml-2" />
+                        </button>
+                     </Link>
                   </div>
                </div>
 

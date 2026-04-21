@@ -6,41 +6,26 @@ import { Card } from "@/components/shared/layout/card";
 import { Section } from "@/components/shared/layout/section";
 
 import { Brand } from "@/components/shared/brand";
+import React from "react";
 
 export function PurposeSection() {
-  const { language } = useLanguage();
-
-  const getTitle = () => {
-    switch (language) {
-      case "de": return <>Warum <Brand as="span" inline />?</>;
-      case "vi": return <>Tại sao chọn <Brand as="span" inline />?</>;
-      default: return <>Why <Brand as="span" inline />?</>;
-    }
-  };
-
-  const getSubtext = () => {
-    switch (language) {
-      case "de": return "Die ultimative Plattform, um die deutsche Grammatik zu beherrschen.";
-      case "vi": return "Nền tảng tối ưu để chinh phục ngữ pháp tiếng Đức.";
-      default: return "The ultimate platform to master German grammar.";
-    }
-  };
+  const { t } = useLanguage();
 
   const features = [
     {
       icon: <Target className="w-5 h-5 text-primary" />,
-      title: language === "de" ? "Zielgerichtet" : language === "vi" ? "Mục tiêu rõ ràng" : "Targeted",
-      text: language === "de" ? "Übungen für jedes GER-Niveau (A1-B2)." : language === "vi" ? "Bài tập cho mọi trình độ CEFR." : "Exercises for every CEFR level."
+      title: t("home.purpose.feature_targeted"),
+      text: t("home.purpose.feature_targeted_text")
     },
     {
       icon: <Zap className="w-5 h-5 text-primary" />,
-      title: language === "de" ? "Effizient" : language === "vi" ? "Hiệu quả" : "Efficient",
-      text: language === "de" ? "Lerne schneller mit sofortigem Feedback." : language === "vi" ? "Học nhanh hơn với phản hồi tức thì." : "Learn faster with instant feedback."
+      title: t("home.purpose.feature_efficient"),
+      text: t("home.purpose.feature_efficient_text")
     },
     {
       icon: <Shield className="w-5 h-5 text-primary" />,
-      title: language === "de" ? "Sicher" : language === "vi" ? "Tin cậy" : "Reliable",
-      text: language === "de" ? "Von Sprachperten kuratierte Inhalte." : language === "vi" ? "Nội dung được kiểm duyệt bởi chuyên gia." : "Content curated by language experts."
+      title: t("home.purpose.feature_reliable"),
+      text: t("home.purpose.feature_reliable_text")
     }
   ];
 
@@ -52,13 +37,18 @@ export function PurposeSection() {
         <div className="relative z-10 p-8 md:p-14 lg:p-16">
           <div className="max-w-3xl mb-12 space-y-4">
             <div className="inline-flex items-center gap-2 px-3 py-1 bg-accent/10 rounded-full text-[10px] font-black text-black uppercase tracking-widest">
-              <Sparkles className="w-3 h-3" /> Mission Statement
+              <Sparkles className="w-3 h-3" /> {t("home.purpose.badge")}
             </div>
             <h2 className="text-3xl md:text-5xl font-black text-slate-800 italic tracking-tighter leading-[1.1]">
-              {getTitle()}
+              {t("home.purpose.title").split("EgalDeutsch").map((part, i, arr) => (
+                <React.Fragment key={i}>
+                  {part}
+                  {i < arr.length - 1 && <Brand as="span" inline />}
+                </React.Fragment>
+              ))}
             </h2>
             <p className="text-base md:text-lg font-bold text-slate-400">
-              {getSubtext()}
+              {t("home.purpose.subtitle")}
             </p>
           </div>
 
@@ -82,15 +72,15 @@ export function PurposeSection() {
           <div className="mt-16 pt-10 border-t border-slate-100 flex flex-wrap gap-8">
             <div className="flex items-center gap-3">
               <CheckCircle2 className="w-4 h-4 text-primary" />
-              <span className="text-[10px] font-black text-slate-500 uppercase tracking-widest">1200+ Unique Questions</span>
+              <span className="text-[10px] font-black text-slate-500 uppercase tracking-widest">{t("home.purpose.stat_questions")}</span>
             </div>
             <div className="flex items-center gap-3">
-               <CheckCircle2 className="w-4 h-4 text-primary" />
-               <span className="text-[10px] font-black text-slate-500 uppercase tracking-widest">Smart Feedback System</span>
+              <CheckCircle2 className="w-4 h-4 text-primary" />
+              <span className="text-[10px] font-black text-slate-500 uppercase tracking-widest">{t("home.purpose.stat_feedback")}</span>
             </div>
             <div className="flex items-center gap-3">
-               <CheckCircle2 className="w-4 h-4 text-primary" />
-               <span className="text-[10px] font-black text-slate-500 uppercase tracking-widest">Free Educational Access</span>
+              <CheckCircle2 className="w-4 h-4 text-primary" />
+              <span className="text-[10px] font-black text-slate-500 uppercase tracking-widest">{t("home.purpose.stat_free")}</span>
             </div>
           </div>
         </div>

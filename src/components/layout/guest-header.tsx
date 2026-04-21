@@ -6,7 +6,10 @@ import Link from "next/link";
 import { LogIn, Sparkles, User, X } from "lucide-react";
 import { Brand } from "../shared/brand";
 
+import { useLanguage } from "@/contexts/language-context";
+
 export function GuestHeader() {
+  const { t } = useLanguage();
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -24,7 +27,7 @@ export function GuestHeader() {
         <div>
           <Brand size="lg" as="h1" className="hidden xs:block" />
           <p className="text-[9px] md:text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] flex items-center gap-1">
-             <Sparkles className="w-2.5 h-2.5 text-primary" /> Guest
+             <Sparkles className="w-2.5 h-2.5 text-primary" /> {t("nav.guest")}
           </p>
         </div>
       </div>
@@ -33,12 +36,12 @@ export function GuestHeader() {
       <div className="hidden sm:flex items-center gap-3">
          <Link href="/login">
             <button className="h-10 px-5 rounded-xl text-xs font-black text-slate-500 uppercase tracking-widest hover:text-primary transition-colors">
-               Login
+               {t("nav.login")}
             </button>
          </Link>
          <Link href="/signup">
             <button className="btn-orange h-10 px-6 text-xs font-black flex items-center gap-2">
-               Join Us <LogIn className="w-3.5 h-3.5" />
+               {t("nav.join_us")} <LogIn className="w-3.5 h-3.5" />
             </button>
          </Link>
       </div>
@@ -57,13 +60,13 @@ export function GuestHeader() {
              <Link href="/login" onClick={() => setIsOpen(false)}>
                <div className="flex items-center gap-3 p-4 hover:bg-slate-50 rounded-xl transition-colors">
                  <LogIn className="w-4 h-4 text-slate-400" />
-                 <span className="text-xs font-black text-slate-600 uppercase tracking-widest">Login</span>
+                 <span className="text-xs font-black text-slate-600 uppercase tracking-widest">{t("nav.login")}</span>
                </div>
              </Link>
              <Link href="/signup" onClick={() => setIsOpen(false)}>
                <div className="flex items-center gap-3 p-4 bg-primary/5 hover:bg-primary/10 rounded-xl transition-colors mt-1">
                  <LogIn className="w-4 h-4 text-primary" />
-                 <span className="text-xs font-black text-primary uppercase tracking-widest">Join Us</span>
+                 <span className="text-xs font-black text-primary uppercase tracking-widest">{t("nav.join_us")}</span>
                </div>
              </Link>
            </div>

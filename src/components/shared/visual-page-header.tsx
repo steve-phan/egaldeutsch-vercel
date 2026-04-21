@@ -16,22 +16,27 @@ interface VisualPageHeaderProps {
   className?: string;
 }
 
+import { useLanguage } from "@/contexts/language-context";
+
 export function VisualPageHeader({
   title,
   subtitle,
   icon,
   iconColor = "bg-primary",
   backHref,
-  backLabel = "Back",
+  backLabel,
   children,
   className
 }: VisualPageHeaderProps) {
+  const { t } = useLanguage();
+  const displayBackLabel = backLabel || t("common.back");
+
   return (
     <div className={cn("space-y-6 animate-in slide-in-from-top-4 duration-700", className)}>
       {backHref && (
         <Link href={backHref}>
           <button className="flex items-center gap-2 text-[10px] font-black text-slate-400 hover:text-primary uppercase tracking-[0.2em] transition-colors group">
-            <ChevronLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" /> {backLabel}
+            <ChevronLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" /> {displayBackLabel}
           </button>
         </Link>
       )}

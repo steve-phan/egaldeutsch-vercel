@@ -9,7 +9,11 @@ interface CategoryCardProps {
    category: CategoryMeta;
 }
 
+import { useLanguage } from "@/contexts/language-context";
+
 export function CategoryCard({ category }: CategoryCardProps) {
+   const { t, language } = useLanguage();
+
    return (
       <Link
          href={`/quiz/${category.id}`}
@@ -35,7 +39,7 @@ export function CategoryCard({ category }: CategoryCardProps) {
                      ))}
                   </div>
                   <h3 className="text-xl font-black text-slate-800 leading-tight tracking-tighter italic line-clamp-2 min-h-[3rem]">
-                     {category.label.de}
+                     {category.label.de || category.label.en}
                   </h3>
                </div>
 
@@ -47,7 +51,7 @@ export function CategoryCard({ category }: CategoryCardProps) {
             {/* Bottom Section: Action & Arrow */}
             <div className="flex items-center justify-between z-10 pt-2 border-t border-slate-100/50">
                <p className="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] group-hover:text-primary transition-colors">
-                  Explore Grammar
+                  {t("practice.explore_grammar")}
                </p>
                <div className="w-9 h-9 rounded-full bg-white/80 shadow-sm flex items-center justify-center text-slate-400 group-hover:bg-primary group-hover:text-white group-hover:translate-x-1 transition-all duration-300 border border-slate-50">
                   <ChevronRight className="w-5 h-5" />

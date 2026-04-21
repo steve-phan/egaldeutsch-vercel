@@ -62,7 +62,7 @@ function getInitialCards(pairs: MatchingPair[]) {
 }
 
 export function MatchingPairs({ pairs, onComplete }: MatchingPairsProps) {
-  const { language } = useLanguage();
+  const { t } = useLanguage();
   const [cards, setCards] = useState<CardState[]>(() => getInitialCards(pairs));
   const [selectedCards, setSelectedCards] = useState<CardState[]>([]);
   const [attempts, setAttempts] = useState(0);
@@ -148,11 +148,11 @@ export function MatchingPairs({ pairs, onComplete }: MatchingPairsProps) {
         <div className="absolute top-4 right-8 text-primary animate-pulse opacity-20">
           <Sparkles className="w-6 h-6" />
         </div>
-        <p className="text-[10px] font-black text-slate-400 uppercase tracking-[0.3em] mb-4">Matching Pairs</p>
+        <p className="text-[10px] font-black text-slate-400 uppercase tracking-[0.3em] mb-4">{t("quiz_ui.matching_pairs")}</p>
         <h2 className="text-xl md:text-2xl font-black text-slate-800 mb-2 italic tracking-tighter leading-tight">
-          {language === "de" ? "Finde die Paare" : language === "vi" ? "Tìm các cặp tương ứng" : "Find the matching pairs"}
+          {t("quiz_ui.vocabulary_mastery")}
         </h2>
-        <p className="text-sm text-slate-400 mt-2">Vocabulary Mastery</p>
+        <p className="text-sm text-slate-400 mt-2">{t("quiz_ui.vocabulary_mastery")}</p>
       </div>
 
       {/* interaction Area */}
@@ -225,7 +225,7 @@ export function MatchingPairs({ pairs, onComplete }: MatchingPairsProps) {
             className="w-full h-14 rounded-2xl border-2 border-slate-100 font-black text-slate-400 hover:text-primary hover:border-primary/30 transition-all flex items-center justify-center gap-2 bg-white"
           >
             <RotateCcw className="w-4 h-4" />
-            {language === "de" ? "Nochmal spielen" : language === "vi" ? "Chơi lại" : "Play Again"}
+            {t("quiz_ui.play_again")}
           </Button>
         </div>
       </div>

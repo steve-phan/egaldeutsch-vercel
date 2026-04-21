@@ -9,7 +9,11 @@ interface CategoryGridProps {
   loading?: boolean;
 }
 
+import { useLanguage } from "@/contexts/language-context";
+
 export function CategoryGrid({ categories, loading }: CategoryGridProps) {
+  const { t } = useLanguage();
+
   if (loading) {
     return (
       <div className="flex gap-6 overflow-x-auto pb-8 no-scrollbar">
@@ -23,7 +27,7 @@ export function CategoryGrid({ categories, loading }: CategoryGridProps) {
   if (categories.length === 0) {
     return (
       <div className="w-full p-12 text-center glass-card rounded-[2rem]">
-        <p className="text-slate-400 font-bold">No categories found for this level.</p>
+        <p className="text-slate-400 font-bold">{t("practice.no_modules")}</p>
       </div>
     );
   }

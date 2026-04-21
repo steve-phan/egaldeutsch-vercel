@@ -12,7 +12,10 @@ interface SecuritySectionProps {
   session: Session | null;
 }
 
+import { useLanguage } from "@/contexts/language-context";
+
 export function SecuritySection({ session }: SecuritySectionProps) {
+  const { t } = useLanguage();
   const [isChangingPassword, setIsChangingPassword] = useState(false);
   const [currentPassword, setCurrentPassword] = useState("");
   const [newPassword, setNewPassword] = useState("");
@@ -75,8 +78,8 @@ export function SecuritySection({ session }: SecuritySectionProps) {
           <Shield className="w-6 h-6" />
         </div>
         <div>
-          <h3 className="text-lg font-black text-slate-800 tracking-tight italic">Security & Session</h3>
-          <p className="text-[10px] font-bold text-slate-400 uppercase tracking-tight">Manage your access and session</p>
+          <h3 className="text-lg font-black text-slate-800 tracking-tight italic">{t("profile.security.title")}</h3>
+          <p className="text-[10px] font-bold text-slate-400 uppercase tracking-tight">{t("profile.security.subtitle")}</p>
         </div>
       </div>
 
@@ -88,13 +91,13 @@ export function SecuritySection({ session }: SecuritySectionProps) {
             onClick={() => setIsChangingPassword(true)}
             className="w-full h-14 rounded-2xl border-slate-100 bg-white font-bold flex items-center gap-3 text-slate-600 hover:text-slate-800 hover:border-slate-200 transition-all active:scale-95 shadow-sm"
           >
-            <Shield className="w-4 h-4" /> Passwort ändern
+            <Shield className="w-4 h-4" /> {t("profile.security.change_password_btn")}
           </Button>
         ) : (
           <form onSubmit={handleChangePassword} className="space-y-6 p-6 rounded-2xl bg-slate-50 border border-slate-100 animate-in slide-in-from-top-2 duration-300">
             <div className="space-y-4">
               <div className="space-y-2">
-                <Label className="text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">Current Password</Label>
+                <Label className="text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">{t("profile.security.current_password")}</Label>
                 <Input 
                   type="password" 
                   value={currentPassword}
@@ -104,7 +107,7 @@ export function SecuritySection({ session }: SecuritySectionProps) {
                 />
               </div>
               <div className="space-y-2">
-                <Label className="text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">New Password</Label>
+                <Label className="text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">{t("profile.security.new_password")}</Label>
                 <Input 
                   type="password" 
                   value={newPassword}
@@ -114,7 +117,7 @@ export function SecuritySection({ session }: SecuritySectionProps) {
                 />
               </div>
               <div className="space-y-2">
-                <Label className="text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">Confirm New Password</Label>
+                <Label className="text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">{t("profile.security.confirm_password")}</Label>
                 <Input 
                   type="password" 
                   value={confirmPassword}
@@ -135,14 +138,14 @@ export function SecuritySection({ session }: SecuritySectionProps) {
                 onClick={() => setIsChangingPassword(false)}
                 className="flex-1 h-12 rounded-xl font-bold text-slate-500 hover:text-slate-700"
               >
-                Abbrechen
+                {t("profile.security.cancel_btn")}
               </Button>
               <Button 
                 type="submit" 
                 disabled={passwordSaving}
                 className="flex-2 px-8 h-12 rounded-xl font-black bg-primary hover:bg-primary-dark text-white shadow-premium-sm active-bounce"
               >
-                {passwordSaving ? <Loader2 className="w-4 h-4 animate-spin" /> : "Ändern"}
+                {passwordSaving ? <Loader2 className="w-4 h-4 animate-spin" /> : t("profile.security.submit_btn")}
               </Button>
             </div>
           </form>
@@ -152,7 +155,7 @@ export function SecuritySection({ session }: SecuritySectionProps) {
           onClick={() => signOut({ callbackUrl: "/login" })}
           className="w-full h-14 rounded-2xl bg-rose-500 hover:bg-rose-600 text-white font-black flex items-center gap-3 transition-all active:scale-95 shadow-premium-sm"
         >
-          <LogOut className="w-4 h-4" /> Account abmelden
+          <LogOut className="w-4 h-4" /> {t("profile.security.logout_btn")}
         </Button>
       </div>
     </div>

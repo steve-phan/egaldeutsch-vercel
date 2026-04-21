@@ -10,7 +10,10 @@ import { Skeleton } from "../ui/skeleton";
 import { useNotifications } from "@/hooks/use-notifications";
 import { Brand } from "../shared/brand";
 
+import { useLanguage } from "@/contexts/language-context";
+
 export function Navbar() {
+  const { t } = useLanguage();
   const { data: session, status } = useSession();
   const { unreadCount } = useNotifications();
   const isGuest = status === "unauthenticated";
@@ -23,13 +26,13 @@ export function Navbar() {
     if (isGuest) {
       return (
         <>
-          <Sparkles className="w-2.5 h-2.5 text-slate-300" /> Mastery Awaits
+          <Sparkles className="w-2.5 h-2.5 text-slate-300" /> {t("nav.mastery_awaits")}
         </>
       )
     }
     return (
       <>
-        <Sparkles className="w-2.5 h-2.5 text-primary" /> Mastery: {session?.user?.role === 'admin' ? 'Admin' : 'A2'}
+        <Sparkles className="w-2.5 h-2.5 text-primary" /> {t("nav.mastery_level")}: {session?.user?.role === 'admin' ? 'Admin' : 'A2'}
       </>
     )
   }
@@ -49,7 +52,7 @@ export function Navbar() {
         <div className="flex items-center gap-2">
           <Link href="/login">
             <button className="btn-orange h-10 px-5 text-xs font-black flex items-center gap-2">
-              Login <LogIn className="w-3.5 h-3.5" />
+              {t("nav.login")} <LogIn className="w-3.5 h-3.5" />
             </button>
           </Link>
           {/* <Link href="/signup">
@@ -77,7 +80,7 @@ export function Navbar() {
               {session?.user?.name?.split(' ')[0]}
             </p>
             <p className="text-[8px] font-black text-slate-400 uppercase tracking-widest">
-              View Profile
+              {t("nav.view_profile")}
             </p>
           </div>
           <div className="w-10 h-10 relative rounded-xl overflow-hidden shadow-premium bg-white border border-slate-100 p-0.5">

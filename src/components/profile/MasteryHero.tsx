@@ -9,7 +9,11 @@ interface MasteryHeroProps {
   currentLevel: string;
 }
 
+import { useLanguage } from "@/contexts/language-context";
+
 export function MasteryHero({ session, currentLevel }: MasteryHeroProps) {
+  const { t } = useLanguage();
+
   return (
     <section className="flex flex-col items-center text-center space-y-4 pt-4">
       <div className="relative group">
@@ -33,7 +37,7 @@ export function MasteryHero({ session, currentLevel }: MasteryHeroProps) {
           {session?.user?.name?.split(' ')[0]} <span className="text-primary tracking-normal not-italic font-black text-xl align-top ml-1">MASTER</span>
         </h1>
         <p className="text-[10px] font-black text-slate-400 uppercase tracking-[0.3em]">
-          {session?.user?.role === 'admin' ? 'Elite Administrator' : `Mastery: ${currentLevel}`}
+          {session?.user?.role === 'admin' ? 'Elite Administrator' : `${t("profile.hero.level_label")}: ${currentLevel}`}
         </p>
       </div>
     </section>

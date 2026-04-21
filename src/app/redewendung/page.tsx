@@ -29,6 +29,12 @@ export const metadata: Metadata = {
 };
 
 import { IdiomsClientView } from "@/components/idioms/idioms-client-view";
+import { cookies } from "next/headers";
+import { de } from "@/i18n/de";
+import { en } from "@/i18n/en";
+import { vi } from "@/i18n/vi";
+
+const translations = { de, en, vi };
 
 async function getIdioms(): Promise<Idiom[]> {
   try {
@@ -54,6 +60,9 @@ async function getIdioms(): Promise<Idiom[]> {
 
 export default async function IdiomsDirectory() {
   const idioms = await getIdioms();
+  const cookieStore = await cookies();
+  const lang = (cookieStore.get("language")?.value as "de" | "en" | "vi") || "en";
+  const t = translations[lang];
 
   return (
     <AppShell showNav={true} maxWidth="lg">
@@ -61,11 +70,10 @@ export default async function IdiomsDirectory() {
         {/* Header */}
         <div className="text-center space-y-4">
           <h1 className="text-2xl md:text-4xl font-black text-slate-900 tracking-tighter italic">
-            Redewendung
+            {t.idioms.title}
           </h1>
           <p className="text-slate-500 font-bold max-w-xl mx-auto">
-            German is a colorful language. Master these idioms to sound more
-            like a native speaker and understand the culture better.
+            {t.idioms.subtitle}
           </p>
         </div>
 

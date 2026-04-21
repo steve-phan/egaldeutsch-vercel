@@ -19,7 +19,10 @@ import { useState } from "react";
 
 type TabType = "progress" | "settings";
 
+import { useLanguage } from "@/contexts/language-context";
+
 export default function ProfilePage() {
+  const { t } = useLanguage();
   const { data: session, status } = useSession();
   const [activeTab, setActiveTab] = useState<TabType>("progress");
 
@@ -70,14 +73,14 @@ export default function ProfilePage() {
               className={`flex items-center gap-2 px-6 md:px-10 py-3 rounded-xl text-[10px] font-black uppercase tracking-widest transition-all ${activeTab === "progress" ? "bg-white text-primary shadow-premium-sm scale-105" : "text-slate-400 hover:text-slate-600"
                 }`}
             >
-              <LayoutDashboard className="w-3.5 h-3.5" /> Progress
+              <LayoutDashboard className="w-3.5 h-3.5" /> {t("profile.tabs.progress")}
             </button>
             <button
               onClick={() => setActiveTab("settings")}
               className={`flex items-center gap-2 px-6 md:px-10 py-3 rounded-xl text-[10px] font-black uppercase tracking-widest transition-all ${activeTab === "settings" ? "bg-white text-primary shadow-premium-sm scale-105" : "text-slate-400 hover:text-slate-600"
                 }`}
             >
-              <Settings className="w-3.5 h-3.5" /> Settings
+              <Settings className="w-3.5 h-3.5" /> {t("profile.tabs.settings")}
             </button>
           </div>
         </nav>

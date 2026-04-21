@@ -16,7 +16,7 @@ interface RandomIdiomProps {
 
 export function RandomIdiom({ initialIdiom = null }: RandomIdiomProps) {
   const { randomIdiom: clientIdiom, randomLoading, fetchRandomIdiom } = useIdioms();
-  const { language } = useLanguage();
+  const { language, t } = useLanguage();
 
   const randomIdiom = clientIdiom || initialIdiom;
 
@@ -43,7 +43,7 @@ export function RandomIdiom({ initialIdiom = null }: RandomIdiomProps) {
       <div className="w-full">
         <Card className="sm:flex items-center justify-between mb-6">
           <div className="flex items-center gap-3 pb-3">
-            <h2 className="text-xl font-black text-slate-800 tracking-tighter italic leading-none">Redewendung</h2>
+            <h2 className="text-xl font-black text-slate-800 tracking-tighter italic leading-none">{t("home.idiom.title")}</h2>
           </div>
           <div className="flex items-center gap-4">
             <button
@@ -51,13 +51,13 @@ export function RandomIdiom({ initialIdiom = null }: RandomIdiomProps) {
               disabled={randomLoading}
               className="text-[10px] font-black text-slate-400 hover:text-primary transition-colors tracking-widest uppercase flex items-center gap-1.5 disabled:opacity-50"
             >
-              <RefreshCcw className={`w-3.5 h-3.5 ${randomLoading ? 'animate-spin' : ''}`} /> Update
+              <RefreshCcw className={`w-3.5 h-3.5 ${randomLoading ? 'animate-spin' : ''}`} /> {t("home.idiom.update")}
             </button>
             <Link
               href="/redewendung"
               className="text-[10px] font-black text-primary hover:text-primary/70 transition-colors tracking-widest uppercase flex items-center gap-1 group"
             >
-              Library <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1.5 transition-transform" />
+              {t("home.idiom.library")} <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1.5 transition-transform" />
             </Link>
           </div>
         </Card>
@@ -68,7 +68,7 @@ export function RandomIdiom({ initialIdiom = null }: RandomIdiomProps) {
               {/* Left Side: Visual / Content */}
               <div className="p-5 md:p-12 flex-1 space-y-4">
                 <div className="inline-flex items-center gap-2 px-3 py-1 bg-primary/10 rounded-full text-[10px] font-black text-primary uppercase tracking-widest">
-                  <Sparkles className="w-3 h-3" /> Daily Bloom
+                  <Sparkles className="w-3 h-3" /> {t("home.idiom.badge")}
                 </div>
 
                 <h3 className="text-3xl md:text-4xl font-black text-slate-800 tracking-tighter italic leading-tight">
@@ -80,7 +80,7 @@ export function RandomIdiom({ initialIdiom = null }: RandomIdiomProps) {
                 </p>
 
                 <div className="pt-2 flex items-center gap-2 text-primary text-xs font-black uppercase tracking-widest group-hover:gap-4 transition-all">
-                  Dive Into Meaning <ArrowRight className="w-3 h-3" />
+                  {t("home.idiom.cta")} <ArrowRight className="w-3 h-3" />
                 </div>
               </div>
 
@@ -93,7 +93,7 @@ export function RandomIdiom({ initialIdiom = null }: RandomIdiomProps) {
             <div className="flex items-center justify-center h-[260px] w-full bg-slate-50/50">
               <div className="flex flex-col items-center gap-3">
                 <div className="w-10 h-10 border-4 border-primary/20 border-t-primary rounded-full animate-spin" />
-                <p className="text-[10px] font-black text-slate-300 uppercase tracking-widest">Fetching a German pearl...</p>
+                <p className="text-[10px] font-black text-slate-300 uppercase tracking-widest">{t("home.idiom.loading")}</p>
               </div>
             </div>
           )}

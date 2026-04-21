@@ -3,25 +3,7 @@
 import { useLanguage } from "@/contexts/language-context";
 
 export function HeroSection() {
-  const { language } = useLanguage();
-
-  const getTitle = () => {
-    switch (language) {
-      case "de": return "Meistere die deutsche Grammatik";
-      case "vi": return "Chinh phục ngữ pháp tiếng Đức";
-      case "en":
-      default: return "Master German Grammar";
-    }
-  };
-
-  const getSubtitle = () => {
-    switch (language) {
-      case "de": return "Ein interaktives Quizsystem von A1 bis B2. Wähle eine Kategorie, um zu beginnen.";
-      case "vi": return "Hệ thống bài tập tương tác từ A1 đến B2. Chọn chuyên mục bên dưới để bắt đầu.";
-      case "en":
-      default: return "Interactive quiz system from A1 to B2 level. Select a category below to start learning.";
-    }
-  };
+  const { t } = useLanguage();
 
   return (
     <section className="text-center max-w-3xl mx-auto mb-16 pt-8">
@@ -31,11 +13,11 @@ export function HeroSection() {
       </div>
       
       <h1 className="text-5xl md:text-6xl font-extrabold text-slate-800 mb-6 tracking-tight leading-tight">
-        {getTitle()}
+        {t("home.heroTitle")}
       </h1>
       
       <p className="text-xl text-slate-500 leading-relaxed max-w-2xl mx-auto">
-        {getSubtitle()}
+        {t("home.heroSubtitle")}
       </p>
     </section>
   );
