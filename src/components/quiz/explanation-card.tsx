@@ -43,7 +43,7 @@ export function ExplanationCard({
 
    return (
       <div className={`
-      relative w-full rounded-[2.5rem] p-8 md:p-10 overflow-hidden border-2 transition-all duration-700
+      relative w-full rounded-[2.5rem] p-6 md:p-8 overflow-hidden border-2 transition-all duration-700
       ${isCorrect
             ? "bg-emerald-50/50 border-emerald-100 shadow-xl shadow-emerald-500/10"
             : "bg-rose-50/50 border-rose-100 shadow-xl shadow-rose-500/10"}
@@ -55,7 +55,7 @@ export function ExplanationCard({
             <div className="flex-1 space-y-6">
                <div className="flex items-center gap-3">
                   {isCorrect ? <CheckCircle2 className="w-6 h-6 text-emerald-500" /> : <XCircle className="w-6 h-6 text-rose-500" />}
-                  <h3 className={`text-3xl font-black italic tracking-tighter ${isCorrect ? "text-emerald-600" : "text-rose-600"}`}>
+                  <h3 className={`text-xl font-black italic tracking-tighter ${isCorrect ? "text-emerald-600" : "text-rose-600"}`}>
                      {getFeedbackHeader()}
                   </h3>
                </div>
@@ -63,7 +63,7 @@ export function ExplanationCard({
                {!isCorrect && (
                   <div className="space-y-1">
                      <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest">Correct Answer</p>
-                     <p className="text-xl font-black text-slate-800 tracking-tight leading-none">{question.correct_answer}</p>
+                     <h3 className="text-lg font-semibold italic text-primary-600">{question.correct_answer}</h3>
                   </div>
                )}
 

@@ -20,7 +20,7 @@ const paddings = {
   none: "p-0",
   sm: "p-4",
   md: "p-6",
-  lg: "p-8 md:p-10",
+  lg: "p-6 md:p-8",
   xl: "p-10 md:p-16",
 };
 
@@ -35,9 +35,9 @@ const radii = {
   full: "rounded-full",
 };
 
-export function Card({ 
-  children, 
-  className, 
+export function Card({
+  children,
+  className,
   padding = "md",
   radius = "3xl",
   hover = false,
@@ -48,7 +48,7 @@ export function Card({
   onClick
 }: CardProps) {
   return (
-    <div 
+    <div
       onClick={onClick}
       style={style}
       className={cn(

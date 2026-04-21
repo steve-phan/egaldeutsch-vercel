@@ -5,6 +5,7 @@ import (
 	"encoding/json"
 	"net/http"
 	"strconv"
+	"strings"
 	"time"
 
 	"egaldeutsch-vercel/db"
@@ -150,7 +151,46 @@ func fetchQuestions(category, level string, limit int, userID *primitive.ObjectI
 		}
 	}
 
-	return questions, nil
+	return filterValidQuestions(questions), nil
+}
+
+func filterValidQuestions(questions []models.QuizQuestion) []models.QuizQuestion {
+	valid := make([]models.QuizQuestion, 0, len(questions))
+	for _, q := range questions {
+		// Basic validation
+		if q.PromptDe == "" || q.CorrectAnswer == "" || q.Type == "" {
+			continue
+		}
+
+		// Normalize type (handle multiple_choice underscore)
+		if q.Type == "multiple_choice" {
+			q.Type = "multiple-choice"
+		}
+
+		// Type-specific validation
+		isValid := true
+		switch q.Type {
+		case "multiple-choice":
+			if len(q.Options) < 2 {
+				isValid = false
+			}
+		case "matching":
+			if len(q.Options) < 2 {
+				isValid = false
+			}
+		case "word-order":
+			// Ensure there are at least 2 words
+			words := strings.Fields(q.CorrectAnswer)
+			if len(words) < 2 {
+				isValid = false
+			}
+		}
+
+		if isValid {
+			valid = append(valid, q)
+		}
+	}
+	return valid
 }
 
 func fetchBalancedQuestions(category string, totalLimit int, userID *primitive.ObjectID) ([]models.QuizQuestion, error) {

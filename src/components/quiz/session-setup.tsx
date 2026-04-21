@@ -76,7 +76,7 @@ export function SessionSetup({ category, onStart }: SessionSetupProps) {
         <div className="w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center text-primary">
           <Settings2 className="w-5 h-5" />
         </div>
-        <h2 className="text-2xl md:text-3xl font-black text-slate-800 tracking-tighter italic leading-none">Auf geht&apos;s!</h2>
+        <h2 className="text-xl md:text-2xl font-black text-slate-800 tracking-tighter italic leading-none">Auf geht&apos;s!</h2>
       </div>
       <p className="text-slate-400 font-bold text-sm mb-10">Customize your session for maximum mastery.</p>
 

@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useQuizSession } from "@/hooks/use-quiz-session";
 import { useLanguage } from "@/contexts/language-context";
 import { QuizCategory } from "@/types/quiz";
@@ -16,8 +16,8 @@ import { Section } from "@/components/shared/layout/section";
 import { McqQuestion } from "@/components/quiz/mcq-question";
 import { FillInBlank } from "@/components/quiz/fill-in-blank";
 import { WordOrder } from "@/components/quiz/word-order";
+import { MatchingPairs } from "@/components/quiz/matching-pairs";
 import { Button } from "@/components/ui/button";
-import { useState } from "react";
 
 export function QuizClientView({ category }: { category: string }) {
   const router = useRouter();
@@ -136,35 +136,50 @@ export function QuizClientView({ category }: { category: string }) {
         <Section spacing="none" className="perspective-1000">
           <div className="glass-card-premium rounded-[2.5rem] overflow-hidden border border-white/50 shadow-premium">
             {currentQuestion.type === "multiple-choice" && (
-              <McqQuestion 
-                key={currentQuestion.id} 
-                question={currentQuestion} 
-                onAnswerChange={setAnswerDraft} 
-                disabled={disabled} 
+              <McqQuestion
+                key={currentQuestion.id}
+                question={currentQuestion}
+                onAnswerChange={setAnswerDraft}
+                disabled={disabled}
               />
             )}
             {currentQuestion.type === "fill-in-blank" && (
-              <FillInBlank 
-                key={currentQuestion.id} 
-                question={currentQuestion} 
-                onAnswerChange={setAnswerDraft} 
-                disabled={disabled} 
+              <FillInBlank
+                key={currentQuestion.id}
+                question={currentQuestion}
+                onAnswerChange={setAnswerDraft}
+                disabled={disabled}
               />
             )}
             {currentQuestion.type === "word-order" && (
-              <WordOrder 
-                key={currentQuestion.id} 
-                question={currentQuestion} 
-                onAnswerChange={setAnswerDraft} 
-                disabled={disabled} 
+              <WordOrder
+                key={currentQuestion.id}
+                question={currentQuestion}
+                onAnswerChange={setAnswerDraft}
+                disabled={disabled}
               />
             )}
+            {currentQuestion.type === "matching" && (
+              <MatchingPairs
+                key={currentQuestion.id}
+                pairs={(currentQuestion.options || []).map((opt, i) => {
+                  const [word, match] = opt.split("|");
+                  return { id: i, word: word || opt, match: match || "???" };
+                })}
+                onComplete={() => {
+                  setAnswerDraft("MATCHED");
+                  // For matching, we might want to auto-submit when done
+                  setTimeout(() => submitAnswer("MATCHED"), 500);
+                }}
+              />
+            )}
+
           </div>
         </Section>
 
         {/* Unified Submit Button (when in progress) */}
         {status === "in-progress" && (
-          <Section spacing="none" className="animate-in fade-in slide-in-from-bottom-2 duration-500">
+          <Section spacing="none" className="flex flex-col gap-4 animate-in fade-in slide-in-from-bottom-2 duration-500">
             <Button
               onClick={() => submitAnswer(answerDraft)}
               disabled={!answerDraft.trim()}
@@ -176,6 +191,18 @@ export function QuizClientView({ category }: { category: string }) {
               </span>
               <Sparkles className="w-5 h-5 relative z-10 animate-pulse" />
             </Button>
+
+            {/* Hidden skip for stuck users - visible only if no answer selected for 5s? 
+                Actually, let's just add a subtle skip button for practice mode if needed, 
+                or just rely on the validation. Let's add a small 'Report/Skip' below. */}
+            {!answerDraft.trim() && (
+              <button
+                onClick={nextQuestion}
+                className="text-[10px] font-black text-slate-300 uppercase tracking-widest hover:text-primary transition-colors text-center"
+              >
+                {language === "de" ? "Frage überspringen" : "Skip this question"}
+              </button>
+            )}
           </Section>
         )}
 

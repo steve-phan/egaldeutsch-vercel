@@ -64,7 +64,7 @@ export function WordOrder({ question, onAnswerChange, disabled }: WordOrderProps
       })
       .filter(t => t !== "")
       .join(" ");
-    
+
     // Better way: recalculate ordered words from the upcoming state
     const draftWords = newOrderedIds
       .map(oid => wordPool.find(w => w.id === oid)?.text || "")
@@ -88,7 +88,7 @@ export function WordOrder({ question, onAnswerChange, disabled }: WordOrderProps
   return (
     <div className="w-full flex flex-col items-center">
       {/* Header Prompt */}
-      <div className="w-full p-8 md:p-10 text-center relative border-b border-slate-100">
+      <div className="w-full p-6 md:p-8 text-center relative border-b border-slate-100">
         <div className="absolute top-4 right-8">
           <button
             onClick={reset}
@@ -99,14 +99,14 @@ export function WordOrder({ question, onAnswerChange, disabled }: WordOrderProps
           </button>
         </div>
         <p className="text-[10px] font-black text-slate-400 uppercase tracking-[0.3em] mb-4">Reorder the sentence</p>
-        <h2 className="text-2xl md:text-3xl font-black text-slate-800 mb-2 italic tracking-tighter leading-tight">
+        <h2 className="text-xl md:text-2xl font-black text-slate-800 mb-2 italic tracking-tighter leading-tight">
           {question.prompt_de}
         </h2>
         <p className="text-sm text-slate-400 mt-2">Grammar Construction</p>
       </div>
 
       {/* interaction Area */}
-      <div className="w-full p-8 md:p-10 space-y-10 bg-slate-50/20">
+      <div className="w-full p-6 md:p-8 space-y-10 bg-slate-50/20">
         {/* Build Area */}
         <div className="space-y-4">
           <div className="flex items-center justify-between mb-2">
@@ -119,7 +119,7 @@ export function WordOrder({ question, onAnswerChange, disabled }: WordOrderProps
                 key={word.id}
                 onClick={() => handleWordClick(word.id, false)}
                 disabled={disabled}
-                className="h-10 px-4 bg-primary text-white rounded-full font-black text-sm shadow-premium shadow-primary/20 animate-in zoom-in-90 hover:scale-105 active:scale-95 transition-all"
+                className="min-h-[2.5rem] py-2 px-4 bg-primary text-white rounded-xl font-black text-sm shadow-premium shadow-primary/20 animate-in zoom-in-90 hover:scale-105 active:scale-95 transition-all text-center"
               >
                 {word.text}
               </button>
@@ -133,8 +133,8 @@ export function WordOrder({ question, onAnswerChange, disabled }: WordOrderProps
           {wordPool.map((word) => (
             <div key={word.id} className="relative">
               {/* Visible placeholder to indicate an empty slot */}
-              <div 
-                className="h-10 px-4 rounded-full border border-dashed border-slate-200 bg-slate-50/50 font-black text-sm text-transparent flex items-center select-none"
+              <div
+                className="min-h-[2.5rem] py-2 px-4 rounded-xl border border-dashed border-slate-200 bg-slate-50/50 font-black text-sm text-transparent flex items-center justify-center select-none text-center"
               >
                 {word.text}
               </div>
@@ -144,7 +144,7 @@ export function WordOrder({ question, onAnswerChange, disabled }: WordOrderProps
                 <button
                   onClick={() => handleWordClick(word.id, true)}
                   disabled={disabled}
-                  className="absolute inset-0 h-10 px-4 bg-white border border-slate-100 rounded-full font-black text-sm text-slate-500 shadow-premium hover:border-primary/40 hover:text-primary active:scale-95 transition-all disabled:opacity-30 flex items-center justify-center animate-in fade-in zoom-in-90 fill-mode-forwards"
+                  className="absolute inset-0 min-h-[2.5rem] py-2 px-4 bg-white border border-slate-100 rounded-xl font-black text-sm text-slate-500 shadow-premium hover:border-primary/40 hover:text-primary active:scale-95 transition-all disabled:opacity-30 flex items-center justify-center text-center animate-in fade-in zoom-in-90 fill-mode-forwards"
                 >
                   {word.text}
                 </button>

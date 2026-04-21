@@ -1,8 +1,8 @@
+import { useCallback, useState } from "react";
 import { RotateCcw, Trophy, Shuffle, Sparkles, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/language-context";
-import { useCallback, useState } from "react";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "../ui/card";
+import { cn } from "@/lib/utils";
 
 interface MatchingPair {
   id: number;
@@ -142,62 +142,63 @@ export function MatchingPairs({ pairs, onComplete }: MatchingPairsProps) {
   };
 
   return (
-    <Card>
-      <CardHeader>
-        <CardTitle className="flex items-center gap-2">
-          <Shuffle className="h-5 w-5 text-blue-500" />
-          Matching Pairs
-        </CardTitle>
-        <CardDescription>
-          Match each word with its correct pair by clicking on the cards
-        </CardDescription>
-      </CardHeader>
-      <CardContent className="space-y-4">
-        {/* Score Display */}
-        <div className="flex justify-center gap-6 text-sm text-muted-foreground">
-          <span className="bg-muted px-3 py-1 rounded-full">
-            Matches: <strong className="text-foreground">{matches}/{pairs.length}</strong>
-          </span>
-          <span className="bg-muted px-3 py-1 rounded-full">
-            Attempts: <strong className="text-foreground">{attempts}</strong>
-          </span>
+    <div className="w-full flex flex-col items-center">
+      {/* Header Prompt Area */}
+      <div className="w-full p-6 md:p-8 text-center relative border-b border-slate-100 bg-white">
+        <div className="absolute top-4 right-8 text-primary animate-pulse opacity-20">
+          <Sparkles className="w-6 h-6" />
+        </div>
+        <p className="text-[10px] font-black text-slate-400 uppercase tracking-[0.3em] mb-4">Matching Pairs</p>
+        <h2 className="text-xl md:text-2xl font-black text-slate-800 mb-2 italic tracking-tighter leading-tight">
+          {language === "de" ? "Finde die Paare" : language === "vi" ? "Tìm các cặp tương ứng" : "Find the matching pairs"}
+        </h2>
+        <p className="text-sm text-slate-400 mt-2">Vocabulary Mastery</p>
+      </div>
+
+      {/* interaction Area */}
+      <div className="w-full p-6 md:p-8 space-y-8 bg-slate-50/20">
+        <div className="flex items-center justify-between">
+          <div className="flex gap-4 text-[10px] font-black text-slate-400 uppercase tracking-widest">
+            <span className="flex items-center gap-1.5">
+              <span className="w-2 h-2 rounded-full bg-emerald-500" />
+              {matches}/{pairs.length} Matches
+            </span>
+            <span className="flex items-center gap-1.5">
+              <span className="w-2 h-2 rounded-full bg-primary" />
+              {attempts} Attempts
+            </span>
+          </div>
+          <Shuffle className="w-4 h-4 text-slate-200" />
         </div>
 
         {/* Cards Grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
+        <div className="grid grid-cols-2 sm:grid-cols-2 gap-3">
           {cards.map((card) => (
             <Button
               key={card.id}
               onClick={() => handleCardClick(card)}
               disabled={card.isFlipped || card.isMatched || isChecking}
               className={`
-                relative h-20 sm:h-24 rounded-2xl font-black text-sm sm:text-base
-                transition-all duration-300 transform active:scale-95
+                relative h-24 rounded-2xl font-black text-sm
+                transition-all duration-500 transform active:scale-95
                 ${card.isMatched
-                  ? "bg-emerald-500 text-white cursor-default scale-95 shadow-lg shadow-emerald-200"
+                  ? "bg-emerald-500 text-white cursor-default scale-95 shadow-lg shadow-emerald-200 border-transparent"
                   : card.isFlipped
-                    ? "bg-primary text-white shadow-lg shadow-primary/30"
-                    : "bg-white border-2 border-slate-100 text-slate-400 hover:border-primary/30 hover:text-primary hover:shadow-premium"
+                    ? "bg-primary text-white shadow-xl shadow-primary/30 border-transparent"
+                    : "bg-white border-2 border-slate-100 text-slate-500 hover:border-primary/30 hover:shadow-premium"
                 }
               `}
-              style={{
-                perspective: "1000px",
-              }}
             >
-              <span
-                className={`
-                  absolute inset-0 flex items-center justify-center p-2 text-center
-                  ${card.isFlipped || card.isMatched ? "opacity-100" : "opacity-0"}
-                `}
-              >
+              <span className={cn(
+                "absolute inset-0 flex items-center justify-center p-3 text-center transition-all duration-300",
+                card.isFlipped || card.isMatched ? "opacity-100 scale-100" : "opacity-0 scale-75"
+              )}>
                 {card.content}
               </span>
-              <span
-                className={`
-                  absolute inset-0 flex items-center justify-center text-2xl
-                  ${card.isFlipped || card.isMatched ? "opacity-0" : "opacity-100"}
-                `}
-              >
+              <span className={cn(
+                "absolute inset-0 flex items-center justify-center text-xl transition-all duration-300",
+                card.isFlipped || card.isMatched ? "opacity-0 scale-125" : "opacity-100 scale-100"
+              )}>
                 ❓
               </span>
             </Button>
@@ -206,28 +207,28 @@ export function MatchingPairs({ pairs, onComplete }: MatchingPairsProps) {
 
         {/* Completion Message */}
         {isComplete && (
-          <div className="p-4 rounded-lg text-center bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-300">
-            <div className="flex items-center justify-center gap-2 font-medium mb-2">
-              <Trophy className="h-5 w-5" />
-              Congratulations! You matched all pairs!
+          <div className="p-6 rounded-[2rem] text-center bg-emerald-50 border-2 border-emerald-100 text-emerald-800 animate-in zoom-in-95 duration-500">
+            <div className="flex items-center justify-center gap-2 font-black uppercase tracking-widest text-xs mb-2">
+              <Trophy className="h-4 w-4 text-emerald-500" />
+              Perfect Match!
             </div>
-            <p className="text-sm">
+            <p className="text-sm font-bold italic">
               {getScoreEmoji()} You completed it in {attempts} attempts!
-              {attempts === pairs.length && " Perfect score!"}
             </p>
           </div>
         )}
-      </CardContent>
-      <CardFooter className="flex flex-col gap-4">
-        <Button
-          onClick={handleReset}
-          variant="outline"
-          className="w-full h-12 rounded-2xl border-2 border-slate-100 font-black text-slate-400 hover:text-primary hover:border-primary/30 transition-all flex items-center justify-center gap-2"
-        >
-          <RotateCcw className="w-4 h-4" />
-          {language === "de" ? "Nochmal spielen" : "Play Again"}
-        </Button>
-      </CardFooter>
-    </Card>
+
+        <div className="pt-4 border-t border-slate-100">
+          <Button
+            onClick={handleReset}
+            variant="outline"
+            className="w-full h-14 rounded-2xl border-2 border-slate-100 font-black text-slate-400 hover:text-primary hover:border-primary/30 transition-all flex items-center justify-center gap-2 bg-white"
+          >
+            <RotateCcw className="w-4 h-4" />
+            {language === "de" ? "Nochmal spielen" : language === "vi" ? "Chơi lại" : "Play Again"}
+          </Button>
+        </div>
+      </div>
+    </div>
   );
 }

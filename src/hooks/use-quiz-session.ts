@@ -61,6 +61,23 @@ export function useQuizSession(): UseQuizSessionResult {
     }
   }, []);
 
+  const isValidQuestion = (q: QuizQuestion): boolean => {
+    if (!q.id || !q.prompt_de || !q.correct_answer || !q.type) return false;
+
+    switch (q.type) {
+      case "multiple-choice":
+        return !!q.options && q.options.length >= 2;
+      case "fill-in-blank":
+        return true; // prompt and correct_answer already checked
+      case "word-order":
+        return q.correct_answer.split(/\s+/).length >= 2;
+      case "matching":
+        return !!q.options && q.options.length >= 2 && q.options.some(o => o.includes("|"));
+      default:
+        return false;
+    }
+  };
+
   const currentQuestion = questions[currentIndex] || null;
 
   const startSession = async (config: QuizSessionConfig) => {
@@ -85,13 +102,21 @@ export function useQuizSession(): UseQuizSessionResult {
       if (!res.ok) throw new Error("Failed to fetch questions");
 
       const data: QuizQuestion[] = await res.json();
+      
+      // Normalize types and filter valid questions
+      const normalizedData = data.map(q => ({
+        ...q,
+        type: (q.type as string).replace("_", "-") as any
+      }));
+      
+      const validQuestions = normalizedData.filter(isValidQuestion);
 
-      if (data.length === 0) {
+      if (validQuestions.length === 0) {
         setStatus("error");
         return;
       }
 
-      setQuestions(data);
+      setQuestions(validQuestions);
       setCurrentIndex(0);
       setAnswers([]);
       setLastAnswerEvaluated(false);
