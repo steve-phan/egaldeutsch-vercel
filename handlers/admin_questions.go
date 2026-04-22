@@ -71,6 +71,11 @@ func AdminQuestionsHandler(w http.ResponseWriter, r *http.Request) {
 			return
 		}
 
+		if err := q.Validate(); err != nil {
+			http.Error(w, "Validation failed: "+err.Error(), http.StatusBadRequest)
+			return
+		}
+
 		if mock.IsMockMode() {
 			// Mock conversion hack not needed if mock mode not used, but keep for fallback
 			mockQ := mock.MockQuizQuestion{
@@ -110,6 +115,11 @@ func AdminQuestionsHandler(w http.ResponseWriter, r *http.Request) {
 		var q models.QuizQuestion
 		if err := json.NewDecoder(r.Body).Decode(&q); err != nil {
 			http.Error(w, "Invalid request body", http.StatusBadRequest)
+			return
+		}
+
+		if err := q.Validate(); err != nil {
+			http.Error(w, "Validation failed: "+err.Error(), http.StatusBadRequest)
 			return
 		}
 

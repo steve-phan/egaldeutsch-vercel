@@ -5,7 +5,6 @@ import (
 	"encoding/json"
 	"net/http"
 	"strconv"
-	"strings"
 	"time"
 
 	"egaldeutsch-vercel/db"
@@ -123,7 +122,7 @@ func getAnsweredIDs(ctx context.Context, userID *primitive.ObjectID, category st
 
 func fetchQuestions(ctx context.Context, category, level string, limit int, userID *primitive.ObjectID, excludeIDs []primitive.ObjectID) ([]models.QuizQuestion, error) {
 	collection := db.GetCollection("questions")
-	
+
 	matchStage := bson.M{}
 	if category != "" {
 		matchStage["category"] = category
@@ -177,7 +176,7 @@ func fetchQuestions(ctx context.Context, category, level string, limit int, user
 		if level != "" {
 			fallbackMatch["level"] = level
 		}
-		
+
 		pipeline = mongo.Pipeline{
 			{{Key: "$match", Value: fallbackMatch}},
 			{{Key: "$sample", Value: bson.M{"size": limit}}},
@@ -207,38 +206,11 @@ func fetchQuestions(ctx context.Context, category, level string, limit int, user
 func filterValidQuestions(questions []models.QuizQuestion) []models.QuizQuestion {
 	valid := make([]models.QuizQuestion, 0, len(questions))
 	for _, q := range questions {
-		// Basic validation
-		if q.PromptDe == "" || q.CorrectAnswer == "" || q.Type == "" {
+		if err := q.Validate(); err != nil {
+			// Skip invalid questions
 			continue
 		}
-
-		// Normalize type (handle multiple_choice underscore)
-		if q.Type == "multiple_choice" {
-			q.Type = "multiple-choice"
-		}
-
-		// Type-specific validation
-		isValid := true
-		switch q.Type {
-		case "multiple-choice":
-			if len(q.Options) < 2 {
-				isValid = false
-			}
-		case "matching":
-			if len(q.Options) < 2 {
-				isValid = false
-			}
-		case "word-order":
-			// Ensure there are at least 2 words
-			words := strings.Fields(q.CorrectAnswer)
-			if len(words) < 2 {
-				isValid = false
-			}
-		}
-
-		if isValid {
-			valid = append(valid, q)
-		}
+		valid = append(valid, q)
 	}
 	return valid
 }
@@ -259,7 +231,7 @@ func fetchBalancedQuestions(ctx context.Context, category string, totalLimit int
 			continue
 		}
 		allQuestions = append(allQuestions, qs...)
-		
+
 		// Update exclusions to prevent duplicates across level segments
 		for _, q := range qs {
 			excludeIDs = append(excludeIDs, q.ID)
