@@ -95,8 +95,14 @@ export function useQuizSession(): UseQuizSessionResult {
         config.level === "mixed" ? "" : `&level=${config.level}`;
       const modeParam = config.mode ? `&mode=${config.mode}` : "";
       
+      const headers: HeadersInit = {};
+      if (session?.user?.accessToken) {
+        headers["Authorization"] = `Bearer ${session.user.accessToken}`;
+      }
+
       const res = await fetch(
         `${API_ROUTES.QUIZ_QUESTIONS}?category=${config.category}${levelParam}${modeParam}&limit=${config.totalQuestions}`,
+        { headers }
       );
 
       if (!res.ok) throw new Error("Failed to fetch questions");

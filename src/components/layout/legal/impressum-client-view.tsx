@@ -26,7 +26,7 @@ export function ImpressumClientView() {
                 <p className="text-sm">
                   EgalDeutsch Learning Platform<br />
                   Steve Phan<br />
-                  Dorfstraße 35<br />
+                  Dorfstraße 35P<br />
                   13057 Berlin
                 </p>
               </div>
@@ -42,7 +42,7 @@ export function ImpressumClientView() {
                 <h2 className="text-xl font-black text-slate-800 mb-3 italic">Redaktionell verantwortlich</h2>
                 <p className="text-sm">
                   Steve Phan<br />
-                  Dorfstraße 35<br />
+                  Dorfstraße 35P<br />
                   13057 Berlin
                 </p>
               </div>

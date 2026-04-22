@@ -32,7 +32,7 @@ export function DatenschutzClientView() {
                         <h3 className="text-lg font-black text-slate-800 italic">Datenerfassung auf dieser Website</h3>
                         <p className="text-sm">
                            <strong>Wer ist verantwortlich für die Datenerfassung?</strong><br />
-                           Steve Phan, Dorfstraße 35, 13057 Berlin.<br />
+                           Steve Phan, Dorfstraße 35P, 13057 Berlin.<br />
                            E-Mail: 	egaldeutsch.com@gmail.com
                         </p>
                      </Card>

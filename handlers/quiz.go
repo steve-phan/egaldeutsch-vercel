@@ -60,6 +60,9 @@ func QuizQuestionsHandler(w http.ResponseWriter, r *http.Request) {
 		}
 	}
 
+	ctx, cancel := context.WithTimeout(context.Background(), 30*time.Second)
+	defer cancel()
+
 	if mock.IsMockMode() {
 		mockDB := mock.GetMockDB()
 		questions := mockDB.GetQuestions(category, level, limit)
@@ -69,9 +72,9 @@ func QuizQuestionsHandler(w http.ResponseWriter, r *http.Request) {
 
 	var questions []models.QuizQuestion
 	if mode == "test" {
-		questions, err = fetchBalancedQuestions("", limit, userID)
+		questions, err = fetchBalancedQuestions(ctx, category, limit, userID)
 	} else {
-		questions, err = fetchQuestions(category, level, limit, userID)
+		questions, err = fetchQuestions(ctx, category, level, limit, userID, nil)
 	}
 
 	if err != nil {
@@ -86,12 +89,41 @@ func QuizQuestionsHandler(w http.ResponseWriter, r *http.Request) {
 	json.NewEncoder(w).Encode(questions)
 }
 
-func fetchQuestions(category, level string, limit int, userID *primitive.ObjectID) ([]models.QuizQuestion, error) {
-	collection := db.GetCollection("questions")
+func getAnsweredIDs(ctx context.Context, userID *primitive.ObjectID, category string) []primitive.ObjectID {
 	sessionColl := db.GetCollection("sessions")
-	ctx, cancel := context.WithTimeout(context.Background(), 15*time.Second)
-	defer cancel()
+	filter := bson.M{"user_id": userID}
+	if category != "" {
+		filter["category"] = category
+	}
 
+	pipeline := mongo.Pipeline{
+		{{Key: "$match", Value: filter}},
+		{{Key: "$unwind", Value: "$question_ids"}},
+		{{Key: "$group", Value: bson.D{
+			{Key: "_id", Value: nil},
+			{Key: "ids", Value: bson.D{{Key: "$addToSet", Value: "$question_ids"}}},
+		}}},
+	}
+
+	cursor, err := sessionColl.Aggregate(ctx, pipeline)
+	if err != nil {
+		return nil
+	}
+	defer cursor.Close(ctx)
+
+	var result []struct {
+		IDs []primitive.ObjectID `bson:"ids"`
+	}
+	if err = cursor.All(ctx, &result); err != nil || len(result) == 0 {
+		return nil
+	}
+
+	return result[0].IDs
+}
+
+func fetchQuestions(ctx context.Context, category, level string, limit int, userID *primitive.ObjectID, excludeIDs []primitive.ObjectID) ([]models.QuizQuestion, error) {
+	collection := db.GetCollection("questions")
+	
 	matchStage := bson.M{}
 	if category != "" {
 		matchStage["category"] = category
@@ -100,30 +132,28 @@ func fetchQuestions(category, level string, limit int, userID *primitive.ObjectI
 		matchStage["level"] = level
 	}
 
+	// Combine answering filtering and manual exclusion
+	allExclude := excludeIDs
 	if userID != nil {
-		filter := bson.M{"user_id": userID}
-		if category != "" {
-			filter["category"] = category
-		}
-
-		cursor, err := sessionColl.Find(ctx, filter)
-		if err == nil {
-			var sessions []models.QuizSession
-			if err = cursor.All(ctx, &sessions); err == nil {
-				answeredIDs := []primitive.ObjectID{}
-				for _, s := range sessions {
-					answeredIDs = append(answeredIDs, s.QuestionIDs...)
-				}
-
-				if len(answeredIDs) > 0 {
-					matchStage["_id"] = bson.M{"$nin": answeredIDs}
-				}
-			}
-		}
+		answered := getAnsweredIDs(ctx, userID, category)
+		allExclude = append(allExclude, answered...)
 	}
 
+	if len(allExclude) > 0 {
+		matchStage["_id"] = bson.M{"$nin": allExclude}
+	}
+
+	// Variety logic: group by prompt prefix to avoid too many similar templates in one go
 	pipeline := mongo.Pipeline{
 		{{Key: "$match", Value: matchStage}},
+		{{Key: "$addFields", Value: bson.M{
+			"prompt_prefix": bson.M{"$substr": bson.A{"$prompt_de", 0, 15}},
+		}}},
+		{{Key: "$group", Value: bson.D{
+			{Key: "_id", Value: "$prompt_prefix"},
+			{Key: "doc", Value: bson.D{{Key: "$first", Value: "$$ROOT"}}},
+		}}},
+		{{Key: "$replaceRoot", Value: bson.M{"newRoot": "$doc"}}},
 		{{Key: "$sample", Value: bson.M{"size": limit}}},
 	}
 
@@ -138,16 +168,36 @@ func fetchQuestions(category, level string, limit int, userID *primitive.ObjectI
 		return nil, err
 	}
 
-	if len(questions) == 0 && userID != nil && matchStage["_id"] != nil {
-		delete(matchStage, "_id")
+	// Fallback if pool is exhausted by variety/exclusion
+	if len(questions) < limit {
+		fallbackMatch := bson.M{}
+		if category != "" {
+			fallbackMatch["category"] = category
+		}
+		if level != "" {
+			fallbackMatch["level"] = level
+		}
+		
 		pipeline = mongo.Pipeline{
-			{{Key: "$match", Value: matchStage}},
+			{{Key: "$match", Value: fallbackMatch}},
 			{{Key: "$sample", Value: bson.M{"size": limit}}},
 		}
 		cursor, err = collection.Aggregate(ctx, pipeline)
 		if err == nil {
 			defer cursor.Close(ctx)
-			cursor.All(ctx, &questions)
+			var fallbackQs []models.QuizQuestion
+			if err = cursor.All(ctx, &fallbackQs); err == nil && len(fallbackQs) > 0 {
+				seen := make(map[string]bool)
+				for _, q := range questions {
+					seen[q.ID.Hex()] = true
+				}
+				for _, q := range fallbackQs {
+					if !seen[q.ID.Hex()] && len(questions) < limit {
+						questions = append(questions, q)
+						seen[q.ID.Hex()] = true
+					}
+				}
+			}
 		}
 	}
 
@@ -193,7 +243,7 @@ func filterValidQuestions(questions []models.QuizQuestion) []models.QuizQuestion
 	return valid
 }
 
-func fetchBalancedQuestions(category string, totalLimit int, userID *primitive.ObjectID) ([]models.QuizQuestion, error) {
+func fetchBalancedQuestions(ctx context.Context, category string, totalLimit int, userID *primitive.ObjectID) ([]models.QuizQuestion, error) {
 	levels := []string{"A1", "A2", "B1", "B2"}
 	perLevel := totalLimit / len(levels)
 	if perLevel == 0 {
@@ -201,17 +251,24 @@ func fetchBalancedQuestions(category string, totalLimit int, userID *primitive.O
 	}
 
 	var allQuestions []models.QuizQuestion
+	var excludeIDs []primitive.ObjectID
+
 	for _, level := range levels {
-		qs, err := fetchQuestions(category, level, perLevel, userID)
+		qs, err := fetchQuestions(ctx, category, level, perLevel, userID, excludeIDs)
 		if err != nil {
 			continue
 		}
 		allQuestions = append(allQuestions, qs...)
+		
+		// Update exclusions to prevent duplicates across level segments
+		for _, q := range qs {
+			excludeIDs = append(excludeIDs, q.ID)
+		}
 	}
 
 	if len(allQuestions) < totalLimit {
 		needed := totalLimit - len(allQuestions)
-		qs, _ := fetchQuestions(category, "", needed, userID)
+		qs, _ := fetchQuestions(ctx, category, "", needed, userID, excludeIDs)
 		allQuestions = append(allQuestions, qs...)
 	}
 
