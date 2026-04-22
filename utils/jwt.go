@@ -32,7 +32,8 @@ type Claims struct {
 }
 
 func GenerateToken(userID, email, role string) (string, error) {
-	expirationTime := time.Now().Add(24 * time.Hour)
+	// Set expiration to 30 days to match frontend session
+	expirationTime := time.Now().Add(30 * 24 * time.Hour)
 	claims := &Claims{
 		UserID: userID,
 		Email:  email,
