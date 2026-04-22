@@ -38,6 +38,15 @@ func QuizQuestionsHandler(w http.ResponseWriter, r *http.Request) {
 	category := r.URL.Query().Get("category")
 	level := r.URL.Query().Get("level")
 	mode := r.URL.Query().Get("mode")
+
+	// Normalize "mixed" values to empty strings for filtering
+	if category == "mixed" {
+		category = ""
+	}
+	if level == "mixed" {
+		level = ""
+	}
+
 	limitStr := r.URL.Query().Get("limit")
 	limit := 10 // Default
 
@@ -135,18 +144,23 @@ func fetchQuestions(ctx context.Context, category, level string, limit int, user
 	allExclude := excludeIDs
 	if userID != nil {
 		answered := getAnsweredIDs(ctx, userID, category)
-		allExclude = append(allExclude, answered...)
+		if len(answered) > 0 {
+			allExclude = append(allExclude, answered...)
+		}
 	}
 
 	if len(allExclude) > 0 {
 		matchStage["_id"] = bson.M{"$nin": allExclude}
 	}
 
+	// Ensure we only process documents with a prompt to avoid aggregation errors
+	matchStage["prompt_de"] = bson.M{"$exists": true, "$type": "string"}
+
 	// Variety logic: group by prompt prefix to avoid too many similar templates in one go
 	pipeline := mongo.Pipeline{
 		{{Key: "$match", Value: matchStage}},
 		{{Key: "$addFields", Value: bson.M{
-			"prompt_prefix": bson.M{"$substr": bson.A{"$prompt_de", 0, 15}},
+			"prompt_prefix": bson.M{"$substrCP": bson.A{"$prompt_de", 0, 15}},
 		}}},
 		{{Key: "$group", Value: bson.D{
 			{Key: "_id", Value: "$prompt_prefix"},
@@ -156,15 +170,13 @@ func fetchQuestions(ctx context.Context, category, level string, limit int, user
 		{{Key: "$sample", Value: bson.M{"size": limit}}},
 	}
 
-	cursor, err := collection.Aggregate(ctx, pipeline)
-	if err != nil {
-		return nil, err
-	}
-	defer cursor.Close(ctx)
-
 	var questions []models.QuizQuestion
-	if err = cursor.All(ctx, &questions); err != nil {
-		return nil, err
+	cursor, err := collection.Aggregate(ctx, pipeline)
+	if err == nil {
+		defer cursor.Close(ctx)
+		if err = cursor.All(ctx, &questions); err != nil {
+			questions = []models.QuizQuestion{}
+		}
 	}
 
 	// Fallback if pool is exhausted by variety/exclusion
@@ -200,7 +212,8 @@ func fetchQuestions(ctx context.Context, category, level string, limit int, user
 		}
 	}
 
-	return filterValidQuestions(questions), nil
+	validQs := filterValidQuestions(questions)
+	return validQs, nil
 }
 
 func filterValidQuestions(questions []models.QuizQuestion) []models.QuizQuestion {
