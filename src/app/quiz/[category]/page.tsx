@@ -21,6 +21,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: `Master ${meta.label.en} — German Grammar Quiz`,
     description: meta.description.en,
     keywords: [...(meta.keywords || []), "German Quiz", "Grammar Practice"],
+    alternates: {
+      canonical: `/quiz/${category}`,
+    },
     openGraph: {
       title: `Practice ${meta.label.en} on EgalDeutsch`,
       description: `Test your skills in ${meta.label.en}. Interactive German grammar practice for all levels.`,

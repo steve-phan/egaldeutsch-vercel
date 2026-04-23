@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   title: "Redewendung — German Idioms Directory",
   description:
     "Explore the colorful world of German idioms. Meanings, origins, and examples for learners of all levels.",
+  alternates: {
+    canonical: "/redewendung",
+  },
   openGraph: {
     title: "German Idioms Directory — EgalDeutsch",
     description: "Explore the colorful world of German idioms and mastery.",

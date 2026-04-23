@@ -70,6 +70,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: `${idiom.title} — German Idiom Meaning & Origin`,
     description: idiom.meaning_de,
+    alternates: {
+      canonical: `/redewendung/${slug}`,
+    },
     openGraph: {
       title: idiom.title,
       description: idiom.meaning_de,
