@@ -26,7 +26,7 @@ export function IdiomsClientView({ initialIdioms }: IdiomsClientViewProps) {
         idiom.meaning_en.toLowerCase().includes(query) ||
         idiom.meaning_vi.toLowerCase().includes(query) ||
         idiom.meaning_de.toLowerCase().includes(query) ||
-        idiom.tags.some((tag) => tag.toLowerCase().includes(query))
+        idiom.tags?.some((tag) => tag.toLowerCase().includes(query))
       );
     });
   }, [searchQuery, initialIdioms]);
@@ -54,7 +54,7 @@ export function IdiomsClientView({ initialIdioms }: IdiomsClientViewProps) {
           <p className="text-slate-400 font-bold max-w-xs mx-auto">
             {t("idioms.no_results_desc").replace("{query}", searchQuery)}
           </p>
-          <button 
+          <button
             onClick={() => setSearchQuery("")}
             className="mt-8 px-6 py-2.5 bg-slate-100 text-slate-500 rounded-xl text-xs font-black uppercase tracking-widest hover:bg-slate-200 transition-colors"
           >
@@ -66,11 +66,11 @@ export function IdiomsClientView({ initialIdioms }: IdiomsClientViewProps) {
       {/* Results Counter if searching */}
       {searchQuery.length >= 3 && filteredIdioms.length > 0 && (
         <div className="text-center">
-            <span className="px-4 py-2 bg-slate-50 rounded-full text-[10px] font-black text-slate-400 uppercase tracking-widest border border-slate-100">
-                {t("idioms.results_count")
-                  .replace("{count}", filteredIdioms.length.toString())
-                  .replace("{query}", searchQuery)}
-            </span>
+          <span className="px-4 py-2 bg-slate-50 rounded-full text-[10px] font-black text-slate-400 uppercase tracking-widest border border-slate-100">
+            {t("idioms.results_count")
+              .replace("{count}", filteredIdioms.length.toString())
+              .replace("{query}", searchQuery)}
+          </span>
         </div>
       )}
     </div>

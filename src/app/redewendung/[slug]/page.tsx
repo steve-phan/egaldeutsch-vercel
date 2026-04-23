@@ -95,6 +95,21 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
+export async function generateStaticParams() {
+  try {
+    const res = await fetch(`${BACKEND_URL}${API_ROUTES.IDIOMS}`);
+    if (!res.ok) return [];
+    
+    const idioms = await res.json();
+    return idioms.map((idiom: any) => ({
+      slug: idiom.slug,
+    }));
+  } catch (error) {
+    console.error("Failed to generate static params for idioms:", error);
+    return [];
+  }
+}
+
 export default async function IdiomDetailPage({ params }: Props) {
   const { slug } = await params;
   const idiom = await getIdiom(slug);

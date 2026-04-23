@@ -36,7 +36,7 @@ export function IdiomSearchBar({ idioms, onSearch }: IdiomSearchBarProps) {
     if (query.length >= 2) {
       const filtered = idioms
         .filter((idiom) => {
-          const searchContent = `${idiom.title} ${idiom.meaning_de} ${idiom.meaning_en} ${idiom.meaning_vi} ${idiom.tags.join(" ")}`.toLowerCase();
+          const searchContent = `${idiom.title} ${idiom.meaning_de} ${idiom.meaning_en} ${idiom.meaning_vi} ${idiom.tags?.join(" ")}`.toLowerCase();
           return searchContent.includes(query.toLowerCase());
         })
         .slice(0, 5);

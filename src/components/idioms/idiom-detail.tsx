@@ -26,10 +26,10 @@ export function IdiomDetail({ idiom }: IdiomDetailProps) {
         <div className="inline-flex w-24 h-24 bg-white shadow-floating rounded-3xl items-center justify-center text-5xl border border-slate-100 animate-bounce-slow overflow-hidden">
           {idiom.thumbnail && (idiom.thumbnail.startsWith("http") || idiom.thumbnail.startsWith("/")) ? (
             <div className="relative w-full h-full">
-              <Image 
-                src={idiom.thumbnail} 
-                alt={idiom.title} 
-                fill 
+              <Image
+                src={idiom.thumbnail}
+                alt={idiom.title}
+                fill
                 className="object-cover"
                 sizes="96px"
               />
@@ -48,7 +48,7 @@ export function IdiomDetail({ idiom }: IdiomDetailProps) {
             {getMeaning()}
           </p>
           <div className="flex gap-2 mt-4">
-            {idiom.tags.map((tag) => (
+            {idiom.tags?.map((tag) => (
               <span key={tag} className="px-4 py-1.5 bg-slate-100 rounded-full text-[11px] font-black uppercase tracking-widest text-slate-500">
                 #{tag}
               </span>

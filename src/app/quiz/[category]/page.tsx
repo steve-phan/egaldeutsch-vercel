@@ -45,8 +45,22 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     },
   };
 }
+export const dynamic = "force-static";
+export const dynamicParams = true;
+
+export async function generateStaticParams() {
+  return CATEGORY_META.map((cat) => ({
+    category: cat.id,
+  }));
+}
+
+import { Suspense } from "react";
 
 export default async function QuizOrchestrator({ params }: Props) {
   const { category } = await params;
-  return <QuizClientView category={category} />;
+  return (
+    <Suspense fallback={<div className="min-h-screen flex items-center justify-center text-slate-400">Loading...</div>}>
+      <QuizClientView category={category} />
+    </Suspense>
+  );
 }
