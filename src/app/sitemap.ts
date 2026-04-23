@@ -33,12 +33,25 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         if (contentType && contentType.includes("application/json")) {
             const idioms = await res.json();
             if (Array.isArray(idioms)) {
-                idiomRoutes = idioms.map((idiom: any) => ({
-                    url: `${baseUrl}/redewendung/${idiom.slug}`,
-                    lastModified: new Date(idiom.updated_at || new Date()),
-                    changeFrequency: "monthly",
-                    priority: 0.6,
-                }));
+                idiomRoutes = idioms
+                    .filter((idiom: any) => idiom.slug && idiom.slug.trim() !== "")
+                    .map((idiom: any) => {
+                        // Safety check for invalid/zero dates from Go backend (0001-01-01)
+                        let lastMod = new Date();
+                        if (idiom.updated_at) {
+                            const d = new Date(idiom.updated_at);
+                            if (!isNaN(d.getTime()) && d.getFullYear() > 2000) {
+                                lastMod = d;
+                            }
+                        }
+
+                        return {
+                            url: `${baseUrl}/redewendung/${idiom.slug}`,
+                            lastModified: lastMod,
+                            changeFrequency: "monthly",
+                            priority: 0.6,
+                        };
+                    });
             }
         } else {
             console.warn("Sitemap: Backend returned non-JSON response for idioms.");

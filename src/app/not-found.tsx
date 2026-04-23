@@ -70,7 +70,7 @@ export default function NotFound() {
           <Link href="/lessons" className="text-sm font-bold text-slate-400 hover:text-primary transition-colors flex items-center gap-1">
             Lessons
           </Link>
-          <Link href="/quiz/general" className="text-sm font-bold text-slate-400 hover:text-primary transition-colors flex items-center gap-1">
+          <Link href="/quiz/artikel" className="text-sm font-bold text-slate-400 hover:text-primary transition-colors flex items-center gap-1">
             Quizzes
           </Link>
           <Link href="/profile" className="text-sm font-bold text-slate-400 hover:text-primary transition-colors flex items-center gap-1">

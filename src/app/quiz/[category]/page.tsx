@@ -49,9 +49,9 @@ export const dynamic = "force-static";
 export const dynamicParams = true;
 
 export async function generateStaticParams() {
-  return CATEGORY_META.map((cat) => ({
+  return [...CATEGORY_META.map((cat) => ({
     category: cat.id,
-  }));
+  })), { category: "mixed" }];
 }
 
 import { Suspense } from "react";
