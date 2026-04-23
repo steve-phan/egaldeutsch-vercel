@@ -11,6 +11,6 @@ export default function robots(): MetadataRoute.Robots {
         "/results/", // Results are user-specific and shouldn't be indexed
       ],
     },
-    sitemap: "https://www.egaldeutsch.com/sitemap.xml",
+    sitemap: "https://egaldeutsch.com/sitemap.xml",
   };
 }

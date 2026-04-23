@@ -2,7 +2,7 @@ import { MetadataRoute } from "next";
 import { CATEGORY_META, BACKEND_URL, API_ROUTES } from "@/lib/constants";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const baseUrl = "https://www.egaldeutsch.com";
+  const baseUrl = "https://egaldeutsch.com";
 
   // 1. Static Routes
   const staticRoutes: MetadataRoute.Sitemap = [

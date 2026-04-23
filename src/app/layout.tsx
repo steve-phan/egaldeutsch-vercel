@@ -22,7 +22,7 @@ const openSans = Open_Sans({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.egaldeutsch.com"),
+  metadataBase: new URL("https://egaldeutsch.com"),
   title: {
     default: "EgalDeutsch — German Grammar Learning Platform",
     template: "%s | EgalDeutsch"
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://www.egaldeutsch.com",
+    url: "https://egaldeutsch.com",
     siteName: "EgalDeutsch",
     title: "EgalDeutsch — German Grammar Mastery",
     description: "EgalDeutsch is the ultimate interactive platform for German grammar mastery and exam success.",
