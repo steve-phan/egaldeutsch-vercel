@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"log"
 	"net/http"
+	"os"
 
 	"egaldeutsch-vercel/db"
 	"egaldeutsch-vercel/mock"
@@ -15,6 +16,13 @@ func main() {
 	// Securely load NextJS adjacent ENV keys when running locally
 	if err := godotenv.Load(".env.local"); err != nil {
 		log.Println("No .env.local file found, relying on system vars")
+	}
+
+	// Verify if BREVO_API_KEY is loaded
+	if os.Getenv("BREVO_API_KEY") == "" {
+		log.Println("WARNING: BREVO_API_KEY is not set. Emails will not be sent.")
+	} else {
+		log.Println("BREVO_API_KEY is successfully loaded.")
 	}
 
 	// Initialize mock database for localhost development

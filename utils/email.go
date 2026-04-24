@@ -74,27 +74,36 @@ func sendEmail(reqBody EmailRequest) error {
 
 	body, err := json.Marshal(reqBody)
 	if err != nil {
+		fmt.Printf("Error marshaling email body: %v\n", err)
 		return err
 	}
 
 	req, err := http.NewRequest("POST", "https://api.brevo.com/v3/smtp/email", bytes.NewBuffer(body))
 	if err != nil {
+		fmt.Printf("Error creating email request: %v\n", err)
 		return err
 	}
 
 	req.Header.Set("Content-Type", "application/json")
 	req.Header.Set("api-key", apiKey)
 
+	fmt.Printf("Sending email to %s with template %d...\n", reqBody.To[0].Email, reqBody.TemplateID)
+
 	client := &http.Client{Timeout: 10 * time.Second}
 	resp, err := client.Do(req)
 	if err != nil {
+		fmt.Printf("Error sending email: %v\n", err)
 		return err
 	}
 	defer resp.Body.Close()
 
 	if resp.StatusCode >= 400 {
+		var errResp map[string]interface{}
+		json.NewDecoder(resp.Body).Decode(&errResp)
+		fmt.Printf("Failed to send email: %s (status code: %d), Response: %v\n", resp.Status, resp.StatusCode, errResp)
 		return fmt.Errorf("failed to send email: %s (status code: %d)", resp.Status, resp.StatusCode)
 	}
 
+	fmt.Printf("Email successfully sent to %s\n", reqBody.To[0].Email)
 	return nil
 }

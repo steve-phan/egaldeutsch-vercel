@@ -69,16 +69,21 @@ func ForgotPasswordHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	// Send reset email (async)
+	// Send reset email (synchronous for serverless reliability)
 	// In a real app, you'd want a more robust queue system
-	go func() {
-		appURL := os.Getenv("NEXT_PUBLIC_APP_URL")
-		if appURL == "" {
-			appURL = "https://egaldeutsch.com"
-		}
-		resetLink := fmt.Sprintf("%s/reset-password?token=%s", appURL, resetToken)
-		utils.SendPasswordResetEmail(req.Email, resetLink)
-	}()
+	appURL := os.Getenv("NEXT_PUBLIC_APP_URL")
+	if appURL == "" {
+		appURL = os.Getenv("NEXTAUTH_URL")
+	}
+	if appURL == "" {
+		appURL = "https://egaldeutsch.com"
+	}
+	resetLink := fmt.Sprintf("%s/reset-password?token=%s", appURL, resetToken)
+	fmt.Printf("Attempting to send password reset email to %s with link: %s\n", req.Email, resetLink)
+	err = utils.SendPasswordResetEmail(req.Email, resetLink)
+	if err != nil {
+		fmt.Printf("Failed to send password reset email to %s: %v\n", req.Email, err)
+	}
 
 	w.WriteHeader(http.StatusOK)
 	json.NewEncoder(w).Encode(map[string]string{"message": "If an account exists with this email, a reset link has been sent."})

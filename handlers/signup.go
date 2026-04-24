@@ -3,6 +3,7 @@ package handlers
 import (
 	"context"
 	"encoding/json"
+	"fmt"
 	"net/http"
 	"time"
 
@@ -55,10 +56,12 @@ func SignupHandler(w http.ResponseWriter, r *http.Request) {
 			return
 		}
 
-		// Send welcome email (async)
-		go func() {
-			utils.SendWelcomeEmail(req.Email, req.Name)
-		}()
+		// Send welcome email (synchronous for serverless reliability)
+		fmt.Printf("Attempting to send welcome email (mock) to %s...\n", req.Email)
+		err = utils.SendWelcomeEmail(req.Email, req.Name)
+		if err != nil {
+			fmt.Printf("Failed to send welcome email (mock) to %s: %v\n", req.Email, err)
+		}
 
 		w.WriteHeader(http.StatusCreated)
 		json.NewEncoder(w).Encode(map[string]string{"message": "User created successfully"})
@@ -106,10 +109,12 @@ func SignupHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	// Send welcome email (async)
-	go func() {
-		utils.SendWelcomeEmail(user.Email, user.Name)
-	}()
+	// Send welcome email (synchronous for serverless reliability)
+	fmt.Printf("Attempting to send welcome email to %s...\n", user.Email)
+	err = utils.SendWelcomeEmail(user.Email, user.Name)
+	if err != nil {
+		fmt.Printf("Failed to send welcome email to %s: %v\n", user.Email, err)
+	}
 
 	w.WriteHeader(http.StatusCreated)
 	json.NewEncoder(w).Encode(map[string]string{"message": "User created successfully"})

@@ -3,6 +3,7 @@ package handlers
 import (
 	"context"
 	"encoding/json"
+	"fmt"
 	"net/http"
 	"time"
 
@@ -79,10 +80,12 @@ func GoogleSyncHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	// Trigger welcome email (first time only)
-	go func() {
-		utils.SendWelcomeEmail(newUser.Email, newUser.Name)
-	}()
+	// Trigger welcome email (synchronous for serverless reliability)
+	fmt.Printf("Attempting to send welcome email (google sync) to %s...\n", newUser.Email)
+	err = utils.SendWelcomeEmail(newUser.Email, newUser.Name)
+	if err != nil {
+		fmt.Printf("Failed to send welcome email (google sync) to %s: %v\n", newUser.Email, err)
+	}
 
 	// Trigger welcome notification
 	utils.CreateNotification(newUser.ID, "Willkommen bei EgalDeutsch!", "Du hast dein Mastery-Konto erfolgreich erstellt. Starte deinen ersten Quiz, um deinen Fortschritt zu verfolgen!", "system", "/")
