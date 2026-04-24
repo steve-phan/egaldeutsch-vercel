@@ -59,9 +59,32 @@ export function DatenschutzClientView() {
                         <p className="text-sm">
                            Unsere Website nutzt <strong>Next-Auth</strong> zur Verwaltung von Benutzersitzungen und <strong>Google OAuth</strong> zur Authentifizierung.
                         </p>
-                        <h3 className="text-lg font-black text-slate-800 italic">Google Login</h3>
+                        
+                        <h3 className="text-lg font-black text-slate-800 italic">Google Login & Google-Nutzerdaten</h3>
                         <p className="text-sm">
-                           Beim Login erhalten wir von Google eine ID, Ihre E-Mail-Adresse und Ihren Namen. Diese Daten werden in unserer MongoDB gespeichert.
+                           Wenn Sie sich über Google bei EgalDeutsch anmelden, fordern wir Zugriff auf Ihre Google-Basisdaten an (Standard-Scopes: <em>openid, email, profile</em>).
+                        </p>
+                        
+                        <ul className="list-disc pl-5 space-y-2 text-sm">
+                           <li>
+                              <strong>Erhobene Daten:</strong> Wir erhalten von Google Ihre E-Mail-Adresse, Ihren vollständigen Namen und (falls vorhanden) den Link zu Ihrem Profilbild.
+                           </li>
+                           <li>
+                              <strong>Verwendungszweck:</strong> Diese Daten werden ausschließlich dazu verwendet, Ihr Benutzerkonto zu erstellen, Sie bei künftigen Logins zu identifizieren und Ihre Erfahrung innerhalb der App zu personalisieren (z. B. Anzeige Ihres Namens im Dashboard).
+                           </li>
+                           <li>
+                              <strong>Speicherung & Sicherheit:</strong> Diese Daten werden sicher in unserer Datenbank (MongoDB) gespeichert. Wir speichern keine Google-Passwörter oder Zugriffstoken dauerhaft.
+                           </li>
+                           <li>
+                              <strong>Keine Weitergabe:</strong> Wir geben Ihre Google-Nutzerdaten nicht an Dritte weiter. Die Daten werden nicht für Werbezwecke verkauft oder verwendet.
+                           </li>
+                           <li>
+                              <strong>Kein KI-Training:</strong> Ihre Google-Nutzerdaten werden nicht zum Trainieren von KI-Modellen oder Machine-Learning-Algorithmen verwendet.
+                           </li>
+                        </ul>
+                        
+                        <p className="text-sm">
+                           Sie können den Zugriff von EgalDeutsch auf Ihr Google-Konto jederzeit in den Sicherheitseinstellungen Ihres Google-Kontos widerrufen.
                         </p>
                      </Card>
                   </div>
