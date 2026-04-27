@@ -147,8 +147,10 @@ func updateUserProfile(w http.ResponseWriter, r *http.Request, claims *utils.Cla
 	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
 	defer cancel()
 
+	userEmail := utils.NormalizeEmail(req.Email)
+
 	// Check if email is taken by another user
-	count, err := collection.CountDocuments(ctx, bson.M{"email": req.Email, "_id": bson.M{"$ne": userID}})
+	count, err := collection.CountDocuments(ctx, bson.M{"email": userEmail, "_id": bson.M{"$ne": userID}})
 	if err != nil {
 		http.Error(w, "Database error", http.StatusInternalServerError)
 		return
@@ -161,7 +163,7 @@ func updateUserProfile(w http.ResponseWriter, r *http.Request, claims *utils.Cla
 	update := bson.M{
 		"$set": bson.M{
 			"name":     req.Name,
-			"email":    req.Email,
+			"email":    userEmail,
 			"language": req.Language,
 		},
 	}

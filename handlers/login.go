@@ -39,10 +39,12 @@ func LoginHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
+	userEmail := utils.NormalizeEmail(req.Email)
+
 	// Use mock database if mock mode is enabled
 	if mock.IsMockMode() {
 		mockDB := mock.GetMockDB()
-		mockUser, err := mockDB.ValidatePassword(req.Email, req.Password)
+		mockUser, err := mockDB.ValidatePassword(userEmail, req.Password)
 		if err != nil {
 			http.Error(w, "Invalid credentials", http.StatusUnauthorized)
 			return
@@ -71,7 +73,7 @@ func LoginHandler(w http.ResponseWriter, r *http.Request) {
 	defer cancel()
 
 	var user models.User
-	err := collection.FindOne(ctx, bson.M{"email": req.Email}).Decode(&user)
+	err := collection.FindOne(ctx, bson.M{"email": userEmail}).Decode(&user)
 	if err != nil {
 		http.Error(w, "Invalid credentials", http.StatusUnauthorized)
 		return
@@ -83,7 +85,7 @@ func LoginHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	token, err := utils.GenerateToken(user.ID.Hex(), user.Email, user.Role)
+	token, err := utils.GenerateToken(user.ID.Hex(), userEmail, user.Role)
 	if err != nil {
 		http.Error(w, "Failed to generate token", http.StatusInternalServerError)
 		return

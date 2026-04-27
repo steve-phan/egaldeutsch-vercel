@@ -43,10 +43,12 @@ func SignupHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
+	userEmail := utils.NormalizeEmail(req.Email)
+
 	// Use mock database if mock mode is enabled
 	if mock.IsMockMode() {
 		mockDB := mock.GetMockDB()
-		_, err := mockDB.CreateUser(req.Name, req.Email, req.Password)
+		_, err := mockDB.CreateUser(req.Name, userEmail, req.Password)
 		if err != nil {
 			if err == mock.ErrAlreadyExists {
 				http.Error(w, "User already exists", http.StatusConflict)
@@ -57,10 +59,10 @@ func SignupHandler(w http.ResponseWriter, r *http.Request) {
 		}
 
 		// Send welcome email (synchronous for serverless reliability)
-		fmt.Printf("Attempting to send welcome email (mock) to %s...\n", req.Email)
-		err = utils.SendWelcomeEmail(req.Email, req.Name)
+		fmt.Printf("Attempting to send welcome email (mock) to %s...\n", userEmail)
+		err = utils.SendWelcomeEmail(userEmail, req.Name)
 		if err != nil {
-			fmt.Printf("Failed to send welcome email (mock) to %s: %v\n", req.Email, err)
+			fmt.Printf("Failed to send welcome email (mock) to %s: %v\n", userEmail, err)
 		}
 
 		w.WriteHeader(http.StatusCreated)
@@ -73,7 +75,7 @@ func SignupHandler(w http.ResponseWriter, r *http.Request) {
 	defer cancel()
 
 	// Check if user exists
-	count, err := collection.CountDocuments(ctx, bson.M{"email": req.Email})
+	count, err := collection.CountDocuments(ctx, bson.M{"email": userEmail})
 	if err != nil {
 		http.Error(w, "Database error", http.StatusInternalServerError)
 		return
@@ -98,7 +100,7 @@ func SignupHandler(w http.ResponseWriter, r *http.Request) {
 	user := models.User{
 		ID:       primitive.NewObjectID(),
 		Name:     req.Name,
-		Email:    req.Email,
+		Email:    userEmail,
 		Password: string(hashedPassword),
 		Language: lang,
 	}

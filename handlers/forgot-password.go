@@ -48,7 +48,7 @@ func ForgotPasswordHandler(w http.ResponseWriter, r *http.Request) {
 	resetTokenExpiry := time.Now().Add(1 * time.Hour)
 
 	// Update user with reset token
-	filter := bson.M{"email": req.Email}
+	filter := bson.M{"email": utils.NormalizeEmail(req.Email)}
 	update := bson.M{
 		"$set": bson.M{
 			"reset_token":        resetToken,

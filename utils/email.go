@@ -6,6 +6,7 @@ import (
 	"fmt"
 	"net/http"
 	"os"
+	"strings"
 	"time"
 )
 
@@ -106,4 +107,9 @@ func sendEmail(reqBody EmailRequest) error {
 
 	fmt.Printf("Email successfully sent to %s\n", reqBody.To[0].Email)
 	return nil
+}
+
+// NormalizeEmail trims whitespace and converts to lowercase for consistent email handling.
+func NormalizeEmail(email string) string {
+	return strings.TrimSpace(strings.ToLower(email))
 }
