@@ -23,6 +23,7 @@ export function Footer() {
           {/* Legal Links */}
           <div className="flex items-center gap-10">
             {[
+              { href: "/uebungsmaterial", label: language === "de" ? "Material" : "Material" },
               { href: "/impressum", label: "Impressum" },
               { href: "/datenschutz", label: "Datenschutz" },
               { href: "mailto:help@egaldeutsch.com", label: language === "de" ? "Kontakt" : language === "vi" ? "Liên hệ" : "Contact" }

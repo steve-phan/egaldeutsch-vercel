@@ -6,10 +6,11 @@ import { Section } from "@/components/shared/layout/section";
 import { Card } from "@/components/shared/layout/card";
 import { CATEGORY_META, CEFR_LEVELS } from "@/lib/constants";
 import { CategoryCard } from "@/components/home/category-card";
-import { GraduationCap, Sparkles, Filter, Target, Zap } from "lucide-react";
+import { GraduationCap, Sparkles, Filter, Target, Zap, FileDown } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 import { useLanguage } from "@/contexts/language-context";
+import Link from "next/link";
 
 export default function PracticeLandingPage() {
   const { t } = useLanguage();
@@ -138,9 +139,24 @@ export default function PracticeLandingPage() {
               <Sparkles className="w-6 h-6" />
             </div>
             <h3 className="text-xl font-black text-slate-800 italic tracking-tighter mb-4">{t("practice.daily_streak_title")}</h3>
-            <p className="text-sm font-medium text-slate-500 leading-relaxed">
+            <p className="text-sm font-medium text-slate-500 leading-relaxed mb-6">
               {t("practice.daily_streak_desc")}
             </p>
+          </Card>
+
+          <Card padding="xl" radius="3xl" className="bg-gradient-to-br from-emerald-50/50 to-white border-emerald-100 shadow-premium group">
+            <div className="w-12 h-12 rounded-2xl bg-emerald-500 flex items-center justify-center text-white mb-6 shadow-lg shadow-emerald-500/20 group-hover:scale-110 transition-transform">
+              <FileDown className="w-6 h-6" />
+            </div>
+            <h3 className="text-xl font-black text-slate-800 italic tracking-tighter mb-4">Offline Lernen</h3>
+            <p className="text-sm font-medium text-slate-500 leading-relaxed mb-8">
+              Lade dir individuelle Übungsblätter als PDF herunter – perfekt zum Ausdrucken und für unterwegs.
+            </p>
+            <Link href="/uebungsmaterial">
+              <button className="flex items-center gap-2 text-[10px] font-black text-emerald-600 hover:text-emerald-700 uppercase tracking-[0.2em] transition-colors">
+                Jetzt erstellen <Sparkles className="w-3 h-3" />
+              </button>
+            </Link>
           </Card>
         </div>
       </Section>
