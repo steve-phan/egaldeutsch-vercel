@@ -13,8 +13,10 @@ type User struct {
 	Name             string             `bson:"name" json:"name"`
 	Role             string             `bson:"role" json:"role"`                         // "admin" or "student"
 	AuthSource       string             `bson:"auth_source,omitempty" json:"auth_source"` // "google" or "credentials"
-	ResetToken       string             `bson:"reset_token,omitempty" json:"-"`
-	ResetTokenExpiry time.Time          `bson:"reset_token_expiry,omitempty" json:"-"`
-	Language         string             `bson:"language,omitempty" json:"language"`
+	ResetToken         string             `bson:"reset_token,omitempty" json:"-"`
+	ResetTokenExpiry   time.Time          `bson:"reset_token_expiry,omitempty" json:"-"`
+	DeleteToken        string             `bson:"delete_token,omitempty" json:"-"`
+	DeleteTokenExpiry  time.Time          `bson:"delete_token_expiry,omitempty" json:"-"`
+	Language           string             `bson:"language,omitempty" json:"language"`
 	SeenIdioms       []string           `bson:"seen_idioms,omitempty" json:"seen_idioms,omitempty"`
 }

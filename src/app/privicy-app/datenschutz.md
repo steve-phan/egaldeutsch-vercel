@@ -38,6 +38,7 @@ Sie haben im Rahmen der DSGVO jederzeit das Recht auf Auskunft, Berichtigung und
 
 ## 7. Datenlöschung
 Sie können die Löschung Ihres Kontos und aller damit verbundenen Daten jederzeit anfordern.
+*   **Online-Formular:** Nutzen Sie unser [Formular zur Konto-Löschung](https://egaldeutsch.com/delete-account).
 *   **E-Mail:** Senden Sie eine Anfrage an **egaldeutsch.com@gmail.com**. Wir bearbeiten diese Anfragen innerhalb von 30 Tagen.
 
 ## 8. Verantwortliche Stelle

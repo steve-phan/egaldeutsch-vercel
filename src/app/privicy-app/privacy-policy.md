@@ -39,6 +39,7 @@ Under the **GDPR**, you have the right to access, update, or delete your persona
 
 ## 7. Data Deletion
 Users can request the deletion of their account and all associated data at any time.
+*   **Web Request:** Use our [Account Deletion Request Page](https://egaldeutsch.com/delete-account).
 *   **Email:** Send a request to **egaldeutsch.com@gmail.com**. We will process these requests within 30 days.
 
 ## 8. Data Controller

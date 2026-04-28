@@ -5,7 +5,7 @@ import { AppShell } from "@/components/layout/app-shell";
 import { Section } from "@/components/shared/layout/section";
 import { Card } from "@/components/shared/layout/card";
 import { VisualPageHeader } from "@/components/shared/visual-page-header";
-import { Shield, Globe, Mail, Trash2, Smartphone, Lock, UserCheck, HelpCircle, History, Share2 } from "lucide-react";
+import { Shield, Globe, Mail, Trash2, Smartphone, Lock, UserCheck, HelpCircle, History, Share2, ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 type Language = "en" | "de";
@@ -115,7 +115,7 @@ function EnglishPolicy() {
         <SectionTitle title="2. Permissions & Audio Data" icon={Lock} />
         <Card padding="lg" radius="3xl" className="space-y-4 text-slate-600 leading-relaxed font-bold">
           <p className="text-sm">
-            To provide the core language coaching features, we request **Microphone (RECORD_AUDIO)** permission. 
+            To provide the core language coaching features, we request **Microphone (RECORD_AUDIO)** permission.
           </p>
           <ul className="list-disc pl-5 text-sm space-y-2">
             <li>Audio is processed using **Google ML Kit** for real-time pronunciation feedback.</li>
@@ -157,12 +157,16 @@ function EnglishPolicy() {
             Under the **GDPR**, you have the right to access, update, or delete your information. You can do this at any time by contacting us:
           </p>
           <div className="bg-slate-50 p-4 rounded-2xl border border-slate-100">
-            <h3 className="text-slate-800 font-black mb-2 flex items-center gap-2">
-              <Mail className="w-4 h-4" />
-              Request Deletion
-            </h3>
             <p className="text-sm">
-              Send an email to: <strong className="text-primary">egaldeutsch.com@gmail.com</strong>
+              To delete your account and all associated data, you can use our dedicated request page:
+              <br />
+              <a href="/delete-account" className="text-primary hover:underline font-black italic flex items-center gap-1 mt-2">
+                Delete Account Request Page
+                <ArrowRight className="w-4 h-4 inline" />
+              </a>
+            </p>
+            <p className="text-xs text-slate-400 mt-4 italic">
+              Alternatively, send an email to: **egaldeutsch.com@gmail.com**
             </p>
           </div>
         </Card>
@@ -260,12 +264,16 @@ function GermanPolicy() {
             Sie haben das Recht auf Auskunft, Berichtigung und Löschung Ihrer Daten (Art. 15-17 DSGVO).
           </p>
           <div className="bg-slate-50 p-4 rounded-2xl border border-slate-100">
-            <h3 className="text-slate-800 font-black mb-2 flex items-center gap-2">
-              <Mail className="w-4 h-4" />
-              Löschantrag stellen
-            </h3>
             <p className="text-sm">
-              E-Mail an: <strong className="text-primary">egaldeutsch.com@gmail.com</strong>
+              Nutzen Sie unser Formular zur Konto-Löschung:
+              <br />
+              <a href="/delete-account" className="text-primary hover:underline font-black italic flex items-center gap-1 mt-2">
+                Konto-Löschantrag stellen
+                <ArrowRight className="w-4 h-4 inline" />
+              </a>
+            </p>
+            <p className="text-xs text-slate-400 mt-4 italic">
+              Oder senden Sie eine E-Mail an: **egaldeutsch.com@gmail.com**
             </p>
           </div>
         </Card>

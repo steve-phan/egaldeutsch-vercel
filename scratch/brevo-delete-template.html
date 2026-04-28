@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirm Account Deletion</title>
+    <style>
+        body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; background-color: #f8fafc; margin: 0; padding: 0; -webkit-font-smoothing: antialiased; }
+        .wrapper { width: 100%; table-layout: fixed; background-color: #f8fafc; padding-bottom: 40px; }
+        .main { background-color: #ffffff; margin: 0 auto; width: 100%; max-width: 600px; border-spacing: 0; color: #1e293b; border-radius: 20px; overflow: hidden; margin-top: 40px; border: 1px solid #e2e8f0; box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05); }
+        .header { background-color: #ffffff; padding: 40px 30px; text-align: center; border-bottom: 1px solid #f1f5f9; }
+        .logo { font-size: 28px; font-weight: 900; color: #ff5722; font-style: italic; letter-spacing: -1px; text-decoration: none; }
+        .content { padding: 50px 40px; text-align: center; }
+        .title { font-size: 24px; font-weight: 900; color: #0f172a; margin-bottom: 24px; font-style: italic; }
+        .body-text { font-size: 16px; line-height: 26px; color: #475569; margin-bottom: 32px; }
+        .btn-container { margin-bottom: 32px; }
+        .button { background-color: #ff5722; color: #ffffff !important; padding: 18px 36px; border-radius: 14px; text-decoration: none; font-weight: 900; font-size: 16px; display: inline-block; font-style: italic; box-shadow: 0 10px 15px -3px rgba(255, 87, 34, 0.3); }
+        .warning-box { background-color: #fff1f2; border: 1px solid #ffe4e6; padding: 20px; border-radius: 16px; margin-bottom: 32px; }
+        .warning-text { font-size: 14px; color: #e11d48; font-weight: bold; margin: 0; line-height: 20px; }
+        .footer { padding: 40px; text-align: center; font-size: 13px; color: #94a3b8; line-height: 20px; background-color: #fcfdfe; }
+        .footer-link { color: #64748b; text-decoration: underline; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <center class="wrapper">
+        <table class="main">
+            <tr>
+                <td class="header">
+                    <a href="https://egaldeutsch.com" class="logo">EgalDeutsch</a>
+                </td>
+            </tr>
+            <tr>
+                <td class="content">
+                    <h1 class="title">Verify Your Deletion Request</h1>
+                    <p class="body-text">
+                        We received a request to permanently delete your EgalDeutsch account. For your security, please confirm your identity by clicking the button below.
+                    </p>
+                    
+                    <div class="warning-box">
+                        <p class="warning-text">⚠️ <strong>Warning:</strong> This action is permanent. All your learning progress, quiz scores, and saved data will be deleted forever.</p>
+                    </div>
+
+                    <div class="btn-container">
+                        <!-- Use {{params.deleteURL}} to match your Go backend parameter -->
+                        <a href="{{params.deleteURL}}" class="button">Permanently Delete My Account</a>
+                    </div>
+
+                    <p class="body-text" style="font-size: 13px; color: #94a3b8;">
+                        If you did not request this, you can safely ignore this email. The link will expire in 1 hour.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td class="footer">
+                    &copy; 2026 EgalDeutsch. Dorfstraße 35P, 13057 Berlin.<br>
+                    <a href="https://egaldeutsch.com/privicy-app" class="footer-link">Privacy Policy</a> &bull; <a href="https://egaldeutsch.com" class="footer-link">Visit Website</a>
+                </td>
+            </tr>
+        </table>
+    </center>
+</body>
+</html>

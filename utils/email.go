@@ -13,6 +13,7 @@ import (
 const (
 	TemplateWelcome       = 4
 	TemplatePasswordReset = 3
+	TemplateAccountDelete = 6
 )
 
 type Sender struct {
@@ -54,6 +55,18 @@ func SendPasswordResetEmail(email, resetLink string) error {
 		TemplateID: TemplatePasswordReset,
 		Params: map[string]interface{}{
 			"resetURL": resetLink,
+		},
+	})
+}
+
+func SendAccountDeletionEmail(email, deleteLink string) error {
+	return sendEmail(EmailRequest{
+		To: []To{
+			{Email: email},
+		},
+		TemplateID: TemplateAccountDelete,
+		Params: map[string]interface{}{
+			"deleteURL": deleteLink,
 		},
 	})
 }

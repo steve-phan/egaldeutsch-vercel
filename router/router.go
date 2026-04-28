@@ -19,6 +19,8 @@ func NewRouter() http.Handler {
 	mux.HandleFunc("/api/account/admin-users", handlers.AdminUsersHandler)
 	mux.HandleFunc("/api/account/google-sync", handlers.GoogleSyncHandler)
 	mux.HandleFunc("/api/account/change-password", handlers.ChangePasswordHandler)
+	mux.HandleFunc("/api/account/delete-request", handlers.RequestAccountDeletionHandler)
+	mux.HandleFunc("/api/account/delete-confirm", handlers.ConfirmAccountDeletionHandler)
 
 	// --- User Profile Routes ---
 	mux.HandleFunc("/api/user/profile", handlers.UpdateProfileHandler)
