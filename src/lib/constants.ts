@@ -170,15 +170,15 @@ export const CATEGORY_META: CategoryMeta[] = [
   },
   {
     id: "mixed",
-    label: { de: "Gemischt", en: "Mixed Categories", vi: "Tổng hợp" },
+    label: { de: "Gemischt", en: "Mixed Practice", vi: "Tổng hợp" },
     description: {
-      de: "Alle Grammatikthemen in einer Sitzung.",
-      en: "All grammar topics in one session.",
-      vi: "Tất cả các chủ đề ngữ pháp trong một lần luyện tập."
+      de: "Die ultimative Herausforderung: Alle Grammatikthemen in einer Sitzung.",
+      en: "The ultimate challenge: All grammar topics randomized in one session.",
+      vi: "Thử thách tối thượng: Tất cả các chủ đề ngữ pháp được trộn ngẫu nhiên."
     },
     icon: "🎲",
     levels: ["A1", "A2", "B1", "B2"],
     question_counts: {},
-    keywords: ["All Topics", "Exam Simulation", "Review"]
+    keywords: ["All Topics", "Exam Simulation", "Review", "Random Mix"]
   }
 ];

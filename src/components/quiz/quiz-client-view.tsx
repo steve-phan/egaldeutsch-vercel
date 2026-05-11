@@ -245,7 +245,7 @@ export function QuizClientView({ category }: { category: string }) {
           <div className="flex flex-col items-center">
             <div className="flex items-center gap-2 group cursor-pointer">
               <h1 className="text-[15px] font-black text-slate-800 tracking-tighter italic capitalize leading-none">
-                {category.includes(",") ? "Mixed Practice" : category.replace("-", " ")}
+                {category === "mixed" || category.includes(",") ? "Mixed Practice" : category.replace("-", " ")}
               </h1>
               <div className="p-1 px-1.5 bg-slate-100/50 rounded-lg hover:bg-slate-200 transition-colors">
                 <MoreHorizontal className="w-4 h-4 text-slate-400" />
