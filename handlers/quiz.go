@@ -5,6 +5,7 @@ import (
 	"encoding/json"
 	"net/http"
 	"strconv"
+	"strings"
 	"time"
 
 	"egaldeutsch-vercel/db"
@@ -134,7 +135,12 @@ func fetchQuestions(ctx context.Context, category, level string, limit int, user
 
 	matchStage := bson.M{}
 	if category != "" {
-		matchStage["category"] = category
+		if strings.Contains(category, ",") {
+			cats := strings.Split(category, ",")
+			matchStage["category"] = bson.M{"$in": cats}
+		} else {
+			matchStage["category"] = category
+		}
 	}
 	if level != "" {
 		matchStage["level"] = level

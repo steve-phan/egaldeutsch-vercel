@@ -167,5 +167,18 @@ export const CATEGORY_META: CategoryMeta[] = [
     levels: ["B2"],
     question_counts: {},
     keywords: ["TELC B2 Prep", "B2 Beruf", "German for Professionals"]
+  },
+  {
+    id: "mixed",
+    label: { de: "Gemischt", en: "Mixed Categories", vi: "Tổng hợp" },
+    description: {
+      de: "Alle Grammatikthemen in einer Sitzung.",
+      en: "All grammar topics in one session.",
+      vi: "Tất cả các chủ đề ngữ pháp trong một lần luyện tập."
+    },
+    icon: "🎲",
+    levels: ["A1", "A2", "B1", "B2"],
+    question_counts: {},
+    keywords: ["All Topics", "Exam Simulation", "Review"]
   }
 ];

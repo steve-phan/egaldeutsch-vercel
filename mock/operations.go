@@ -3,6 +3,7 @@ package mock
 import (
 	"errors"
 	"math/rand"
+	"strings"
 	"time"
 
 	"go.mongodb.org/mongo-driver/bson/primitive"
@@ -174,9 +175,23 @@ func (db *MockDB) GetQuestions(category, level string, limit int) []*MockQuizQue
 	defer db.mu.RUnlock()
 
 	var pool []*MockQuizQuestion
+	cats := []string{}
+	if category != "" {
+		cats = strings.Split(category, ",")
+	}
+
 	for _, q := range db.questions {
-		if category != "" && q.Category != category {
-			continue
+		if len(cats) > 0 {
+			match := false
+			for _, c := range cats {
+				if q.Category == c {
+					match = true
+					break
+				}
+			}
+			if !match {
+				continue
+			}
 		}
 		if level != "" && q.Level != level {
 			continue

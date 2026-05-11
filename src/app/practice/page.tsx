@@ -1,23 +1,39 @@
 "use client";
 
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 import { AppShell } from "@/components/layout/app-shell";
 import { Section } from "@/components/shared/layout/section";
 import { Card } from "@/components/shared/layout/card";
 import { CATEGORY_META, CEFR_LEVELS } from "@/lib/constants";
 import { CategoryCard } from "@/components/home/category-card";
-import { GraduationCap, Sparkles, Filter, Target, Zap } from "lucide-react";
+import { GraduationCap, Sparkles, Filter, Target, Zap, LayoutGrid, ChevronRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 import { useLanguage } from "@/contexts/language-context";
 
 export default function PracticeLandingPage() {
   const { t } = useLanguage();
+  const router = useRouter();
   const [selectedLevel, setSelectedLevel] = useState<string | "all">("all");
+  const [isMixMode, setIsMixMode] = useState(false);
+  const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
 
   const filteredCategories = selectedLevel === "all"
     ? CATEGORY_META
     : CATEGORY_META.filter(cat => cat.levels.includes(selectedLevel as any));
+
+  const toggleCategory = (id: string) => {
+    setSelectedCategories(prev =>
+      prev.includes(id) ? prev.filter(c => c !== id) : [...prev, id]
+    );
+  };
+
+  const startMixedPractice = () => {
+    if (selectedCategories.length === 0) return;
+    const categoryQuery = selectedCategories.join(",");
+    router.push(`/quiz/${categoryQuery}`);
+  };
 
   return (
     <AppShell showNav={true} maxWidth="2xl">
@@ -77,37 +93,78 @@ export default function PracticeLandingPage() {
             <h2 className="text-3xl font-black text-slate-800 tracking-tighter italic">{t("practice.filter_title")}</h2>
           </div>
 
-          {/* Level Tabs */}
-          <div className="flex p-1.5 bg-slate-100 rounded-[1.5rem] w-fit">
+          <div className="flex flex-wrap items-center gap-4">
+            {/* Mix Mode Toggle */}
             <button
-              onClick={() => setSelectedLevel("all")}
+              onClick={() => {
+                setIsMixMode(!isMixMode);
+                if (isMixMode) setSelectedCategories([]);
+              }}
               className={cn(
-                "px-6 py-2.5 rounded-2xl text-xs font-black uppercase tracking-widest transition-all",
-                selectedLevel === "all" ? "bg-white text-primary shadow-sm" : "text-slate-400 hover:text-slate-600"
+                "flex items-center gap-2 px-6 py-2.5 rounded-2xl text-xs font-black uppercase tracking-widest transition-all border-2",
+                isMixMode
+                  ? "bg-slate-900 text-white border-slate-900 shadow-lg"
+                  : "bg-white text-slate-400 border-slate-100 hover:border-slate-200"
               )}
             >
-              {t("practice.all")}
+              <LayoutGrid className="w-4 h-4" />
+              {isMixMode ? "Mix Mode: ON" : "Mix Mode: OFF"}
             </button>
-            {CEFR_LEVELS.map((level) => (
+
+            {/* Level Tabs */}
+            <div className="flex p-1.5 bg-slate-100 rounded-[1.5rem] w-fit">
               <button
-                key={level}
-                onClick={() => setSelectedLevel(level)}
+                onClick={() => setSelectedLevel("all")}
                 className={cn(
                   "px-6 py-2.5 rounded-2xl text-xs font-black uppercase tracking-widest transition-all",
-                  selectedLevel === level ? "bg-white text-primary shadow-sm" : "text-slate-400 hover:text-slate-600"
+                  selectedLevel === "all" ? "bg-white text-primary shadow-sm" : "text-slate-400 hover:text-slate-600"
                 )}
               >
-                {level}
+                {t("practice.all")}
               </button>
-            ))}
+              {CEFR_LEVELS.map((level) => (
+                <button
+                  key={level}
+                  onClick={() => setSelectedLevel(level)}
+                  className={cn(
+                    "px-6 py-2.5 rounded-2xl text-xs font-black uppercase tracking-widest transition-all",
+                    selectedLevel === level ? "bg-white text-primary shadow-sm" : "text-slate-400 hover:text-slate-600"
+                  )}
+                >
+                  {level}
+                </button>
+              ))}
+            </div>
           </div>
         </div>
 
         {/* Dynamic Category Grid - Responsive for Big Devices */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-6">
           {filteredCategories.map((cat) => (
-            <div key={cat.id} className="animate-in fade-in zoom-in-95 duration-500 fill-mode-both">
-              <CategoryCard category={cat} />
+            <div
+              key={cat.id}
+              className={cn(
+                "animate-in fade-in zoom-in-95 duration-500 fill-mode-both relative",
+                isMixMode && "cursor-pointer"
+              )}
+              onClick={isMixMode ? () => toggleCategory(cat.id) : undefined}
+            >
+              {isMixMode && (
+                <div className={cn(
+                  "absolute inset-0 z-20 rounded-[2.5rem] border-4 transition-all pointer-events-none",
+                  selectedCategories.includes(cat.id)
+                    ? "border-primary bg-primary/5 shadow-inner"
+                    : "border-transparent"
+                )} />
+              )}
+              {isMixMode && selectedCategories.includes(cat.id) && (
+                <div className="absolute top-4 right-4 z-30 w-6 h-6 bg-primary text-white rounded-full flex items-center justify-center shadow-lg animate-in zoom-in-50">
+                  <Sparkles className="w-3 h-3" />
+                </div>
+              )}
+              <div className={cn(isMixMode && "pointer-events-none")}>
+                <CategoryCard category={cat} />
+              </div>
             </div>
           ))}
         </div>
@@ -119,6 +176,22 @@ export default function PracticeLandingPage() {
           </div>
         )}
       </Section>
+
+      {/* Floating Start Button for Mix Mode */}
+      {isMixMode && (
+        <div className="fixed bottom-10 left-1/2 -translate-x-1/2 z-50 animate-in slide-in-from-bottom-10 duration-500">
+          <button
+            onClick={startMixedPractice}
+            disabled={selectedCategories.length === 0}
+            className="flex items-center gap-4 px-10 py-5 bg-slate-900 text-white rounded-full font-black uppercase tracking-widest shadow-2xl hover:bg-primary transition-all active:scale-95 disabled:opacity-50 disabled:grayscale"
+          >
+            {selectedCategories.length > 0
+              ? `Practice ${selectedCategories.length} Categories`
+              : "Select Categories to Mix"}
+            <ChevronRight className="w-5 h-5" />
+          </button>
+        </div>
+      )}
 
       {/* Info Cards / Stats section placeholder */}
       <Section spacing="xl" className="pb-24">

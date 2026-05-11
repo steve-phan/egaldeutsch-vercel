@@ -17,10 +17,34 @@ interface SessionSetupProps {
 export function SessionSetup({ category, onStart }: SessionSetupProps) {
   const router = useRouter();
   const { t, language } = useLanguage();
+  const [selectedCategories, setSelectedCategories] = useState<string[]>([category]);
   const [level, setLevel] = useState<CEFRLevel | "mixed">("mixed");
   const [totalQuestions, setTotalQuestions] = useState<number>(30);
   const [timeLimit, setTimeLimit] = useState<number | undefined>(undefined); // seconds
   const [mode, setMode] = useState<"test" | "practice">("practice");
+
+  // Sync selectedCategories with category prop if it changes
+  useEffect(() => {
+    if (!selectedCategories.includes(category)) {
+      setSelectedCategories([category]);
+    }
+  }, [category]);
+
+  const toggleCategory = (id: string) => {
+    if (id === "mixed") {
+      setSelectedCategories(["mixed"]);
+      return;
+    }
+    
+    setSelectedCategories(prev => {
+      const filtered = prev.filter(c => c !== "mixed");
+      if (filtered.includes(id)) {
+        if (filtered.length === 1) return filtered; // Must have at least one
+        return filtered.filter(c => c !== id);
+      }
+      return [...filtered, id];
+    });
+  };
 
   // Persistent Settings Logic
   useEffect(() => {
@@ -46,7 +70,7 @@ export function SessionSetup({ category, onStart }: SessionSetupProps) {
 
   const handleStart = () => {
     onStart({
-      category,
+      category: selectedCategories.join(",") as QuizCategory,
       level: mode === "test" ? "mixed" : level,
       totalQuestions: mode === "test" ? 30 : totalQuestions,
       timePerQuestion: timeLimit,
@@ -59,18 +83,18 @@ export function SessionSetup({ category, onStart }: SessionSetupProps) {
       {CATEGORY_META.map(cat => (
         <button
           key={cat.id}
-          onClick={() => router.push(`/quiz/${cat.id}`)}
+          onClick={() => toggleCategory(cat.id)}
           className={`h-10 px-4 rounded-xl border-2 font-black text-[10px] uppercase tracking-wider transition-all flex items-center gap-2
-             ${category === cat.id
+             ${selectedCategories.includes(cat.id)
               ? "bg-primary text-white border-primary shadow-lg shadow-primary/20"
               : "bg-white border-slate-100 text-slate-400 hover:border-slate-200"}`}
         >
-          <span className={`text-base leading-none ${category === cat.id ? "" : "grayscale-[0.5]"}`}>{cat.icon}</span>
+          <span className={`text-base leading-none ${selectedCategories.includes(cat.id) ? "" : "grayscale-[0.5]"}`}>{cat.icon}</span>
           <span>{cat.label.de || cat.label.en}</span>
         </button>
       ))}
     </div>
-  ), [category, language, router]);
+  ), [selectedCategories, language, router]);
 
   return (
     <Card padding="lg" radius="3xl" className="w-full max-w-2xl animate-in zoom-in-95 duration-500 mx-auto">
