@@ -1,5 +1,6 @@
 import { MetadataRoute } from "next";
 import { CATEGORY_META, BACKEND_URL, API_ROUTES } from "@/lib/constants";
+import { getPostSlugs, getPostBySlug } from "@/lib/markdown";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = "https://egaldeutsch.com";
@@ -7,7 +8,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // 1. Static Routes
   const staticRoutes: MetadataRoute.Sitemap = [
     { url: `${baseUrl}/`, lastModified: new Date(), changeFrequency: "daily", priority: 1 },
-    { url: `${baseUrl}/explore`, lastModified: new Date(), changeFrequency: "daily", priority: 0.8 },
+    { url: `${baseUrl}/blogs`, lastModified: new Date(), changeFrequency: "daily", priority: 0.9 },
+    { url: `${baseUrl}/practice`, lastModified: new Date(), changeFrequency: "daily", priority: 0.8 },
     { url: `${baseUrl}/feedback`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.3 },
     { url: `${baseUrl}/redewendung`, lastModified: new Date(), changeFrequency: "daily", priority: 0.9 },
   ];
@@ -20,7 +22,30 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.7,
   }));
 
-  // 3. Idiom Routes (Dynamic from API)
+  // 3. Blog Post Routes (Local Markdown Files)
+  const slugs = getPostSlugs();
+  const blogRoutes: MetadataRoute.Sitemap = slugs.map((filename) => {
+    const slug = filename.replace(/\.md$/, "");
+    const post = getPostBySlug(slug);
+    
+    // Safely parse the date from frontmatter, default to current date if invalid
+    let lastMod = new Date();
+    if (post && post.date) {
+      const parsedDate = new Date(post.date);
+      if (!isNaN(parsedDate.getTime())) {
+        lastMod = parsedDate;
+      }
+    }
+
+    return {
+      url: `${baseUrl}/blogs/${slug}`,
+      lastModified: lastMod,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    };
+  });
+
+  // 4. Idiom Routes (Dynamic from API)
   let idiomRoutes: MetadataRoute.Sitemap = [];
   try {
     const res = await fetch(`${BACKEND_URL}${API_ROUTES.IDIOMS}`, {
@@ -61,5 +86,5 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     console.warn("Sitemap: Could not fetch idioms for sitemap, skipping dynamic routes.");
   }
 
-  return [...staticRoutes, ...categoryRoutes, ...idiomRoutes];
+  return [...staticRoutes, ...categoryRoutes, ...blogRoutes, ...idiomRoutes];
 }
