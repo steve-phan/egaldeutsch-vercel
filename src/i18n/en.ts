@@ -137,6 +137,8 @@ export const en = {
     view_profile: "View Profile",
     guest: "Guest",
     join_us: "Join Us",
+    practice: "Practice",
+    blog: "Blog",
   },
   profile: {
     tabs: {

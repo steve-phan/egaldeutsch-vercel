@@ -3,14 +3,14 @@
 import React from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Home, Search, MessageSquareHeart, Sparkles, User, Activity, GraduationCap } from "lucide-react";
+import { Home, Search, MessageSquareHeart, Sparkles, User, Activity, GraduationCap, BookOpen } from "lucide-react";
 
 export function BottomNav() {
   const pathname = usePathname();
 
   const navItems = [
     { icon: <Home className="w-5 h-5" />, label: "Home", href: "/", active: pathname === "/" },
-    { icon: <Activity className="w-5 h-5" />, label: "Estimate", href: "/estimate", active: pathname === "/estimate" },
+    { icon: <BookOpen className="w-5 h-5" />, label: "Blog", href: "/blogs", active: pathname.startsWith("/blogs") },
     { icon: <GraduationCap className="w-5 h-5" />, label: "Practice", href: "/practice", active: pathname === "/practice" },
     { icon: <Sparkles className="w-5 h-5" />, label: "Idioms", href: "/redewendung", active: pathname === "/redewendung" },
     { icon: <MessageSquareHeart className="w-5 h-5" />, label: "Feedback", href: "/feedback", active: pathname === "/feedback" },

@@ -137,6 +137,8 @@ export const vi = {
     view_profile: "Xem hồ sơ",
     guest: "Khách",
     join_us: "Tham gia ngay",
+    practice: "Luyện tập",
+    blog: "Blog",
   },
   profile: {
     tabs: {

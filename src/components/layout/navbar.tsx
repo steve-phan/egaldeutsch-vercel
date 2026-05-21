@@ -8,7 +8,6 @@ import { Bell, Sparkles, LogIn } from "lucide-react";
 import { Skeleton } from "../ui/skeleton";
 
 import { useNotifications } from "@/hooks/use-notifications";
-import { Brand } from "../shared/brand";
 
 import { useLanguage } from "@/contexts/language-context";
 
@@ -19,23 +18,7 @@ export function Navbar() {
   const isGuest = status === "unauthenticated";
   const isLoading = status === "loading";
 
-  const renderTitle = () => {
-    if (isLoading) {
-      return <Skeleton className="w-20 h-2.5" />
-    }
-    if (isGuest) {
-      return (
-        <>
-          <Sparkles className="w-2.5 h-2.5 text-slate-300" /> {t("nav.mastery_awaits")}
-        </>
-      )
-    }
-    return (
-      <>
-        <Sparkles className="w-2.5 h-2.5 text-primary" /> {t("nav.mastery_level")}: {session?.user?.role === 'admin' ? 'Admin' : 'A2'}
-      </>
-    )
-  }
+
 
 
   const renderRightSide = () => {
@@ -110,6 +93,15 @@ export function Navbar() {
           />
         </div>
       </Link>
+
+      <div className="hidden md:flex items-center gap-8 font-semibold text-sm">
+        <Link href="/practice" className="text-slate-600 hover:text-primary transition-colors">
+          {t("nav.practice") || "Practice"}
+        </Link>
+        <Link href="/blogs" className="text-slate-600 hover:text-primary transition-colors">
+          {t("nav.blog") || "Blog"}
+        </Link>
+      </div>
 
       <div className="flex items-center gap-4 md:gap-8">
 

@@ -34,10 +34,15 @@ export function GuestConversionBanner() {
                      {t("home.guest.subtitle")}
                   </p>
 
-                  <div className="pt-4">
+                  <div className="pt-4 flex flex-col sm:flex-row gap-4">
                      <Link href="/signup">
-                        <button className="btn-orange h-14 md:h-16 px-12 text-sm group-hover:scale-105 transition-all shadow-xl shadow-primary/20 rounded-full font-black">
+                        <button className="btn-orange h-14 md:h-16 px-12 text-sm group-hover:scale-105 transition-all shadow-xl shadow-primary/20 rounded-full font-black w-full sm:w-auto justify-center">
                            {t("home.guest.cta")} <ArrowRight className="w-4 h-4 ml-2" />
+                        </button>
+                     </Link>
+                     <Link href="/estimate">
+                        <button className="h-14 md:h-16 px-12 bg-white/50 hover:bg-white/80 backdrop-blur-md rounded-full text-slate-800 text-sm font-black border border-slate-200 transition-all w-full sm:w-auto flex items-center justify-center">
+                           {t("home.hero.estimate_btn")}
                         </button>
                      </Link>
                   </div>

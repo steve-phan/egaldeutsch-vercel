@@ -137,6 +137,8 @@ export const de = {
     view_profile: "Profil ansehen",
     guest: "Gast",
     join_us: "Mitmachen",
+    practice: "Üben",
+    blog: "Blog",
   },
   profile: {
     tabs: {
