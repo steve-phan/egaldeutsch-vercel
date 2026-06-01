@@ -15,22 +15,24 @@ const maxWidthClasses = {
   lg: "max-w-screen-lg",
   xl: "max-w-screen-xl",
   "2xl": "max-w-screen-2xl",
-  "brand": "max-w-[1440px]",
+  brand: "max-w-[1440px]",
   none: "max-w-none",
 };
 
-export function PageContainer({ 
-  children, 
-  className, 
-  maxWidth = "brand" 
+export function PageContainer({
+  children,
+  className,
+  maxWidth = "brand",
 }: PageContainerProps) {
   return (
-    <div className={cn(
-      "w-full mx-auto",
-      "px-6 sm:px-8 lg:px-16", // 24px mobile (Hòa Khí), 32px tablet, 64px desktop
-      maxWidthClasses[maxWidth],
-      className
-    )}>
+    <div
+      className={cn(
+        "w-full mx-auto",
+        "px-6 sm:px-8 lg:px-16", // 24px mobile (Hòa Khí), 32px tablet, 64px desktop
+        maxWidthClasses[maxWidth],
+        className,
+      )}
+    >
       {children}
     </div>
   );

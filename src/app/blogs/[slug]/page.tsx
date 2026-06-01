@@ -1,6 +1,11 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { getPostBySlug, getPostSlugs, getPostHtml, getAllPosts } from "@/lib/markdown";
+import {
+  getPostBySlug,
+  getPostSlugs,
+  getPostHtml,
+  getAllPosts,
+} from "@/lib/markdown";
 import { getQuizGuideForBlogSlug } from "@/lib/blog-guide-links";
 import { ArrowLeft, ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
 
@@ -23,7 +28,9 @@ function getRelatedPosts(post: PostSummary, allPosts: PostSummary[]) {
   return allPosts
     .filter((candidate) => candidate.slug !== post.slug)
     .map((candidate) => {
-      const sharedTags = candidate.tags.filter((tag) => post.tags.includes(tag)).length;
+      const sharedTags = candidate.tags.filter((tag) =>
+        post.tags.includes(tag),
+      ).length;
       const categoryScore = candidate.category === post.category ? 3 : 0;
       const levelScore = candidate.level === post.level ? 1 : 0;
 
@@ -65,25 +72,26 @@ export default async function GrammatikPostPage({ params }: Props) {
   }
 
   const contentHtml = await getPostHtml(post.contentHtml);
-  
+
   // Find current post index for next/prev navigation
-  const currentIndex = allPosts.findIndex(p => p.slug === post.slug);
+  const currentIndex = allPosts.findIndex((p) => p.slug === post.slug);
   const nextPost = currentIndex > 0 ? allPosts[currentIndex - 1] : null; // Newer posts are first in array
-  const prevPost = currentIndex < allPosts.length - 1 ? allPosts[currentIndex + 1] : null;
+  const prevPost =
+    currentIndex < allPosts.length - 1 ? allPosts[currentIndex + 1] : null;
   const relatedPosts = getRelatedPosts(post, allPosts);
   const quizGuide = getQuizGuideForBlogSlug(post.slug);
 
   return (
-    <article className="container mx-auto max-w-3xl px-4 py-8 sm:py-12">
+    <article className="container mx-auto max-w-3xl py-8 sm:py-12">
       <div className="mb-8">
-        <Link 
-          href="/blogs" 
+        <Link
+          href="/blogs"
           className="mb-6 inline-flex items-center text-sm text-gray-500 transition-colors hover:text-gray-900"
         >
           <ArrowLeft className="mr-2 h-4 w-4" />
           Back to all topics
         </Link>
-        
+
         <div className="mb-4 flex flex-wrap items-center gap-2 sm:gap-3">
           <span className="inline-flex items-center rounded-full bg-blue-50 px-2.5 py-0.5 text-xs font-semibold text-blue-700">
             {post.level}
@@ -93,10 +101,10 @@ export default async function GrammatikPostPage({ params }: Props) {
           </span>
           <span className="text-sm text-gray-400">•</span>
           <time className="text-sm text-gray-500" dateTime={post.date}>
-            {new Date(post.date).toLocaleDateString('en-US', {
-              month: 'long',
-              day: 'numeric',
-              year: 'numeric',
+            {new Date(post.date).toLocaleDateString("en-US", {
+              month: "long",
+              day: "numeric",
+              year: "numeric",
             })}
           </time>
         </div>
@@ -104,13 +112,13 @@ export default async function GrammatikPostPage({ params }: Props) {
         <h1 className="mb-4 text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl md:text-5xl">
           {post.title}
         </h1>
-        
+
         <p className="mb-8 text-lg leading-relaxed text-gray-600 sm:text-xl">
           {post.description}
         </p>
       </div>
 
-      <div 
+      <div
         className="prose prose-blue max-w-none break-words sm:prose-lg
           prose-headings:font-bold prose-headings:not-italic prose-headings:tracking-tight
           prose-h2:mt-10 prose-h2:mb-4 prose-h2:text-2xl sm:prose-h2:text-3xl
@@ -130,10 +138,16 @@ export default async function GrammatikPostPage({ params }: Props) {
       />
 
       {relatedPosts.length > 0 && (
-        <section className="mt-14 border-t border-gray-200 pt-8 sm:mt-16" aria-labelledby="related-grammar-topics">
+        <section
+          className="mt-14 border-t border-gray-200 pt-8 sm:mt-16"
+          aria-labelledby="related-grammar-topics"
+        >
           <div className="mb-5 flex items-center justify-between gap-4">
             <div>
-              <h2 id="related-grammar-topics" className="text-2xl font-bold tracking-tight text-gray-900">
+              <h2
+                id="related-grammar-topics"
+                className="text-2xl font-bold tracking-tight text-gray-900"
+              >
                 Related grammar topics
               </h2>
               <p className="mt-1 text-sm text-gray-600">
@@ -165,12 +179,12 @@ export default async function GrammatikPostPage({ params }: Props) {
           </div>
         </section>
       )}
-      
+
       {/* Post Navigator */}
       <div className="mt-12 border-t border-gray-200 pt-8 sm:mt-16">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {prevPost ? (
-            <Link 
+            <Link
               href={`/blogs/${prevPost.slug}`}
               className="group flex flex-col items-start rounded-xl border border-gray-200 p-4 text-left transition-all hover:border-blue-300 hover:bg-blue-50/50 sm:rounded-2xl"
             >
@@ -181,10 +195,12 @@ export default async function GrammatikPostPage({ params }: Props) {
                 {prevPost.title}
               </span>
             </Link>
-          ) : <div />}
-          
+          ) : (
+            <div />
+          )}
+
           {nextPost ? (
-            <Link 
+            <Link
               href={`/blogs/${nextPost.slug}`}
               className="group flex flex-col items-start rounded-xl border border-gray-200 p-4 text-left transition-all hover:border-blue-300 hover:bg-blue-50/50 sm:items-end sm:rounded-2xl sm:text-right"
             >
@@ -195,17 +211,23 @@ export default async function GrammatikPostPage({ params }: Props) {
                 {nextPost.title}
               </span>
             </Link>
-          ) : <div />}
+          ) : (
+            <div />
+          )}
         </div>
       </div>
 
       <div className="mt-8">
         <div className="flex flex-col items-stretch justify-between gap-4 rounded-xl bg-blue-50 p-5 sm:flex-row sm:items-center sm:rounded-2xl sm:p-6">
           <div>
-            <h3 className="text-lg font-bold text-gray-900 mb-1">Ready to practice?</h3>
-            <p className="text-gray-600 text-sm">Test your knowledge with our interactive quizzes.</p>
+            <h3 className="text-lg font-bold text-gray-900 mb-1">
+              Ready to practice?
+            </h3>
+            <p className="text-gray-600 text-sm">
+              Test your knowledge with our interactive quizzes.
+            </p>
           </div>
-          <Link 
+          <Link
             href={quizGuide.href}
             className="inline-flex justify-center items-center rounded-lg bg-blue-600 px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 transition-colors w-full sm:w-auto"
           >
