@@ -218,5 +218,16 @@
     "literal_translation": "I only understand train station.",
     "content_html": "<div class=\"space-y-6\">\n<section>\n<h3 class=\"text-xl font-bold mb-2\">Bedeutung</h3>\n<p>Wird verwendet, wenn eine Erklärung akustisch oder inhaltlich absolut nicht beim Empfänger ankommt.</p>\n</section>\n<section class=\"bg-slate-50 p-4 rounded-2xl border border-slate-100\">\n<h3 class=\"text-xl font-bold mb-2\">Herkunft</h3>\n<p>Gegen Ende des Ersten Weltkrieges wollten die Soldaten nur noch eines: nach Hause. „Bahnhof“ war das einzige Wort, das sie interessierte.</p>\n</section>\n<section>\n<h3 class=\"text-xl font-bold mb-2\">Beispiel</h3>\n<p class=\"italic text-slate-600\">\"Kannst du mir die Quantenphysik erklären?\" - \"Tut mir leid, ich verstehe nur Bahnhof!\"</p>\n</section>\n</div>",
     "tags": ["umgangssprachlich", "alltag"]
+  },
+  {
+    "title": "Etwas aus der Welt schaffen",
+    "slug": "etwas-aus-der-welt-schaffen",
+    "thumbnail": "🌍",
+    "meaning_de": "Ein Problem, einen Zweifel oder ein Missverständnis endgültig beseitigen.",
+    "meaning_en": "To clear something up / To get rid of a problem.",
+    "meaning_vi": "Giải quyết dứt điểm một vấn đề / xóa bỏ một hiểu lầm.",
+    "literal_translation": "To remove something from the world.",
+    "content_html": "<div class=\"space-y-6\">\n<section>\n<h3 class=\"text-xl font-bold mb-2\">Bedeutung</h3>\n<p>Man benutzt die Redewendung, wenn ein Problem, ein Konflikt, ein Zweifel oder ein Missverständnis so geklärt wird, dass es danach nicht mehr stört.</p>\n</section>\n<section class=\"bg-slate-50 p-4 rounded-2xl border border-slate-100\">\n<h3 class=\"text-xl font-bold mb-2\">Herkunft</h3>\n<p>Das Bild ist sehr direkt: Etwas Belastendes wird nicht nur kleiner gemacht, sondern komplett aus der eigenen Welt entfernt. Es ist danach nicht mehr Teil der Situation.</p>\n</section>\n<section>\n<h3 class=\"text-xl font-bold mb-2\">Beispiel</h3>\n<p class=\"italic text-slate-600\">\"Lass uns das Missverständnis sofort aus der Welt schaffen, bevor daraus ein größerer Streit wird.\"</p>\n</section>\n</div>",
+    "tags": ["probleme", "kommunikation"]
   }
 ]

@@ -44,40 +44,40 @@ export function BlogList({ posts }: BlogListProps) {
   return (
     <div>
       {/* Search Bar */}
-      <div className="relative max-w-xl mb-12">
-        <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+      <div className="relative mb-8 max-w-xl sm:mb-12">
+        <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-4">
           <Search className="h-5 w-5 text-gray-400" />
         </div>
         <input
           type="text"
-          placeholder="Search by topic, keyword, or level (e.g., 'Akkusativ', 'Cases', 'A2')..."
+          placeholder="Search grammar topics..."
           value={searchQuery}
           onChange={handleSearchChange}
-          className="block w-full pl-11 pr-4 py-4 bg-white border border-gray-200 rounded-2xl text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent shadow-sm transition-all text-sm sm:text-base"
+          className="block w-full rounded-xl border border-gray-200 bg-white py-3.5 pl-11 pr-4 text-sm text-gray-900 shadow-sm transition-all placeholder:text-gray-400 focus:border-transparent focus:outline-none focus:ring-2 focus:ring-blue-500 sm:rounded-2xl sm:py-4 sm:text-base"
         />
       </div>
 
       {/* Results Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 lg:gap-6">
         {visiblePosts.map((post) => (
           <Link href={`/blogs/${post.slug}`} key={post.slug} className="group h-full">
-            <div className="flex flex-col h-full bg-white rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition-all duration-200 group-hover:-translate-y-1">
-              <div className="flex justify-between items-center mb-4">
+            <div className="flex h-full flex-col rounded-xl border border-gray-200 bg-white p-4 shadow-sm transition-all duration-200 hover:shadow-md sm:rounded-2xl sm:p-6 sm:group-hover:-translate-y-1">
+              <div className="mb-4 flex flex-wrap items-center justify-between gap-2">
                 <span className="inline-flex items-center rounded-full bg-blue-50 px-2.5 py-0.5 text-xs font-semibold text-blue-700">
                   {post.level}
                 </span>
                 <span className="text-sm text-gray-500 font-medium">{post.category}</span>
               </div>
               
-              <h2 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
+              <h2 className="mb-2 text-lg font-bold leading-snug text-gray-900 transition-colors group-hover:text-blue-600 sm:text-xl">
                 {post.title}
               </h2>
               
-              <p className="text-gray-600 text-sm mb-6 flex-grow line-clamp-3">
+              <p className="mb-5 line-clamp-3 flex-grow text-sm leading-relaxed text-gray-600 sm:mb-6">
                 {post.description}
               </p>
               
-              <div className="flex flex-wrap gap-2 mt-auto">
+              <div className="mt-auto flex flex-wrap gap-2">
                 {post.tags.map((tag) => (
                   <span key={tag} className="inline-flex items-center rounded-md bg-gray-50 px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
                     #{tag}
@@ -97,17 +97,17 @@ export function BlogList({ posts }: BlogListProps) {
           </div>
           <h3 className="text-lg font-bold text-gray-900 mb-1">No results found</h3>
           <p className="text-gray-500">
-            We couldn't find any posts matching "{searchQuery}". Try a different term!
+            We could not find any posts matching &quot;{searchQuery}&quot;. Try a different term!
           </p>
         </div>
       )}
 
       {/* Load More Button */}
       {visibleCount < filteredPosts.length && (
-        <div className="mt-12 flex justify-center">
+        <div className="mt-10 flex justify-center sm:mt-12">
           <button
             onClick={handleLoadMore}
-            className="inline-flex items-center gap-2 px-6 py-3 bg-white border border-gray-200 text-gray-700 text-sm font-semibold rounded-xl hover:bg-gray-50 hover:text-blue-600 transition-colors shadow-sm active:scale-95"
+            className="inline-flex items-center gap-2 rounded-xl border border-gray-200 bg-white px-6 py-3 text-sm font-semibold text-gray-700 shadow-sm transition-colors hover:bg-gray-50 hover:text-blue-600 active:scale-95"
           >
             Load More <ChevronDown className="w-4 h-4" />
           </button>

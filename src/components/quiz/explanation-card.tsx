@@ -1,8 +1,10 @@
 "use client";
 
 import { QuizQuestion } from "@/types/quiz";
-import { CheckCircle2, XCircle, Lightbulb } from "lucide-react";
+import { getBlogGuideForQuestion } from "@/lib/blog-guide-links";
+import { ArrowRight, CheckCircle2, XCircle, Lightbulb } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 import { useLanguage } from "@/contexts/language-context";
 
@@ -17,6 +19,7 @@ export function ExplanationCard({
    isCorrect,
 }: ExplanationCardProps) {
    const { t, language } = useLanguage();
+   const guideLink = getBlogGuideForQuestion(question);
 
    const getExplanationText = () => {
       switch (language) {
@@ -60,6 +63,15 @@ export function ExplanationCard({
                   <p className="text-sm font-bold text-slate-600 leading-relaxed bg-white/40 p-5 rounded-2xl border border-white/60 shadow-sm">
                      {getExplanationText()}
                   </p>
+                  <Link
+                     href={guideLink.href}
+                     className="inline-flex w-full items-center justify-between gap-3 rounded-2xl border border-white/70 bg-white/70 px-5 py-4 text-left text-sm font-black text-primary shadow-sm transition-all hover:border-primary/20 hover:bg-white sm:w-auto"
+                  >
+                     <span>
+                        Read more: {guideLink.label}
+                     </span>
+                     <ArrowRight className="h-4 w-4 shrink-0" />
+                  </Link>
                </div>
             </div>
 
