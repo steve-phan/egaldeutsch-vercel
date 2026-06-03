@@ -1,6 +1,7 @@
 import { NextAuthOptions } from "next-auth";
 import GoogleProvider from "next-auth/providers/google";
 import CredentialsProvider from "next-auth/providers/credentials";
+import { API_ROUTES, apiRequest } from "@/lib/constants";
 
 export const authOptions: NextAuthOptions = {
   secret: process.env.NEXTAUTH_SECRET,
@@ -17,10 +18,10 @@ export const authOptions: NextAuthOptions = {
       },
       async authorize(credentials) {
         // We'll proxy this to our Go backend
-        const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL || "http://localhost:8080"}/api/account/login`, {
+        const res = await apiRequest(API_ROUTES.LOGIN, {
           method: "POST",
+          json: true,
           body: JSON.stringify(credentials),
-          headers: { "Content-Type": "application/json" },
         });
         const data = await res.json();
 
@@ -73,9 +74,9 @@ export const authOptions: NextAuthOptions = {
       if (account?.provider === "google") {
         try {
           // Sync Google user with our Go backend
-          const syncRes = await fetch(`${process.env.NEXT_PUBLIC_API_URL || "http://localhost:8080"}/api/account/google-sync`, {
+          const syncRes = await apiRequest(API_ROUTES.GOOGLE_SYNC, {
             method: "POST",
-            headers: { "Content-Type": "application/json" },
+            json: true,
             body: JSON.stringify({
               email: user.email,
               name: user.name,

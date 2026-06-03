@@ -42,19 +42,20 @@ export function VisualPageHeader({
       )}
 
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
-        <div className="flex items-center gap-4">
+        <div className="flex min-w-0 items-center gap-3 sm:gap-4">
           <div className={cn(
-            "w-14 h-14 rounded-2xl flex items-center justify-center text-white shadow-lg",
+            "w-12 h-12 sm:w-14 sm:h-14 rounded-2xl flex shrink-0 items-center justify-center text-white shadow-lg",
             iconColor
           )}>
             {icon}
           </div>
-          <div>
-            <h1 className="text-4xl font-black text-slate-800 tracking-tighter italic leading-none">
+          <div className="min-w-0">
+            <h1 className="whitespace-nowrap text-[1.85rem] sm:text-4xl font-black text-slate-800 tracking-tighter italic leading-none">
               {title}
             </h1>
-            <p className="text-xs font-bold text-slate-400 mt-2 uppercase tracking-tight flex items-center gap-2">
-              <Sparkles className="w-3 h-3 text-amber-500" /> {subtitle}
+            <p className="mt-1.5 flex items-start gap-1.5 text-[10px] font-bold uppercase leading-snug tracking-tight text-slate-400 sm:mt-2 sm:items-center sm:gap-2 sm:text-xs">
+              <Sparkles className="mt-0.5 h-3 w-3 shrink-0 text-amber-500 sm:mt-0" />
+              <span>{subtitle}</span>
             </p>
           </div>
         </div>

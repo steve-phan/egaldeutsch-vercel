@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from "react";
 import { API_ROUTES } from "@/lib/constants";
-import { useSession } from "next-auth/react";
+import { useApiClient } from "@/hooks/use-api-client";
 
 export interface DashboardStats {
   total_sessions: number;
@@ -26,7 +26,7 @@ const emptyStats: DashboardStats = {
 };
 
 export function useDashboard(): UseDashboardResult {
-  const { data: session, status } = useSession();
+  const { request, token, isSessionLoading } = useApiClient();
   const [stats, setStats] = useState<DashboardStats | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -35,9 +35,8 @@ export function useDashboard(): UseDashboardResult {
     setLoading(true);
     setError(null);
 
-    if (status === "loading") return;
+    if (isSessionLoading) return;
     
-    const token = session?.user?.accessToken;
     if (!token) {
       setStats(emptyStats);
       setLoading(false);
@@ -45,9 +44,7 @@ export function useDashboard(): UseDashboardResult {
     }
 
     try {
-      const res = await fetch(API_ROUTES.DASHBOARD, {
-        headers: { Authorization: `Bearer ${token}` },
-      });
+      const res = await request(API_ROUTES.DASHBOARD);
       if (!res.ok) throw new Error("Failed to fetch dashboard");
       const data = await res.json();
       setStats(data);
@@ -57,11 +54,11 @@ export function useDashboard(): UseDashboardResult {
     } finally {
       setLoading(false);
     }
-  }, [session?.user?.accessToken, status]);
+  }, [isSessionLoading, request, token]);
 
   useEffect(() => {
     fetchStats();
-  }, [fetchStats, status]);
+  }, [fetchStats]);
 
   return { stats, loading, error, refetch: fetchStats };
 }

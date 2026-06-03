@@ -1,5 +1,5 @@
 import { MetadataRoute } from "next";
-import { CATEGORY_META, BACKEND_URL, API_ROUTES } from "@/lib/constants";
+import { CATEGORY_META, API_ROUTES, apiUrl } from "@/lib/constants";
 import { getPostSlugs, getPostBySlug } from "@/lib/markdown";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
@@ -48,7 +48,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // 4. Idiom Routes (Dynamic from API)
   let idiomRoutes: MetadataRoute.Sitemap = [];
   try {
-    const res = await fetch(`${BACKEND_URL}${API_ROUTES.IDIOMS}`, {
+    const res = await fetch(apiUrl(API_ROUTES.IDIOMS), {
         next: { revalidate: 3600 },
         signal: AbortSignal.timeout(5000) // Don't hang the build
     });

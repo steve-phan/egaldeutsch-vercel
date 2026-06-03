@@ -1,9 +1,9 @@
-import { BACKEND_URL, API_ROUTES } from "@/lib/constants";
+import { API_ROUTES, apiUrl } from "@/lib/constants";
 import { RandomIdiom } from "@/components/idioms/random-idiom";
 
 async function getRandomIdiom() {
   try {
-    const res = await fetch(`${BACKEND_URL}${API_ROUTES.IDIOM_RANDOM}`, { 
+    const res = await fetch(apiUrl(API_ROUTES.IDIOM_RANDOM), { 
       next: { revalidate: 3600 } 
     });
     if (!res.ok) return null;

@@ -1,6 +1,6 @@
 import { useState, useCallback } from "react";
 import { API_ROUTES } from "@/lib/constants";
-import { useSession } from "next-auth/react";
+import { useApiClient } from "@/hooks/use-api-client";
 
 export interface FeedbackSubmission {
   category: string;
@@ -23,7 +23,7 @@ export function useFeedback() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [success, setSuccess] = useState(false);
-  const { data: session } = useSession();
+  const { request } = useApiClient();
 
   const submitFeedback = useCallback(async (data: FeedbackSubmission) => {
     try {
@@ -31,13 +31,9 @@ export function useFeedback() {
       setError(null);
       setSuccess(false);
 
-      const token = session?.user?.accessToken;
-      const response = await fetch(API_ROUTES.FEEDBACK, {
+      const response = await request(API_ROUTES.FEEDBACK, {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          ...(token ? { "Authorization": `Bearer ${token}` } : {}),
-        },
+        json: true,
         body: JSON.stringify(data),
       });
 
@@ -65,19 +61,14 @@ export function useFeedback() {
     } finally {
       setLoading(false);
     }
-  }, [session?.user?.accessToken]);
+  }, [request]);
 
   const fetchAllFeedback = useCallback(async () => {
     try {
       setLoading(true);
       setError(null);
 
-      const token = session?.user?.accessToken;
-      const response = await fetch(API_ROUTES.ADMIN_FEEDBACK, {
-        headers: {
-          ...(token ? { "Authorization": `Bearer ${token}` } : {}),
-        },
-      });
+      const response = await request(API_ROUTES.ADMIN_FEEDBACK);
 
       if (!response.ok) {
         if (response.status === 401) throw new Error("Unauthorized: Admin access required");
@@ -91,7 +82,7 @@ export function useFeedback() {
     } finally {
       setLoading(false);
     }
-  }, [session?.user?.accessToken]);
+  }, [request]);
 
   return {
     submitFeedback,

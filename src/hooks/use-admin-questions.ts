@@ -1,7 +1,7 @@
 import { useState, useCallback } from "react";
 import { QuizQuestion } from "@/types/quiz";
 import { API_ROUTES } from "@/lib/constants";
-import { useSession } from "next-auth/react";
+import { useApiClient } from "@/hooks/use-api-client";
 
 interface UseAdminQuestionsResult {
   questions: QuizQuestion[];
@@ -14,29 +14,20 @@ interface UseAdminQuestionsResult {
 }
 
 export function useAdminQuestions(): UseAdminQuestionsResult {
-  const { data: session } = useSession();
+  const { request } = useApiClient();
   const [questions, setQuestions] = useState<QuizQuestion[]>([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  const getHeaders = useCallback(() => {
-    const token = session?.user?.accessToken;
-    return {
-      "Content-Type": "application/json",
-      ...(token ? { Authorization: `Bearer ${token}` } : {})
-    };
-  }, [session?.user?.accessToken]);
-
   const fetchQuestions = useCallback(async (category?: string, level?: string) => {
     setLoading(true);
-    let url = API_ROUTES.ADMIN_QUESTIONS;
     const params = new URLSearchParams();
     if (category) params.append("category", category);
     if (level) params.append("level", level);
-    if (params.toString()) url += `?${params.toString()}`;
-
     try {
-      const res = await fetch(url, { headers: getHeaders() });
+      const res = await request(API_ROUTES.ADMIN_QUESTIONS, {
+        query: params,
+      });
       if (!res.ok) throw new Error("Failed to fetch questions");
       const data = await res.json();
       setQuestions(data);
@@ -46,14 +37,14 @@ export function useAdminQuestions(): UseAdminQuestionsResult {
     } finally {
       setLoading(false);
     }
-  }, [getHeaders]);
+  }, [request]);
 
   const createQuestion = async (question: Partial<QuizQuestion>) => {
     setLoading(true);
     try {
-      const res = await fetch(API_ROUTES.ADMIN_QUESTIONS, {
+      const res = await request(API_ROUTES.ADMIN_QUESTIONS, {
         method: "POST",
-        headers: getHeaders(),
+        json: true,
         body: JSON.stringify(question)
       });
       if (!res.ok) throw new Error("Failed to create question");
@@ -72,9 +63,10 @@ export function useAdminQuestions(): UseAdminQuestionsResult {
   const updateQuestion = async (id: string, question: Partial<QuizQuestion>) => {
     setLoading(true);
     try {
-      const res = await fetch(`${API_ROUTES.ADMIN_QUESTIONS}?id=${id}`, {
+      const res = await request(API_ROUTES.ADMIN_QUESTIONS, {
         method: "PUT",
-        headers: getHeaders(),
+        json: true,
+        query: { id },
         body: JSON.stringify(question)
       });
       if (!res.ok) throw new Error("Failed to update question");
@@ -93,9 +85,9 @@ export function useAdminQuestions(): UseAdminQuestionsResult {
   const deleteQuestion = async (id: string) => {
     setLoading(true);
     try {
-      const res = await fetch(`${API_ROUTES.ADMIN_QUESTIONS}?id=${id}`, {
+      const res = await request(API_ROUTES.ADMIN_QUESTIONS, {
         method: "DELETE",
-        headers: getHeaders()
+        query: { id },
       });
       if (!res.ok) throw new Error("Failed to delete question");
       setQuestions((prev) => prev.filter((q) => q.id !== id));

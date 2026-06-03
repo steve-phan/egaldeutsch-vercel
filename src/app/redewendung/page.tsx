@@ -1,6 +1,6 @@
 import { Idiom } from "@/types/idiom";
 import { Metadata } from "next";
-import { API_ROUTES, BACKEND_URL } from "@/lib/constants";
+import { API_ROUTES, apiUrl } from "@/lib/constants";
 import { AppShell } from "@/components/layout/app-shell";
 
 export const metadata: Metadata = {
@@ -41,7 +41,7 @@ const translations = { de, en, vi };
 
 async function getIdioms(): Promise<Idiom[]> {
   try {
-    const res = await fetch(`${BACKEND_URL}${API_ROUTES.IDIOMS}`, {
+    const res = await fetch(apiUrl(API_ROUTES.IDIOMS), {
       next: { revalidate: 3600 },
       signal: AbortSignal.timeout(5000),
     });

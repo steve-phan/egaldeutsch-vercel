@@ -109,21 +109,23 @@ export default async function GrammatikPostPage({ params }: Props) {
           </time>
         </div>
 
-        <h1 className="mb-4 text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl md:text-5xl">
+        <h1 className="mb-4 max-w-2xl text-2xl font-extrabold leading-tight tracking-tight text-gray-900 sm:text-3xl md:text-4xl">
           {post.title}
         </h1>
 
-        <p className="mb-8 text-lg leading-relaxed text-gray-600 sm:text-xl">
+        <p className="mb-8 max-w-2xl text-base leading-relaxed text-gray-600 sm:text-lg">
           {post.description}
         </p>
       </div>
 
       <div
-        className="prose prose-blue max-w-none break-words sm:prose-lg
+        className="prose prose-blue max-w-none break-words
           prose-headings:font-bold prose-headings:not-italic prose-headings:tracking-tight
-          prose-h2:mt-10 prose-h2:mb-4 prose-h2:text-2xl sm:prose-h2:text-3xl
-          prose-h3:mt-8 prose-h3:mb-3 prose-h3:text-xl sm:prose-h3:text-2xl
-          prose-p:leading-relaxed prose-p:mb-6
+          prose-h1:mt-8 prose-h1:mb-4 prose-h1:text-2xl sm:prose-h1:text-3xl
+          prose-h2:mt-9 prose-h2:mb-3 prose-h2:text-xl sm:prose-h2:text-2xl
+          prose-h3:mt-7 prose-h3:mb-3 prose-h3:text-lg sm:prose-h3:text-xl
+          prose-p:text-base prose-p:leading-7 prose-p:mb-5
+          prose-li:text-base prose-li:leading-7
           prose-a:break-words prose-a:text-blue-600 prose-a:no-underline hover:prose-a:underline
           prose-strong:text-gray-900 prose-strong:font-semibold
           prose-ul:list-disc prose-ul:pl-6 prose-ul:mb-6

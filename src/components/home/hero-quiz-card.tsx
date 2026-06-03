@@ -6,10 +6,12 @@ import { ArrowRight, Sparkles } from "lucide-react";
 import { Card } from "@/components/shared/layout/card";
 import { Section } from "@/components/shared/layout/section";
 import { useLanguage } from "@/contexts/language-context";
+import { cn } from "@/lib/utils";
 
 export function HeroQuizCard() {
   const router = useRouter();
-  const { t } = useLanguage();
+  const { language, t } = useLanguage();
+  const isVietnamese = language === "vi";
 
   return (
     <Section spacing="sm">
@@ -27,7 +29,14 @@ export function HeroQuizCard() {
             </div>
 
             <div className="space-y-4 md:space-y-5">
-              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-slate-800 leading-[1.05] md:leading-[1.05] tracking-tighter italic">
+              <h2
+                className={cn(
+                  "font-black text-slate-800 tracking-tighter",
+                  isVietnamese
+                    ? "text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] leading-[1.12] not-italic"
+                    : "text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-[1.05] italic",
+                )}
+              >
                 {t("home.hero.title")}
               </h2>
               <p className="text-base md:text-lg font-bold text-slate-400 max-w-md mx-auto md:mx-0 leading-relaxed">
@@ -35,12 +44,13 @@ export function HeroQuizCard() {
               </p>
             </div>
 
-            <div className="pt-2 flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4">
+            <div className="pt-2 flex flex-col sm:flex-row sm:flex-wrap items-center justify-center md:justify-start gap-4">
               <button
                 onClick={() => router.push('/estimate')}
-                className="btn-orange h-14 md:h-16 px-10 md:px-12 group text-base md:text-xl font-black shadow-premium active-bounce transition-all w-full sm:w-auto"
+                className="btn-orange h-14 md:h-16 px-7 md:px-8 group text-sm md:text-base font-black shadow-premium active-bounce transition-all w-full sm:w-auto sm:min-w-[210px] whitespace-nowrap"
               >
-                {t("home.hero.estimate_btn")} <ArrowRight className="w-5 h-5 md:w-6 md:h-6 group-hover:translate-x-1.5 transition-transform" />
+                <span>{t("home.hero.estimate_btn")}</span>
+                <ArrowRight className="w-5 h-5 shrink-0 group-hover:translate-x-1.5 transition-transform" />
               </button>
               
               <button
@@ -50,9 +60,9 @@ export function HeroQuizCard() {
                     lessonsSection.scrollIntoView({ behavior: 'smooth' });
                   }
                 }}
-                className="h-14 md:h-16 px-10 md:px-12 bg-white/20 hover:bg-white/30 backdrop-blur-md rounded-[2rem] text-slate-800 text-base md:text-xl font-black border border-white/50 transition-all w-full sm:w-auto"
+                className="h-14 md:h-16 px-7 md:px-8 bg-white/20 hover:bg-white/30 backdrop-blur-md rounded-[2rem] text-slate-800 text-sm md:text-base font-black border border-white/50 transition-all w-full sm:w-auto sm:min-w-[210px] whitespace-nowrap inline-flex items-center justify-center"
               >
-                {t("home.hero.practice_btn")}
+                <span>{t("home.hero.practice_btn")}</span>
               </button>
             </div>
           </div>

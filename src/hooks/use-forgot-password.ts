@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useCallback } from "react";
+import { API_ROUTES, apiRequest } from "@/lib/constants";
 
 export function useForgotPassword() {
   const [email, setEmail] = useState("");
@@ -15,9 +16,9 @@ export function useForgotPassword() {
     setSuccess("");
 
     try {
-      const res = await fetch("/api/account/forgot-password", {
+      const res = await apiRequest(API_ROUTES.FORGOT_PASSWORD, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        json: true,
         body: JSON.stringify({ email }),
       });
 

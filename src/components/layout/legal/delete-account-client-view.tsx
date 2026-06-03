@@ -6,6 +6,7 @@ import { Section } from "@/components/shared/layout/section";
 import { Card } from "@/components/shared/layout/card";
 import { VisualPageHeader } from "@/components/shared/visual-page-header";
 import { Trash2, AlertTriangle, Mail, CheckCircle2, ArrowRight } from "lucide-react";
+import { API_ROUTES, apiRequest } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 
 export function DeleteAccountClientView() {
@@ -18,9 +19,9 @@ export function DeleteAccountClientView() {
     setLoading(true);
     
     try {
-      const response = await fetch("/api/account/delete-request", {
+      const response = await apiRequest(API_ROUTES.DELETE_REQUEST, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        json: true,
         body: JSON.stringify({ email }),
       });
 

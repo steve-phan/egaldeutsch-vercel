@@ -7,6 +7,7 @@ import { Section } from "@/components/shared/layout/section";
 import { Card } from "@/components/shared/layout/card";
 import { VisualPageHeader } from "@/components/shared/visual-page-header";
 import { Trash2, Loader2, CheckCircle2, XCircle, Home } from "lucide-react";
+import { API_ROUTES, apiRequest } from "@/lib/constants";
 import Link from "next/link";
 
 function DeleteConfirmContent() {
@@ -24,9 +25,9 @@ function DeleteConfirmContent() {
 
     const confirmDeletion = async () => {
       try {
-        const response = await fetch("/api/account/delete-confirm", {
+        const response = await apiRequest(API_ROUTES.DELETE_CONFIRM, {
           method: "POST",
-          headers: { "Content-Type": "application/json" },
+          json: true,
           body: JSON.stringify({ token }),
         });
 

@@ -50,5 +50,5 @@ func NewRouter() http.Handler {
 	mux.HandleFunc("/api/user/notifications", handlers.GetNotificationsHandler)
 	mux.HandleFunc("/api/user/notifications/read", handlers.MarkNotificationReadHandler)
 
-	return LoggingMiddleware(mux)
+	return LoggingMiddleware(CORSMiddleware(mux))
 }

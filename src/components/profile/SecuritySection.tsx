@@ -5,16 +5,16 @@ import { Shield, LogOut, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
+import { API_ROUTES, apiRequest } from "@/lib/constants";
 import { signOut } from "next-auth/react";
-import type { Session } from "next-auth";
 
 interface SecuritySectionProps {
-  session: Session | null;
+  accessToken?: string;
 }
 
 import { useLanguage } from "@/contexts/language-context";
 
-export function SecuritySection({ session }: SecuritySectionProps) {
+export function SecuritySection({ accessToken }: SecuritySectionProps) {
   const { t } = useLanguage();
   const [isChangingPassword, setIsChangingPassword] = useState(false);
   const [currentPassword, setCurrentPassword] = useState("");
@@ -41,13 +41,10 @@ export function SecuritySection({ session }: SecuritySectionProps) {
 
     setPasswordSaving(true);
     try {
-      const token = session?.user?.accessToken;
-      const res = await fetch("/api/account/change-password", {
+      const res = await apiRequest(API_ROUTES.CHANGE_PASSWORD, {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          ...(token ? { "Authorization": `Bearer ${token}` } : {}),
-        },
+        json: true,
+        token: accessToken,
         body: JSON.stringify({
           current_password: currentPassword,
           new_password: newPassword,

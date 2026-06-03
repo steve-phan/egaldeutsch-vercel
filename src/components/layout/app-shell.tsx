@@ -9,6 +9,7 @@ import { CookieBanner } from "@/components/layout/cookie-banner";
 import { Navbar } from "@/components/layout/navbar";
 
 import { PageContainer } from "@/components/shared/layout/page-container";
+import { cn } from "@/lib/utils";
 
 interface AppShellProps {
   children: React.ReactNode;
@@ -42,7 +43,12 @@ export function AppShell({
 
       {showHeader && <Navbar />}
 
-      <main className="flex-1 z-10 animate-in fade-in duration-700">
+      <main
+        className={cn(
+          "flex-1 z-10 animate-in fade-in duration-700",
+          shouldShowNav && "pb-24 md:pb-0",
+        )}
+      >
          <PageContainer maxWidth={maxWidth}>
             {children}
          </PageContainer>

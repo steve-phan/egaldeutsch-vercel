@@ -1,6 +1,6 @@
 import { useState, useCallback, useEffect } from "react";
 import { CategoryMeta } from "@/types/quiz";
-import { API_ROUTES, CATEGORY_META } from "@/lib/constants";
+import { API_ROUTES, CATEGORY_META, apiUrl } from "@/lib/constants";
 
 interface UseCategoriesResult {
   stats: Record<string, Record<string, number>>;
@@ -18,7 +18,7 @@ export function useCategories(initialStats?: Record<string, Record<string, numbe
   const fetchStats = useCallback(async () => {
     try {
       setLoading(true);
-      const res = await fetch(API_ROUTES.QUIZ_CATEGORIES);
+      const res = await fetch(apiUrl(API_ROUTES.QUIZ_CATEGORIES));
       if (!res.ok) throw new Error("Failed to load categories");
       const data = await res.json();
       setStats(data);

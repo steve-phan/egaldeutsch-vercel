@@ -112,7 +112,7 @@ export default function ProfilePage() {
                   success={success}
                 />
 
-                <SecuritySection session={session} />
+                <SecuritySection accessToken={session.user.accessToken} />
               </Card>
             </div>
           )}

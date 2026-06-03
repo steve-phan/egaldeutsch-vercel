@@ -5,7 +5,7 @@ import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { ChevronLeft, Sparkles, LayoutGrid } from "lucide-react";
-import { API_ROUTES, BACKEND_URL } from "@/lib/constants";
+import { API_ROUTES, apiUrl } from "@/lib/constants";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -13,7 +13,7 @@ interface Props {
 
 async function getIdiom(slug: string): Promise<Idiom | null> {
   try {
-    const res = await fetch(`${BACKEND_URL}${API_ROUTES.IDIOM_DETAIL}${slug}`, {
+    const res = await fetch(apiUrl(`${API_ROUTES.IDIOM_DETAIL}${slug}`), {
       next: { revalidate: 3600 },
       signal: AbortSignal.timeout(5000),
     });
@@ -35,7 +35,7 @@ async function getIdiom(slug: string): Promise<Idiom | null> {
 // Helper to fetch a random slug for "Next" navigation
 async function getRandomSlug(): Promise<string | null> {
     try {
-        const res = await fetch(`${BACKEND_URL}${API_ROUTES.IDIOM_RANDOM}`, {
+        const res = await fetch(apiUrl(API_ROUTES.IDIOM_RANDOM), {
             cache: 'no-store',
             signal: AbortSignal.timeout(3000),
         });
@@ -97,7 +97,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export async function generateStaticParams() {
   try {
-    const res = await fetch(`${BACKEND_URL}${API_ROUTES.IDIOMS}`);
+    const res = await fetch(apiUrl(API_ROUTES.IDIOMS));
     if (!res.ok) return [];
     
     const idioms = await res.json();

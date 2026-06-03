@@ -1,6 +1,6 @@
 import { useState, useCallback } from "react";
 import { Idiom } from "@/types/idiom";
-import { API_ROUTES } from "@/lib/constants";
+import { API_ROUTES, apiUrl } from "@/lib/constants";
 
 interface UseIdiomsResult {
   idioms: Idiom[];
@@ -23,7 +23,7 @@ export function useIdioms(): UseIdiomsResult {
   const fetchAllIdioms = useCallback(async () => {
     try {
       setLoading(true);
-      const res = await fetch(API_ROUTES.IDIOMS);
+      const res = await fetch(apiUrl(API_ROUTES.IDIOMS));
       if (!res.ok) throw new Error("Failed to load idioms");
       const data = await res.json();
       setIdioms(data);
@@ -38,7 +38,7 @@ export function useIdioms(): UseIdiomsResult {
   const fetchRandomIdiom = useCallback(async () => {
     try {
       setRandomLoading(true);
-      const res = await fetch(API_ROUTES.IDIOM_RANDOM);
+      const res = await fetch(apiUrl(API_ROUTES.IDIOM_RANDOM));
       if (!res.ok) throw new Error("Failed to load random idiom");
       const data = await res.json();
       setRandomIdiom(data);
@@ -51,7 +51,7 @@ export function useIdioms(): UseIdiomsResult {
 
   const getIdiomBySlug = useCallback(async (slug: string): Promise<Idiom | null> => {
     try {
-      const res = await fetch(`${API_ROUTES.IDIOM_DETAIL}${slug}`);
+      const res = await fetch(apiUrl(`${API_ROUTES.IDIOM_DETAIL}${slug}`));
       if (!res.ok) return null;
       return res.json();
     } catch {

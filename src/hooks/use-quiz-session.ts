@@ -1,8 +1,8 @@
 import { useState, useCallback, useRef, useEffect } from "react";
-import { useSession } from "next-auth/react";
 import { QuizQuestion, QuizSessionConfig } from "@/types/quiz";
 import { API_ROUTES } from "@/lib/constants";
 import { useAudio } from "@/hooks/use-audio";
+import { useApiClient } from "@/hooks/use-api-client";
 
 export interface AnswerRecord {
   questionId: string;
@@ -38,7 +38,7 @@ interface UseQuizSessionResult {
 }
 
 export function useQuizSession(): UseQuizSessionResult {
-  const { data: session } = useSession();
+  const { request, token } = useApiClient();
   const { playCorrect, playWrong, playFinish } = useAudio();
   const [questions, setQuestions] = useState<QuizQuestion[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -91,19 +91,14 @@ export function useQuizSession(): UseQuizSessionResult {
     configuration.current = config;
 
     try {
-      const levelParam =
-        config.level === "mixed" ? "" : `&level=${config.level}`;
-      const modeParam = config.mode ? `&mode=${config.mode}` : "";
-      
-      const headers: HeadersInit = {};
-      if (session?.user?.accessToken) {
-        headers["Authorization"] = `Bearer ${session.user.accessToken}`;
-      }
-
-      const res = await fetch(
-        `${API_ROUTES.QUIZ_QUESTIONS}?category=${config.category}${levelParam}${modeParam}&limit=${config.totalQuestions}`,
-        { headers }
-      );
+      const res = await request(API_ROUTES.QUIZ_QUESTIONS, {
+        query: {
+          category: config.category,
+          level: config.level === "mixed" ? undefined : config.level,
+          mode: config.mode,
+          limit: config.totalQuestions,
+        },
+      });
 
       if (!res.ok) throw new Error("Failed to fetch questions");
 
@@ -144,15 +139,10 @@ export function useQuizSession(): UseQuizSessionResult {
 
     try {
       if (configuration.current) {
-        const token = session?.user?.accessToken;
-
         if (token) {
-          const response = await fetch(API_ROUTES.QUIZ_SUBMIT, {
+          const response = await request(API_ROUTES.QUIZ_SUBMIT, {
             method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-              Authorization: `Bearer ${token}`,
-            },
+            json: true,
             body: JSON.stringify({
               category: configuration.current.category,
               level: configuration.current.level,
@@ -185,7 +175,7 @@ export function useQuizSession(): UseQuizSessionResult {
     } catch {
       setStatus("complete");
     }
-  }, [status, answers, questions, session?.user?.accessToken, playFinish]);
+  }, [status, answers, questions, request, token, playFinish]);
 
   const evaluateAndRecordAnswer = useCallback(
     (userAnswer: string) => {

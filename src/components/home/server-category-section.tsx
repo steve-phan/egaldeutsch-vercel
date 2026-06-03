@@ -1,10 +1,10 @@
-import { BACKEND_URL, API_ROUTES, CATEGORY_META } from "@/lib/constants";
+import { API_ROUTES, CATEGORY_META, apiUrl } from "@/lib/constants";
 import { CategoryGrid } from "./category-grid";
 import { Card } from "@/components/shared/layout/card";
 
 async function getCategoryStats() {
   try {
-    const res = await fetch(`${BACKEND_URL}${API_ROUTES.QUIZ_CATEGORIES}`, { 
+    const res = await fetch(apiUrl(API_ROUTES.QUIZ_CATEGORIES), { 
       next: { revalidate: 3600 } 
     });
     if (!res.ok) return {};

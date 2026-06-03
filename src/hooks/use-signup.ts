@@ -2,6 +2,7 @@ import { useState, useCallback } from "react";
 import { useRouter } from "next/navigation";
 import { useLanguage, type Language } from "@/contexts/language-context";
 import { signIn } from "next-auth/react";
+import { API_ROUTES, apiRequest } from "@/lib/constants";
 
 interface UseSignupResult {
   name: string;
@@ -40,9 +41,9 @@ export function useSignup(): UseSignupResult {
     setIsLoading(true);
 
     try {
-      const res = await fetch("/api/account/signup", {
+      const res = await apiRequest(API_ROUTES.SIGNUP, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        json: true,
         body: JSON.stringify({ name, email, password, language }),
       });
 

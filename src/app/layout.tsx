@@ -9,14 +9,14 @@ import { authOptions } from "@/lib/auth";
 import { cookies } from "next/headers";
 
 const montserrat = Montserrat({
-  subsets: ["latin"],
+  subsets: ["latin", "vietnamese"],
   variable: "--font-montserrat",
   weight: ["700", "800", "900"],
   display: "swap",
 });
 
 const openSans = Open_Sans({
-  subsets: ["latin"],
+  subsets: ["latin", "vietnamese"],
   variable: "--font-open-sans",
   display: "swap",
 });

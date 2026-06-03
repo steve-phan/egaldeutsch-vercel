@@ -1,5 +1,6 @@
 import { useState, useEffect, useCallback } from "react";
 import { useSession } from "next-auth/react";
+import { API_ROUTES, apiRequest } from "@/lib/constants";
 
 interface UserProfile {
   id: string;
@@ -64,12 +65,10 @@ export function useProfile(): UseProfileResult {
 
     try {
       const token = (session?.user as { accessToken?: string })?.accessToken;
-      const res = await fetch("/api/account/user", {
+      const res = await apiRequest(API_ROUTES.USER_PROFILE, {
         method: "PUT",
-        headers: {
-          "Content-Type": "application/json",
-          ...(token ? { "Authorization": `Bearer ${token}` } : {}),
-        },
+        json: true,
+        token,
         body: JSON.stringify({ 
           name, 
           email, 

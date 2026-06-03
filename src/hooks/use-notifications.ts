@@ -1,7 +1,8 @@
 "use client";
 
 import { useState, useCallback, useEffect } from "react";
-import { useSession } from "next-auth/react";
+import { API_ROUTES } from "@/lib/constants";
+import { useApiClient } from "@/hooks/use-api-client";
 
 export interface Notification {
   id: string;
@@ -14,20 +15,15 @@ export interface Notification {
 }
 
 export function useNotifications() {
-  const { data: session } = useSession();
+  const { request, isAuthenticated } = useApiClient();
   const [notifications, setNotifications] = useState<Notification[]>([]);
   const [isLoading, setIsLoading] = useState(false);
 
   const fetchNotifications = useCallback(async () => {
-    if (!session?.user) return;
+    if (!isAuthenticated) return;
     setIsLoading(true);
     try {
-      const token = (session.user as any).accessToken;
-      const res = await fetch("/api/user/notifications", {
-        headers: {
-          ...(token ? { "Authorization": `Bearer ${token}` } : {}),
-        },
-      });
+      const res = await request(API_ROUTES.NOTIFICATIONS);
       if (res.ok) {
         const data = await res.json();
         setNotifications(data);
@@ -37,17 +33,13 @@ export function useNotifications() {
     } finally {
       setIsLoading(false);
     }
-  }, [session]);
+  }, [isAuthenticated, request]);
 
   const markAsRead = useCallback(async (id?: string) => {
     try {
-      const token = (session?.user as any)?.accessToken;
-      const url = id ? `/api/user/notifications/read?id=${id}` : "/api/user/notifications/read";
-      const res = await fetch(url, { 
+      const res = await request(API_ROUTES.NOTIFICATIONS_READ, {
         method: "POST",
-        headers: {
-          ...(token ? { "Authorization": `Bearer ${token}` } : {}),
-        },
+        query: { id },
       });
       if (res.ok) {
         setNotifications(prev =>
@@ -57,7 +49,7 @@ export function useNotifications() {
     } catch (error) {
       console.error("Failed to mark notification as read:", error);
     }
-  }, [session]);
+  }, [request]);
 
   useEffect(() => {
     fetchNotifications();

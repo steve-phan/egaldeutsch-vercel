@@ -2,6 +2,7 @@
 
 import { useState, useCallback } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
+import { API_ROUTES, apiRequest } from "@/lib/constants";
 
 export function useResetPassword() {
   const searchParams = useSearchParams();
@@ -29,9 +30,9 @@ export function useResetPassword() {
     setError("");
 
     try {
-      const res = await fetch("/api/account/reset-password", {
+      const res = await apiRequest(API_ROUTES.RESET_PASSWORD, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        json: true,
         body: JSON.stringify({ token, newPassword: password }),
       });
 

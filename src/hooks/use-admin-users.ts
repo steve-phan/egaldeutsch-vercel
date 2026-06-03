@@ -1,6 +1,6 @@
 import { useState, useCallback } from "react";
 import { API_ROUTES } from "@/lib/constants";
-import { useSession } from "next-auth/react";
+import { useApiClient } from "@/hooks/use-api-client";
 
 export interface AdminUser {
   id: string;
@@ -19,23 +19,15 @@ interface UseAdminUsersResult {
 }
 
 export function useAdminUsers(): UseAdminUsersResult {
-  const { data: session } = useSession();
+  const { request } = useApiClient();
   const [users, setUsers] = useState<AdminUser[]>([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  const getHeaders = useCallback(() => {
-    const token = session?.user?.accessToken;
-    return {
-      "Content-Type": "application/json",
-      ...(token ? { Authorization: `Bearer ${token}` } : {})
-    };
-  }, [session?.user?.accessToken]);
-
   const fetchUsers = useCallback(async () => {
     setLoading(true);
     try {
-      const res = await fetch(API_ROUTES.ADMIN_USERS, { headers: getHeaders() });
+      const res = await request(API_ROUTES.ADMIN_USERS);
       if (!res.ok) throw new Error("Failed to fetch users");
       const data = await res.json();
       setUsers(data);
@@ -45,14 +37,14 @@ export function useAdminUsers(): UseAdminUsersResult {
     } finally {
       setLoading(false);
     }
-  }, [getHeaders]);
+  }, [request]);
 
   const deleteUser = async (id: string) => {
     setLoading(true);
     try {
-      const res = await fetch(`${API_ROUTES.ADMIN_USERS}?id=${id}`, {
+      const res = await request(API_ROUTES.ADMIN_USERS, {
         method: "DELETE",
-        headers: getHeaders()
+        query: { id },
       });
       if (!res.ok) throw new Error("Failed to delete user");
       setUsers((prev) => prev.filter((u) => u.id !== id));

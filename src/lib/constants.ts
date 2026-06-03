@@ -1,13 +1,73 @@
 import { CategoryMeta } from "@/types/quiz";
 
-export const BACKEND_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8080";
+export const BACKEND_URL = (
+  process.env.NEXT_PUBLIC_API_URL || "http://localhost:8080"
+).replace(/\/$/, "");
+
+type QueryValue = string | number | boolean | null | undefined;
+export type ApiRequestOptions = RequestInit & {
+  json?: boolean;
+  query?: Record<string, QueryValue> | URLSearchParams;
+  token?: string;
+};
+
+export function apiUrl(
+  route: string,
+  query?: Record<string, QueryValue> | URLSearchParams,
+) {
+  const normalizedRoute = route.startsWith("/") ? route : `/${route}`;
+  const url = new URL(`${BACKEND_URL}${normalizedRoute}`);
+
+  if (query instanceof URLSearchParams) {
+    query.forEach((value, key) => {
+      if (value !== "") url.searchParams.set(key, value);
+    });
+  } else if (query) {
+    Object.entries(query).forEach(([key, value]) => {
+      if (value !== undefined && value !== null && value !== "") {
+        url.searchParams.set(key, String(value));
+      }
+    });
+  }
+
+  return url.toString();
+}
+
+export function apiRequest(
+  route: string,
+  { json, query, token, headers, ...init }: ApiRequestOptions = {},
+) {
+  const requestHeaders = new Headers(headers);
+
+  if (json && !requestHeaders.has("Content-Type")) {
+    requestHeaders.set("Content-Type", "application/json");
+  }
+
+  if (token && !requestHeaders.has("Authorization")) {
+    requestHeaders.set("Authorization", `Bearer ${token}`);
+  }
+
+  return fetch(apiUrl(route, query), {
+    ...init,
+    headers: requestHeaders,
+  });
+}
 
 export const API_ROUTES = {
   // Auth
+  LOGIN: "/api/account/login",
   SIGNUP: "/api/account/signup",
+  GOOGLE_SYNC: "/api/account/google-sync",
   FORGOT_PASSWORD: "/api/account/forgot-password",
   RESET_PASSWORD: "/api/account/reset-password",
   USER_PROFILE: "/api/account/user",
+  CHANGE_PASSWORD: "/api/account/change-password",
+  DELETE_REQUEST: "/api/account/delete-request",
+  DELETE_CONFIRM: "/api/account/delete-confirm",
+
+  // User
+  NOTIFICATIONS: "/api/user/notifications",
+  NOTIFICATIONS_READ: "/api/user/notifications/read",
   
   // Dashboard & Stats
   DASHBOARD: "/api/dashboard",
