@@ -40,7 +40,7 @@ To build a perfect German relative clause, you must follow two absolute rules:
 1. **The Verb Kicker Rule:** A relative clause is a *Nebensatz*. This means the conjugated verb MUST be kicked to the absolute end of the clause before the comma or period.
 2. **The Pronoun Selection Rule:** The relative pronoun takes its **Gender** and **Number** (Singular/Plural) from the noun it describes in the main clause. But it takes its **Case** (Nom/Akk/Dat/Gen) from its grammatical function *inside* the relative clause itself!
 
-Let's explore that second rule, because it is where 90% of students make mistakes.
+Let's explore that second rule, because it is where 90% of students make mistakes. *(If you are rusty on the cases, quickly review our guides on [Akkusativ](/blogs/akkusativ) and [Dativ](/blogs/dativ) before continuing!)*
 
 ---
 

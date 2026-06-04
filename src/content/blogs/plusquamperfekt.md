@@ -65,7 +65,7 @@ This is where many learners get confused. You should **never** use the Plusquamp
 
 The Plusquamperfekt has only one job: **To show sequence**. It is used to clarify that Action A happened *before* Action B, when both actions are already in the past. 
 
-Therefore, the Plusquamperfekt almost always appears in a sentence alongside another past tense (usually the Präteritum or the Perfekt).
+Therefore, the Plusquamperfekt almost always appears in a sentence alongside another past tense (usually the Präteritum or the Perfekt). *(Need a refresher on the standard past tenses? Review our guide on [Perfekt vs. Präteritum](/blogs/perfekt-praeteritum)!)*
 
 * *Als ich am Bahnhof ankam (Präteritum), **war** der Zug schon **abgefahren** (Plusquamperfekt).*
 *(When I arrived at the station, the train had already left.)*
