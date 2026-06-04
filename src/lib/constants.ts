@@ -1,8 +1,8 @@
 import { CategoryMeta } from "@/types/quiz";
 
-export const BACKEND_URL = (
-  process.env.NEXT_PUBLIC_API_URL || "http://localhost:8080"
-).replace(/\/$/, "");
+export const BACKEND_URL = typeof window !== "undefined"
+  ? window.location.origin
+  : (process.env.NEXT_PUBLIC_API_URL || "http://localhost:8080").replace(/\/$/, "");
 
 type QueryValue = string | number | boolean | null | undefined;
 export type ApiRequestOptions = RequestInit & {
