@@ -139,6 +139,7 @@ export const de = {
     join_us: "Mitmachen",
     practice: "Üben",
     blog: "Blog",
+    idioms: "Redewendungen",
   },
   profile: {
     tabs: {

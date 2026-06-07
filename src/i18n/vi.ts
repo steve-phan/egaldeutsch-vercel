@@ -139,6 +139,7 @@ export const vi = {
     join_us: "Tham gia ngay",
     practice: "Luyện tập",
     blog: "Blog",
+    idioms: "Thành ngữ",
   },
   profile: {
     tabs: {

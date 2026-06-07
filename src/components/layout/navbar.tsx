@@ -4,22 +4,40 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useSession } from "next-auth/react";
-import { Bell, Sparkles, LogIn } from "lucide-react";
+import { Bell, LogIn } from "lucide-react";
 import { Skeleton } from "../ui/skeleton";
+import { usePathname } from "next/navigation";
 
 import { useNotifications } from "@/hooks/use-notifications";
 
 import { useLanguage } from "@/contexts/language-context";
+import { cn } from "@/lib/utils";
 
 export function Navbar() {
   const { t } = useLanguage();
   const { data: session, status } = useSession();
+  const pathname = usePathname();
   const { unreadCount } = useNotifications();
   const isGuest = status === "unauthenticated";
   const isLoading = status === "loading";
 
-
-
+  const navItems = [
+    {
+      href: "/practice",
+      label: t("nav.practice") || "Practice",
+      active: pathname === "/practice" || pathname.startsWith("/quiz"),
+    },
+    {
+      href: "/blogs",
+      label: t("nav.blog") || "Blog",
+      active: pathname.startsWith("/blogs"),
+    },
+    {
+      href: "/redewendung",
+      label: t("nav.idioms") || "Idioms",
+      active: pathname.startsWith("/redewendung"),
+    },
+  ];
 
   const renderRightSide = () => {
     if (isLoading) {
@@ -94,13 +112,22 @@ export function Navbar() {
         </div>
       </Link>
 
-      <div className="hidden md:flex items-center gap-8 font-semibold text-sm">
-        <Link href="/practice" className="text-slate-600 hover:text-primary transition-colors">
-          {t("nav.practice") || "Practice"}
-        </Link>
-        <Link href="/blogs" className="text-slate-600 hover:text-primary transition-colors">
-          {t("nav.blog") || "Blog"}
-        </Link>
+      <div className="hidden md:flex items-center gap-2 rounded-2xl border border-slate-100 bg-white/60 p-1 shadow-sm">
+        {navItems.map((item) => (
+          <Link
+            key={item.href}
+            href={item.href}
+            aria-current={item.active ? "page" : undefined}
+            className={cn(
+              "rounded-xl px-4 py-2 text-xs font-black uppercase tracking-widest transition-all",
+              item.active
+                ? "bg-primary text-white shadow-sm"
+                : "text-slate-500 hover:bg-slate-50 hover:text-primary",
+            )}
+          >
+            {item.label}
+          </Link>
+        ))}
       </div>
 
       <div className="flex items-center gap-4 md:gap-8">

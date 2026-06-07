@@ -1,10 +1,9 @@
 "use client";
 
-import React, { useState, useMemo } from "react";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
 import { Search } from "lucide-react";
 import { MarkdownPost } from "@/lib/markdown";
-import { Pagination } from "@/components/shared/pagination";
 
 interface BlogListProps {
   posts: Omit<MarkdownPost, "contentHtml">[];
@@ -14,7 +13,8 @@ const POSTS_PER_PAGE = 9;
 
 export function BlogList({ posts }: BlogListProps) {
   const [searchQuery, setSearchQuery] = useState("");
-  const [currentPage, setCurrentPage] = useState(1);
+  const [visibleCount, setVisibleCount] = useState(POSTS_PER_PAGE);
+  const loadMoreRef = useRef<HTMLDivElement | null>(null);
 
   // Filter posts based on search query
   const filteredPosts = useMemo(() => {
@@ -29,17 +29,33 @@ export function BlogList({ posts }: BlogListProps) {
     });
   }, [posts, searchQuery]);
 
-  const totalPages = Math.ceil(filteredPosts.length / POSTS_PER_PAGE);
-  const currentPosts = filteredPosts.slice(
-    (currentPage - 1) * POSTS_PER_PAGE,
-    currentPage * POSTS_PER_PAGE,
-  );
+  const currentPosts = filteredPosts.slice(0, visibleCount);
+  const hasMorePosts = visibleCount < filteredPosts.length;
 
   // Reset pagination when search query changes
   const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearchQuery(e.target.value);
-    setCurrentPage(1);
+    setVisibleCount(POSTS_PER_PAGE);
   };
+
+  useEffect(() => {
+    const sentinel = loadMoreRef.current;
+    if (!sentinel || !hasMorePosts) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setVisibleCount((count) =>
+            Math.min(count + POSTS_PER_PAGE, filteredPosts.length),
+          );
+        }
+      },
+      { rootMargin: "320px 0px" },
+    );
+
+    observer.observe(sentinel);
+    return () => observer.disconnect();
+  }, [filteredPosts.length, hasMorePosts]);
 
   return (
     <div>
@@ -102,13 +118,12 @@ export function BlogList({ posts }: BlogListProps) {
         </div>
       )}
 
-      {filteredPosts.length > POSTS_PER_PAGE && (
-        <Pagination
-          currentPage={currentPage}
-          totalPages={totalPages}
-          onPageChange={setCurrentPage}
-          className="mt-10 sm:mt-12"
-        />
+      {hasMorePosts && (
+        <div ref={loadMoreRef} className="mt-10 flex justify-center sm:mt-12">
+          <span className="rounded-full border border-gray-200 bg-white px-4 py-2 text-xs font-bold uppercase tracking-widest text-gray-400 shadow-sm">
+            Loading more topics…
+          </span>
+        </div>
       )}
     </div>
   );

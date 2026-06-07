@@ -139,6 +139,7 @@ export const en = {
     join_us: "Join Us",
     practice: "Practice",
     blog: "Blog",
+    idioms: "Idioms",
   },
   profile: {
     tabs: {

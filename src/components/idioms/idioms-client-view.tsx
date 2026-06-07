@@ -1,11 +1,10 @@
 "use client";
 
-import React, { useState, useMemo } from "react";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 import { Idiom } from "@/types/idiom";
 import { IdiomCard } from "./idiom-card";
 import { IdiomSearchBar } from "./idiom-search-bar";
 import { AlertCircle } from "lucide-react";
-import { Pagination } from "@/components/shared/pagination";
 
 interface IdiomsClientViewProps {
   initialIdioms: Idiom[];
@@ -18,7 +17,8 @@ import { useLanguage } from "@/contexts/language-context";
 export function IdiomsClientView({ initialIdioms }: IdiomsClientViewProps) {
   const { t } = useLanguage();
   const [searchQuery, setSearchQuery] = useState("");
-  const [currentPage, setCurrentPage] = useState(1);
+  const [visibleCount, setVisibleCount] = useState(IDIOMS_PER_PAGE);
+  const loadMoreRef = useRef<HTMLDivElement | null>(null);
 
   const filteredIdioms = useMemo(() => {
     if (searchQuery.length < 3) return initialIdioms;
@@ -35,16 +35,32 @@ export function IdiomsClientView({ initialIdioms }: IdiomsClientViewProps) {
     });
   }, [searchQuery, initialIdioms]);
 
-  const totalPages = Math.ceil(filteredIdioms.length / IDIOMS_PER_PAGE);
-  const currentIdioms = filteredIdioms.slice(
-    (currentPage - 1) * IDIOMS_PER_PAGE,
-    currentPage * IDIOMS_PER_PAGE,
-  );
+  const currentIdioms = filteredIdioms.slice(0, visibleCount);
+  const hasMoreIdioms = visibleCount < filteredIdioms.length;
 
   const handleSearch = (query: string) => {
     setSearchQuery(query);
-    setCurrentPage(1);
+    setVisibleCount(IDIOMS_PER_PAGE);
   };
+
+  useEffect(() => {
+    const sentinel = loadMoreRef.current;
+    if (!sentinel || !hasMoreIdioms) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setVisibleCount((count) =>
+            Math.min(count + IDIOMS_PER_PAGE, filteredIdioms.length),
+          );
+        }
+      },
+      { rootMargin: "360px 0px" },
+    );
+
+    observer.observe(sentinel);
+    return () => observer.disconnect();
+  }, [filteredIdioms.length, hasMoreIdioms]);
 
   return (
     <div className="space-y-12">
@@ -70,7 +86,7 @@ export function IdiomsClientView({ initialIdioms }: IdiomsClientViewProps) {
             {t("idioms.no_results_desc").replace("{query}", searchQuery)}
           </p>
           <button
-            onClick={() => setSearchQuery("")}
+            onClick={() => handleSearch("")}
             className="mt-8 px-6 py-2.5 bg-slate-100 text-slate-500 rounded-xl text-xs font-black uppercase tracking-widest hover:bg-slate-200 transition-colors"
           >
             {t("idioms.clear_search")}
@@ -89,12 +105,12 @@ export function IdiomsClientView({ initialIdioms }: IdiomsClientViewProps) {
         </div>
       )}
 
-      {filteredIdioms.length > IDIOMS_PER_PAGE && (
-        <Pagination
-          currentPage={currentPage}
-          totalPages={totalPages}
-          onPageChange={setCurrentPage}
-        />
+      {hasMoreIdioms && (
+        <div ref={loadMoreRef} className="flex justify-center">
+          <span className="rounded-full border border-slate-100 bg-white px-4 py-2 text-[10px] font-black uppercase tracking-widest text-slate-400 shadow-premium">
+            Loading more idioms…
+          </span>
+        </div>
       )}
     </div>
   );
