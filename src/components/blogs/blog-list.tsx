@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useMemo, useRef, useState } from "react";
+import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
 import { Search } from "lucide-react";
 import { MarkdownPost } from "@/lib/markdown";
@@ -32,6 +32,12 @@ export function BlogList({ posts }: BlogListProps) {
   const currentPosts = filteredPosts.slice(0, visibleCount);
   const hasMorePosts = visibleCount < filteredPosts.length;
 
+  const loadMorePosts = useCallback(() => {
+    setVisibleCount((count) =>
+      Math.min(count + POSTS_PER_PAGE, filteredPosts.length),
+    );
+  }, [filteredPosts.length]);
+
   // Reset pagination when search query changes
   const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearchQuery(e.target.value);
@@ -45,9 +51,7 @@ export function BlogList({ posts }: BlogListProps) {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setVisibleCount((count) =>
-            Math.min(count + POSTS_PER_PAGE, filteredPosts.length),
-          );
+          loadMorePosts();
         }
       },
       { rootMargin: "320px 0px" },
@@ -55,7 +59,7 @@ export function BlogList({ posts }: BlogListProps) {
 
     observer.observe(sentinel);
     return () => observer.disconnect();
-  }, [filteredPosts.length, hasMorePosts]);
+  }, [hasMorePosts, loadMorePosts]);
 
   return (
     <div>
@@ -120,9 +124,13 @@ export function BlogList({ posts }: BlogListProps) {
 
       {hasMorePosts && (
         <div ref={loadMoreRef} className="mt-10 flex justify-center sm:mt-12">
-          <span className="rounded-full border border-gray-200 bg-white px-4 py-2 text-xs font-bold uppercase tracking-widest text-gray-400 shadow-sm">
-            Loading more topics…
-          </span>
+          <button
+            type="button"
+            onClick={loadMorePosts}
+            className="rounded-full border border-gray-200 bg-white px-5 py-2.5 text-xs font-bold uppercase tracking-widest text-gray-500 shadow-sm transition-colors hover:border-blue-200 hover:text-blue-600 active:scale-95"
+          >
+            Load more topics
+          </button>
         </div>
       )}
     </div>

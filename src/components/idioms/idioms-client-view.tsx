@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useMemo, useRef, useState } from "react";
+import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { Idiom } from "@/types/idiom";
 import { IdiomCard } from "./idiom-card";
 import { IdiomSearchBar } from "./idiom-search-bar";
@@ -38,6 +38,12 @@ export function IdiomsClientView({ initialIdioms }: IdiomsClientViewProps) {
   const currentIdioms = filteredIdioms.slice(0, visibleCount);
   const hasMoreIdioms = visibleCount < filteredIdioms.length;
 
+  const loadMoreIdioms = useCallback(() => {
+    setVisibleCount((count) =>
+      Math.min(count + IDIOMS_PER_PAGE, filteredIdioms.length),
+    );
+  }, [filteredIdioms.length]);
+
   const handleSearch = (query: string) => {
     setSearchQuery(query);
     setVisibleCount(IDIOMS_PER_PAGE);
@@ -50,9 +56,7 @@ export function IdiomsClientView({ initialIdioms }: IdiomsClientViewProps) {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setVisibleCount((count) =>
-            Math.min(count + IDIOMS_PER_PAGE, filteredIdioms.length),
-          );
+          loadMoreIdioms();
         }
       },
       { rootMargin: "360px 0px" },
@@ -60,7 +64,7 @@ export function IdiomsClientView({ initialIdioms }: IdiomsClientViewProps) {
 
     observer.observe(sentinel);
     return () => observer.disconnect();
-  }, [filteredIdioms.length, hasMoreIdioms]);
+  }, [hasMoreIdioms, loadMoreIdioms]);
 
   return (
     <div className="space-y-12">
@@ -107,9 +111,13 @@ export function IdiomsClientView({ initialIdioms }: IdiomsClientViewProps) {
 
       {hasMoreIdioms && (
         <div ref={loadMoreRef} className="flex justify-center">
-          <span className="rounded-full border border-slate-100 bg-white px-4 py-2 text-[10px] font-black uppercase tracking-widest text-slate-400 shadow-premium">
-            Loading more idioms…
-          </span>
+          <button
+            type="button"
+            onClick={loadMoreIdioms}
+            className="rounded-full border border-slate-100 bg-white px-5 py-2.5 text-[10px] font-black uppercase tracking-widest text-slate-500 shadow-premium transition-colors hover:border-primary/20 hover:text-primary active:scale-95"
+          >
+            Load more idioms
+          </button>
         </div>
       )}
     </div>
