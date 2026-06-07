@@ -44,10 +44,10 @@ export function IdiomsClientView({ initialIdioms }: IdiomsClientViewProps) {
     );
   }, [filteredIdioms.length]);
 
-  const handleSearch = (query: string) => {
+  const handleSearch = useCallback((query: string) => {
     setSearchQuery(query);
     setVisibleCount(IDIOMS_PER_PAGE);
-  };
+  }, []);
 
   useEffect(() => {
     const sentinel = loadMoreRef.current;
