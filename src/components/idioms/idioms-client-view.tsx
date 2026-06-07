@@ -5,16 +5,20 @@ import { Idiom } from "@/types/idiom";
 import { IdiomCard } from "./idiom-card";
 import { IdiomSearchBar } from "./idiom-search-bar";
 import { AlertCircle } from "lucide-react";
+import { Pagination } from "@/components/shared/pagination";
 
 interface IdiomsClientViewProps {
   initialIdioms: Idiom[];
 }
+
+const IDIOMS_PER_PAGE = 12;
 
 import { useLanguage } from "@/contexts/language-context";
 
 export function IdiomsClientView({ initialIdioms }: IdiomsClientViewProps) {
   const { t } = useLanguage();
   const [searchQuery, setSearchQuery] = useState("");
+  const [currentPage, setCurrentPage] = useState(1);
 
   const filteredIdioms = useMemo(() => {
     if (searchQuery.length < 3) return initialIdioms;
@@ -31,17 +35,28 @@ export function IdiomsClientView({ initialIdioms }: IdiomsClientViewProps) {
     });
   }, [searchQuery, initialIdioms]);
 
+  const totalPages = Math.ceil(filteredIdioms.length / IDIOMS_PER_PAGE);
+  const currentIdioms = filteredIdioms.slice(
+    (currentPage - 1) * IDIOMS_PER_PAGE,
+    currentPage * IDIOMS_PER_PAGE,
+  );
+
+  const handleSearch = (query: string) => {
+    setSearchQuery(query);
+    setCurrentPage(1);
+  };
+
   return (
     <div className="space-y-12">
       {/* Search Bar Section */}
       <div className="w-full animate-in fade-in slide-in-from-top-4 duration-700 delay-100">
-        <IdiomSearchBar idioms={initialIdioms} onSearch={setSearchQuery} />
+        <IdiomSearchBar idioms={initialIdioms} onSearch={handleSearch} />
       </div>
 
       {/* Grid Section */}
       {filteredIdioms.length > 0 ? (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 animate-in fade-in duration-700 delay-200">
-          {filteredIdioms.map((idiom) => (
+          {currentIdioms.map((idiom) => (
             <IdiomCard key={idiom.id} idiom={idiom} />
           ))}
         </div>
@@ -72,6 +87,14 @@ export function IdiomsClientView({ initialIdioms }: IdiomsClientViewProps) {
               .replace("{query}", searchQuery)}
           </span>
         </div>
+      )}
+
+      {filteredIdioms.length > IDIOMS_PER_PAGE && (
+        <Pagination
+          currentPage={currentPage}
+          totalPages={totalPages}
+          onPageChange={setCurrentPage}
+        />
       )}
     </div>
   );

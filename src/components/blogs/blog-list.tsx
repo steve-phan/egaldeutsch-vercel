@@ -2,8 +2,9 @@
 
 import React, { useState, useMemo } from "react";
 import Link from "next/link";
-import { Search, ChevronDown } from "lucide-react";
+import { Search } from "lucide-react";
 import { MarkdownPost } from "@/lib/markdown";
+import { Pagination } from "@/components/shared/pagination";
 
 interface BlogListProps {
   posts: Omit<MarkdownPost, "contentHtml">[];
@@ -13,7 +14,7 @@ const POSTS_PER_PAGE = 9;
 
 export function BlogList({ posts }: BlogListProps) {
   const [searchQuery, setSearchQuery] = useState("");
-  const [visibleCount, setVisibleCount] = useState(POSTS_PER_PAGE);
+  const [currentPage, setCurrentPage] = useState(1);
 
   // Filter posts based on search query
   const filteredPosts = useMemo(() => {
@@ -28,17 +29,16 @@ export function BlogList({ posts }: BlogListProps) {
     });
   }, [posts, searchQuery]);
 
-  // The posts to actually render on screen
-  const visiblePosts = filteredPosts.slice(0, visibleCount);
+  const totalPages = Math.ceil(filteredPosts.length / POSTS_PER_PAGE);
+  const currentPosts = filteredPosts.slice(
+    (currentPage - 1) * POSTS_PER_PAGE,
+    currentPage * POSTS_PER_PAGE,
+  );
 
   // Reset pagination when search query changes
   const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearchQuery(e.target.value);
-    setVisibleCount(POSTS_PER_PAGE);
-  };
-
-  const handleLoadMore = () => {
-    setVisibleCount((prev) => prev + POSTS_PER_PAGE);
+    setCurrentPage(1);
   };
 
   return (
@@ -59,7 +59,7 @@ export function BlogList({ posts }: BlogListProps) {
 
       {/* Results Grid */}
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 lg:gap-6">
-        {visiblePosts.map((post) => (
+        {currentPosts.map((post) => (
           <Link href={`/blogs/${post.slug}`} key={post.slug} className="group h-full">
             <div className="flex h-full flex-col rounded-xl border border-gray-200 bg-white p-4 shadow-sm transition-all duration-200 hover:shadow-md sm:rounded-2xl sm:p-6 sm:group-hover:-translate-y-1">
               <div className="mb-4 flex flex-wrap items-center justify-between gap-2">
@@ -102,16 +102,13 @@ export function BlogList({ posts }: BlogListProps) {
         </div>
       )}
 
-      {/* Load More Button */}
-      {visibleCount < filteredPosts.length && (
-        <div className="mt-10 flex justify-center sm:mt-12">
-          <button
-            onClick={handleLoadMore}
-            className="inline-flex items-center gap-2 rounded-xl border border-gray-200 bg-white px-6 py-3 text-sm font-semibold text-gray-700 shadow-sm transition-colors hover:bg-gray-50 hover:text-blue-600 active:scale-95"
-          >
-            Load More <ChevronDown className="w-4 h-4" />
-          </button>
-        </div>
+      {filteredPosts.length > POSTS_PER_PAGE && (
+        <Pagination
+          currentPage={currentPage}
+          totalPages={totalPages}
+          onPageChange={setCurrentPage}
+          className="mt-10 sm:mt-12"
+        />
       )}
     </div>
   );
