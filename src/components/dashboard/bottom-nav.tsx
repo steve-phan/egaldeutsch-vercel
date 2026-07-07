@@ -76,8 +76,13 @@ export function BottomNav() {
   const pathname = usePathname();
   const { unreadCount } = useNotifications();
   const [isMoreOpen, setIsMoreOpen] = useState(false);
+  const isBookPage = pathname.startsWith("/road-to-c1");
   const isMoreActive = moreItems.some((item) => item.isActive(pathname));
   const hasUnread = typeof unreadCount === "number" && unreadCount > 0;
+
+  if (isBookPage) {
+    return null;
+  }
 
   return (
     <nav

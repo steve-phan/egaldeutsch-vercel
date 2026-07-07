@@ -1,6 +1,12 @@
 import { MetadataRoute } from "next";
 import { CATEGORY_META, API_ROUTES, apiUrl } from "@/lib/constants";
 import { getPostSlugs, getPostBySlug } from "@/lib/markdown";
+import { getAllRoadToC1Chapters } from "@/lib/road-to-c1";
+
+type SitemapIdiom = {
+  slug?: string;
+  updated_at?: string;
+};
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = "https://egaldeutsch.com";
@@ -12,6 +18,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${baseUrl}/practice`, lastModified: new Date(), changeFrequency: "daily", priority: 0.8 },
     { url: `${baseUrl}/feedback`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.3 },
     { url: `${baseUrl}/redewendung`, lastModified: new Date(), changeFrequency: "daily", priority: 0.9 },
+    { url: `${baseUrl}/road-to-c1`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.9 },
   ];
 
   // 2. Quiz Category Routes (Dynamic from constants)
@@ -45,7 +52,17 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     };
   });
 
-  // 4. Idiom Routes (Dynamic from API)
+  // 4. Road to C1 Book Routes (Local Markdown Files)
+  const roadToC1Routes: MetadataRoute.Sitemap = getAllRoadToC1Chapters().map(
+    (chapter) => ({
+      url: `${baseUrl}/road-to-c1/${chapter.slug}`,
+      lastModified: new Date(chapter.date),
+      changeFrequency: "monthly",
+      priority: chapter.chapterNumber === 1 ? 0.85 : 0.75,
+    }),
+  );
+
+  // 5. Idiom Routes (Dynamic from API)
   let idiomRoutes: MetadataRoute.Sitemap = [];
   try {
     const res = await fetch(apiUrl(API_ROUTES.IDIOMS), {
@@ -59,8 +76,11 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
             const idioms = await res.json();
             if (Array.isArray(idioms)) {
                 idiomRoutes = idioms
-                    .filter((idiom: any) => idiom.slug && idiom.slug.trim() !== "")
-                    .map((idiom: any) => {
+                    .filter(
+                      (idiom: SitemapIdiom) =>
+                        idiom.slug && idiom.slug.trim() !== "",
+                    )
+                    .map((idiom: SitemapIdiom) => {
                         // Safety check for invalid/zero dates from Go backend (0001-01-01)
                         let lastMod = new Date();
                         if (idiom.updated_at) {
@@ -82,9 +102,15 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
             console.warn("Sitemap: Backend returned non-JSON response for idioms.");
         }
     }
-  } catch (error) {
+  } catch {
     console.warn("Sitemap: Could not fetch idioms for sitemap, skipping dynamic routes.");
   }
 
-  return [...staticRoutes, ...categoryRoutes, ...blogRoutes, ...idiomRoutes];
+  return [
+    ...staticRoutes,
+    ...categoryRoutes,
+    ...blogRoutes,
+    ...roadToC1Routes,
+    ...idiomRoutes,
+  ];
 }
