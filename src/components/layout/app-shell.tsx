@@ -29,6 +29,7 @@ export function AppShell({
   
   const isAuthPage = pathname.startsWith("/login") || pathname.startsWith("/signup");
   const isReaderPage =
+    pathname.startsWith("/road-to-b2/") ||
     pathname.startsWith("/road-to-c1/") ||
     pathname.startsWith("/blogs/") ||
     pathname.startsWith("/redewendung/");

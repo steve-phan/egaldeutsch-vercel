@@ -1,6 +1,7 @@
 import { MetadataRoute } from "next";
 import { CATEGORY_META, API_ROUTES, apiUrl } from "@/lib/constants";
 import { getPostSlugs, getPostBySlug } from "@/lib/markdown";
+import { getAllRoadToB2Chapters } from "@/lib/road-to-b2";
 import { getAllRoadToC1Chapters } from "@/lib/road-to-c1";
 
 type SitemapIdiom = {
@@ -18,6 +19,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${baseUrl}/practice`, lastModified: new Date(), changeFrequency: "daily", priority: 0.8 },
     { url: `${baseUrl}/feedback`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.3 },
     { url: `${baseUrl}/redewendung`, lastModified: new Date(), changeFrequency: "daily", priority: 0.9 },
+    { url: `${baseUrl}/books`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.9 },
+    { url: `${baseUrl}/road-to-b2`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.9 },
     { url: `${baseUrl}/road-to-c1`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.9 },
   ];
 
@@ -52,7 +55,16 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     };
   });
 
-  // 4. Road to C1 Book Routes (Local Markdown Files)
+  // 4. Book Routes (Local Markdown Files)
+  const roadToB2Routes: MetadataRoute.Sitemap = getAllRoadToB2Chapters().map(
+    (chapter) => ({
+      url: `${baseUrl}/road-to-b2/${chapter.slug}`,
+      lastModified: new Date(chapter.date),
+      changeFrequency: "monthly",
+      priority: chapter.chapterNumber === 1 ? 0.85 : 0.75,
+    }),
+  );
+
   const roadToC1Routes: MetadataRoute.Sitemap = getAllRoadToC1Chapters().map(
     (chapter) => ({
       url: `${baseUrl}/road-to-c1/${chapter.slug}`,
@@ -110,6 +122,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ...staticRoutes,
     ...categoryRoutes,
     ...blogRoutes,
+    ...roadToB2Routes,
     ...roadToC1Routes,
     ...idiomRoutes,
   ];

@@ -33,9 +33,12 @@ export function Navbar() {
       active: pathname.startsWith("/blogs"),
     },
     {
-      href: "/road-to-c1",
-      label: "C1 Book",
-      active: pathname.startsWith("/road-to-c1"),
+      href: "/books",
+      label: "Books",
+      active:
+        pathname.startsWith("/books") ||
+        pathname.startsWith("/road-to-b2") ||
+        pathname.startsWith("/road-to-c1"),
     },
     {
       href: "/redewendung",

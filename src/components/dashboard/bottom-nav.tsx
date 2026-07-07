@@ -42,10 +42,28 @@ const navItems = [
   },
   {
     icon: BookMarked,
-    label: "C1 Book",
+    label: "Books",
+    href: "/books",
+    isActive: (pathname: string) =>
+      pathname.startsWith("/books") ||
+      pathname.startsWith("/road-to-b2") ||
+      pathname.startsWith("/road-to-c1"),
+    showBadge: false,
+  },
+] as const;
+
+const bookItems = [
+  {
+    icon: GraduationCap,
+    label: "Road to B2",
+    href: "/road-to-b2",
+    isActive: (pathname: string) => pathname.startsWith("/road-to-b2"),
+  },
+  {
+    icon: BookMarked,
+    label: "Road to C1",
     href: "/road-to-c1",
     isActive: (pathname: string) => pathname.startsWith("/road-to-c1"),
-    showBadge: false,
   },
 ] as const;
 
@@ -84,10 +102,13 @@ export function BottomNav() {
   const pathname = usePathname();
   const { unreadCount } = useNotifications();
   const [isMoreOpen, setIsMoreOpen] = useState(false);
+  const [isBooksOpen, setIsBooksOpen] = useState(false);
   const isReaderPage =
+    pathname.startsWith("/road-to-b2/") ||
     pathname.startsWith("/road-to-c1/") ||
     pathname.startsWith("/blogs/") ||
     pathname.startsWith("/redewendung/");
+  const isBooksActive = bookItems.some((item) => item.isActive(pathname));
   const isMoreActive = moreItems.some((item) => item.isActive(pathname));
   const hasUnread = typeof unreadCount === "number" && unreadCount > 0;
 
@@ -137,16 +158,84 @@ export function BottomNav() {
         </div>
       ) : null}
 
+      {isBooksOpen ? (
+        <div className="absolute inset-x-3 bottom-[calc(env(safe-area-inset-bottom)+4.75rem)] mx-auto max-w-md rounded-3xl border border-slate-200/80 bg-white/95 p-2 shadow-[0_16px_40px_rgba(15,23,42,0.16)] backdrop-blur-xl">
+          <div className="grid grid-cols-2 gap-2">
+            {bookItems.map((item) => {
+              const Icon = item.icon;
+              const active = item.isActive(pathname);
+
+              return (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  onClick={() => {
+                    setIsBooksOpen(false);
+                    setIsMoreOpen(false);
+                  }}
+                  aria-current={active ? "page" : undefined}
+                  className={cn(
+                    "relative flex min-w-0 flex-col items-center justify-center gap-1 rounded-2xl px-2 py-3 text-[10px] font-black transition-all active:scale-95",
+                    active
+                      ? "bg-primary/10 text-primary"
+                      : "text-slate-500 hover:bg-slate-50 hover:text-slate-700",
+                  )}
+                >
+                  <span className="relative flex h-8 w-8 items-center justify-center rounded-xl bg-white shadow-sm ring-1 ring-slate-100">
+                    <Icon className="h-5 w-5" />
+                  </span>
+                  <span className="truncate leading-none">{item.label}</span>
+                </Link>
+              );
+            })}
+          </div>
+        </div>
+      ) : null}
+
       <div className="mx-auto grid max-w-md grid-cols-5 px-2 pt-2 pb-[calc(env(safe-area-inset-bottom)+0.5rem)]">
         {navItems.map((item) => {
           const Icon = item.icon;
           const active = item.isActive(pathname);
+          const isBooksItem = item.href === "/books";
 
-          return (
+          return isBooksItem ? (
+            <button
+              key={item.href}
+              type="button"
+              onClick={() => {
+                setIsBooksOpen((current) => !current);
+                setIsMoreOpen(false);
+              }}
+              aria-expanded={isBooksOpen}
+              aria-label="Books navigation"
+              className={cn(
+                "relative flex min-w-0 flex-col items-center justify-center gap-1 rounded-2xl px-1 py-1.5 text-[10px] font-black transition-all active:scale-95",
+                isBooksActive || isBooksOpen
+                  ? "text-primary"
+                  : "text-slate-500 hover:bg-slate-50 hover:text-slate-700",
+              )}
+            >
+              {isBooksActive || isBooksOpen ? (
+                <span className="absolute -top-2 h-1 w-8 rounded-full bg-primary" />
+              ) : null}
+              <span
+                className={cn(
+                  "relative flex h-7 w-7 items-center justify-center rounded-xl transition-colors",
+                  (isBooksActive || isBooksOpen) && "bg-primary/10",
+                )}
+              >
+                <Icon className="h-5 w-5" />
+              </span>
+              <span className="truncate leading-none">{item.label}</span>
+            </button>
+          ) : (
             <Link
               key={item.href}
               href={item.href}
-              onClick={() => setIsMoreOpen(false)}
+              onClick={() => {
+                setIsMoreOpen(false);
+                setIsBooksOpen(false);
+              }}
               aria-current={active ? "page" : undefined}
               className={cn(
                 "relative flex min-w-0 flex-col items-center justify-center gap-1 rounded-2xl px-1 py-1.5 text-[10px] font-black transition-all active:scale-95",
@@ -173,7 +262,10 @@ export function BottomNav() {
 
         <button
           type="button"
-          onClick={() => setIsMoreOpen((current) => !current)}
+          onClick={() => {
+            setIsMoreOpen((current) => !current);
+            setIsBooksOpen(false);
+          }}
           aria-expanded={isMoreOpen}
           aria-label="More navigation"
           className={cn(
