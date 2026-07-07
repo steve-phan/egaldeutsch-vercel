@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {
   Bell,
+  BookMarked,
   BookOpen,
   HeartHandshake,
   GraduationCap,
@@ -40,15 +41,22 @@ const navItems = [
     showBadge: false,
   },
   {
+    icon: BookMarked,
+    label: "C1 Book",
+    href: "/road-to-c1",
+    isActive: (pathname: string) => pathname.startsWith("/road-to-c1"),
+    showBadge: false,
+  },
+] as const;
+
+const moreItems = [
+  {
     icon: Sparkles,
     label: "Idioms",
     href: "/redewendung",
     isActive: (pathname: string) => pathname.startsWith("/redewendung"),
     showBadge: false,
   },
-] as const;
-
-const moreItems = [
   {
     icon: Bell,
     label: "Notifications",
@@ -76,11 +84,14 @@ export function BottomNav() {
   const pathname = usePathname();
   const { unreadCount } = useNotifications();
   const [isMoreOpen, setIsMoreOpen] = useState(false);
-  const isBookPage = pathname.startsWith("/road-to-c1");
+  const isReaderPage =
+    pathname.startsWith("/road-to-c1/") ||
+    pathname.startsWith("/blogs/") ||
+    pathname.startsWith("/redewendung/");
   const isMoreActive = moreItems.some((item) => item.isActive(pathname));
   const hasUnread = typeof unreadCount === "number" && unreadCount > 0;
 
-  if (isBookPage) {
+  if (isReaderPage) {
     return null;
   }
 

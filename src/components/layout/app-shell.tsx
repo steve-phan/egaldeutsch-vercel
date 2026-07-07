@@ -28,8 +28,11 @@ export function AppShell({
   useSession();
   
   const isAuthPage = pathname.startsWith("/login") || pathname.startsWith("/signup");
-  const isBookPage = pathname.startsWith("/road-to-c1");
-  const shouldShowNav = showNav && !isAuthPage && !isBookPage;
+  const isReaderPage =
+    pathname.startsWith("/road-to-c1/") ||
+    pathname.startsWith("/blogs/") ||
+    pathname.startsWith("/redewendung/");
+  const shouldShowNav = showNav && !isAuthPage && !isReaderPage;
 
   return (
     <div className="min-h-screen bg-slate-50 flex flex-col relative overflow-x-hidden pt-px">
