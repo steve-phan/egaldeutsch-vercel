@@ -100,6 +100,9 @@ Gute Notizen sind:
 
 ## Hörtext
 
+
+{{audio:/audio/books/road-to-c1/kapitel-25-horen-und-notizen/01-hoertext.mp3}}
+
 > In vielen Unternehmen wird künstliche Intelligenz inzwischen eingesetzt, um Arbeitsprozesse zu beschleunigen. Besonders Routineaufgaben können automatisiert werden. Gleichzeitig weisen Fachleute darauf hin, dass Fragen des Datenschutzes und der Verantwortung noch nicht ausreichend geklärt sind. Deshalb fordern sie klare Regeln für den Einsatz solcher Systeme.
 
 ## Gute Notizen
@@ -282,6 +285,9 @@ Beispiel:
 
 Notiz:
 
+
+{{audio:/audio/books/road-to-c1/kapitel-25-horen-und-notizen/02-hoertext.mp3}}
+
 > Meinung: KI erlauben + regeln
 
 ---
@@ -340,6 +346,9 @@ Lösung:
 ### Aufgabe 3
 
 Was sollten Unternehmen laut Text tun?
+
+{{audio:/audio/books/road-to-c1/kapitel-25-horen-und-notizen/03-hoertext.mp3}}
+
 
 a) Weiterbildung verbieten.
 b) Passende Angebote schaffen und Zeit zur Verfügung stellen.
@@ -401,6 +410,9 @@ c) Jugendliche interessieren sich nicht für soziale Medien.
 d) Schulen nutzen zu viele Bücher.
 
 Lösung:
+
+{{audio:/audio/books/road-to-c1/kapitel-25-horen-und-notizen/04-hoertext.mp3}}
+
 
 > a) Falsche Informationen können sich schnell verbreiten.
 
@@ -609,6 +621,9 @@ Gute Notiz:
 
 > Mieten ↑ → Familien Stadtrand
 
+
+{{audio:/audio/books/road-to-c1/kapitel-25-horen-und-notizen/05-hoertext.mp3}}
+
 ---
 
 # 14. Übung: Notizen verbessern
@@ -666,6 +681,9 @@ a) Sie können Verkehrsbelastung und Luftverschmutzung reduzieren.
 b) Sie machen Autos schneller.
 c) Sie ersetzen alle Fahrräder.
 d) Sie funktionieren überall perfekt.
+
+
+{{audio:/audio/books/road-to-c1/kapitel-25-horen-und-notizen/06-hoertext.mp3}}
 
 Lösung:
 

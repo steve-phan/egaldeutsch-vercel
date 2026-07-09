@@ -249,6 +249,9 @@ Methode:
 
 ## Hörtext: Weiterbildung im Beruf
 
+
+{{audio:/audio/books/road-to-c1/kapitel-15-prufungssimulation/01-hoertext-weiterbildung-im-beruf.mp3}}
+
 In vielen Berufen verändern sich die Anforderungen schneller als früher. Neue Technologien, digitale Arbeitsprozesse und internationale Zusammenarbeit führen dazu, dass Beschäftigte regelmäßig neue Kompetenzen erwerben müssen. Weiterbildung gewinnt deshalb zunehmend an Bedeutung. Allerdings ist sie für viele Menschen auch eine zusätzliche Belastung, besonders wenn sie neben Beruf und Familie organisiert werden muss. Aus diesem Grund sollten nicht nur Arbeitnehmerinnen und Arbeitnehmer Verantwortung übernehmen, sondern auch Unternehmen passende Angebote schaffen.
 
 ## Fragen

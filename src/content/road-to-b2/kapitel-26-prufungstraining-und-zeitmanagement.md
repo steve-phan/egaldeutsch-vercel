@@ -824,6 +824,9 @@ Lies den Hörtext laut oder lass ihn dir vorlesen.
 
 ## Hörtext
 
+
+{{audio:/audio/books/road-to-b2/kapitel-26-prufungstraining-und-zeitmanagement/01-hoertext.mp3}}
+
 > Guten Tag, hier spricht die Sprachschule Mitte. Ihr Beratungstermin am Donnerstag um 13 Uhr muss leider verschoben werden, da unsere Mitarbeiterin krank ist. Wir könnten Ihnen alternativ einen Termin am Freitag um 10 Uhr oder am Montag um 14 Uhr anbieten. Bitte rufen Sie uns zurück oder schreiben Sie uns eine kurze E-Mail.
 
 ## Aufgaben

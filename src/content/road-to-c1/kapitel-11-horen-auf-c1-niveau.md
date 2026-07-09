@@ -204,6 +204,9 @@ Lies diesen kurzen Hörtext. Stell dir vor, du hörst ihn nur einmal.
 
 ## Hörtext 1: Digitale Bildung
 
+
+{{audio:/audio/books/road-to-c1/kapitel-11-horen-auf-c1-niveau/01-hoertext-1-digitale-bildung.mp3}}
+
 > Digitale Medien spielen im Unterricht eine immer größere Rolle. Viele Lehrkräfte sehen darin eine Chance, Lernprozesse individueller zu gestalten. Schülerinnen und Schüler können beispielsweise in ihrem eigenen Tempo arbeiten oder zusätzliche Übungen online erledigen. Gleichzeitig darf man nicht außer Acht lassen, dass nicht alle Schulen über die gleiche technische Ausstattung verfügen. Wenn digitale Bildung erfolgreich sein soll, müssen also sowohl Lehrkräfte geschult als auch Geräte und stabile Internetverbindungen zur Verfügung gestellt werden.
 
 ## Mögliche Notizen
@@ -259,6 +262,9 @@ c) Online-Übungen sind verboten.
 d) Schülerinnen und Schüler lernen zu schnell.
 
 Lösung:
+
+
+{{audio:/audio/books/road-to-c1/kapitel-11-horen-auf-c1-niveau/02-hoertext.mp3}}
 
 > b) Nicht alle Schulen haben die gleiche technische Ausstattung.
 

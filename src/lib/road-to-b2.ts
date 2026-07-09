@@ -4,6 +4,7 @@ import matter from "gray-matter";
 import { remark } from "remark";
 import remarkGfm from "remark-gfm";
 import html from "remark-html";
+import { renderBookAudioMarkers } from "@/lib/book-audio";
 
 const bookDirectory = path.join(process.cwd(), "src/content/road-to-b2");
 
@@ -116,5 +117,5 @@ export async function getRoadToB2Html(content: string) {
     .use(html)
     .process(content);
 
-  return processedContent.toString();
+  return renderBookAudioMarkers(processedContent.toString());
 }

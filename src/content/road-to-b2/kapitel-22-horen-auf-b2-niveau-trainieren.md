@@ -709,6 +709,9 @@ Wichtige Informationen:
 
 Stell dir vor, du hörst diese Nachricht auf der Mailbox:
 
+
+{{audio:/audio/books/road-to-b2/kapitel-22-horen-auf-b2-niveau-trainieren/01-hoertext.mp3}}
+
 > Guten Tag, hier spricht die Praxis Dr. Weber. Sie haben morgen um 8.30 Uhr einen Termin zur Kontrolle. Leider müssen wir diesen Termin verschieben, da die Ärztin krank ist. Wir könnten Ihnen alternativ am Freitag um 11 Uhr oder am Montag um 15.30 Uhr einen neuen Termin anbieten. Bitte rufen Sie uns zurück und teilen Sie uns mit, welcher Termin Ihnen besser passt. Vielen Dank.
 
 ## Aufgaben
@@ -741,6 +744,9 @@ c) Zurückrufen.
 
 1. b) Die Ärztin ist krank.
 2. a) Freitag um 11 Uhr und Montag um 15.30 Uhr
+
+{{audio:/audio/books/road-to-b2/kapitel-22-horen-auf-b2-niveau-trainieren/02-hoertext.mp3}}
+
 3. c) Zurückrufen.
 
 ---
@@ -772,6 +778,9 @@ c) Raum 301
 ### Aufgabe 3
 
 Was sollen die Teilnehmenden morgen mitbringen?
+
+
+{{audio:/audio/books/road-to-b2/kapitel-22-horen-auf-b2-niveau-trainieren/03-hoertext.mp3}}
 
 a) ihre Schreibaufgabe
 b) ihren Ausweis
@@ -805,6 +814,9 @@ c) Alle sollten nur noch zu Hause arbeiten.
 
 Welcher Vorteil wird genannt?
 
+
+{{audio:/audio/books/road-to-b2/kapitel-22-horen-auf-b2-niveau-trainieren/04-hoertext.mp3}}
+
 a) Man verdient mehr Geld.
 b) Man spart den Arbeitsweg.
 c) Man hat mehr Urlaub.
@@ -836,6 +848,9 @@ c) Die Arbeit ist zu leicht.
 ### Aufgabe 1
 
 Warum ruft Herr Schneider an?
+
+
+{{audio:/audio/books/road-to-b2/kapitel-22-horen-auf-b2-niveau-trainieren/05-hoertext.mp3}}
 
 a) Er möchte einen Stuhl zurückgeben.
 b) Der Schreibtisch wurde noch nicht geliefert.
