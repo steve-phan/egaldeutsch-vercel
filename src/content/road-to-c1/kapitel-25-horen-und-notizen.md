@@ -285,9 +285,6 @@ Beispiel:
 
 Notiz:
 
-
-{{audio:/audio/books/road-to-c1/kapitel-25-horen-und-notizen/02-hoertext.mp3}}
-
 > Meinung: KI erlauben + regeln
 
 ---
@@ -295,6 +292,9 @@ Notiz:
 # 9. Hörtext 1: Weiterbildung
 
 ## Hörtext
+
+
+{{audio:/audio/books/road-to-c1/kapitel-25-horen-und-notizen/02-hoertext.mp3}}
 
 > Berufliche Weiterbildung gewinnt in der modernen Arbeitswelt zunehmend an Bedeutung. Durch Digitalisierung und neue Technologien verändern sich viele Berufe schneller als früher. Beschäftigte müssen deshalb regelmäßig neue Kompetenzen erwerben, um den Anforderungen des Arbeitsmarktes gerecht zu werden. Allerdings stellt Weiterbildung für viele Menschen auch eine zusätzliche Belastung dar, besonders wenn sie neben Beruf und Familie organisiert werden muss. Aus diesem Grund sollten Unternehmen passende Angebote schaffen und ihren Mitarbeitenden Zeit für Weiterbildung zur Verfügung stellen.
 
@@ -347,9 +347,6 @@ Lösung:
 
 Was sollten Unternehmen laut Text tun?
 
-{{audio:/audio/books/road-to-c1/kapitel-25-horen-und-notizen/03-hoertext.mp3}}
-
-
 a) Weiterbildung verbieten.
 b) Passende Angebote schaffen und Zeit zur Verfügung stellen.
 c) Nur junge Menschen einstellen.
@@ -364,6 +361,9 @@ Lösung:
 # 10. Hörtext 2: Soziale Medien
 
 ## Hörtext
+
+
+{{audio:/audio/books/road-to-c1/kapitel-25-horen-und-notizen/03-hoertext.mp3}}
 
 > Soziale Medien sind aus dem Alltag vieler Menschen kaum noch wegzudenken. Sie ermöglichen schnelle Kommunikation, erleichtern den Informationsaustausch und bieten vielen Menschen die Möglichkeit, sich gesellschaftlich zu beteiligen. Gleichzeitig wird jedoch kritisiert, dass sich falsche Informationen sehr schnell verbreiten können. Besonders Jugendliche sind gefährdet, wenn sie Inhalte nicht kritisch prüfen oder sich stark mit unrealistischen Darstellungen vergleichen. Deshalb sollte Medienkompetenz bereits in der Schule stärker gefördert werden.
 
@@ -411,9 +411,6 @@ d) Schulen nutzen zu viele Bücher.
 
 Lösung:
 
-{{audio:/audio/books/road-to-c1/kapitel-25-horen-und-notizen/04-hoertext.mp3}}
-
-
 > a) Falsche Informationen können sich schnell verbreiten.
 
 ---
@@ -436,6 +433,9 @@ Lösung:
 # 11. Hörtext 3: Klimaschutz
 
 ## Hörtext
+
+
+{{audio:/audio/books/road-to-c1/kapitel-25-horen-und-notizen/04-hoertext.mp3}}
 
 > Beim Klimaschutz wird häufig darüber diskutiert, welche Verantwortung einzelne Menschen tragen. Einerseits kann jeder durch bewussten Konsum, Energiesparen oder die Nutzung öffentlicher Verkehrsmittel einen Beitrag leisten. Andererseits reichen individuelle Entscheidungen allein nicht aus, um die Klimakrise zu bewältigen. Entscheidend sind auch politische Maßnahmen und Veränderungen in Wirtschaft und Industrie. Aus meiner Sicht braucht es daher eine Kombination aus persönlicher Verantwortung und klaren gesetzlichen Rahmenbedingungen.
 
@@ -621,9 +621,6 @@ Gute Notiz:
 
 > Mieten ↑ → Familien Stadtrand
 
-
-{{audio:/audio/books/road-to-c1/kapitel-25-horen-und-notizen/05-hoertext.mp3}}
-
 ---
 
 # 14. Übung: Notizen verbessern
@@ -656,6 +653,9 @@ Gute Notiz:
 
 ## Hörtext
 
+
+{{audio:/audio/books/road-to-c1/kapitel-25-horen-und-notizen/05-hoertext.mp3}}
+
 > Öffentliche Verkehrsmittel spielen eine wichtige Rolle für umweltfreundliche Mobilität. Ein gut ausgebauter Nahverkehr kann dazu beitragen, Verkehrsbelastung und Luftverschmutzung zu reduzieren. Allerdings sind Busse und Bahnen in vielen ländlichen Regionen noch unzuverlässig oder fahren zu selten. Deshalb reicht es nicht aus, Tickets günstiger zu machen. Entscheidend ist auch, die Infrastruktur auszubauen und Verbindungen zuverlässiger zu gestalten.
 
 ---
@@ -681,9 +681,6 @@ a) Sie können Verkehrsbelastung und Luftverschmutzung reduzieren.
 b) Sie machen Autos schneller.
 c) Sie ersetzen alle Fahrräder.
 d) Sie funktionieren überall perfekt.
-
-
-{{audio:/audio/books/road-to-c1/kapitel-25-horen-und-notizen/06-hoertext.mp3}}
 
 Lösung:
 
@@ -724,6 +721,9 @@ Lösung:
 # 16. Hörtext 5: Wohnen in Großstädten
 
 ## Hörtext
+
+
+{{audio:/audio/books/road-to-c1/kapitel-25-horen-und-notizen/06-hoertext.mp3}}
 
 > In vielen Großstädten steigen die Mietpreise seit Jahren deutlich. Für Familien, Studierende und Menschen mit niedrigem Einkommen wird es immer schwieriger, bezahlbaren Wohnraum zu finden. Dadurch kann soziale Ungleichheit verstärkt werden, weil bestimmte Gruppen aus zentralen Stadtteilen verdrängt werden. Eine mögliche Lösung besteht darin, mehr bezahlbare Wohnungen zu bauen und gleichzeitig die öffentliche Infrastruktur am Stadtrand zu verbessern.
 

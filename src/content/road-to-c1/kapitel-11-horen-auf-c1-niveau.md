@@ -263,9 +263,6 @@ d) Schülerinnen und Schüler lernen zu schnell.
 
 Lösung:
 
-
-{{audio:/audio/books/road-to-c1/kapitel-11-horen-auf-c1-niveau/02-hoertext.mp3}}
-
 > b) Nicht alle Schulen haben die gleiche technische Ausstattung.
 
 ---
@@ -273,6 +270,9 @@ Lösung:
 # 8. Hörtext 2: Ständige Erreichbarkeit
 
 ## Hörtext
+
+
+{{audio:/audio/books/road-to-c1/kapitel-11-horen-auf-c1-niveau/02-hoertext.mp3}}
 
 > Durch Smartphones und digitale Kommunikationsmittel sind viele Beschäftigte heute fast jederzeit erreichbar. Einerseits kann das die Zusammenarbeit erleichtern, weil wichtige Informationen schnell weitergegeben werden können. Andererseits verschwimmt dadurch die Grenze zwischen Arbeit und Freizeit. Besonders problematisch ist, dass manche Menschen auch nach Feierabend das Gefühl haben, sofort auf berufliche Nachrichten reagieren zu müssen. Langfristig kann dies zu Stress und Erschöpfung führen. Deshalb fordern einige Experten ein Recht auf Nichterreichbarkeit, also klare Regeln dafür, wann Beschäftigte nicht auf berufliche Nachrichten antworten müssen.
 

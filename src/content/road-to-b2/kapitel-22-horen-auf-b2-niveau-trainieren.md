@@ -745,8 +745,6 @@ c) Zurückrufen.
 1. b) Die Ärztin ist krank.
 2. a) Freitag um 11 Uhr und Montag um 15.30 Uhr
 
-{{audio:/audio/books/road-to-b2/kapitel-22-horen-auf-b2-niveau-trainieren/02-hoertext.mp3}}
-
 3. c) Zurückrufen.
 
 ---
@@ -754,6 +752,9 @@ c) Zurückrufen.
 # 23. Hörtext 2: Sprachkurs
 
 ## Hörtext
+
+
+{{audio:/audio/books/road-to-b2/kapitel-22-horen-auf-b2-niveau-trainieren/02-hoertext.mp3}}
 
 > Guten Morgen zusammen. Ich möchte Sie kurz informieren, dass unser B2-Kurs nächste Woche nicht wie gewohnt in Raum 204 stattfindet. Wegen einer technischen Reparatur nutzen wir von Montag bis Mittwoch den Raum 310 im dritten Stock. Am Donnerstag sind wir wieder im normalen Raum. Bitte bringen Sie außerdem morgen Ihre Schreibaufgabe mit, damit wir sie gemeinsam besprechen können.
 
@@ -779,9 +780,6 @@ c) Raum 301
 
 Was sollen die Teilnehmenden morgen mitbringen?
 
-
-{{audio:/audio/books/road-to-b2/kapitel-22-horen-auf-b2-niveau-trainieren/03-hoertext.mp3}}
-
 a) ihre Schreibaufgabe
 b) ihren Ausweis
 c) ihr Kursbuch
@@ -798,6 +796,9 @@ c) ihr Kursbuch
 
 ## Hörtext
 
+
+{{audio:/audio/books/road-to-b2/kapitel-22-horen-auf-b2-niveau-trainieren/03-hoertext.mp3}}
+
 > Ich finde Homeoffice grundsätzlich sehr praktisch. Man spart den Arbeitsweg und kann den Tag oft flexibler planen. Besonders für Eltern ist das ein großer Vorteil. Allerdings sehe ich auch Probleme. Wenn man nur zu Hause arbeitet, fehlt manchmal der direkte Kontakt zum Team. Außerdem fällt es manchen Menschen schwer, nach Feierabend wirklich abzuschalten. Deshalb halte ich eine Mischung aus Homeoffice und Büroarbeit für die beste Lösung.
 
 ## Aufgaben
@@ -813,9 +814,6 @@ c) Alle sollten nur noch zu Hause arbeiten.
 ### Aufgabe 2
 
 Welcher Vorteil wird genannt?
-
-
-{{audio:/audio/books/road-to-b2/kapitel-22-horen-auf-b2-niveau-trainieren/04-hoertext.mp3}}
 
 a) Man verdient mehr Geld.
 b) Man spart den Arbeitsweg.
@@ -841,6 +839,9 @@ c) Die Arbeit ist zu leicht.
 
 ## Hörtext
 
+
+{{audio:/audio/books/road-to-b2/kapitel-22-horen-auf-b2-niveau-trainieren/04-hoertext.mp3}}
+
 > Guten Tag, mein Name ist Schneider. Ich rufe wegen meiner Bestellung an. Ich habe vor zwei Wochen einen Schreibtisch bestellt, aber bisher ist nur der Stuhl angekommen. In der Bestellbestätigung steht, dass beide Artikel zusammen geliefert werden sollten. Könnten Sie bitte prüfen, wo der Schreibtisch bleibt? Meine Kundennummer ist 458921.
 
 ## Aufgaben
@@ -848,9 +849,6 @@ c) Die Arbeit ist zu leicht.
 ### Aufgabe 1
 
 Warum ruft Herr Schneider an?
-
-
-{{audio:/audio/books/road-to-b2/kapitel-22-horen-auf-b2-niveau-trainieren/05-hoertext.mp3}}
 
 a) Er möchte einen Stuhl zurückgeben.
 b) Der Schreibtisch wurde noch nicht geliefert.
@@ -883,6 +881,9 @@ c) 485921
 # 26. Hörtext 5: Meinung zu sozialen Medien
 
 ## Hörtext
+
+
+{{audio:/audio/books/road-to-b2/kapitel-22-horen-auf-b2-niveau-trainieren/05-hoertext.mp3}}
 
 > Soziale Medien haben meiner Meinung nach sowohl Vorteile als auch Nachteile. Einerseits kann man schnell mit Freunden und Familie in Kontakt bleiben, auch wenn sie weit weg wohnen. Andererseits verbringen viele Menschen zu viel Zeit am Handy und vergleichen sich ständig mit anderen. Das kann Stress verursachen. Deshalb finde ich, dass man soziale Medien bewusst nutzen und klare Grenzen setzen sollte.
 

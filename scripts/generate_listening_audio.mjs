@@ -199,7 +199,9 @@ function insertAudio(items) {
 
   for (const [filePath, fileItems] of byFile) {
     let source = fs.readFileSync(filePath, 'utf8');
-    for (const item of fileItems) {
+    for (const item of [...fileItems].sort(
+      (first, second) => second.transcriptStartLine - first.transcriptStartLine,
+    )) {
       if (source.includes(item.publicPath)) continue;
 
       const lines = source.split('\n');
