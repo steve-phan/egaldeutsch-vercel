@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { BottomNav } from "@/components/dashboard/bottom-nav";
 import { usePathname } from "next/navigation";
 import { useSession } from "next-auth/react";
@@ -26,6 +26,45 @@ export function AppShell({
 }: AppShellProps) {
   const pathname = usePathname();
   useSession();
+  const activeAudioRef = useRef<HTMLAudioElement | null>(null);
+
+  useEffect(() => {
+    function handleAudioPlay(event: Event) {
+      const audio = event.target;
+
+      if (!(audio instanceof HTMLAudioElement)) {
+        return;
+      }
+
+      const activeAudio = activeAudioRef.current;
+
+      if (activeAudio && activeAudio !== audio && !activeAudio.paused) {
+        activeAudio.pause();
+
+        try {
+          activeAudio.currentTime = 0;
+        } catch {
+          // Some browsers can throw while seeking streams. Pausing is enough.
+        }
+      }
+
+      activeAudioRef.current = audio;
+    }
+
+    function handleAudioStop(event: Event) {
+      if (event.target === activeAudioRef.current) {
+        activeAudioRef.current = null;
+      }
+    }
+
+    document.addEventListener("play", handleAudioPlay, true);
+    document.addEventListener("ended", handleAudioStop, true);
+
+    return () => {
+      document.removeEventListener("play", handleAudioPlay, true);
+      document.removeEventListener("ended", handleAudioStop, true);
+    };
+  }, []);
   
   const isAuthPage = pathname.startsWith("/login") || pathname.startsWith("/signup");
   const isReaderPage =
