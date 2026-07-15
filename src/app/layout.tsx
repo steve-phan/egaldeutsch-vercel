@@ -2,10 +2,12 @@ import type { Metadata } from "next";
 import { Montserrat, Open_Sans } from "next/font/google";
 import "./globals.css";
 import { AuthProvider } from "@/components/auth-provider";
+import { SiteSearchRoot } from "@/components/search/site-search-root";
 import { LanguageProvider, Language } from "@/contexts/language-context";
 import { Toaster } from "@/components/ui/sonner";
 import { getServerSession } from "next-auth/next";
 import { authOptions } from "@/lib/auth";
+import { buildSiteSearchIndex } from "@/lib/site-search-index";
 import { cookies } from "next/headers";
 
 const montserrat = Montserrat({
@@ -82,14 +84,17 @@ export default async function RootLayout({
 
   // Priority: Session > Cookie > Default
   const initialLanguage = (session?.user as any)?.language || cookieLang || "en";
+  const searchIndex = buildSiteSearchIndex();
 
   return (
     <html lang={initialLanguage} suppressHydrationWarning>
       <body className={`${montserrat.variable} ${openSans.variable} font-sans antialiased text-slate-800 bg-background`} suppressHydrationWarning>
         <AuthProvider>
           <LanguageProvider initialLanguage={initialLanguage} initialIsLoaded={true}>
-            {children}
-            <Toaster />
+            <SiteSearchRoot entries={searchIndex}>
+              {children}
+              <Toaster />
+            </SiteSearchRoot>
           </LanguageProvider>
         </AuthProvider>
       </body>

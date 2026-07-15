@@ -10,6 +10,7 @@ import { usePathname } from "next/navigation";
 
 import { useNotifications } from "@/hooks/use-notifications";
 
+import { GlobalSearchTrigger } from "@/components/search/global-search-trigger";
 import { useLanguage } from "@/contexts/language-context";
 import { cn } from "@/lib/utils";
 
@@ -139,8 +140,8 @@ export function Navbar() {
         ))}
       </div>
 
-      <div className="flex items-center gap-4 md:gap-8">
-
+      <div className="flex items-center gap-2 md:gap-4">
+        <GlobalSearchTrigger className="h-10 px-3 py-2 md:px-4" />
         {renderRightSide()}
       </div>
     </header>

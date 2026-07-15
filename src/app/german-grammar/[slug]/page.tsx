@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import { AppShell } from "@/components/layout/app-shell";
 import { GrammarChapterClient } from "@/components/german-grammar/grammar-chapter-client";
 import {
+  getAllGermanGrammarChapters,
   getGermanGrammarAdjacentChapters,
   getGermanGrammarChapterBySlug,
   getGermanGrammarHtml,
@@ -49,19 +50,21 @@ export default async function GermanGrammarChapterPage({ params }: Props) {
   }
 
   const { previous, next } = getGermanGrammarAdjacentChapters(chapter.slug);
+  const allChapters = getAllGermanGrammarChapters();
   const { contentHtml: rawContent, ...chapterSummary } = chapter;
   const contentHtml = await getGermanGrammarHtml(rawContent);
   const quiz = getGermanGrammarQuiz(chapter.slug);
 
   return (
     <AppShell showNav={false} maxWidth="lg">
-      <article className="pb-32 pt-5 sm:pb-20 sm:pt-10">
+      <article className="pb-24 pt-5 sm:pb-20 sm:pt-10">
         <GrammarChapterClient
           chapter={chapterSummary}
           contentHtml={contentHtml}
           quiz={quiz}
           previous={previous}
           next={next}
+          allChapters={allChapters}
         />
       </article>
     </AppShell>

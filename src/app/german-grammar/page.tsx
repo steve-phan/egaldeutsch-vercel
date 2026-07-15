@@ -10,7 +10,6 @@ import { AppShell } from "@/components/layout/app-shell";
 import {
   getAllGermanGrammarChapters,
   getGermanGrammarIntro,
-  groupGermanGrammarChaptersByPart,
 } from "@/lib/german-grammar";
 import { GrammarLandingProgress } from "@/components/german-grammar/grammar-landing-progress";
 import { getGrammarManifestStats } from "@/lib/german-grammar-manifest";
@@ -27,7 +26,6 @@ export const metadata = {
 export default function GermanGrammarPage() {
   const intro = getGermanGrammarIntro();
   const chapters = getAllGermanGrammarChapters();
-  const groupedChapters = groupGermanGrammarChaptersByPart(chapters);
   const firstChapter = chapters[0];
   const manifestStats = getGrammarManifestStats();
 
@@ -137,7 +135,7 @@ export default function GermanGrammarPage() {
         </section>
 
         <GrammarLandingProgress
-          groupedChapters={groupedChapters}
+          chapters={chapters}
           fallbackSlug={firstChapter?.slug}
         />
       </div>

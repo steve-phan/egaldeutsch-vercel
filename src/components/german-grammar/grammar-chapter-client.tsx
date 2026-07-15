@@ -1,12 +1,18 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import { ArrowLeft, ArrowRight, BookOpen, CheckCircle2, List } from "lucide-react";
 import { RoadToB2Quiz } from "@/components/road-to-b2/road-to-b2-quiz";
+import { GrammarLessonComplete } from "@/components/german-grammar/grammar-lesson-complete";
+import { GrammarTocSheet } from "@/components/german-grammar/grammar-toc-sheet";
 import { useGermanGrammarProgress } from "@/contexts/german-grammar-progress-context";
 import type { RoadToB2Quiz as RoadToB2QuizType } from "@/lib/road-to-b2-quizzes";
 import type { GermanGrammarSummary } from "@/lib/german-grammar";
+import {
+  getSmartNextChapter,
+  isChapterLessonComplete,
+} from "@/lib/german-grammar-navigation";
 
 type Props = {
   chapter: GermanGrammarSummary;
@@ -14,6 +20,7 @@ type Props = {
   quiz: RoadToB2QuizType | null;
   previous: GermanGrammarSummary | null;
   next: GermanGrammarSummary | null;
+  allChapters: GermanGrammarSummary[];
 };
 
 export function GrammarChapterClient({
@@ -22,7 +29,9 @@ export function GrammarChapterClient({
   quiz,
   previous,
   next,
+  allChapters,
 }: Props) {
+  const [tocOpen, setTocOpen] = useState(false);
   const {
     stats,
     markChapterRead,
@@ -41,17 +50,41 @@ export function GrammarChapterClient({
 
   const chapterRead = isChapterRead(chapter.slug);
   const quizDone = isQuizPassed(chapter.slug);
+  const hasQuiz = quiz !== null;
+
+  const lessonComplete = isChapterLessonComplete(chapter.slug, {
+    hasQuiz,
+    isRead: chapterRead,
+    isQuizPassed: quizDone,
+  });
+
+  const smartNext = useMemo(
+    () =>
+      getSmartNextChapter(chapter.slug, allChapters, { learningPathOnly: true }),
+    [chapter.slug, allChapters],
+  );
 
   return (
-    <>
+    <div className={lessonComplete ? "pb-52 sm:pb-8" : "pb-8"}>
       <div className="mb-5 flex flex-wrap items-center justify-between gap-3">
-        <Link
-          href="/german-grammar"
-          className="inline-flex items-center rounded-full bg-white px-4 py-2 text-xs font-black uppercase tracking-widest text-slate-500 shadow-sm transition-colors hover:text-primary"
-        >
-          <ArrowLeft className="mr-2 h-4 w-4" />
-          Contents
-        </Link>
+        <div className="flex flex-wrap items-center gap-2">
+          <Link
+            href="/german-grammar"
+            className="inline-flex items-center rounded-full bg-white px-4 py-2 text-xs font-black uppercase tracking-widest text-slate-500 shadow-sm transition-colors hover:text-primary"
+          >
+            <ArrowLeft className="mr-2 h-4 w-4" />
+            Contents
+          </Link>
+          <button
+            type="button"
+            onClick={() => setTocOpen(true)}
+            className="inline-flex items-center rounded-full bg-white px-4 py-2 text-xs font-black uppercase tracking-widest text-slate-500 shadow-sm transition-colors hover:text-primary md:hidden"
+            aria-label="Inhaltsverzeichnis öffnen"
+          >
+            <List className="mr-2 h-4 w-4" />
+            Kapitel
+          </button>
+        </div>
         <div className="flex flex-wrap items-center gap-2">
           {chapterRead && (
             <span className="inline-flex items-center gap-1 rounded-full bg-emerald-50 px-3 py-1.5 text-[10px] font-black uppercase tracking-widest text-emerald-700">
@@ -124,10 +157,20 @@ export function GrammarChapterClient({
         />
       )}
 
+      {lessonComplete && (
+        <GrammarLessonComplete
+          chapter={chapter}
+          nextChapter={smartNext}
+          variant="inline"
+          className="mt-8"
+        />
+      )}
+
       <nav className="mt-8 grid gap-3 sm:grid-cols-2" aria-label="Chapter navigation">
         {previous ? (
           <Link
             href={`/german-grammar/${previous.slug}`}
+            prefetch
             className="rounded-2xl border border-slate-100 bg-white p-4 shadow-sm transition-colors hover:border-primary/20 hover:bg-primary/5"
           >
             <span className="mb-1 flex items-center text-xs font-black uppercase tracking-widest text-slate-400">
@@ -143,6 +186,7 @@ export function GrammarChapterClient({
         {next ? (
           <Link
             href={`/german-grammar/${next.slug}`}
+            prefetch
             className="rounded-2xl border border-slate-100 bg-white p-4 text-left shadow-sm transition-colors hover:border-primary/20 hover:bg-primary/5 sm:text-right"
           >
             <span className="mb-1 flex items-center text-xs font-black uppercase tracking-widest text-slate-400 sm:justify-end">
@@ -156,6 +200,14 @@ export function GrammarChapterClient({
         )}
       </nav>
 
+      {lessonComplete && smartNext && (
+        <GrammarLessonComplete
+          chapter={chapter}
+          nextChapter={smartNext}
+          variant="sticky"
+        />
+      )}
+
       <div
         className="fixed inset-x-3 bottom-[calc(env(safe-area-inset-bottom)+1rem)] z-[80] mx-auto max-w-3xl rounded-2xl border border-slate-100 bg-white/95 p-2 shadow-floating backdrop-blur-xl md:hidden"
         aria-label="Mobile chapter navigation"
@@ -164,6 +216,7 @@ export function GrammarChapterClient({
           {previous ? (
             <Link
               href={`/german-grammar/${previous.slug}`}
+              prefetch
               className="flex items-center justify-center rounded-xl bg-slate-50 px-3 py-3 text-xs font-black uppercase tracking-widest text-slate-600"
             >
               Prev
@@ -173,16 +226,18 @@ export function GrammarChapterClient({
               Prev
             </span>
           )}
-          <Link
-            href="/german-grammar"
+          <button
+            type="button"
+            onClick={() => setTocOpen(true)}
             className="flex items-center justify-center rounded-xl bg-primary px-3 py-3 text-xs font-black uppercase tracking-widest text-white"
           >
             <List className="mr-1 h-4 w-4" />
             TOC
-          </Link>
+          </button>
           {next ? (
             <Link
               href={`/german-grammar/${next.slug}`}
+              prefetch
               className="flex items-center justify-center rounded-xl bg-slate-50 px-3 py-3 text-xs font-black uppercase tracking-widest text-slate-600"
             >
               Next
@@ -194,6 +249,15 @@ export function GrammarChapterClient({
           )}
         </div>
       </div>
-    </>
+
+      <GrammarTocSheet
+        open={tocOpen}
+        onClose={() => setTocOpen(false)}
+        chapters={allChapters}
+        currentSlug={chapter.slug}
+        isChapterRead={isChapterRead}
+        isQuizPassed={isQuizPassed}
+      />
+    </div>
   );
 }
