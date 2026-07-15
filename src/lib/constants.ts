@@ -68,6 +68,7 @@ export const API_ROUTES = {
   // User
   NOTIFICATIONS: "/api/user/notifications",
   NOTIFICATIONS_READ: "/api/user/notifications/read",
+  GRAMMAR_PROGRESS: "/api/user/grammar-progress",
   
   // Dashboard & Stats
   DASHBOARD: "/api/dashboard",

@@ -4,6 +4,8 @@ import (
 	"sync"
 	"time"
 
+	"egaldeutsch-vercel/models"
+
 	"go.mongodb.org/mongo-driver/bson/primitive"
 	"golang.org/x/crypto/bcrypt"
 )
@@ -18,7 +20,8 @@ type MockUser struct {
 	Language  string             `bson:"language"   json:"language"`
 	CreatedAt time.Time          `bson:"created_at" json:"created_at"`
 	UpdatedAt time.Time          `bson:"updated_at" json:"updated_at"`
-	SeenIdioms []string          `bson:"seen_idioms,omitempty" json:"seen_idioms,omitempty"`
+	SeenIdioms      []string                `bson:"seen_idioms,omitempty" json:"seen_idioms,omitempty"`
+	GrammarProgress *models.GrammarProgress `bson:"grammar_progress,omitempty" json:"grammar_progress,omitempty"`
 }
 
 // QuizOption holds a localized option for multiple-choice questions.

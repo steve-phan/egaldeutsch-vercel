@@ -65,11 +65,45 @@ export function AppShell({
       document.removeEventListener("ended", handleAudioStop, true);
     };
   }, []);
+
+  useEffect(() => {
+    function normalizePracticeText() {
+      document
+        .querySelectorAll<HTMLTextAreaElement>("textarea#practice-text")
+        .forEach((textarea) => {
+          const display = document.createElement("div");
+
+          display.id = textarea.id;
+          display.textContent = textarea.value || textarea.textContent || "";
+          display.setAttribute("role", "textbox");
+          display.setAttribute("aria-readonly", "true");
+          display.setAttribute("aria-disabled", "true");
+          display.setAttribute("data-practice-text-display", "true");
+          display.className = [
+            textarea.className,
+            "min-h-[5rem] whitespace-pre-wrap rounded-2xl border border-slate-100 bg-slate-50 px-4 py-3 text-base font-semibold leading-7 text-slate-600 shadow-inner",
+            "cursor-not-allowed select-text",
+          ]
+            .filter(Boolean)
+            .join(" ");
+
+          textarea.replaceWith(display);
+        });
+    }
+
+    normalizePracticeText();
+
+    const observer = new MutationObserver(normalizePracticeText);
+    observer.observe(document.body, { childList: true, subtree: true });
+
+    return () => observer.disconnect();
+  }, []);
   
   const isAuthPage = pathname.startsWith("/login") || pathname.startsWith("/signup");
   const isReaderPage =
     pathname.startsWith("/road-to-b2/") ||
     pathname.startsWith("/road-to-c1/") ||
+    pathname.startsWith("/german-grammar/") ||
     pathname.startsWith("/blogs/") ||
     pathname.startsWith("/redewendung/");
   const shouldShowNav = showNav && !isAuthPage && !isReaderPage;

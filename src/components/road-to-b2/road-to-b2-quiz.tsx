@@ -7,9 +7,10 @@ import { cn } from "@/lib/utils";
 
 type Props = {
   quiz: RoadToB2Quiz;
+  onChecked?: (score: number, total: number) => void;
 };
 
-export function RoadToB2Quiz({ quiz }: Props) {
+export function RoadToB2Quiz({ quiz, onChecked }: Props) {
   const [answers, setAnswers] = useState<Record<number, number>>({});
   const [submitted, setSubmitted] = useState(false);
 
@@ -142,7 +143,15 @@ export function RoadToB2Quiz({ quiz }: Props) {
           <button
             type="button"
             disabled={!isComplete}
-            onClick={() => setSubmitted(true)}
+            onClick={() => {
+              const finalScore = quiz.questions.reduce(
+                (total, question, index) =>
+                  answers[index] === question.answerIndex ? total + 1 : total,
+                0,
+              );
+              setSubmitted(true);
+              onChecked?.(finalScore, quiz.questions.length);
+            }}
             className="inline-flex items-center justify-center rounded-xl bg-primary px-5 py-3 text-xs font-black uppercase tracking-widest text-white shadow-sm transition-all disabled:cursor-not-allowed disabled:bg-slate-300"
           >
             Check answers

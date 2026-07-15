@@ -38,7 +38,8 @@ export function Navbar() {
       active:
         pathname.startsWith("/books") ||
         pathname.startsWith("/road-to-b2") ||
-        pathname.startsWith("/road-to-c1"),
+        pathname.startsWith("/road-to-c1") ||
+        pathname.startsWith("/german-grammar"),
     },
     {
       href: "/redewendung",

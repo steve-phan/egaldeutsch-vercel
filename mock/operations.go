@@ -6,6 +6,8 @@ import (
 	"strings"
 	"time"
 
+	"egaldeutsch-vercel/models"
+
 	"go.mongodb.org/mongo-driver/bson/primitive"
 	"golang.org/x/crypto/bcrypt"
 )
@@ -409,4 +411,37 @@ func (db *MockDB) MarkIdiomSeen(id primitive.ObjectID, slug string) {
 	}
 
 	user.SeenIdioms = append(user.SeenIdioms, slug)
+}
+
+func (db *MockDB) GetGrammarProgress(id primitive.ObjectID) (*models.GrammarProgress, error) {
+	db.mu.RLock()
+	defer db.mu.RUnlock()
+
+	user, exists := db.users[id]
+	if !exists {
+		return nil, ErrNotFound
+	}
+
+	if user.GrammarProgress == nil {
+		return &models.GrammarProgress{Chapters: map[string]models.GrammarChapterProgress{}}, nil
+	}
+
+	return user.GrammarProgress, nil
+}
+
+func (db *MockDB) UpdateGrammarProgress(id primitive.ObjectID, progress models.GrammarProgress) (*models.GrammarProgress, error) {
+	db.mu.Lock()
+	defer db.mu.Unlock()
+
+	user, exists := db.users[id]
+	if !exists {
+		return nil, ErrNotFound
+	}
+
+	if progress.Chapters == nil {
+		progress.Chapters = map[string]models.GrammarChapterProgress{}
+	}
+	progress.UpdatedAt = time.Now()
+	user.GrammarProgress = &progress
+	return user.GrammarProgress, nil
 }

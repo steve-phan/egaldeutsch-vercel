@@ -19,4 +19,5 @@ type User struct {
 	DeleteTokenExpiry  time.Time          `bson:"delete_token_expiry,omitempty" json:"-"`
 	Language           string             `bson:"language,omitempty" json:"language"`
 	SeenIdioms       []string           `bson:"seen_idioms,omitempty" json:"seen_idioms,omitempty"`
+	GrammarProgress  *GrammarProgress   `bson:"grammar_progress,omitempty" json:"grammar_progress,omitempty"`
 }

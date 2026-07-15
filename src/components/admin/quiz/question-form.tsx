@@ -6,7 +6,7 @@ import { OptionsEditor } from "./options-editor";
 import { TagsInput } from "./tags-input";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { ChevronRight, Save, X, Lightbulb, Target, Settings, Globe, Sparkles } from "lucide-react";
+import { ChevronRight, X, Lightbulb, Target, Settings, Sparkles, FileText } from "lucide-react";
 import Link from "next/link";
 import { QuestionPreview } from "./question-preview";
 import { Card } from "@/components/shared/layout/card";
@@ -39,7 +39,10 @@ export function QuestionForm({ initialData, onSubmit, isSubmitting }: QuestionFo
     ...initialData
   });
 
-  const updateField = (field: keyof QuizQuestion, value: any) => {
+  const updateField = (
+    field: keyof QuizQuestion,
+    value: Partial<QuizQuestion>[keyof QuizQuestion],
+  ) => {
     setFormData(prev => ({ ...prev, [field]: value }));
   };
 
@@ -119,6 +122,30 @@ export function QuestionForm({ initialData, onSubmit, isSubmitting }: QuestionFo
                   <option value="published">Published</option>
                 </select>
             </div>
+          </div>
+        </Card>
+
+        {/* 2. Practice Text */}
+        <Card padding="lg" radius="3xl" className="space-y-6 animate-in slide-in-from-bottom-4 duration-700">
+          <div className="flex items-center gap-3 border-b border-slate-100 pb-6">
+              <div className="w-10 h-10 rounded-xl bg-slate-50 flex items-center justify-center text-slate-400">
+                <FileText className="w-5 h-5" />
+              </div>
+              <div>
+                <h2 className="text-xl font-black text-slate-800 tracking-tighter italic leading-none">Practice Text</h2>
+                <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mt-1">Read-only learner prompt</p>
+              </div>
+          </div>
+
+          <div
+            aria-disabled="true"
+            className="min-h-24 rounded-2xl border border-slate-100 bg-slate-50 px-5 py-4 text-base font-bold leading-7 text-slate-500 shadow-inner select-text"
+          >
+            {formData.prompt_de?.trim() || (
+              <span className="text-slate-300">
+                Practice text will appear here when the question has a German prompt.
+              </span>
+            )}
           </div>
         </Card>
 

@@ -49,6 +49,7 @@ func NewRouter() http.Handler {
 	// --- Notification Routes ---
 	mux.HandleFunc("/api/user/notifications", handlers.GetNotificationsHandler)
 	mux.HandleFunc("/api/user/notifications/read", handlers.MarkNotificationReadHandler)
+	mux.HandleFunc("/api/user/grammar-progress", handlers.GrammarProgressHandler)
 
 	return LoggingMiddleware(CORSMiddleware(mux))
 }

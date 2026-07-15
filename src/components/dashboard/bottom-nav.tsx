@@ -7,6 +7,7 @@ import {
   Bell,
   BookMarked,
   BookOpen,
+  Brain,
   HeartHandshake,
   GraduationCap,
   Home,
@@ -47,7 +48,8 @@ const navItems = [
     isActive: (pathname: string) =>
       pathname.startsWith("/books") ||
       pathname.startsWith("/road-to-b2") ||
-      pathname.startsWith("/road-to-c1"),
+      pathname.startsWith("/road-to-c1") ||
+      pathname.startsWith("/german-grammar"),
     showBadge: false,
   },
 ] as const;
@@ -64,6 +66,12 @@ const bookItems = [
     label: "Road to C1",
     href: "/road-to-c1",
     isActive: (pathname: string) => pathname.startsWith("/road-to-c1"),
+  },
+  {
+    icon: Brain,
+    label: "Grammar",
+    href: "/german-grammar",
+    isActive: (pathname: string) => pathname.startsWith("/german-grammar"),
   },
 ] as const;
 
@@ -106,6 +114,7 @@ export function BottomNav() {
   const isReaderPage =
     pathname.startsWith("/road-to-b2/") ||
     pathname.startsWith("/road-to-c1/") ||
+    pathname.startsWith("/german-grammar/") ||
     pathname.startsWith("/blogs/") ||
     pathname.startsWith("/redewendung/");
   const isBooksActive = bookItems.some((item) => item.isActive(pathname));
@@ -160,7 +169,7 @@ export function BottomNav() {
 
       {isBooksOpen ? (
         <div className="absolute inset-x-3 bottom-[calc(env(safe-area-inset-bottom)+4.75rem)] mx-auto max-w-md rounded-3xl border border-slate-200/80 bg-white/95 p-2 shadow-[0_16px_40px_rgba(15,23,42,0.16)] backdrop-blur-xl">
-          <div className="grid grid-cols-2 gap-2">
+          <div className="grid grid-cols-3 gap-2">
             {bookItems.map((item) => {
               const Icon = item.icon;
               const active = item.isActive(pathname);

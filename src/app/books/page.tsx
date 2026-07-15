@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { BookMarked, GraduationCap, Sparkles } from "lucide-react";
+import { BookMarked, Brain, GraduationCap, Sparkles } from "lucide-react";
 import { AppShell } from "@/components/layout/app-shell";
 
 export const metadata = {
@@ -28,6 +28,14 @@ const books = [
       "Train advanced argumentation, C1 Redemittel and telc C1 exam strategy.",
     icon: BookMarked,
   },
+  {
+    href: "/german-grammar",
+    level: "A1 → C2",
+    title: "Complete German Grammar",
+    description:
+      "A full grammar roadmap: cases, verbs, word order, clauses, passive, Konjunktiv and style.",
+    icon: Brain,
+  },
 ];
 
 export default function BooksPage() {
@@ -47,7 +55,7 @@ export default function BooksPage() {
           </p>
         </div>
 
-        <div className="grid gap-4 sm:grid-cols-2">
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {books.map((book) => {
             const Icon = book.icon;
 

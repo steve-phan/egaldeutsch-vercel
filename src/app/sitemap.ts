@@ -3,6 +3,7 @@ import { CATEGORY_META, API_ROUTES, apiUrl } from "@/lib/constants";
 import { getPostSlugs, getPostBySlug } from "@/lib/markdown";
 import { getAllRoadToB2Chapters } from "@/lib/road-to-b2";
 import { getAllRoadToC1Chapters } from "@/lib/road-to-c1";
+import { getAllGermanGrammarChapters } from "@/lib/german-grammar";
 
 type SitemapIdiom = {
   slug?: string;
@@ -22,6 +23,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${baseUrl}/books`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.9 },
     { url: `${baseUrl}/road-to-b2`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.9 },
     { url: `${baseUrl}/road-to-c1`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.9 },
+    { url: `${baseUrl}/german-grammar`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.9 },
   ];
 
   // 2. Quiz Category Routes (Dynamic from constants)
@@ -74,6 +76,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     }),
   );
 
+  const germanGrammarRoutes: MetadataRoute.Sitemap =
+    getAllGermanGrammarChapters().map((chapter) => ({
+      url: `${baseUrl}/german-grammar/${chapter.slug}`,
+      lastModified: new Date(chapter.date),
+      changeFrequency: "monthly",
+      priority: chapter.chapterNumber === 1 ? 0.85 : 0.75,
+    }));
+
   // 5. Idiom Routes (Dynamic from API)
   let idiomRoutes: MetadataRoute.Sitemap = [];
   try {
@@ -124,6 +134,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ...blogRoutes,
     ...roadToB2Routes,
     ...roadToC1Routes,
+    ...germanGrammarRoutes,
     ...idiomRoutes,
   ];
 }
