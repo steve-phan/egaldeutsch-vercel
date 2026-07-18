@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { useRouter } from "next/navigation";
 import { ChevronRight, Settings2, Clock, Hash, Zap, LayoutGrid, AlertCircle } from "lucide-react";
 import { QuizSessionConfig, CEFRLevel, QuizCategory } from "@/types/quiz";
 import { Card } from "@/components/shared/layout/card";
@@ -15,20 +14,12 @@ interface SessionSetupProps {
 }
 
 export function SessionSetup({ category, onStart }: SessionSetupProps) {
-  const router = useRouter();
-  const { t, language } = useLanguage();
+  const { t } = useLanguage();
   const [selectedCategories, setSelectedCategories] = useState<string[]>([category]);
   const [level, setLevel] = useState<CEFRLevel | "mixed">("mixed");
   const [totalQuestions, setTotalQuestions] = useState<number>(30);
   const [timeLimit, setTimeLimit] = useState<number | undefined>(undefined); // seconds
   const [mode, setMode] = useState<"test" | "practice">("practice");
-
-  // Sync selectedCategories with category prop if it changes
-  useEffect(() => {
-    if (!selectedCategories.includes(category)) {
-      setSelectedCategories([category]);
-    }
-  }, [category]);
 
   const toggleCategory = (id: string) => {
     if (id === "mixed") {
@@ -94,7 +85,7 @@ export function SessionSetup({ category, onStart }: SessionSetupProps) {
         </button>
       ))}
     </div>
-  ), [selectedCategories, language, router]);
+  ), [selectedCategories]);
 
   return (
     <Card padding="md" radius="3xl" className="w-full max-w-2xl animate-in zoom-in-95 duration-500 mx-auto md:p-10">
@@ -162,7 +153,7 @@ export function SessionSetup({ category, onStart }: SessionSetupProps) {
             <Zap className="w-3 h-3" /> {t("setup.level")}
           </label>
           <div className="flex flex-wrap gap-2">
-            {["mixed", "A1", "A2", "B1", "B2"].map(l => (
+            {["mixed", "A1", "A2", "B1", "B2", "C1"].map(l => (
               <button
                 key={l}
                 onClick={() => setLevel(l as CEFRLevel | "mixed")}

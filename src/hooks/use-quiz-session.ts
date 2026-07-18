@@ -67,6 +67,8 @@ export function useQuizSession(): UseQuizSessionResult {
     switch (q.type) {
       case "multiple-choice":
         return !!q.options && q.options.length >= 2;
+      case "reading-comprehension":
+        return !!q.passage_de && !!q.options && q.options.length >= 2;
       case "fill-in-blank":
         return true; // prompt and correct_answer already checked
       case "word-order":
@@ -107,7 +109,7 @@ export function useQuizSession(): UseQuizSessionResult {
       // Normalize types and filter valid questions
       const normalizedData = data.map(q => ({
         ...q,
-        type: (q.type as string).replace("_", "-") as any
+        type: (q.type as string).replace("_", "-") as QuizQuestion["type"]
       }));
       
       const validQuestions = normalizedData.filter(isValidQuestion);

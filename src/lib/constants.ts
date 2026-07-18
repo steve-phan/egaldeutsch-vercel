@@ -92,7 +92,7 @@ export const API_ROUTES = {
   IDIOM_DETAIL: "/api/idioms/",
 };
 
-export const CEFR_LEVELS = ["A1", "A2", "B1", "B2"] as const;
+export const CEFR_LEVELS = ["A1", "A2", "B1", "B2", "C1"] as const;
 
 export const CATEGORY_META: CategoryMeta[] = [
   {
@@ -228,6 +228,40 @@ export const CATEGORY_META: CategoryMeta[] = [
     levels: ["B2"],
     question_counts: {},
     keywords: ["TELC B2 Prep", "B2 Beruf", "German for Professionals"]
+  },
+  {
+    id: "sprachbausteine",
+    label: {
+      de: "Sprachbausteine",
+      en: "C1 Language Building Blocks",
+      vi: "Cấu trúc ngôn ngữ C1"
+    },
+    description: {
+      de: "C1-Prüfungstraining für Konnektoren, feste Wendungen, Nominalstil und präzise Lückentexte.",
+      en: "C1 exam practice for connectors, fixed phrases, nominal style and precise gap-fill structures.",
+      vi: "Luyện thi C1 với liên từ, cụm cố định, danh từ hóa và bài điền chỗ trống chính xác."
+    },
+    icon: "🧩",
+    levels: ["C1"],
+    question_counts: {},
+    keywords: ["C1", "telc C1", "Goethe C1", "Lückentext", "Konnektoren", "Nominalstil"]
+  },
+  {
+    id: "leseverstehen",
+    label: {
+      de: "Leseverstehen",
+      en: "C1 Reading Comprehension",
+      vi: "Đọc hiểu C1"
+    },
+    description: {
+      de: "C1-Lesetraining mit längeren Texten, Detailfragen, Schlussfolgerungen und Autorhaltung.",
+      en: "C1 reading practice with longer texts, detail questions, inference and author attitude.",
+      vi: "Luyện đọc hiểu C1 với văn bản dài, câu hỏi chi tiết, suy luận và thái độ tác giả."
+    },
+    icon: "📖",
+    levels: ["C1"],
+    question_counts: {},
+    keywords: ["C1", "Lesen", "Leseverstehen", "telc C1", "Goethe C1", "reading comprehension"]
   },
   {
     id: "mixed",

@@ -15,6 +15,8 @@ type QuizQuestion struct {
 	Subcategory   string             `bson:"subcategory"    json:"subcategory"`
 	Level         string             `bson:"level"          json:"level"`
 	Type          string             `bson:"type"           json:"type"`
+	PassageDe     string             `bson:"passage_de"     json:"passage_de,omitempty"`
+	PassageTitle  string             `bson:"passage_title"  json:"passage_title,omitempty"`
 	PromptDe      string             `bson:"prompt_de"      json:"prompt_de"`
 	BlankIndex    *int               `bson:"blank_index"    json:"blank_index,omitempty"`
 	Options       []string           `bson:"options"        json:"options,omitempty"`
@@ -47,6 +49,24 @@ func (q *QuizQuestion) Validate() error {
 	}
 
 	switch q.Type {
+	case "reading-comprehension":
+		if strings.TrimSpace(q.PassageDe) == "" {
+			return errors.New("reading-comprehension requires passage_de")
+		}
+		if len(q.Options) < 2 {
+			return errors.New("reading-comprehension requires at least 2 options")
+		}
+		found := false
+		for _, opt := range q.Options {
+			if strings.TrimSpace(opt) == strings.TrimSpace(q.CorrectAnswer) {
+				found = true
+				break
+			}
+		}
+		if !found {
+			return errors.New("correct_answer must be one of the options for reading-comprehension")
+		}
+
 	case "multiple-choice":
 		if len(q.Options) < 2 {
 			return errors.New("multiple-choice requires at least 2 options")

@@ -13,6 +13,7 @@ export function QuestionPreview({ question }: QuestionPreviewProps) {
   const prompt = question.prompt_de || "Hier steht die Frage...";
   const category = question.category || "ARTIKEL";
   const options = question.options || [];
+  const isReading = question.type === "reading-comprehension";
 
   return (
     <div className="w-full max-w-sm mx-auto overflow-hidden bg-white rounded-[2.5rem] shadow-floating border border-slate-100 flex flex-col scale-90 origin-top">
@@ -36,6 +37,16 @@ export function QuestionPreview({ question }: QuestionPreviewProps) {
             </div>
 
             <p className="text-[8px] font-black text-slate-300 uppercase tracking-[0.2em] mb-3">Live Preview</p>
+            {isReading && (
+              <div className="mb-4 rounded-2xl border border-slate-100 bg-slate-50 p-3 text-left">
+                <p className="mb-2 text-[8px] font-black uppercase tracking-widest text-primary">
+                  {question.passage_title || "Lesetext"}
+                </p>
+                <p className="line-clamp-5 whitespace-pre-line text-[10px] font-semibold leading-5 text-slate-500">
+                  {question.passage_de || "Hier steht der längere Lesetext..."}
+                </p>
+              </div>
+            )}
             <h2 className="text-xl font-black text-slate-800 mb-2 italic tracking-tighter leading-tight">
                {prompt.replace(/___/g, "______")}
             </h2>

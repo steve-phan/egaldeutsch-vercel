@@ -22,6 +22,8 @@ const DEFAULT_QUESTION: Partial<QuizQuestion> = {
   subcategory: "general",
   level: "A1",
   type: "multiple-choice",
+  passage_de: "",
+  passage_title: "",
   prompt_de: "",
   explanation_de: "", explanation_en: "", explanation_vi: "",
   correct_answer: "",
@@ -30,8 +32,13 @@ const DEFAULT_QUESTION: Partial<QuizQuestion> = {
   status: "draft"
 };
 
-const LEVELS: CEFRLevel[] = ["A1", "A2", "B1", "B2"];
-const TYPES: QuizType[] = ["multiple-choice", "fill-in-blank", "word-order"];
+const LEVELS: CEFRLevel[] = ["A1", "A2", "B1", "B2", "C1"];
+const TYPES: QuizType[] = [
+  "multiple-choice",
+  "fill-in-blank",
+  "word-order",
+  "reading-comprehension",
+];
 
 export function QuestionForm({ initialData, onSubmit, isSubmitting }: QuestionFormProps) {
   const [formData, setFormData] = useState<Partial<QuizQuestion>>({
@@ -137,6 +144,33 @@ export function QuestionForm({ initialData, onSubmit, isSubmitting }: QuestionFo
               </div>
           </div>
 
+          {formData.type === "reading-comprehension" && (
+            <div className="space-y-4">
+              <div className="space-y-3">
+                <Label className="text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">
+                  Passage Title
+                </Label>
+                <Input
+                  value={formData.passage_title || ""}
+                  onChange={e => updateField("passage_title", e.target.value)}
+                  placeholder="z.B. Arbeiten im digitalen Wandel"
+                  className="h-12 rounded-2xl border-slate-100 shadow-sm font-bold"
+                />
+              </div>
+              <div className="space-y-3">
+                <Label className="text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">
+                  Reading Passage
+                </Label>
+                <textarea
+                  value={formData.passage_de || ""}
+                  onChange={e => updateField("passage_de", e.target.value)}
+                  placeholder="Längerer C1-Lesetext..."
+                  className="min-h-56 w-full rounded-2xl border border-slate-100 bg-white px-5 py-4 text-sm font-semibold leading-7 text-slate-700 shadow-sm outline-none transition-all focus:border-primary/40 focus:shadow-lg focus:shadow-primary/10"
+                />
+              </div>
+            </div>
+          )}
+
           <div
             aria-disabled="true"
             className="min-h-24 rounded-2xl border border-slate-100 bg-slate-50 px-5 py-4 text-base font-bold leading-7 text-slate-500 shadow-inner select-text"
@@ -171,7 +205,8 @@ export function QuestionForm({ initialData, onSubmit, isSubmitting }: QuestionFo
               />
           </div>
 
-          {formData.type === "multiple-choice" && (
+          {(formData.type === "multiple-choice" ||
+            formData.type === "reading-comprehension") && (
               <OptionsEditor 
                 options={formData.options || []} 
                 onChange={opts => updateField("options", opts)}

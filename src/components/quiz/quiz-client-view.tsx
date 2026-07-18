@@ -17,6 +17,7 @@ import { McqQuestion } from "@/components/quiz/mcq-question";
 import { FillInBlank } from "@/components/quiz/fill-in-blank";
 import { WordOrder } from "@/components/quiz/word-order";
 import { MatchingPairs } from "@/components/quiz/matching-pairs";
+import { ReadingComprehension } from "@/components/quiz/reading-comprehension";
 import { Button } from "@/components/ui/button";
 
 export function QuizClientView({ category }: { category: string }) {
@@ -39,12 +40,10 @@ export function QuizClientView({ category }: { category: string }) {
     estimatedLevel,
   } = useQuizSession();
 
-  const [answerDraft, setAnswerDraft] = useState<string>("");
-
-  // Reset draft when question changes
-  useEffect(() => {
-    setAnswerDraft("");
-  }, [currentIndex]);
+  const [answerDraft, setAnswerDraft] = useState<{
+    questionId: string;
+    value: string;
+  }>({ questionId: "", value: "" });
 
   // Handle retry and autoStart logic from URL
   useEffect(() => {
@@ -67,7 +66,7 @@ export function QuizClientView({ category }: { category: string }) {
         }
       } else if (autoStart) {
         startSession({
-          category: category as any,
+          category: category as QuizCategory,
           level: "mixed",
           totalQuestions: 30,
           mode: mode || "practice",
@@ -89,7 +88,7 @@ export function QuizClientView({ category }: { category: string }) {
       sessionStorage.setItem("lastSessionResult", JSON.stringify(summary));
       router.push("/results");
     }
-  }, [status, answers, category, questions.length, router, config]);
+  }, [status, answers, category, questions.length, router, config, estimatedLevel]);
 
   if (status === "idle") {
     return (
@@ -122,6 +121,11 @@ export function QuizClientView({ category }: { category: string }) {
 
     const disabled = status === "review";
     const answerForCurrent = answers.find(a => a.questionId === currentQuestion.id);
+    const currentAnswerDraft =
+      answerDraft.questionId === currentQuestion.id ? answerDraft.value : "";
+    const updateAnswerDraft = (value: string) => {
+      setAnswerDraft({ questionId: currentQuestion.id, value });
+    };
 
     return (
       <div className="w-full flex flex-col gap-6 animate-in fade-in slide-in-from-bottom-4 duration-700">
@@ -139,7 +143,15 @@ export function QuizClientView({ category }: { category: string }) {
               <McqQuestion
                 key={currentQuestion.id}
                 question={currentQuestion}
-                onAnswerChange={setAnswerDraft}
+                onAnswerChange={updateAnswerDraft}
+                disabled={disabled}
+              />
+            )}
+            {currentQuestion.type === "reading-comprehension" && (
+              <ReadingComprehension
+                key={currentQuestion.id}
+                question={currentQuestion}
+                onAnswerChange={updateAnswerDraft}
                 disabled={disabled}
               />
             )}
@@ -147,7 +159,7 @@ export function QuizClientView({ category }: { category: string }) {
               <FillInBlank
                 key={currentQuestion.id}
                 question={currentQuestion}
-                onAnswerChange={setAnswerDraft}
+                onAnswerChange={updateAnswerDraft}
                 disabled={disabled}
               />
             )}
@@ -155,7 +167,7 @@ export function QuizClientView({ category }: { category: string }) {
               <WordOrder
                 key={currentQuestion.id}
                 question={currentQuestion}
-                onAnswerChange={setAnswerDraft}
+                onAnswerChange={updateAnswerDraft}
                 disabled={disabled}
               />
             )}
@@ -167,7 +179,7 @@ export function QuizClientView({ category }: { category: string }) {
                   return { id: i, word: word || opt, match: match || "???" };
                 })}
                 onComplete={() => {
-                  setAnswerDraft("MATCHED");
+                  updateAnswerDraft("MATCHED");
                   // For matching, we might want to auto-submit when done
                   setTimeout(() => submitAnswer("MATCHED"), 500);
                 }}
@@ -181,8 +193,8 @@ export function QuizClientView({ category }: { category: string }) {
         {status === "in-progress" && (
           <Section spacing="none" className="flex flex-col gap-4 animate-in fade-in slide-in-from-bottom-2 duration-500">
             <Button
-              onClick={() => submitAnswer(answerDraft)}
-              disabled={!answerDraft.trim()}
+              onClick={() => submitAnswer(currentAnswerDraft)}
+              disabled={!currentAnswerDraft.trim()}
               className="w-full h-14 bg-slate-900 text-white rounded-[2rem] font-black text-sm uppercase tracking-widest flex items-center justify-center gap-3 shadow-premium hover:bg-primary transition-all active-bounce group mt-4 overflow-hidden relative disabled:opacity-30 disabled:grayscale disabled:pointer-events-none"
             >
               <div className="absolute inset-0 bg-gradient-to-r from-orange-400 to-primary opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
@@ -195,7 +207,7 @@ export function QuizClientView({ category }: { category: string }) {
             {/* Hidden skip for stuck users - visible only if no answer selected for 5s? 
                 Actually, let's just add a subtle skip button for practice mode if needed, 
                 or just rely on the validation. Let's add a small 'Report/Skip' below. */}
-            {!answerDraft.trim() && (
+            {!currentAnswerDraft.trim() && (
               <button
                 onClick={nextQuestion}
                 className="text-[10px] font-black text-slate-300 uppercase tracking-widest hover:text-primary transition-colors text-center"

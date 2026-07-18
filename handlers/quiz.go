@@ -235,7 +235,7 @@ func filterValidQuestions(questions []models.QuizQuestion) []models.QuizQuestion
 }
 
 func fetchBalancedQuestions(ctx context.Context, category string, totalLimit int, userID *primitive.ObjectID) ([]models.QuizQuestion, error) {
-	levels := []string{"A1", "A2", "B1", "B2"}
+	levels := []string{"A1", "A2", "B1", "B2", "C1"}
 	perLevel := totalLimit / len(levels)
 	if perLevel == 0 {
 		perLevel = 1

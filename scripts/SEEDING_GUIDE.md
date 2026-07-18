@@ -32,7 +32,40 @@ Each question object in the JSON array follows this structure:
 }
 ```
 
-## 2. Running the Seed Script
+## 2. Running the Incremental Seed Script
+
+The safe question seed script reads `scripts/data/questions.json` and inserts or updates questions by `prompt_de`.
+It does **not** delete users, sessions, or existing questions. By default, existing questions are skipped.
+
+```bash
+go run scripts/seed_questions.go
+```
+
+To seed only the C1 Sprachbausteine questions:
+
+```bash
+QUESTIONS_FILE=scripts/data/sprachbausteine_questions.json go run scripts/seed_questions.go
+```
+
+To seed only the C1 Leseverstehen questions:
+
+```bash
+QUESTIONS_FILE=scripts/data/leseverstehen_questions.json go run scripts/seed_questions.go
+```
+
+You can also combine a custom file with a category filter:
+
+```bash
+QUESTIONS_FILE=scripts/data/sprachbausteine_questions.json QUESTION_CATEGORY=sprachbausteine go run scripts/seed_questions.go
+```
+
+To intentionally update existing questions too:
+
+```bash
+UPDATE_EXISTING_QUESTIONS=true go run scripts/seed_questions.go
+```
+
+## 3. Legacy Full Reset Seed Script
 
 The seeding script performs the following actions:
 1. Loads environment variables from `.env.local`.
@@ -53,7 +86,7 @@ Run the following command from the project root:
 go run scripts/seed_mongodb.go
 ```
 
-## 3. Important Notes
+## 4. Important Notes
 
 > [!WARNING]
 > Running the seed script will **DELETE** all current data in the `questions`, `users`, and `results` collections. Use this primarily for development or initial project setup.

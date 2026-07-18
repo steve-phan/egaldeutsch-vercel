@@ -1,4 +1,4 @@
-export type CEFRLevel = "A1" | "A2" | "B1" | "B2";
+export type CEFRLevel = "A1" | "A2" | "B1" | "B2" | "C1";
 
 export type QuizCategory =
   | "artikel"
@@ -15,6 +15,8 @@ export type QuizCategory =
   | "trennbare-verben"
   | "n-deklination"
   | "praepositionalverben"
+  | "leseverstehen"
+  | "sprachbausteine"
   | "mixed"
   | "genitiv";
 
@@ -23,7 +25,8 @@ export type QuizType =
   | "fill-in-blank"
   | "word-order"
   | "matching"
-  | "word-scramble";
+  | "word-scramble"
+  | "reading-comprehension";
 
 export interface LocalizedText {
   de: string;
@@ -39,6 +42,8 @@ export interface QuizQuestion {
   subcategory: string;
   level: CEFRLevel;
   type: QuizType;
+  passage_de?: string;
+  passage_title?: string;
   prompt_de: string;
   blank_index?: number;
   options?: QuizOption[];
